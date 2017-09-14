@@ -1,5 +1,7 @@
 # {{ cookiecutter.project_name }}
 
+This project was generated with [`wemake-django-template`](https://github.com/wemake-services/wemake-django-template).
+
 ## Prerequirements
 
 You will need:

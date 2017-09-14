@@ -1,0 +1,14 @@
+ - repo: local
+  hooks:
+
+    # - id: gitlint
+    #   name: gitlint
+    #   entry: gitlint
+    #   language: system
+    #   types: [general]
+
+    - id: pytest
+      name: pytest
+      entry: python manage.py test
+      language: system
+      types: [python]

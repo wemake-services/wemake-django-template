@@ -10,6 +10,8 @@ pytest = "==3.0.7"
 pytest-flake8 = "==0.8.1"
 pytest-isort = "==0.1.0"
 ipython = "*"
+gitlint = "*"
+pre-commit = "*"
 
 [packages]
 django = ">=1.11,<1.12"

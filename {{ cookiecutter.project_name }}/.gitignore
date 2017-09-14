@@ -166,10 +166,7 @@ secret/
 media/
 
 # File types:
-*.psql
 *.sqlite3
-*.mysql
-*.sql
 
 # Configuration file with private data
 *.secret
