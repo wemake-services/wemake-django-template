@@ -4,8 +4,7 @@ Does the following:
 1. Generates and saves random secret key
 2. Removes the taskapp if celery isn't going to be used
 3. Removes the .idea directory if PyCharm isn't going to be used
-4. Copy files from /docs/ to {{ cookiecutter.project_slug }}/docs/
-    TODO: this might have to be moved to a pre_gen_hook
+4. Copy files from /docs/ to {{ cookiecutter.project_name }}/docs/
 
 A portion of this code was adopted from Django's standard crypto functions and
 utilities, specifically:
