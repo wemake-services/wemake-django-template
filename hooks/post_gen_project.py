@@ -94,7 +94,7 @@ def copy_local_configuration():
         PROJECT_DIRECTORY, 'server',
         'settings', 'environments', 'local.py'
     )
-    shutil.copyfile(local_tempalte, local_config)
+    shutil.copyfile(local_template, local_config)
 
 
 copy_local_configuration()
