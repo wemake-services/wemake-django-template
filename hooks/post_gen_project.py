@@ -82,7 +82,7 @@ def copy_local_configuration():
     secret_config = os.path.join(
         PROJECT_DIRECTORY, 'config', 'secret.toml'
     )
-    shutil.copyfile(secret_tempalte, secret_config)
+    shutil.copyfile(secret_template, secret_config)
     create_secret_key(secret_config)
 
     # Local config:
