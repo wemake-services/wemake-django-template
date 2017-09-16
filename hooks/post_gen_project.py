@@ -78,21 +78,21 @@ def copy_local_configuration():
 
     # Secret config:
     secret_template = os.path.join(
-        project_directory, 'config', 'secret.toml.template'
+        PROJECT_DIRECTORY, 'config', 'secret.toml.template'
     )
     secret_config = os.path.join(
-        project_directory, 'config', 'secret.toml'
+        PROJECT_DIRECTORY, 'config', 'secret.toml'
     )
     shutil.copyfile(secret_tempalte, secret_config)
     create_secret_key(secret_config)
 
     # Local config:
     local_template = os.path.join(
-        project_directory, 'server',
+        PROJECT_DIRECTORY, 'server',
         'settings', 'environments', 'local.py.template'
     )
     local_config = os.path.join(
-        project_directory, 'server',
+        PROJECT_DIRECTORY, 'server',
         'settings', 'environments', 'local.py'
     )
     shutil.copyfile(local_tempalte, local_config)
