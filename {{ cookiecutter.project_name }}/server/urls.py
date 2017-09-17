@@ -10,6 +10,7 @@ This examples uses Django's default media
 files serving technique in development.
 """
 
+from django.conf import settings
 from django.conf.urls import include, url
 from django.contrib import admin
 from django.views.generic import TemplateView
@@ -45,6 +46,12 @@ urlpatterns = [
     # it is a good practice to have explicit index view:
     url(r'^$', hello, name='index'),
 ]
+
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns = [
+        url(r'^__debug__/', include(debug_toolbar.urls)),
+    ] + urlpatterns
 
 # Customize default error views:
 # https://docs.djangoproject.com/en/1.7/topics/http/views/#customizing-error-views

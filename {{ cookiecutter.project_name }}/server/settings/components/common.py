@@ -40,7 +40,7 @@ INSTALLED_APPS = (
     'main_app',
 )
 
-MIDDLEWARE_CLASSES = (
+MIDDLEWARE = (
     # Django:
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',

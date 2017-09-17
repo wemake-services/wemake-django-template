@@ -16,6 +16,8 @@ pre-commit = "*"
 flake8-blind-except = "*"
 pytest-django = "*"
 pytest-xdist = "*"
+safety = "*"
+django-debug-toolbar = "*"
 
 [packages]
 
@@ -23,4 +25,3 @@ django = ">=1.11,<1.12"
 django-split-settings = "*"
 psycopg2 = "*"
 django-axes = "*"
-safety = "*"

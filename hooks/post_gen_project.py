@@ -97,6 +97,13 @@ def copy_local_configuration():
     shutil.copyfile(local_template, local_config)
 
 
+# def copy_docs():
+#     """
+#     This function copies docs from the root repository
+#     to the result project.
+#     """
+
+
 def clean_docker_files():
     """
     This function removes all docker-related files.
