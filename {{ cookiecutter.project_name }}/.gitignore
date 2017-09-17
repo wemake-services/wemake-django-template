@@ -170,7 +170,7 @@ media/
 
 # Configuration file with private data
 *.secret
-secret.toml
+*.env
 
 # Local settings files:
 *local.py

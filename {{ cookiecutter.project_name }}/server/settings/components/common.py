@@ -17,7 +17,7 @@ from server.settings.components import BASE_DIR, CONFIG  # NOQA
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
-SECRET_KEY = CONFIG['django']['secret_key']
+SECRET_KEY = CONFIG['DJANGO_SECRET_KEY']
 
 # Application definition:
 
@@ -65,13 +65,13 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
 
         # Database name or filepath if using 'sqlite3':
-        'NAME': CONFIG['database']['name'],
+        'NAME': CONFIG['POSTGRES_DB'],
 
         # You don't need these settings if using 'sqlite3':
-        'USER': CONFIG['database']['user'],
-        'PASSWORD': CONFIG['database']['password'],
-        'HOST': CONFIG['database']['host'],
-        'PORT': CONFIG['database']['port'],
+        'USER': CONFIG['POSTGRES_USER'],
+        'PASSWORD': CONFIG['POSTGRES_PASSWORD'],
+        'HOST': CONFIG['DJANGO_DATABASE_HOST'],
+        'PORT': CONFIG['DJANGO_DATABASE_PORT'],
     },
 }
 
@@ -153,46 +153,3 @@ LOGIN_ERROR_URL = '/login-error/'
 SESSION_COOKIE_HTTPONLY = True
 
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
-
-
-# Logging
-# https://docs.djangoproject.com/en/1.11/topics/logging/
-
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'formatters': {
-        'verbose': {
-            'format':
-                '[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s',
-            'datefmt': '%d/%b/%Y %H:%M:%S',
-        },
-        'simple': {
-            'format': '%(levelname)s %(message)s',
-        },
-    },
-    'handlers': {
-        'file': {
-            'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'filename': 'server.log',
-            'formatter': 'verbose',
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['file'],
-            'propagate': True,
-            'level': 'DEBUG',
-        },
-        'server': {
-            'handlers': ['file'],
-            'level': 'DEBUG',
-        },
-        'security': {
-            'handlers': ['file'],
-            'level': 'ERROR',
-            'propagate': False,
-        },
-    },
-}

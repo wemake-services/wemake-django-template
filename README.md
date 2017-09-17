@@ -5,3 +5,40 @@
 Our template for all `django` projects.
 
 ---
+
+## Requirements
+
+You will need:
+
+- `python3`
+- [`cookiecutter`](http://cookiecutter.readthedocs.io/)
+
+## Installation
+
+```bash
+cookiecutter gh:wemake-services/wemake-django-template
+```
+
+## Featuring
+
+### General
+
+- `editorconfig` for consistent styles
+- `pre-commit` hooks
+
+### `python`
+
+- `pyenv`
+- `pipenv` to manage dependencies
+- `pytest` for testing
+- `flake8` with plugins for linting
+
+### `django`
+
+- `django-axes`
+- `django-split-settings`
+
+### Docker
+
+`docker` with `docker-compose` for development
+

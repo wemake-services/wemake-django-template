@@ -1,0 +1,17 @@
+version: '2'
+services:
+  db:
+    image: "postgres:9.6.5-alpine"
+    env_file: ./config/secret.env
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    env_file: ./config/secret.env
+    environment:
+      DJANGO_DATABASE_HOST: db

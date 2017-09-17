@@ -1,20 +1,16 @@
- - repo: local
+- repo: local
   hooks:
-
-    # - id: gitlint
-    #   name: gitlint
-    #   entry: gitlint
-    #   language: system
-    #   types: [general]
+    - id: gitlint
+      name: gitlint
+      entry: "bash -c 'gitlint lint'"
+      language: system
 
     - id: pytest
       name: pytest
       entry: python manage.py test
       language: system
-      types: [python]
 
     - id: safety
       name: safety
       entry: safety check
       language: system
-      types: [general]

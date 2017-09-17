@@ -77,10 +77,10 @@ def copy_local_configuration():
 
     # Secret config:
     secret_template = os.path.join(
-        PROJECT_DIRECTORY, 'config', 'secret.toml.template'
+        PROJECT_DIRECTORY, 'config', 'secret.env.template'
     )
     secret_config = os.path.join(
-        PROJECT_DIRECTORY, 'config', 'secret.toml'
+        PROJECT_DIRECTORY, 'config', 'secret.env'
     )
     shutil.copyfile(secret_template, secret_config)
     create_secret_key(secret_config)
@@ -97,4 +97,22 @@ def copy_local_configuration():
     shutil.copyfile(local_template, local_config)
 
 
+def clean_docker_files():
+    """
+    This function removes all docker-related files.
+
+    It is called when user does not want to include docker support.
+    """
+    dockerignore = os.path.join(PROJECT_DIRECTORY, '.dockerignore')
+    docker_compose = os.path.join(PROJECT_DIRECTORY, 'docker-compose.yml')
+    dockerfile = os.path.join(PROJECT_DIRECTORY, 'Dockerfile')
+
+    os.remove(dockerignore)
+    os.remove(docker_compose)
+    os.remove(dockerfile)
+
 copy_local_configuration()
+
+{% if cookiecutter.docker != 'y' %}
+clean_docker_files()
+{% endif %}
