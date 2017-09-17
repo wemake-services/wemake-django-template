@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "50e8392c8e0c59357ba2385931ac540b589949375e733e601935b5d38fe40692"
+            "sha256": "2617eb11a8adfce4470655f774f044cfffac706275b099b81e08ae37d8e2e673"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
@@ -282,6 +282,13 @@
             ],
             "version": "==3.4.1"
         },
+        "flake8-blind-except": {
+            "hashes": [
+                "sha256:0d7d1adb4cabf2268d6eebb815a7a5014bcb7e8419f7a74339c46d0b8847b858",
+                "sha256:aca3356633825544cec51997260fe31a8f24a1a2795ce8e81696b9916745e599"
+            ],
+            "version": "==0.1.1"
+        },
         "flake8-builtins": {
             "hashes": [
                 "sha256:b8a407ba5722e54ef783cf009a6aeb204f695b18a51eed29e65e0f32b55e441c",
@@ -441,6 +448,13 @@
             ],
             "version": "==1.0"
         },
+        "pytest-django": {
+            "hashes": [
+                "sha256:00995c2999b884a38ae9cd30a8c00ed32b3d38c1041250ea84caf18085589662",
+                "sha256:038ccc5a9daa1b1b0eb739ab7dce54e495811eca5ea3af4815a2a3ac45152309"
+            ],
+            "version": "==3.1.2"
+        },
         "pytest-flake8": {
             "hashes": [
                 "sha256:8efaf4595a13079197ac740a12e6a87e3403f08133a42d3ac5984474f6f91681",
@@ -448,12 +462,25 @@
             ],
             "version": "==0.8.1"
         },
+        "pytest-forked": {
+            "hashes": [
+                "sha256:f275cb48a73fc61a6710726348e1da6d68a978f0ec0c54ece5a5fae5977e5a08",
+                "sha256:e4500cd0509ec4a26535f7d4112a8cc0f17d3a41c29ffd4eab479d2a55b30805"
+            ],
+            "version": "==0.2"
+        },
         "pytest-isort": {
             "hashes": [
                 "sha256:fc315e3ceac576f2b7000c4716a55063c45ed60c169ba2ede5a6b4aef97ce13e",
                 "sha256:e92798127e21d22513c62070989f0fb3b712650e48a4db13e5b8e8034d367cfe"
             ],
             "version": "==0.1.0"
+        },
+        "pytest-xdist": {
+            "hashes": [
+                "sha256:7924d45c2430191fe3679a58116c74ceea13307d7822c169d65fd59a24b3a4fe"
+            ],
+            "version": "==1.20.0"
         },
         "python-dateutil": {
             "hashes": [

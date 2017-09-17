@@ -40,5 +40,5 @@ cookiecutter gh:wemake-services/wemake-django-template
 
 ### Docker
 
-`docker` with `docker-compose` for development
+- `docker` with `docker-compose` for development
 

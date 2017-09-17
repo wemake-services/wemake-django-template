@@ -8,11 +8,10 @@ SECURITY WARNING: don't run with debug turned on in production!
 """
 
 # Mind the proper import, use the right module!
-from server.settings.components.common import (
-    INSTALLED_APPS,
-    MIDDLEWARE_CLASSES,
-)
-
+# from server.settings.components.common import (
+#     INSTALLED_APPS,
+#     MIDDLEWARE_CLASSES,
+# )
 
 # Setting the development status:
 

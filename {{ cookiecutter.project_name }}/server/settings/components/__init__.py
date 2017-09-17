@@ -71,4 +71,5 @@ class DevelopmentConfiguration(object):
 
         return conf
 
+
 CONFIG = DevelopmentConfiguration(BASE_DIR, 'config', 'secret.env')

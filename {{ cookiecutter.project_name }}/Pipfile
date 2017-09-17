@@ -13,6 +13,9 @@ pytest-isort = "==0.1.0"
 ipython = "*"
 gitlint = "*"
 pre-commit = "*"
+flake8-blind-except = "*"
+pytest-django = "*"
+pytest-xdist = "*"
 
 [packages]
 

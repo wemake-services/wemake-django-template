@@ -37,7 +37,7 @@ INSTALLED_APPS = (
     'axes',
 
     # Your apps go here:
-
+    'main_app',
 )
 
 MIDDLEWARE_CLASSES = (

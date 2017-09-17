@@ -14,6 +14,9 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.views.generic import TemplateView
 
+from main_app import urls as main_urls
+from main_app.views import hello
+
 admin.autodiscover()
 
 
@@ -21,6 +24,9 @@ urlpatterns = [
     # django-admin:
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
+
+    # apps:
+    url(r'^main/', include(main_urls)),
 
     # text and xml static files:
     url(r'^robots\.txt$', TemplateView.as_view(
@@ -35,6 +41,9 @@ urlpatterns = [
         template_name='txt/crossdomain.xml',
         content_type='application/xml',
     )),
+
+    # it is a good practice to have explicit index view:
+    url(r'^$', hello, name='index'),
 ]
 
 # Customize default error views:

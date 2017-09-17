@@ -10,7 +10,6 @@ import os
 
 from server.settings.components.common import BASE_DIR
 
-
 # Production flags:
 
 DEBUG = False
@@ -31,17 +30,18 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
 
+_PASS = 'django.contrib.auth.password_validation'
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': '{}.UserAttributeSimilarityValidator'.format(_PASS),
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': '{}.MinimumLengthValidator'.format(_PASS),
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': '{}.CommonPasswordValidator'.format(_PASS),
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': '{}.NumericPasswordValidator'.format(_PASS),
     },
 ]

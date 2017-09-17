@@ -13,7 +13,6 @@ SECURITY WARNING: don't run with debug turned on in production!
 from server.settings.components import GlobalIPList
 from server.settings.environments.testing import *  # NOQA
 
-
 INTERNAL_IPS = GlobalIPList([
     '127.0.0.1',
 
