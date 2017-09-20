@@ -4,13 +4,16 @@
       name: gitlint
       entry: "bash -c 'gitlint lint'"
       language: system
+      stages: [commit-msg]
 
     - id: pytest
       name: pytest
       entry: python manage.py test
+      pass_filenames: false
       language: system
 
     - id: safety
       name: safety
       entry: safety check
+      pass_filenames: false
       language: system

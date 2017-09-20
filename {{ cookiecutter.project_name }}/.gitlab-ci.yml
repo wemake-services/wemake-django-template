@@ -1,0 +1,27 @@
+image: docker:latest
+
+variables:
+  # When using dind, it's wise to use the overlayfs driver for
+  # improved performance:
+  DOCKER_DRIVER: overlay2
+
+services:
+  - docker:dind
+
+before_script:
+  # Installing docker-compose:
+  - apk update
+  - apk upgrade
+  - apk add python python-dev py-pip build-base
+  - pip install docker-compose
+  # Creating test configuration file:
+  - cp config/secret.env.template config/secret.env
+  # Debug information:
+  - docker info
+  - docker-compose --version
+
+build:
+  stage: test
+  script:
+    - docker-compose run web sh -c
+      "pipenv install --system -d; pipenv run pytest"

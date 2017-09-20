@@ -1,5 +1,6 @@
 {
   "project_name": "",
   "project_verbose_name": "",
-  "docker": "y"
+  "docker": "y",
+  "gitlab-ci": "y"
 }
