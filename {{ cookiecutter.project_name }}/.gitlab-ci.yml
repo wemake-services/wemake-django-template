@@ -24,4 +24,16 @@ build:
   stage: test
   script:
     - docker-compose run web sh -c
-      "pipenv install --system -d; pipenv run pytest"
+      "pipenv install --system -d; pipenv run pre-commit run -v"
+
+
+# Generating code quality report:
+codequality:
+  stage: test
+  script:
+    - docker pull codeclimate/codeclimate
+    - docker run --env CODECLIMATE_CODE="$PWD" --volume "$PWD":/code --volume /var/run/docker.sock:/var/run/docker.sock --volume /tmp/cc:/tmp/cc codeclimate/codeclimate init
+    - docker run --env CODECLIMATE_CODE="$PWD" --volume "$PWD":/code --volume /var/run/docker.sock:/var/run/docker.sock --volume /tmp/cc:/tmp/cc codeclimate/codeclimate analyze -f json > codeclimate.json
+  artifacts:
+    paths:
+      - codeclimate.json

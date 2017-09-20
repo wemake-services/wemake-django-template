@@ -2,18 +2,24 @@
   hooks:
     - id: gitlint
       name: gitlint
-      entry: "bash -c 'gitlint lint'"
+      entry: bash -c 'cat "$@" | python -m gitlint.cli' --
       language: system
       stages: [commit-msg]
 
     - id: pytest
       name: pytest
-      entry: python manage.py test
+      entry: pytest
       pass_filenames: false
       language: system
 
-    - id: safety
-      name: safety
-      entry: safety check
+    - id: qa
+      name: qa with radon
+      entry: xenon --max-absolute B --max-modules A --max-average A .
+      pass_filenames: false
+      language: system
+
+    - id: pipenv-check
+      name: pipenv-check safety and pep508 check
+      entry: pipenv check
       pass_filenames: false
       language: system
