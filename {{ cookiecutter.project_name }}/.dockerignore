@@ -58,7 +58,6 @@ docs/_build/
 target/
 
 *.log
-.git/
 Dockerfile
 docker-compose.yml
 *.env

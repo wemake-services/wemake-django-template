@@ -12,20 +12,21 @@ before_script:
   # Installing docker-compose:
   - apk update
   - apk upgrade
-  - apk add python python-dev py-pip build-base
+  - apk add python python-dev py-pip git build-base
   - pip install docker-compose
   # Creating test configuration file:
   - cp config/secret.env.template config/secret.env
   # Debug information:
   - docker info
   - docker-compose --version
+  - git --version
 
-build:
+# Testing application:
+test:
   stage: test
   script:
-    - docker-compose run web sh -c
-      "pipenv install --system -d; pipenv run pre-commit run -v"
-
+    - docker-compose run web sh -c "pipenv install -d && pipenv run sh -c 'printf \"$(git log -1 --pretty=%B)\" | python -m gitlint.cli' && pipenv run python -B -m pytest && pipenv run xenon --max-absolute B --max-modules A --max-average A . && pipenv check"
+  coverage: '/\d+\%\s*$/'
 
 # Generating code quality report:
 codequality:

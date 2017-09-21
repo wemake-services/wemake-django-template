@@ -4,13 +4,16 @@
 
 This project was generated with [`wemake-django-template`](https://github.com/wemake-services/wemake-django-template).
 
+{% if cookiecutter.gitlab_ci == 'y' %}[![build status](https://gitlab.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}/badges/master/build.svg)](https://gitlab.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}/commits/master) [![coverage report](https://gitlab.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}/badges/master/coverage.svg)](https://gitlab.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}/commits/master){% endif %}
+
+
 ## Prerequirements
 
 You will need:
 
 - `python3.6` (see `.python_version` file. You can use `pyenv` to manage versions)
 - `postgresql` with version `9.6`
-{% if cookiecutter.docker == 'y' %}- `docker` with version `17.07`
+{% if cookiecutter.docker == 'y' %}- `docker` with version at least `17.07`
 
 
 ## Docker

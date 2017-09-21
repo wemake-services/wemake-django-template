@@ -2,6 +2,9 @@
 url = "https://pypi.python.org/simple"
 verify_ssl = true
 
+[requires]
+python_version = '3.6'
+
 [dev-packages]
 
 django-debug-toolbar = "*"
@@ -15,8 +18,10 @@ pytest-flake8 = "==0.8.1"
 pytest-isort = "==0.1.0"
 pytest-django = "*"
 pytest-xdist = "*"
-gitlint = "*"
-pre-commit = "==1.1.2"
+pytest-cov = "*"
+pytest-env = "*"
+gitlint = "==0.8.2"
+pre-commit = "*"
 xenon = "*"
 radon = "*"
 
@@ -24,5 +29,5 @@ radon = "*"
 
 django = "<1.12"
 django-split-settings = "*"
-psycopg2 = "*"
 django-axes = "*"
+psycopg2 = "*"
