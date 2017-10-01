@@ -2,6 +2,8 @@
 
 cmd="$@"
 
+echo "Command is $cmd"
+
 postgres_ready () {
   sh "/code/docker/django/wait-for-command.sh" -s 0 52 -c "curl db:5432"
 }
@@ -12,4 +14,6 @@ until postgres_ready; do
 done
 
 >&2 echo "Postgres is up - continuing..."
-exec $cmd
+
+# Evaluating passed command:
+exec "$cmd"

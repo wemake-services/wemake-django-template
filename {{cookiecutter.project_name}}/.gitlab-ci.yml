@@ -4,6 +4,13 @@ variables:
   # When using dind, it's wise to use the overlayfs driver for
   # improved performance:
   DOCKER_DRIVER: overlay2
+  PROJECT_NAME: "{{ cookiecutter.project_name }}"
+  GROUP_NAME: "{{ cookiecutter.organization }}"
+  PIPENV_SHELL_COMPAT: true
+  PIPENV_COLORBLIND: true
+  PIPENV_NOSPIN: true
+  CONTAINER_TEST_IMAGE: "registry.gitlab.com/$GROUP_NAME/$PROJECT_NAME:$CI_BUILD_REF_NAME"
+  CONTAINER_RELEASE_IMAGE: "registry.gitlab.com/$GROUP_NAME/$PROJECT_NAME:latest"
 
 services:
   - docker:dind
@@ -16,14 +23,33 @@ before_script:
   - pip install docker-compose
   # Creating test configuration file:
   - cp config/secret.env.template config/secret.env
+  # Login into Docker registry:
+  - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN registry.gitlab.com
   # Debug information:
   - docker info
   - docker-compose --version
   - git --version
 
+# Build Docker container and push it to the Gitlab's registry:
+build:
+  stage: build
+  script:
+    - docker build -t $CONTAINER_TEST_IMAGE .
+    - docker push $CONTAINER_TEST_IMAGE
+
 # Testing application:
 test:
   stage: test
   script:
-    - docker-compose run web sh -c "pipenv install -d && pipenv run sh -c 'printf \"$(git log -1 --pretty=%B)\" | python -m gitlint.cli' && pipenv run python -B -m pytest && pipenv run xenon --max-absolute B --max-modules A --max-average A . && pipenv check"
+    - docker-compose run web ./docker/ci.sh
   coverage: '/\d+\%\s*$/'
+
+# Releasing image, when tests pass:
+release-image:
+  stage: deploy
+  script:
+    - docker pull $CONTAINER_TEST_IMAGE
+    - docker tag $CONTAINER_TEST_IMAGE $CONTAINER_RELEASE_IMAGE
+    - docker push $CONTAINER_RELEASE_IMAGE
+  only:
+    - master

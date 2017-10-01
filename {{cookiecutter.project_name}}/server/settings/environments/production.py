@@ -8,22 +8,17 @@ values are overridden.
 
 import os
 
-from server.settings.components.common import BASE_DIR, CONFIG
+from server.settings.components.common import BASE_DIR
 
 # Production flags:
 
 DEBUG = False
 
-# Network security and SSL:
-
 ALLOWED_HOSTS = [
     # TODO: check production hosts
-    '{{ cookiecutter.project_domain }}',
+    '.{{ cookiecutter.project_url }}',
 ]
 
-SESSION_COOKIE_SECURE = False
-
-CSRF_COOKIE_SECURE = False
 
 # Adding STATIC_ROOT to collect static files via 'collectstatic'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')

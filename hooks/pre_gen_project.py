@@ -10,7 +10,7 @@ except ImportError:
 MODULE_REGEX = r'^[a-z][_a-z0-9]+$'
 MODULE_NAME = '{{ cookiecutter.project_name }}'
 
-DOMAIN_NAME = '{{ cookiecutter.project_domain }}'
+DOMAIN_NAME = '{{ cookiecutter.project_url }}'
 
 if not re.match(MODULE_REGEX, MODULE_NAME):
     # Validates project's module name:
@@ -25,9 +25,9 @@ if not re.match(MODULE_REGEX, MODULE_NAME):
 try:
     # Validates project's domain:
     result = urlparse(DOMAIN_NAME)
-    parts = [result.scheme, result.netloc, result.path]
+    parts = [result.path]
     if not all(bool(part) for part in parts):
-        raise ValueError('Mailformed project_domain')
+        raise ValueError('Mailformed project_url')
 except Exception as e:
     print(e)
 

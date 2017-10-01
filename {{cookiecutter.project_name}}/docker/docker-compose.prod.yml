@@ -13,7 +13,7 @@ services:
       - web
 
   web:
-    command: sh docker/django/gunicorn.sh
+    command: ./docker/django/gunicorn.sh
     ports:
       - "5000:5000"
     environment:
