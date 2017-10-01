@@ -1,0 +1,34 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+
+[requires]
+python_version = '3.6'
+
+[dev-packages]
+
+"django-debug-toolbar" = "*"
+"pep8-naming" = "*"
+"flake8-builtins" = "==0.2"
+"flake8-commas" = "==0.4.3"
+"flake8-quotes" = "==0.9.0"
+"flake8-blind-except" = "*"
+pytest = "==3.0.7"
+"pytest-flake8" = "==0.8.1"
+"pytest-isort" = "==0.1.0"
+"pytest-django" = "*"
+"pytest-cov" = "*"
+"pytest-env" = "*"
+gitlint = "==0.8.2"
+"pre_commit" = "*"
+xenon = "*"
+radon = "*"
+recommonmark = "*"
+
+[packages]
+
+Django = "<1.12"
+"django-split-settings" = "*"
+"django-axes" = "*"
+"psycopg2" = "*"
+gunicorn = "*"

@@ -3,8 +3,12 @@ services:
   db:
     image: "postgres:9.6.5-alpine"
     env_file: ./config/secret.env
+
   web:
-    build: .
+    build:
+      context: .
+      dockerfile: ./docker/django/Dockerfile
+    restart: always
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code
@@ -14,4 +18,5 @@ services:
       - db
     env_file: ./config/secret.env
     environment:
+      DJANGO_ENV: development
       DJANGO_DATABASE_HOST: db

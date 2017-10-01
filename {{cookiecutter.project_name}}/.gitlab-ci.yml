@@ -27,14 +27,3 @@ test:
   script:
     - docker-compose run web sh -c "pipenv install -d && pipenv run sh -c 'printf \"$(git log -1 --pretty=%B)\" | python -m gitlint.cli' && pipenv run python -B -m pytest && pipenv run xenon --max-absolute B --max-modules A --max-average A . && pipenv check"
   coverage: '/\d+\%\s*$/'
-
-# Generating code quality report:
-codequality:
-  stage: test
-  script:
-    - docker pull codeclimate/codeclimate
-    - docker run --env CODECLIMATE_CODE="$PWD" --volume "$PWD":/code --volume /var/run/docker.sock:/var/run/docker.sock --volume /tmp/cc:/tmp/cc codeclimate/codeclimate init
-    - docker run --env CODECLIMATE_CODE="$PWD" --volume "$PWD":/code --volume /var/run/docker.sock:/var/run/docker.sock --volume /tmp/cc:/tmp/cc codeclimate/codeclimate analyze -f json > codeclimate.json
-  artifacts:
-    paths:
-      - codeclimate.json

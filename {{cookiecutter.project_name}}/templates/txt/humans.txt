@@ -1,7 +1,7 @@
 # The humans responsible & technology colophon
 # http://humanstxt.org/
 
-# TEAM
+## TEAM wemake.services
 
   - Name: sobolevn
     Email: sobolevn@wemake.services

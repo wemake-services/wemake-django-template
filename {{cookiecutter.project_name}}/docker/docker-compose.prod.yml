@@ -1,0 +1,21 @@
+version: '2'
+services:
+  caddy:
+    image: "wemakeservices/caddy-docker:latest"
+    env_file: ./config/secret.env
+    volumes:
+      - ./docker/caddy/Caddyfile:/root/.caddy/Caddyfile
+    ports:
+      - "2015:2015"
+      - "8080:80"
+      - "4430:443"
+    depends_on:
+      - web
+
+  web:
+    command: sh docker/django/gunicorn.sh
+    ports:
+      - "5000:5000"
+    environment:
+      DJANGO_ENV: production
+      DJANGO_DATABASE_HOST: db

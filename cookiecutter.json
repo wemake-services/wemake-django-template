@@ -1,6 +1,7 @@
 {
   "project_name": "",
   "project_verbose_name": "",
+  "project_domain": "",
   "organization": "",
   "docker": "y",
   "gitlab_ci": "y"
