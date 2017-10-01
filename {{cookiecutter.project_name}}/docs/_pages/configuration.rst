@@ -1,3 +1,5 @@
+.. _configuration:
+
 Configuration
 =============
 
@@ -37,7 +39,7 @@ Secret settings
 ---------------
 
 We do not store our secret settings inside our source code.
-There are different options to it:
+There are different options to do it:
 
 - ``ansible-vault``
 - ``git-secret``
