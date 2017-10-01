@@ -11,6 +11,7 @@ Welcome to wemake-django-template's documentation!
    _pages/linters.rst
    _pages/qa.rst
    _pages/docker.rst
+   _pages/gitlab-ci.rst
    _pages/going-to-production.rst
 
 Indices and tables

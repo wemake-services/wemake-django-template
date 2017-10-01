@@ -3,6 +3,5 @@
   "project_verbose_name": "",
   "project_url": "",
   "organization": "",
-  "docker": "y",
-  "gitlab_ci": "y"
+  "docker": "y"
 }

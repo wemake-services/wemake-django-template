@@ -2,9 +2,20 @@
 
 [![wemake.services](https://img.shields.io/badge/style-wemake.services-green.svg?label=&logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC%2FxhBQAAAAFzUkdCAK7OHOkAAAAbUExURQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP%2F%2F%2F5TvxDIAAAAIdFJOUwAjRA8xXANAL%2Bv0SAAAADNJREFUGNNjYCAIOJjRBdBFWMkVQeGzcHAwksJnAPPZGOGAASzPzAEHEGVsLExQwE7YswCb7AFZSF3bbAAAAABJRU5ErkJggg%3D%3D)](http://wemake.services)
 
-Our template for all `django` projects.
+Bleeding edge `django` template focused on code quality and security.
 
 ---
+
+## Features
+
+- [`pipenv`](https://docs.pipenv.org/) for managing dependencies
+- `pytest` and `flake8` for testing and linting
+- [`pre-commit`](http://pre-commit.com/) hooks for consistent development
+- `docker-compose` for development and production
+- `sphinx` for documentation
+- `Gitlab CI` with full pipeline (`build`, `test`, and `deploy`) configured by default
+- [`Caddy`](https://caddyserver.com/) with [`https`](https://caddyserver.com/docs/automatic-https) and `http/2` turned on by default
+
 
 ## Requirements
 
@@ -13,32 +24,14 @@ You will need:
 - `python3`
 - [`cookiecutter`](http://cookiecutter.readthedocs.io/)
 
+
 ## Installation
 
 ```bash
 cookiecutter gh:wemake-services/wemake-django-template
 ```
 
-## Featuring
 
-### General
+## License
 
-- `editorconfig` for consistent styles
-- `pre-commit` hooks
-
-### `python`
-
-- `pyenv`
-- `pipenv` to manage dependencies
-- `pytest` for testing
-- `flake8` with plugins for linting
-
-### `django`
-
-- `django-axes`
-- `django-split-settings`
-
-### Docker
-
-- `docker` with `docker-compose` for development
-
+MIT.

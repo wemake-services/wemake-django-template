@@ -2,6 +2,7 @@ FROM python:3.6.2-alpine
 
 LABEL maintainer="sobolevn@wemake.services"
 
+ARG DJANGO_ENV=production
 ENV PIPENV_SHELL_COMPAT=true PIPENV_COLORBLIND=true PIPENV_NOSPIN=true
 
 
@@ -22,7 +23,7 @@ ADD . /code
 
 # Project initialization:
 
-RUN pip install pipenv && pipenv install --system --deploy
+RUN pip install pipenv && test "$DJANGO_ENV" == production && pipenv install --system --deploy || pipenv install --dev --system --deploy
 
 
 # Creating users and groups:

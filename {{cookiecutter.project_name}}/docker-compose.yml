@@ -8,6 +8,8 @@ services:
     build:
       context: .
       dockerfile: ./docker/django/Dockerfile
+      args:
+        DJANGO_ENV: development
     restart: always
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
@@ -18,5 +20,4 @@ services:
       - db
     env_file: ./config/secret.env
     environment:
-      DJANGO_ENV: development
       DJANGO_DATABASE_HOST: db

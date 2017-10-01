@@ -13,9 +13,11 @@ services:
       - web
 
   web:
+    build:
+      context: .
+      dockerfile: ./docker/django/Dockerfile
     command: ./docker/django/gunicorn.sh
     ports:
       - "5000:5000"
     environment:
-      DJANGO_ENV: production
       DJANGO_DATABASE_HOST: db

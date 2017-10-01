@@ -97,13 +97,6 @@ def copy_local_configuration():
     shutil.copyfile(local_template, local_config)
 
 
-# def copy_docs():
-#     """
-#     This function copies docs from the root repository
-#     to the result project.
-#     """
-
-
 def clean_docker_files():
     """
     This function removes all docker-related files.
@@ -112,11 +105,13 @@ def clean_docker_files():
     """
     dockerignore = os.path.join(PROJECT_DIRECTORY, '.dockerignore')
     docker_compose = os.path.join(PROJECT_DIRECTORY, 'docker-compose.yml')
-    dockerfile = os.path.join(PROJECT_DIRECTORY, 'Dockerfile')
+    gitlab_ci = os.path.join(PROJECT_DIRECTORY, '.gitlab-ci.yml')
+    docker_dir = os.path.join(PROJECT_DIRECTORY, 'docker')
 
     os.remove(dockerignore)
     os.remove(docker_compose)
-    os.remove(dockerfile)
+    os.remove(gitlab_ci)
+    shutil.rmtree(docker_dir)
 
 copy_local_configuration()
 
