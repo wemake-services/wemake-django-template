@@ -168,9 +168,10 @@ media/
 # File types:
 *.sqlite3
 
-# Configuration file with private data
+# Configuration file with private data:
 *.secret
 *.env
+.env
 
 # Local settings files:
 *local.py

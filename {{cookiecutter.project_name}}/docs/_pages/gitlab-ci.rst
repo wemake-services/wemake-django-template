@@ -12,6 +12,14 @@ Configuration
 All configuration is done inside ``.gitlab-ci.yml``.
 
 
+Slack webhooks
+--------------
+
+We utilize ``slack`` to receive notifications about different events happened to our repository.
+
+Read the `docs <https://docs.gitlab.com/ee/user/project/integrations/slack.html>`_ about how to achieve this.
+
+
 Further reading
 ---------------
 

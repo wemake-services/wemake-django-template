@@ -54,7 +54,7 @@ if settings.DEBUG:
     ] + urlpatterns
 
 # Customize default error views:
-# https://docs.djangoproject.com/en/1.7/topics/http/views/#customizing-error-views
+# https://docs.djangoproject.com/en/1.11/topics/http/views/#customizing-error-views
 
 # handler400 = 'your_app.views.error_handler'
 # handler403 = 'your_app.views.error_handler'

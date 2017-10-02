@@ -22,7 +22,7 @@ before_script:
   - apk add python python-dev py-pip git build-base
   - pip install docker-compose
   # Creating test configuration file:
-  - cp config/secret.env.template config/secret.env
+  - cp config/.env.template config/.env
   # Login into Docker registry:
   - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN registry.gitlab.com
   # Debug information:

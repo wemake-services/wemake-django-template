@@ -18,6 +18,14 @@ To start development server inside ``docker`` you will need to run:
   docker-compose run web python manage.py migrate
   docker-compose up
 
+You might want to tweak ``INTERNAL_IPS`` setting to include ``docker`` container into it. Otherwise ``django-debug-toolbar`` won't show up.
+
+To get your ``docker`` ip run:
+
+.. code:: bash
+
+  docker inspect your-container-name | grep -e '"Gateway"'
+
 
 Production
 ----------

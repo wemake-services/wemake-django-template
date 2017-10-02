@@ -26,6 +26,7 @@ MIDDLEWARE += (
 
 INTERNAL_IPS = GlobalIPList([
     '127.0.0.1',
+    '10.0.2.2',
 
     # Uncomment next line and run 'runserver 0.0.0.0:8000'
     # for test purposes, you will need to modify the `net` part:

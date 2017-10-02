@@ -10,14 +10,14 @@ For the full list of settings and their config, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
-from server.settings.components import BASE_DIR, CONFIG  # NOQA
+from server.settings.components import BASE_DIR, config  # NOQA
 
 # Build paths inside the project like this: join(BASE_DIR, ...)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
-SECRET_KEY = CONFIG['DJANGO_SECRET_KEY']
+SECRET_KEY = config('DJANGO_SECRET_KEY')
 
 # Application definition:
 
@@ -66,13 +66,13 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
 
         # Database name or filepath if using 'sqlite3':
-        'NAME': CONFIG['POSTGRES_DB'],
+        'NAME': config('POSTGRES_DB'),
 
         # You don't need these settings if using 'sqlite3':
-        'USER': CONFIG['POSTGRES_USER'],
-        'PASSWORD': CONFIG['POSTGRES_PASSWORD'],
-        'HOST': CONFIG['DJANGO_DATABASE_HOST'],
-        'PORT': CONFIG['DJANGO_DATABASE_PORT'],
+        'USER': config('POSTGRES_USER'),
+        'PASSWORD': config('POSTGRES_PASSWORD'),
+        'HOST': config('DJANGO_DATABASE_HOST'),
+        'PORT': config('DJANGO_DATABASE_PORT', cast=int),
     },
 }
 

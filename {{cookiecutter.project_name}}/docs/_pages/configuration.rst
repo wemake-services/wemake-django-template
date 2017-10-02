@@ -44,13 +44,13 @@ There are different options to do it:
 - ``ansible-vault``
 - ``git-secret``
 
-Depending on a project we use both. But the main idea is that we place these settings into ``config/secret.env`` file. So it would be easily readable for both ``docker`` and ``django``.
+Depending on a project we use both. But the main idea is that we place these settings into ``config/.env`` file. So it would be easily readable for both ``docker`` and ``django``.
 
-You will need to copy file ``config/secret.env.template`` to ``config/secret.env``:
+You will need to copy file ``config/.env.template`` to ``config/.env``:
 
 .. code:: bash
 
-  cp config/secret.env.template config/secret.env
+  cp config/.env.template config/.env
 
 
 Further reading
@@ -73,7 +73,4 @@ Utilities
 .. automodule:: server.settings.components
 
 .. autoclass:: GlobalIPList
-    :members:
-
-.. autoclass:: DevelopmentConfiguration
     :members:

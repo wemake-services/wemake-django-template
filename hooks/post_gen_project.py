@@ -47,7 +47,7 @@ def get_random_string(length=50):
     print(
         "Cookiecutter Django couldn't find a secure pseudo-random "
         "number generator on your system. "
-        "Please change change your SECRET_KEY variables in config/secret.env "
+        "Please change change your SECRET_KEY variables in config/.env "
         "manually."
     )
     return CHANGEME
@@ -76,10 +76,10 @@ def copy_local_configuration():
 
     # Secret config:
     secret_template = os.path.join(
-        PROJECT_DIRECTORY, 'config', 'secret.env.template'
+        PROJECT_DIRECTORY, 'config', '.env.template'
     )
     secret_config = os.path.join(
-        PROJECT_DIRECTORY, 'config', 'secret.env'
+        PROJECT_DIRECTORY, 'config', '.env'
     )
     shutil.copyfile(secret_template, secret_config)
     create_secret_key(secret_config)

@@ -10,14 +10,13 @@ ENV PIPENV_SHELL_COMPAT=true PIPENV_COLORBLIND=true PIPENV_NOSPIN=true
 
 RUN apk update \
     && apk --no-cache add musl-dev postgresql-dev gcc git curl \
-    && apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/main python3-dev
+    && apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/main python3-dev \
+    && mkdir /code
 
 
 # Creating folders, and files for a project:
 
-RUN mkdir /code
 WORKDIR /code
-
 ADD . /code
 
 

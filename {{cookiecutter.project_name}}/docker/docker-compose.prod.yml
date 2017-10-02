@@ -1,8 +1,8 @@
-version: '2'
+version: "3"
 services:
   caddy:
     image: "wemakeservices/caddy-docker:latest"
-    env_file: ./config/secret.env
+    env_file: ./config/.env
     volumes:
       - ./docker/caddy/Caddyfile:/root/.caddy/Caddyfile
     ports:
@@ -13,7 +13,9 @@ services:
       - web
 
   web:
+    image: "registry.gitlab.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}:latest"
     build:
+      # Default DJANGO_ENV for Dockerfile is `production`
       context: .
       dockerfile: ./docker/django/Dockerfile
     command: ./docker/django/gunicorn.sh
