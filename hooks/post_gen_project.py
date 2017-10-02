@@ -2,9 +2,7 @@
 Does the following:
 
 1. Generates and saves random secret key
-2. Removes the taskapp if celery isn't going to be used
-3. Removes the .idea directory if PyCharm isn't going to be used
-4. Copy files from /docs/ to {{ cookiecutter.project_name }}/docs/
+2. Removes docker files if it is not used
 
 A portion of this code was adopted from Django's standard crypto functions and
 utilities, specifically:
@@ -47,9 +45,10 @@ def get_random_string(length=50):
         ) for i in range(length))
 
     print(
-        "Cookiecutter Django couldn't find a secure pseudo-random number generator on your system."
-        " Please change change your SECRET_KEY variables in conf/settings/local.py and env.example"
-        " manually."
+        "Cookiecutter Django couldn't find a secure pseudo-random "
+        "number generator on your system. "
+        "Please change change your SECRET_KEY variables in config/secret.env "
+        "manually."
     )
     return CHANGEME
 
@@ -113,8 +112,9 @@ def clean_docker_files():
     os.remove(gitlab_ci)
     shutil.rmtree(docker_dir)
 
+
 copy_local_configuration()
 
-{% if cookiecutter.docker != 'y' %}
-clean_docker_files()
-{% endif %}
+{% if cookiecutter.docker != 'y' %}  # noqa
+clean_docker_files()  # noqa
+{% endif %}  # noqa
