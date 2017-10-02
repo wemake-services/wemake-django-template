@@ -9,7 +9,6 @@ import os
 import re
 
 import pytest
-
 from binaryornot.check import is_binary
 
 PATTERN = r'{{(\s?cookiecutter)[.](.*?)}}'
