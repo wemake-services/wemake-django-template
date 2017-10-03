@@ -27,4 +27,4 @@ When developing locally, we use:
 
 ## Documentation
 
-Full documentation is available here: `docs/index.rst`.
+Full documentation is available here: `docs/`.

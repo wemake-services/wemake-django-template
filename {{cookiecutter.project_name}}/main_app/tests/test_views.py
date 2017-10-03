@@ -2,9 +2,7 @@
 
 
 def test_main_page(client):
-    """
-    This test ensures that main page works.
-    """
+    """This test ensures that main page works."""
     response = client.get('/')
 
     assert response.status_code == 200

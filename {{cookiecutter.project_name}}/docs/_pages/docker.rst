@@ -40,7 +40,7 @@ You will need to specify extra configuration to run ``docker-compose`` in produc
 Going to production
 -------------------
 
-See :ref:`going-to-production`_ for more information.
+See :ref:`going-to-production` for more information.
 
 
 Further reading

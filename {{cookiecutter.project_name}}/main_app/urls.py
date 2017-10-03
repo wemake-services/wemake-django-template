@@ -2,10 +2,10 @@
 
 from django.conf.urls import url
 
-from main_app.views import hello
+from main_app.views import index
 
 # Place your URLs here:
 
 urlpatterns = [
-    url(r'^hello/$', hello, name='hello'),
+    url(r'^hello/$', index, name='hello'),
 ]

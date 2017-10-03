@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 
 """
-This file determines all the settings used in production.
+This file contains all the settings used in production.
+
 This file is required and if development.py is present these
 values are overridden.
 """

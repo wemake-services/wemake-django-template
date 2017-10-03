@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
 """
-This file determines all the settings that must define the development server.
-Basically this is a local file. It is excluded from the VCS by default.
+This file contains all the settings that defines testing env.
 
+Basically this is a local file. It is excluded from the VCS by default.
 SECURITY WARNING: don't run with debug turned on in production!
 """
 

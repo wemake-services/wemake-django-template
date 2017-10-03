@@ -2,6 +2,7 @@
 
 """
 Main URL mapping configuration file.
+
 Include other URLConfs from external apps using method include().
 
 It is also a good practice to keep a single URL to the root index page.
@@ -16,7 +17,7 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 
 from main_app import urls as main_urls
-from main_app.views import hello
+from main_app.views import index
 
 admin.autodiscover()
 
@@ -26,10 +27,10 @@ urlpatterns = [
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
 
-    # apps:
+    # Apps:
     url(r'^main/', include(main_urls)),
 
-    # text and xml static files:
+    # Text and xml static files:
     url(r'^robots\.txt$', TemplateView.as_view(
         template_name='txt/robots.txt',
         content_type='text/plain',
@@ -43,8 +44,8 @@ urlpatterns = [
         content_type='application/xml',
     )),
 
-    # it is a good practice to have explicit index view:
-    url(r'^$', hello, name='index'),
+    # It is a good practice to have explicit index view:
+    url(r'^$', index, name='index'),
 ]
 
 if settings.DEBUG:

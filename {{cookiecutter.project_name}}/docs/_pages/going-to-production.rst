@@ -1,4 +1,4 @@
-.. _going-to-production:
+.. _`going-to-production`:
 
 Going to production
 ===================

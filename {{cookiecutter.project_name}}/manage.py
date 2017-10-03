@@ -1,17 +1,19 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"""
-This is a manage file for server project.
-"""
-
 import os
 import sys
 
 
 def main():
-    """ Main function. """
+    """
+    Main function.
 
+    It does several things:
+    1. Sets default settings module, if it is not set
+    2. Warns if Django is not installed
+    3. Executes any given command
+    """
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'server.settings')
 
     try:
