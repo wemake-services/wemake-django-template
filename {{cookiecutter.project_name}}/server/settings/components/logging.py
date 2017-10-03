@@ -1,15 +1,16 @@
 # Logging
 # https://docs.djangoproject.com/en/1.11/topics/logging/
 
+_VERBOSE = {
+    'format': '[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s',
+    'datefmt': '%d/%b/%Y %H:%M:%S',
+}
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
     'formatters': {
-        'verbose': {
-            'format':
-                '[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s',
-            'datefmt': '%d/%b/%Y %H:%M:%S',
-        },
+        'verbose': _VERBOSE,
         'simple': {
             'format': '%(levelname)s %(message)s',
         },

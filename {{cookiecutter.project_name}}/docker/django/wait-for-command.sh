@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 #
 # Compare a command exit status to some given number(s) for a period of time.
 

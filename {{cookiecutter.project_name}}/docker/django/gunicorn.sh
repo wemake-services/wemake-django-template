@@ -1,7 +1,6 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 set -o errexit
-set -o pipefail
 set -o nounset
 
 # Run checks to be sure everything will work fine:

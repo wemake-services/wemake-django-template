@@ -1,9 +1,11 @@
-FROM python:3.6.2-alpine
+FROM python:3.6.2-alpine3.6
 
 LABEL maintainer="sobolevn@wemake.services"
 
 ARG DJANGO_ENV=production
-ENV PIPENV_SHELL_COMPAT=true PIPENV_COLORBLIND=true PIPENV_NOSPIN=true
+ENV PIPENV_SHELL_COMPAT=true \
+  PIPENV_COLORBLIND=true \
+  PIPENV_NOSPIN=true
 
 
 # System deps:
@@ -27,13 +29,9 @@ RUN pip install pipenv && test "$DJANGO_ENV" == production && pipenv install --s
 
 # Creating users and groups:
 
-RUN addgroup -S django \
-  && adduser -S -g django django \
-  && chown -R django:django /code \
-  && chmod +x /code/docker/django/entrypoint.sh \
+RUN chmod +x /code/docker/django/entrypoint.sh \
   && chmod +x /code/docker/django/wait-for-command.sh \
   && chmod +x /code/docker/django/gunicorn.sh \
   && chmod +x /code/docker/ci.sh
-USER django
 
 ENTRYPOINT ["sh", "/code/docker/django/entrypoint.sh"]
