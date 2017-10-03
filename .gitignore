@@ -6,7 +6,8 @@
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -163,4 +164,3 @@ ENV/
 
 # mypy
 .mypy_cache/
-

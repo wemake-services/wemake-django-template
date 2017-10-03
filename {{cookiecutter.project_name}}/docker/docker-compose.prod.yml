@@ -18,6 +18,7 @@ services:
       # Default DJANGO_ENV for Dockerfile is `production`
       context: .
       dockerfile: ./docker/django/Dockerfile
+    restart: always
     command: ./docker/django/gunicorn.sh
     ports:
       - "5000:5000"

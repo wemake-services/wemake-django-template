@@ -11,5 +11,8 @@ python /code/manage.py check --deploy
 python /code/manage.py collectstatic --noinput
 python /code/manage.py migrate --noinput
 
+# Check that all migrations worked fine:
+python /code/manage.py makemigrations --dry-run --check
+
 # Start gunicorn with 4 workers:
 /usr/local/bin/gunicorn server.wsgi -w 4 -b 0.0.0.0:5000 --chdir=/code

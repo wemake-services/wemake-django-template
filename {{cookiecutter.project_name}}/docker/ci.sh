@@ -17,8 +17,12 @@ echo "Activating $VENV ..."
 # Running tests:
 python -B -m pytest
 
-# Running commit lint:
-printf "$(git log -1 --pretty=%B)" | python -m gitlint.cli
+# Running conditional commit lint:
+LINT_COMMITS=${DOCKER_LINT_COMMITS:=true}
+
+if "$LINT_COMMITS"; then
+  printf "$(git log -1 --pretty=%B)" | python -m gitlint.cli
+fi
 
 # Running additional checks:
 xenon --max-absolute B --max-modules A --max-average A .
