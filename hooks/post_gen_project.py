@@ -40,15 +40,14 @@ def get_random_string(length=50):
     punctuation = string.punctuation.replace('"', '').replace("'", '')
     punctuation = punctuation.replace('\\', '')
     if using_sysrandom:
-        return ''.join(random.choice(
-            string.digits + string.ascii_letters + punctuation
-        ) for i in range(length))
+        chars = string.digits + string.ascii_letters + punctuation
+        return ''.join(random.choice(chars) for i in range(length))
 
     print(
         "Cookiecutter Django couldn't find a secure pseudo-random "
-        "number generator on your system. "
-        "Please change change your SECRET_KEY variables in config/.env "
-        "manually."
+        'number generator on your system. '
+        'Please change change your SECRET_KEY variables in config/.env '
+        'manually.',
     )
     return CHANGEME
 
@@ -58,10 +57,10 @@ def create_secret_key(config_path):
         file_ = f.read()
 
     # Generate a SECRET_KEY that matches the Django standard
-    SECRET_KEY = get_random_string()
+    secret_key = get_random_string()
 
     # Replace CHANGEME with SECRET_KEY
-    file_ = file_.replace(CHANGEME, SECRET_KEY, 1)
+    file_ = file_.replace(CHANGEME, secret_key, 1)
 
     # Write the results to the file
     with open(config_path, 'w') as f:
@@ -70,16 +69,16 @@ def create_secret_key(config_path):
 
 def copy_local_configuration():
     """
-    This function copies local configuration from `.template`s
+    Handler to copy local configuration from `.template`s
     to the actual files.
     """
 
     # Secret config:
     secret_template = os.path.join(
-        PROJECT_DIRECTORY, 'config', '.env.template'
+        PROJECT_DIRECTORY, 'config', '.env.template',
     )
     secret_config = os.path.join(
-        PROJECT_DIRECTORY, 'config', '.env'
+        PROJECT_DIRECTORY, 'config', '.env',
     )
     shutil.copyfile(secret_template, secret_config)
     create_secret_key(secret_config)
@@ -87,34 +86,40 @@ def copy_local_configuration():
     # Local config:
     local_template = os.path.join(
         PROJECT_DIRECTORY, 'server',
-        'settings', 'environments', 'local.py.template'
+        'settings', 'environments', 'local.py.template',
     )
     local_config = os.path.join(
         PROJECT_DIRECTORY, 'server',
-        'settings', 'environments', 'local.py'
+        'settings', 'environments', 'local.py',
     )
     shutil.copyfile(local_template, local_config)
 
 
-def clean_docker_files():
+def replace_pycharm_configuration():
     """
-    This function removes all docker-related files.
+    Handler to replace CHANGEME marks inside `.idea` files.
 
-    It is called when user does not want to include docker support.
+    It is a workaround for a strange docker in PyCharm support.
     """
-    dockerignore = os.path.join(PROJECT_DIRECTORY, '.dockerignore')
-    docker_compose = os.path.join(PROJECT_DIRECTORY, 'docker-compose.yml')
-    gitlab_ci = os.path.join(PROJECT_DIRECTORY, '.gitlab-ci.yml')
-    docker_dir = os.path.join(PROJECT_DIRECTORY, 'docker')
 
-    os.remove(dockerignore)
-    os.remove(docker_compose)
-    os.remove(gitlab_ci)
-    shutil.rmtree(docker_dir)
+    files = [
+        os.path.join(PROJECT_DIRECTORY, '.idea', 'misc.xml'),
+        os.path.join(
+            PROJECT_DIRECTORY, '.idea', '{{cookiecutter.project_name}}.iml',
+        ),
+    ]
+
+    for name in files:
+        with open(name) as f:
+            file_ = f.read()
+
+        # Replace CHANGEME with SECRET_KEY
+        file_ = file_.replace(CHANGEME, PROJECT_DIRECTORY, 1)
+
+        # Write the results to the file
+        with open(name, 'w') as f:
+            f.write(file_)
 
 
 copy_local_configuration()
-
-{% if cookiecutter.docker != 'y' %}  # noqa
-clean_docker_files()  # noqa
-{% endif %}  # noqa
+replace_pycharm_configuration()

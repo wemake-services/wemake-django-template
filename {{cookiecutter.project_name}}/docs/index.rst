@@ -8,6 +8,7 @@ Welcome to wemake-django-template's documentation!
    _pages/development-process.rst
    _pages/configuration.rst
    _pages/dependencies.rst
+   _pages/pycharm.rst
    _pages/linters.rst
    _pages/qa.rst
    _pages/docker.rst

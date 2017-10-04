@@ -13,7 +13,7 @@ You will need:
 
 - `python3.6` (see `.python_version` file. You can use `pyenv` or `pipenv` to manage versions)
 - `postgresql` with version `9.6`
-{% if cookiecutter.docker == 'y' %}- `docker` with version at least `17.07`{% endif %}
+- `docker` with version at least `17.07`
 
 
 ## Development
@@ -22,7 +22,7 @@ When developing locally, we use:
 
 - [`editorconfig`](http://editorconfig.org/) plugin (**required**)
 - [`pipenv`](https://github.com/kennethreitz/pipenv) (**required**)
-- `pycharm` (optional)
+- `pycharm 2017` (optional)
 
 
 ## Documentation
