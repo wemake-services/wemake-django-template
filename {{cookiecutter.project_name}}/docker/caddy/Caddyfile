@@ -2,8 +2,10 @@ www.{% raw %}{$DOMAIN_NAME}{% endraw %} {
     redir https://{$DOMAIN_NAME}
 }
 
-{% raw %}{$DOMAIN_NAME}{% endraw %} { {
-  proxy / web:5000 {
+{% raw %}{$DOMAIN_NAME}{% endraw %} {
+  tls {% raw %}{$TLS_EMAIL}{% endraw %}
+
+  proxy / web:8000 {
     header_upstream Host {host}
     header_upstream X-Real-IP {remote}
     header_upstream X-Forwarded-Proto {scheme}

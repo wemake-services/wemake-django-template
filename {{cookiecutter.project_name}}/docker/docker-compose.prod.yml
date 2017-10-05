@@ -6,21 +6,29 @@ services:
     volumes:
       - ./docker/caddy/Caddyfile:/root/.caddy/Caddyfile
     ports:
+      - "80:80"
+      - "443:443"
       - "2015:2015"
-      - "8080:80"
-      - "4430:443"
     depends_on:
       - web
+    networks:
+      - webnet
 
   web:
     image: "registry.gitlab.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}:latest"
     build:
-      # Default DJANGO_ENV for Dockerfile is `production`
       context: .
       dockerfile: ./docker/django/Dockerfile
-    restart: always
-    command: ./docker/django/gunicorn.sh
-    ports:
-      - "5000:5000"
+      args:
+        DJANGO_ENV: production
+    command: sh ./docker/django/gunicorn.sh
     environment:
-      DJANGO_DATABASE_HOST: db
+      DJANGO_ENV: production
+    deploy:
+      replicas: 5
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: 50M
+      restart_policy:
+        condition: on-failure

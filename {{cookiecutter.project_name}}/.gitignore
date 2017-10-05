@@ -224,3 +224,6 @@ media/
 
 # Local settings files:
 *local.py
+
+# Deploy files for Docker:
+docker-compose.deploy.yml

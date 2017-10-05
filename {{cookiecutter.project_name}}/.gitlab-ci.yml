@@ -41,7 +41,7 @@ build:
 test:
   stage: test
   script:
-    - docker-compose run web ./docker/ci.sh
+    - docker-compose run web sh ./docker/ci.sh
   coverage: '/\d+\%\s*$/'
 
 # Releasing image, when tests pass:

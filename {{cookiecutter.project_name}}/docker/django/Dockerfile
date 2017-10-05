@@ -26,12 +26,4 @@ ADD . /code
 
 RUN pip install pipenv && test "$DJANGO_ENV" == production && pipenv install --system --deploy || pipenv install --dev --system --deploy
 
-
-# Creating users and groups:
-
-RUN chmod +x /code/docker/django/entrypoint.sh \
-  && chmod +x /code/docker/django/wait-for-command.sh \
-  && chmod +x /code/docker/django/gunicorn.sh \
-  && chmod +x /code/docker/ci.sh
-
 ENTRYPOINT ["sh", "/code/docker/django/entrypoint.sh"]

@@ -2,6 +2,8 @@ version: "3"
 services:
   db:
     image: "postgres:9.6.5-alpine"
+    networks:
+      - webnet
     env_file: ./config/.env
 
   web:
@@ -17,6 +19,11 @@ services:
       - "8000:8000"
     depends_on:
       - db
+    networks:
+      - webnet
     env_file: ./config/.env
     environment:
       DJANGO_DATABASE_HOST: db
+
+networks:
+  webnet:
