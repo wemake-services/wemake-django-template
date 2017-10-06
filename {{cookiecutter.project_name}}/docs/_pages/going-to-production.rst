@@ -27,6 +27,14 @@ The Caddy webserver used in the default configuration will get you a valid certi
 Read more: `Automatic HTTPS <https://caddyserver.com/docs/automatic-https>`_ in Caddy docs.
 
 
+Disabling HTTPS
+---------------
+
+You would need to disable `https` inside `Caddy` and in production settings for Django. Because Django itself also redirects to `https`.
+
+See `docs <https://docs.djangoproject.com/en/1.11/ref/settings/#secure-ssl-redirect>`_.
+
+
 Further reading
 ---------------
 

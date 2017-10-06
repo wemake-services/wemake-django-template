@@ -28,7 +28,7 @@ class GlobalIPList(list):
 
         It works for IPs like: `192.168.0.*`.
         """
-        if any([fnmatch(key, elt) for elt in self]):
+        if any(fnmatch(key, elt) for elt in self):
             return True
         return False
 
