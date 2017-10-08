@@ -227,3 +227,7 @@ media/
 
 # Deploy files for Docker:
 docker-compose.deploy.yml
+
+# Certificates:
+docker/caddy/acme
+docker/caddy/ocsp

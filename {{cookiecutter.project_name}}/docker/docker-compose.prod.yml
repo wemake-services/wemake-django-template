@@ -1,14 +1,13 @@
 version: "3"
 services:
   caddy:
-    image: "wemakeservices/caddy-docker:latest"
+    image: "wemakeservices/caddy-docker:v0.10.9"
     env_file: ./config/.env
     volumes:
-      - ./docker/caddy/Caddyfile:/root/.caddy/Caddyfile
+      - ./docker/caddy:/root/.caddy
     ports:
       - "80:80"
       - "443:443"
-      - "2015:2015"
     depends_on:
       - web
     networks:

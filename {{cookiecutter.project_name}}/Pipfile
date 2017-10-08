@@ -13,6 +13,9 @@ python_version = '3.6'
 "flake8-commas" = "==0.4.3"
 "flake8-quotes" = "==0.9.0"
 "flake8-blind-except" = "*"
+"flake8-bugbear" = "*"
+"flake8-comprehensions" = "*"
+"flake8-pep3101" = "*"
 pytest = "==3.0.7"
 "pytest-flake8" = "==0.8.1"
 "pytest-isort" = "==0.1.0"
@@ -22,9 +25,6 @@ gitlint = "==0.8.2"
 "pre-commit" = "*"
 xenon = "*"
 radon = "*"
-"flake8-bugbear" = "*"
-"flake8-comprehensions" = "*"
-"flake8-pep3101" = "*"
 
 [packages]
 
