@@ -13,9 +13,9 @@ Bleeding edge `django` template focused on code quality and security.
 - `pytest` and `flake8` for testing and linting
 - [`pre-commit`](http://pre-commit.com/) hooks for consistent development
 - `docker-compose` for development and production
-- `pycharm` pre-configured for local development in `docker`
+- `pycharm` with pre-configured local `docker` development targets
 - `sphinx` for documentation
-- `Gitlab CI` with full pipeline (`build`, `test`, and `deploy`) configured by default
+- `Gitlab CI` with full `build`, `test`, and `deploy` pipeline configured by default
 - [`Caddy`](https://caddyserver.com/) with [`https`](https://caddyserver.com/docs/automatic-https) and `http/2` turned on by default
 
 
