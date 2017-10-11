@@ -5,6 +5,7 @@ services:
     env_file: ./config/.env
     volumes:
       - ./docker/caddy:/root/.caddy
+      - django-static:/var/www/django/static
     ports:
       - "80:80"
       - "443:443"
@@ -28,6 +29,6 @@ services:
       resources:
         limits:
           cpus: "0.1"
-          memory: 50M
+          memory: 100M
       restart_policy:
         condition: on-failure

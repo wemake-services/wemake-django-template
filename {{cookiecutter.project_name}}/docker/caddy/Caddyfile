@@ -1,11 +1,14 @@
-www.{% raw %}{$DOMAIN_NAME}{% endraw %} {
+www.{$DOMAIN_NAME} {
     redir https://{$DOMAIN_NAME}
 }
 
-{% raw %}{$DOMAIN_NAME}{% endraw %} {
-  tls {% raw %}{$TLS_EMAIL}{% endraw %}
+{$DOMAIN_NAME} {
+  tls {$TLS_EMAIL}
+
+  root /var/www/django
 
   proxy / web:8000 {
+    except /static
     header_upstream Host {host}
     header_upstream X-Real-IP {remote}
     header_upstream X-Forwarded-Proto {scheme}

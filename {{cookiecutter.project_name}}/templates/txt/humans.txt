@@ -1,15 +1,14 @@
 # The humans responsible & technology colophon
 # http://humanstxt.org/
 
-## TEAM wemake.services
 
-  - Name: sobolevn
-    Email: sobolevn@wemake.services
-    Github: https://github.com/sobolevn
+## {{ cookiecutter.organization }}
+
+Team:
 
 
-# TECHNOLOGY COLOPHON
+## Technologies
 
-  Language: English / Russian
-  Doctype: HTML5
-  Technologies: Javascript, Python, Django
+Language: English
+Doctype: HTML5
+Technologies: Python, Django

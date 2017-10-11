@@ -7,10 +7,6 @@ This file is required and if development.py is present these
 values are overridden.
 """
 
-import os
-
-from server.settings.components.common import BASE_DIR
-
 # Production flags:
 
 DEBUG = False
@@ -22,7 +18,7 @@ ALLOWED_HOSTS = [
 
 
 # Adding STATIC_ROOT to collect static files via 'collectstatic'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
+STATIC_ROOT = '/var/www/django/static'
 
 
 # Password validation
