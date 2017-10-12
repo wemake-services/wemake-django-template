@@ -58,10 +58,10 @@ LOGGING = {
         },
         '': {
             'handlers': ['default', 'file'],
-            'level': 'WARNING',
+            'level': 'DEBUG',
             'propagate': True,
         },
-    }
+    },
 }
 
 structlog.configure(

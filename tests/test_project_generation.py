@@ -26,6 +26,12 @@ def context():
     }
 
 
+@pytest.fixture
+def no_docker_context(context):
+    context.update({'docker': 'n'})
+    return context
+
+
 def build_files_list(root_dir):
     """Build a list containing absolute paths to the generated files."""
     return [
@@ -53,12 +59,35 @@ def assert_variables_replaced(paths):
         assert match is None, msg.format(path, match.start())
 
 
-def test_default_configuration(cookies, context):
+def test_with_default_configuration(cookies, context):
     result = cookies.bake(extra_context=context)
     assert result.exit_code == 0
     assert result.exception is None
     assert result.project.basename == context['project_name']
     assert result.project.isdir()
+
+
+def test_with_no_docker(cookies, no_docker_context):
+    result = cookies.bake(extra_context=no_docker_context)
+    assert result.exit_code == 0
+    assert result.exception is None
+
+    files = (
+        'docker-compose.yml',
+        '.dockerignore',
+        'docs/_pages/docker.rst',
+    )
+
+    for f in files:
+        assert not os.path.isfile(result.project.join(f))
+
+    folders = (
+        'docker',
+        '.idea',
+    )
+
+    for f in folders:
+        assert not os.path.isdir(result.project.join(f))
 
 
 def test_variables_replaced(cookies, context):

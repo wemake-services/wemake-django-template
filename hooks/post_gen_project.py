@@ -31,7 +31,7 @@ except NotImplementedError:
     using_sysrandom = False
 
 
-def get_random_string(length=50):
+def _get_random_string(length=50):
     """
     Returns a securely generated random string.
     The default length of 12 with the a-z, A-Z, 0-9 character set returns
@@ -52,12 +52,12 @@ def get_random_string(length=50):
     return CHANGEME
 
 
-def create_secret_key(config_path):
+def _create_secret_key(config_path):
     with open(config_path) as f:
         file_ = f.read()
 
     # Generate a SECRET_KEY that matches the Django standard
-    secret_key = get_random_string()
+    secret_key = _get_random_string()
 
     # Replace CHANGEME with SECRET_KEY
     file_ = file_.replace(CHANGEME, secret_key, 1)
@@ -81,7 +81,7 @@ def copy_local_configuration():
         PROJECT_DIRECTORY, 'config', '.env',
     )
     shutil.copyfile(secret_template, secret_config)
-    create_secret_key(secret_config)
+    _create_secret_key(secret_config)
 
     # Local config:
     local_template = os.path.join(
@@ -121,5 +121,39 @@ def replace_pycharm_configuration():
             f.write(file_)
 
 
+def clean_docker_files():
+    """
+    This function removes all docker-related files.
+    It is called when user does not want to include docker support.
+    """
+    dockerignore = os.path.join(PROJECT_DIRECTORY, '.dockerignore')
+    docker_compose = os.path.join(PROJECT_DIRECTORY, 'docker-compose.yml')
+    gitlab_ci = os.path.join(PROJECT_DIRECTORY, '.gitlab-ci.yml')
+    docker_dir = os.path.join(PROJECT_DIRECTORY, 'docker')
+    idea_dir = os.path.join(PROJECT_DIRECTORY, '.idea')
+
+    docker_docs_root = os.path.join(PROJECT_DIRECTORY, 'docs', '_pages')
+    docker_related = (
+        'docker.rst',
+        'pycharm.rst',
+        'gitlab-ci.rst',
+        'going-to-production.rst',
+        'production.rst',
+    )
+
+    for item in docker_related:
+        os.remove(os.path.join(docker_docs_root, item))
+
+    os.remove(dockerignore)
+    os.remove(docker_compose)
+    os.remove(gitlab_ci)
+    shutil.rmtree(docker_dir)
+    shutil.rmtree(idea_dir)
+
+
 copy_local_configuration()
+
+# Remove docker? {% if cookiecutter.docker != 'y' %}
+clean_docker_files()  # {% else %}
 replace_pycharm_configuration()
+# {% endif %}

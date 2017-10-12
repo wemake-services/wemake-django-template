@@ -36,6 +36,7 @@ To setup hooks after installing all the dependencies run:
 .. code:: bash
 
   pre-commit install
+  pre-commit install -t commit-msg
 
 
 You will now see the test results before any commit, hooks we are using:
