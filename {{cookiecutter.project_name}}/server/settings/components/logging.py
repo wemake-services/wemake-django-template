@@ -22,18 +22,8 @@ LOGGING = {
             'processor': structlog.dev.ConsoleRenderer(colors=False),
             'foreign_pre_chain': pre_chain,
         },
-        'colored': {
-            '()': structlog.stdlib.ProcessorFormatter,
-            'processor': structlog.dev.ConsoleRenderer(colors=True),
-            'foreign_pre_chain': pre_chain,
-        },
     },
     'handlers': {
-        'default': {
-            'level': 'DEBUG',
-            'class': 'logging.StreamHandler',
-            'formatter': 'colored',
-        },
         'file': {
             'level': 'DEBUG',
             'class': 'logging.handlers.WatchedFileHandler',
@@ -55,11 +45,6 @@ LOGGING = {
             'handlers': ['file'],
             'level': 'ERROR',
             'propagate': False,
-        },
-        '': {
-            'handlers': ['default', 'file'],
-            'level': 'DEBUG',
-            'propagate': True,
         },
     },
 }
