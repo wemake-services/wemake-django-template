@@ -10,7 +10,7 @@ Bleeding edge `django` template focused on code quality and security.
 ## Features
 
 - [`pipenv`](https://docs.pipenv.org/) for managing dependencies
-- `pytest` and `flake8` for testing and linting
+- `pytest`, `pylint`, and `flake8` for testing and linting
 - [`pre-commit`](http://pre-commit.com/) hooks for consistent development
 - `docker-compose` for development and production
 - `pycharm` with pre-configured local `docker` development targets

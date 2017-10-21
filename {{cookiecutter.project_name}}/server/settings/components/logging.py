@@ -1,41 +1,33 @@
 # Logging
 # https://docs.djangoproject.com/en/1.11/topics/logging/
-# and
-# http://www.structlog.org/en/stable/standard-library.html
 
-import structlog
-
-timestamper = structlog.processors.TimeStamper(fmt='%Y-%m-%d %H:%M:%S')
-pre_chain = [
-    # Add the log level and a timestamp to the event_dict if the log entry
-    # is not from structlog.
-    structlog.stdlib.add_log_level,
-    timestamper,
-]
+_VERBOSE = {
+    'format': '[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s',
+    'datefmt': '%d/%b/%Y %H:%M:%S',
+}
 
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
     'formatters': {
-        'plain': {
-            '()': structlog.stdlib.ProcessorFormatter,
-            'processor': structlog.dev.ConsoleRenderer(colors=False),
-            'foreign_pre_chain': pre_chain,
+        'verbose': _VERBOSE,
+        'simple': {
+            'format': '%(levelname)s %(message)s',
         },
     },
     'handlers': {
         'file': {
             'level': 'DEBUG',
-            'class': 'logging.handlers.WatchedFileHandler',
+            'class': 'logging.FileHandler',
             'filename': 'server.log',
-            'formatter': 'plain',
+            'formatter': 'verbose',
         },
     },
     'loggers': {
         'django': {
             'handlers': ['file'],
-            'level': 'DEBUG',
             'propagate': True,
+            'level': 'DEBUG',
         },
         'server': {
             'handlers': ['file'],
@@ -48,18 +40,3 @@ LOGGING = {
         },
     },
 }
-
-structlog.configure(
-    processors=[
-        structlog.stdlib.add_log_level,
-        structlog.stdlib.PositionalArgumentsFormatter(),
-        timestamper,
-        structlog.processors.StackInfoRenderer(),
-        structlog.processors.format_exc_info,
-        structlog.stdlib.ProcessorFormatter.wrap_for_formatter,
-    ],
-    context_class=dict,
-    logger_factory=structlog.stdlib.LoggerFactory(),
-    wrapper_class=structlog.stdlib.BoundLogger,
-    cache_logger_on_first_use=True,
-)

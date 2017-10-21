@@ -26,3 +26,20 @@ fi
 # Running additional checks:
 xenon --max-absolute B --max-modules A --max-average A .
 pipenv check
+
+# ---
+# Generating reports as build artifacts, it will be possible
+# to browse them later.
+
+# Generating pylint report (it will have issues!):
+PYLINT=$(find . -iname "*.py" | xargs pylint --reports=y || true)
+echo "$PYLINT" > "pylint.rst"
+
+# Generating code-quality report:
+radon mi . > "mi.txt"
+
+# Generating complexity report:
+radon cc . --show-closures --total-average > "cc.txt"
+
+# Generating raw metrics:
+radon raw . > "raw.txt"

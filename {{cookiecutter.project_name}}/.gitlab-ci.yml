@@ -43,6 +43,12 @@ test:
   script:
     - docker-compose run web sh ./docker/ci.sh
   coverage: '/\d+\%\s*$/'
+  artifacts:
+    paths:
+      - pylint.rst
+      - raw.txt  # Raw data: lines of code, LLOC, comments, so on
+      - mi.txt  # Code quality
+      - cc.txt  # Code complexity
 
 # Releasing image, when tests pass:
 release-image:
