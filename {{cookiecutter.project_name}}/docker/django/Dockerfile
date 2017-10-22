@@ -3,7 +3,8 @@ FROM python:3.6.2-alpine3.6
 LABEL maintainer="sobolevn@wemake.services"
 
 ARG DJANGO_ENV=production
-ENV PIPENV_SHELL_COMPAT=true \
+ENV PYTHONHASHSEED=random \
+  PIPENV_SHELL_COMPAT=true \
   PIPENV_COLORBLIND=true \
   PIPENV_NOSPIN=true
 
