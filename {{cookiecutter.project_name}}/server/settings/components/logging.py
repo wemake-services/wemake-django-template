@@ -1,40 +1,41 @@
 # Logging
 # https://docs.djangoproject.com/en/1.11/topics/logging/
 
-_VERBOSE = {
-    'format': '[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s',
-    'datefmt': '%d/%b/%Y %H:%M:%S',
-}
-
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
     'formatters': {
-        'verbose': _VERBOSE,
+        'verbose': {
+            'format': ('%(asctime)s [%(process)d] [%(levelname)s] ' +
+                       'pathname=%(pathname)s lineno=%(lineno)s ' +
+                       'funcname=%(funcName)s %(message)s'),
+            'datefmt': '%Y-%m-%d %H:%M:%S',
+        },
         'simple': {
-            'format': '%(levelname)s %(message)s',
+            'format': '%(asctime)s [%(levelname)s] %(message)s',
+            'datefmt': '%Y-%m-%d %H:%M:%S',
         },
     },
     'handlers': {
-        'file': {
+        'console': {
             'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'filename': 'server.log',
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple',
+        },
+        'console-verbose': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
             'formatter': 'verbose',
         },
     },
     'loggers': {
         'django': {
-            'handlers': ['file'],
+            'handlers': ['console'],
             'propagate': True,
-            'level': 'DEBUG',
-        },
-        'server': {
-            'handlers': ['file'],
-            'level': 'DEBUG',
+            'level': 'INFO',
         },
         'security': {
-            'handlers': ['file'],
+            'handlers': ['console-verbose'],
             'level': 'ERROR',
             'propagate': False,
         },
