@@ -231,3 +231,6 @@ docker-compose.deploy.yml
 # Certificates:
 docker/caddy/acme
 docker/caddy/ocsp
+
+# svn download artifacts:
+.gitlab/.svn

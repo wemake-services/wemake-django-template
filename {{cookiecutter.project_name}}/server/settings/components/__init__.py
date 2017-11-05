@@ -28,9 +28,7 @@ class GlobalIPList(list):
 
         It works for IPs like: `192.168.0.*`.
         """
-        if any(fnmatch(key, elt) for elt in self):
-            return True
-        return False
+        return any(fnmatch(key, elt) for elt in self)
 
 
 config = AutoConfig(search_path=os.path.join(BASE_DIR, 'config'))

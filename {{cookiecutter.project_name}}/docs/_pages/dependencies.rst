@@ -14,6 +14,15 @@ Firstly, install ``pipenv``, it is recommended to do so with `pipsi`_:
   pipsi install pipenv
 
 
+Troubleshooting
+---------------
+
+There could be some common issues, like:
+
+1. ``zsh: command not found: pip``, it means that you don't have `pip` installed. `Install <https://pip.pypa.io/en/stable/installing/>`_ it
+2. After installing ``pipenv`` with ``pipsi`` you get something like ``zsh: command not found: pipenv``, that could mean that you are missing ``~/.local/bin`` in your ``$PATH``
+
+
 Installing all dependencies
 ---------------------------
 
