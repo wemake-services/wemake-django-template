@@ -7,7 +7,7 @@ Firstly, install ``pipenv``, it is recommended to do so with ``pip3``:
 
 .. code:: bash
 
-  pip3 install pipsi
+  pip3 install pipenv
 
 
 Installing all dependencies
@@ -65,5 +65,4 @@ There could be some common issues, like:
 Further reading
 ---------------
 
-- `pipsi <https://github.com/mitsuhiko/pipsi>`_ docs
 - `pipenv <https://docs.pipenv.org/>`_ docs
