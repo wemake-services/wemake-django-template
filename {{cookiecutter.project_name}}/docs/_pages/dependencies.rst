@@ -3,24 +3,11 @@ Dependencies
 
 We use ``pipenv`` to manage dependencies. So, please do not use ``virtualenv`` or ``pip`` directly.
 
-Firstly, install ``pipenv``, it is recommended to do so with `pipsi`_:
-
-.. _pipsi: https://github.com/mitsuhiko/pipsi
+Firstly, install ``pipenv``, it is recommended to do so with ``pip3``:
 
 .. code:: bash
 
-  pip install pipsi
-  pipsi install pew
-  pipsi install pipenv
-
-
-Troubleshooting
----------------
-
-There could be some common issues, like:
-
-1. ``zsh: command not found: pip``, it means that you don't have `pip` installed. `Install <https://pip.pypa.io/en/stable/installing/>`_ it
-2. After installing ``pipenv`` with ``pipsi`` you get something like ``zsh: command not found: pipenv``, that could mean that you are missing ``~/.local/bin`` in your ``$PATH``
+  pip3 install pipsi
 
 
 Installing all dependencies
@@ -35,8 +22,8 @@ To install (or renew) all existing dependencies run:
   pipenv install -d
 
 
-Installing production dependencies only
----------------------------------------
+Installing dependencies for production use
+------------------------------------------
 
 To install dependencies for production use, you will need to run:
 
@@ -44,7 +31,7 @@ To install dependencies for production use, you will need to run:
 
   pipenv install --deploy
 
-This command will fail if ``Pipfile.lock`` is missing or incorrect.
+This command will fail if ``Pipfile.lock`` is missing, outdated or incorrect.
 
 
 Activating virtualenv
@@ -63,12 +50,20 @@ Adding new dependencies
 To add a new dependency you can run:
 
 - ``pipenv install django`` to install ``django`` as a production dependency
-- ``pipenv install -d ipython`` to install ``ipython`` as a development dependency
+- ``pipenv install -d pytest`` to install ``pytest`` as a development dependency
+
+
+Troubleshooting
+---------------
+
+There could be some common issues, like:
+
+1. ``zsh: command not found: pip``, it means that you don't have ``pip3`` installed. `Install <https://pip.pypa.io/en/stable/installing/>`_ it
+2. When ``pipenv install`` returns error, head to `pipenv's issues <https://github.com/kennethreitz/pipenv/issues>`_ and create a new issue, use ``pip install`` in a while
 
 
 Further reading
 ---------------
 
-- ``pipenv`` `docs`_
-
-.. _docs: https://docs.pipenv.org/
+- `pipsi <https://github.com/mitsuhiko/pipsi>`_ docs
+- `pipenv <https://docs.pipenv.org/>`_ docs
