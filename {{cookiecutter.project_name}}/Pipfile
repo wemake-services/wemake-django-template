@@ -33,6 +33,7 @@ xenon = "*"
 radon = "*"
 pylint = "*"
 ipython = "*"
+sphinx = "*"
 
 
 [packages]
