@@ -1,7 +1,18 @@
+# This compose-file is production only. So, it should not be called directly.
+# Instead, it should be a part of your deploy strategy.
+# Including something like:
+#
+#  $ docker-compose -f docker-compose.yml -f docker/docker-compose.prod.yml > docker-compose.deploy.yml
+#
+# This setup is supposed to be used with `docker-swarm`.
+# See `production.rst` docs.
+
 version: "3"
 services:
   caddy:
+    container_name: caddy
     image: "wemakeservices/caddy-docker:v0.10.9"
+    restart: always
     env_file: ./config/.env
     volumes:
       - ./docker/caddy:/root/.caddy
@@ -26,11 +37,3 @@ services:
       DJANGO_ENV: production
     expose:
       - 8000
-    deploy:
-      replicas: 5
-      resources:
-        limits:
-          cpus: "0.15"
-          memory: 100M
-      restart_policy:
-        condition: on-failure

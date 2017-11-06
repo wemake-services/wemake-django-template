@@ -1,3 +1,6 @@
+# Default compose file for development and production.
+# Should
+
 version: "3"
 services:
   db:
