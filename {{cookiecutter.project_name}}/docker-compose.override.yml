@@ -1,0 +1,14 @@
+# This docker-compose file is required to bind ports in development,
+# since binding ports in regular compose file will ruin scaling
+# in production. Due to how `ports` directive is merged with two files.
+#
+# This file is ignored in production, but
+# it is automatically picked up in development with:
+#
+#  $ docker-compose up
+
+version: "3"
+services:
+  web:
+    ports:
+      - "8000:8000"

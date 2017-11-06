@@ -16,8 +16,6 @@ services:
     volumes:
       - .:/code
       - django-static:/var/www/django/static
-    ports:
-      - "8000:8000"
     depends_on:
       - db
     networks:

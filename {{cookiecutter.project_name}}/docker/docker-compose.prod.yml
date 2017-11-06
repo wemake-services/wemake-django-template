@@ -24,11 +24,13 @@ services:
     command: sh ./docker/django/gunicorn.sh
     environment:
       DJANGO_ENV: production
+    expose:
+      - 8000
     deploy:
       replicas: 5
       resources:
         limits:
-          cpus: "0.1"
+          cpus: "0.15"
           memory: 100M
       restart_policy:
         condition: on-failure
