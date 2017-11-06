@@ -38,6 +38,16 @@ See ``.template`` version for the reference.
 Secret settings
 ---------------
 
+You will need to copy file ``config/.env.template`` to ``config/.env``:
+
+.. code:: bash
+
+  cp config/.env.template config/.env
+
+
+Secret settings in production
+-----------------------------
+
 We do not store our secret settings inside our source code.
 There are different options to do it:
 
@@ -45,12 +55,6 @@ There are different options to do it:
 - ``git-secret``
 
 Depending on a project we use both. But the main idea is that we place these settings into ``config/.env`` file. So it would be easily readable for both ``docker`` and ``django``.
-
-You will need to copy file ``config/.env.template`` to ``config/.env``:
-
-.. code:: bash
-
-  cp config/.env.template config/.env
 
 
 Further reading
