@@ -11,8 +11,8 @@ export DJANGO_ENV
 python /code/manage.py check --deploy --fail-level WARNING
 
 # Run python specific scripts:
-python /code/manage.py collectstatic --noinput
 python /code/manage.py migrate --noinput
+python /code/manage.py collectstatic --noinput
 
 # Check that all migrations worked fine:
 python /code/manage.py makemigrations --dry-run --check

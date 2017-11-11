@@ -10,7 +10,6 @@
 version: "3"
 services:
   caddy:
-    container_name: caddy
     image: "wemakeservices/caddy-docker:v0.10.9"
     restart: always
     env_file: ./config/.env
@@ -37,3 +36,11 @@ services:
       DJANGO_ENV: production
     expose:
       - 8000
+    deploy:
+      replicas: 5
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: 100M
+      restart_policy:
+        condition: on-failure

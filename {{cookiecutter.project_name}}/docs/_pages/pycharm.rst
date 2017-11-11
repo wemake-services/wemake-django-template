@@ -1,19 +1,34 @@
 PyCharm
 =======
 
-We are using ``PyCharm`` for development. It is an absolutely great tool.
+We are using ``PyCharm`` for development.
+It is an absolutely great tool.
 
 
-Getting started
----------------
+One time setup
+--------------
 
-To setup your working environment you will need to run your ``docker-compose``:
+You will need to do a one time setup when you start to work on a project for the first time.
 
-.. code:: bash
+Editorconfig
+~~~~~~~~~~~~
 
-   docker-compose up
+Firstly, you will need to install ``editorconfig`` plugin.
+Go to: Settings -> Plugins.
+Then search for ``editoconfig`` and install it.
+You may need to restart a ``pycharm``.
 
-And just leave it there up and running.
+Docker
+~~~~~~
+
+Secondly, you will need to create a remote ``docker`` interpreter for ``pycharm`` to run your code.
+
+Go to: Settings -> Project -> Project Interpreter -> Add Remote.
+Then select "Docker Compose". Select `docker-compose.yml` and `docker-compose.override.yml` as configuration files and `web` as a service.
+You are done.
+
+This project ships with prebuild configuration for development server and tests. So, when interpreter will be ready, you can hit ``runserver-docker`` to start the server.
+Everything should run correctly.
 
 
 Running development server

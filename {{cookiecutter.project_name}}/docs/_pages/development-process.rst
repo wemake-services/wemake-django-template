@@ -12,6 +12,8 @@ Setting up
 
 When cloning a project for the first time it may need to configure it properly, see :ref:`configuration` section for more information.
 
+**Note**, that you only need to run these commands once per project.
+
 Local database
 ~~~~~~~~~~~~~~
 

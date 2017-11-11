@@ -7,7 +7,7 @@ This project was generated with [`wemake-django-template`](https://github.com/we
 {% if cookiecutter.docker == 'y' %}[![build status](https://gitlab.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}/badges/master/build.svg)](https://gitlab.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}/commits/master) [![coverage report](https://gitlab.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}/badges/master/coverage.svg)](https://gitlab.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}/commits/master){% endif %}
 
 
-## Prerequirements
+## Prerequisites
 
 You will need:
 

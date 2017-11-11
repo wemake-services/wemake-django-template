@@ -1,6 +1,8 @@
 Welcome to wemake-django-template's documentation!
 ==================================================
 
+.. include:: _pages/quickstart.rst
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
@@ -10,11 +12,13 @@ Welcome to wemake-django-template's documentation!
    _pages/development-process.rst
    _pages/linters.rst
    _pages/qa.rst
-   {% if cookiecutter.docker == 'y' %}_pages/pycharm.rst
+   {% if cookiecutter.docker == 'y' %}
+   _pages/pycharm.rst
    _pages/docker.rst
    _pages/gitlab-ci.rst
    _pages/going-to-production.rst
-   _pages/production.rst{% endif %}
+   _pages/production.rst
+   {% endif %}
 
 Indexes and tables
 ==================
