@@ -1,5 +1,9 @@
 # Default compose file for development and production.
-# Should
+# Should be used directly in development.
+# Automatically loads `docker-compose.override.yml` if it exists.
+# No extra steps required.
+# Should be used together with `docker/docker-compose.prod.yml`
+# in production.
 
 version: "3"
 services:

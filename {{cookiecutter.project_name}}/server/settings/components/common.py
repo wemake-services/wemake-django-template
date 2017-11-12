@@ -81,6 +81,7 @@ DATABASES = {
 # https://docs.djangoproject.com/en/1.11/ref/settings/#csrf-cookie-httponly
 
 CSRF_COOKIE_HTTPONLY = True
+SESSION_COOKIE_HTTPONLY = True
 
 
 # Internationalization
@@ -150,7 +151,3 @@ AUTHENTICATION_BACKENDS = (
 LOGIN_URL = '/login-form/'
 LOGIN_REDIRECT_URL = '/logged-in/'
 LOGIN_ERROR_URL = '/login-error/'
-
-SESSION_COOKIE_HTTPONLY = True
-
-SESSION_EXPIRE_AT_BROWSER_CLOSE = True

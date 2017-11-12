@@ -3,7 +3,8 @@ FROM python:3.6.2-alpine3.6
 LABEL maintainer="sobolevn@wemake.services"
 
 ARG DJANGO_ENV=production
-ENV PYTHONHASHSEED=random \
+ENV PYTHONFAULTHANDLER=1 \
+  PYTHONHASHSEED=random \
   PIP_NO_CACHE_DIR=off \
   PIP_DISABLE_PIP_VERSION_CHECK=on \
   PIPENV_SHELL_COMPAT=true \
@@ -14,8 +15,8 @@ ENV PYTHONHASHSEED=random \
 # System deps:
 
 RUN apk update \
-    && apk --no-cache add musl-dev postgresql-dev gcc git curl \
-    && apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/main python3-dev \
+    && apk --no-cache add musl-dev postgresql-dev gcc \
+      git curl bash build-base gettext linux-headers \
     && mkdir /code
 
 
