@@ -132,7 +132,12 @@ def clean_docker_files():
     docker_dir = os.path.join(PROJECT_DIRECTORY, 'docker')
     idea_dir = os.path.join(PROJECT_DIRECTORY, '.idea')
 
-    docker_docs_root = os.path.join(PROJECT_DIRECTORY, 'docs', '_pages')
+    docker_docs_root = os.path.join(
+        PROJECT_DIRECTORY,
+        'docs',
+        '_pages',
+        'template',
+    )
     docker_related = (
         'docker.rst',
         'pycharm.rst',
