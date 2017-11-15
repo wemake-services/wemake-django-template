@@ -33,6 +33,6 @@ To actually deploy a software run:
 Further readings
 ----------------
 
-- ``docker-compose`` production `docs <https://docs.docker.com/compose/production/>`_
-- ``docker-compose`` with ``swarm`` `docs <https://docs.docker.com/compose/swarm/>`_
+- Production with `docker-compose <https://docs.docker.com/compose/production>`_
+- `docker-compose with swarm <https://docs.docker.com/compose/swarm/>`_
 - `Full tutorial <https://docs.docker.com/get-started>`_

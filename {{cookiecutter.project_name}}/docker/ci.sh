@@ -3,6 +3,8 @@
 set -o errexit
 set -o nounset
 
+INSIDE_CI=${INSIDE_CI:=1}
+
 pyclean () {
   # Cleaning cache:
   find . | grep -E "(__pycache__|\.py[cod]$)" | xargs rm -rf
@@ -24,35 +26,31 @@ pyclean
 # Running tests:
 python -B -m pytest
 
-# Running conditional commit lint:
-LINT_COMMITS=${DOCKER_LINT_COMMITS:=1}
-
-if "$LINT_COMMITS"; then
-  printf "$(git log -1 --pretty=%B)" | python -m gitlint.cli
-fi
-
 # Running additional checks:
 xenon --max-absolute B --max-modules A --max-average A .
 pipenv check
 
-# ---
-# Generating reports as build artifacts, it will be possible
-# to browse them later.
-GENERATE_REPORTS=${DOCKER_GENERATE_REPORTS:=0}
+# Run this part only if truly inside the CI process:
+if "$INSIDE_CI"; then
+  # Running conditional commit lint:
+  printf "$(git log -1 --pretty=%B)" | python -m gitlint.cli
 
-if "$GENERATE_REPORTS"; then
+  # Generating reports as build artifacts, it will be possible
+  # to browse them later:
+  # https://docs.gitlab.com/ce/user/project/pipelines/job_artifacts.html
+
   # Generating pylint report (it will have issues!):
   PYLINT=$(find . -iname "*.py" | xargs pylint --reports=y || true)
-  echo "$PYLINT" > "pylint.rst"
+  echo "$PYLINT" > "artifacts/pylint.rst"
 
   # Generating code-quality report:
-  radon mi . > "mi.txt"
+  radon mi . > "artifacts/mi.txt"
 
   # Generating complexity report:
-  radon cc . --show-closures --total-average > "cc.txt"
+  radon cc . --show-closures --total-average > "artifacts/cc.txt"
 
   # Generating raw metrics:
-  radon raw . > "raw.txt"
+  radon raw . > "artifacts/raw.txt"
 fi
 
 # Clean everything up:

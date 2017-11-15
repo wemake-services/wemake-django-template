@@ -58,7 +58,7 @@ Troubleshooting
 
 There could be some common issues, like:
 
-1. ``zsh: command not found: pip``, it means that you don't have ``pip3`` installed. `Install <https://pip.pypa.io/en/stable/installing/>`_ it
+1. ``zsh: command not found: pip3``, it means that you don't have ``pip3`` installed. `Install <https://pip.pypa.io/en/stable/installing/>`_ it
 2. When ``pipenv install`` returns error, head to `pipenv's issues <https://github.com/kennethreitz/pipenv/issues>`_ and create a new issue, use ``pip install`` in a while
 
 

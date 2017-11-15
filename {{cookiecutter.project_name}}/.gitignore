@@ -229,8 +229,9 @@ media/
 docker-compose.deploy.yml
 
 # Certificates:
-docker/caddy/acme
-docker/caddy/ocsp
+docker/caddy/acme/
+docker/caddy/ocsp/
 
-# svn download artifacts:
-.gitlab/.svn
+# Artifacts:
+.gitlab/.svn/
+artifacts/
