@@ -9,9 +9,8 @@ www.{$DOMAIN_NAME} {
 
   proxy / web:8000 {
     except /static
-    header_upstream Host {host}
-    header_upstream X-Real-IP {remote}
-    header_upstream X-Forwarded-Proto {scheme}
+
+    transparent
   }
 
   log stdout

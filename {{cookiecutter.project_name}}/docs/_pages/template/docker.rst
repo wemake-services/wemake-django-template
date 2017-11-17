@@ -43,6 +43,18 @@ Going to production
 See :ref:`going-to-production` for more information.
 
 
+Common issues
+-------------
+
+Pillow
+~~~~~~
+
+If you want to install ``Pillow`` that `how you should <https://github.com/python-pillow/Pillow/issues/1763>`_ do it:
+
+- ``RUN apk add jpeg-dev zlib-dev``
+- ``LIBRARY_PATH=/lib:/usr/lib /bin/sh -c "pip install -r requirements.txt"``
+
+
 Further reading
 ---------------
 
