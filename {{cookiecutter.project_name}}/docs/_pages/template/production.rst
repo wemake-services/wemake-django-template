@@ -7,6 +7,14 @@ We deploy our application using ``docker-compose`` files with version ``3`` and 
 Setting up
 ----------
 
+Making sure that ``overlay2`` driver is used (which is recommended):
+
+.. code:: bash
+
+  docker info | grep 'Storage Driver'
+
+If it does not return anything, then `you have to configure <https://docs.docker.com/engine/userguide/storagedriver/overlayfs-driver/#configure-docker-with-the-overlay-or-overlay2-storage-driver>`_ ``overlay2`` driver by yourself.
+
 Creating a single file for deployment:
 
 .. code:: bash
