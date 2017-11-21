@@ -9,6 +9,9 @@ version: "3"
 services:
   db:
     image: "postgres:9.6.5-alpine"
+    restart: always
+    volumes:
+      - pgdata:/var/lib/postgresql/data
     networks:
       - webnet
     env_file: ./config/.env
@@ -35,4 +38,5 @@ networks:
   webnet:
 
 volumes:
+  pgdata:
   django-static:

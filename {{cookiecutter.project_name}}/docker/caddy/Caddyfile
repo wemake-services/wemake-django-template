@@ -1,9 +1,10 @@
 www.{$DOMAIN_NAME} {
-    redir https://{$DOMAIN_NAME}
+  redir https://{$DOMAIN_NAME}
 }
 
 {$DOMAIN_NAME} {
   tls {$TLS_EMAIL}
+  header / Strict-Transport-Security "max-age=31536000;"
 
   root /var/www/django
 

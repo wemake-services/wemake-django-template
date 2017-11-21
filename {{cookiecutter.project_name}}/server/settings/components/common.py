@@ -10,6 +10,8 @@ For the full list of settings and their config, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
+import os
+
 from server.settings.components import BASE_DIR, config  # NOQA
 
 # Build paths inside the project like this: join(BASE_DIR, ...)
@@ -117,6 +119,8 @@ STATIC_URL = '/static/'
 TEMPLATES = [{
     'BACKEND': 'django.template.backends.django.DjangoTemplates',
     'DIRS': [
+        # Contains plain text templates, like `robots.txt`:
+        os.path.join(BASE_DIR, 'template'),
     ],
     'APP_DIRS': True,
     'OPTIONS': {
