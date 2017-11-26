@@ -16,8 +16,8 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.views.generic import TemplateView
 
-from main_app import urls as main_urls
-from main_app.views import index
+from server.main_app import urls as main_urls
+from server.main_app.views import index
 
 admin.autodiscover()
 

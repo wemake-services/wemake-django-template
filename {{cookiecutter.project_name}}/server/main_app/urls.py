@@ -2,7 +2,7 @@
 
 from django.conf.urls import url
 
-from .views import index
+from server.main_app.views import index
 
 # Place your URLs here:
 
