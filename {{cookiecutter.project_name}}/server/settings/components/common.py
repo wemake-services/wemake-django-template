@@ -39,7 +39,7 @@ INSTALLED_APPS = (
     'axes',
 
     # Your apps go here:
-    'main_app',
+    'server.main_app',
 )
 
 MIDDLEWARE = (
@@ -114,15 +114,14 @@ STATIC_URL = '/static/'
 
 
 # Templates
-#
+# https://docs.djangoproject.com/en/1.11/ref/templates/api
 
 TEMPLATES = [{
     'BACKEND': 'django.template.backends.django.DjangoTemplates',
     'DIRS': [
         # Contains plain text templates, like `robots.txt`:
-        os.path.join(BASE_DIR, 'template'),
+        os.path.join(BASE_DIR, 'server', 'template'),
     ],
-    'APP_DIRS': True,
     'OPTIONS': {
         'context_processors': [
             # default template context processors
@@ -133,9 +132,13 @@ TEMPLATES = [{
             'django.contrib.messages.context_processors.messages',
             'django.template.context_processors.request',
         ],
+        'loaders': [
+            'django.template.loaders.filesystem.Loader',
+            'django.template.loaders.app_directories.Loader',
+        ],
     },
 
-}, ]
+}]
 
 # Media files
 # Media-root is commonly changed in production

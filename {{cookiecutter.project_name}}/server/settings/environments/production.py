@@ -7,6 +7,8 @@ This file is required and if development.py is present these
 values are overridden.
 """
 
+from server.settings.components.common import TEMPLATES
+
 # Production flags:
 
 DEBUG = False
@@ -17,8 +19,17 @@ ALLOWED_HOSTS = [
 ]
 
 
+# Staticfiles
+# https://docs.djangoproject.com/en/1.11/ref/contrib/staticfiles/
+
 # Adding STATIC_ROOT to collect static files via 'collectstatic'
 STATIC_ROOT = '/var/www/django/static'
+
+STATICFILES_STORAGE = (
+    # This is a string, not a tuple,
+    # but it does not fit into 80 characters rule.
+    'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+)
 
 
 # Password validation
@@ -41,7 +52,20 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+# Templates
+# https://docs.djangoproject.com/en/1.11/ref/templates/api
+
+for template in TEMPLATES:
+    template['OPTIONS']['loaders'] = (
+        'django.template.loaders.cached.Loader', [
+            'django.template.loaders.filesystem.Loader',
+            'django.template.loaders.app_directories.Loader',
+        ],
+    ),
+
+
 # Security
+# https://docs.djangoproject.com/en/1.11/topics/security/
 
 SECURE_HSTS_SECONDS = 518400
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True

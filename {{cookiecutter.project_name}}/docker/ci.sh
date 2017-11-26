@@ -4,6 +4,7 @@ set -o errexit
 set -o nounset
 
 INSIDE_CI=${INSIDE_CI:=1}
+VIRTUAL_ENV_DISABLE_PROMPT=true
 
 pyclean () {
   # Cleaning cache:
@@ -31,7 +32,7 @@ xenon --max-absolute B --max-modules A --max-average A .
 pipenv check
 
 # Run this part only if truly inside the CI process:
-if "$INSIDE_CI"; then
+if [[ "$INSIDE_CI" -eq 1 ]]; then
   # Running conditional commit lint:
   printf "$(git log -1 --pretty=%B)" | python -m gitlint.cli
 

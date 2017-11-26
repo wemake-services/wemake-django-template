@@ -1,25 +1,7 @@
 - repo: local
   hooks:
-    - id: gitlint
-      name: gitlint
-      entry: bash -c 'cat "$@" | python -m gitlint.cli' --
-      language: system
-      stages: [commit-msg]
-
-    - id: pytest
-      name: pytest
-      entry: pytest
-      pass_filenames: false
-      language: system
-
     - id: qa
-      name: qa with radon
-      entry: xenon --max-absolute B --max-modules A --max-average A .
-      pass_filenames: false
-      language: system
-
-    - id: pipenv-check
-      name: pipenv-check safety and pep508 check
-      entry: pipenv check
+      name: qa
+      entry: docker-compose run -e INSIDE_CI=0 web bash ./docker/ci.sh
       pass_filenames: false
       language: system
