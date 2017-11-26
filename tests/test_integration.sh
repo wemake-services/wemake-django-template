@@ -22,4 +22,4 @@ pipenv run cookiecutter "$TRAVIS_BUILD_DIR" \
 cd "$PROJECT_NAME"
 
 # Run tests (without linting commits, since it is another repo):
-docker-compose run -e DOCKER_LINT_COMMITS=false web ./docker/ci.sh
+docker-compose run -e INSIDE_CI=0 web ./docker/ci.sh
