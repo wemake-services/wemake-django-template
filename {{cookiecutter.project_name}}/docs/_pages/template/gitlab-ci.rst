@@ -12,6 +12,12 @@ Configuration
 All configuration is done inside ``.gitlab-ci.yml``.
 
 
+Secret variables
+----------------
+
+If some real secret variables are required, then you can use `gitlab secrets <https://docs.gitlab.com/ee/ci/variables/#secret-variables>`_.
+
+
 Slack webhooks
 --------------
 
