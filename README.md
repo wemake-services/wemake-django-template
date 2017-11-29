@@ -7,6 +7,11 @@ Bleeding edge `django` template focused on code quality and security.
 
 ---
 
+## Purpose
+
+This project is used to scaffold a `django` project structure. Just like `django-admin.py startproject` but better.
+
+
 ## Features
 
 - [`pipenv`](https://docs.pipenv.org/) for managing dependencies
