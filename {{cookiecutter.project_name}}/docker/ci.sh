@@ -25,7 +25,8 @@ echo "Activating $VENV ..."
 pyclean
 
 # Running tests:
-python -B -m pytest
+python -m pytest
+python -m mypy server
 
 # Running additional checks:
 xenon --max-absolute B --max-modules A --max-average A .

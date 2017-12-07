@@ -7,6 +7,8 @@ Basically this is a local file. It is excluded from the VCS by default.
 SECURITY WARNING: don't run with debug turned on in production!
 """
 
+from typing import List
+
 # Setting the development status:
 
 DEBUG = True
@@ -31,4 +33,4 @@ CSRF_COOKIE_SECURE = False
 # Static files:
 # https://docs.djangoproject.com/en/1.11/ref/settings/#std:setting-STATICFILES_DIRS
 
-STATICFILES_DIRS = []
+STATICFILES_DIRS: List[str] = []

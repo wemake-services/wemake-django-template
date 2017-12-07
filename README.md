@@ -15,6 +15,7 @@ This project is used to scaffold a `django` project structure. Just like `django
 ## Features
 
 - [`pipenv`](https://docs.pipenv.org/) for managing dependencies
+- [`mypy`](mypy.readthedocs.io) for optional static typing
 - `pytest`, `pylint`, and `flake8` for testing and linting
 - [`pre-commit`](http://pre-commit.com/) hooks for consistent development
 - `docker-compose` for development and production
@@ -41,4 +42,4 @@ cookiecutter gh:wemake-services/wemake-django-template
 
 ## License
 
-MIT.
+MIT. See [LICENSE.md](https://github.com/wemake-services/wemake-django-template/blob/master/LICENSE.md) for more details.

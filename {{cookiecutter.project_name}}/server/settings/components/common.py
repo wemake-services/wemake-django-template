@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+from typing import Tuple
 
 from server.settings.components import BASE_DIR, config  # NOQA
 
@@ -23,7 +24,7 @@ SECRET_KEY = config('DJANGO_SECRET_KEY')
 
 # Application definition:
 
-INSTALLED_APPS = (
+INSTALLED_APPS: Tuple[str, ...] = (
     # Default django apps:
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -42,7 +43,7 @@ INSTALLED_APPS = (
     'server.main_app',
 )
 
-MIDDLEWARE = (
+MIDDLEWARE: Tuple[str, ...] = (
     # Django:
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

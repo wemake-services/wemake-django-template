@@ -22,7 +22,7 @@ class GlobalIPList(list):
     It uses globs to specify IP ranges.
     """
 
-    def __contains__(self, key: str) -> bool:
+    def __contains__(self, key) -> bool:
         """
         Method to tests if IP is in subnet.
 

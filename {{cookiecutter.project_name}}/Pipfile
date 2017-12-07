@@ -35,11 +35,12 @@ pylint = "*"
 ipython = "*"
 sphinx = "*"
 sphinx-autodoc-typehints = "*"
+mypy = "*"
 
 
 [packages]
 
-django = "*"
+django = "<1.12"
 django-split-settings = "*"
 django-axes = "*"
 "psycopg2" = "*"

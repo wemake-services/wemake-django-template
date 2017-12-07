@@ -56,7 +56,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/1.11/ref/templates/api
 
 for template in TEMPLATES:
-    template['OPTIONS']['loaders'] = (
+    template['OPTIONS']['loaders'] = (  # type: ignore
         'django.template.loaders.cached.Loader', [
             'django.template.loaders.filesystem.Loader',
             'django.template.loaders.app_directories.Loader',
