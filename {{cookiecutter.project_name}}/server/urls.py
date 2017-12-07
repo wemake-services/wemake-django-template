@@ -25,7 +25,7 @@ admin.autodiscover()
 urlpatterns = [
     # django-admin:
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', admin.site.urls),
 
     # Apps:
     url(r'^main/', include(main_urls)),

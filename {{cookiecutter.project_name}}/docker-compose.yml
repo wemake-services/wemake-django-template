@@ -22,7 +22,7 @@ services:
       dockerfile: ./docker/django/Dockerfile
       args:
         DJANGO_ENV: development
-    command: python manage.py runserver 0.0.0.0:8000
+    command: python -Wd manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code
       - django-static:/var/www/django/static
