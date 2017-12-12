@@ -3,7 +3,7 @@
 set -o errexit
 set -o nounset
 
-INSIDE_CI=${INSIDE_CI:=1}
+: ${INSIDE_CI:=0}
 VIRTUAL_ENV_DISABLE_PROMPT=true
 
 pyclean () {
@@ -25,8 +25,8 @@ echo "Activating $VENV ..."
 pyclean
 
 # Running tests:
-python -m pytest
 python -m mypy server
+python -m pytest
 
 # Running additional checks:
 xenon --max-absolute B --max-modules A --max-average A .
