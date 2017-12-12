@@ -235,3 +235,6 @@ docker/caddy/ocsp/
 # Artifacts:
 .gitlab/.svn/
 artifacts/
+
+# mypy:
+.mypy_cache/
