@@ -36,8 +36,6 @@ ipython = "*"
 sphinx = "*"
 sphinx-autodoc-typehints = "*"
 mypy = "*"
-# This is a workaround for
-# https://github.com/pypa/pipenv/issues/1177
 django = "==1.11.8"
 
 

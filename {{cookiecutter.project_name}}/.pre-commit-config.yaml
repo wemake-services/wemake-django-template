@@ -2,6 +2,6 @@
   hooks:
     - id: qa
       name: qa
-      entry: docker-compose run -e INSIDE_CI=0 web bash ./docker/ci.sh
+      entry: docker-compose run -e INSIDE_CI=0 web sh ./docker/ci.sh
       pass_filenames: false
       language: system

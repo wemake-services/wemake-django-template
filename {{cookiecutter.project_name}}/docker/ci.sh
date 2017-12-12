@@ -40,6 +40,7 @@ if [[ "$INSIDE_CI" -eq 1 ]]; then
   # Generating reports as build artifacts, it will be possible
   # to browse them later:
   # https://docs.gitlab.com/ce/user/project/pipelines/job_artifacts.html
+  mkdir -p "artifacts"
 
   # Generating pylint report (it will have issues!):
   PYLINT=$(find . -iname "*.py" | xargs pylint --reports=y || true)
