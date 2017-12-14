@@ -36,12 +36,12 @@ ipython = "*"
 sphinx = "*"
 sphinx-autodoc-typehints = "*"
 mypy = "*"
-django = "==1.11.8"
+"django" = "==2.0"
 
 
 [packages]
 
-django = "==1.11.8"
+"django" = "==2.0"
 django-split-settings = "*"
 django-axes = "*"
 "psycopg2" = "*"
