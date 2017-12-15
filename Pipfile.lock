@@ -238,9 +238,9 @@
         },
         "flake8-quotes": {
             "hashes": [
-                "sha256:0b8e5ea5407e8308ff237ab814414a1dcd4c309c5c47363b6ad07a35068684e1"
+                "sha256:2a1998616c6a962793b24f05b6bd45528c771a167bc402110231c3fbee64454b"
             ],
-            "version": "==0.11.0"
+            "version": "==0.13.0"
         },
         "future": {
             "hashes": [
