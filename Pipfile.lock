@@ -345,10 +345,10 @@
         },
         "pytest-cookies": {
             "hashes": [
-                "sha256:55c7194568eb9f2676ed8f3074bfb75f5a3a7bc58bdb8366f3e1c80d1fce288f",
-                "sha256:8822dcc1095edcd45a45db727fee647c7abbee111691380dd7e82c462c7b90f4"
+                "sha256:a6f37393b697eb3357625a5c226888d9dd020cca3d112b38c630467ce9ff7844",
+                "sha256:7054b5abd87704c3769b46deb65c332fadba80905d4103b0b1e0b4fe8a9a852a"
             ],
-            "version": "==0.2.0"
+            "version": "==0.3.0"
         },
         "pytest-flake8": {
             "hashes": [
