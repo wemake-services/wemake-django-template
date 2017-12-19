@@ -44,10 +44,10 @@
         },
         "django-axes": {
             "hashes": [
-                "sha256:70d60d38ea60b440a9ab9341d38729c284dc28c0fdd648803cc70dcbb69995de",
-                "sha256:5a5af294353e4db676cc6ece5d028d2043bdcf6f844eaefa74923c306ef69f26"
+                "sha256:d816671816763b47260c1e9de143ffec5990981f084085841b341626ae98651a",
+                "sha256:65f2892a1e768f180e3e083adb56ad1058e75c22472d386b3777fe3841e32fa6"
             ],
-            "version": "==3.0.3"
+            "version": "==4.0.0"
         },
         "django-csp": {
             "hashes": [
@@ -55,6 +55,12 @@
                 "sha256:db082b75075672fb9cf4a622c75c94ee624cb566ffe9d2a645687e58598b6d39"
             ],
             "version": "==3.3"
+        },
+        "django-ipware": {
+            "hashes": [
+                "sha256:93a90f9dd8caf2c633172aa8c8ba4e76e2b44f92a6942fa35e7624281e81ea03"
+            ],
+            "version": "==1.1.6"
         },
         "django-split-settings": {
             "hashes": [
