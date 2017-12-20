@@ -14,6 +14,7 @@ This project is used to scaffold a `django` project structure. Just like `django
 
 ## Features
 
+- Always up-to-date with the help of [`@dependabot`](https://github.com/wemake-services/wemake-vue-template/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Aapp%2Fdependabot)
 - [`pipenv`](https://docs.pipenv.org/) for managing dependencies
 - [`mypy`](mypy.readthedocs.io) for optional static typing
 - `pytest`, `pylint`, and `flake8` for testing and linting
