@@ -7,11 +7,24 @@ This file contains all the settings that defines the development server.
 SECURITY WARNING: don't run with debug turned on in production!
 """
 
-# Mind the proper import, use the right module!
+from typing import List
 
 from server.settings.components import GlobalIPList
 from server.settings.components.common import INSTALLED_APPS, MIDDLEWARE
-from server.settings.environments.testing import *  # noqa
+
+# Setting the development status:
+
+DEBUG = True
+
+SESSION_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = False
+
+
+# Static files:
+# https://docs.djangoproject.com/en/1.11/ref/settings/#std:setting-STATICFILES_DIRS
+
+STATICFILES_DIRS: List[str] = []
+
 
 # Django debug toolbar
 # django-debug-toolbar.readthedocs.io
