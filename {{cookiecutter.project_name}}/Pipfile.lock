@@ -44,10 +44,10 @@
         },
         "django-axes": {
             "hashes": [
-                "sha256:d816671816763b47260c1e9de143ffec5990981f084085841b341626ae98651a",
-                "sha256:65f2892a1e768f180e3e083adb56ad1058e75c22472d386b3777fe3841e32fa6"
+                "sha256:f28272d4145f7bef94a58b8bea40b782487ed210855e406dd915ba50184f4138",
+                "sha256:ee110c444249c1fb9ef4b349a0ef6c5b82f85fff4cc2bfbb844d5670413dccb1"
             ],
-            "version": "==4.0.0"
+            "version": "==4.0.1"
         },
         "django-csp": {
             "hashes": [
