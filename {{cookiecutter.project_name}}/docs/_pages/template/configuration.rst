@@ -49,12 +49,21 @@ Secret settings in production
 -----------------------------
 
 We do not store our secret settings inside our source code.
-There are different options to do it:
+All sensible settings are stored in ``config/.env`` file, which is not tracked by the version control.
 
-- ``ansible-vault``
-- ``git-secret``
+So, how do we store secrets? We store them as secret environment variables in `GitLab CI <https://docs.gitlab.com/ce/ci/variables/README.html#secret-variables>`_.
+Then we use `dump-env <https://github.com/sobolevn/dump-env>`_ to dump variables from both environment and ``.env`` file template.
+Then, this file is copied inside ``docker`` image and when this image is built - everything is ready for production.
 
-Depending on a project we use both. But the main idea is that we place these settings into ``config/.env`` file. So it would be easily readable for both ``docker`` and ``django``.
+However, there are different options to store secret settings:
+
+- `ansible-vault <https://docs.ansible.com/ansible/2.4/vault.html>`_
+- `git-secret <https://github.com/sobolevn/git-secret>`_
+- `Vault <https://www.vaultproject.io/>`_
+
+Depending on a project we use different tools. With ``dump-env`` being the default and the simplest one.
+
+But the main idea is that we place these settings into ``config/.env`` file. So it would be easily readable for both ``docker`` and ``django``.
 
 
 Further reading

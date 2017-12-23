@@ -17,18 +17,15 @@ services:
 
 before_script:
   # Installing docker-compose:
-  - apk update
-  - apk upgrade
+  - apk update && apk upgrade
   - apk add python python-dev py-pip git build-base
-  - pip install docker-compose
-  # Creating test configuration file:
-  - cp config/.env.template config/.env
+  - pip install dump-env docker-compose
+  # Creating `.env` configuration file:
+  - dump-env -t config/.env.template -p 'SECRET_' > config/.env
   # Login into Docker registry:
   - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN registry.gitlab.com
   # Debug information:
-  - docker info
-  - docker-compose --version
-  - git --version
+  - docker info && docker-compose --version && git --version
 
 # Build Docker container and push it to the Gitlab's registry:
 build:
@@ -36,6 +33,8 @@ build:
   script:
     - docker build -t $CONTAINER_TEST_IMAGE --build-arg DJANGO_ENV=production -f docker/django/Dockerfile .
     - docker push $CONTAINER_TEST_IMAGE
+  only:
+    - master
 
 # Testing application:
 test:
@@ -57,4 +56,4 @@ release-image:
   only:
     - master
   environment:
-    name: production
+    name: production  # used to track time with 'cycle analytics'

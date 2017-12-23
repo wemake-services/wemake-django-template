@@ -128,6 +128,9 @@ def clean_docker_files():
     """
     dockerignore = os.path.join(PROJECT_DIRECTORY, '.dockerignore')
     docker_compose = os.path.join(PROJECT_DIRECTORY, 'docker-compose.yml')
+    docker_override = os.path.join(
+        PROJECT_DIRECTORY, 'docker-compose.override.yml',
+    )
     gitlab_ci = os.path.join(PROJECT_DIRECTORY, '.gitlab-ci.yml')
     docker_dir = os.path.join(PROJECT_DIRECTORY, 'docker')
     idea_dir = os.path.join(PROJECT_DIRECTORY, '.idea')
@@ -151,6 +154,7 @@ def clean_docker_files():
 
     os.remove(dockerignore)
     os.remove(docker_compose)
+    os.remove(docker_override)
     os.remove(gitlab_ci)
     shutil.rmtree(docker_dir)
     shutil.rmtree(idea_dir)
