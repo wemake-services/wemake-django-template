@@ -36,6 +36,7 @@ sphinx = "*"
 sphinx-autodoc-typehints = "*"
 mypy = "*"
 django = "==1.11.8"
+django-querycount = "*"
 
 
 [packages]

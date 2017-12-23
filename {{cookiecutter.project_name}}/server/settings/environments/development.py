@@ -35,6 +35,10 @@ INSTALLED_APPS += (
 
 MIDDLEWARE += (
     'debug_toolbar.middleware.DebugToolbarMiddleware',
+
+    # https://github.com/bradmontgomery/django-querycount
+    # Prints how many queries were executed, useful for the APIs.
+    'querycount.middleware.QueryCountMiddleware',
 )
 
 # This will make debug toolbar to work with django-csp,
