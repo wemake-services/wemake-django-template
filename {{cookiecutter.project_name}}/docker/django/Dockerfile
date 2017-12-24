@@ -1,4 +1,4 @@
-FROM python:3.6.3-alpine3.7
+FROM python:3.6.4-alpine3.7
 
 LABEL maintainer="sobolevn@wemake.services"
 
