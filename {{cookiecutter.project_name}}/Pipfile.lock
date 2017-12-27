@@ -662,10 +662,10 @@
         },
         "pytest-xdist": {
             "hashes": [
-                "sha256:997ed2d6ed487fc41e16b5a0d00b944574a2f635375ee7fbea6a1d6b3876e2cd",
-                "sha256:433e82f9b34986a4e4b2be38c60e82cca3ac64b7e1b38f4d8e3e118292939712"
+                "sha256:74b18cc78abb334bfaaac223d82565be1ebcecf85c66a3cabe3ede8f86e16943",
+                "sha256:0b8622435e3c0650a8d5a07b73a7f9c4f79b52d7ed060536a6041f0da423ba8e"
             ],
-            "version": "==1.20.1"
+            "version": "==1.21.0"
         },
         "pytz": {
             "hashes": [
