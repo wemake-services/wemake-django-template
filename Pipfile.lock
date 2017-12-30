@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "b808d3fb7080c8fba1cb94ae9d63a44aa556513e13274c06fed9c65757aca250"
+            "sha256": "1006775edb8aee922d22d9a8c3380d3863f384523ebc54692b22d882c23ea97b"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
@@ -222,12 +222,19 @@
             ],
             "version": "==0.1.1"
         },
+        "flake8-bugbear": {
+            "hashes": [
+                "sha256:9ac9952cb5838dc26408460cb9d1fbfefbd19cb5c51bb66c6b6c664158f4cb7c",
+                "sha256:5cef9246d7f6721b8ccc6eeb78cf26dae303097e31da0f307a60e516a23ecd72"
+            ],
+            "version": "==17.12.0"
+        },
         "flake8-builtins": {
             "hashes": [
-                "sha256:112754f90b281829a4834c1f2052338142553efac455866028e136f9e333080f",
-                "sha256:a2a67165db017d2563225124b76d44ad7deb20488e205ceb504eb1c6f646555a"
+                "sha256:074d4a8dcccd659bfe218ec124b5fda5e75f8e697667c8c2ef2bf6dd9a334162",
+                "sha256:a48ac06ae46ddd4a8b510c862c263f923f250866e06ff235a8c72603170914d3"
             ],
-            "version": "==1.0"
+            "version": "==1.0.post0"
         },
         "flake8-commas": {
             "hashes": [
@@ -235,6 +242,20 @@
                 "sha256:8381cb25cd608323d01624d29b28e474342e7e53a2588610705c5316ef45a7a2"
             ],
             "version": "==0.4.3"
+        },
+        "flake8-comprehensions": {
+            "hashes": [
+                "sha256:e4ccf1627f75f192eb7fde640f5edb81c98d04b1390df9d4145ffd7710bb1ef2",
+                "sha256:b83891fec0e680b07aa1fd92e53eb6993be29a0f3673a09badbe8da307c445e0"
+            ],
+            "version": "==1.4.1"
+        },
+        "flake8-pep3101": {
+            "hashes": [
+                "sha256:e7df132a2e3a1db56223b5c241065a1a948866232ce02860114094f4bfcdd221",
+                "sha256:1ba98a8a6d89ce54645d967fa831503f4b020558736563178a2ea48b72e000d8"
+            ],
+            "version": "==1.2"
         },
         "flake8-quotes": {
             "hashes": [

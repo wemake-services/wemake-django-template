@@ -12,6 +12,7 @@ python_version = '3.6'
 [dev-packages]
 
 django-debug-toolbar = "*"
+django-querycount = "*"
 "pep8-naming" = "*"
 "flake8-builtins" = "*"
 "flake8-commas" = "*"
@@ -36,7 +37,6 @@ sphinx = "*"
 sphinx-autodoc-typehints = "*"
 mypy = "*"
 django = "==1.11.8"
-django-querycount = "*"
 
 
 [packages]

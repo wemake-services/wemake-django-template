@@ -57,6 +57,16 @@ To run tests and style checks inside your ``virtualenv`` we use:
 See :ref:`linters` to know what style checks we use.
 
 
+Tweaking tests performance
+--------------------------
+
+There are several options you can provide or remove to make your tests faster:
+
+1. ``-n auto`` is used to schedule several number of workers, sometimes when there are a lot of tests it may increase the testing speed. But in general it just gives you an overhead, so removing it (together with `--boxed`) will boost your testing performance
+2. If there are a lot of tests with database access it may be wise to add ``--reuse-db`` `option <https://pytest-django.readthedocs.io/en/latest/database.html#example-work-flow-with-reuse-db-and-create-db>`_, so ``django`` won't recreate database on each test
+3. If there are a lot of migrations to perform you may also add ``--nomigrations`` `option <https://pytest-django.readthedocs.io/en/latest/database.html#nomigrations-disable-django-1-7-migrations>`_, so ``django`` won't run all the migrations and instead will inspect and create models directly
+
+
 Making a commit
 ---------------
 
