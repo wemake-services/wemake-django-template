@@ -40,13 +40,15 @@ To setup hooks after installing all the dependencies run:
   pre-commit install
 
 
-You will now see the test results before any commit. Before each commit the same testing routing as in CI will be run on your machine. Because we don't want to waste CI's and people's time dealing with the fallen build.
+You will now see the test results before any commit.
+Before each commit the same testing routing as in CI will be run on your machine.
+Because we don't want to waste CI's and people's time dealing with the fallen build.
 
 
 Making changes
 --------------
 
-When making changes into the project make sure you write at least minimum `unit` or integration test. Also, check your style.
+When making changes into the project make sure you write at least minimum ``unit``, ``doctest``, or integration test. Also, check your coding style.
 
 To run tests and style checks inside your ``virtualenv`` we use:
 

@@ -9,11 +9,11 @@ Goals
 
 When developing this template we had several goals in mind:
 
-- Development environment should be bootstrapped easily, so we used `docker-compose` for that
-- Development should be consistent, so we use strict style checks
-- You should not push broken code to the repo, so we used ``pre-commit`` hooks for that
-- Development, testing, and production should have the same environment, so again we are developing, testing, and running our code in ``docker`` containers
-- Documentation and the codebase are the only sources of truth
+- Development environment should be bootstrapped easily, so we use ``docker-compose`` for that
+- Development should be consistent, so we use strict quality and style checks
+- You should not push broken code to the repo, so we use ``pre-commit`` hooks for that
+- Development, testing, and production should have the same environment, so again we develop, test, and run our apps in ``docker`` containers
+- Documentation and codebase are the only sources of truth
 
 
 Limitations
@@ -22,7 +22,7 @@ Limitations
 This project implies that:
 
 - You are using ``docker`` for deployment
-- You are using Gitlab CI
+- You are using Gitlab and Gitlab CI
 - You are not using any frontend assets in ``django``, you store your frontend separately
 
 
@@ -38,13 +38,14 @@ How to start
 ------------
 
 This project is created to be well documented.
-You should start with reading it. It is available `online <http://wemake-django-template.readthedocs.io/en/latest>`_.
+You should start with reading the documentation.
+It is available `online <http://wemake-django-template.readthedocs.io/en/latest>`_.
 Reading order is important.
 
 To sum up all the steps, you will have to:
 
 1. Install dependencies
-2. Configure a project and IDE
-3. Run and test it
+2. Configure a project itself and IDE
+3. Run and test your application
 4. Know how to make changes
 5. Commit your code and receive a feedback
