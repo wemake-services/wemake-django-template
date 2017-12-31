@@ -1,7 +1,7 @@
 Welcome to wemake-django-template's documentation!
 ==================================================
 
-.. include:: _pages/quickstart.rst
+.. include:: _pages/template/quickstart.rst
 
 .. toctree::
    :maxdepth: 2
