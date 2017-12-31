@@ -4,6 +4,7 @@ LABEL maintainer="sobolevn@wemake.services"
 
 ARG DJANGO_ENV=production
 ENV PYTHONFAULTHANDLER=1 \
+  PYTHONUNBUFFERED=1 \
   PYTHONHASHSEED=random \
   PIP_NO_CACHE_DIR=off \
   PIP_DISABLE_PIP_VERSION_CHECK=on \
