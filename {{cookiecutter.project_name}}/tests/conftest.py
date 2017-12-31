@@ -11,6 +11,6 @@ It may be also used for extending doctest's context:
 import pytest
 
 
-@pytest.ficture
+@pytest.fixture
 def main_heading():
     return '<h1>wemake-django-template</h1>'
