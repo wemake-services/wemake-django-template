@@ -53,6 +53,12 @@ To add a new dependency you can run:
 - ``pipenv install -d pytest`` to install ``pytest`` as a development dependency
 
 
+Dependencies security
+---------------------
+
+We use `pipenv check <https://docs.pipenv.org/advanced/#detection-of-security-vulnerabilities>`_ to validate that we use only secure releases.
+
+
 Troubleshooting
 ---------------
 

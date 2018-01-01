@@ -13,7 +13,7 @@ You will need:
 
 - `python3.6` (see `.python_version` file. You can use `pyenv` or `pipenv` to manage versions)
 - `postgresql` with version `9.6`
-- `docker` with version at least `17.07`
+{% if cookiecutter.docker == 'y' %}- `docker` with version at least `17.07`{% endif %}
 
 
 ## Development
@@ -27,4 +27,4 @@ When developing locally, we use:
 
 ## Documentation
 
-Full documentation is available here: `docs/`.
+Full documentation is available here: [`docs/`](/docs).
