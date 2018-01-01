@@ -49,3 +49,14 @@ To sum up all the steps, you will have to:
 3. Run and test your application
 4. Know how to make changes
 5. Commit your code and receive a feedback
+
+
+Upgrading template
+------------------
+
+Upgrading your project to be up-to-date with this template is a primary goal.
+This is achieved by manually applying ``diff`` to your existing code.
+
+``diff`` can be viewed from the project's ``README.md``. See `an example <https://github.com/wemake-services/wemake-django-template/compare/91188fc4b89bd4989a0ead3d156a4619644965b0...master>`_.
+
+When upgrade is applied just change the commit hash in your template to the most recent one.
