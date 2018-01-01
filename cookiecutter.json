@@ -3,5 +3,6 @@
   "project_verbose_name": "Test Project",
   "project_url": "myapp.com",
   "organization": "wemake.services",
-  "docker": "y"
+  "docker": "y",
+  "_extensions": ["jinja2_git.GitExtension"]
 }

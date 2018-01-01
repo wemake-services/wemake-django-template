@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 """
 Does some basic tests on the generated project.
 
@@ -75,7 +77,7 @@ def test_with_no_docker(cookies, no_docker_context):
     files = (
         'docker-compose.yml',
         '.dockerignore',
-        'docs/_pages/docker.rst',
+        'docs/_pages/template/docker.rst',
     )
 
     for f in files:

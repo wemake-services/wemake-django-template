@@ -26,15 +26,15 @@ This project is used to scaffold a `django` project structure. Just like `django
 - [`Caddy`](https://caddyserver.com/) with [`https`](https://caddyserver.com/docs/automatic-https) and `http/2` turned on by default
 
 
-## Requirements
-
-You will need:
-
-- `python3`
-- [`cookiecutter`](http://cookiecutter.readthedocs.io/)
-
-
 ## Installation
+
+Firstly, you will need to install dependencies:
+
+```bash
+pip install cookiecutter jinja2-git
+```
+
+Then, create a project itself:
 
 ```bash
 cookiecutter gh:wemake-services/wemake-django-template
