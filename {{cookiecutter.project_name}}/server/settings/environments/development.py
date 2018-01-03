@@ -43,8 +43,8 @@ MIDDLEWARE += (
 
 # This will make debug toolbar to work with django-csp,
 # since `ddt` loads some scripts from `ajax.googleapis.com`:
-CSP_SCRIPT_SRC = ("'self'", 'ajax.googleapis.com', )
-CSP_IMG_SRC = ("'self'", 'data:', )
+CSP_SCRIPT_SRC = ("'self'", 'ajax.googleapis.com')
+CSP_IMG_SRC = ("'self'", 'data:')
 
 
 # Internal IPs
