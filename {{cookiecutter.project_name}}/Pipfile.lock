@@ -507,10 +507,10 @@
         },
         "pep8-naming": {
             "hashes": [
-                "sha256:1b419fa45b68b61cd8c5daf4e0c96d28915ad14d3d5f35fcc1e7e95324a33a2e",
-                "sha256:4eedfd4c4b05e48796f74f5d8628c068ff788b9c2b08471ad408007fc6450e5a"
+                "sha256:0b82da414024f290e0e7aad80d9a7614d6a85bedd82304deeb2e4e0a74f8968b",
+                "sha256:5a2a085340b1d530605a7f4a96816433be43504c58eace799dbacdcfd6febe9d"
             ],
-            "version": "==0.4.1"
+            "version": "==0.5.0"
         },
         "pexpect": {
             "hashes": [
