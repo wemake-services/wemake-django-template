@@ -266,6 +266,13 @@
             ],
             "version": "==1.2"
         },
+        "flake8-polyfill": {
+            "hashes": [
+                "sha256:12be6a34ee3ab795b19ca73505e7b55826d5f6ad7230d31b18e106400169b9e9",
+                "sha256:e44b087597f6da52ec6393a709e7108b2905317d0c0b744cdca6208e670d8eda"
+            ],
+            "version": "==1.0.2"
+        },
         "flake8-quotes": {
             "hashes": [
                 "sha256:2a1998616c6a962793b24f05b6bd45528c771a167bc402110231c3fbee64454b"
@@ -321,10 +328,10 @@
         },
         "pep8-naming": {
             "hashes": [
-                "sha256:1b419fa45b68b61cd8c5daf4e0c96d28915ad14d3d5f35fcc1e7e95324a33a2e",
-                "sha256:4eedfd4c4b05e48796f74f5d8628c068ff788b9c2b08471ad408007fc6450e5a"
+                "sha256:0b82da414024f290e0e7aad80d9a7614d6a85bedd82304deeb2e4e0a74f8968b",
+                "sha256:5a2a085340b1d530605a7f4a96816433be43504c58eace799dbacdcfd6febe9d"
             ],
-            "version": "==0.4.1"
+            "version": "==0.5.0"
         },
         "pluggy": {
             "hashes": [
