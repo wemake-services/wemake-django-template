@@ -336,10 +336,10 @@
         },
         "flake8-commas": {
             "hashes": [
-                "sha256:7a214b6b1bf774ccda9f1f1f58c15e52f336f9e87fbc6b81e029f1517f7fa73a",
-                "sha256:0827e1900020c822744e85500e9683dbebd27eab34bf87b3a9a0bd0bab24ed6a"
+                "sha256:e6f309218d373216586a61f15449fa2b3eef9c1878725519ea28807cf2d30135",
+                "sha256:d7665140e18fd0325e7f22e6e0c909c7420efca53600b6c579dbddd329a7ff72"
             ],
-            "version": "==0.5.1"
+            "version": "==1.0.0"
         },
         "flake8-comprehensions": {
             "hashes": [
