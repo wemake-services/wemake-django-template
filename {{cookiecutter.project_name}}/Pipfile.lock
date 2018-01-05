@@ -350,10 +350,10 @@
         },
         "flake8-docstrings": {
             "hashes": [
-                "sha256:2a4e5b6ad55771fd33725f917e177a968b93719d12948089d43e7b561a5fd2bb",
-                "sha256:4ee2426690ff67184aec0fad05ea48b36dadd2f03cec3e37c29e4dc1cd272b10"
+                "sha256:8436396b5ecad51a122a2c99ba26e5b4e623bf6e913b0fea0cb6c2c4050f91eb",
+                "sha256:4e0ce1476b64e6291520e5570cf12b05016dd4e8ae454b8a8a9a48bc5f84e1cd"
             ],
-            "version": "==1.2.0"
+            "version": "==1.3.0"
         },
         "flake8-pep3101": {
             "hashes": [
