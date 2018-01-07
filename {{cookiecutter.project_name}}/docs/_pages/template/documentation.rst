@@ -13,7 +13,7 @@ Dependencies
 We are using ``sphinx`` as a documentation builder.
 We also use ``sphinx_autodoc_typehints`` to inject type annotations into docs.
 
-We also using to sources of truth for the dependencies here:
+We also using two sources of truth for the dependencies here:
 
 - ``docs/requirements.txt``
 - ``Pipfile``
@@ -36,4 +36,5 @@ Further reading
 ---------------
 
 - `sphinx <http://www.sphinx-doc.org/en/stable/>`_
+- `sphinx with django <https://docs.djangoproject.com/en/1.11/internals/contributing/writing-documentation/#getting-started-with-sphinx>`_
 - `sphinx-autodoc-typehints <https://github.com/agronholm/sphinx-autodoc-typehints>`_
