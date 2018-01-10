@@ -535,10 +535,10 @@
         },
         "pre-commit": {
             "hashes": [
-                "sha256:e4028d421a7a15699e69f91d65ea852cac82514bdb41154bcce1e18667dc1954",
-                "sha256:8d112733682bc980aa5ca141f62f215768898e5c25bbf4db3c7af16313ffa8a3"
+                "sha256:d869ec6f9a4edafdef21e81695dfa615583e7a3a9afee43dcdd2fc4af5ca7456",
+                "sha256:1df95f12d29930435676f88e039a4bf9c922ed456a5e54b753d1e3a1f964322f"
             ],
-            "version": "==1.4.4"
+            "version": "==1.4.5"
         },
         "prompt-toolkit": {
             "hashes": [
