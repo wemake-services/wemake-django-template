@@ -17,7 +17,7 @@ ENV PYTHONFAULTHANDLER=1 \
 # System deps:
 
 RUN apk update \
-    && apk --no-cache add musl-dev postgresql-dev gcc \
+    && apk --no-cache add musl-dev postgresql-dev libffi-dev gcc \
       git curl bash build-base gettext linux-headers \
     && mkdir /code
 
