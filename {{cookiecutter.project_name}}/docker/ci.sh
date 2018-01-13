@@ -52,17 +52,24 @@ if [[ "$INSIDE_CI" -eq 1 ]]; then
   mkdir -p 'artifacts'
 
   # Generating pylint report (it will have issues!):
+  # https://pylint.readthedocs.io/en/latest/
   PYLINT=$(find . -iname '*.py' | xargs pylint --reports=y || true)
   echo "$PYLINT" > 'artifacts/pylint.rst'
 
   # Generating code-quality report:
+  # http://radon.readthedocs.io/en/latest/commandline.html
   radon mi . > 'artifacts/mi.txt'
 
   # Generating complexity report:
-  radon cc . --show-closures --total-average > 'artifacts/cc.txt'
+  radon cc . -s --show-closures --total-average > 'artifacts/cc.txt'
 
   # Generating raw metrics:
   radon raw . > 'artifacts/raw.txt'
+
+  # Generating unused code report (it will have issues):
+  # https://github.com/jendrikseipp/vulture
+  VULTURE=$(vulture server tests --exclude server/settings/)
+  echo "$VULTURE" > 'artifacts/vulture.txt'
 fi
 
 # Clean everything up:

@@ -37,6 +37,7 @@ sphinx = "*"
 sphinx-autodoc-typehints = "*"
 mypy = "*"
 django = "==1.11.9"
+vulture = "*"
 
 
 [packages]
