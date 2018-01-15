@@ -137,11 +137,11 @@
         },
         "dump-env": {
             "hashes": [
-                "sha256:74be9d9dbe8412d6636cb83e08a074dfb2b6e7e00fd9186e4e2bb1bc601855be",
-                "sha256:813905fbf8c9f7e6b4a580135505ae243a9428a28ed462f76d76d64f3477fea9",
-                "sha256:f6408c867cf1a578d96655a5ecaedf106de8ec6edf503dbbb8458764b823668d"
+                "sha256:70d4c4f2cee3bfe5569665ef57c2cd8fe6e3544d4d3d375c3757c335f49d6491",
+                "sha256:17ef8404ead498a895d8a374fa02e23b8a0f8eb31eb329ee6c39ef6b49880009",
+                "sha256:afc11fd3c2af0dd74014ebc559571e434a00535eb2131afd15b7059117d562e4"
             ],
-            "version": "==0.1.0"
+            "version": "==0.1.1"
         },
         "gunicorn": {
             "hashes": [
@@ -414,7 +414,10 @@
             "version": "==1.0.post0"
         },
         "flake8-commas": {
-            "hashes": [],
+            "hashes": [
+                "sha256:e6f309218d373216586a61f15449fa2b3eef9c1878725519ea28807cf2d30135",
+                "sha256:d7665140e18fd0325e7f22e6e0c909c7420efca53600b6c579dbddd329a7ff72"
+            ],
             "version": "==1.0.0"
         },
         "flake8-comprehensions": {
@@ -494,7 +497,10 @@
             "version": "==4.2.15"
         },
         "jedi": {
-            "hashes": [],
+            "hashes": [
+                "sha256:d795f2c2e659f5ea39a839e5230d70a0b045d0daee7ca2403568d8f348d0ad89",
+                "sha256:d6e799d04d1ade9459ed0f20de47c32f2285438956a677d083d3c98def59fa97"
+            ],
             "version": "==0.11.1"
         },
         "jinja2": {
@@ -559,7 +565,10 @@
             "version": "==0.6.1"
         },
         "mypy": {
-            "hashes": [],
+            "hashes": [
+                "sha256:aa668809ae0dbec5e9feb8929f4b5e1f9318a0a397447fa2f38c382a2ed6a036",
+                "sha256:bd0c9a2fcf0c4f7a54a2b625f466fcc000d415f371298d96fa5d2acc69074aca"
+            ],
             "version": "==0.560"
         },
         "nodeenv": {
@@ -676,7 +685,10 @@
             "version": "==2.2.0"
         },
         "pylint": {
-            "hashes": [],
+            "hashes": [
+                "sha256:c8e59da0f2f9990eb00aad1c1de16cd7809315842ebccc3f65ca9df46213df3b",
+                "sha256:3035e44e37cd09919e9edad5573af01d7c6b9c52a0ebb4781185ae7ab690458b"
+            ],
             "version": "==1.8.1"
         },
         "pytest": {
