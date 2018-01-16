@@ -30,6 +30,6 @@ ADD . /code
 
 # Project initialization:
 
-RUN pip install pipenv && test "$DJANGO_ENV" == production && pipenv install --system --deploy || pipenv install --dev --system --deploy
+RUN pip install pipenv && test "$DJANGO_ENV" == production && pipenv install --system --ignore-pipfile || pipenv install --dev --system --ignore-pipfile
 
 ENTRYPOINT ["sh", "/code/docker/django/entrypoint.sh"]

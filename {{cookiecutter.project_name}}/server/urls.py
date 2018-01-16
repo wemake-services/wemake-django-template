@@ -3,7 +3,7 @@
 """
 Main URL mapping configuration file.
 
-Include other URLConfs from external apps using method include().
+Include other URLConfs from external apps using method `include()`.
 
 It is also a good practice to keep a single URL to the root index page.
 

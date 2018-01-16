@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "c3ddf284a7e4c013b238ba463085e5895d2335fea504000760282e3ebf87496e"
+            "sha256": "79269b360f8cd0c669f2fce95e377e48a69a4dd51791764a8e29d8386a6a3230"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
@@ -242,6 +242,14 @@
             ],
             "version": "==1.4"
         },
+        "appnope": {
+            "hashes": [
+                "sha256:5b26757dc6f79a3b7dc9fab95359328d5747fcb2409d331ea66d0272b90ab2a0",
+                "sha256:8b995ffe925347a2138d7ac0fe77155e4311a0ea6d6da4f5128fe4b3cbe5ed71"
+            ],
+            "markers": "sys_platform == 'darwin'",
+            "version": "==0.1.0"
+        },
         "aspy.yaml": {
             "hashes": [
                 "sha256:be70cc0ccd1ee1d30f589f2403792eb2ffa7546470af0a17179541b13d8374df",
@@ -265,10 +273,10 @@
         },
         "babel": {
             "hashes": [
-                "sha256:f20b2acd44f587988ff185d8949c3e208b4b3d5d20fcab7d91fe481ffa435528",
-                "sha256:6007daf714d0cd5524bbe436e2d42b3c20e68da66289559341e48d2cd6d25811"
+                "sha256:ad209a68d7162c4cff4b29cdebe3dec4cef75492df501b0049a9433c96ce6f80",
+                "sha256:8ce4cb6fdd4393edd323227cba3a077bceb2a6ce5201c902c65e730046f41f14"
             ],
-            "version": "==2.5.1"
+            "version": "==2.5.3"
         },
         "cached-property": {
             "hashes": [
@@ -612,6 +620,13 @@
             ],
             "version": "==0.6.0"
         },
+        "pockets": {
+            "hashes": [
+                "sha256:bccf25b8ce7bd62c13b300f09b000e7368a6476553ba37564098ead5a17bb4ab",
+                "sha256:ba8fdd9e87454fb0653912ac9db9577197fa47ac7614e127a0b71e7dd0d7f1f7"
+            ],
+            "version": "==0.5.1"
+        },
         "pre-commit": {
             "hashes": [
                 "sha256:ed32605847a99d41f5a194fb6395f71c533450becf36d790836e9ba497f6a176",
@@ -826,6 +841,13 @@
                 "sha256:a8195d278405df796c3125a30eacb711493550f245e5bbc37ecc419d7a1fcba8"
             ],
             "version": "==1.2.3"
+        },
+        "sphinxcontrib-napoleon": {
+            "hashes": [
+                "sha256:cbb31953b15d2102c18f16f02591f92e2614a08ef0218c9e514e2dc4c4f9daf9",
+                "sha256:614b779888629f14dfdfad6c17bffbb6d3813a0a0917a9541651d85384d4d6bd"
+            ],
+            "version": "==0.6.1"
         },
         "sphinxcontrib-websupport": {
             "hashes": [

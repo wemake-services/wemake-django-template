@@ -29,7 +29,7 @@ To install dependencies for production use, you will need to run:
 
 .. code:: bash
 
-  pipenv install --deploy
+  pipenv install --ignore-pipfile
 
 This command will fail if ``Pipfile.lock`` is missing, outdated or incorrect.
 

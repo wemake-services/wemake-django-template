@@ -21,21 +21,14 @@ if [[ "$DJANGO_ENV" == 'production' ]]; then
 fi
 
 # Installing dependencies:
-pipenv --bare install --dev --deploy
-
-# Finding python installation:
-VENV=$(pipenv --venv)
-
-# Activating virtualenv:
-echo "Activating $VENV ..."
-. "$VENV/bin/activate"
+pipenv --bare install --system --dev --ignore-pipfile
 
 # Remove any cache before the script:
 pyclean
 
 # Running tests:
-python -m mypy server
-python -m pytest
+mypy server
+pytest
 
 # Running code-quality check:
 xenon --max-absolute B --max-modules A --max-average A .

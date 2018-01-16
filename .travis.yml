@@ -10,7 +10,7 @@ env:
 
 install:
   - pip install pipenv
-  - pipenv --bare install --deploy -d
+  - pipenv --bare install --ignore-pipfile --dev
 
 script:
   - pipenv run python -m pytest
