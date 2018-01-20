@@ -46,7 +46,7 @@ if [[ "$INSIDE_CI" -eq 1 ]]; then
 
   # Generating pylint report (it will have issues!):
   # https://pylint.readthedocs.io/en/latest/
-  PYLINT=$(find . -iname '*.py' | xargs pylint --reports=y || true)
+  PYLINT=$(pylint 'server' 'tests' || true)
   echo "$PYLINT" > 'artifacts/pylint.rst'
 
   # Generating code-quality report:

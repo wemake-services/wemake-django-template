@@ -10,12 +10,13 @@
 version: "3"
 services:
   caddy:
-    image: "wemakeservices/caddy-docker:v0.10.9"
+    image: "wemakeservices/caddy-docker:0.10.10-1"
     restart: always
     env_file: ./config/.env
     volumes:
-      - ./docker/caddy:/root/.caddy
-      - django-static:/var/www/django/static:ro
+      - ./docker/caddy/certs:/root/.caddy  # saving certificates
+      - ./docker/caddy/Caddyfile:/etc/Caddyfile  # configuration
+      - django-static:/var/www/django/static:ro  # serving django's statics
     ports:
       - "80:80"
       - "443:443"
