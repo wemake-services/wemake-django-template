@@ -72,21 +72,3 @@ This will eliminate a lot of possible ``TypeError``s and other issues.
 However, this will not make code 100% working. So, testing and reviewing is still required.
 
 ``mypy`` is configured via ``setup.cfg``. Read the `docs <https://mypy.readthedocs.io/en/latest/>`_ for more information.
-
-
-vulture
--------
-
-We use ``vulture`` to reduce possible dead code.
-However, it is not a required step in our CI process.
-Since sometimes ``python`` code can be tricky, and absolutely valid code is considered unused.
-
-We only collect usage stats as an artifact and sometimes check this metric while developing.
-
-Running ``vulture`` is simple:
-
-.. code:: bash
-
-    vulture server tests --exclude server/settings/
-
-Note, that ``server/settings`` is excluded, because it reports to many unused variables. Read the `docs <https://github.com/jendrikseipp/vulture>`_ for more information.

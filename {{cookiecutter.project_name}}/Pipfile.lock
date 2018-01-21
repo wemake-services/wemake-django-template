@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "79269b360f8cd0c669f2fce95e377e48a69a4dd51791764a8e29d8386a6a3230"
+            "sha256": "32e161ab2fab3a1dd09511f9effe4ae8213f16cec71749503787eea442bcfdd9"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
@@ -110,10 +110,10 @@
         },
         "django-axes": {
             "hashes": [
-                "sha256:f28272d4145f7bef94a58b8bea40b782487ed210855e406dd915ba50184f4138",
-                "sha256:ee110c444249c1fb9ef4b349a0ef6c5b82f85fff4cc2bfbb844d5670413dccb1"
+                "sha256:75747d30c08b89457bf67c672e2dfbab7d0d46bac1e90492dc743e2d0a44f1ec",
+                "sha256:aca98b45de63dc7aae2ec74be0b720e08f70e2cff3df577009099169d0be0187"
             ],
-            "version": "==4.0.1"
+            "version": "==4.0.2"
         },
         "django-csp": {
             "hashes": [
@@ -124,9 +124,9 @@
         },
         "django-ipware": {
             "hashes": [
-                "sha256:2110bb8e989fe25179af12129658b10cd81a23ea2a178c74e49e1701f17af73a"
+                "sha256:3fba8821298c8533ce5609debf31dc8a22f228c50e100f42d97637a9f9357d43"
             ],
-            "version": "==2.0.0"
+            "version": "==2.0.1"
         },
         "django-split-settings": {
             "hashes": [
@@ -242,6 +242,14 @@
             ],
             "version": "==1.4"
         },
+        "appnope": {
+            "hashes": [
+                "sha256:5b26757dc6f79a3b7dc9fab95359328d5747fcb2409d331ea66d0272b90ab2a0",
+                "sha256:8b995ffe925347a2138d7ac0fe77155e4311a0ea6d6da4f5128fe4b3cbe5ed71"
+            ],
+            "markers": "sys_platform == 'darwin'",
+            "version": "==0.1.0"
+        },
         "aspy.yaml": {
             "hashes": [
                 "sha256:be70cc0ccd1ee1d30f589f2403792eb2ffa7546470af0a17179541b13d8374df",
@@ -279,10 +287,10 @@
         },
         "certifi": {
             "hashes": [
-                "sha256:244be0d93b71e93fc0a0a479862051414d0e00e16435707e5bf5000f92e04694",
-                "sha256:5ec74291ca1136b40f0379e1128ff80e866597e4e2c1e755739a913bbc3613c0"
+                "sha256:14131608ad2fd56836d33a71ee60fa1c82bc9d2c8d98b7bdbc631fe1b3cd1296",
+                "sha256:edbc3f203427eef571f79a7692bb160a2b0f7ccaa31953e99bd17e307cf63f7d"
             ],
-            "version": "==2017.11.5"
+            "version": "==2018.1.18"
         },
         "chardet": {
             "hashes": [
@@ -898,13 +906,6 @@
                 "sha256:02f8102c2436bb03b3ee6dede1919d1dac8a427541652e5ec95171ec8adbc93a"
             ],
             "version": "==15.1.0"
-        },
-        "vulture": {
-            "hashes": [
-                "sha256:1e420658911805435de267f71a78c9f5467021afd7d10609bf10c3b114223a84",
-                "sha256:89b0fae71c4b1f536c72f36e4f84d5e4f063d9b0bd54a5ace0d7725aabdf04a1"
-            ],
-            "version": "==0.26"
         },
         "wcwidth": {
             "hashes": [

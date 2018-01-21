@@ -58,11 +58,6 @@ if [[ "$INSIDE_CI" -eq 1 ]]; then
 
   # Generating raw metrics:
   radon raw . > 'artifacts/raw.txt'
-
-  # Generating unused code report (it will have issues):
-  # https://github.com/jendrikseipp/vulture
-  VULTURE=$(vulture server tests --exclude server/settings/)
-  echo "$VULTURE" > 'artifacts/vulture.txt'
 fi
 
 # Clean everything up:
