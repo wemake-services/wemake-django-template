@@ -37,12 +37,12 @@ ipython = "*"
 Sphinx = "*"
 sphinx-autodoc-typehints = "*"
 sphinxcontrib-napoleon = "*"
-Django = "==1.11.9"
+Django = "==2.0.1"
 
 
 [packages]
 
-Django = "==1.11.9"
+Django = "==2.0.1"
 django-split-settings = "*"
 django-axes = "*"
 django_csp = "*"
