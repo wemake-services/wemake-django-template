@@ -74,8 +74,6 @@ def copy_local_configuration():
     Handler to copy local configuration from `.template`s
     to the actual files.
     """
-
-    # Secret config:
     secret_template = os.path.join(
         PROJECT_DIRECTORY, 'config', '.env.template',
     )
@@ -103,7 +101,6 @@ def replace_pycharm_configuration():
 
     It is a workaround for a strange docker in PyCharm support.
     """
-
     files = [
         os.path.join(PROJECT_DIRECTORY, '.idea', 'misc.xml'),
         os.path.join(

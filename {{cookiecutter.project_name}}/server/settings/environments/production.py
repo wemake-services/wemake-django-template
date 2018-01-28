@@ -15,7 +15,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     # TODO: check production hosts
-    '.{{ cookiecutter.project_url }}',
+    '.{{ cookiecutter.project_domain }}',
 ]
 
 

@@ -20,6 +20,19 @@
 
 import os
 import sys
+
+try:
+    import django
+
+    # Normal django setup. That's how it should be in development:
+    os.environ['DJANGO_SETTINGS_MODULE'] = 'server.settings'
+    django.setup()
+except ImportError:
+    # Django is not installed, maybe we are running our
+    # build process in ReadTheDocs?
+    # https://github.com/wemake-services/wemake-django-template/issues/133
+    pass
+
 sys.path.insert(0, os.path.abspath('..'))
 
 
@@ -40,7 +53,9 @@ extensions = [
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
 
-    # Custom:
+    # 3rd party (order matters!):
+    # https://github.com/wemake-services/wemake-django-template/issues/159
+    'sphinxcontrib.napoleon',
     'sphinx_autodoc_typehints',
 ]
 

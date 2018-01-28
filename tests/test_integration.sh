@@ -16,7 +16,7 @@ PROJECT_NAME="fake_project"
 pipenv run cookiecutter "$TRAVIS_BUILD_DIR" \
   --no-input --overwrite-if-exists \
   project_name="$PROJECT_NAME" \
-  project_url="myapp.com" \
+  project_domain="myapp.com" \
   organization="wemake.services"
 
 cd "$PROJECT_NAME"
