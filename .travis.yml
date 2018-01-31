@@ -15,6 +15,7 @@ install:
 script:
   - pipenv run python -m pytest
   - sh tests/test_integration.sh
+  - pipenv check  # check local deps security
 
 notifications:
   email:
