@@ -40,3 +40,4 @@ networks:
 volumes:
   pgdata:
   django-static:
+  django-media:

@@ -205,20 +205,14 @@ fabric.properties
 
 
 #####=== Custom ===#####
-# Python-based extras:
-# Excluding only /build folder in the project root
-/build/
-
 # Directories:
 static_root/
-secret/
 media/
 
 # File types:
 *.sqlite3
 
 # Configuration file with private data:
-*.secret
 *.env
 .env
 
@@ -229,8 +223,7 @@ media/
 docker-compose.deploy.yml
 
 # Certificates:
-docker/caddy/acme/
-docker/caddy/ocsp/
+docker/caddy/certs/
 
 # Artifacts:
 .gitlab/.svn/

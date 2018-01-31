@@ -9,7 +9,7 @@ www.{$DOMAIN_NAME} {
   root /var/www/django
 
   proxy / web:8000 {
-    except /static
+    except /static /media
 
     transparent
   }

@@ -17,6 +17,7 @@ services:
       - ./docker/caddy/certs:/root/.caddy  # saving certificates
       - ./docker/caddy/Caddyfile:/etc/Caddyfile  # configuration
       - django-static:/var/www/django/static:ro  # serving django's statics
+      - django-media:/var/www/django/media:ro  # serving django's media
     ports:
       - "80:80"
       - "443:443"
@@ -34,6 +35,8 @@ services:
         DJANGO_ENV: production
     command: sh ./docker/django/gunicorn.sh
     restart: always
+    volumes:
+      - django-media:/var/www/django/media  # since in dev it is app's folder
     environment:
       DJANGO_ENV: production
     expose:

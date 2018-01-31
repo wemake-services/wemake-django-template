@@ -18,6 +18,29 @@ Before going to production make sure you have checked everything:
 This command should give not warnings or errors. It is bundled into `docker`, so container will not work with any warnings.
 
 
+Django
+------
+
+Static and media files
+~~~~~~~~~~~~~~~~~~~~~~
+
+We use ``/var/www/django`` folder to store our media and static files in production as ``/var/www/django/static`` and ``/var/www/django/media``.
+Docker uses these two folder as named volumes. And later these volumes are also mounted to ``caddy`` with ``ro`` mode so it possible to read their contents.
+
+To find the exact location of these files on your host you will need to do the following:
+
+.. code:: bash
+
+  docker volume ls  # to find volumes' names
+  docker volume inspect VOLUME_NAME
+
+Sometimes storing your media files inside a container is not a good idea.
+Use ``CDN`` when you have a lot of user content or it is very important not to lose it.
+There are `helper libraries <http://django-storages.readthedocs.io/en/latest/backends/amazon-S3.html>`_ to bind ``django`` and these services.
+
+If you don't need ``media`` files support, just remove the volumes.
+
+
 Postgres
 --------
 

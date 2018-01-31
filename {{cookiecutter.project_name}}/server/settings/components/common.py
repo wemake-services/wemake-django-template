@@ -10,12 +10,11 @@ For the full list of settings and their config, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
-import os
 from typing import Tuple
 
-from server.settings.components import BASE_DIR, config  # NOQA
+from server.settings.components import BASE_DIR, config
 
-# Build paths inside the project like this: join(BASE_DIR, ...)
+# Build paths inside the project like this: BASE_DIR.child('settings')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
@@ -122,7 +121,7 @@ TEMPLATES = [{
     'BACKEND': 'django.template.backends.django.DjangoTemplates',
     'DIRS': [
         # Contains plain text templates, like `robots.txt`:
-        os.path.join(BASE_DIR, 'server', 'template'),
+        BASE_DIR.child('server', 'templates'),
     ],
     'OPTIONS': {
         'context_processors': [
@@ -147,6 +146,8 @@ TEMPLATES = [{
 # (see development.py and production.py).
 
 MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR.child('media')
+
 
 # Django default authentication system.
 # https://docs.djangoproject.com/en/1.11/topics/auth/
