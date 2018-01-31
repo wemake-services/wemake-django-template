@@ -6,8 +6,11 @@ Going to production
 This section covers everything you need to know before going to production.
 
 
+Django
+------
+
 Check
------
+~~~~~
 
 Before going to production make sure you have checked everything:
 
@@ -16,10 +19,6 @@ Before going to production make sure you have checked everything:
   DJANGO_ENV=production python manage.py check --deploy
 
 This command should give not warnings or errors. It is bundled into `docker`, so container will not work with any warnings.
-
-
-Django
-------
 
 Static and media files
 ~~~~~~~~~~~~~~~~~~~~~~
