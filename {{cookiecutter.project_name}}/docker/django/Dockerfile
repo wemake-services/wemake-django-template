@@ -25,11 +25,15 @@ RUN apk update \
 # Creating folders, and files for a project:
 
 WORKDIR /code
-ADD . /code
+COPY . /code
+
+# This is a special case. We need to run this script as entry point:
+COPY ./docker/django/entrypoint.sh /docker-entrypoint.sh
 
 
 # Project initialization:
 
-RUN pip install pipenv && test "$DJANGO_ENV" == production && pipenv install --system --ignore-pipfile || pipenv install --dev --system --ignore-pipfile
+RUN chmod +x /docker-entrypoint.sh && pip install pipenv \
+  && test "$DJANGO_ENV" == production && pipenv install --system --ignore-pipfile || pipenv install --dev --system --ignore-pipfile
 
-ENTRYPOINT ["/sbin/tini", "--", "/code/docker/django/entrypoint.sh"]
+ENTRYPOINT ["/sbin/tini", "--", "/docker-entrypoint.sh"]
