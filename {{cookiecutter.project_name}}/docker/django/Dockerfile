@@ -18,7 +18,7 @@ ENV PYTHONFAULTHANDLER=1 \
 
 RUN apk update \
     && apk --no-cache add musl-dev postgresql-dev libffi-dev gcc \
-      git curl bash build-base gettext linux-headers \
+      git curl bash build-base gettext linux-headers tini \
     && mkdir /code
 
 
@@ -32,4 +32,4 @@ ADD . /code
 
 RUN pip install pipenv && test "$DJANGO_ENV" == production && pipenv install --system --ignore-pipfile || pipenv install --dev --system --ignore-pipfile
 
-ENTRYPOINT ["sh", "/code/docker/django/entrypoint.sh"]
+ENTRYPOINT ["/sbin/tini", "--", "/code/docker/django/entrypoint.sh"]
