@@ -14,8 +14,6 @@ from typing import Tuple
 
 from server.settings.components import BASE_DIR, config
 
-# Build paths inside the project like this: BASE_DIR.child('settings')
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
@@ -121,7 +119,7 @@ TEMPLATES = [{
     'BACKEND': 'django.template.backends.django.DjangoTemplates',
     'DIRS': [
         # Contains plain text templates, like `robots.txt`:
-        BASE_DIR.child('server', 'templates'),
+        BASE_DIR.joinpath('server', 'templates'),
     ],
     'OPTIONS': {
         'context_processors': [
@@ -146,7 +144,7 @@ TEMPLATES = [{
 # (see development.py and production.py).
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR.child('media')
+MEDIA_ROOT = BASE_DIR.joinpath('media')
 
 
 # Django default authentication system.
@@ -157,10 +155,6 @@ MEDIA_ROOT = BASE_DIR.child('media')
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
-
-LOGIN_URL = '/login-form/'
-LOGIN_REDIRECT_URL = '/logged-in/'
-LOGIN_ERROR_URL = '/login-error/'
 
 PASSWORD_HASHERS = [
     'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',

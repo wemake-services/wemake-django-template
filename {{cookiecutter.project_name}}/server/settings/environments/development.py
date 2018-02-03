@@ -9,7 +9,6 @@ SECURITY WARNING: don't run with debug turned on in production!
 
 from typing import List
 
-from server.settings.components import GlobalIPList
 from server.settings.components.common import INSTALLED_APPS, MIDDLEWARE
 
 # Setting the development status:
@@ -56,16 +55,3 @@ DEBUG_TOOLBAR_CONFIG = {
 # since `ddt` loads some scripts from `ajax.googleapis.com`:
 CSP_SCRIPT_SRC = ("'self'", 'ajax.googleapis.com')
 CSP_IMG_SRC = ("'self'", 'data:')
-
-
-# Internal IPs
-# https://docs.djangoproject.com/en/1.11/ref/settings/#internal-ips
-
-INTERNAL_IPS = GlobalIPList([
-    '127.0.0.1',
-    '10.0.2.2',
-
-    # Uncomment next line and run 'runserver 0.0.0.0:8000'
-    # for test purposes, you will need to modify the `net` part:
-    # '192.168.net.*'
-])

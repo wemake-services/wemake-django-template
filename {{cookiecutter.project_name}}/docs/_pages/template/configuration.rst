@@ -78,12 +78,3 @@ Further reading
 .. _docs: http://django-split-settings.readthedocs.io/en/latest/
 .. _site: http://git-secret.io/
 .. _`env-file docs`: https://docs.docker.com/compose/env-file/
-
-
-Utilities
----------
-
-.. automodule:: server.settings.components
-
-.. autoclass:: GlobalIPList
-    :members:
