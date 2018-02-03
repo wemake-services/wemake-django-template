@@ -15,7 +15,7 @@ services:
     env_file: ./config/.env
     volumes:
       - ./docker/caddy/certs:/root/.caddy  # saving certificates
-      - ./docker/caddy/Caddyfile:/etc/Caddyfile  # configuration
+      - ./docker/caddy/Caddyfile:/etc/Caddyfile:ro  # configuration
       - django-static:/var/www/django/static:ro  # serving django's statics
       - django-media:/var/www/django/media:ro  # serving django's media
     ports:
@@ -27,18 +27,19 @@ services:
       - webnet
 
   web:
-    image: "registry.gitlab.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}:latest"
-    build:
-      context: .
-      dockerfile: ./docker/django/Dockerfile
-      args:
+    <<: &web
+      image: "registry.gitlab.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}:latest"
+      build:
+        context: .
+        dockerfile: ./docker/django/Dockerfile
+        args:
+          DJANGO_ENV: production
+      restart: always
+      volumes:
+        - django-media:/var/www/django/media  # since in dev it is app's folder
+      environment:
         DJANGO_ENV: production
     command: sh ./docker/django/gunicorn.sh
-    restart: always
-    volumes:
-      - django-media:/var/www/django/media  # since in dev it is app's folder
-    environment:
-      DJANGO_ENV: production
     expose:
       - 8000
     deploy:
@@ -49,3 +50,10 @@ services:
           memory: 200M
       restart_policy:
         condition: on-failure
+
+  # This task is an example of how to extend existing ones:
+  # some_wroker:
+  #   <<: *web
+  #   command: python manage.py worker_process
+  #   deploy:
+  #     replicas: 2

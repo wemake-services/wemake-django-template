@@ -17,22 +17,28 @@ services:
     env_file: ./config/.env
 
   web:
-    build:
-      context: .
-      dockerfile: ./docker/django/Dockerfile
-      args:
-        DJANGO_ENV: development
+    <<: &web
+      build:
+        context: .
+        dockerfile: ./docker/django/Dockerfile
+        args:
+          DJANGO_ENV: development
+      volumes:
+        - .:/code
+        - django-static:/var/www/django/static
+      depends_on:
+        - db
+      networks:
+        - webnet
+      env_file: ./config/.env
+      environment:
+        DJANGO_DATABASE_HOST: db
     command: python -Wd manage.py runserver 0.0.0.0:8000
-    volumes:
-      - .:/code
-      - django-static:/var/www/django/static
-    depends_on:
-      - db
-    networks:
-      - webnet
-    env_file: ./config/.env
-    environment:
-      DJANGO_DATABASE_HOST: db
+
+  # This task is an example of how to extend existing ones:
+  # some_wroker:
+  #   <<: *web
+  #   command: python manage.py worker_process
 
 networks:
   webnet:
