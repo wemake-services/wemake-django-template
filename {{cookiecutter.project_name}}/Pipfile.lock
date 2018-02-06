@@ -390,10 +390,10 @@
         },
         "flake8-bugbear": {
             "hashes": [
-                "sha256:9ac9952cb5838dc26408460cb9d1fbfefbd19cb5c51bb66c6b6c664158f4cb7c",
-                "sha256:5cef9246d7f6721b8ccc6eeb78cf26dae303097e31da0f307a60e516a23ecd72"
+                "sha256:541746f0f3b2f1a8d7278e1d2d218df298996b60b02677708560db7c7e620e3b",
+                "sha256:5f14a99d458e29cb92be9079c970030e0dd398b2decb179d76d39a5266ea1578"
             ],
-            "version": "==17.12.0"
+            "version": "==18.2.0"
         },
         "flake8-builtins": {
             "hashes": [
@@ -480,11 +480,10 @@
         },
         "isort": {
             "hashes": [
-                "sha256:d3faf77a0a39bd402f1aea97463bc0eeb36c48a7c4695b0ed56b542195e49c49",
-                "sha256:fd8ea1acf80ae343eb8e2dec17bfe9b78e231a43ea6d0744da6758be1b373553",
-                "sha256:b8b584d1223204a4948ba20d605d3e5421c5956455d8618feb5c2ccdae2b78ba"
+                "sha256:4b5f50fa1fe37226cd95acaa723409d6d6b38344e29003191da7c76f11352b51",
+                "sha256:c8756e8058877321a3891939d0c294ad32c8b7cb87a923ebf00f179b33cb1f96"
             ],
-            "version": "==4.3.1"
+            "version": "==4.3.2"
         },
         "jedi": {
             "hashes": [
