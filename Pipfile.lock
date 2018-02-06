@@ -233,10 +233,10 @@
         },
         "flake8-bugbear": {
             "hashes": [
-                "sha256:9ac9952cb5838dc26408460cb9d1fbfefbd19cb5c51bb66c6b6c664158f4cb7c",
-                "sha256:5cef9246d7f6721b8ccc6eeb78cf26dae303097e31da0f307a60e516a23ecd72"
+                "sha256:541746f0f3b2f1a8d7278e1d2d218df298996b60b02677708560db7c7e620e3b",
+                "sha256:5f14a99d458e29cb92be9079c970030e0dd398b2decb179d76d39a5266ea1578"
             ],
-            "version": "==17.12.0"
+            "version": "==18.2.0"
         },
         "flake8-builtins": {
             "hashes": [
@@ -294,10 +294,11 @@
         },
         "isort": {
             "hashes": [
-                "sha256:cd5d3fc2c16006b567a17193edf4ed9830d9454cbeb5a42ac80b36ea00c23db4",
-                "sha256:79f46172d3a4e2e53e7016e663cc7a8b538bec525c36675fcfd2767df30b3983"
+                "sha256:75e94757591197eb0afeb1f3b54f6517c1a26fecaeab2b373885739f63de3e66",
+                "sha256:77502c541ad5c40a158932498bf6177bb663d8a2662b50f02a59b906419ba699",
+                "sha256:34929af733faadf884da29d83e7df1884363b3cc647a48e000b3c5cc13d17549"
             ],
-            "version": "==4.2.15"
+            "version": "==4.3.3"
         },
         "jinja2": {
             "hashes": [
