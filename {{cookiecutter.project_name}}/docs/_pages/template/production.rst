@@ -1,7 +1,8 @@
 Production
 ==========
 
-We deploy our application using ``docker-compose`` files with version ``3`` and ``docker swarm``.
+We deploy our application using ``docker-compose``
+files with version ``3`` and ``docker swarm``.
 
 
 Setting up
@@ -41,7 +42,9 @@ To actually deploy a software run:
 Updating already running service
 --------------------------------
 
-If you need to update an already running service, them you will have to use ``docker service update`` or ``docker stack deploy``.
+If you need to update an already running service,
+them you will have to use ``docker service update``
+or ``docker stack deploy``.
 
 Updating existing `service <https://docs.docker.com/engine/reference/commandline/service_update/>`_.
 Updating existing `stack <https://docs.docker.com/engine/reference/commandline/stack_deploy/>`_.

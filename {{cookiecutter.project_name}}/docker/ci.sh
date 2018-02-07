@@ -33,6 +33,9 @@ pytest
 # Running code-quality check:
 xenon --max-absolute B --max-modules A --max-average A server
 
+# Checking docs:
+doc8 docs
+
 # Checking if all the dependencies are secure and do not have any
 # known vulnerabilities:
 pipenv check

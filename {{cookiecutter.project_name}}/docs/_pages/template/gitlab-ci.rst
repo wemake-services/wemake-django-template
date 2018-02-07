@@ -1,7 +1,8 @@
 Gitlab CI
 =========
 
-We use ``Gitlab CI`` to build our containers, test it, and store them in the internal registry.
+We use ``Gitlab CI`` to build our containers, test it,
+and store them in the internal registry.
 
 These images are then pulled into the production servers.
 
@@ -21,7 +22,8 @@ If some real secret variables are required, then you can use `gitlab secrets <ht
 Slack webhooks
 --------------
 
-We utilize ``slack`` to receive notifications about different events happened to our repository.
+We utilize ``slack`` to receive notifications about
+different events happened to our repository.
 
 Read the `docs <https://docs.gitlab.com/ee/user/project/integrations/slack.html>`_ about how to achieve this.
 

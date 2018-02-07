@@ -9,7 +9,8 @@ This projects uses several linters to make coding style consistent.
 flake8
 ------
 
-``flake8`` is used a general tool for linting. It includes several plugins, which could be found in ``Pipfile``.
+``flake8`` is used a general tool for linting.
+It includes several plugins, which could be found in ``Pipfile``.
 
 
 isort

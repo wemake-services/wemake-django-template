@@ -3,11 +3,15 @@
 QA
 ==
 
-We try to keep our quality standards high. So, we use different tools to make this possible.
+We try to keep our quality standards high.
+So, we use different tools to make this possible.
 
-First of all, we use `mypy <http://mypy-lang.org/>`_ for optional static typing.
+First of all, we use `mypy <http://mypy-lang.org/>`_ for optional
+static typing.
 
-We are also using `radon <https://github.com/rubik/radon>`_ and `xenon <https://github.com/rubik/xenon>`_ to measure code complexity and quality.
+We are also using `radon <https://github.com/rubik/radon>`_ and
+`xenon <https://github.com/rubik/xenon>`_ to measure
+code complexity and quality.
 
 
 radon
@@ -66,9 +70,12 @@ Running ``mypy`` is required before any commit:
 
 .. code:: bash
 
-    python -m mypy server
+    mypy server
 
-This will eliminate a lot of possible ``TypeError``s and other issues.
-However, this will not make code 100% working. So, testing and reviewing is still required.
+This will eliminate a lot of possible ``TypeError`` and other issues.
+However, this will not make code 100% working.
+So, testing and reviewing is still required.
 
-``mypy`` is configured via ``setup.cfg``. Read the `docs <https://mypy.readthedocs.io/en/latest/>`_ for more information.
+``mypy`` is configured via ``setup.cfg``.
+Read the `docs <https://mypy.readthedocs.io/en/latest/>`_
+for more information.

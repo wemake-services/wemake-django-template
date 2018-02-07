@@ -1,7 +1,8 @@
 Dependencies
 ============
 
-We use ``pipenv`` to manage dependencies. So, please do not use ``virtualenv`` or ``pip`` directly.
+We use ``pipenv`` to manage dependencies.
+So, please do not use ``virtualenv`` or ``pip`` directly.
 
 Firstly, install ``pipenv``, it is recommended to do so with ``pip3``:
 
@@ -50,7 +51,8 @@ Adding new dependencies
 To add a new dependency you can run:
 
 - ``pipenv install django`` to install ``django`` as a production dependency
-- ``pipenv install -d pytest`` to install ``pytest`` as a development dependency
+- ``pipenv install -d pytest`` to install ``pytest``
+  as a development dependency
 
 
 Dependencies security
