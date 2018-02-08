@@ -31,7 +31,7 @@ mypy server
 pytest
 
 # Running code-quality check:
-xenon --max-absolute B --max-modules A --max-average A server
+xenon --max-absolute A --max-modules A --max-average A server
 
 # Checking docs:
 doc8 docs
