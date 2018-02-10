@@ -33,6 +33,12 @@ Then migrate your database:
 
   python manage.py migrate
 
+You may also want to create a super user account:
+
+.. code:: bash
+
+  python manage.py createsuperuser
+
 Configuring pre-commit
 ~~~~~~~~~~~~~~~~~~~~~~
 

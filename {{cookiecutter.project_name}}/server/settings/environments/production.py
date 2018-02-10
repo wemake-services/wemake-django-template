@@ -7,7 +7,7 @@ This file is required and if development.py is present these
 values are overridden.
 """
 
-from server.settings.components.common import TEMPLATES
+from server.settings.components.common import TEMPLATES, config
 
 # Production flags:
 
@@ -15,7 +15,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     # TODO: check production hosts
-    '.{{ cookiecutter.project_domain }}',
+    '.' + config('DOMAIN_NAME'),
 ]
 
 
