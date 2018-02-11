@@ -43,14 +43,8 @@ COPY ./docker/django/entrypoint.sh /docker-entrypoint.sh
 
 # Project initialization:
 
-RUN addgroup -S django \
-  && adduser -S django -G django \
-  && chown -R django /code \
-  && chmod +x /docker-entrypoint.sh
-
-RUN pip install pipenv \
+RUN chmod +x /docker-entrypoint.sh \
+  && pip install pipenv \
   && pipenv install $(test "$DJANGO_ENV" == production || echo "--dev") --system --ignore-pipfile
-
-USER django
 
 ENTRYPOINT ["/sbin/tini", "--", "/docker-entrypoint.sh"]
