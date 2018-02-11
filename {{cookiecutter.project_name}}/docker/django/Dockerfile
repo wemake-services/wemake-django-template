@@ -1,6 +1,7 @@
 FROM python:3.6.4-alpine3.7
 
 LABEL maintainer="sobolevn@wemake.services"
+LABEL vendor="wemake.services"
 
 ARG DJANGO_ENV=production
 ENV PYTHONFAULTHANDLER=1 \
@@ -17,9 +18,18 @@ ENV PYTHONFAULTHANDLER=1 \
 # System deps:
 
 RUN apk update \
-    && apk --no-cache add musl-dev postgresql-dev libffi-dev gcc \
-      git curl bash build-base gettext linux-headers tini \
-    && mkdir /code
+    && apk --no-cache add \
+      bash \
+      build-base \
+      curl \
+      gcc \
+      gettext \
+      git \
+      libffi-dev \
+      linux-headers \
+      musl-dev \
+      postgresql-dev \
+      tini
 
 
 # Creating folders, and files for a project:
@@ -33,7 +43,14 @@ COPY ./docker/django/entrypoint.sh /docker-entrypoint.sh
 
 # Project initialization:
 
-RUN chmod +x /docker-entrypoint.sh && pip install pipenv \
-  && test "$DJANGO_ENV" == production && pipenv install --system --ignore-pipfile || pipenv install --dev --system --ignore-pipfile
+RUN addgroup -S django \
+  && adduser -S django -G django \
+  && chown -R django /code \
+  && chmod +x /docker-entrypoint.sh
+
+RUN pip install pipenv \
+  && pipenv install $(test "$DJANGO_ENV" == production || echo "--dev") --system --ignore-pipfile
+
+USER django
 
 ENTRYPOINT ["/sbin/tini", "--", "/docker-entrypoint.sh"]
