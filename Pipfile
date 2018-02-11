@@ -23,6 +23,8 @@ pytest-isort = "*"
 "flake8-bugbear" = "*"
 "flake8-comprehensions" = "*"
 "flake8-pep3101" = "*"
+"flake8-coding" = "*"
+"flake8-module-name" = "*"
 binaryornot = "*"
 
 
