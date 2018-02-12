@@ -7,7 +7,7 @@ set -o nounset
 # fail otherwise, since it may break things:
 echo "ENV is $DJANGO_ENV"
 if [ "$DJANGO_ENV" != 'production' ]; then
-  echo 'Error: $DJANGO_ENV is not set to "production".'
+  echo 'Error: DJANGO_ENV is not set to "production".'
   echo 'Application will not start.'
   exit 1
 fi

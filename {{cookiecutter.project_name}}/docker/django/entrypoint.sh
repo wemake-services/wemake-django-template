@@ -3,7 +3,7 @@
 set -o errexit
 set -o nounset
 
-cmd="$@"
+cmd="$*"
 
 postgres_ready () {
   sh "/code/docker/django/wait-for-command.sh" -s 0 52 -c "curl db:5432"

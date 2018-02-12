@@ -5,12 +5,11 @@ set -o nounset
 
 # Initializing global variables and functions:
 
-: ${INSIDE_CI:=0}
-: ${DJANGO_ENV:='development'}
-VIRTUAL_ENV_DISABLE_PROMPT=true
+: "${INSIDE_CI:=0}"
+: "${DJANGO_ENV:='development'}"
 
 # Fail CI if `DJANGO_ENV` is set to `production`:
-if [[ "$DJANGO_ENV" == 'production' ]]; then
+if [ "$DJANGO_ENV" = 'production' ]; then
   echo 'DJANGO_ENV is set to production. Running tests is not safe.'
   exit 1
 fi
@@ -36,7 +35,7 @@ run_ci () {
   pipenv check
 
   # Run this part only if truly inside the CI process:
-  if [[ "$INSIDE_CI" -eq 1 ]]; then
+  if [ "$INSIDE_CI" = 1 ]; then
     # Generating reports as build artifacts, it will be possible
     # to browse them later:
     # https://docs.gitlab.com/ce/user/project/pipelines/job_artifacts.html

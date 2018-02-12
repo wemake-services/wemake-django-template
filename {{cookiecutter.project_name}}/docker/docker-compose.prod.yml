@@ -1,9 +1,8 @@
+---
+
 # This compose-file is production only. So, it should not be called directly.
+#
 # Instead, it should be a part of your deploy strategy.
-# Including something like:
-#
-#  $ docker-compose -f docker-compose.yml -f docker/docker-compose.prod.yml > docker-compose.deploy.yml
-#
 # This setup is supposed to be used with `docker-swarm`.
 # See `production.rst` docs.
 
