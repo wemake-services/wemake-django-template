@@ -21,7 +21,7 @@ pyclean () {
 
 run_ci () {
   # Running tests:
-  mypy server
+  mypy server tests
   pytest
 
   # Running code-quality check:
