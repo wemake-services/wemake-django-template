@@ -110,10 +110,10 @@
         },
         "django-axes": {
             "hashes": [
-                "sha256:75747d30c08b89457bf67c672e2dfbab7d0d46bac1e90492dc743e2d0a44f1ec",
-                "sha256:aca98b45de63dc7aae2ec74be0b720e08f70e2cff3df577009099169d0be0187"
+                "sha256:719c2fc8ea4d6a20300f474ba4cbd772599f6849a07a006ba2f2155813fbe713",
+                "sha256:563882a99deb67e826575152ab8caa3b77e15bc3298a7a44674fba587d57fbc0"
             ],
-            "version": "==4.0.2"
+            "version": "==4.1.0"
         },
         "django-csp": {
             "hashes": [
@@ -230,14 +230,6 @@
                 "sha256:2e38399dbe842891fe85392601aab8f40a8f4cc5a9053c326de35a1cc0297ac6"
             ],
             "version": "==1.4"
-        },
-        "appnope": {
-            "hashes": [
-                "sha256:5b26757dc6f79a3b7dc9fab95359328d5747fcb2409d331ea66d0272b90ab2a0",
-                "sha256:8b995ffe925347a2138d7ac0fe77155e4311a0ea6d6da4f5128fe4b3cbe5ed71"
-            ],
-            "markers": "sys_platform == 'darwin'",
-            "version": "==0.1.0"
         },
         "aspy.yaml": {
             "hashes": [
@@ -484,10 +476,10 @@
         },
         "imagesize": {
             "hashes": [
-                "sha256:6ebdc9e0ad188f9d1b2cdd9bc59cbe42bf931875e829e7a595e6b3abdc05cdfb",
-                "sha256:0ab2c62b87987e3252f89d30b7cedbec12a01af9274af9ffa48108f2c13c6062"
+                "sha256:3620cc0cadba3f7475f9940d22431fc4d407269f1be59ec9b8edcca26440cf18",
+                "sha256:5b326e4678b6925158ccc66a9fa3122b6106d7c876ee32d7de6ce59385b96315"
             ],
-            "version": "==0.7.1"
+            "version": "==1.0.0"
         },
         "ipython": {
             "hashes": [
@@ -643,10 +635,10 @@
         },
         "pockets": {
             "hashes": [
-                "sha256:bccf25b8ce7bd62c13b300f09b000e7368a6476553ba37564098ead5a17bb4ab",
-                "sha256:ba8fdd9e87454fb0653912ac9db9577197fa47ac7614e127a0b71e7dd0d7f1f7"
+                "sha256:cc31deea2119ba642efb86a0fa4115658b137a107dd5a9e033d174f99e3db994",
+                "sha256:e4bfe67d24eff9f010b78b0e66028ac071ed2210cf24bd923ba6ff7a6f85b40b"
             ],
-            "version": "==0.5.1"
+            "version": "==0.6.1"
         },
         "pre-commit": {
             "hashes": [
