@@ -231,14 +231,6 @@
             ],
             "version": "==1.4"
         },
-        "appnope": {
-            "hashes": [
-                "sha256:5b26757dc6f79a3b7dc9fab95359328d5747fcb2409d331ea66d0272b90ab2a0",
-                "sha256:8b995ffe925347a2138d7ac0fe77155e4311a0ea6d6da4f5128fe4b3cbe5ed71"
-            ],
-            "markers": "sys_platform == 'darwin'",
-            "version": "==0.1.0"
-        },
         "aspy.yaml": {
             "hashes": [
                 "sha256:be70cc0ccd1ee1d30f589f2403792eb2ffa7546470af0a17179541b13d8374df",
@@ -484,10 +476,10 @@
         },
         "imagesize": {
             "hashes": [
-                "sha256:6ebdc9e0ad188f9d1b2cdd9bc59cbe42bf931875e829e7a595e6b3abdc05cdfb",
-                "sha256:0ab2c62b87987e3252f89d30b7cedbec12a01af9274af9ffa48108f2c13c6062"
+                "sha256:3620cc0cadba3f7475f9940d22431fc4d407269f1be59ec9b8edcca26440cf18",
+                "sha256:5b326e4678b6925158ccc66a9fa3122b6106d7c876ee32d7de6ce59385b96315"
             ],
-            "version": "==0.7.1"
+            "version": "==1.0.0"
         },
         "ipython": {
             "hashes": [
@@ -643,10 +635,10 @@
         },
         "pockets": {
             "hashes": [
-                "sha256:bccf25b8ce7bd62c13b300f09b000e7368a6476553ba37564098ead5a17bb4ab",
-                "sha256:ba8fdd9e87454fb0653912ac9db9577197fa47ac7614e127a0b71e7dd0d7f1f7"
+                "sha256:cc31deea2119ba642efb86a0fa4115658b137a107dd5a9e033d174f99e3db994",
+                "sha256:e4bfe67d24eff9f010b78b0e66028ac071ed2210cf24bd923ba6ff7a6f85b40b"
             ],
-            "version": "==0.5.1"
+            "version": "==0.6.1"
         },
         "pre-commit": {
             "hashes": [
@@ -789,10 +781,10 @@
         },
         "pytest-xdist": {
             "hashes": [
-                "sha256:c94039645151efca320430b7dbc2991fca38f918fa8d9420d2d8d060b8bd62ce",
-                "sha256:65228a859191f2c74ee68c127317eefe35eedd3d43fc1431f19240663b0cafcd"
+                "sha256:169ae3f1f13dfda41d425cbdf90174f101fa0b8804938192273ad0419ba859a7",
+                "sha256:fcd6f36bab93b0b24ec45ca12f798b9b3af71da826db0b0794b358d2f5c038de"
             ],
-            "version": "==1.22.0"
+            "version": "==1.22.1"
         },
         "pytz": {
             "hashes": [
