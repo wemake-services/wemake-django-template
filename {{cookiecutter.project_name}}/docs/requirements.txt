@@ -1,6 +1,6 @@
 # This file is required since we use ReadTheDocs services.
 # If it is not used, feel free to delete it.
 
-sphinx==1.7.0
+sphinx==1.7.1
 sphinx_autodoc_typehints==1.2.5
 sphinxcontrib-napoleon==0.6.1
