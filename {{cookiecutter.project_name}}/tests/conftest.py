@@ -11,6 +11,13 @@ It may be also used for extending doctest's context:
 import pytest
 
 
+@pytest.fixture(autouse=True, scope='function')
+def media_root(settings, tmpdir_factory):
+    """Forces django to save media files into temp folder."""
+    settings.MEDIA_ROOT = tmpdir_factory.mktemp('media', numbered=True)
+
+
 @pytest.fixture
 def main_heading():
+    """An example fixture containing some html fragment."""
     return '<h1>wemake-django-template</h1>'

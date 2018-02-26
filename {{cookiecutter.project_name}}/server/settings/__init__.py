@@ -23,6 +23,7 @@ base_settings = [
     'components/common.py',
     'components/logging.py',
     'components/csp.py',
+    'components/caches.py',
 
     # You can even use glob:
     # 'components/*.py'

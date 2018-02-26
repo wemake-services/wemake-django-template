@@ -1,5 +1,5 @@
 ---
-{% if cookiecutter.docker == 'y' %}
+{%- if cookiecutter.docker == 'y' %}
 - repo: local
   hooks:
     - id: qa
@@ -7,7 +7,8 @@
       entry: docker-compose run -e INSIDE_CI=0 web sh ./docker/ci.sh
       pass_filenames: false
       language: system
-{% else %}- repo: local
+{%- else %}
+- repo: local
   hooks:
     - id: pytest
       name: pytest
@@ -32,4 +33,4 @@
       entry: pipenv check
       pass_filenames: false
       language: python
-{% endif %}
+{%- endif %}
