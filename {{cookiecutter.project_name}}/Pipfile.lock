@@ -854,10 +854,10 @@
         },
         "sphinx-autodoc-typehints": {
             "hashes": [
-                "sha256:92132a8698952842341aa9ffa48ca1827bdfdcf382c857f44836f251e2902f05",
-                "sha256:d3b38bf4e3d12064625c6d4112e446d6093a1aeff1ece9962e2f4bbbb7fe2a90"
+                "sha256:1a9df6cb3ba72453ea4bfbe96ea887abc0d796b2ce9508c2189217a1bb69b366",
+                "sha256:46cc9e985ee6d8bbbd07fffd95b815c39a72df6afb600f59671f85f7340e7d0d"
             ],
-            "version": "==1.2.5"
+            "version": "==1.3.0"
         },
         "sphinxcontrib-napoleon": {
             "hashes": [
