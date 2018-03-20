@@ -3,6 +3,7 @@
         "hash": {
             "sha256": "ee8d2939396b063a97e1935edb368c7ca1b02141556e043171126104718b64c0"
         },
+        "pipfile-spec": 6,
         "requires": {
             "python_version": "3.6"
         },
@@ -240,10 +241,10 @@
         },
         "flake8-commas": {
             "hashes": [
-                "sha256:d7665140e18fd0325e7f22e6e0c909c7420efca53600b6c579dbddd329a7ff72",
-                "sha256:e6f309218d373216586a61f15449fa2b3eef9c1878725519ea28807cf2d30135"
+                "sha256:d3005899466f51380387df7151fb59afec666a0f4f4a2c6a8995b975de0f44b7",
+                "sha256:ee2141a3495ef9789a3894ed8802d03eff1eaaf98ce6d8653a7c573ef101935e"
             ],
-            "version": "==1.0.0"
+            "version": "==2.0.0"
         },
         "flake8-comprehensions": {
             "hashes": [
