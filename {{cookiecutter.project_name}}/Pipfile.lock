@@ -3,6 +3,7 @@
         "hash": {
             "sha256": "832f071074f20608a5416f176008c983bb240571e0c6cbafd995d102ff7e4b2a"
         },
+        "pipfile-spec": 6,
         "requires": {
             "python_version": "3.6"
         },
@@ -746,10 +747,10 @@
         },
         "pytest-flake8": {
             "hashes": [
-                "sha256:e67686645860009cf1f9a5016e110234b4a2c4584711d62ba753ed651ab9ab28",
-                "sha256:e716072d07a557defdd5c4141984569731e292961370a5663c1697283aa16200"
+                "sha256:3996de65a1219697596acac755090c70c47ec901edc438ea88ce1aa6098fb905",
+                "sha256:43598dfa211242525897866ff35fa553ebd88177383783079099057c7ad04331"
             ],
-            "version": "==0.9.1"
+            "version": "==1.0.0"
         },
         "pytest-forked": {
             "hashes": [
