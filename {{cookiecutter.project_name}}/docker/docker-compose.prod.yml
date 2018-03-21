@@ -9,8 +9,8 @@
 version: "3"
 services:
   caddy:
-    image: "wemakeservices/caddy-docker:0.10.10-1"
-    restart: always
+    image: "wemakeservices/caddy-docker:0.10.11-1"
+    restart: unless-stopped
     env_file: ./config/.env
     volumes:
       - ./docker/caddy/certs:/root/.caddy  # saving certificates
@@ -33,7 +33,7 @@ services:
         dockerfile: ./docker/django/Dockerfile
         args:
           DJANGO_ENV: production
-      restart: always
+      restart: unless-stopped
       volumes:
         - django-media:/var/www/django/media  # since in dev it is app's folder
       environment:

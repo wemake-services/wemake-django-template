@@ -47,6 +47,24 @@ to bind ``django`` and these services.
 
 If you don't need ``media`` files support, just remove the volumes.
 
+Migrations
+~~~~~~~~~~
+
+We do run migration in the ``gunicorn.sh`` by default.
+Why do we do this? Because that's probably the easiest way to do it.
+But it clearly has some disadvantages:
+
+- When scaling your container for multiple nodes you will have multiple
+  threads running the same migrations. And it might be a problem, since
+  migrations do not guarantee that it will work this way.
+- You can perform some operations multiple times
+- Possible other evil things may happen
+
+So, what to do in this case?
+Well, you can do whatever it takes to run migrations in a single thread.
+For example, you can create a separate container to do just that.
+Other options are fine as well.
+
 
 Postgres
 --------

@@ -42,16 +42,16 @@ MEDIA_ROOT = '/var/www/django/media'
 _PASS = 'django.contrib.auth.password_validation'
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': '{}.UserAttributeSimilarityValidator'.format(_PASS),
+        'NAME': '{0}.UserAttributeSimilarityValidator'.format(_PASS),
     },
     {
-        'NAME': '{}.MinimumLengthValidator'.format(_PASS),
+        'NAME': '{0}.MinimumLengthValidator'.format(_PASS),
     },
     {
-        'NAME': '{}.CommonPasswordValidator'.format(_PASS),
+        'NAME': '{0}.CommonPasswordValidator'.format(_PASS),
     },
     {
-        'NAME': '{}.NumericPasswordValidator'.format(_PASS),
+        'NAME': '{0}.NumericPasswordValidator'.format(_PASS),
     },
 ]
 
@@ -65,7 +65,7 @@ for template in TEMPLATES:
             'django.template.loaders.filesystem.Loader',
             'django.template.loaders.app_directories.Loader',
         ],
-    ),
+    )
 
 
 # Security

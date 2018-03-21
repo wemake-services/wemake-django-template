@@ -41,6 +41,9 @@ sphinx = "*"
 sphinx-autodoc-typehints = "*"
 sphinxcontrib-napoleon = "*"
 "doc8" = "*"
+"flake8-string-format" = "*"
+"flake8-debugger" = "*"
+"flake8-print" = "*"
 
 
 [packages]
