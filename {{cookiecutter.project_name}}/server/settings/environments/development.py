@@ -15,9 +15,6 @@ from server.settings.components.common import INSTALLED_APPS, MIDDLEWARE
 
 DEBUG = True
 
-SESSION_COOKIE_SECURE = False
-CSRF_COOKIE_SECURE = False
-
 
 # Static files:
 # https://docs.djangoproject.com/en/1.11/ref/settings/#std:setting-STATICFILES_DIRS

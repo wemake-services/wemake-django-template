@@ -79,13 +79,6 @@ DATABASES = {
 }
 
 
-# Security
-# https://docs.djangoproject.com/en/1.11/ref/settings/#csrf-cookie-httponly
-
-CSRF_COOKIE_HTTPONLY = True
-SESSION_COOKIE_HTTPONLY = True
-
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
