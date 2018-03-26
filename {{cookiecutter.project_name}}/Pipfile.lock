@@ -601,10 +601,10 @@
         },
         "mypy": {
             "hashes": [
-                "sha256:83d798f66323f2de6191d66d9ae5ab234e4ee5b400010e19c58d75d308049f25",
-                "sha256:884f18f3a40cfcf24cdd5860b84958cfb35e6563e439c5adc1503878df221dc3"
+                "sha256:3bd95a1369810f7693366911d85be9f0a0bd994f6cb7162b7a994e5ded90e3d9",
+                "sha256:7247f9948d7cdaae9408a4ee1662a01853c24e668117b4419acf025b05fbe3ce"
             ],
-            "version": "==0.570"
+            "version": "==0.580"
         },
         "nodeenv": {
             "hashes": [
