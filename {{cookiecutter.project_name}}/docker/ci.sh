@@ -24,6 +24,13 @@ run_ci () {
   mypy server tests
   pytest
 
+  # Run checks to be sure settings are correct (production flag is required):
+  DJANGO_ENV=production python /code/manage.py check \
+    --deploy --fail-level WARNING
+
+  # Check that all migrations worked fine:
+  python /code/manage.py makemigrations --dry-run --check
+
   # Running code-quality check:
   xenon --max-absolute A --max-modules A --max-average A server
 

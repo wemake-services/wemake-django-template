@@ -107,10 +107,10 @@
         },
         "python-dateutil": {
             "hashes": [
-                "sha256:07009062406cffd554a9b4135cd2ff167c9bf6b7aac61fe946c93e69fad1bbd8",
-                "sha256:8f95bb7e6edbb2456a51a1fb58c8dca942024b4f5844cae62c90aa88afe6e300"
+                "sha256:3220490fb9741e2342e1cf29a503394fdac874bc39568288717ee67047ff29df",
+                "sha256:9d8074be4c993fbe4947878ce593052f71dac82932a677d49194d8ce9778002e"
             ],
-            "version": "==2.7.0"
+            "version": "==2.7.2"
         },
         "requests": {
             "hashes": [
@@ -227,10 +227,10 @@
         },
         "flake8-builtins": {
             "hashes": [
-                "sha256:74f172b15737bdee0c756021b0e2a28228da3a4d2d86975e925b66eb8dfbe037",
-                "sha256:9672f855ced425fff7792c11ddcdf3b06a4de3d277d47151cbdae3a97149e0a6"
+                "sha256:35123ebd0885171f0c15fcb95c4374dbff1f71e6dc309d6b16abfa8dba18be4d",
+                "sha256:5d9687d470fec564689599aae12422b39c1bc6e6ed92291d2e8d7a1ebc9e983b"
             ],
-            "version": "==1.1.1"
+            "version": "==1.2.1"
         },
         "flake8-coding": {
             "hashes": [
@@ -276,9 +276,9 @@
         },
         "flake8-quotes": {
             "hashes": [
-                "sha256:83efcb4d4dc3ebcc74e2f20330d1f3460393cf8fb1ec045888ce169e0f998e70"
+                "sha256:00c53e41be1cf6d04c4e5974a36320b081ee7e13fc394457a104836cbfc1399e"
             ],
-            "version": "==0.14.0"
+            "version": "==0.14.1"
         },
         "future": {
             "hashes": [
@@ -413,10 +413,10 @@
         },
         "python-dateutil": {
             "hashes": [
-                "sha256:07009062406cffd554a9b4135cd2ff167c9bf6b7aac61fe946c93e69fad1bbd8",
-                "sha256:8f95bb7e6edbb2456a51a1fb58c8dca942024b4f5844cae62c90aa88afe6e300"
+                "sha256:3220490fb9741e2342e1cf29a503394fdac874bc39568288717ee67047ff29df",
+                "sha256:9d8074be4c993fbe4947878ce593052f71dac82932a677d49194d8ce9778002e"
             ],
-            "version": "==2.7.0"
+            "version": "==2.7.2"
         },
         "requests": {
             "hashes": [

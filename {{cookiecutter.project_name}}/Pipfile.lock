@@ -394,10 +394,10 @@
         },
         "flake8-builtins": {
             "hashes": [
-                "sha256:74f172b15737bdee0c756021b0e2a28228da3a4d2d86975e925b66eb8dfbe037",
-                "sha256:9672f855ced425fff7792c11ddcdf3b06a4de3d277d47151cbdae3a97149e0a6"
+                "sha256:35123ebd0885171f0c15fcb95c4374dbff1f71e6dc309d6b16abfa8dba18be4d",
+                "sha256:5d9687d470fec564689599aae12422b39c1bc6e6ed92291d2e8d7a1ebc9e983b"
             ],
-            "version": "==1.1.1"
+            "version": "==1.2.1"
         },
         "flake8-coding": {
             "hashes": [
@@ -469,9 +469,9 @@
         },
         "flake8-quotes": {
             "hashes": [
-                "sha256:83efcb4d4dc3ebcc74e2f20330d1f3460393cf8fb1ec045888ce169e0f998e70"
+                "sha256:00c53e41be1cf6d04c4e5974a36320b081ee7e13fc394457a104836cbfc1399e"
             ],
-            "version": "==0.14.0"
+            "version": "==0.14.1"
         },
         "flake8-string-format": {
             "hashes": [
@@ -628,10 +628,10 @@
         },
         "pbr": {
             "hashes": [
-                "sha256:05f61c71aaefc02d8e37c0a3eeb9815ff526ea28b3b76324769e6158d7f95be1",
-                "sha256:60c25b7dfd054ef9bb0ae327af949dd4676aa09ac3a9471cdc871d8a9213f9ac"
+                "sha256:8b9a7c3704657cb0831b3ded0a6b61377947c8235b76649bb7de4bfe2e6cfa56",
+                "sha256:cf66675e22ae91a4f20e4b8354f117d3e3d1de651513051d109cc39645fb3672"
             ],
-            "version": "==3.1.1"
+            "version": "==4.0.0"
         },
         "pep8-naming": {
             "hashes": [

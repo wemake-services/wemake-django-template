@@ -49,6 +49,16 @@ or ``docker stack deploy``.
 Updating existing `service <https://docs.docker.com/engine/reference/commandline/service_update/>`_.
 Updating existing `stack <https://docs.docker.com/engine/reference/commandline/stack_deploy/>`_.
 
+Zero-Time Updates
+~~~~~~~~~~~~~~~~~
+
+Zero-Time Updates can be tricky.
+You need to create containers with the new code, update existing services,
+wait for the working sessions to be completed, and to shut down old
+containers.
+
+You can do it with ``swarm``'s `Rolling updates <https://docs.docker.com/engine/swarm/swarm-tutorial/rolling-update/>`_.
+
 
 Further readings
 ----------------
