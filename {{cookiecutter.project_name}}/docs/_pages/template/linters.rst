@@ -66,17 +66,17 @@ Here's the list of these linters.
 shellcheck
 ~~~~~~~~~~
 
-This `linter <https://www.shellcheck.net/>`_ is used
-to lint your ``.sh`` files.
+This linter is used to lint your ``.sh`` files.
+See `shellcheck <https://www.shellcheck.net/>`_ docs.
 
 hadolint
 ~~~~~~~~
 
-This `linter <https://github.com/hadolint/hadolint>`_ is used
-to lint your `Dockerfile`s.
+This linter is used to lint your `Dockerfile` (not very useful).
+See `hadolint <https://github.com/hadolint/hadolint>`_
 
 yamllint
 ~~~~~~~~
 
-This `linter <https://github.com/adrienverge/yamllint>`_ is used
-to lint your `yaml` files.
+This linter is used to lint your `yaml` files.
+See `yamllint <https://github.com/adrienverge/yamllint>`_ docs.
