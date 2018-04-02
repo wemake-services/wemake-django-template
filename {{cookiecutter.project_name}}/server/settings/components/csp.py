@@ -10,6 +10,12 @@ We are using `django-csp` to provide this headers.
 Docs: https://github.com/mozilla/django-csp
 """
 
+from server.settings.components.common import MIDDLEWARE
+
+MIDDLEWARE += (
+    'csp.middleware.CSPMiddleware',
+)
+
 CSP_SCRIPT_SRC = ("'self'", )
 CSP_IMG_SRC = ("'self'", )
 CSP_FONT_SRC = ("'self'", )
