@@ -44,6 +44,7 @@ sphinx = "*"
 sphinx-autodoc-typehints = "*"
 sphinxcontrib-napoleon = "*"
 "doc8" = "*"
+pytest-randomly = "*"
 
 
 [packages]
