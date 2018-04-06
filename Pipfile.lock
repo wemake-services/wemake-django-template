@@ -262,10 +262,10 @@
         },
         "flake8-pep3101": {
             "hashes": [
-                "sha256:1ba98a8a6d89ce54645d967fa831503f4b020558736563178a2ea48b72e000d8",
-                "sha256:e7df132a2e3a1db56223b5c241065a1a948866232ce02860114094f4bfcdd221"
+                "sha256:493821d6bdd083794eb0691ebe5b68e5c520b622b269d60e54308fb97440e21a",
+                "sha256:b661ab718df42b87743dde266ef5de4f9e900b56c67dbccd45d24cf527545553"
             ],
-            "version": "==1.2"
+            "version": "==1.2.1"
         },
         "flake8-polyfill": {
             "hashes": [
