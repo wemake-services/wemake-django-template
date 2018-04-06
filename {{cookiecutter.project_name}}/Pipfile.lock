@@ -218,14 +218,6 @@
             ],
             "version": "==1.4"
         },
-        "appnope": {
-            "hashes": [
-                "sha256:5b26757dc6f79a3b7dc9fab95359328d5747fcb2409d331ea66d0272b90ab2a0",
-                "sha256:8b995ffe925347a2138d7ac0fe77155e4311a0ea6d6da4f5128fe4b3cbe5ed71"
-            ],
-            "markers": "sys_platform == 'darwin'",
-            "version": "==0.1.0"
-        },
         "aspy.yaml": {
             "hashes": [
                 "sha256:6215f44900ff65f27dbd00a36b06a7926276436ed377320cfd4febd69bbd4a94",
@@ -235,10 +227,10 @@
         },
         "astroid": {
             "hashes": [
-                "sha256:a92c1197dd496ef2470e73e1c296fc02a719907ee07259744e26a13bda9d4862",
-                "sha256:b76e5109ff0f386dd229673ca1323d21b1e9bb9c38eaed2cf830882dd7628be2"
+                "sha256:35cfae47aac19c7b407b7095410e895e836f2285ccf1220336afba744cc4c5f2",
+                "sha256:38186e481b65877fd8b1f9acc33e922109e983eb7b6e487bd4c71002134ad331"
             ],
-            "version": "==1.6.2"
+            "version": "==1.6.3"
         },
         "attrs": {
             "hashes": [
@@ -457,10 +449,10 @@
         },
         "flake8-pep3101": {
             "hashes": [
-                "sha256:1ba98a8a6d89ce54645d967fa831503f4b020558736563178a2ea48b72e000d8",
-                "sha256:e7df132a2e3a1db56223b5c241065a1a948866232ce02860114094f4bfcdd221"
+                "sha256:493821d6bdd083794eb0691ebe5b68e5c520b622b269d60e54308fb97440e21a",
+                "sha256:b661ab718df42b87743dde266ef5de4f9e900b56c67dbccd45d24cf527545553"
             ],
-            "version": "==1.2"
+            "version": "==1.2.1"
         },
         "flake8-polyfill": {
             "hashes": [
@@ -497,10 +489,10 @@
         },
         "identify": {
             "hashes": [
-                "sha256:53be6ea950a5f40e13be2dd87e67413eb6879527b831333196ab2a54de38f499",
-                "sha256:c0bfb29634e04cde8e54aee2d55aff9dad30d6ea1f3e9e3ce731934d78635aa1"
+                "sha256:66737f6a07847ee1bc2660a4d2f5884092cde84e93ea862375048beef18ed21b",
+                "sha256:9db44ee94f2d6e0535df1cd565d278a17cfafc9e4f94d4ca45a95b254c814cad"
             ],
-            "version": "==1.0.8"
+            "version": "==1.0.9"
         },
         "idna": {
             "hashes": [
