@@ -6,7 +6,7 @@ verify_ssl = true
 
 [requires]
 
-python_version = '3.6'
+python_full_version = '3.6.5'
 
 
 [dev-packages]
@@ -23,8 +23,12 @@ pytest-isort = "*"
 "flake8-bugbear" = "*"
 "flake8-comprehensions" = "*"
 "flake8-pep3101" = "*"
+"flake8-docstrings" = "*"
 "flake8-coding" = "*"
 "flake8-module-name" = "*"
+"flake8-pytest" = "*"
+"flake8-string-format" = "*"
+"flake8-debugger" = "*"
 binaryornot = "*"
 
 

@@ -20,6 +20,7 @@ RE_OBJ = re.compile(PATTERN)
 
 @pytest.fixture
 def context():
+    """Creates default prompt values."""
     return {
         'project_name': 'test_project',
         'project_verbose_name': 'Test Project',
@@ -31,6 +32,7 @@ def context():
 
 @pytest.fixture
 def no_docker_context(context):
+    """Creates prompt values without docker selected."""
     context.update({'docker': 'n'})
     return context
 
@@ -54,14 +56,16 @@ def assert_variables_replaced(paths):
             contents = f.read()
 
         match = RE_OBJ.search(contents)
-        msg = 'cookiecutter variable not replaced in {} at {}'
+        msg = 'cookiecutter variable not replaced in {0} at {1}'
 
         # Assert that no match is found:
         assert match is None, msg.format(path, match.start())
 
 
 def test_with_default_configuration(cookies, context):
+    """Tests project structure with default prompt values."""
     result = cookies.bake(extra_context=context)
+
     assert result.exit_code == 0
     assert result.exception is None
     assert result.project.basename == context['project_name']
@@ -69,7 +73,9 @@ def test_with_default_configuration(cookies, context):
 
 
 def test_with_no_docker(cookies, no_docker_context):
+    """Tests project structure without docker."""
     result = cookies.bake(extra_context=no_docker_context)
+
     assert result.exit_code == 0
     assert result.exception is None
 
@@ -98,6 +104,7 @@ def test_with_no_docker(cookies, no_docker_context):
 
 
 def test_variables_replaced(cookies, context):
+    """Ensures that all variables are replaced inside project files."""
     result = cookies.bake(extra_context=context)
     paths = build_files_list(str(result.project))
 
@@ -109,10 +116,13 @@ def test_variables_replaced(cookies, context):
     ('project_name', 'myProject'),
     ('project_name', '43prject'),
     ('project_name', '_test'),
+    ('project_name', '0123456'),
     ('project_domain', 'https://wemake.services'),
     ('project_domain', 'wemake.services?search=python'),
+    ('project_domain', ''),
 ])
 def test_validators_work(prompt, entered_value, cookies, context):
+    """Ensures that project can not be created with invalid name."""
     context.update({prompt: entered_value})
     result = cookies.bake(extra_context=context)
 

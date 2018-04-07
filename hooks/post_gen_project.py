@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 
 """
-Does the following:
+This module is called after project is created.
 
+It does the following:
 1. Generates and saves random secret key
 2. Removes docker files if it is not used
 
@@ -24,6 +25,7 @@ CHANGEME = '__CHANGEME__'
 
 # Get the root project directory
 PROJECT_DIRECTORY = os.path.realpath(os.path.curdir)
+PROJECT_NAME = '{{ cookiecutter.project_name }}'
 
 # Use the system PRNG if possible
 try:
@@ -36,17 +38,26 @@ except NotImplementedError:
 def _get_random_string(length=50):
     """
     Returns a securely generated random string.
+
     The default length of 12 with the a-z, A-Z, 0-9 character set returns
     a 71-bit value. log_2((26+26+10)^12) =~ 71 bits
     """
-    punctuation = string.punctuation.replace('"', '').replace("'", '')
-    punctuation = punctuation.replace('\\', '')
     if using_sysrandom:
+        punctuation = string.punctuation.replace(
+            '"', '',
+        ).replace(
+            "'", '',
+        ).replace(
+            '\\', '',
+        ).replace(
+            '$', '',  # see issue-271
+        )
+
         chars = string.digits + string.ascii_letters + punctuation
-        return ''.join(random.choice(chars) for i in range(length))
+        return ''.join(random.choice(chars) for _ in range(length))
 
     print(
-        "Cookiecutter Django couldn't find a secure pseudo-random "
+        'We could not find a secure pseudo-random '
         'number generator on your system. '
         'Please change change your SECRET_KEY variables in config/.env '
         'manually.',
@@ -69,10 +80,20 @@ def _create_secret_key(config_path):
         f.write(file_)
 
 
+def print_futher_instuctions():
+    """Is used to show user what to do next after project creation."""
+    print()
+    print('Your project {0} is created.'.format(PROJECT_NAME))
+    print('Now you can start working on it:')
+    print()
+    print('    cd {0}'.format(PROJECT_NAME))
+
+
 def copy_local_configuration():
     """
-    Handler to copy local configuration from `.template`s
-    to the actual files.
+    Handler to copy local configuration.
+
+    It is copied from `.template`s files to the actual files.
     """
     secret_template = os.path.join(
         PROJECT_DIRECTORY, 'config', '.env.template',
@@ -104,7 +125,7 @@ def replace_pycharm_configuration():
     files = [
         os.path.join(PROJECT_DIRECTORY, '.idea', 'misc.xml'),
         os.path.join(
-            PROJECT_DIRECTORY, '.idea', '{{cookiecutter.project_name}}.iml',
+            PROJECT_DIRECTORY, '.idea', '{0}.iml'.format(PROJECT_NAME),
         ),
     ]
 
@@ -123,6 +144,7 @@ def replace_pycharm_configuration():
 def clean_docker_files():
     """
     This function removes all docker-related files.
+
     It is called when user does not want to include docker support.
     """
     dockerignore = os.path.join(PROJECT_DIRECTORY, '.dockerignore')
@@ -165,3 +187,5 @@ copy_local_configuration()
 clean_docker_files()  # {% else %}
 replace_pycharm_configuration()
 # {% endif %}
+
+print_futher_instuctions()
