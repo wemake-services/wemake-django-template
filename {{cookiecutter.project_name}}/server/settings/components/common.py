@@ -41,6 +41,9 @@ INSTALLED_APPS: Tuple[str, ...] = (
 )
 
 MIDDLEWARE: Tuple[str, ...] = (
+    # Content Security Policy:
+    'csp.middleware.CSPMiddleware',
+
     # Django:
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -104,6 +107,11 @@ TIME_ZONE = 'UTC'
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_FINDERS = (
+  'django.contrib.staticfiles.finders.FileSystemFinder',
+  'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+)
 
 
 # Templates

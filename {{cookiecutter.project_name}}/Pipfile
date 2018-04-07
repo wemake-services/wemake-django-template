@@ -13,6 +13,7 @@ python_full_version = "3.6.5"
 
 django-debug-toolbar = "*"
 django-querycount = "*"
+nplusone = "*"
 "pep8-naming" = "*"
 "flake8-builtins" = "*"
 "flake8-commas" = "*"
@@ -34,6 +35,7 @@ pytest-isort = "*"
 pytest-django = "*"
 pytest-cov = "*"
 pytest-xdist = "*"
+pytest-randomly = "*"
 pre-commit = "*"
 xenon = "*"
 radon = "*"
@@ -44,7 +46,6 @@ sphinx = "*"
 sphinx-autodoc-typehints = "*"
 sphinxcontrib-napoleon = "*"
 "doc8" = "*"
-pytest-randomly = "*"
 
 
 [packages]

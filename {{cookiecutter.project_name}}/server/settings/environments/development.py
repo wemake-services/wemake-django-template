@@ -27,6 +27,7 @@ STATICFILES_DIRS: List[str] = []
 
 INSTALLED_APPS += (
     'debug_toolbar',
+    'nplusone.ext.django',
 )
 
 MIDDLEWARE += (
@@ -52,3 +53,13 @@ DEBUG_TOOLBAR_CONFIG = {
 # since `ddt` loads some scripts from `ajax.googleapis.com`:
 CSP_SCRIPT_SRC = ("'self'", 'ajax.googleapis.com')
 CSP_IMG_SRC = ("'self'", 'data:')
+
+
+# nplusone
+# https://github.com/jmcarp/nplusone
+
+# Should be the first in line:
+MIDDLEWARE = ('nplusone.ext.django.NPlusOneMiddleware',) + MIDDLEWARE
+
+# Raise exceptions on N+1 requests:
+NPLUSONE_RAISE = True

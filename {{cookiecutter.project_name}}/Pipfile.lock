@@ -1,11 +1,11 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "f7ad4057da771bca3d6f80389979049fc450e31e01c443466625fc251f180fae"
+            "sha256": "9e9fc86ad5de8c3c35f4355409a82d72afd92c8f9a1b8a23dd5d131f38044ea4"
         },
         "pipfile-spec": 6,
         "requires": {
-            "python_version": "3.6"
+            "python_full_version": "3.6.5"
         },
         "sources": [
             {
@@ -218,6 +218,14 @@
             ],
             "version": "==1.4"
         },
+        "appnope": {
+            "hashes": [
+                "sha256:5b26757dc6f79a3b7dc9fab95359328d5747fcb2409d331ea66d0272b90ab2a0",
+                "sha256:8b995ffe925347a2138d7ac0fe77155e4311a0ea6d6da4f5128fe4b3cbe5ed71"
+            ],
+            "markers": "sys_platform == 'darwin'",
+            "version": "==0.1.0"
+        },
         "aspy.yaml": {
             "hashes": [
                 "sha256:6215f44900ff65f27dbd00a36b06a7926276436ed377320cfd4febd69bbd4a94",
@@ -252,6 +260,12 @@
                 "sha256:bbbf4b1e5cd2bdb08f915895b51081c041bac22394fdfcfdfbe9f14b77c08bf2"
             ],
             "version": "==0.1.0"
+        },
+        "blinker": {
+            "hashes": [
+                "sha256:471aee25f3992bd325afa3772f1063dbdbbca947a041b8b89466dc00d606f8b6"
+            ],
+            "version": "==1.4"
         },
         "cached-property": {
             "hashes": [
@@ -510,10 +524,10 @@
         },
         "ipython": {
             "hashes": [
-                "sha256:938da96f2f5f50d82add1947958b7432e9f330cef7703210bffd1a783d7720ab",
-                "sha256:c785ab502b1a63624baeb89fedb873a118d4da6c9a796ae06e4f4aaef74e9ea0"
+                "sha256:85882f97d75122ff8cdfe129215a408085a26039527110c8d4a2b8a5e45b7639",
+                "sha256:a6ac981381b3f5f604b37a293369963485200e3639fb0404fa76092383c10c41"
             ],
-            "version": "==6.3.0"
+            "version": "==6.3.1"
         },
         "ipython-genutils": {
             "hashes": [
@@ -618,6 +632,13 @@
                 "sha256:dd0a34001090ff042cfdb4b0c8d6a6f7ec9baa49733f00b695bb8a8b4700ba6c"
             ],
             "version": "==1.3.0"
+        },
+        "nplusone": {
+            "hashes": [
+                "sha256:334542aa5760e13fd546060d188850660eade7bc0b447618035e488fb3e1380b",
+                "sha256:7386feb6a7bdf38e365bbb0fec917a75e0e642bf62bb8eaede8fba60d3cb5fea"
+            ],
+            "version": "==0.9.0"
         },
         "packaging": {
             "hashes": [

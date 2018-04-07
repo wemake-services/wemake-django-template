@@ -2,15 +2,23 @@ language: python
 
 python: 3.6.5
 
+addons:
+  apt:
+    packages:
+      - docker-ce
+
 services:
   - docker
 
 env:
-  - PIPENV_SHELL_COMPAT=true PIPENV_COLORBLIND=true PIPENV_NOSPIN=true
+  - DOCKER_COMPOSE_VERSION=1.8.0 PIPENV_NOSPIN=true
+
+before_install:
+  - docker --version && docker-compose --version
 
 install:
   - pip install pipenv
-  - pipenv --bare install --ignore-pipfile --dev
+  - pipenv --bare install --deploy --ignore-pipfile --dev
 
 script:
   - pipenv run python -m pytest
