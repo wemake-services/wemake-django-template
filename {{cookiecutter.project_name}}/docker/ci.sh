@@ -67,7 +67,7 @@ run_ci () {
 
 install_deps () {
   # Installing dependencies:
-  pipenv --bare install --system --dev --ignore-pipfile
+  pipenv --bare install --dev --system --deploy --ignore-pipfile
 }
 
 # Remove any cache before the script:

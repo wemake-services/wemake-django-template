@@ -6,7 +6,7 @@
 # This setup is supposed to be used with `docker-swarm`.
 # See `production.rst` docs.
 
-version: "3"
+version: "3.6"
 services:
   caddy:
     image: "wemakeservices/caddy-docker:0.10.11-1"

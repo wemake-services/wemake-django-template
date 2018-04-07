@@ -8,9 +8,7 @@ variables:
   DOCKER_DRIVER: overlay2
   PROJECT_NAME: "{{ cookiecutter.project_name }}"
   GROUP_NAME: "{{ cookiecutter.organization }}"
-  PIPENV_SHELL_COMPAT: "true"
   PIPENV_COLORBLIND: "true"
-  PIPENV_NOSPIN: "true"
   CONTAINER_TEST_IMAGE: "registry.gitlab.com/$GROUP_NAME/$PROJECT_NAME:$CI_BUILD_REF_NAME"
   CONTAINER_RELEASE_IMAGE: "registry.gitlab.com/$GROUP_NAME/$PROJECT_NAME:latest"
 
@@ -25,7 +23,7 @@ before_script:
   # Creating `.env` configuration file:
   - dump-env -t config/.env.template -p 'SECRET_' > config/.env
   # Login into Docker registry:
-  - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN registry.gitlab.com
+  - docker login -u gitlab-ci-token -p "$CI_JOB_TOKEN" registry.gitlab.com
   # Debug information:
   - docker info && docker-compose --version && git --version
 
@@ -33,8 +31,8 @@ before_script:
 build:
   stage: build
   script:
-    - docker build -t $CONTAINER_TEST_IMAGE --build-arg DJANGO_ENV=production -f docker/django/Dockerfile .
-    - docker push $CONTAINER_TEST_IMAGE
+    - docker build -t "$CONTAINER_TEST_IMAGE" --build-arg DJANGO_ENV=production -f docker/django/Dockerfile .
+    - docker push "$CONTAINER_TEST_IMAGE"
   only:
     - master
 
@@ -52,9 +50,9 @@ test:
 release-image:
   stage: deploy
   script:
-    - docker pull $CONTAINER_TEST_IMAGE
-    - docker tag $CONTAINER_TEST_IMAGE $CONTAINER_RELEASE_IMAGE
-    - docker push $CONTAINER_RELEASE_IMAGE
+    - docker pull "$CONTAINER_TEST_IMAGE"
+    - docker tag "$CONTAINER_TEST_IMAGE" "$CONTAINER_RELEASE_IMAGE"
+    - docker push "$CONTAINER_RELEASE_IMAGE"
   only:
     - master
   environment:

@@ -16,7 +16,7 @@ You will need:
 - `python3.6` (see `.python_version` file. You can use `pyenv` or `pipenv` to manage versions)
 - `postgresql` with version `9.6`
 {%- if cookiecutter.docker == 'y' %}
-- `docker` with version at least `17.07`
+- `docker` with [version at least](https://docs.docker.com/compose/compose-file/#compose-and-docker-compatibility-matrix) `18.02`
 {%- endif %}
 
 

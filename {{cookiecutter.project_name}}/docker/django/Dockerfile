@@ -10,7 +10,6 @@ ENV PYTHONFAULTHANDLER=1 \
   PIP_NO_CACHE_DIR=off \
   PIP_DISABLE_PIP_VERSION_CHECK=on \
   PIP_DEFAULT_TIMEOUT=100 \
-  PIPENV_SHELL_COMPAT=true \
   PIPENV_COLORBLIND=true \
   PIPENV_NOSPIN=true
 
@@ -45,6 +44,6 @@ COPY ./docker/django/entrypoint.sh /docker-entrypoint.sh
 
 RUN chmod +x "/docker-entrypoint.sh" \
   && pip install pipenv \
-  && pipenv install "$(test "$DJANGO_ENV" == production || echo "--dev")" --system --ignore-pipfile
+  && pipenv install $(test "$DJANGO_ENV" == production || echo "--dev") --deploy --system --ignore-pipfile
 
 ENTRYPOINT ["/sbin/tini", "--", "/docker-entrypoint.sh"]
