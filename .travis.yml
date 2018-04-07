@@ -11,13 +11,11 @@ services:
   - docker
 
 env:
-  - DOCKER_COMPOSE_VERSION=1.8.0 PIPENV_NOSPIN=true
-
-before_install:
-  - docker --version && docker-compose --version
+  - PIPENV_NOSPIN=true
 
 install:
-  - pip install pipenv
+  - pip install -U docker-compose pipenv
+  - docker --version && docker-compose --version
   - pipenv --bare install --deploy --ignore-pipfile --dev
 
 script:
