@@ -44,7 +44,7 @@ Configuring pre-commit
 
 We are using several pre-commit hooks to make sure everything works just fine.
 Before you can run hooks, you need to have the pre-commit package manager installed.
-See `pre-commit page <https://pre-commit.com/#install>`_ for install guide.
+It comes bundled in our project requirements (specified in Pipfile).
 To setup hooks after installing all the dependencies run:
 
 .. code:: bash
