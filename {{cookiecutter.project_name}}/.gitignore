@@ -206,11 +206,11 @@ fabric.properties
 
 #####=== Custom ===#####
 # Directories:
-static_root/
 media/
 
 # File types:
 *.sqlite3
+*.db
 
 # Configuration file with private data:
 *.env
