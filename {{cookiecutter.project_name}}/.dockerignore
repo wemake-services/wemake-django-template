@@ -57,7 +57,7 @@ docs/_build/
 # PyBuilder
 target/
 
-*.log
+# Docker
 Dockerfile
 docker-compose.yml
 docker-compose.override.yml
