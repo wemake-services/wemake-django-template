@@ -4,6 +4,7 @@
 
 This project was generated with [`wemake-django-template`](https://github.com/wemake-services/wemake-django-template). Current template version is: [{% gitcommit %}](https://github.com/wemake-services/wemake-django-template/tree/{% gitcommit %}). See what is [updated](https://github.com/wemake-services/wemake-django-template/compare/{% gitcommit %}...master) since then.
 
+
 {%- if cookiecutter.docker == 'y' %}
 [![build status](https://gitlab.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}/badges/master/build.svg)](https://gitlab.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}/commits/master) [![coverage report](https://gitlab.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}/badges/master/coverage.svg)](https://gitlab.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}/commits/master)
 {%- endif %}
@@ -13,7 +14,7 @@ This project was generated with [`wemake-django-template`](https://github.com/we
 
 You will need:
 
-- `python3.6` (see `.python_version` file. You can use `pyenv` or `pipenv` to manage versions)
+- `python3.6` (see `Pipfile` for full version)
 - `postgresql` with version `9.6`
 {%- if cookiecutter.docker == 'y' %}
 - `docker` with [version at least](https://docs.docker.com/compose/compose-file/#compose-and-docker-compatibility-matrix) `18.02`

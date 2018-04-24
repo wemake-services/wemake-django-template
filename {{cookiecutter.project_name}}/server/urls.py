@@ -39,10 +39,6 @@ urlpatterns = [
         template_name='txt/humans.txt',
         content_type='text/plain',
     )),
-    url(r'^crossdomain\.xml$', TemplateView.as_view(
-        template_name='txt/crossdomain.xml',
-        content_type='application/xml',
-    )),
 
     # It is a good practice to have explicit index view:
     url(r'^$', index, name='index'),

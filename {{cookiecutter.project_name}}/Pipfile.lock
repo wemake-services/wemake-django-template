@@ -97,10 +97,10 @@
         },
         "django-axes": {
             "hashes": [
-                "sha256:047154340116115baac37e839fb02ef85efe43e73d702deb664c4613228a81c9",
-                "sha256:23498fe32fa74ad4ed2efba4e6d9c919becdcb3548546cbae24c19140932da31"
+                "sha256:403b2c5b002a4a64a836000843f8eb6f0c418aa889f54fe260e358be84c5865a",
+                "sha256:c955cfd24f92de0aa4895fa7e2b8356cf6ef36dde744ffb0f41967d220a38d44"
             ],
-            "version": "==4.2.0"
+            "version": "==4.3.1"
         },
         "django-csp": {
             "hashes": [
@@ -111,9 +111,9 @@
         },
         "django-ipware": {
             "hashes": [
-                "sha256:abf2bfbf0ec6c04679372a55c25889c9b08f55ec404bca3dfc08f3cf6c832a11"
+                "sha256:a7c7a8fd019dbdc9c357e6e582f65034e897572fc79a7e467674efa8aef9d00b"
             ],
-            "version": "==2.0.2"
+            "version": "==2.1.0"
         },
         "django-split-settings": {
             "hashes": [
@@ -269,10 +269,10 @@
         },
         "certifi": {
             "hashes": [
-                "sha256:14131608ad2fd56836d33a71ee60fa1c82bc9d2c8d98b7bdbc631fe1b3cd1296",
-                "sha256:edbc3f203427eef571f79a7692bb160a2b0f7ccaa31953e99bd17e307cf63f7d"
+                "sha256:13e698f54293db9f89122b0581843a782ad0934a4fe0172d2a980ba77fc61bb7",
+                "sha256:9fa520c1bacfb634fa7af20a76bcbd3d5fb390481724c597da32c719a7dca4b0"
             ],
-            "version": "==2018.1.18"
+            "version": "==2018.4.16"
         },
         "cfgv": {
             "hashes": [
@@ -496,10 +496,10 @@
         },
         "identify": {
             "hashes": [
-                "sha256:3da1f490e97dea9052ae7da51e63d211b7ca016968b3275e6fc0484bdf35145d",
-                "sha256:75e327eb4ea05732538c635463eca3bca7607f49dd347a01bcf0f53baa4bf120"
+                "sha256:5cbcc7fca1263bd87fc4dea1abfd7abbbc3807c9b9f09e6f999da6857a0fe35a",
+                "sha256:a42f6ed9c3ad02b187c8a17027bb9042a54f463d8e617ca208038a25ec69faa7"
             ],
-            "version": "==1.0.12"
+            "version": "==1.0.13"
         },
         "idna": {
             "hashes": [
@@ -900,10 +900,10 @@
         },
         "sphinx": {
             "hashes": [
-                "sha256:5a1c9a0fec678c24b9a2f5afba240c04668edb7f45c67ce2ed008996b3f21ae2",
-                "sha256:7a606d77618a753adb79e13605166e3cf6a0e5678526e044236fc1ac43650910"
+                "sha256:3aded1a355f662547b8a948131f3faecbc3dea8951847fe0ee4c59689f8220b2",
+                "sha256:9495a1f78c13d0a725ab8104e923e9663519ecc04552aa4a8f684c2da355443d"
             ],
-            "version": "==1.7.2"
+            "version": "==1.7.3"
         },
         "sphinx-autodoc-typehints": {
             "hashes": [

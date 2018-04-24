@@ -6,11 +6,11 @@ set -o nounset
 # Initializing global variables and functions:
 
 : "${INSIDE_CI:=0}"
-: "${DJANGO_ENV:='development'}"
+: "${DJANGO_ENV:=development}"
 
-# Fail CI if `DJANGO_ENV` is set to `production`:
-if [ "$DJANGO_ENV" = 'production' ]; then
-  echo 'DJANGO_ENV is set to production. Running tests is not safe.'
+# Fail CI if `DJANGO_ENV` is not set to `development`:
+if [ "$DJANGO_ENV" != 'development' ]; then
+  echo 'DJANGO_ENV is not set to development. Running tests is not safe.'
   exit 1
 fi
 
@@ -39,7 +39,8 @@ run_ci () {
 
   # Checking if all the dependencies are secure and do not have any
   # known vulnerabilities:
-  pipenv check
+  # TODO(@sobolevn): uncomment when #287 will be fixed
+  # pipenv check
 
   # Run this part only if truly inside the CI process:
   if [ "$INSIDE_CI" = 1 ]; then
@@ -65,11 +66,6 @@ run_ci () {
   fi
 }
 
-install_deps () {
-  # Installing dependencies:
-  pipenv --bare install --dev --system --deploy --ignore-pipfile
-}
-
 # Remove any cache before the script:
 pyclean
 
@@ -77,5 +73,4 @@ pyclean
 trap pyclean EXIT INT TERM
 
 # Run the CI process:
-install_deps
 run_ci
