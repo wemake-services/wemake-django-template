@@ -227,10 +227,10 @@
         },
         "flake8-builtins": {
             "hashes": [
-                "sha256:ad59b8bf6c9595c485003e6ccbf6da3b90c8e0e94279ab250f2113e698272b71",
-                "sha256:bebc4264548aa9d67f70b524527881b621c30be4cc639810a5f849e1ba85561f"
+                "sha256:7a5fbafc6d1f8327973cc45e17dfc2dd0f8c3a26d61c689acf296ad3d5727df8",
+                "sha256:ede1673c45ff967aea782231ae4836072a58a5f9db7700cf531995c76ba1734b"
             ],
-            "version": "==1.2.2"
+            "version": "==1.3.0"
         },
         "flake8-coding": {
             "hashes": [
