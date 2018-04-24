@@ -81,7 +81,7 @@ def _create_secret_key(config_path):
 
 
 def print_futher_instuctions():
-    """Is used to show user what to do next after project creation."""
+    """Shows user what to do next after project creation."""
     print()
     print('Your project {0} is created.'.format(PROJECT_NAME))
     print('Now you can start working on it:')
@@ -116,31 +116,6 @@ def copy_local_configuration():
     shutil.copyfile(local_template, local_config)
 
 
-def replace_pycharm_configuration():
-    """
-    Handler to replace CHANGEME marks inside `.idea` files.
-
-    It is a workaround for a strange docker in PyCharm support.
-    """
-    files = [
-        os.path.join(PROJECT_DIRECTORY, '.idea', 'misc.xml'),
-        os.path.join(
-            PROJECT_DIRECTORY, '.idea', '{0}.iml'.format(PROJECT_NAME),
-        ),
-    ]
-
-    for name in files:
-        with open(name) as f:
-            file_ = f.read()
-
-        # Replace CHANGEME with SECRET_KEY
-        file_ = file_.replace(CHANGEME, PROJECT_DIRECTORY, 1)
-
-        # Write the results to the file
-        with open(name, 'w') as f:
-            f.write(file_)
-
-
 def clean_docker_files():
     """
     This function removes all docker-related files.
@@ -154,7 +129,6 @@ def clean_docker_files():
     )
     gitlab_ci = os.path.join(PROJECT_DIRECTORY, '.gitlab-ci.yml')
     docker_dir = os.path.join(PROJECT_DIRECTORY, 'docker')
-    idea_dir = os.path.join(PROJECT_DIRECTORY, '.idea')
 
     docker_docs_root = os.path.join(
         PROJECT_DIRECTORY,
@@ -178,14 +152,12 @@ def clean_docker_files():
     os.remove(docker_override)
     os.remove(gitlab_ci)
     shutil.rmtree(docker_dir)
-    shutil.rmtree(idea_dir)
 
 
 copy_local_configuration()
 
 # Remove docker? {% if cookiecutter.docker != 'y' %}
-clean_docker_files()  # {% else %}
-replace_pycharm_configuration()
+clean_docker_files()
 # {% endif %}
 
 print_futher_instuctions()

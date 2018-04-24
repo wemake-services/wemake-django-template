@@ -96,7 +96,6 @@ def test_with_no_docker(cookies, no_docker_context):
 
     folders = (
         'docker',
-        '.idea',
     )
 
     for f in folders:
