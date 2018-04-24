@@ -20,7 +20,6 @@ This project is used to scaffold a `django` project structure. Just like `django
 - `pytest`, `pylint`, and `flake8` for testing and linting
 - [`pre-commit`](http://pre-commit.com/) hooks for consistent development
 - `docker-compose` for development, testing, and production
-- `pycharm` with pre-configured local `docker` development targets
 - `sphinx` for documentation
 - `Gitlab CI` with full `build`, `test`, and `deploy` pipeline configured by default
 - [`Caddy`](https://caddyserver.com/) with [`https`](https://caddyserver.com/docs/automatic-https) and `http/2` turned on by default

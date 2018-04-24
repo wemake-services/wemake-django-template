@@ -4,6 +4,9 @@ PyCharm
 We are using ``PyCharm`` for development.
 It is an absolutely great tool.
 
+``pycharm`` is a paid tool.
+But, you can download a free `trial version <https://www.jetbrains.com/pycharm/download>`_.
+
 
 One time setup
 --------------
@@ -11,7 +14,7 @@ One time setup
 You will need to do a one time setup when you start to work
 on a project for the first time.
 
-Editorconfig
+editorconfig
 ~~~~~~~~~~~~
 
 Firstly, you will need to install ``editorconfig`` plugin.
@@ -38,17 +41,18 @@ hit ``runserver-docker`` to start the server.
 Everything should run correctly.
 
 
-Running development server
---------------------------
+Running
+-------
 
 Whenever you start a new project there will be several
 configurations available to you:
 
 - ``runserver-docker``, which starts local ``docker-compose``
-  suited for development
+  with ``python manage.py runserver`` command
 - ``test-docker``, which starts tests on local ``docker-compose``
 
 Just select any of these targets and execute them.
+Or create some extra commands for things that you need.
 
 
 Deployment
@@ -74,7 +78,9 @@ Known issues
 - It may break in various parts, it is not 100% stable yet
 - Your server will be available at ``http://127.0.0.1:8000/``,
   not ``http://0.0.0.0:8000/`` as ``PyCharm`` says
-- It requires ``PyCharm 2017``, other versions will not work
+- It requires ``PyCharm 2017`` or newer, other versions will not work
+- When trying to debug tests you will need to disable ``pytest-cov`` by
+  removing ``--cov`` options from ``setup.cfg``. They do not play well
 
 
 Further reading

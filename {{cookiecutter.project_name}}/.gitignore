@@ -155,30 +155,38 @@ npm-debug.log
 #### jetbrains ####
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+# You can uncomment these lines to enable configuration sharing between
+# team members, or you can restrict `.idea/` folder at all (default).
 
 # User-specific stuff:
-.idea/**/workspace.xml
-.idea/**/tasks.xml
-.idea/dictionaries
+# .idea/**/workspace.xml
+# .idea/**/tasks.xml
+# .idea/dictionaries
 
-# Sensitive or high-churn files:
-.idea/**/dataSources/
-.idea/**/dataSources.ids
-.idea/**/dataSources.xml
-.idea/**/dataSources.local.xml
-.idea/**/sqlDataSources.xml
-.idea/**/dynamic.xml
-.idea/**/uiDesigner.xml
+# # Sensitive or high-churn files:
+# .idea/**/dataSources/
+# .idea/**/dataSources.ids
+# .idea/**/dataSources.xml
+# .idea/**/dataSources.local.xml
+# .idea/**/sqlDataSources.xml
+# .idea/**/dynamic.xml
+# .idea/**/uiDesigner.xml
 
-# Gradle:
-.idea/**/gradle.xml
-.idea/**/libraries
+# # Gradle:
+# .idea/**/gradle.xml
+# .idea/**/libraries
+
+# # Mongo Explorer plugin:
+# .idea/**/mongoSettings.xml
+
+# # Cursive Clojure plugin
+# .idea/replstate.xml
+
+# Restrict `.idea/` folder at all:
+.idea/
 
 # CMake
 cmake-build-debug/
-
-# Mongo Explorer plugin:
-.idea/**/mongoSettings.xml
 
 ## File-based project format:
 *.iws
@@ -193,9 +201,6 @@ cmake-build-debug/
 
 # JIRA plugin
 atlassian-ide-plugin.xml
-
-# Cursive Clojure plugin
-.idea/replstate.xml
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
 com_crashlytics_export_strings.xml
