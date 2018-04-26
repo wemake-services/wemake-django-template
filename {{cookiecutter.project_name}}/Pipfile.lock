@@ -892,10 +892,10 @@
         },
         "sphinx": {
             "hashes": [
-                "sha256:3aded1a355f662547b8a948131f3faecbc3dea8951847fe0ee4c59689f8220b2",
-                "sha256:9495a1f78c13d0a725ab8104e923e9663519ecc04552aa4a8f684c2da355443d"
+                "sha256:2e7ad92e96eff1b2006cf9f0cdb2743dacbae63755458594e9e8238b0c3dc60b",
+                "sha256:e9b1a75a3eae05dded19c80eb17325be675e0698975baae976df603b6ed1eb10"
             ],
-            "version": "==1.7.3"
+            "version": "==1.7.4"
         },
         "sphinx-autodoc-typehints": {
             "hashes": [
