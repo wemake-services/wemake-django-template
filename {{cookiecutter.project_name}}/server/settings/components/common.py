@@ -118,6 +118,7 @@ STATICFILES_FINDERS = (
 # https://docs.djangoproject.com/en/1.11/ref/templates/api
 
 TEMPLATES = [{
+    'APP_DIRS': True,
     'BACKEND': 'django.template.backends.django.DjangoTemplates',
     'DIRS': [
         # Contains plain text templates, like `robots.txt`:
@@ -132,10 +133,6 @@ TEMPLATES = [{
             'django.template.context_processors.media',
             'django.contrib.messages.context_processors.messages',
             'django.template.context_processors.request',
-        ],
-        'loaders': [
-            'django.template.loaders.filesystem.Loader',
-            'django.template.loaders.app_directories.Loader',
         ],
     },
 

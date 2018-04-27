@@ -15,7 +15,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     # TODO: check production hosts
-    '.' + config('DOMAIN_NAME'),
+    config('DOMAIN_NAME'),
 ]
 
 
@@ -54,18 +54,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': '{0}.NumericPasswordValidator'.format(_PASS),
     },
 ]
-
-
-# Templates
-# https://docs.djangoproject.com/en/1.11/ref/templates/api
-
-for template in TEMPLATES:
-    template['OPTIONS']['loaders'] = (  # type: ignore
-        'django.template.loaders.cached.Loader', [
-            'django.template.loaders.filesystem.Loader',
-            'django.template.loaders.app_directories.Loader',
-        ],
-    )
 
 
 # Security
