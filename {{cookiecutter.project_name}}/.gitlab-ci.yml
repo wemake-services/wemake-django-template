@@ -31,6 +31,7 @@ before_script:
 test:
   stage: test
   script:
+    - docker-compose -f docker-compose.yml -f docker/docker-compose.prod.yml config --quiet
     - docker-compose run -e INSIDE_CI=1 web sh ./docker/ci.sh
   coverage: '/\d+\%\s*$/'
   artifacts:
