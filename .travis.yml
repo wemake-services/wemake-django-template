@@ -21,8 +21,7 @@ install:
 script:
   - pipenv run python -m pytest
   - sh tests/test_integration.sh
-  # TODO(@sobolevn): uncomment when #287 will be fixed
-  # - pipenv check  # check local deps security
+  - pipenv check  # check local deps security
 
 notifications:
   email:

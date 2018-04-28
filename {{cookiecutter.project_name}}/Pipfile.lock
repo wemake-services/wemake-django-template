@@ -211,6 +211,14 @@
             ],
             "version": "==1.4"
         },
+        "appnope": {
+            "hashes": [
+                "sha256:5b26757dc6f79a3b7dc9fab95359328d5747fcb2409d331ea66d0272b90ab2a0",
+                "sha256:8b995ffe925347a2138d7ac0fe77155e4311a0ea6d6da4f5128fe4b3cbe5ed71"
+            ],
+            "markers": "sys_platform == 'darwin'",
+            "version": "==0.1.0"
+        },
         "aspy.yaml": {
             "hashes": [
                 "sha256:c959530fab398e2391516bc8d5146489f9273b07d87dd8ba5e8b73406f7cc1fa",
@@ -784,10 +792,10 @@
         },
         "pytest-deadfixtures": {
             "hashes": [
-                "sha256:6c9a465f9cdbaf26fa3263fa5edb65d6dcdf8e6af7223b50917cc8d00edef9c3",
-                "sha256:870227dd1aefbcbabcb574f1615d09773484aacd06d92a1f0c8ba01d99dd7c82"
+                "sha256:cac3975fa3ac27d6e58f39ae18cbd5bc58396d8319a4c4f603a4220dd6eb27d9",
+                "sha256:d436f4c6d2d9fb6977eb6aed6e3f7120ee2bd4fdc117f699cf5c296ddf2a3d95"
             ],
-            "version": "==2.0.0"
+            "version": "==2.0.1"
         },
         "pytest-django": {
             "hashes": [

@@ -438,10 +438,10 @@
         },
         "pytest-deadfixtures": {
             "hashes": [
-                "sha256:6c9a465f9cdbaf26fa3263fa5edb65d6dcdf8e6af7223b50917cc8d00edef9c3",
-                "sha256:870227dd1aefbcbabcb574f1615d09773484aacd06d92a1f0c8ba01d99dd7c82"
+                "sha256:cac3975fa3ac27d6e58f39ae18cbd5bc58396d8319a4c4f603a4220dd6eb27d9",
+                "sha256:d436f4c6d2d9fb6977eb6aed6e3f7120ee2bd4fdc117f699cf5c296ddf2a3d95"
             ],
-            "version": "==2.0.0"
+            "version": "==2.0.1"
         },
         "pytest-flake8": {
             "hashes": [
