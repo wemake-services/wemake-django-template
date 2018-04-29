@@ -7,6 +7,13 @@ and store them in the internal registry.
 These images are then pulled into the production servers.
 
 
+Usage with GitHub
+-----------------
+
+You can store your code inside ``GitHub`` with no problems.
+Just learn how to configure ``GitLab CI`` `to be used <https://about.gitlab.com/features/github/>`_ with ``GitHub``.
+
+
 Configuration
 -------------
 
@@ -34,17 +41,10 @@ See :ref:`configuration` on how
 to use ``dump-env`` and ``gitlab-ci`` together.
 
 
-Slack webhooks
---------------
-
-We utilize ``slack`` to receive notifications about
-different events happened to our repository.
-
-Read the `docs <https://docs.gitlab.com/ee/user/project/integrations/slack.html>`_ about how to achieve this.
 
 
 Further reading
 ---------------
 
 - `Container Registry <https://gitlab.com/help/user/project/container_registry>`_
-- `Gitlab CI <https://about.gitlab.com/features/gitlab-ci-cd/>`_
+- `Gitlab CI/CD <https://about.gitlab.com/features/gitlab-ci-cd/>`_
