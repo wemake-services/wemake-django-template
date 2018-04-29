@@ -5,7 +5,7 @@ Docker
 Requirements
 ------------
 
-``docker`` with version at least ``17.07`` or higher.
+``docker`` with version at least ``18.02`` or higher.
 
 
 Development
