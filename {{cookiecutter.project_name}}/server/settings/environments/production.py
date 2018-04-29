@@ -7,7 +7,7 @@ This file is required and if development.py is present these
 values are overridden.
 """
 
-from server.settings.components.common import TEMPLATES, config
+from server.settings.components.common import config
 
 # Production flags:
 
