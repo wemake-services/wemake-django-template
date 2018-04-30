@@ -132,10 +132,10 @@
         },
         "gunicorn": {
             "hashes": [
-                "sha256:75af03c99389535f218cc596c7de74df4763803f7b63eb09d77e92b3956b36c6",
-                "sha256:eee1169f0ca667be05db3351a0960765620dad53f53434262ff8901b68a1b622"
+                "sha256:eb8d8924b117a609fae9f8cd85df0cad3535dd613fdbcdbba3ee88d5459f1d4f",
+                "sha256:f5ca088d029fe3cea166c59bb43b7ccc9c850fe25af3da61350fe712c5cc5aa2"
             ],
-            "version": "==19.7.1"
+            "version": "==19.8.0"
         },
         "psycopg2": {
             "hashes": [
@@ -210,14 +210,6 @@
                 "sha256:65d2aa68b28e7d31233bb2ba8eb31cda40e4671f8ac2d6b241e358c9652a74b9"
             ],
             "version": "==1.4"
-        },
-        "appnope": {
-            "hashes": [
-                "sha256:5b26757dc6f79a3b7dc9fab95359328d5747fcb2409d331ea66d0272b90ab2a0",
-                "sha256:8b995ffe925347a2138d7ac0fe77155e4311a0ea6d6da4f5128fe4b3cbe5ed71"
-            ],
-            "markers": "sys_platform == 'darwin'",
-            "version": "==0.1.0"
         },
         "aspy.yaml": {
             "hashes": [
