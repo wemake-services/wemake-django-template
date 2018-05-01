@@ -71,6 +71,14 @@ to dump variables from both environment and ``.env`` file template.
 Then, this file is copied inside ``docker`` image and when
 this image is built - everything is ready for production.
 
+Example store secret variables with dump-env and Gitlab CI:
+
+1. We add a ``SECRET_DJANGO_SECRET_KEY`` variable to Gitlab CI Secret Variables;
+2. Before build in CI ``dump-env`` dump ``SECRET_DJANGO_SECRET_KEY``
+   as ``DJANGO_SECRET_KEY``
+3. ``dump-env`` save ``DJANGO_SECRET_KEY`` to ``.env`` file.
+4. Now Django use this value in settings.
+
 However, there are different options to store secret settings:
 
 - `ansible-vault <https://docs.ansible.com/ansible/2.4/vault.html>`_
