@@ -73,9 +73,10 @@ this image is built - everything is ready for production.
 
 Example store secret variables with dump-env and Gitlab CI:
 
-#. We add a SECRET_DJANGO_SECRET_KEY variable to Gitlab CI Secret Variables;
-#. Before build in CI dump-env dump SECRET_DJANGO_SECRET_KEY as DJANGO_SECRET_KEY and save it to ``.env`` file.
-#. Now Django use this value in settings.
+1. We add a ``SECRET_DJANGO_SECRET_KEY`` variable to Gitlab CI Secret Variables;
+2. Before build ``dump-env`` dump ``SECRET_DJANGO_SECRET_KEY`` as ``DJANGO_SECRET_KEY``
+3. ``dump-env`` save ``DJANGO_SECRET_KEY`` to ``.env`` file.
+4. Now Django use this value in settings.
 
 However, there are different options to store secret settings:
 
