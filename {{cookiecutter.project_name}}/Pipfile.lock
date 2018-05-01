@@ -124,11 +124,10 @@
         },
         "dump-env": {
             "hashes": [
-                "sha256:17ef8404ead498a895d8a374fa02e23b8a0f8eb31eb329ee6c39ef6b49880009",
-                "sha256:70d4c4f2cee3bfe5569665ef57c2cd8fe6e3544d4d3d375c3757c335f49d6491",
-                "sha256:afc11fd3c2af0dd74014ebc559571e434a00535eb2131afd15b7059117d562e4"
+                "sha256:b3c45839e2183ce86ddee7f88478b12411092b154c9a1d56ed20dd0885ff79a1",
+                "sha256:ca07a06cffe316b42b4a7a5720b4deac62a6dcaad02f0bae431b94a1aa2cd63a"
             ],
-            "version": "==0.1.1"
+            "version": "==0.2.1"
         },
         "gunicorn": {
             "hashes": [
