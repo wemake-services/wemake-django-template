@@ -39,8 +39,7 @@ run_ci () {
 
   # Checking if all the dependencies are secure and do not have any
   # known vulnerabilities:
-  # TODO(@sobolevn): uncomment when #287 will be fixed
-  # pipenv check
+  pipenv check
 
   # Run this part only if truly inside the CI process:
   if [ "$INSIDE_CI" = 1 ]; then
