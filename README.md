@@ -14,14 +14,14 @@ This project is used to scaffold a `django` project structure. Just like `django
 
 ## Features
 
-- Always up-to-date with the help of [`@dependabot`](https://github.com/wemake-services/wemake-django-template/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Aapp%2Fdependabot)
+- Always [`up-to-date`](https://github.com/wemake-services/wemake-django-template/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Aapp%2Fdependabot) with the help of [`@dependabot`](https://dependabot.com/)
 - [`pipenv`](https://docs.pipenv.org/) for managing dependencies
-- [`mypy`](mypy.readthedocs.io) for optional static typing
+- [`mypy`](https://mypy.readthedocs.io) for optional static typing
 - `pytest`, `pylint`, and `flake8` for testing and linting
-- [`pre-commit`](http://pre-commit.com/) hooks for consistent development
+- [`pre-commit`](https://pre-commit.com/) hooks for consistent development
 - `docker-compose` for development, testing, and production
-- [`sphinx`](http://www.sphinx-doc.org/en/master/) for documentation
-- `Gitlab CI` with full `build`, `test`, and `deploy` pipeline configured by default
+- [`sphinx`](https://www.sphinx-doc.org/en/master/) for documentation
+- [`Gitlab CI`](https://about.gitlab.com/gitlab-ci/) with full `build`, `test`, and `deploy` pipeline configured by default
 - [`Caddy`](https://caddyserver.com/) with [`https`](https://caddyserver.com/docs/automatic-https) and `http/2` turned on by default
 
 
