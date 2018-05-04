@@ -157,10 +157,10 @@
         },
         "attrs": {
             "hashes": [
-                "sha256:1c7960ccfd6a005cd9f7ba884e6316b5e430a3f1a6c37c5f87d8b43f83b54ec9",
-                "sha256:a17a9573a6f475c99b551c0e0a812707ddda1ec9653bed04c13841404ed6f450"
+                "sha256:4b90b09eeeb9b88c35bc642cbac057e45a5fd85367b985bd2809c62b7b939265",
+                "sha256:e0d0eb91441a3b53dab4d9b743eafc1ac44476296a2053b6ca3af0b139faf87b"
             ],
-            "version": "==17.4.0"
+            "version": "==18.1.0"
         },
         "binaryornot": {
             "hashes": [
@@ -227,10 +227,10 @@
         },
         "flake8-builtins": {
             "hashes": [
-                "sha256:01834685fd39d5687a7caf6414393733dcb8d24b861504de33f7fc7f40e56582",
-                "sha256:bc99f95af18bb81570cdec15b0b9bb54f9ba3f94a7e1d2c7249fc2df8773994c"
+                "sha256:4319ac367980f0bb3343c5c196e525202df433e2401b8dbeeb55940e7decc6ba",
+                "sha256:f20c43801db99513ccdeea17741040e3683858200818bdf6d256f7bc5b40e902"
             ],
-            "version": "==1.3.1"
+            "version": "==1.4.0"
         },
         "flake8-coding": {
             "hashes": [
