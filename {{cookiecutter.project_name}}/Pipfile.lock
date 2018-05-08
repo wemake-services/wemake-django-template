@@ -809,10 +809,10 @@
         },
         "pytest-isort": {
             "hashes": [
-                "sha256:e92798127e21d22513c62070989f0fb3b712650e48a4db13e5b8e8034d367cfe",
-                "sha256:fc315e3ceac576f2b7000c4716a55063c45ed60c169ba2ede5a6b4aef97ce13e"
+                "sha256:ce36b62ca1108e16a8b8fc0d5a82302ba0796a3c352b093e13ccbb18e772edc6",
+                "sha256:d4d195ecfe33d81e258d251b2679b32216bad84131fb41984da22d9d0328a6fe"
             ],
-            "version": "==0.1.0"
+            "version": "==0.2.0"
         },
         "pytest-randomly": {
             "hashes": [
