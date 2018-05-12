@@ -210,6 +210,14 @@
             ],
             "version": "==1.4"
         },
+        "appnope": {
+            "hashes": [
+                "sha256:5b26757dc6f79a3b7dc9fab95359328d5747fcb2409d331ea66d0272b90ab2a0",
+                "sha256:8b995ffe925347a2138d7ac0fe77155e4311a0ea6d6da4f5128fe4b3cbe5ed71"
+            ],
+            "markers": "sys_platform == 'darwin'",
+            "version": "==0.1.0"
+        },
         "aspy.yaml": {
             "hashes": [
                 "sha256:c959530fab398e2391516bc8d5146489f9273b07d87dd8ba5e8b73406f7cc1fa",
@@ -399,10 +407,10 @@
         },
         "flake8-builtins": {
             "hashes": [
-                "sha256:4319ac367980f0bb3343c5c196e525202df433e2401b8dbeeb55940e7decc6ba",
-                "sha256:f20c43801db99513ccdeea17741040e3683858200818bdf6d256f7bc5b40e902"
+                "sha256:8d806360767947c0035feada4ddef3ede32f0a586ef457e62d811b8456ad9a51",
+                "sha256:cd7b1b7fec4905386a3643b59f9ca8e305768da14a49a7efb31fe9364f33cd04"
             ],
-            "version": "==1.4.0"
+            "version": "==1.4.1"
         },
         "flake8-coding": {
             "hashes": [

@@ -22,6 +22,7 @@ pyclean () {
 run_ci () {
   # Running tests:
   mypy server tests
+  pytest --dead-fixtures --dup-fixtures
   pytest
 
   # Run checks to be sure settings are correct (production flag is required):
