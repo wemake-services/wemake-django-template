@@ -40,8 +40,8 @@ run_ci () {
 
   # Checking if all the dependencies are secure and do not have any
   # known vulnerabilities:
-  pipenv --system check
- 
+  pipenv check --system
+
   # Run this part only if truly inside the CI process:
   if [ "$INSIDE_CI" = 1 ]; then
     # Generating reports as build artifacts, it will be possible
