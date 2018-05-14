@@ -14,6 +14,11 @@ if [ "$DJANGO_ENV" != 'development' ]; then
   exit 1
 fi
 
+pyclean () {
+  # Cleaning cache:
+  find . | grep -E '(__pycache__|\.py[cod]$)' | xargs rm -rf
+}
+
 run_ci () {
   # Running tests:
   mypy server tests
@@ -60,6 +65,12 @@ run_ci () {
     radon raw . > 'artifacts/raw.txt'
   fi
 }
+
+# Remove any cache before the script:
+pyclean
+
+# Clean everything up:
+trap pyclean EXIT INT TERM
 
 # Run the CI process:
 run_ci
