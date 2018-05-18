@@ -365,10 +365,10 @@
         },
         "pep8-naming": {
             "hashes": [
-                "sha256:434c7947da02f789312d3aa4a3f305953575b501a6acebbc643563e33150ebea",
-                "sha256:efe8333af257499fb121194f0f65c8a56ac68b9a003467906fa581ec35299842"
+                "sha256:360308d2c5d2fff8031c1b284820fbdb27a63274c0c1a8ce884d631836da4bdd",
+                "sha256:624258e0dd06ef32a9daf3c36cc925ff7314da7233209c5b01f7e5cdd3c34826"
             ],
-            "version": "==0.6.1"
+            "version": "==0.7.0"
         },
         "pluggy": {
             "hashes": [
