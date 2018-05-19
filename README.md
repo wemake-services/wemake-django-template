@@ -40,6 +40,15 @@ cookiecutter gh:wemake-services/wemake-django-template
 ```
 
 
+## Who are using this template?
+
+If you use our template, please add yourself or your company [in the list](https://github.com/wemake-services/wemake-django-template/wiki/Who-is-using-this-template).
+
+We offer free email support for anyone who is using this.
+If you have any problems or questions, drop us a line at [`contact@wemake.services`](mailto:contact@wemake.services).
+And we will try to help you.
+
+
 ## License
 
 MIT. See [LICENSE.md](https://github.com/wemake-services/wemake-django-template/blob/master/LICENSE.md) for more details.
