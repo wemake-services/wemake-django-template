@@ -224,6 +224,13 @@
             ],
             "version": "==1.6.4"
         },
+        "atomicwrites": {
+            "hashes": [
+                "sha256:240831ea22da9ab882b551b31d4225591e5e447a68c5e188db5b89ca1d487585",
+                "sha256:a24da68318b08ac9c9c45029f4a10371ab5b20e4226738e150e6e7c571630ae6"
+            ],
+            "version": "==1.1.5"
+        },
         "attrs": {
             "hashes": [
                 "sha256:4b90b09eeeb9b88c35bc642cbac057e45a5fd85367b985bd2809c62b7b939265",
@@ -487,10 +494,10 @@
         },
         "identify": {
             "hashes": [
-                "sha256:8c127f455e8503eb3a5ed5388527719e1fef00a41b5e58dc036bc116f3bb8a16",
-                "sha256:bb5bdf324b4a24def86757c8dd8a4e91a9c28bbf1bf8505d702ce4b8d2508270"
+                "sha256:032b7c7b28a41f39144bbc3c6421346e060cf1b03f9c47c0fa287dfbaa0379f2",
+                "sha256:b6d482c058e1147cdb6d15cd439b17c1194d4c971e0fe0f2d9e4eceda007ef89"
             ],
-            "version": "==1.0.16"
+            "version": "==1.0.17"
         },
         "idna": {
             "hashes": [
@@ -598,11 +605,11 @@
         },
         "more-itertools": {
             "hashes": [
-                "sha256:0dd8f72eeab0d2c3bd489025bb2f6a1b8342f9b198f6fc37b52d15cfa4531fea",
-                "sha256:11a625025954c20145b37ff6309cd54e39ca94f72f6bb9576d1195db6fa2442e",
-                "sha256:c9ce7eccdcb901a2c75d326ea134e0886abfbea5f93e91cc95de9507c0816c44"
+                "sha256:2b6b9893337bfd9166bee6a62c2b0c9fe7735dcf85948b387ec8cba30e85d8e8",
+                "sha256:6703844a52d3588f951883005efcf555e49566a48afd4db4e965d69b883980d3",
+                "sha256:a18d870ef2ffca2b8463c0070ad17b5978056f403fb64e3f15fe62a52db21cc0"
             ],
-            "version": "==4.1.0"
+            "version": "==4.2.0"
         },
         "mypy": {
             "hashes": [
@@ -761,10 +768,10 @@
         },
         "pytest": {
             "hashes": [
-                "sha256:54713b26c97538db6ff0703a12b19aeaeb60b5e599de542e7fca0ec83b9038e8",
-                "sha256:829230122facf05a5f81a6d4dfe6454a04978ea3746853b2b84567ecf8e5c526"
+                "sha256:39555d023af3200d004d09e51b4dd9fdd828baa863cded3fd6ba2f29f757ae2d",
+                "sha256:c76e93f3145a44812955e8d46cdd302d8a45fbfc7bf22be24fe231f9d8d8853a"
             ],
-            "version": "==3.5.1"
+            "version": "==3.6.0"
         },
         "pytest-cache": {
             "hashes": [
