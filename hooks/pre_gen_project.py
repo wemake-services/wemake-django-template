@@ -4,7 +4,7 @@ import re
 import sys
 from urllib.parse import urlparse
 
-MODULE_REGEX = r'^[a-z][_a-z0-9]+$'
+MODULE_REGEX = r'^[a-z][a-z0-9_]+[a-z0-9]$'
 MODULE_NAME = '{{ cookiecutter.project_name }}'
 
 DOMAIN_NAME = '{{ cookiecutter.project_domain }}'
