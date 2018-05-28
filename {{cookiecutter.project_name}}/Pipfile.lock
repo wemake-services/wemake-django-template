@@ -691,10 +691,10 @@
         },
         "pre-commit": {
             "hashes": [
-                "sha256:4b86fd3e4cb602f26c277aec05c68f7f65956ed7de63e42787711a81f5b7b80b",
-                "sha256:e3b3548c307b9efd69b2a908f894defcae099c113908553a868db49757d053eb"
+                "sha256:b1d5e9c63ce2312d978dc95815f0b446b8dd05d332a010a1bac983aefe542d0b",
+                "sha256:dc318b280e7b1c5315eb78ed02dc31b3d776e2bc3ce510e8403857f00c17e645"
             ],
-            "version": "==1.9.0"
+            "version": "==1.10.0"
         },
         "prompt-toolkit": {
             "hashes": [
@@ -942,6 +942,12 @@
                 "sha256:f1c7518e7b160336040fee272174f1f7b29a46febb3632502a8f2055f973d60b"
             ],
             "version": "==1.28.0"
+        },
+        "toml": {
+            "hashes": [
+                "sha256:8e86bd6ce8cc11b9620cb637466453d94f5d57ad86f17e98a98d1f73e3baab2d"
+            ],
+            "version": "==0.9.4"
         },
         "traitlets": {
             "hashes": [
