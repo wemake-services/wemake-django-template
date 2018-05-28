@@ -97,10 +97,10 @@
         },
         "django-axes": {
             "hashes": [
-                "sha256:403b2c5b002a4a64a836000843f8eb6f0c418aa889f54fe260e358be84c5865a",
-                "sha256:c955cfd24f92de0aa4895fa7e2b8356cf6ef36dde744ffb0f41967d220a38d44"
+                "sha256:155e12f95d0691ac15fe68c7274752356c371df93e8ac97bd1c1629ef682cf50",
+                "sha256:4129f6fa089778a4be11c372e3398e85946a369ad3b9a6a642bcce774db81f4a"
             ],
-            "version": "==4.3.1"
+            "version": "==4.4.0"
         },
         "django-csp": {
             "hashes": [
@@ -494,10 +494,10 @@
         },
         "identify": {
             "hashes": [
-                "sha256:032b7c7b28a41f39144bbc3c6421346e060cf1b03f9c47c0fa287dfbaa0379f2",
-                "sha256:b6d482c058e1147cdb6d15cd439b17c1194d4c971e0fe0f2d9e4eceda007ef89"
+                "sha256:067c206bb7a6926d30de0e77d6297729a176c0aa8b2d810a5be809cb46b045b2",
+                "sha256:5eae91e34881bed02ea4f8c3886df8bd1232536d6f0dbf0405ff734268b7f425"
             ],
-            "version": "==1.0.17"
+            "version": "==1.0.18"
         },
         "idna": {
             "hashes": [
