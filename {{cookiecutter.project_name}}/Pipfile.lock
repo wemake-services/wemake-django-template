@@ -240,10 +240,10 @@
         },
         "babel": {
             "hashes": [
-                "sha256:8ce4cb6fdd4393edd323227cba3a077bceb2a6ce5201c902c65e730046f41f14",
-                "sha256:ad209a68d7162c4cff4b29cdebe3dec4cef75492df501b0049a9433c96ce6f80"
+                "sha256:6778d85147d5d85345c14a26aada5e478ab04e39b078b0745ee6870c2b5cf669",
+                "sha256:8cba50f48c529ca3fa18cf81fa9403be176d374ac4d60738b839122dfaaa3d23"
             ],
-            "version": "==2.5.3"
+            "version": "==2.6.0"
         },
         "backcall": {
             "hashes": [
@@ -691,10 +691,10 @@
         },
         "pre-commit": {
             "hashes": [
-                "sha256:b1d5e9c63ce2312d978dc95815f0b446b8dd05d332a010a1bac983aefe542d0b",
-                "sha256:dc318b280e7b1c5315eb78ed02dc31b3d776e2bc3ce510e8403857f00c17e645"
+                "sha256:4e7d6fde2d22abe6823e44a447197f9f2ff25822675f5245827e15be7ea1aba7",
+                "sha256:dc8dc3f293d384fcd787cfb76f142c02540741eeef0822831983c827beff87ab"
             ],
-            "version": "==1.10.0"
+            "version": "==1.10.1"
         },
         "prompt-toolkit": {
             "hashes": [
