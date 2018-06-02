@@ -8,6 +8,20 @@ Requirements
 ``docker`` with version at least ``18.02`` or higher.
 
 
+How does it work
+----------------
+
+We start containers with ``tini``.
+Because this way we have a proper signal handling and no zombie processes.
+Read the official `docs <https://github.com/krallin/tini>`_ to know more.
+
+We use the standard way to link different containers together: `compose` files.
+But, some containers might have long starting times, ``postgres`` for example.
+
+To be sure that container is started at the time we start using it,
+we utilize ``wait-for-command.sh`` script.
+
+
 Development
 -----------
 
