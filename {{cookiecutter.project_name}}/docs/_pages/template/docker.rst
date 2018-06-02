@@ -13,7 +13,7 @@ How does it work
 
 We start containers with ``tini``.
 Because this way we have a proper signal handling and no zombie processes.
-Read the official `docs <https://github.com/krallin/tini>`_ to know more.
+Read the `official docs <https://github.com/krallin/tini>`_ to know more.
 
 We use the standard way to link different containers together: `compose` files.
 But, some containers might have long starting times, ``postgres`` for example.
