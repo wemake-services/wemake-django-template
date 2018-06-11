@@ -494,10 +494,10 @@
         },
         "identify": {
             "hashes": [
-                "sha256:067c206bb7a6926d30de0e77d6297729a176c0aa8b2d810a5be809cb46b045b2",
-                "sha256:5eae91e34881bed02ea4f8c3886df8bd1232536d6f0dbf0405ff734268b7f425"
+                "sha256:bb23d585d948706079a05c9f975ebed5734c63dd5e0efbaef4069e102cc7757d",
+                "sha256:cc69fb7ef0bfe5c18a54855f00461d727d651bd461f2e22d725529e206e8a5bf"
             ],
-            "version": "==1.0.18"
+            "version": "==1.1.0"
         },
         "idna": {
             "hashes": [
@@ -613,10 +613,10 @@
         },
         "mypy": {
             "hashes": [
-                "sha256:01cf289838f266ae7c6550c813181ee77d21eac9459dbf067e7a95a0a2db9721",
-                "sha256:bc251cb31bc236d9fe4bcc442c994c45fff2541f7161ee52dc949741fe9ca3dd"
+                "sha256:1b899802a89b67bb68f30d788bba49b61b1f28779436f06b75c03495f9d6ea5c",
+                "sha256:f472645347430282d62d1f97d12ccb8741f19f1572b7cf30b58280e4e0818739"
             ],
-            "version": "==0.600"
+            "version": "==0.610"
         },
         "nodeenv": {
             "hashes": [
