@@ -4,7 +4,9 @@ LABEL maintainer="sobolevn@wemake.services"
 LABEL vendor="wemake.services"
 
 ARG DJANGO_ENV=production
-ENV PYTHONFAULTHANDLER=1 \
+
+ENV DJANGO_ENV=${DJANGO_ENV} \
+  PYTHONFAULTHANDLER=1 \
   PYTHONUNBUFFERED=1 \
   PYTHONHASHSEED=random \
   PIP_NO_CACHE_DIR=off \
@@ -34,8 +36,8 @@ RUN apk update \
 
 # Creating folders, and files for a project:
 
-WORKDIR /code
 COPY . /code
+WORKDIR /code
 
 # This is a special case. We need to run this script as entry point:
 COPY ./docker/django/entrypoint.sh /docker-entrypoint.sh
