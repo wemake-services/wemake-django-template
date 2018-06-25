@@ -19,7 +19,8 @@ ENV DJANGO_ENV=${DJANGO_ENV} \
 
 # System deps:
 
-RUN && apk --no-cache add \
+RUN apk update \
+    && apk --no-cache add \
       bash \
       build-base \
       curl \
