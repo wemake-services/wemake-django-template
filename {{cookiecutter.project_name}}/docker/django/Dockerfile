@@ -19,19 +19,18 @@ ENV DJANGO_ENV=${DJANGO_ENV} \
 
 # System deps:
 
-RUN apk update \
-    && apk --no-cache add \
-      bash \
-      build-base \
-      curl \
-      gcc \
-      gettext \
-      git \
-      libffi-dev \
-      linux-headers \
-      musl-dev \
-      postgresql-dev \
-      tini
+RUN apk --no-cache add \
+     bash \
+     build-base \
+     curl \
+     gcc \
+     gettext \
+     git \
+     libffi-dev \
+     linux-headers \
+     musl-dev \
+     postgresql-dev \
+     tini
 
 
 # Creating folders, and files for a project:
