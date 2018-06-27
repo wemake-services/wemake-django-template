@@ -1,0 +1,26 @@
+repos:
+-   repo: https://github.com/ambv/black
+    rev: stable
+    hooks:
+    - id: black
+      args: [--safe]
+      python_version: python3.6
+-   repo: git@github.com:pre-commit/pre-commit-hooks
+    rev: v1.2.3
+    hooks:
+    -   id: trailing-whitespace
+    -   id: debug-statements
+-   repo: local
+    hooks:
+    -   id: isort
+        name: isort
+        entry: isort
+        language: system
+        types:
+        - python
+    -   id: pylint
+        name: pylint
+        entry: pylint
+        language: system
+        types:
+        - python
