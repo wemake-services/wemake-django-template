@@ -1,2 +1,0 @@
-[flake8]
-exclude = .git,__pycache__,docs/conf.py,build,dist
