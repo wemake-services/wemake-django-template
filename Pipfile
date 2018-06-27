@@ -26,6 +26,7 @@ pytest-deadfixtures = "*"
 "flake8-string-format" = "*"
 "flake8-debugger" = "*"
 binaryornot = "*"
+pytest-picked = "*"
 
 [packages]
 cookiecutter = "*"
