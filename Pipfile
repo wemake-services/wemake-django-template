@@ -27,7 +27,6 @@ pytest-deadfixtures = "*"
 "flake8-debugger" = "*"
 binaryornot = "*"
 
-
 [packages]
 cookiecutter = "*"
 "jinja2-git" = "*"
