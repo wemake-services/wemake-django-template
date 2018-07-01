@@ -3,7 +3,7 @@ FROM python:3.6.5-alpine3.7
 LABEL maintainer="sobolevn@wemake.services"
 LABEL vendor="wemake.services"
 
-ARG DJANGO_ENV=production
+ARG DJANGO_ENV
 
 ENV DJANGO_ENV=${DJANGO_ENV} \
   PYTHONFAULTHANDLER=1 \
