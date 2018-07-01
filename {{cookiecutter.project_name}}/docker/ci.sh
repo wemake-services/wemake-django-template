@@ -21,7 +21,7 @@ pyclean () {
 
 run_ci () {
   # Running tests:
-  mypy server tests
+  mypy server
   pytest --dead-fixtures --dup-fixtures
   pytest
 

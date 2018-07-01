@@ -152,6 +152,17 @@ Disabling WWW subdomain
 If you for some reason do not require ``www.`` subdomain,
 then delete ``www.{$DOMAIN_NAME}`` section from ``Caddyfile``.
 
+Third-Level domains
+~~~~~~~~~~~~~~~~~~~
+
+You have to disable ``www`` subdomain if
+your app works on third-level domains like:
+
+- ``kira.wemake.services``
+- ``support.myapp.com``
+
+Otherwise ``Caddy`` will server redirects to ``www.example.yourdomain.com``.
+
 
 Further reading
 ---------------

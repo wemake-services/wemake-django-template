@@ -61,4 +61,8 @@ CSP_IMG_SRC = ("'self'", 'data:')
 MIDDLEWARE = ('nplusone.ext.django.NPlusOneMiddleware',) + MIDDLEWARE
 
 # Raise exceptions on N+1 requests:
-NPLUSONE_RAISE = True
+# NPLUSONE_RAISE = True
+
+# Logging N+1 requests:
+NPLUSONE_LOGGER = logging.getLogger('django')
+NPLUSONE_LOG_LEVEL = logging.WARN
