@@ -116,48 +116,5 @@ def copy_local_configuration():
     shutil.copyfile(local_template, local_config)
 
 
-def clean_docker_files():
-    """
-    This function removes all docker-related files.
-
-    It is called when user does not want to include docker support.
-    """
-    dockerignore = os.path.join(PROJECT_DIRECTORY, '.dockerignore')
-    docker_compose = os.path.join(PROJECT_DIRECTORY, 'docker-compose.yml')
-    docker_override = os.path.join(
-        PROJECT_DIRECTORY, 'docker-compose.override.yml',
-    )
-    gitlab_ci = os.path.join(PROJECT_DIRECTORY, '.gitlab-ci.yml')
-    docker_dir = os.path.join(PROJECT_DIRECTORY, 'docker')
-
-    docker_docs_root = os.path.join(
-        PROJECT_DIRECTORY,
-        'docs',
-        '_pages',
-        'template',
-    )
-    docker_related = (
-        'docker.rst',
-        'pycharm.rst',
-        'gitlab-ci.rst',
-        'going-to-production.rst',
-        'production.rst',
-    )
-
-    for item in docker_related:
-        os.remove(os.path.join(docker_docs_root, item))
-
-    os.remove(dockerignore)
-    os.remove(docker_compose)
-    os.remove(docker_override)
-    os.remove(gitlab_ci)
-    shutil.rmtree(docker_dir)
-
-
 copy_local_configuration()
-
-# Remove docker? {% if cookiecutter.docker != 'y' %}
-clean_docker_files()
-# {% endif %}
-
 print_futher_instuctions()

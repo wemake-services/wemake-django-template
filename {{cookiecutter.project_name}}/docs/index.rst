@@ -89,13 +89,11 @@ to the most recent one.
    _pages/template/linters.rst
    _pages/template/qa.rst
    _pages/template/documentation.rst
-   {%- if cookiecutter.docker == 'y' %}
    _pages/template/pycharm.rst
    _pages/template/docker.rst
    _pages/template/gitlab-ci.rst
    _pages/template/going-to-production.rst
    _pages/template/production.rst
-   {%- endif %}
 
 
 Indexes and tables

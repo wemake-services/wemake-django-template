@@ -36,6 +36,7 @@ def validate_domain():
     What is considered valid:
     1. myapp.com
     2. google.co.uk
+    3. wemake.services
 
     What is considered invalid:
     1. https://wemake.services

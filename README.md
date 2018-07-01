@@ -19,7 +19,7 @@ This project is used to scaffold a `django` project structure. Just like `django
 - [`mypy`](https://mypy.readthedocs.io) for optional static typing
 - `pytest`, `pylint`, and `flake8` for testing and linting
 - [`pre-commit`](https://pre-commit.com/) hooks for consistent development
-- `docker-compose` for development, testing, and production
+- `docker` for development, testing, and production
 - [`sphinx`](http://www.sphinx-doc.org/en/master/) for documentation
 - [`Gitlab CI`](https://about.gitlab.com/gitlab-ci/) with full `build`, `test`, and `deploy` pipeline configured by default
 - [`Caddy`](https://caddyserver.com/) with [`https`](https://caddyserver.com/docs/automatic-https) and `http/2` turned on by default

@@ -30,18 +30,11 @@ def context():
     }
 
 
-@pytest.fixture
-def no_docker_context(context):
-    """Creates prompt values without docker selected."""
-    context.update({'docker': 'n'})
-    return context
-
-
 def build_files_list(root_dir):
     """Build a list containing absolute paths to the generated files."""
     return [
         os.path.join(dirpath, file_path)
-        for dirpath, subdirs, files in os.walk(root_dir)
+        for dirpath, _subdirs, files in os.walk(root_dir)
         for file_path in files
     ]
 
@@ -70,36 +63,6 @@ def test_with_default_configuration(cookies, context):
     assert result.exception is None
     assert result.project.basename == context['project_name']
     assert result.project.isdir()
-
-
-def test_with_no_docker(cookies, no_docker_context):
-    """Tests project structure without docker."""
-    result = cookies.bake(extra_context=no_docker_context)
-
-    assert result.exit_code == 0
-    assert result.exception is None
-
-    files = (
-        'docker-compose.yml',
-        'docker-compose.override.yml',
-        '.gitlab-ci.yml',
-        '.dockerignore',
-        'docs/_pages/template/docker.rst',
-        'docs/_pages/template/pycharm.rst',
-        'docs/_pages/template/gitlab-ci.rst',
-        'docs/_pages/template/going-to-production.rst',
-        'docs/_pages/template/production.rst',
-    )
-
-    for f in files:
-        assert not os.path.isfile(result.project.join(f))
-
-    folders = (
-        'docker',
-    )
-
-    for f in folders:
-        assert not os.path.isdir(result.project.join(f))
 
 
 def test_variables_replaced(cookies, context):
