@@ -44,13 +44,10 @@ urlpatterns = [
     url(r'^$', index, name='index'),
 ]
 
-if settings.DEBUG:
-    import debug_toolbar
     from django.views.static import serve
 
     urlpatterns = [
         # URLs specific only to django-debug-toolbar:
-        url(r'^__debug__/', include(debug_toolbar.urls)),
 
         # Serving media files in development only:
         url(r'^media/(?P<path>.*)$', serve, {
