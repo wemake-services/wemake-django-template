@@ -44,7 +44,7 @@ urlpatterns = [
     url(r'^$', index, name='index'),
 ]
 
-if settings.DEBUG:
+if settings.DEBUG: # pragma: no cover
     import debug_toolbar
     from django.views.static import serve
 
