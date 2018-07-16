@@ -43,6 +43,7 @@ sphinx = "*"
 sphinx-autodoc-typehints = "*"
 sphinxcontrib-napoleon = "*"
 "doc8" = "*"
+bandit = "*"
 
 [packages]
 django = "<2.0"

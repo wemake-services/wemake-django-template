@@ -13,6 +13,8 @@ We are also using `radon <https://github.com/rubik/radon>`_ and
 `xenon <https://github.com/rubik/xenon>`_ to measure
 code complexity and quality.
 
+We use `bandit <https://github.com/PyCQA/bandit>`_ for static security checks.
+
 
 radon
 -----
@@ -72,10 +74,23 @@ Running ``mypy`` is required before any commit:
 
     mypy server
 
-This will eliminate a lot of possible ``TypeError`` and other issues.
+This will eliminate a lot of possible ``TypeError``s and other issues.
 However, this will not make code 100% working.
 So, testing and reviewing is still required.
 
 ``mypy`` is configured via ``setup.cfg``.
 Read the `docs <https://mypy.readthedocs.io/en/latest/>`_
 for more information.
+
+
+bandit
+------
+
+Running ``bandit`` is required before any commit:
+
+.. code:: bash
+
+    bandit -r server
+
+This will find possible XSS errors, insecure operations, and other issues.
+Read the `docs for bandit <https://bandit.readthedocs.io>`_.

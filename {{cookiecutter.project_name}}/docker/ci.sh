@@ -38,6 +38,9 @@ run_ci () {
   # Running code-quality check:
   xenon --max-absolute A --max-modules A --max-average A server
 
+  # Running security checks:
+  bandit -r server
+
   # Checking docs:
   doc8 -q docs
 
