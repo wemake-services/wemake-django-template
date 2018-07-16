@@ -74,7 +74,7 @@ Running ``mypy`` is required before any commit:
 
     mypy server
 
-This will eliminate a lot of possible ``TypeError``s and other issues.
+This will eliminate a lot of possible ``TypeError`` and other issues.
 However, this will not make code 100% working.
 So, testing and reviewing is still required.
 
