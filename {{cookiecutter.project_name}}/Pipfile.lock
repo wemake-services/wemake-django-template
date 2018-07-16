@@ -829,9 +829,9 @@
         },
         "pytest-picked": {
             "hashes": [
-                "sha256:2ca5df022694c268c8ac8a9a2f7d8ff8eec7e66db84f903b45d85a4a3f24b88e"
+                "sha256:426a5787d0a9398f628302a09aaf71bd1cb2706b38fc78939d18c44279842749"
             ],
-            "version": "==0.1.0"
+            "version": "==0.2.0"
         },
         "pytest-randomly": {
             "hashes": [
