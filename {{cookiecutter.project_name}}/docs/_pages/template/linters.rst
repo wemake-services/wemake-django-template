@@ -57,7 +57,7 @@ See ``docker/ci.sh`` for more details.
 Linters that are not included
 -----------------------------
 
-Sometimes wee use several other linters that are not included.
+Sometimes we use several other linters that are not included.
 That's because they require another technology stack to be installed
 or just out of scope.
 
@@ -79,4 +79,5 @@ yamllint
 ~~~~~~~~
 
 This linter is used to lint your `yaml` files.
+Just run ``yamllint .``.
 See `yamllint <https://github.com/adrienverge/yamllint>`_ docs.
