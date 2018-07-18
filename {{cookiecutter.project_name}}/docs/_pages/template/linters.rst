@@ -27,7 +27,7 @@ We also use ``isort`` to check import order.
 Running project linters
 -----------------------
 
-Just run ``pytest``. It will run style checks as well.
+Run ``pytest``. It will run style checks as well.
 
 
 Additional linters
@@ -79,5 +79,5 @@ yamllint
 ~~~~~~~~
 
 This linter is used to lint your `yaml` files.
-Just run ``yamllint .``.
+Run ``yamllint .``.
 See `yamllint <https://github.com/adrienverge/yamllint>`_ docs.
