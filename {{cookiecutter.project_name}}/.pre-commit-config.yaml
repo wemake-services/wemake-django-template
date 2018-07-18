@@ -12,3 +12,10 @@
       entry: docker-compose run -e INSIDE_CI=0 web sh ./docker/ci.sh
       pass_filenames: false
       language: system
+    - id: yamllint
+      name: yamllint
+      description: This hook runs yamllint.
+      entry: pipenv run yamllint .yamllint-light .
+      pass_filenames: false
+      language: system
+      types: [yaml]
