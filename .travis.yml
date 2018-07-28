@@ -21,7 +21,7 @@ install:
 script:
   - pipenv run python -m pytest
   - sh tests/test_integration.sh
-  - pipenv check  # check local deps security
+  - pipenv check -i 36333 # check local deps security, TODO: remove -i
 
 notifications:
   email:
