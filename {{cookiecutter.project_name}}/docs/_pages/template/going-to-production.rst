@@ -142,7 +142,7 @@ Because Django itself also redirects to `https`.
 See `docs <https://docs.djangoproject.com/en/1.11/ref/settings/#secure-ssl-redirect>`_.
 
 You would also need to disable ``manage.py check``
-in ``docker/django/gunicorn.sh``.
+in ``docker/ci.sh``.
 Otherwise your application won't start,
 it would not pass ``django``'s security checks.
 
