@@ -17,6 +17,16 @@ You will need:
 - `docker` with [version at least](https://docs.docker.com/compose/compose-file/#compose-and-docker-compatibility-matrix) `18.02`
 
 
+## Hot start
+
+Project can be started with 
+```bash
+docker-compose up
+```
+
+But do note that `Installing dependencies from Pipfile.lock` and `Looking in indexes: https://pypi.python.org/simple` steps can take a while. You also need to setup the `config/.env` file before running docker-compose.
+
+
 ## Development
 
 When developing locally, we use:
