@@ -39,6 +39,15 @@ Then, create a project itself:
 cookiecutter gh:wemake-services/wemake-django-template
 ```
 
+## Running the template
+
+Project can be started with 
+```bash
+docker-compose up
+```
+
+But do note that `Installing dependencies from Pipfile.lock` step can take a while. You also need to setup the `config/.env` file before running docker-compose.
+
 
 ## Who are using this template?
 
