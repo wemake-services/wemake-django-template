@@ -19,7 +19,13 @@ You will need:
 
 ## Hot start
 
-Project can be started with 
+It is highly recommended to read [documentation](https://wemake-django-template.readthedocs.io/en/latest) before starting a work. Absolute minimum to start a project, requires:
+
+- Setting up secret [configuration](https://wemake-django-template.readthedocs.io/en/latest/_pages/template/configuration.html#configuration)
+- [Running](https://wemake-django-template.readthedocs.io/en/latest/_pages/template/docker.html) a docker
+
+If you still want to proceed, you can launch project with
+
 ```bash
 docker-compose up
 ```
