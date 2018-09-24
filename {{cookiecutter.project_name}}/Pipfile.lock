@@ -962,10 +962,10 @@
         },
         "sphinxcontrib-napoleon": {
             "hashes": [
-                "sha256:614b779888629f14dfdfad6c17bffbb6d3813a0a0917a9541651d85384d4d6bd",
-                "sha256:cbb31953b15d2102c18f16f02591f92e2614a08ef0218c9e514e2dc4c4f9daf9"
+                "sha256:407382beed396e9f2d7f3043fad6afda95719204a1e1a231ac865f40abcbfcf8",
+                "sha256:711e41a3974bdf110a484aec4c1a556799eb0b3f3b897521a018ad7e2db13fef"
             ],
-            "version": "==0.6.1"
+            "version": "==0.7"
         },
         "sphinxcontrib-websupport": {
             "hashes": [
