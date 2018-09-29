@@ -27,7 +27,9 @@ services:
 
   web:
     <<: &web
-      image: "registry.gitlab.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}:latest"
+      image:
+        "registry.gitlab.com/{{ cookiecutter.organization }}
+        /{{ cookiecutter.project_name }}:latest"
       build:
         context: .
         dockerfile: ./docker/django/Dockerfile
