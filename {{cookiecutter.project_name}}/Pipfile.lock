@@ -918,10 +918,10 @@
         },
         "radon": {
             "hashes": [
-                "sha256:a5848e29035961d1785b88bac1cde3146b5cd5cacf380561fbd650cee2064884",
-                "sha256:dafb445bc1c6427df13b67dc09ffcd003826dc4e2b952aef16a9a5c3882facc4"
+                "sha256:38e495a4aa4c1d7293d3c1733393961fb52209c9bc2d75163c3ba8124d8bbbaa",
+                "sha256:f893f2faa632a060f6d0f01843d10a0395515bde865c759c0dd3f15239caf11b"
             ],
-            "version": "==2.3.1"
+            "version": "==2.4.0"
         },
         "requests": {
             "hashes": [
