@@ -231,10 +231,10 @@
         },
         "yamllint": {
             "hashes": [
-                "sha256:00a4de4319aac4e242c7e6a917d3e848e6b0eec37ead19bc7a245545588af1b3",
-                "sha256:7089cd0db2f3233605e9f0801ccca992adf4915c3660f992452ff49f9bfc1605"
+                "sha256:2c81a73e731e9ee40a2474618f6fda84fe71e94dd4ab471cc4c79368a4756ff2",
+                "sha256:c6e686309aa364b68b63da011b20378e0bd02b3738914b85461c50a5afc65ea3"
             ],
-            "version": "==1.12.0"
+            "version": "==1.12.1"
         }
     },
     "develop": {
