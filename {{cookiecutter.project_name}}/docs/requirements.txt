@@ -2,5 +2,5 @@
 # If it is not used, feel free to delete it.
 
 sphinx==1.8.1
-sphinx_autodoc_typehints==1.3.0
+sphinx_autodoc_typehints==1.5.0
 sphinxcontrib-napoleon==0.7
