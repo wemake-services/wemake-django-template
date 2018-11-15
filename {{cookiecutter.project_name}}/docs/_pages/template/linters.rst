@@ -78,6 +78,6 @@ See `hadolint <https://github.com/hadolint/hadolint>`_
 yamllint
 ~~~~~~~~
 
-This linter is used to lint your `yaml` files.
+This linter is used to lint your ``yaml`` files.
 Run ``yamllint .``.
 See `yamllint <https://github.com/adrienverge/yamllint>`_ docs.

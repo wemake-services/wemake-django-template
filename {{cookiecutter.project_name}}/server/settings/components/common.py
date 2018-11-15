@@ -44,6 +44,9 @@ MIDDLEWARE: Tuple[str, ...] = (
     # Content Security Policy:
     'csp.middleware.CSPMiddleware',
 
+    # Referrer Policy:
+    'django_referrer_policy.middleware.ReferrerPolicyMiddleware',
+
     # Django:
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -146,7 +149,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR.joinpath('media')
 
 
-# Django default authentication system.
+# Django authentication system
 # https://docs.djangoproject.com/en/1.11/topics/auth/
 
 # AUTH_USER_MODEL = 'auth_app.User'
@@ -162,3 +165,15 @@ PASSWORD_HASHERS = [
     'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
     'django.contrib.auth.hashers.Argon2PasswordHasher',
 ]
+
+
+# Security
+# https://docs.djangoproject.com/en/1.11/topics/security/
+
+SESSION_COOKIE_HTTPONLY = True
+CSRF_COOKIE_HTTPONLY = True
+
+X_FRAME_OPTIONS = 'DENY'
+
+# https://django-referrer-policy.readthedocs.io/
+REFERRER_POLICY = 'no-referrer'

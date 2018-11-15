@@ -50,7 +50,7 @@ run_ci () {
   # TODO: remove this security error from ignored
   # More context:
   # https://github.com/wemake-services/wemake-django-template/issues/438
-  pipenv check --system -i 36333
+  pipenv check --system
 
   # Run this part only if truly inside the CI process:
   if [ "$INSIDE_CI" = 1 ]; then
