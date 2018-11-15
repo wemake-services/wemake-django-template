@@ -37,10 +37,10 @@ services:
         DJANGO_DATABASE_HOST: db
     command: python -Wd manage.py runserver 0.0.0.0:8000
 
-  # This task is an example of how to extend existing ones:
-  # some_worker:
-  #   <<: *web
-  #   command: python manage.py worker_process
+# This task is an example of how to extend existing ones:
+# some_worker:
+#   <<: *web
+#   command: python manage.py worker_process
 
 networks:
   webnet:

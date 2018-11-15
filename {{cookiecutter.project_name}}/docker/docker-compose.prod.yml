@@ -50,9 +50,9 @@ services:
       restart_policy:
         condition: on-failure
 
-  # This task is an example of how to extend existing ones:
-  # some_wroker:
-  #   <<: *web
-  #   command: python manage.py worker_process
-  #   deploy:
-  #     replicas: 2
+# This task is an example of how to extend existing ones:
+# some_wroker:
+#   <<: *web
+#   command: python manage.py worker_process
+#   deploy:
+#     replicas: 2
