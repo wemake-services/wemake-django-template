@@ -46,11 +46,10 @@ run_ci () {
 
   # Checking if all the dependencies are secure and do not have any
   # known vulnerabilities:
-
-  # TODO: remove this security error from ignored
-  # More context:
-  # https://github.com/wemake-services/wemake-django-template/issues/438
   pipenv check --system
+
+  # Checking `yaml` files:
+  yamllint -d '{"extends": "default", "ignore": ".venv"}' -s .
 
   # Run this part only if truly inside the CI process:
   if [ "$INSIDE_CI" = 1 ]; then
