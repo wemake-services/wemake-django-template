@@ -6,8 +6,7 @@ from decouple import AutoConfig
 
 
 # Build paths inside the project like this: BASE_DIR.joinpath('some')
-# `pathlib` is better than writing:
-# BASE_DIR = dirname(dirname(dirname(dirname(__file__))))
+# `pathlib` is better than writing: dirname(dirname(dirname(__file__)))
 BASE_DIR = PurePath(__file__).parent.parent.parent.parent
 
 # Loading `.env` files

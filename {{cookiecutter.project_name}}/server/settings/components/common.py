@@ -152,8 +152,6 @@ MEDIA_ROOT = BASE_DIR.joinpath('media')
 # Django authentication system
 # https://docs.djangoproject.com/en/1.11/topics/auth/
 
-# AUTH_USER_MODEL = 'auth_app.User'
-
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )

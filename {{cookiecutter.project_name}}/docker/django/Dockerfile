@@ -12,14 +12,11 @@ ENV DJANGO_ENV=${DJANGO_ENV} \
   PIP_NO_CACHE_DIR=off \
   PIP_DISABLE_PIP_VERSION_CHECK=on \
   PIP_DEFAULT_TIMEOUT=100 \
-  PIPENV_HIDE_EMOJIS=true \
-  PIPENV_COLORBLIND=true \
-  PIPENV_NOSPIN=true \
-  PIPENV_DOTENV_LOCATION=config/.env
+  PATH="/root/.poetry/bin:$PATH" \
+  POETRY_VERSION=0.12.8
 
 
 # System deps:
-
 RUN apk --no-cache add \
      bash \
      build-base \
@@ -31,22 +28,20 @@ RUN apk --no-cache add \
      linux-headers \
      musl-dev \
      postgresql-dev \
-     tini
+     tini \
+  && curl -sSL https://raw.githubusercontent.com/sdispater/poetry/${POETRY_VERSION}/get-poetry.py | python
 
 
 # Creating folders, and files for a project:
-
 COPY . /code
 WORKDIR /code
 
-# This is a special case. We need to run this script as entry point:
+# This is a special case. We need to run this script as an entry point:
 COPY ./docker/django/entrypoint.sh /docker-entrypoint.sh
 
-
 # Project initialization:
-
 RUN chmod +x "/docker-entrypoint.sh" \
-  && pip install pipenv \
-  && pipenv install $(test "$DJANGO_ENV" == production || echo "--dev") --deploy --system --ignore-pipfile
+  && poetry config settings.virtualenvs.create false \
+  && poetry install $(test "$DJANGO_ENV" == production && echo "--no-dev") --no-interaction --no-ansi
 
 ENTRYPOINT ["/sbin/tini", "--", "/docker-entrypoint.sh"]

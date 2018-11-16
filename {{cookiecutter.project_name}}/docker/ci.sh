@@ -4,8 +4,6 @@ set -o errexit
 set -o nounset
 
 # Initializing global variables and functions:
-
-: "${INSIDE_CI:=0}"
 : "${DJANGO_ENV:=development}"
 
 # Fail CI if `DJANGO_ENV` is not set to `development`:
@@ -38,41 +36,18 @@ run_ci () {
   # Running code-quality check:
   xenon --max-absolute A --max-modules A --max-average A server
 
-  # Running security checks:
-  bandit -r server
+  # Checking if all the dependencies are secure and do not have any
+  # known vulnerabilities:
+  safety check --bare --full-report
+
+  # Checking `pyproject.toml` file contents:
+  poetry check
 
   # Checking docs:
   doc8 -q docs
 
-  # Checking if all the dependencies are secure and do not have any
-  # known vulnerabilities:
-  pipenv check --system
-
   # Checking `yaml` files:
   yamllint -d '{"extends": "default", "ignore": ".venv"}' -s .
-
-  # Run this part only if truly inside the CI process:
-  if [ "$INSIDE_CI" = 1 ]; then
-    # Generating reports as build artifacts, it will be possible
-    # to browse them later:
-    # https://docs.gitlab.com/ce/user/project/pipelines/job_artifacts.html
-    mkdir -p 'artifacts'
-
-    # Generating pylint report (it will have issues!):
-    # https://pylint.readthedocs.io/en/latest/
-    PYLINT=$(pylint 'server' 'tests' || true)
-    echo "$PYLINT" > 'artifacts/pylint.rst'
-
-    # Generating code-quality report:
-    # http://radon.readthedocs.io/en/latest/commandline.html
-    radon mi . > 'artifacts/mi.txt'
-
-    # Generating complexity report:
-    radon cc . -s --show-closures --total-average > 'artifacts/cc.txt'
-
-    # Generating raw metrics:
-    radon raw . > 'artifacts/raw.txt'
-  fi
 }
 
 # Remove any cache before the script:
