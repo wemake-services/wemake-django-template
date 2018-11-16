@@ -45,8 +45,8 @@ urlpatterns = [
 ]
 
 if settings.DEBUG:  # pragma: no cover
-    import debug_toolbar
-    from django.views.static import serve
+    import debug_toolbar  # noqa: Z435
+    from django.views.static import serve  # noqa: Z435
 
     urlpatterns = [
         # URLs specific only to django-debug-toolbar:
@@ -57,11 +57,3 @@ if settings.DEBUG:  # pragma: no cover
             'document_root': settings.MEDIA_ROOT,
         }),
     ] + urlpatterns
-
-# Customize default error views:
-# https://docs.djangoproject.com/en/1.11/topics/http/views/#customizing-error-views
-
-# handler400 = 'your_app.views.error_handler'
-# handler403 = 'your_app.views.error_handler'
-# handler404 = 'your_app.views.error_handler'
-# handler500 = 'your_app.views.error_handler'
