@@ -3,14 +3,9 @@ Dependencies
 
 We use ``poetry`` to manage dependencies.
 So, please do not use ``virtualenv`` or ``pip`` directly.
-
-Firstly, install ``poetry``, it is recommended to do so with ``curl``:
-
-.. code:: bash
-
-  POETRY_VERSION=0.12.8 curl -sSL "https://raw.githubusercontent.com/sdispater/poetry/${POETRY_VERSION}/get-poetry.py" | python
-
-See below how to upgrade ``poetry`` version.
+Before going any further, please,
+take a moment to read the `official documentation <https://poetry.eustace.io/>`_
+about ``poetry`` to know some basics.
 
 
 Installing all dependencies
@@ -58,4 +53,32 @@ To add a new dependency you can run:
 Dependencies security
 ---------------------
 
-We use ``safety check`` to validate that we use only secure releases.
+We use ``safety`` to validate that we use only secure releases.
+To validate that all dependencies are secure, run:
+
+.. code:: bash
+
+   safety check
+
+
+Updating poetry version
+-----------------------
+
+Package managers should also be pinned very strict.
+We had a lot of problems in production
+because we were not pinning package manager versions.
+
+This can result in broken ``lock`` files, inconsistent installation process,
+bizarre bugs, and missing packages. You do not want to experience that!
+
+How can we have the same ``poetry`` version for all users in a project?
+That's where ``[build-system]`` tag shines. It specifies the exact version of
+your ``poetry`` installation that must be used for the project.
+Version mismatch will fail your build.
+
+When you to update ``poetry``, you have to bump it in several places:
+
+1. ``pyproject.toml``
+2. ``docker/django/Dockerfile``
+
+Then you are fine!

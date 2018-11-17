@@ -15,7 +15,7 @@ env:
 
 install:
   - pip install -U docker-compose
-  - curl -sSL "https://raw.githubusercontent.com/sdispater/poetry/${POETRY_VERSION}/get-poetry.py" | python
+  - curl -sSL "https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py" | python | python
   - source "$HOME/.poetry/env"
   - docker --version && docker-compose --version && poetry --version
   - poetry install --no-interaction --no-ansi
