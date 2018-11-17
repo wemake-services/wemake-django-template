@@ -42,9 +42,10 @@ def validate_domain():
     1. https://wemake.services
     2. http://mysite.ru/hello
     3. http://myshop.com?query=django
+
     """
-    result = urlparse(DOMAIN_NAME)
-    if not result.path:
+    parsed_url = urlparse(DOMAIN_NAME)
+    if not parsed_url.path:
         # When entering just a domain everything inside goes to `path`.
         # So, it should be set. If not, that's an error.
         raise ValueError(
@@ -53,11 +54,11 @@ def validate_domain():
         )
 
     parts = [
-        result.scheme,
-        result.netloc,
-        result.params,
-        result.query,
-        result.fragment,
+        parsed_url.scheme,
+        parsed_url.netloc,
+        parsed_url.params,
+        parsed_url.query,
+        parsed_url.fragment,
     ]
 
     if any(bool(part) for part in parts):
@@ -70,6 +71,6 @@ def validate_domain():
 try:
     validate_project_name()
     validate_domain()
-except ValueError as e:
-    print(e)
+except ValueError as ex:
+    print(ex)
     sys.exit(1)

@@ -11,18 +11,19 @@ services:
   - docker
 
 env:
-  - PIPENV_NOSPIN=true
+  - POETRY_VERSION=0.12.8
 
 install:
-  - pip install -U docker-compose
-  - pip install "pipenv==2018.10.13"
-  - docker --version && docker-compose --version && pipenv --version
-  - pipenv --bare install --deploy --ignore-pipfile --dev
+  - curl -sSL "https://raw.githubusercontent.com/sdispater/poetry/${POETRY_VERSION}/get-poetry.py" | python
+  - source "$HOME/.poetry/env"
+  - docker --version && docker-compose --version && poetry --version
+  - poetry install --no-interaction --no-ansi
 
 script:
-  - pipenv run python -m pytest
+  - poetry run python -m pytest
   - sh tests/test_integration.sh
-  - pipenv check
+  - poetry check
+  - safety check --bare --full-report
 
 notifications:
   email:

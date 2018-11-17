@@ -1,18 +1,44 @@
-# Contributing
+# How to contribute
 
-When contributing to this repository, please first discuss
-the change you wish to make via issue.
+This is a how-to-contribute guide for the template itself.
+This guide is not about contributing to the project that is created
+using this template.
 
-Please note we have a code of conduct,
-please follow it in all your interactions with the project.
+## Dependencies
+
+We use `poetry` to manage the [dependencies](https://github.com/sdispater/poetry).
+
+To install them you would need to run `install` command:
+
+```bash
+poetry install
+```
+
+To activate your `virtualenv` run `poetry shell`.
 
 
-## Pull Request Process
+## Unit tests
 
-1. Fork a repository
-2. Create new branch named `issue-${your_issue_number}`
-3. Write the code
-4. Run local tests, make sure they pass
-5. Create a Pull Request to the original repo
-6. Follow the advice that you will receive during the code review
-7. Be happy!
+We use `pytest` to run unit tests. Run:
+
+```bash
+pytest
+```
+
+
+## Integration tests
+
+We use `docker` to run integration tests.
+Make sure it is up and running. Then run:
+
+```bash
+sh tests/test_integration.sh
+```
+
+
+## Other help
+
+You can contribute by spreading a word about this library.
+It would also be a huge contribution to write
+a short article on how you are using this project.
+You can also share your best practices with us.
