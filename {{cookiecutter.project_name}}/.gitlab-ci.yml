@@ -9,7 +9,6 @@ variables:
   PROJECT_NAME: "{{ cookiecutter.project_name }}"
   GROUP_NAME: "{{ cookiecutter.organization }}"
   REGISTRY: "registry.gitlab.com"
-  PIPENV_SHELL_COMPAT: "true"
   CONTAINER_RELEASE_IMAGE: "$REGISTRY/$GROUP_NAME/$PROJECT_NAME:latest"
 
 services:
@@ -35,9 +34,6 @@ test:
       -f docker/docker-compose.prod.yml config --quiet
     - docker-compose run web sh ./docker/ci.sh
   coverage: '/[\d\.]+\%\s*$/'
-  artifacts:
-    paths:
-      - artifacts/
 
 # Releasing image, when tests pass:
 release-image:
