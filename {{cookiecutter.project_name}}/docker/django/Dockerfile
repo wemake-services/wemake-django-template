@@ -29,7 +29,7 @@ RUN apk --no-cache add \
      musl-dev \
      postgresql-dev \
      tini \
-  && curl -sSL "https://raw.githubusercontent.com/sdispater/poetry/${POETRY_VERSION}/get-poetry.py" | python
+  && curl -sSL "https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py" | python | python
 
 
 # Creating folders, and files for a project:
