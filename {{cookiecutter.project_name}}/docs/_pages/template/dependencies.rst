@@ -1,26 +1,28 @@
 Dependencies
 ============
 
-We use ``pipenv`` to manage dependencies.
+We use ``poetry`` to manage dependencies.
 So, please do not use ``virtualenv`` or ``pip`` directly.
 
-Firstly, install ``pipenv``, it is recommended to do so with ``pip3``:
+Firstly, install ``poetry``, it is recommended to do so with ``curl``:
 
 .. code:: bash
 
-  pip3 install pipenv
+  POETRY_VERSION=0.12.8 curl -sSL "https://raw.githubusercontent.com/sdispater/poetry/${POETRY_VERSION}/get-poetry.py" | python
+
+See below how to upgrade ``poetry`` version.
 
 
 Installing all dependencies
 ---------------------------
 
-Please, note that ``pipenv`` will automatically create a ``virtualenv`` for
-this project. It will use ``python_verion`` specified in ``Pipfile``.
-To install (or renew) all existing dependencies run:
+Please, note that ``poetry`` will automatically create a ``virtualenv`` for
+this project. It will use you current ``python`` version.
+To install all existing dependencies run:
 
 .. code:: bash
 
-  pipenv install -d
+  poetry install
 
 
 Installing dependencies for production use
@@ -30,19 +32,17 @@ To install dependencies for production use, you will need to run:
 
 .. code:: bash
 
-  pipenv install --ignore-pipfile
-
-This command will fail if ``Pipfile.lock`` is missing, outdated or incorrect.
+  poetry install --no-dev
 
 
 Activating virtualenv
 ---------------------
 
-And to activate ``virtualenv`` created by ``pipenv`` run:
+And to activate ``virtualenv`` created by ``poetry`` run:
 
 .. code:: bash
 
-  pipenv shell
+  poetry shell
 
 
 Adding new dependencies
@@ -50,27 +50,12 @@ Adding new dependencies
 
 To add a new dependency you can run:
 
-- ``pipenv install django`` to install ``django`` as a production dependency
-- ``pipenv install -d pytest`` to install ``pytest``
+- ``poetry add django`` to install ``django`` as a production dependency
+- ``poetry add --dev pytest`` to install ``pytest``
   as a development dependency
 
 
 Dependencies security
 ---------------------
 
-We use `pipenv check <https://docs.pipenv.org/advanced/#detection-of-security-vulnerabilities>`_ to validate that we use only secure releases.
-
-
-Troubleshooting
----------------
-
-There could be some common issues, like:
-
-1. ``zsh: command not found: pip3``, it means that you don't have ``pip3`` installed. `Install <https://pip.pypa.io/en/stable/installing/>`_ it
-2. When ``pipenv install`` returns error, head to `pipenv's issues <https://github.com/kennethreitz/pipenv/issues>`_ and create a new issue, use ``pip install`` in a while
-
-
-Further reading
----------------
-
-- `pipenv <https://docs.pipenv.org/>`_ docs
+We use ``safety check`` to validate that we use only secure releases.

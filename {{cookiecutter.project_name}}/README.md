@@ -22,7 +22,7 @@ You will need:
 When developing locally, we use:
 
 - [`editorconfig`](http://editorconfig.org/) plugin (**required**)
-- [`pipenv`](https://github.com/kennethreitz/pipenv) (**required**)
+- [`poetry`](https://github.com/sdispater/poetry) (**required**)
 - `pycharm 2017` (optional)
 
 

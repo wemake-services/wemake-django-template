@@ -15,9 +15,10 @@ This project is used to scaffold a `django` project structure. Just like `django
 ## Features
 
 - Always [`up-to-date`](https://github.com/wemake-services/wemake-django-template/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Aapp%2Fdependabot) with the help of [`@dependabot`](https://dependabot.com/)
-- [`pipenv`](https://docs.pipenv.org/) for managing dependencies
+- [`poetry`](https://github.com/sdispater/poetry) for managing dependencies
 - [`mypy`](https://mypy.readthedocs.io) for optional static typing
-- `pytest`, `pylint`, and `flake8` for testing and linting
+- `pytest` for unit testing
+- `flake8` and [`wemake-python-styleguide`](https://wemake-python-styleguide.readthedocs.io/en/latest/) for linting
 - [`pre-commit`](https://pre-commit.com/) hooks for consistent development
 - `docker` for development, testing, and production
 - [`sphinx`](http://www.sphinx-doc.org/en/master/) for documentation
