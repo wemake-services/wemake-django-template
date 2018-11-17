@@ -18,7 +18,6 @@ install:
   - source "$HOME/.poetry/env"
   - docker --version && docker-compose --version && poetry --version
   - poetry install --no-interaction --no-ansi
-  - poetry shell
 
 script:
   - pytest
