@@ -1,20 +1,28 @@
+# See https://caddyserver.com/docs
+
+# "www" redirect to "non-www" version
 www.{$DOMAIN_NAME} {
   redir https://{$DOMAIN_NAME}
 }
 
 {$DOMAIN_NAME} {
+  # HTTPS options:
   tls {$TLS_EMAIL}
   header / Strict-Transport-Security "max-age=31536000;"
 
+  # Serves static files, should be the same as `STATIC_ROOT` setting:
   root /var/www/django
 
+  # Serving dynamic requests:
   proxy / web:8000 {
     except /static /media
-
     transparent
   }
 
+  # Allows to use `.gz` files when available:
+  gzip
+
+  # Logs:
   log stdout
   errors stdout
-  gzip
 }

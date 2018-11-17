@@ -41,14 +41,16 @@ def build_files_list(root_dir):
 
 def assert_variables_replaced(paths):
     """Method to check that all paths have correct substitutions."""
+    assert paths, 'No files are generated'
+
     for path in paths:
         if is_binary(path):
             continue
 
-        with open(path, 'r') as f:
-            contents = f.read()
+        with open(path, 'r') as template_file:
+            file_contents = template_file.read()
 
-        match = RE_OBJ.search(contents)
+        match = RE_OBJ.search(file_contents)
         msg = 'cookiecutter variable not replaced in {0} at {1}'
 
         # Assert that no match is found:
@@ -57,20 +59,19 @@ def assert_variables_replaced(paths):
 
 def test_with_default_configuration(cookies, context):
     """Tests project structure with default prompt values."""
-    result = cookies.bake(extra_context=context)
+    baked_project = cookies.bake(extra_context=context)
 
-    assert result.exit_code == 0
-    assert result.exception is None
-    assert result.project.basename == context['project_name']
-    assert result.project.isdir()
+    assert baked_project.exit_code == 0
+    assert baked_project.exception is None
+    assert baked_project.project.basename == context['project_name']
+    assert baked_project.project.isdir()
 
 
 def test_variables_replaced(cookies, context):
     """Ensures that all variables are replaced inside project files."""
-    result = cookies.bake(extra_context=context)
-    paths = build_files_list(str(result.project))
+    baked_project = cookies.bake(extra_context=context)
+    paths = build_files_list(str(baked_project.project))
 
-    assert paths
     assert_variables_replaced(paths)
 
 
@@ -89,7 +90,7 @@ def test_variables_replaced(cookies, context):
 def test_validators_work(prompt, entered_value, cookies, context):
     """Ensures that project can not be created with invalid name."""
     context.update({prompt: entered_value})
-    result = cookies.bake(extra_context=context)
+    baked_project = cookies.bake(extra_context=context)
 
-    assert isinstance(result.exception, FailedHookException)
-    assert result.exit_code == -1
+    assert isinstance(baked_project.exception, FailedHookException)
+    assert baked_project.exit_code == -1
