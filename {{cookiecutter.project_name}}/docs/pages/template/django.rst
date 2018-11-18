@@ -104,6 +104,41 @@ Depending on a project we use different tools.
 With ``dump-env`` being the default and the simplest one.
 
 
+Extensions
+----------
+
+We use different ``django`` extensions that make your life easier.
+Here's a full list of the extensions for both development and production:
+
+- `django-split-settings`_ - organize
+  ``django`` settings into multiple files and directories.
+  Easily override and modify settings.
+  Use wildcards in settings file paths and mark settings files as optional
+- `django-axes`_ - keep track
+  of failed login attempts in ``django`` powered sites
+- `django-csp`_ - `Content Security Policy`_ for ``django``
+- `django-referrer-policy`_ - middleware implementing the `Referrer-Policy`_
+
+Development only extensions:
+
+- `django-debug-toolbar`_ - a configurable set of panels that
+  display various debug information about the current request/response
+- `django-querycount`_ - middleware that prints the number
+  of DB queries to the runserver console
+- `nplusone`_ - auto-detecting the `n+1 queries problem`_ in ``django``
+
+.. _django-split-settings: https://github.com/sobolevn/django-split-settings
+.. _django-axes: https://github.com/jazzband/django-axes
+.. _django-csp: https://github.com/mozilla/django-csp
+.. _`Content Security Policy`: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
+.. _django-referrer-policy: https://github.com/ubernostrum/django-referrer-policy
+.. _`Referrer-Policy`: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
+.. _django-debug-toolbar: https://github.com/jazzband/django-debug-toolbar
+.. _django-querycount: https://github.com/bradmontgomery/django-querycount
+.. _nplusone: https://github.com/jmcarp/nplusone
+.. _`n+1 queries problem`: https://stackoverflow.com/questions/97197/what-is-the-n1-select-query-issue
+
+
 Further reading
 ---------------
 
