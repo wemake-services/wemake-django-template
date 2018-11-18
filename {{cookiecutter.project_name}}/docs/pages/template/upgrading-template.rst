@@ -7,7 +7,7 @@ This is achieved by manually applying ``diff`` to your existing code.
 ``diff`` can be viewed from the project's ``README.md``.
 See `an example <https://github.com/wemake-services/wemake-django-template/compare/91188fc4b89bd4989a0ead3d156a4619644965b0...master>`_.
 
-When upgrade is applied just change the commit hash in your template
+When the upgrade is applied just change the commit hash in your template
 to the most recent one.
 
 
@@ -21,7 +21,7 @@ projects as they used to be a long time ago.
 However, we do not officially support older versions.
 And we do not recommend to use them.
 
-Full list of versions can be `found here <https://github.com/wemake-services/wemake-django-template/releases>`_.
+A full list of versions can be `found here <https://github.com/wemake-services/wemake-django-template/releases>`_.
 
 
 Migration guides
@@ -29,7 +29,7 @@ Migration guides
 
 Each time we create a new version, we also provide a migration guide.
 What is a migration guide?
-It is something you have to do to you project
+It is something you have to do to your project
 other than just copy-pasting diffs from new versions.
 
 Goodbye, pipenv!
@@ -47,5 +47,5 @@ This version requires a manual migration step.
    to fit your ``poetry`` version
 7. Create ``poetry.lock`` file with ``poetry lock``
 
-It should be fine! You may however experience some bugs related to different
-version resolution mechanisms. But, ``poetry`` does it better.
+It should be fine! You may, however, experience some bugs related to different
+dependency version resolution mechanisms. But, ``poetry`` does it better.

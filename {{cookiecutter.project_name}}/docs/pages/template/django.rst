@@ -1,4 +1,4 @@
-.. _configuration:
+.. _django:
 
 Django
 ======
@@ -32,7 +32,7 @@ To run ``django`` on different environments just
 specify ``DJANGO_ENV`` environment variable.
 It must have the same name as one of the files
 from ``server/settings/environments/``.
-Then values from this file will override other settings.
+Then, values from this file will override other settings.
 
 Local settings
 ~~~~~~~~~~~~~~
@@ -55,7 +55,7 @@ Secret settings
 We share the same mechanism for secret settings for all our tools.
 We use ``.env`` files for ``django``, ``postgres``, ``docker``, etc.
 
-Initially you will need to copy file
+Initially, you will need to copy file
 ``config/.env.template`` to ``config/.env``:
 
 .. code:: bash
@@ -88,7 +88,7 @@ this image is built - everything is ready for production.
 
 Here's an example:
 
-1. We add a ``SECRET_DJANGO_SECRET_KEY`` variable to Gitlab CI Secret Variables
+1. We add a ``SECRET_DJANGO_SECRET_KEY`` variable to Gitlab CI secret variables
 2. Then ``dump-env`` dumps ``SECRET_DJANGO_SECRET_KEY``
    as ``DJANGO_SECRET_KEY`` and writes it to ``config/.env`` file
 3. Then it is loaded by ``django`` inside the settings:

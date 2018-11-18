@@ -64,7 +64,7 @@ To validate that all dependencies are secure, run:
 Updating poetry version
 -----------------------
 
-Package managers should also be pinned very strict.
+Package managers should also be pinned very strictly.
 We had a lot of problems in production
 because we were not pinning package manager versions.
 
