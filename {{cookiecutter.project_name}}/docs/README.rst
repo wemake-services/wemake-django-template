@@ -10,7 +10,7 @@ Quickstart
 ----------
 
 1. Clone this repository
-2. Install dependencies, `here's how to do it <_pages/template/dependencies.rst>`_
+2. Install dependencies, `here's how to do it <pages/template/dependencies.rst>`_
 3. ``cd docs && make html``
 4. Open ``_build/html/index.html`` with your browser
 

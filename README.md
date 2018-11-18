@@ -52,4 +52,4 @@ And we will try to help you.
 
 ## License
 
-MIT. See [LICENSE.md](https://github.com/wemake-services/wemake-django-template/blob/master/LICENSE.md) for more details.
+MIT. See [LICENSE](https://github.com/wemake-services/wemake-django-template/blob/master/LICENSE) for more details.

@@ -4,7 +4,7 @@
 #
 # Instead, it should be a part of your deploy strategy.
 # This setup is supposed to be used with `docker-swarm`.
-# See `./docs/_pages/template/production.rst` docs.
+# See `./docs/pages/template/production.rst` docs.
 
 version: "3.6"
 services:
