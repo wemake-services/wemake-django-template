@@ -67,9 +67,8 @@ There are multiple processes that you need to get familiar with:
    :caption: Setting things up:
 
    pages/template/overview.rst
-   pages/template/dependencies.rst
+   pages/template/development.rst
    pages/template/django.rst
-   pages/template/development-process.rst
 
 .. toctree::
    :maxdepth: 2
