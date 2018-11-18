@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# pylint: skip-file
-#
+
 # wemake-django-template documentation build configuration file, created by
 # sphinx-quickstart on Sat Sep 30 12:42:34 2017.
 #
@@ -20,27 +19,26 @@
 
 import os
 import sys
+from contextlib import suppress
 
-try:
-    import django
+sys.path.insert(0, os.path.abspath('..'))
+
+# We need this block, because
+# django might be not installed, maybe we are running our
+# build process in ReadTheDocs?
+# https://github.com/wemake-services/wemake-django-template/issues/133
+with suppress(ImportError):
+    import django  # noqa: Z435
 
     # Normal django setup. That's how it should be in development:
     os.environ['DJANGO_SETTINGS_MODULE'] = 'server.settings'
     django.setup()
-except ImportError:
-    # Django is not installed, maybe we are running our
-    # build process in ReadTheDocs?
-    # https://github.com/wemake-services/wemake-django-template/issues/133
-    pass
-
-sys.path.insert(0, os.path.abspath('..'))
 
 
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
-#
-# needs_sphinx = '1.0'
+needs_sphinx = '1.8'
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
@@ -52,10 +50,10 @@ extensions = [
     'sphinx.ext.coverage',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
+    'sphinx.ext.napoleon',
 
     # 3rd party (order matters!):
     # https://github.com/wemake-services/wemake-django-template/issues/159
-    'sphinxcontrib.napoleon',
     'sphinx_autodoc_typehints',
 ]
 
@@ -66,9 +64,7 @@ templates_path = ['_templates']
 # You can specify multiple suffix as a list of string:
 #
 # source_suffix = ['.rst', '.md']
-source_suffix = [
-    '.rst',
-]
+source_suffix = ['.rst']
 
 # The master toctree document.
 master_doc = 'index'
@@ -138,76 +134,3 @@ html_sidebars = {
         'searchbox.html',
     ]
 }
-
-
-# -- Options for HTMLHelp output ------------------------------------------
-
-# Output file base name for HTML help builder.
-htmlhelp_basename = 'wemake-django-templatedoc'
-
-
-# -- Options for LaTeX output ---------------------------------------------
-
-latex_elements = {
-    # The paper size ('letterpaper' or 'a4paper').
-    #
-    # 'papersize': 'letterpaper',
-
-    # The font size ('10pt', '11pt' or '12pt').
-    #
-    # 'pointsize': '10pt',
-
-    # Additional stuff for the LaTeX preamble.
-    #
-    # 'preamble': '',
-
-    # Latex figure (float) alignment
-    #
-    # 'figure_align': 'htbp',
-}
-
-# Grouping the document tree into LaTeX files. List of tuples
-# (source start file, target name, title,
-#  author, documentclass [howto, manual, or own class]).
-latex_documents = [
-    (
-        master_doc,
-        'wemake-django-template.tex',
-        'wemake-django-template Documentation',
-        'wemake.services',
-        'manual',
-    ),
-]
-
-
-# -- Options for manual page output ---------------------------------------
-
-# One entry per manual page. List of tuples
-# (source start file, name, description, authors, manual section).
-man_pages = [
-    (
-        master_doc,
-        'wemake-django-template',
-        'wemake-django-template Documentation',
-        [author],
-        1,
-    )
-]
-
-
-# -- Options for Texinfo output -------------------------------------------
-
-# Grouping the document tree into Texinfo files. List of tuples
-# (source start file, target name, title, author,
-#  dir menu entry, description, category)
-texinfo_documents = [
-    (
-        master_doc,
-        'wemake-django-template',
-        'wemake-django-template Documentation',
-        author,
-        'wemake-django-template',
-        'One line description of project.',
-        'Miscellaneous',
-    ),
-]

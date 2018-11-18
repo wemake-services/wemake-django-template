@@ -1,7 +1,11 @@
 .. _configuration:
 
+Django
+======
+
+
 Configuration
-=============
+-------------
 
 We share the same configuration structure for almost every possible
 environment.
@@ -10,20 +14,19 @@ We use:
 
 - ``django-split-settings`` to organize ``django``
   settings into multiple files and directories
-- ``.env`` files to load secret configuration into different platforms
-
+- ``.env`` files to store secret configuration
+- ``python-decouple`` to load ``.env`` files into ``django``
 
 Components
-----------
+~~~~~~~~~~
 
 If you have some specific components like ``celery`` or ``mailgun`` installed,
 they could be configured in separate files.
 Just create a new file in ``server/settings/components/``.
 Then add it into ``server/settings/__init__.py``.
 
-
 Environments
-------------
+~~~~~~~~~~~~
 
 To run ``django`` on different environments just
 specify ``DJANGO_ENV`` environment variable.
@@ -31,9 +34,8 @@ It must have the same name as one of the files
 from ``server/settings/environments/``.
 Then values from this file will override other settings.
 
-
 Local settings
---------------
+~~~~~~~~~~~~~~
 
 If you need some specific local configuration tweaks,
 you can create file ``server/settings/environments/local.py.template``
@@ -44,21 +46,34 @@ It will be loaded into your settings automatically if exists.
 
   cp server/settings/environments/local.py.template server/settings/environments/local.py
 
-See ``.template`` version for the reference.
+See ``local.py.template`` version for the reference.
 
 
 Secret settings
 ---------------
 
-You will need to copy file ``config/.env.template`` to ``config/.env``:
+We share the same mechanism for secret settings for all our tools.
+We use ``.env`` files for ``django``, ``postgres``, ``docker``, etc.
+
+Initially you will need to copy file
+``config/.env.template`` to ``config/.env``:
 
 .. code:: bash
 
   cp config/.env.template config/.env
 
+When adding any new secret ``django`` settings you will need to:
+
+1. Add new key and value to ``config/.env``
+2. Add new key without value to ``config/.env.template``,
+   add a comment on how to get this value for other users
+3. Add new variable inside ``django`` settings
+4. Use ``python-decouple`` to load this ``env`` variable like so:
+   ``MY_SECRET = config('MY_SECRET')``
+
 
 Secret settings in production
------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 We do not store our secret settings inside our source code.
 All sensible settings are stored in ``config/.env`` file,
@@ -71,13 +86,13 @@ to dump variables from both environment and ``.env`` file template.
 Then, this file is copied inside ``docker`` image and when
 this image is built - everything is ready for production.
 
-Example store secret variables with dump-env and Gitlab CI:
+Here's an example:
 
-1. We add a ``SECRET_DJANGO_SECRET_KEY`` variable to Gitlab CI Secret Variables;
-2. Before build in CI ``dump-env`` dump ``SECRET_DJANGO_SECRET_KEY``
-   as ``DJANGO_SECRET_KEY``
-3. ``dump-env`` save ``DJANGO_SECRET_KEY`` to ``.env`` file.
-4. Now Django use this value in settings.
+1. We add a ``SECRET_DJANGO_SECRET_KEY`` variable to Gitlab CI Secret Variables
+2. Then ``dump-env`` dumps ``SECRET_DJANGO_SECRET_KEY``
+   as ``DJANGO_SECRET_KEY`` and writes it to ``config/.env`` file
+3. Then it is loaded by ``django`` inside the settings:
+   ``SECRET_KEY = config('DJANGO_SECRET_KEY')``
 
 However, there are different options to store secret settings:
 
@@ -88,19 +103,9 @@ However, there are different options to store secret settings:
 Depending on a project we use different tools.
 With ``dump-env`` being the default and the simplest one.
 
-But the main idea is that we place these settings into ``config/.env`` file.
-So it would be easily readable for both ``docker`` and ``django``.
-
 
 Further reading
 ---------------
 
-- ``django-split-settings`` `tutorial`_
-- ``django-split-settings`` `docs`_
-- ``git-secret`` `site`_
-- ``docker`` `env-file docs`_
-
-.. _tutorial: https://medium.com/wemake-services/managing-djangos-settings-e2b7f496120d
-.. _docs: http://django-split-settings.readthedocs.io/en/latest/
-.. _site: http://git-secret.io/
-.. _`env-file docs`: https://docs.docker.com/compose/env-file/
+- `django-split-settings tutorial <https://medium.com/wemake-services/managing-djangos-settings-e2b7f496120d>`_
+- `docker env-file docs <https://docs.docker.com/compose/env-file/>`_

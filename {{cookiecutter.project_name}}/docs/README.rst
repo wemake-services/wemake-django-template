@@ -18,10 +18,4 @@ Quickstart
 Where to go next
 ----------------
 
-After you have your docs compiled, then it is time to read it.
-We recommend you to start from exploring ``Project`` docs first.
-That's the place we write what our projects are about.
-Why they were created and what problems we are solving with it.
-
-If you will find any question about how to setup your working environment,
-refer to the ``template`` section.
+Read the main page of the opened documentation website. It will guide you.

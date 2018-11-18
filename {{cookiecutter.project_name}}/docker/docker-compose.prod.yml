@@ -41,14 +41,6 @@ services:
     command: sh ./docker/django/gunicorn.sh
     expose:
       - 8000
-    deploy:
-      replicas: 5
-      resources:
-        limits:
-          cpus: "0.15"
-          memory: 200M
-      restart_policy:
-        condition: on-failure
 
 # This task is an example of how to extend existing ones:
 # some_wroker:
