@@ -8,13 +8,13 @@ We use `mypy <http://mypy-lang.org/>`_ for optional
 static typing.
 We run tests with `pytest <https://pytest.org/>`_ framework.
 We use `pre-commit <https://pre-commit.com/>`_
-to run all checks locally before pushing commit to CI.
+to run all checks locally before pushing a commit to CI.
 
 
 pytest
 ------
 
-``pytest`` is a main tool for test discovery, collection, and execution.
+``pytest`` is the main tool for test discovery, collection, and execution.
 It is configured inside ``setup.cfg`` file.
 
 We use a lot of ``pytest`` plugins that enhance our development experience.
@@ -29,9 +29,9 @@ Tweaking tests performance
 There are several options you can provide or remove to make your tests faster:
 
 - You can use ``pytest-xdist`` together with
-  ``-n auto``  to schedule several number of workers,
+  ``-n auto``  to schedule several numbers of workers,
   sometimes when there are a lot of tests it may increase the testing speed.
-  But on small project with small amount of test it just
+  But on a small project with a small amount of test it just
   gives you an overhead, so removing it (together with `--boxed`)
   will boost your testing performance
 - If there are a lot of tests with database access
@@ -63,7 +63,7 @@ Running ``mypy`` is required before any commit:
 
 This will eliminate a lot of possible ``TypeError`` and other issues.
 However, this will not make code 100% safe from errors.
-So, testing and review process are still required.
+So, both the testing and review process are still required.
 
 ``mypy`` is configured via ``setup.cfg``.
 Read the `docs <https://mypy.readthedocs.io/en/latest/>`_

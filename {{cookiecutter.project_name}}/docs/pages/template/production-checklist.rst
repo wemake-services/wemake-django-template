@@ -27,7 +27,7 @@ We check that there are no unapplied migrations:
 
   python manage.py makemigrations --dry-run --check
 
-If you have forgot to create a migration and changed the model,
+If you have forgotten to create a migration and changed the model,
 you will see an error on this line.
 
 We also check that static files can be collected:
@@ -49,10 +49,11 @@ That's how we check ``django`` warnings:
 
   DJANGO_ENV=production python manage.py check --deploy --fail-level WARNING
 
-These warning are raised by ``django`` when it detects any configuration issues.
+These warnings are raised by ``django``
+when it detects any configuration issues.
 
 This command should give not warnings or errors.
-It is bundled into `docker`, so container will not work with any warnings.
+It is bundled into `docker`, so the container will not work with any warnings.
 
 Static and media files
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -60,7 +61,7 @@ Static and media files
 We use ``/var/www/django`` folder to store our media
 and static files in production as ``/var/www/django/static``
 and ``/var/www/django/media``.
-Docker uses these two folder as named volumes.
+Docker uses these two folders as named volumes.
 And later these volumes are also mounted to ``caddy``
 with ``ro`` mode so it possible to read their contents.
 
@@ -88,7 +89,7 @@ Why do we do this? Because that's probably the easiest way to do it.
 But it clearly has some disadvantages:
 
 - When scaling your container for multiple nodes you will have multiple
-  threads running the same migrations. And it might be a problem, since
+  threads running the same migrations. And it might be a problem since
   migrations do not guarantee that it will work this way.
 - You can perform some operations multiple times
 - Possible other evil things may happen
@@ -143,7 +144,7 @@ See `docs <https://docs.djangoproject.com/en/1.11/ref/settings/#secure-ssl-redir
 
 You would also need to disable ``manage.py check``
 in ``docker/ci.sh``.
-Otherwise your application won't start,
+Otherwise, your application won't start,
 it would not pass ``django``'s security checks.
 
 Disabling WWW subdomain
@@ -161,7 +162,7 @@ your app works on third-level domains like:
 - ``kira.wemake.services``
 - ``support.myapp.com``
 
-Otherwise ``Caddy`` will server redirects to ``www.example.yourdomain.com``.
+Otherwise, ``Caddy`` will server redirects to ``www.example.yourdomain.com``.
 
 
 Further reading

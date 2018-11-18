@@ -2,10 +2,10 @@ Production
 ==========
 
 We use different tools and setup for production.
-We do not fully provide this part with template. Why?
+We do not fully provide this part with the template. Why?
 
 1. It requires a lot of server configuration
-2. It heavily depends on you needs: performance, price, technology, etc
+2. It heavily depends on your needs: performance, price, technology, etc
 3. It is possible to show some vulnerable parts to possible attackers
 
 So, you will need to deploy your application by yourself.
@@ -35,7 +35,7 @@ Pulling pre-built images
 You will need to pull pre-built images from ``Gitlab`` to run them.
 How to do that?
 
-The first step is to create personal access token for this service.
+The first step is to create a personal access token for this service.
 Then, login into your registry with:
 
 .. code:: bash

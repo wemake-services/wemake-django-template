@@ -3,7 +3,7 @@
 Linters
 =======
 
-This projects uses several linters to make coding style consistent.
+This project uses several linters to make coding style consistent.
 All configuration is stored inside ``setup.cfg``.
 
 
@@ -34,7 +34,7 @@ Here are our standards:
 
 - A single block of code can not go below ``A`` mark
 - A single module can not go below ``A`` mark
-- Overall mark can not go below ``A`` mark
+- Overall mark cannot go below ``A`` mark
 
 If your commit breaks this rule: well, the build won't succeed.
 

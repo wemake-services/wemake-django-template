@@ -26,7 +26,7 @@ Local development
 
 When cloning a project for the first time you may
 need to configure it properly,
-see :ref:`configuration` section for more information.
+see :ref:`django` section for more information.
 
 **Note**, that you only need to run these commands once per project.
 
@@ -74,11 +74,11 @@ Running scripts inside docker
 As you have already mentioned inside the previous section
 we use ``docker-compose run`` to run scripts inside docker.
 
-What you need to know about it?
+What do you need to know about it?
 
 1. You can run anything you want: ``poetry``, ``python``, ``sh``, etc
 2. Most likely it will have a permanent effect, due to ``docker volumes``
-3. You need to use ``--rm`` to automatically remove this container afterwards
+3. You need to use ``--rm`` to automatically remove this container afterward
 
 Extra configuration
 ~~~~~~~~~~~~~~~~~~~

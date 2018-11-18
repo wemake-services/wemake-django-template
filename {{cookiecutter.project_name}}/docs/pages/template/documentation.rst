@@ -12,23 +12,24 @@ Dependencies
 ------------
 
 We are using ``sphinx`` as a documentation builder.
-We use ``sphinx.ext.napoleon`` to 
+We use ``sphinx.ext.napoleon`` to write
+pretty docstrings inside the source code.
 We also use ``sphinx_autodoc_typehints`` to inject type annotations into docs.
 
-We also using two sources of truth for the dependencies here:
+We also use two sources of truth for the dependencies here:
 
 - ``docs/requirements.txt``
 - ``pyproject.toml``
 
-Why? Because ReadTheDocs we are using
-for this template (only for original Github repo)
+Why? Because we are using ReadTheDocs
+for this template (only for original Github repo), and it
 does only support traditional ``requirements.txt``.
 
 
 Structure
 ---------
 
-We use clear structure for this documentation.
+We use a clear structure for this documentation.
 
 - ``pages/template`` contains docs
   from `wemake-django-template <https://github.com/wemake-services/wemake-django-template>`_.
@@ -36,10 +37,10 @@ We use clear structure for this documentation.
   If you have any kind of question or problems,
   just open an issue `on github <https://github.com/wemake-services/wemake-django-template/issues>`_
 - ``pages/project`` contains everything related to the project itself.
-  Usage examples, auto-generated documentation form your source code,
-  configuration, business and project goals
+  Usage examples, an auto-generated documentation from your source code,
+  configuration, business, and project goals
 - ``documents`` contains different non-sphinx documents
-  like ``doc`` files, spread-sheets, and mockups
+  like ``doc`` files, spreadsheets, and mockups
 
 Please, do not mix it up.
 
@@ -48,7 +49,7 @@ How to structure project docs
 
 It is a good practice to write a single ``rst`` document
 for every single ``py`` file.
-Obviously, ``rst`` structure fully copies structure of your source code.
+Obviously, ``rst`` structure fully copies the structure of your source code.
 This way it is very easy to navigate through the docs,
 since you already know the structure.
 
@@ -63,7 +64,7 @@ How to contribute
 -----------------
 
 We enforce everyone to write clean and explaining documentation.
-However there are several rules about writing styling.
+However, there are several rules about writing styling.
 
 We are using `doc8 <https://pypi.python.org/pypi/doc8>`_ to validate our docs.
 So, here's the command to do it:

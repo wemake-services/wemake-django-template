@@ -12,7 +12,7 @@ Other tools are not mandatory. And can easily be added by a developer.
 Will you have an build-time option to include or change anything?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-No, we believe that options brings inconsistencies to the project.
+No, we believe that options bring inconsistencies to the project.
 You can also make the wrong choice. So, we are protecting you from that.
 
 You can only have options that are already present in this template.
