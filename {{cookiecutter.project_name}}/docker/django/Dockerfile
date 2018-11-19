@@ -33,7 +33,7 @@ RUN apk --no-cache add \
 
 # Copy only requirements to cache them in docker layer
 WORKDIR /code
-COPY pyproject.lock pyproject.toml /code/
+COPY poetry.lock pyproject.toml /code/
 
 # This is a special case. We need to run this script as an entry point:
 COPY ./docker/django/entrypoint.sh /docker-entrypoint.sh
