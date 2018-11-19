@@ -31,10 +31,9 @@ RUN apk --no-cache add \
      tini \
   && curl -sSL "https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py" | python
 
-
-# Creating folders, and files for a project:
-COPY . /code
+# Copy only requirements to cache them in docker layer
 WORKDIR /code
+COPY poetry.lock pyproject.toml /code/
 
 # This is a special case. We need to run this script as an entry point:
 COPY ./docker/django/entrypoint.sh /docker-entrypoint.sh
@@ -43,5 +42,8 @@ COPY ./docker/django/entrypoint.sh /docker-entrypoint.sh
 RUN chmod +x "/docker-entrypoint.sh" \
   && poetry config settings.virtualenvs.create false \
   && poetry install $(test "$DJANGO_ENV" == production && echo "--no-dev") --no-interaction --no-ansi
+
+# Creating folders, and files for a project:
+COPY . /code
 
 ENTRYPOINT ["/sbin/tini", "--", "/docker-entrypoint.sh"]
