@@ -933,7 +933,7 @@ description = "Pygments is a syntax highlighting package written in Python."
 name = "pygments"
 optional = false
 python-versions = "*"
-version = "2.2.0"
+version = "2.3.0"
 
 [[package]]
 category = "dev"
@@ -1036,11 +1036,11 @@ description = "take TDD to a new level with py.test and testmon"
 name = "pytest-testmon"
 optional = false
 python-versions = "*"
-version = "0.9.13"
+version = "0.9.14"
 
 [package.dependencies]
-coverage = ">=4"
-pytest = ">=2.8.0,<4"
+coverage = ">=4,<5"
+pytest = ">=2.8.0,<5"
 
 [[package]]
 category = "dev"
@@ -1448,7 +1448,7 @@ pycodestyle = ["74abc4e221d393ea5ce1f129ea6903209940c1ecd29e002e8c6933c2b21026e0
 pycparser = ["a988718abfad80b6b157acce7bf130a30876d27603738ac39f140993246b25b3"]
 pydocstyle = ["2258f9b0df68b97bf3a6c29003edc5238ff8879f1efb6f1999988d934e432bd8", "5741c85e408f9e0ddf873611085e819b809fca90b619f5fd7f34bd4959da3dd4", "ed79d4ec5e92655eccc21eb0c6cf512e69512b4a97d215ace46d17e4990f2039"]
 pyflakes = ["9a7662ec724d0120012f6e29d6248ae3727d821bba522a0e6b356eff19126a49", "f661252913bc1dbe7fcfcbf0af0db3f42ab65aabd1a6ca68fe5d466bace94dae"]
-pygments = ["78f3f434bcc5d6ee09020f92ba487f95ba50f1e3ef83ae96b9d5ffa1bab25c5d", "dbae1046def0efb574852fab9e90209b23f556367b5a320c0bcb871c77c3e8cc"]
+pygments = ["6301ecb0997a52d2d31385e62d0a4a4cf18d2f2da7054a5ddad5c366cd39cee7", "82666aac15622bd7bb685a4ee7f6625dd716da3ef7473620c192c0168aae64fc"]
 pyparsing = ["40856e74d4987de5d01761a22d1621ae1c7f8774585acae358aa5c5936c6c90b", "f353aab21fd474459d97b709e527b5571314ee5f067441dc9f88e33eecd96592"]
 pytest = ["3f193df1cfe1d1609d4c583838bea3d532b18d6160fd3f55c9447fdca30848ec", "e246cf173c01169b9617fc07264b7b1316e78d7a650055235d6d897bc80d9660"]
 pytest-cov = ["513c425e931a0344944f84ea47f3956be0e416d95acbd897a44970c8d926d5d7", "e360f048b7dae3f2f2a9a4d067b2dd6b6a015d384d1577c994a43f3f7cbad762"]
@@ -1457,7 +1457,7 @@ pytest-django = ["deffd9d65827c582bd0a85638a0fe52f0eb65a764872ddcee9ce51cdf6ae9f
 pytest-flake8 = ["4f30f5be3efb89755f38f11bdb2a5e22d19a6f5faa73428f703a3292a9572cd3", "c740ad6aa19e3958947d2118f70bed218caf1d2097039fb7318573a2a72f89a1"]
 pytest-isort = ["2221c0914dfca41914625a646f0d2d1d4c676861b9a7b26746a7fdd40aa2c59b", "c70d0f900f4647bb714f0843dd82d7f7b759904006de31254efdb72ce88e0c0e"]
 pytest-randomly = ["6db5e03d72b54052b9b379dc3cfa4749c19bfe4de161cf3eb24762049f4ce9be", "92ec6745d3ebdd690ecb598648748c9601f16f5afacf83ccef2b50d23e6edb7f"]
-pytest-testmon = ["8595b6636c2b8b18368295292b184c035588a89a626134b061e9cb9218db0a66"]
+pytest-testmon = ["47fb5d4faa16bf431afbf404029167c18703ffa673d83b13a354186385f25246"]
 pytest-timeout = ["4a30ba76837a32c7b7cd5c84ee9933fde4b9022b0cd20ea7d4a577c2a1649fb1", "d49f618c6448c14168773b6cdda022764c63ea80d42274e3156787e8088d04c6"]
 python-decouple = ["1317df14b43efee4337a4aa02914bf004f010cd56d6c4bd894e6474ec8c4fe2d"]
 pytz = ["31cb35c89bd7d333cd32c5f278fca91b523b0834369e757f4c5641ea252236ca", "8e0f8568c118d3077b46be7d654cc8167fa916092e28320cde048e54bfc9f1e6"]
