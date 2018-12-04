@@ -13,7 +13,7 @@ services:
     image: "postgres:9.6.9-alpine"
     restart: unless-stopped
     volumes:
-      - pgdata:/var/lib/postgresql/data
+      - pgdata:/var/lib/postgresql/data:delegated
     networks:
       - webnet
     env_file: ./config/.env
@@ -26,8 +26,8 @@ services:
         args:
           DJANGO_ENV: development
       volumes:
-        - .:/code
-        - django-static:/var/www/django/static
+        - .:/code:delegated
+        - django-static:/var/www/django/static:delegated
       depends_on:
         - db
       networks:
