@@ -222,7 +222,7 @@ description = "A configurable set of panels that display various debug informati
 name = "django-debug-toolbar"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "1.10.1"
+version = "1.11"
 
 [package.dependencies]
 Django = ">=1.11"
@@ -1353,7 +1353,7 @@ pathspec = ">=0.5.3"
 pyyaml = "*"
 
 [metadata]
-content-hash = "70e54fae8d35cde7e1d4b0d300b0d6389017e02981bc69caf40c7a829bf1219a"
+content-hash = "c9a07be95c9c2c03ecf41c7dc650e60380841b3b5a3a34ca4b6b7dd60baff751"
 python-versions = "3.6.6"
 
 [metadata.hashes]
@@ -1380,7 +1380,7 @@ django = ["29268cc47816a44f27308e60f71da635f549c47d8a1d003b28de55141df75791", "3
 django-appconf = ["6a4d9aea683b4c224d97ab8ee11ad2d29a37072c0c6c509896dd9857466fb261", "ddab987d14b26731352c01ee69c090a4ebfc9141ed223bef039d79587f22acd9"]
 django-axes = ["0a8a9b1a1610758eecfabdde734ba409276ea414fd8034ae9a24df584a9009ca", "29984bcc1d7e44392b330c65e90ec5265799d22b1286ce44029b25bbc868fcb0"]
 django-csp = ["04c0ccd4e1339e8f6af48c55c3347dc996fde2d22d79e8bf2f6b7a920412e408", "096b634430d8ea81c3d9f216f87be890f3a975c17bb9a4631f6a1619ac09c91e"]
-django-debug-toolbar = ["08e0e43f6c1fd9820af4cbdcd54b5fb80bf83a2e08b2cc952547a671174999b8", "1dcae28d430522debafde2602b3450eb784410b78e16c29a00448032df2a4c90"]
+django-debug-toolbar = ["89d75b60c65db363fb24688d977e5fbf0e73386c67acf562d278402a10fc3736", "c2b0134119a624f4ac9398b44f8e28a01c7686ac350a12a74793f3dd57a9eea0"]
 django-ipware = ["a7c7a8fd019dbdc9c357e6e582f65034e897572fc79a7e467674efa8aef9d00b"]
 django-querycount = ["8f5123d78716ff0704f2373e746a7200b8d8417798ce4a99bf2de87e3768f9ce"]
 django-referrer-policy = ["09e134324fa08c10efc12244a4bae7aee5defa7d332b92c603b09258c854615a"]
