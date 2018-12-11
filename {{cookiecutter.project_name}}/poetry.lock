@@ -198,7 +198,7 @@ description = "Keep track of failed login attempts in Django-powered sites."
 name = "django-axes"
 optional = false
 python-versions = "*"
-version = "4.4.2"
+version = "4.4.3"
 
 [package.dependencies]
 django-appconf = "*"
@@ -1378,7 +1378,7 @@ coverage = ["06123b58a1410873e22134ca2d88bd36680479fe354955b3579fb8ff150e4d27", 
 decorator = ["2c51dff8ef3c447388fe5e4453d24a2bf128d3a4c32af3fabef1f01c6851ab82", "c39efa13fbdeb4506c476c9b3babf6a718da943dab7811c206005a4a956c080c"]
 django = ["a787ee66f4b4cf8ed753661cabcec603989677fa3a107fcb7f15511a44bdb483", "f1a961b954d96bb24b397db4c35e9a128d12e044d6b57984c122282b592d508d"]
 django-appconf = ["6a4d9aea683b4c224d97ab8ee11ad2d29a37072c0c6c509896dd9857466fb261", "ddab987d14b26731352c01ee69c090a4ebfc9141ed223bef039d79587f22acd9"]
-django-axes = ["0a8a9b1a1610758eecfabdde734ba409276ea414fd8034ae9a24df584a9009ca", "29984bcc1d7e44392b330c65e90ec5265799d22b1286ce44029b25bbc868fcb0"]
+django-axes = ["4b057f9078f4b7597712d04e156a381f2cc830a031cbac741d9105b9f78ef2ab", "a46f1547bbccf0c4a61da3edc30318fc727517f0a367427e8da3a63f3e8b0084"]
 django-csp = ["04c0ccd4e1339e8f6af48c55c3347dc996fde2d22d79e8bf2f6b7a920412e408", "096b634430d8ea81c3d9f216f87be890f3a975c17bb9a4631f6a1619ac09c91e"]
 django-debug-toolbar = ["89d75b60c65db363fb24688d977e5fbf0e73386c67acf562d278402a10fc3736", "c2b0134119a624f4ac9398b44f8e28a01c7686ac350a12a74793f3dd57a9eea0"]
 django-ipware = ["a7c7a8fd019dbdc9c357e6e582f65034e897572fc79a7e467674efa8aef9d00b"]
