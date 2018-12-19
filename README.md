@@ -9,7 +9,8 @@ Bleeding edge `django` template focused on code quality and security.
 
 ## Purpose
 
-This project is used to scaffold a `django` project structure. Just like `django-admin.py startproject` but better.
+This project is used to scaffold a `django` project structure.
+Just like `django-admin.py startproject` but better.
 
 
 ## Features
@@ -17,10 +18,10 @@ This project is used to scaffold a `django` project structure. Just like `django
 - Always [`up-to-date`](https://github.com/wemake-services/wemake-django-template/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Aapp%2Fdependabot) with the help of [`@dependabot`](https://dependabot.com/)
 - [`poetry`](https://github.com/sdispater/poetry) for managing dependencies
 - [`mypy`](https://mypy.readthedocs.io) for optional static typing
-- `pytest` for unit testing
-- `flake8` and [`wemake-python-styleguide`](https://wemake-python-styleguide.readthedocs.io/en/latest/) for linting
+- [`pytest`](https://pytest.org/) for unit testing
+- [`flake8`](http://flake8.pycqa.org/en/latest/) and [`wemake-python-styleguide`](https://wemake-python-styleguide.readthedocs.io/en/latest/) for linting
 - [`pre-commit`](https://pre-commit.com/) hooks for consistent development
-- `docker` for development, testing, and production
+- [`docker`](https://www.docker.com/) for development, testing, and production
 - [`sphinx`](http://www.sphinx-doc.org/en/master/) for documentation
 - [`Gitlab CI`](https://about.gitlab.com/gitlab-ci/) with full `build`, `test`, and `deploy` pipeline configured by default
 - [`Caddy`](https://caddyserver.com/) with [`https`](https://caddyserver.com/docs/automatic-https) and `http/2` turned on by default

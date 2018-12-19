@@ -12,8 +12,7 @@ ENV DJANGO_ENV=${DJANGO_ENV} \
   PIP_NO_CACHE_DIR=off \
   PIP_DISABLE_PIP_VERSION_CHECK=on \
   PIP_DEFAULT_TIMEOUT=100 \
-  PATH="/root/.poetry/bin:$PATH" \
-  POETRY_VERSION=0.12.8
+  POETRY_VERSION=0.12.10
 
 
 # System deps:
@@ -29,7 +28,7 @@ RUN apk --no-cache add \
      musl-dev \
      postgresql-dev \
      tini \
-  && curl -sSL "https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py" | python
+  && pip install "poetry==$POETRY_VERSION"
 
 # Copy only requirements to cache them in docker layer
 WORKDIR /code

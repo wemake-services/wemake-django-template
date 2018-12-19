@@ -24,14 +24,13 @@ run_ci () {
   pytest
 
   # Run checks to be sure settings are correct (production flag is required):
-  DJANGO_ENV=production python /code/manage.py check \
-    --deploy --fail-level WARNING
+  DJANGO_ENV=production python manage.py check --deploy --fail-level WARNING
 
   # Check that staticfiles app is working fine:
   DJANGO_ENV=production python manage.py collectstatic --no-input --dry-run
 
   # Check that all migrations worked fine:
-  python /code/manage.py makemigrations --dry-run --check
+  python manage.py makemigrations --dry-run --check
 
   # Running code-quality check:
   xenon --max-absolute A --max-modules A --max-average A server
@@ -40,14 +39,20 @@ run_ci () {
   # known vulnerabilities:
   safety check --bare --full-report
 
-  # Checking `pyproject.toml` file contents:
-  poetry check
+  # Checking `pyproject.toml` file contents and dependencies status:
+  poetry check && pip check
 
   # Checking docs:
   doc8 -q docs
 
   # Checking `yaml` files:
   yamllint -d '{"extends": "default", "ignore": ".venv"}' -s .
+
+  # Checking `.env` files:
+  dotenv-linter config/.env config/.env.template
+
+  # Checking translation files, ignoring ordering and locations:
+  polint -i location,unsorted locale
 }
 
 # Remove any cache before the script:
