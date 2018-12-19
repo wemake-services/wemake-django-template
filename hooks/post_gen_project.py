@@ -90,12 +90,18 @@ def copy_local_configuration():
 
     # Local config:
     local_template = os.path.join(
-        PROJECT_DIRECTORY, 'server',
-        'settings', 'environments', 'local.py.template',
+        PROJECT_DIRECTORY,
+        'server',
+        'settings',
+        'environments',
+        'local.py.template',
     )
     local_config = os.path.join(
-        PROJECT_DIRECTORY, 'server',
-        'settings', 'environments', 'local.py',
+        PROJECT_DIRECTORY,
+        'server',
+        'settings',
+        'environments',
+        'local.py',
     )
     shutil.copyfile(local_template, local_config)
 
