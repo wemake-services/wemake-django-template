@@ -84,17 +84,6 @@ version = "7.0"
 
 [[package]]
 category = "dev"
-description = "Extends click.Group to invoke a command without explicit subcommand name"
-name = "click-default-group"
-optional = false
-python-versions = "*"
-version = "1.2"
-
-[package.dependencies]
-click = "*"
-
-[[package]]
-category = "dev"
 description = "Cross-platform colored terminal text."
 marker = "sys_platform == \"win32\""
 name = "colorama"
@@ -119,33 +108,6 @@ jinja2-time = ">=0.1.0"
 poyo = ">=0.1.0"
 requests = ">=2.18.0"
 whichcraft = ">=0.4.0"
-
-[[package]]
-category = "dev"
-description = "A backport of the dataclasses module for Python 3.6"
-marker = "python_version < \"3.7\""
-name = "dataclasses"
-optional = false
-python-versions = "*"
-version = "0.6"
-
-[[package]]
-category = "dev"
-description = "Linting dotenv files like a charm!"
-name = "dotenv-linter"
-optional = false
-python-versions = ">=3.6,<4.0"
-version = "0.1.3"
-
-[package.dependencies]
-click = ">=7.0,<8.0"
-click_default_group = ">=1.2,<2.0"
-ply = ">=3.11,<4.0"
-typing_extensions = ">=3.6,<4.0"
-
-[package.dependencies.dataclasses]
-python = "<3.7"
-version = ">=0.6,<0.7"
 
 [[package]]
 category = "dev"
@@ -571,14 +533,6 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 version = "0.8.0"
 
 [[package]]
-category = "dev"
-description = "Python Lex & Yacc"
-name = "ply"
-optional = false
-python-versions = "*"
-version = "3.11"
-
-[[package]]
 category = "main"
 description = "A lightweight YAML Parser for Python"
 name = "poyo"
@@ -844,7 +798,11 @@ python-versions = "*"
 version = "0.5.2"
 
 [metadata]
+<<<<<<< HEAD
 content-hash = "bc12dd9edffc042a748c21459c563f5198f3c264092886de14c73eff8b7e375d"
+=======
+content-hash = "53b750d52be7aaf5cceb9c735ca0a546c1eaa94511aaaf7b3a391649f738074b"
+>>>>>>> Removes dotenv-linter
 python-versions = "3.6.6"
 
 [metadata.hashes]
@@ -857,11 +815,13 @@ binaryornot = ["359501dfc9d40632edc9fac890e19542db1a287bbcfa58175b66658392018061
 certifi = ["47f9c83ef4c0c621eaef743f133f09fa8a74a9b75f037e8624f83bd1b6626cb7", "993f830721089fef441cdfeb4b2c8c9df86f0c63239f06bd025a76a7daddb033"]
 chardet = ["84ab92ed1c4d4f16916e05906b6b75a6c0fb5db821cc65e70cbd64a3e2a5eaae", "fc323ffcaeaed0e0a02bf4d117757b98aed530d9ed4531e3e15460124c106691"]
 click = ["2335065e6395b9e67ca716de5f7526736bfa6ceead690adf616d925bdc622b13", "5b94b49521f6456670fdb30cd82a4eca9412788a93fa6dd6df72c94d5a8ff2d7"]
-click-default-group = ["ba8c43d9c384e1ea7127484c5fc8f4e1ca759519a64fff10718d53f4b82c412a"]
 colorama = ["05eed71e2e327246ad6b38c540c4a3117230b19679b875190486ddd2d721422d", "f8ac84de7840f5b9c4e3347b3c1eaa50f7e49c2b07596221daec5edaabbd7c48"]
 cookiecutter = ["1316a52e1c1f08db0c9efbf7d876dbc01463a74b155a0d83e722be88beda9a3e", "ed8f54a8fc79b6864020d773ce11539b5f08e4617f353de1f22d23226f6a0d36"]
+<<<<<<< HEAD
 dataclasses = ["454a69d788c7fda44efd71e259be79577822f5e3f53f029a22d08004e951dc9f", "6988bd2b895eef432d562370bb707d540f32f7360ab13da45340101bc2307d84"]
 dotenv-linter = ["5ec663b51765f951ecf3aee53b85e827745d4d0ca2667a1eda8f683642c572f0", "6b082b9b5496c500afa7cac2993777fd0e71110dd5152ce0b5e242e9d747d6a6"]
+=======
+>>>>>>> Removes dotenv-linter
 dparse = ["00a5fdfa900629e5159bf3600d44905b333f4059a3366f28e0dbd13eeab17b19", "cef95156fa0adedaf042cd42f9990974bec76f25dfeca4dc01f381a243d5aa5b"]
 eradicate = ["f9af01c544ccd8f71bc2f7f3fa39dc363d842cfcb9c730a83676a59026ab5f24"]
 flake8 = ["6a35f5b8761f45c5513e3405f110a86bea57982c3b75b766ce7b65217abe1670", "c01f8a3963b3571a8e6bd7a4063359aff90749e160778e03817cd9b71c9e07d2"]
@@ -901,7 +861,6 @@ pathmatch = ["b35db907d0532c66132e5bc8aaa20dbfae916441987c8f0abd53ac538376d9a7"]
 pbr = ["f59d71442f9ece3dffc17bc36575768e1ee9967756e6b6535f0ee1f0054c3d68", "f6d5b23f226a2ba58e14e49aa3b1bfaf814d0199144b95d78458212444de1387"]
 pep8-naming = ["360308d2c5d2fff8031c1b284820fbdb27a63274c0c1a8ce884d631836da4bdd", "624258e0dd06ef32a9daf3c36cc925ff7314da7233209c5b01f7e5cdd3c34826"]
 pluggy = ["447ba94990e8014ee25ec853339faf7b0fc8050cdc3289d4d71f7f410fb90095", "bde19360a8ec4dfd8a20dcb811780a30998101f078fc7ded6162f0076f50508f"]
-ply = ["00c7c1aaa88358b9c765b6d3000c6eec0ba42abca5351b095321aef446081da3", "096f9b8350b65ebd2fd1346b12452efe5b9607f7482813ffca50c22722a807ce"]
 poyo = ["c34a5413191210ed564640510e9c4a4ba3b698746d6b454d46eb5bfb30edcd1d", "d1c317054145a6b1ca0608b5e676b943ddc3bfd671f886a2fe09288b98221edb"]
 py = ["bf92637198836372b520efcba9e020c330123be8ce527e535d185ed4b6f45694", "e76826342cefe3c3d5f7e8ee4316b80d1dd8a300781612ddbc765c17ba25a6c6"]
 pycodestyle = ["74abc4e221d393ea5ce1f129ea6903209940c1ecd29e002e8c6933c2b21026e0", "cbc619d09254895b0d12c2c691e237b2e91e9b2ecf5e84c26b35400f93dcfb83", "cbfca99bd594a10f674d0cd97a3d802a1fdef635d4361e1a2658de47ed261e3a"]
