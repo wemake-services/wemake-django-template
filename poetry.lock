@@ -135,7 +135,7 @@ description = "Linting dotenv files like a charm!"
 name = "dotenv-linter"
 optional = false
 python-versions = ">=3.6,<4.0"
-version = "0.1.2"
+version = "0.1.3"
 
 [package.dependencies]
 click = ">=7.0,<8.0"
@@ -773,7 +773,7 @@ description = "A collection of helpers and mock objects for unit tests and doc t
 name = "testfixtures"
 optional = false
 python-versions = "*"
-version = "6.3.0"
+version = "6.4.0"
 
 [[package]]
 category = "dev"
@@ -844,7 +844,7 @@ python-versions = "*"
 version = "0.5.2"
 
 [metadata]
-content-hash = "95df482720a06eeecc78bd3d255afabc299365da9adcf690935a96f6056957a7"
+content-hash = "bc12dd9edffc042a748c21459c563f5198f3c264092886de14c73eff8b7e375d"
 python-versions = "3.6.6"
 
 [metadata.hashes]
@@ -861,7 +861,7 @@ click-default-group = ["ba8c43d9c384e1ea7127484c5fc8f4e1ca759519a64fff10718d53f4
 colorama = ["05eed71e2e327246ad6b38c540c4a3117230b19679b875190486ddd2d721422d", "f8ac84de7840f5b9c4e3347b3c1eaa50f7e49c2b07596221daec5edaabbd7c48"]
 cookiecutter = ["1316a52e1c1f08db0c9efbf7d876dbc01463a74b155a0d83e722be88beda9a3e", "ed8f54a8fc79b6864020d773ce11539b5f08e4617f353de1f22d23226f6a0d36"]
 dataclasses = ["454a69d788c7fda44efd71e259be79577822f5e3f53f029a22d08004e951dc9f", "6988bd2b895eef432d562370bb707d540f32f7360ab13da45340101bc2307d84"]
-dotenv-linter = ["3a687c897935748fc7cee888a6452bb89221bec729e444abfb0e285376470ff0", "bce6b9323949697b540b23b6827f31c5f48252f1e71a7dc4b941658cc8cbacd9"]
+dotenv-linter = ["5ec663b51765f951ecf3aee53b85e827745d4d0ca2667a1eda8f683642c572f0", "6b082b9b5496c500afa7cac2993777fd0e71110dd5152ce0b5e242e9d747d6a6"]
 dparse = ["00a5fdfa900629e5159bf3600d44905b333f4059a3366f28e0dbd13eeab17b19", "cef95156fa0adedaf042cd42f9990974bec76f25dfeca4dc01f381a243d5aa5b"]
 eradicate = ["f9af01c544ccd8f71bc2f7f3fa39dc363d842cfcb9c730a83676a59026ab5f24"]
 flake8 = ["6a35f5b8761f45c5513e3405f110a86bea57982c3b75b766ce7b65217abe1670", "c01f8a3963b3571a8e6bd7a4063359aff90749e160778e03817cd9b71c9e07d2"]
@@ -920,7 +920,7 @@ six = ["3350809f0555b11f552448330d0b52d5f24c91a322ea4a15ef22629740f3761c", "d16a
 smmap2 = ["0555a7bf4df71d1ef4218e4807bbf9b201f910174e6e08af2e138d4e517b4dde", "29a9ffa0497e7f2be94ca0ed1ca1aa3cd4cf25a1f6b4f5f87f74b46ed91d609a"]
 snowballstemmer = ["919f26a68b2c17a7634da993d91339e288964f93c274f1343e3bbbe2096e1128", "9f3bcd3c401c3e862ec0ebe6d2c069ebc012ce142cce209c098ccb5b09136e89"]
 stevedore = ["b92bc7add1a53fb76c634a178978d113330aaf2006f9498d9e2414b31fbfc104", "c58b7c231a9c4890cd3c2b5d2b23bd63fa807ff934d68579e3f6c3a1735e8a7c"]
-testfixtures = ["334497d26344e8c0c5d01b4d785a1c83464573151e6a5f7ab250eb7981d452ec", "53c06c1feb0bf378d63c54d1d96858978422d5a34793b39f0dcb0e44f8ec26f4"]
+testfixtures = ["ca7ed01e31c60deba68227d2b5b5fc1c573ea3d2fd684d3e72182d4ea5349ec6", "ea3cd0caf1d6e4f9ebde9ff16617354db583c3343ec41c05f92612268be2e536"]
 typing = ["4027c5f6127a6267a435201981ba156de91ad0d1d98e9ddc2aa173453453492d", "57dcf675a99b74d64dacf6fba08fb17cf7e3d5fdff53d4a30ea2a5e7e52543d4", "a4c8473ce11a65999c8f59cb093e70686b6c84c98df58c1dae9b3b196089858a"]
 typing-extensions = ["2a6c6e78e291a4b6cbd0bbfd30edc0baaa366de962129506ec8fe06bdec66457", "51e7b7f3dcabf9ad22eed61490f3b8d23d9922af400fe6656cb08e66656b701f", "55401f6ed58ade5638eb566615c150ba13624e2f0c1eedd080fc3c1b6cb76f1d"]
 urllib3 = ["61bf29cada3fc2fbefad4fdf059ea4bd1b4a86d2b6d15e1c7c0b582b9752fe39", "de9529817c93f27c8ccbfead6985011db27bd0ddfcdb2d86f3f663385c6a9c22"]
