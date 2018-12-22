@@ -56,6 +56,28 @@ See `yamllint <https://github.com/adrienverge/yamllint>`_ docs.
   yamllint -d '{"extends": "default", "ignore": ".venv"}' -s .
 
 
+dotenv-linter
+-------------
+
+Is used to lint your ``.env`` files.
+See `dotenv-linter <https://github.com/wemake-services/dotenv-linter>`_ docs.
+
+.. code:: bash
+
+  dotenv-linter config/.env config/.env.template
+
+
+polint
+------
+
+Is used to lint your ``.po`` files.
+See `polint <https://github.com/ziima/polint>`_ docs.
+
+.. code:: bash
+
+   polint -i location,unsorted locales
+
+
 Linters that are not included
 -----------------------------
 
