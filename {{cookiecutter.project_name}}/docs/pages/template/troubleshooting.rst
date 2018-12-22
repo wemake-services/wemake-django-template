@@ -27,19 +27,20 @@ It happens because build happens in ``docker`` as the ``root`` user.
 The fix is to pass current ``UID`` to ``docker``.
 See `<https://github.com/wemake-services/wemake-django-template/issues/345>`_.
 
-macos performance
+MacOS performance
 ~~~~~~~~~~~~~~~~~
 
-If you use the *Mac OS* you
-know that you have problems with disk performance. Starting and restarting an
-application is slower than with Linux (it's very noticeable for project with
-large codebase). For particular solve this problem add `:delegated` to each
-your volumes in `docker-compose.yaml`.
+If you use the MacOS you
+know that you have problems with disk performance.
+Starting and restarting an application is slower than with Linux
+(it's very noticeable for project with large codebase).
+For particular solve this problem add ``:delegated`` to each
+your volumes in ``docker-compose.yml`` file.
 
-  .. code:: yaml
+.. code:: yaml
 
-      volumes:
-        - pgdata:/var/lib/postgresql/data:delegated
+  volumes:
+    - pgdata:/var/lib/postgresql/data:delegated
 
 For more information, you can look at the
 `docker documents <https://docs.docker.com/docker-for-mac/osxfs-caching/>`_
