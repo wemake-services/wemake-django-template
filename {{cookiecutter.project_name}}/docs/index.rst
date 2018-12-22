@@ -94,12 +94,6 @@ There are multiple processes that you need to get familiar with:
    pages/template/faq.rst
    pages/template/troubleshooting.rst
 
-.. toctree::
-   :maxdepth: 1
-   :caption: Tips & tricks:
-
-   pages/template/tips.rst
-
 
 Indexes and tables
 ==================
