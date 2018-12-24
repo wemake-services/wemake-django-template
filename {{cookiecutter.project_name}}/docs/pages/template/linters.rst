@@ -23,6 +23,12 @@ Things that are included in the linting process:
 - `eradicate <https://github.com/myint/eradicate>`_ to find dead code
 - and more!
 
+Running linting process for all ``python`` files in the project:
+
+.. code:: bash
+
+  flake8 **/*.py
+
 
 xenon
 -----

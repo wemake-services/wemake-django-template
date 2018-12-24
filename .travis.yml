@@ -21,6 +21,7 @@ install:
   - poetry install --no-interaction --no-ansi
 
 script:
+  - flake8 hooks tests
   - pytest
   - sh tests/test_integration.sh
   - poetry check

@@ -17,6 +17,17 @@ poetry install
 To activate your `virtualenv` run `poetry shell`.
 
 
+## Linting
+
+We use `flake8` to run linting.
+We use `wemake-python-styleguide` as the main code style rules.
+Run:
+
+```bash
+flake8 hooks tests
+```
+
+
 ## Unit tests
 
 We use `pytest` to run unit tests. Run:

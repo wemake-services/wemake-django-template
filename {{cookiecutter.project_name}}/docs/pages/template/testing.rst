@@ -20,16 +20,12 @@ It is configured inside ``setup.cfg`` file.
 We use a lot of ``pytest`` plugins that enhance our development experience.
 List of these plugins is available inside ``pyproject.toml`` file.
 
-We also kindly ask ``pytest`` to run our linting process via ``pytest-flake8``
-plugin. See :ref:`linters` to know what style checks we use.
-
 Plugins
 ~~~~~~~
 
 We use different ``pytest`` plugins to make our testing process better.
 Here's the full list of things we use:
 
-- `pytest-flake8`_ - plugin to run ``flake8`` checks alongside with tests
 - `pytest-django`_ - plugin that introduce a lot of ``django`` specific
   helpers, fixtures, and configuration
 - `pytest-cov`_ - plugin to measure test coverage
@@ -42,7 +38,6 @@ Here's the full list of things we use:
 - `pytest-testmon`_ - plugin for `Test Driven Development`_ which executes
   tests that are affected by your code changes
 
-.. _pytest-flake8: https://github.com/tholo/pytest-flake8
 .. _pytest-django: https://github.com/pytest-dev/pytest-django
 .. _pytest-cov: https://github.com/pytest-dev/pytest-cov
 .. _pytest-randomly: https://github.com/pytest-dev/pytest-randomly

@@ -18,7 +18,10 @@ pyclean () {
 }
 
 run_ci () {
-  # Running tests:
+  # Running linting for all python files in the project:
+  flake8 **/*.py
+
+  # Running tests and type checking:
   mypy server
   pytest --dead-fixtures --dup-fixtures
   pytest

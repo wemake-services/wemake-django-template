@@ -52,7 +52,7 @@ extensions = [
     'sphinx.ext.githubpages',
     'sphinx.ext.napoleon',
 
-    # 3rd party (order matters!):
+    # 3rd party, order matters:
     # https://github.com/wemake-services/wemake-django-template/issues/159
     'sphinx_autodoc_typehints',
 ]
@@ -62,8 +62,6 @@ templates_path = ['_templates']
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
-#
-# source_suffix = ['.rst', '.md']
 source_suffix = ['.rst']
 
 # The master toctree document.
@@ -71,7 +69,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'wemake-django-template'
-copyright = '2017, wemake.services'
+copyright = '2017, wemake.services'  # noqa: A001
 author = 'wemake.services'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -112,8 +110,7 @@ html_theme = 'alabaster'
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-#
-# html_theme_options = {}
+html_theme_options = {}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -132,5 +129,5 @@ html_sidebars = {
         'relations.html',  # needs 'show_related': True theme option to display
         'moreinfo.html',
         'searchbox.html',
-    ]
+    ],
 }
