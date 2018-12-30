@@ -12,9 +12,12 @@ Django
 Django has a lot of `security-specific settings <https://docs.djangoproject.com/en/1.11/topics/security/>`_
 that are all turned on by default.
 
-We also enforce ``https`` only access in production.
+We also :ref:`enforce <going-to-production#checks>` all the best practices
+including ``https`` only access in production by running ``django`` checks
+inside CI for each commit.
 
-We also use a set of custom ``django`` apps to enforce even more security:
+We also use a set of custom ``django`` apps
+to enforce even more security rules:
 
 - `django-axes <https://github.com/jazzband/django-axes>`_ to track and ban repeating access requests
 - `django-csp <https://github.com/mozilla/django-csp>`_ to enforce `Content-Security Policy <https://www.w3.org/TR/CSP/>`_ for our webpages
@@ -75,7 +78,7 @@ There are different tools to help you:
 
 - `twa <https://github.com/trailofbits/twa>`_ - tiny web auditor that has a lot of security checks for the webpages
 - `XSStrike <https://github.com/s0md3v/XSStrike>`_ - automated tool to check that your application is not vulnerable to ``xss`` errors
-- `docker-bench <https://github.com/docker/docker-bench-security>` - a script that checks for dozens of common best-practices around deploying Docker containers in production
+- `docker-bench <https://github.com/docker/docker-bench-security>`_ - a script that checks for dozens of common best-practices around deploying Docker containers in production
 - `lynis <https://cisofy.com/lynis/>`_ - a battle-tested security tool for systems running Linux, macOS, or Unix-based operating system
 
 But, even after all you attempts to secure your application,
@@ -87,3 +90,4 @@ Further reading
 
 - `Open Web Application Security Project <https://www.owasp.org/images/3/33/OWASP_Application_Security_Verification_Standard_3.0.1.pdf>`_
 - `Docker security <https://docs.docker.com/engine/security/security/>`_
+- `AppArmor <https://docs.docker.com/engine/security/apparmor/>`_ and `bane <https://github.com/genuinetools/bane>`_
