@@ -73,8 +73,10 @@ is to constantly audit it in production.
 
 There are different tools to help you:
 
-- `twa <https://github.com/trailofbits/twa>`_ - tiny web auditor that has a lot of security checks
+- `twa <https://github.com/trailofbits/twa>`_ - tiny web auditor that has a lot of security checks for the webpages
 - `XSStrike <https://github.com/s0md3v/XSStrike>`_ - automated tool to check that your application is not vulnerable to ``xss`` errors
+- `docker-bench <https://github.com/docker/docker-bench-security>` - a script that checks for dozens of common best-practices around deploying Docker containers in production
+- `lynis <https://cisofy.com/lynis/>`_ - a battle-tested security tool for systems running Linux, macOS, or Unix-based operating system
 
 But, even after all you attempts to secure your application,
 it **won't be 100% safe**. Do not fall into this false feeling of security.
@@ -84,3 +86,4 @@ Further reading
 ---------------
 
 - `Open Web Application Security Project <https://www.owasp.org/images/3/33/OWASP_Application_Security_Verification_Standard_3.0.1.pdf>`_
+- `Docker security <https://docs.docker.com/engine/security/security/>`_
