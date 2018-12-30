@@ -24,6 +24,12 @@ And there are also some awesome extensions that are not included:
 
 - `django-honeypot <https://github.com/jamesturk/django-honeypot>`_ - django application that provides utilities for preventing automated form spam
 
+Passwords
+~~~~~~~~~
+
+We use strong algorithms for password hashing:
+``bcrypt``, ``PBKDF2`` and ``Argon2`` which are known to be secure enough.
+
 
 Dependencies
 ------------
@@ -45,14 +51,36 @@ includes `bandit <https://pypi.org/project/bandit/>`_ security checks inside.
 
 You can also install `pyt <https://pyt.readthedocs.io>`_
 which is not included by default.
-It will include even more static checks for ``sql`` injections, ``xss`` and others.
+It will include even more static checks for
+``sql`` injections, ``xss`` and others.
+
+
+Secrets
+-------
+
+We store secrets separately from code. So, it is harder for them to leak.
+However, we encourage to use tools like
+`truffleHog <https://github.com/dxa4481/truffleHog>`_ or `detect-secrets <https://github.com/Yelp/detect-secrets>`_ inside your workflow.
+
+You can also turn on `Gitlab secrets checker <https://docs.gitlab.com/ee/push_rules/push_rules.html#prevent-pushing-secrets-to-the-repository>`_ which we highly recommend.
 
 
 Audits
 ------
 
-The only way to be sure that your app is secure is to audit it in production.
-The are different tools to help you:
+The only way to be sure that your app is secure
+is to constantly audit it in production.
+
+There are different tools to help you:
 
 - `twa <https://github.com/trailofbits/twa>`_ - tiny web auditor that has a lot of security checks
 - `XSStrike <https://github.com/s0md3v/XSStrike>`_ - automated tool to check that your application is not vulnerable to ``xss`` errors
+
+But, even after all you attempts to secure your application,
+it **won't be 100% safe**. Do not fall into this false feeling of security.
+
+
+Further reading
+---------------
+
+- `Open Web Application Security Project <https://www.owasp.org/images/3/33/OWASP_Application_Security_Verification_Standard_3.0.1.pdf>`_
