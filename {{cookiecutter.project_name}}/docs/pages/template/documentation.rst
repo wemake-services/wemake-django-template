@@ -77,6 +77,15 @@ This is also used in our CI process, so your build will fail
 if there are violations.
 
 
+Useful plugins
+--------------
+
+Some ``sphinx`` plugins are not included, since they are very specific.
+However, they are very useful:
+
+- `sphinxcontrib-mermaid <https://github.com/mgaitan/sphinxcontrib-mermaid>`_ - sphinx plugin to render general flowcharts, sequence and gantt diagrams
+
+
 Further reading
 ---------------
 

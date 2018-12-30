@@ -77,6 +77,7 @@ There are multiple processes that you need to get familiar with:
    pages/template/documentation.rst
    pages/template/linters.rst
    pages/template/testing.rst
+   pages/template/security.rst
    pages/template/gitlab-ci.rst
 
 .. toctree::
