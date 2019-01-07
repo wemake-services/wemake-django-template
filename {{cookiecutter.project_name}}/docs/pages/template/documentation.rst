@@ -83,7 +83,8 @@ Useful plugins
 Some ``sphinx`` plugins are not included, since they are very specific.
 However, they are very useful:
 
-- `sphinxcontrib-mermaid <https://github.com/mgaitan/sphinxcontrib-mermaid>`_ - sphinx plugin to render general flowcharts, sequence and gantt diagrams
+- `sphinxcontrib-mermaid <https://github.com/mgaitan/sphinxcontrib-mermaid>`_ - sphinx plugin to create general flowcharts, sequence and gantt diagrams
+- `sphinxcontrib-plantuml <https://github.com/sphinx-contrib/plantuml/>`_ - sphinx plugin to create UML diagrams
 
 
 Further reading
