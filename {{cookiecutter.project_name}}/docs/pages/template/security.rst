@@ -10,11 +10,10 @@ Django
 ------
 
 Django has a lot of `security-specific settings <https://docs.djangoproject.com/en/1.11/topics/security/>`_
-that are all turned on by default.
+that are all turned on by default in this template.
 
 We also :ref:`enforce <going-to-production#checks>` all the best practices
-including ``https`` only access in production by running ``django`` checks
-inside CI for each commit.
+by running ``django`` checks inside CI for each commit.
 
 We also use a set of custom ``django`` apps
 to enforce even more security rules:
