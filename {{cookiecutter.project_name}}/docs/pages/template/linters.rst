@@ -91,8 +91,8 @@ Sometimes we use several other linters that are not included.
 That's because they require another technology stack to be installed
 or just out of scope.
 
-We also recommend to check the list of linters recommended
-by `wemake-python-styleguide <https://wemake-python-styleguide.readthedocs.io/en/latest/pages/usage.html#extras>`_.
+We also recommend to check the list of linters
+`recommended by wemake-python-styleguide <https://wemake-python-styleguide.readthedocs.io/en/latest/pages/usage.html#extras>`_.
 
 Here's the list of these linters. You may still find them useful.
 
