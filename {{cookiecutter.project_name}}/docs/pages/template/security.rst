@@ -38,11 +38,16 @@ Dependencies
 
 We use `poetry <https://poetry.eustace.io/>`_ which ensures
 that all the dependencies hashes match during the installation process.
-Otherwise, the build will fail. So, it is almost impossible to
+Otherwise, the build will fail.
+So, it is almost impossible to replace an already existing package
+with a malicious one.
 
 We also use `safety <https://github.com/pyupio/safety>`_
 to analyze vulnerable dependencies to prevent the build
 to go to the production with unsafe dependencies.
+
+We also use `Github security alerts <https://help.github.com/articles/about-security-alerts-for-vulnerable-dependencies/>`_
+for our main template repository.
 
 
 Static analysis
