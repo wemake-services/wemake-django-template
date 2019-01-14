@@ -85,6 +85,7 @@ However, they are very useful:
 
 - `sphinxcontrib-mermaid <https://github.com/mgaitan/sphinxcontrib-mermaid>`_ - sphinx plugin to create general flowcharts, sequence and gantt diagrams
 - `sphinxcontrib-plantuml <https://github.com/sphinx-contrib/plantuml/>`_ - sphinx plugin to create UML diagrams
+- `nbsphinx <https://github.com/spatialaudio/nbsphinx>`_ - sphinx plugin to embed ``ipython`` notebooks into your docs
 
 
 Further reading

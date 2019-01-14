@@ -10,6 +10,9 @@ www.{$DOMAIN_NAME} {
   tls {$TLS_EMAIL}
   header / Strict-Transport-Security "max-age=31536000;"
 
+  # Removing some headers for improved security:
+  header / -Server
+
   # Serves static files, should be the same as `STATIC_ROOT` setting:
   root /var/www/django
 
