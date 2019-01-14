@@ -134,6 +134,23 @@ that your DNS records are pointing to the server Caddy runs on.
 Read more: `Automatic HTTPS <https://caddyserver.com/docs/automatic-https>`_
 in Caddy docs.
 
+Caddyfile validation
+~~~~~~~~~~~~~~~~~~~~
+
+You can also run ``-validate`` command to validate ``Caddyfile`` contents.
+
+Here's it would look like:
+
+.. code:: bash
+
+  docker-compose -f docker-compose.yml -f docker/docker-compose.prod.yml
+  run --rm caddy -validate
+
+This check is not included in the pipeline by default,
+because it is quite long to start all the machinery for this single check.
+
+You can install ``caddy`` locally and attach this check on a pre-commit hook.
+
 Disabling HTTPS
 ~~~~~~~~~~~~~~~
 
