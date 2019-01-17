@@ -232,7 +232,7 @@ description = "Django Content Security Policy support."
 name = "django-csp"
 optional = false
 python-versions = "*"
-version = "3.4"
+version = "3.5"
 
 [package.dependencies]
 Django = ">=1.8"
@@ -1443,7 +1443,7 @@ python-versions = ">=2.7"
 version = "0.3.3"
 
 [metadata]
-content-hash = "156c7e416c166e647d544def729a2bf5df1171e0b25832c103438b7e9d6a473e"
+content-hash = "19798971188d5772d954f96d1e48aa889686161797ff086b02f9454b4fc0254a"
 python-versions = "3.6.6"
 
 [metadata.hashes]
@@ -1471,7 +1471,7 @@ decorator = ["2c51dff8ef3c447388fe5e4453d24a2bf128d3a4c32af3fabef1f01c6851ab82",
 django = ["73cca1dac154e749b39cc91a54dc876109eb0512a5c6804986495305047066a5", "7ee7d93d407f082e3849c8d10da50ff5b488af37ed1b0066a22dee5f2709ed16"]
 django-appconf = ["6a4d9aea683b4c224d97ab8ee11ad2d29a37072c0c6c509896dd9857466fb261", "ddab987d14b26731352c01ee69c090a4ebfc9141ed223bef039d79587f22acd9"]
 django-axes = ["6f2719c9040e5120ece56232b6ab499b9cc3f02aa58d9fdee04210f480c7c30c", "7c539b1bbcac6752319783a5bd41c20c7b765cded31da9568a86e4521524a91e"]
-django-csp = ["04c0ccd4e1339e8f6af48c55c3347dc996fde2d22d79e8bf2f6b7a920412e408", "096b634430d8ea81c3d9f216f87be890f3a975c17bb9a4631f6a1619ac09c91e"]
+django-csp = ["04600237701e6d6ff78ed7d41209ff923988148bf292c128f6b474b9befe444f", "8b9997df89a7a936d7c397e051367f974aa1d1a97d0b32acb4300087b3bed071"]
 django-debug-toolbar = ["89d75b60c65db363fb24688d977e5fbf0e73386c67acf562d278402a10fc3736", "c2b0134119a624f4ac9398b44f8e28a01c7686ac350a12a74793f3dd57a9eea0"]
 django-ipware = ["a7c7a8fd019dbdc9c357e6e582f65034e897572fc79a7e467674efa8aef9d00b"]
 django-querycount = ["8f5123d78716ff0704f2373e746a7200b8d8417798ce4a99bf2de87e3768f9ce"]
