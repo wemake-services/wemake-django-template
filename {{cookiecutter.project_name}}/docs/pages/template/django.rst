@@ -118,6 +118,8 @@ Here's a full list of the extensions for both development and production:
   of failed login attempts in ``django`` powered sites
 - `django-csp`_ - `Content Security Policy`_ for ``django``
 - `django-referrer-policy`_ - middleware implementing the `Referrer-Policy`_
+- `django-health-check`_ - checks for various conditions and provides reports
+  when anomalous behavior is detected
 
 Development only extensions:
 
@@ -133,6 +135,7 @@ Development only extensions:
 .. _`Content Security Policy`: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
 .. _django-referrer-policy: https://github.com/ubernostrum/django-referrer-policy
 .. _`Referrer-Policy`: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
+.. _django-health-check: _https://github.com/KristianOellegaard/django-health-check
 .. _django-debug-toolbar: https://github.com/jazzband/django-debug-toolbar
 .. _django-querycount: https://github.com/bradmontgomery/django-querycount
 .. _nplusone: https://github.com/jmcarp/nplusone

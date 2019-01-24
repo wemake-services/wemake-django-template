@@ -16,6 +16,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.contrib.admindocs import urls as admindocs_urls
 from django.views.generic import TemplateView
+from health_check import urls as health_urls
 
 from server.main_app import urls as main_urls
 from server.main_app.views import index
@@ -24,12 +25,17 @@ admin.autodiscover()
 
 
 urlpatterns = [
+    # Apps:
+    url(r'^main/', include(main_urls, namespace='main_app')),
+
+    # Health checks:
+    url(r'^health/', include(
+        (health_urls, 'health_check'), namespace='health',
+    )),
+
     # django-admin:
     url(r'^admin/doc/', include(admindocs_urls)),  # noqa: DJ05
     url(r'^admin/', admin.site.urls),
-
-    # Apps:
-    url(r'^main/', include(main_urls, namespace='main_app')),
 
     # Text and xml static files:
     url(r'^robots\.txt$', TemplateView.as_view(

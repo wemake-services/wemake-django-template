@@ -22,6 +22,9 @@ SECRET_KEY = config('DJANGO_SECRET_KEY')
 # Application definition:
 
 INSTALLED_APPS: Tuple[str, ...] = (
+    # Your apps go here:
+    'server.main_app',
+
     # Default django apps:
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -36,8 +39,13 @@ INSTALLED_APPS: Tuple[str, ...] = (
     # Security:
     'axes',
 
-    # Your apps go here:
-    'server.main_app',
+    # Health checks:
+    # You may want to enable other checks as well,
+    # see: https://github.com/KristianOellegaard/django-health-check
+    'health_check',
+    'health_check.db',
+    'health_check.cache',
+    'health_check.storage',
 )
 
 MIDDLEWARE: Tuple[str, ...] = (

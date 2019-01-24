@@ -251,6 +251,14 @@ sqlparse = ">=0.2.0"
 
 [[package]]
 category = "main"
+description = "Run checks on services like databases, queue servers, celery processes, etc."
+name = "django-health-check"
+optional = false
+python-versions = "*"
+version = "3.8.0"
+
+[[package]]
+category = "main"
 description = "A Django utility application that returns client's real IP address"
 name = "django-ipware"
 optional = false
@@ -1455,7 +1463,7 @@ python-versions = ">=2.7"
 version = "0.3.3"
 
 [metadata]
-content-hash = "7884b5f701e5088331b0634c36553b055c619734f517e5624aa812ddf84aa172"
+content-hash = "66d33ee0266b68746b22cc0e72e1f42cbf4f7df4ac0bf8f93920a984766e1d20"
 python-versions = "3.6.6"
 
 [metadata.hashes]
@@ -1485,6 +1493,7 @@ django-appconf = ["6a4d9aea683b4c224d97ab8ee11ad2d29a37072c0c6c509896dd9857466fb
 django-axes = ["6f2719c9040e5120ece56232b6ab499b9cc3f02aa58d9fdee04210f480c7c30c", "7c539b1bbcac6752319783a5bd41c20c7b765cded31da9568a86e4521524a91e"]
 django-csp = ["04600237701e6d6ff78ed7d41209ff923988148bf292c128f6b474b9befe444f", "8b9997df89a7a936d7c397e051367f974aa1d1a97d0b32acb4300087b3bed071"]
 django-debug-toolbar = ["89d75b60c65db363fb24688d977e5fbf0e73386c67acf562d278402a10fc3736", "c2b0134119a624f4ac9398b44f8e28a01c7686ac350a12a74793f3dd57a9eea0"]
+django-health-check = ["11588bc8502c92725c3bbb6950c3704eefb98848f07983686aa2bb106353900f"]
 django-ipware = ["a7c7a8fd019dbdc9c357e6e582f65034e897572fc79a7e467674efa8aef9d00b"]
 django-querycount = ["8f5123d78716ff0704f2373e746a7200b8d8417798ce4a99bf2de87e3768f9ce"]
 django-referrer-policy = ["09e134324fa08c10efc12244a4bae7aee5defa7d332b92c603b09258c854615a"]
