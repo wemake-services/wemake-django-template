@@ -29,9 +29,7 @@ urlpatterns = [
     url(r'^main/', include(main_urls, namespace='main_app')),
 
     # Health checks:
-    url(r'^health/', include(
-        (health_urls, 'health_check'), namespace='health',
-    )),
+    url(r'^health/', include(health_urls)),  # noqa: DJ05
 
     # django-admin:
     url(r'^admin/doc/', include(admindocs_urls)),  # noqa: DJ05
