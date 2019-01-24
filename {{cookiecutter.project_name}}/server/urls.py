@@ -13,7 +13,8 @@ files serving technique in development.
 
 from django.conf import settings
 from django.conf.urls import include, url
-from django.contrib import admin, admindocs
+from django.contrib import admin
+from django.contrib.admindocs import urls as admindocs_urls
 from django.views.generic import TemplateView
 
 from server.main_app import urls as main_urls
@@ -24,7 +25,7 @@ admin.autodiscover()
 
 urlpatterns = [
     # django-admin:
-    url(r'^admin/doc/', include(admindocs.urls)),  # noqa: DJ05
+    url(r'^admin/doc/', include(admindocs_urls)),  # noqa: DJ05
     url(r'^admin/', admin.site.urls),
 
     # Apps:
