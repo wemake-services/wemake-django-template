@@ -74,18 +74,6 @@ To add a new dependency you can run:
 
 This command might be used with ``docker``.
 
-Dependencies security
-~~~~~~~~~~~~~~~~~~~~~
-
-We use ``safety`` to validate that we use only secure releases.
-To validate that all dependencies are secure, run:
-
-.. code:: bash
-
-   safety check
-
-This command might be used with ``docker``.
-
 Updating poetry version
 ~~~~~~~~~~~~~~~~~~~~~~~
 

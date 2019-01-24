@@ -44,7 +44,11 @@ with a malicious one.
 
 We also use `safety <https://github.com/pyupio/safety>`_
 to analyze vulnerable dependencies to prevent the build
-to go to the production with unsafe dependencies.
+to go to the production with known unsafe dependencies.
+
+.. code:: bash
+
+  safety check
 
 We also use `Github security alerts <https://help.github.com/articles/about-security-alerts-for-vulnerable-dependencies/>`_
 for our main template repository.

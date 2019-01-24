@@ -29,6 +29,15 @@ Running linting process for all ``python`` files in the project:
 
   flake8 **/*.py
 
+Extra plugins
+~~~~~~~~~~~~~
+
+We also use some extra plugins for ``flake8``
+that are not bundled with ``wemake-python-styleguide``:
+
+- `flake8-pytest <https://github.com/vikingco/flake8-pytest>`_ - ensures that ``pytest`` best practices are used
+- `flake8-django <https://github.com/rocioar/flake8-django>`_ - plugin to enforce best practices in a ``django`` project
+
 
 xenon
 -----
@@ -82,6 +91,17 @@ See `polint <https://github.com/ziima/polint>`_ docs.
 .. code:: bash
 
    polint -i location,unsorted locales
+
+
+Packaging
+---------
+
+We also use ``pip`` and ``poetry`` self checks to be sure
+that packaging works correctly.
+
+.. code:: bash
+
+  poetry check && pip check
 
 
 Linters that are not included
