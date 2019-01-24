@@ -61,6 +61,17 @@ To validate that all dependencies are secure, run:
    safety check
 
 
+Automatic dependencies update
+-----------------------------
+
+You can use `dependabot <https://github.com/dependabot/dependabot-script>`_
+to enable automatic dependencies updates via Pull Requests to your repository.
+Similar to the original template repository: `list of pull requests <https://github.com/wemake-services/wemake-django-template/pulls?q=is%3Apr+author%3Aapp%2Fdependabot>`_.
+
+It is available to both Github and Gitlab.
+But, for Gitlab version you currently have to update your `.gitlab-ci.yml <https://github.com/dependabot/dependabot-script/blob/master/.gitlab-ci.example.yml>`_.
+
+
 Updating poetry version
 -----------------------
 

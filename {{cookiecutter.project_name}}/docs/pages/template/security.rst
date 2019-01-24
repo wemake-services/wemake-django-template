@@ -62,6 +62,18 @@ It will include even more static checks for
 ``sql`` injections, ``xss`` and others.
 
 
+Dynamic analysis
+----------------
+
+You can monitor your running application to detect anomalous activities.
+Tools to consider:
+
+- `dagda <https://github.com/eliasgranderubio/dagda>`_ - a tool to perform static analysis of known vulnerabilities, trojans, viruses, malware & other malicious threats in docker images/containers and to monitor the docker daemon and running docker containers for detecting anomalous activities
+
+All the tools above are not included into this template.
+You have to install them by yourself.
+
+
 Secrets
 -------
 

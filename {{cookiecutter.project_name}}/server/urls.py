@@ -13,7 +13,7 @@ files serving technique in development.
 
 from django.conf import settings
 from django.conf.urls import include, url
-from django.contrib import admin
+from django.contrib import admin, admindocs
 from django.views.generic import TemplateView
 
 from server.main_app import urls as main_urls
@@ -24,11 +24,11 @@ admin.autodiscover()
 
 urlpatterns = [
     # django-admin:
-    url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+    url(r'^admin/doc/', include(admindocs.urls)),  # noqa: DJ05
     url(r'^admin/', admin.site.urls),
 
     # Apps:
-    url(r'^main/', include(main_urls)),
+    url(r'^main/', include(main_urls, namespace='main_app')),
 
     # Text and xml static files:
     url(r'^robots\.txt$', TemplateView.as_view(
@@ -50,7 +50,7 @@ if settings.DEBUG:  # pragma: no cover
 
     urlpatterns = [
         # URLs specific only to django-debug-toolbar:
-        url(r'^__debug__/', include(debug_toolbar.urls)),
+        url(r'^__debug__/', include(debug_toolbar.urls)),  # noqa: DJ05
 
         # Serving media files in development only:
         url(r'^media/(?P<path>.*)$', serve, {

@@ -22,8 +22,8 @@ def validate_project_name():
     if not re.match(MODULE_REGEX, MODULE_NAME):
         # Validates project's module name:
         message = (
-            'ERROR: The project slug {0} is not a valid Python module name. '
-            'Start with a lowercase letter. '
+            'ERROR: The project slug {0} is not a valid Python module name. ' +
+            'Start with a lowercase letter. ' +
             'Followed by any lowercase letters, numbers or underscores.'
         )
         raise ValueError(message.format(MODULE_NAME))
@@ -49,7 +49,7 @@ def validate_domain():
         # When entering just a domain everything inside goes to `path`.
         # So, it should be set. If not, that's an error.
         raise ValueError(
-            'ERROR: `project_domain` is invalid. '
+            'ERROR: `project_domain` is invalid. ' +
             'Try to drop the `http(s)://` part.',
         )
 
@@ -63,7 +63,7 @@ def validate_domain():
 
     if any(bool(part) for part in parts):
         raise ValueError(
-            'ERROR: `project_domain` should be a domain name only. '
+            'ERROR: `project_domain` should be a domain name only. ' +
             'Without params, query or any other url parts.',
         )
 
