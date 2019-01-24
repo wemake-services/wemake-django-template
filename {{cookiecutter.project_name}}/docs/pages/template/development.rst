@@ -120,6 +120,8 @@ What do you need to know about it?
 2. Most likely it will have a permanent effect, due to ``docker volumes``
 3. You need to use ``--rm`` to automatically remove this container afterward
 
+**Note**: ``docker`` commands do not need to use ``virtualenv`` at all.
+
 Extra configuration
 ~~~~~~~~~~~~~~~~~~~
 
@@ -144,6 +146,8 @@ When cloning a project for the first time you may
 need to configure it properly,
 see :ref:`django` section for more information.
 
+**Note**, that you will need to activate ``virtualenv`` created
+by ``poetry`` before running any of these commands.
 **Note**, that you only need to run these commands once per project.
 
 Local database
