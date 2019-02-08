@@ -1133,7 +1133,7 @@ description = "take TDD to a new level with py.test and testmon"
 name = "pytest-testmon"
 optional = false
 python-versions = "*"
-version = "0.9.14"
+version = "0.9.15"
 
 [package.dependencies]
 coverage = ">=4,<5"
@@ -1576,7 +1576,7 @@ pytest-cov = ["0ab664b25c6aa9716cbf203b17ddb301932383046082c081b9848a0edf5add33"
 pytest-deadfixtures = ["458b2314862696af11223d869c97814e63db8a7b9f61dcf42fe07a72a7ff9bd8", "61e34fb0f777bc0f321c7d45f39447e965fb1a6d2de243e47aa034387229d9d3"]
 pytest-django = ["3d489db7c9bd18d7c154347b1bdfb82cc6b1ec8539543508b199c77e5eb2caec", "87c31e53ad09ca4f061b82a9d71ad1e3e399c7a5ec9d28f7c3c38a9a9afbd027"]
 pytest-randomly = ["6db5e03d72b54052b9b379dc3cfa4749c19bfe4de161cf3eb24762049f4ce9be", "92ec6745d3ebdd690ecb598648748c9601f16f5afacf83ccef2b50d23e6edb7f"]
-pytest-testmon = ["47fb5d4faa16bf431afbf404029167c18703ffa673d83b13a354186385f25246"]
+pytest-testmon = ["3d0e859bfaf66e1ea77fa35b82462717c6849107bc14447ad674ebf8d011e126", "e348c23c5be668de3cc1b3c1e5d35578dc1241ade7d230b471c06ec6e15b8161"]
 pytest-timeout = ["4a30ba76837a32c7b7cd5c84ee9933fde4b9022b0cd20ea7d4a577c2a1649fb1", "d49f618c6448c14168773b6cdda022764c63ea80d42274e3156787e8088d04c6"]
 python-decouple = ["1317df14b43efee4337a4aa02914bf004f010cd56d6c4bd894e6474ec8c4fe2d"]
 pytz = ["32b0891edff07e28efe91284ed9c31e123d84bea3fd98e1f72be2508f43ef8d9", "d5f05e487007e29e03409f9398d074e158d920d36eb82eaf66fb1136b0c5374c"]
