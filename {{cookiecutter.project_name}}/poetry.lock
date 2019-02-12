@@ -1448,7 +1448,7 @@ description = "A linter for YAML files."
 name = "yamllint"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "1.14.0"
+version = "1.15.0"
 
 [package.dependencies]
 pathspec = ">=0.5.3"
@@ -1463,7 +1463,7 @@ python-versions = ">=2.7"
 version = "0.3.3"
 
 [metadata]
-content-hash = "d7ddefd471fd445d1543ad6045a9c18bbd331986c134b0de2249aac2cd962933"
+content-hash = "22064e9d66de66dea12e9bbee5fc8416414cc929c171e06e05785f5c3d74ba85"
 python-versions = "3.6.6"
 
 [metadata.hashes]
@@ -1604,5 +1604,5 @@ virtualenv = ["34b9ae3742abed2f95d3970acf4d80533261d6061b51160b197f84e5b4c98b4c"
 wcwidth = ["3df37372226d6e63e1b1e1eda15c594bca98a22d33a23832a90998faa96bc65e", "f4ebe71925af7b40a864553f761ed559b43544f8f71746c2d756c7fe788ade7c"]
 wemake-python-styleguide = ["43d0bcbfa7349c80000d7a22e319aff9de6eeabd8b6ff1e3aeb0a4c07453fd04", "b68c5b856b7dcc08e881b656a47544e6659643594bece1f945de543d30d31d5a"]
 xenon = ["26f65adb5d411ba3efc361dc5ab6cd341a243a33b5a526c89350240c765899b9", "ff4bbecf0da99a7f60033e5e9616e28eb2a52d78dc154d90736f8c0124ec3e76"]
-yamllint = ["23041a54139691ee0a25622dfcbe529a1d44b4d0d7a5f42097864ac7fb66645f", "c0a9b641c9f843901fc9261ed71b36f3968c9b04f4c26581cc836d0cabb62a75"]
+yamllint = ["5a53b6ebea563f944420d2964233173532af00a9579ab2c48c4cf8c56b704050", "8f25759997acb42e52b96bf3af0b4b942e6516b51198bebd3402640102006af7"]
 zipp = ["55ca87266c38af6658b84db8cfb7343cdb0bf275f93c7afaea0d8e7a209c7478", "682b3e1c62b7026afe24eadf6be579fb45fec54c07ea218bded8092af07a68c4"]
