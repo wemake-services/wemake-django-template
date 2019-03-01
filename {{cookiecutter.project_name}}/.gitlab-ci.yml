@@ -30,9 +30,7 @@ before_script:
 test:
   stage: test
   script:
-    - docker-compose -f docker-compose.yml
-      -f docker/docker-compose.prod.yml config --quiet
-    - docker-compose run web sh ./docker/ci.sh
+    - pre-commit run -a
   coverage: '/[\d\.]+\%\s*$/'
 
 # Releasing image, when tests pass:
