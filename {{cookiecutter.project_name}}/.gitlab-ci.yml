@@ -18,7 +18,7 @@ before_script:
   # Installing docker-compose:
   - apk update && apk upgrade
   - apk add python python-dev py-pip git build-base
-  - pip install dump-env docker-compose
+  - pip install dump-env docker-compose pre-commit
   # Creating `.env` configuration file:
   - dump-env -t config/.env.template -p 'SECRET_' > config/.env
   # Login into Docker registry:
