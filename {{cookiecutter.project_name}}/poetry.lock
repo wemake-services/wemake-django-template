@@ -1126,7 +1126,7 @@ description = "Pytest plugin to randomly order tests and control random.seed."
 name = "pytest-randomly"
 optional = false
 python-versions = ">=3.4"
-version = "2.0.0"
+version = "2.1.0"
 
 [package.dependencies]
 pytest = "*"
@@ -1467,7 +1467,7 @@ python-versions = ">=2.7"
 version = "0.3.3"
 
 [metadata]
-content-hash = "8969cad323f5c949df0f43ae48f05f37c6ca01a38523c0fc06ca62bd835a566c"
+content-hash = "9c636ca141ebddcf191cf26914c0ce676ee1729c6e1e7c394cd2fd8b01695718"
 python-versions = "3.6.6"
 
 [metadata.hashes]
@@ -1579,7 +1579,7 @@ pytest = ["067a1d4bf827ffdd56ad21bd46674703fce77c5957f6c1eef731f6146bfcef1c", "9
 pytest-cov = ["0ab664b25c6aa9716cbf203b17ddb301932383046082c081b9848a0edf5add33", "230ef817450ab0699c6cc3c9c8f7a829c34674456f2ed8df1fe1d39780f7c87f"]
 pytest-deadfixtures = ["458b2314862696af11223d869c97814e63db8a7b9f61dcf42fe07a72a7ff9bd8", "61e34fb0f777bc0f321c7d45f39447e965fb1a6d2de243e47aa034387229d9d3"]
 pytest-django = ["30d773f1768e8f214a3106f1090e00300ce6edfcac8c55fd13b675fe1cbd1c85", "4d3283e774fe1d40630ee58bf34929b83875e4751b525eeb07a7506996eb42ee"]
-pytest-randomly = ["08868610aa999c5e19117210932d65d70d12da0191abe173b825cdf08428a82c", "cdbc15eb26a8fdf4fe509cc816e9e58eb46129e5c72f6c17d754a6dd3817ef97"]
+pytest-randomly = ["73489a8a650b7b28e6b03c1e8a35cb28f40b826362fc638662d74e35cb311f22", "a811c854e6b220437d45d1408e8deb0fc1537c8d5db9857364f9bdcde30a348e"]
 pytest-testmon = ["3d0e859bfaf66e1ea77fa35b82462717c6849107bc14447ad674ebf8d011e126", "e348c23c5be668de3cc1b3c1e5d35578dc1241ade7d230b471c06ec6e15b8161"]
 pytest-timeout = ["4a30ba76837a32c7b7cd5c84ee9933fde4b9022b0cd20ea7d4a577c2a1649fb1", "d49f618c6448c14168773b6cdda022764c63ea80d42274e3156787e8088d04c6"]
 python-decouple = ["1317df14b43efee4337a4aa02914bf004f010cd56d6c4bd894e6474ec8c4fe2d"]
