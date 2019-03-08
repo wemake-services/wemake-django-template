@@ -22,7 +22,7 @@ install:
 
 script:
   - flake8 hooks tests
-  - pytest
+  - pytest --strict
   - sh tests/test_integration.sh
   - poetry check
   - safety check --bare --full-report
