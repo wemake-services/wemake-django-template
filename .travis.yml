@@ -1,6 +1,6 @@
 language: python
 
-python: 3.6.8
+python: 3.6
 
 addons:
   apt:
