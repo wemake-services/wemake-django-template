@@ -15,6 +15,11 @@ from server.settings.components.common import INSTALLED_APPS, MIDDLEWARE
 
 DEBUG = True
 
+ALLOWED_HOSTS = [
+    config('DOMAIN_NAME'),
+    '0.0.0.0',
+    '127.0.0.1',
+]
 
 # Static files:
 # https://docs.djangoproject.com/en/1.11/ref/settings/#std:setting-STATICFILES_DIRS
