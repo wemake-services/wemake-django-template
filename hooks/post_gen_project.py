@@ -16,7 +16,7 @@ And from pydanny's cookiecutter-django:
 """
 
 import os
-import random
+import secrets
 import shutil
 import string
 
@@ -27,13 +27,6 @@ CHANGEME = '__CHANGEME__'
 PROJECT_DIRECTORY = os.path.realpath(os.path.curdir)
 PROJECT_NAME = '{{ cookiecutter.project_name }}'
 
-# Use the system PRNG if possible
-try:
-    random = random.SystemRandom()
-    using_sysrandom = True
-except NotImplementedError:
-    using_sysrandom = False
-
 
 def _get_random_string(length=50):
     """
@@ -42,42 +35,33 @@ def _get_random_string(length=50):
     The default length of 12 with the a-z, A-Z, 0-9 character set returns
     a 71-bit value. log_2((26+26+10)^12) =~ 71 bits
     """
-    if using_sysrandom:
-        punctuation = string.punctuation.replace(
-            '"', '',
-        ).replace(
-            "'", '',
-        ).replace(
-            '\\', '',
-        ).replace(
-            '$', '',  # see issue-271
-        )
-
-        chars = string.digits + string.ascii_letters + punctuation
-        return ''.join(random.choice(chars) for _ in range(length))
-
-    print(
-        'We could not find a secure pseudo-random '
-        'number generator on your system. '
-        'Please change change your SECRET_KEY variables in config/.env '
-        'manually.',
+    punctuation = string.punctuation.replace(
+        '"', '',
+    ).replace(
+        "'", '',
+    ).replace(
+        '\\', '',
+    ).replace(
+        '$', '',  # see issue-271
     )
-    return CHANGEME
+
+    chars = string.digits + string.ascii_letters + punctuation
+    return ''.join(secrets.choice(chars) for _ in range(length))
 
 
 def _create_secret_key(config_path):
-    with open(config_path) as f:
-        file_ = f.read()
+    with open(config_path) as config_file:
+        file_contents = config_file.read()
 
     # Generate a SECRET_KEY that matches the Django standard
     secret_key = _get_random_string()
 
     # Replace CHANGEME with SECRET_KEY
-    file_ = file_.replace(CHANGEME, secret_key, 1)
+    file_contents = file_contents.replace(CHANGEME, secret_key, 1)
 
     # Write the results to the file
-    with open(config_path, 'w') as f:
-        f.write(file_)
+    with open(config_path, 'w') as config_file:
+        config_file.write(file_contents)
 
 
 def print_futher_instuctions():
@@ -106,12 +90,18 @@ def copy_local_configuration():
 
     # Local config:
     local_template = os.path.join(
-        PROJECT_DIRECTORY, 'server',
-        'settings', 'environments', 'local.py.template',
+        PROJECT_DIRECTORY,
+        'server',
+        'settings',
+        'environments',
+        'local.py.template',
     )
     local_config = os.path.join(
-        PROJECT_DIRECTORY, 'server',
-        'settings', 'environments', 'local.py',
+        PROJECT_DIRECTORY,
+        'server',
+        'settings',
+        'environments',
+        'local.py',
     )
     shutil.copyfile(local_template, local_config)
 

@@ -14,7 +14,9 @@ files serving technique in development.
 from django.conf import settings
 from django.conf.urls import include, url
 from django.contrib import admin
+from django.contrib.admindocs import urls as admindocs_urls
 from django.views.generic import TemplateView
+from health_check import urls as health_urls
 
 from server.main_app import urls as main_urls
 from server.main_app.views import index
@@ -23,12 +25,15 @@ admin.autodiscover()
 
 
 urlpatterns = [
-    # django-admin:
-    url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-    url(r'^admin/', admin.site.urls),
-
     # Apps:
-    url(r'^main/', include(main_urls)),
+    url(r'^main/', include(main_urls, namespace='main_app')),
+
+    # Health checks:
+    url(r'^health/', include(health_urls)),  # noqa: DJ05
+
+    # django-admin:
+    url(r'^admin/doc/', include(admindocs_urls)),  # noqa: DJ05
+    url(r'^admin/', admin.site.urls),
 
     # Text and xml static files:
     url(r'^robots\.txt$', TemplateView.as_view(
@@ -45,23 +50,15 @@ urlpatterns = [
 ]
 
 if settings.DEBUG:  # pragma: no cover
-    import debug_toolbar
-    from django.views.static import serve
+    import debug_toolbar  # noqa: Z435
+    from django.views.static import serve  # noqa: Z435
 
     urlpatterns = [
         # URLs specific only to django-debug-toolbar:
-        url(r'^__debug__/', include(debug_toolbar.urls)),
+        url(r'^__debug__/', include(debug_toolbar.urls)),  # noqa: DJ05
 
         # Serving media files in development only:
         url(r'^media/(?P<path>.*)$', serve, {
             'document_root': settings.MEDIA_ROOT,
         }),
     ] + urlpatterns
-
-# Customize default error views:
-# https://docs.djangoproject.com/en/1.11/topics/http/views/#customizing-error-views
-
-# handler400 = 'your_app.views.error_handler'
-# handler403 = 'your_app.views.error_handler'
-# handler404 = 'your_app.views.error_handler'
-# handler500 = 'your_app.views.error_handler'

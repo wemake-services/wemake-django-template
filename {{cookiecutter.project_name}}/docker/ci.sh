@@ -4,8 +4,6 @@ set -o errexit
 set -o nounset
 
 # Initializing global variables and functions:
-
-: "${INSIDE_CI:=0}"
 : "${DJANGO_ENV:=development}"
 
 # Fail CI if `DJANGO_ENV` is not set to `development`:
@@ -20,60 +18,44 @@ pyclean () {
 }
 
 run_ci () {
-  # Running tests:
+  # Running linting for all python files in the project:
+  flake8 **/*.py
+
+  # Running tests and type checking:
   mypy server
   pytest --dead-fixtures --dup-fixtures
   pytest
 
   # Run checks to be sure settings are correct (production flag is required):
-  DJANGO_ENV=production python /code/manage.py check \
-    --deploy --fail-level WARNING
+  DJANGO_ENV=production python manage.py check --deploy --fail-level WARNING
 
   # Check that staticfiles app is working fine:
   DJANGO_ENV=production python manage.py collectstatic --no-input --dry-run
 
   # Check that all migrations worked fine:
-  python /code/manage.py makemigrations --dry-run --check
+  python manage.py makemigrations --dry-run --check
 
   # Running code-quality check:
   xenon --max-absolute A --max-modules A --max-average A server
 
-  # Running security checks:
-  bandit -r server
+  # Checking if all the dependencies are secure and do not have any
+  # known vulnerabilities:
+  safety check --bare --full-report
+
+  # Checking `pyproject.toml` file contents and dependencies status:
+  poetry check && pip check
 
   # Checking docs:
   doc8 -q docs
 
-  # Checking if all the dependencies are secure and do not have any
-  # known vulnerabilities:
+  # Checking `yaml` files:
+  yamllint -d '{"extends": "default", "ignore": ".venv"}' -s .
 
-  # TODO: remove this security error from ignored
-  # More context:
-  # https://github.com/wemake-services/wemake-django-template/issues/438
-  pipenv check --system -i 36333
+  # Checking `.env` files:
+  dotenv-linter config/.env config/.env.template
 
-  # Run this part only if truly inside the CI process:
-  if [ "$INSIDE_CI" = 1 ]; then
-    # Generating reports as build artifacts, it will be possible
-    # to browse them later:
-    # https://docs.gitlab.com/ce/user/project/pipelines/job_artifacts.html
-    mkdir -p 'artifacts'
-
-    # Generating pylint report (it will have issues!):
-    # https://pylint.readthedocs.io/en/latest/
-    PYLINT=$(pylint 'server' 'tests' || true)
-    echo "$PYLINT" > 'artifacts/pylint.rst'
-
-    # Generating code-quality report:
-    # http://radon.readthedocs.io/en/latest/commandline.html
-    radon mi . > 'artifacts/mi.txt'
-
-    # Generating complexity report:
-    radon cc . -s --show-closures --total-average > 'artifacts/cc.txt'
-
-    # Generating raw metrics:
-    radon raw . > 'artifacts/raw.txt'
-  fi
+  # Checking translation files, ignoring ordering and locations:
+  polint -i location,unsorted locale
 }
 
 # Remove any cache before the script:

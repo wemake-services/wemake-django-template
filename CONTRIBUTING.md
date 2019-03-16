@@ -1,94 +1,55 @@
-# Contributing
+# How to contribute
 
-When contributing to this repository, please first discuss
-the change you wish to make via issue.
+This is a how-to-contribute guide for the template itself.
+This guide is not about contributing to the project that is created
+using this template.
 
-Please note we have a code of conduct,
-please follow it in all your interactions with the project.
+## Dependencies
+
+We use `poetry` to manage the [dependencies](https://github.com/sdispater/poetry).
+
+To install them you would need to run `install` command:
+
+```bash
+poetry install
+```
+
+To activate your `virtualenv` run `poetry shell`.
 
 
-## Pull Request Process
+## Linting
 
-1. Fork a repository
-2. Create new branch named `issue-${your_issue_number}`
-3. Write the code
-4. Run local tests, make sure they pass
-5. Create a Pull Request to the original repo
-6. Follow the advice that you will receive during the code review
-7. Be happy!
+We use `flake8` to run linting.
+We use `wemake-python-styleguide` as the main code style rules.
+Run:
+
+```bash
+flake8 hooks tests
+```
 
 
-## Code of Conduct
+## Unit tests
 
-### Our Pledge
+We use `pytest` to run unit tests. Run:
 
-In the interest of fostering an open and welcoming environment, we as
-contributors and maintainers pledge to making participation in our project and
-our community a harassment-free experience for everyone, regardless of age, body
-size, disability, ethnicity, gender identity and expression, level of experience,
-nationality, personal appearance, race, religion, or sexual identity and
-orientation.
+```bash
+pytest
+```
 
-### Our Standards
 
-Examples of behavior that contributes to creating a positive environment
-include:
+## Integration tests
 
-* Using welcoming and inclusive language
-* Being respectful of differing viewpoints and experiences
-* Gracefully accepting constructive criticism
-* Focusing on what is best for the community
-* Showing empathy towards other community members
+We use `docker` to run integration tests.
+Make sure it is up and running. Then run:
 
-Examples of unacceptable behavior by participants include:
+```bash
+sh tests/test_integration.sh
+```
 
-* The use of sexualized language or imagery and unwelcome sexual attention or
-advances
-* Trolling, insulting/derogatory comments, and personal or political attacks
-* Public or private harassment
-* Publishing others' private information, such as a physical or electronic
-  address, without explicit permission
-* Other conduct which could reasonably be considered inappropriate in a
-  professional setting
 
-### Our Responsibilities
+## Other help
 
-Project maintainers are responsible for clarifying the standards of acceptable
-behavior and are expected to take appropriate and fair corrective action in
-response to any instances of unacceptable behavior.
-
-Project maintainers have the right and responsibility to remove, edit, or
-reject comments, commits, code, wiki edits, issues, and other contributions
-that are not aligned to this Code of Conduct, or to ban temporarily or
-permanently any contributor for other behaviors that they deem inappropriate,
-threatening, offensive, or harmful.
-
-### Scope
-
-This Code of Conduct applies both within project spaces and in public spaces
-when an individual is representing the project or its community. Examples of
-representing a project or community include using an official project e-mail
-address, posting via an official social media account, or acting as an appointed
-representative at an online or offline event. Representation of a project may be
-further defined and clarified by project maintainers.
-
-### Enforcement
-
-Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported by contacting the project team at [INSERT EMAIL ADDRESS]. All
-complaints will be reviewed and investigated and will result in a response that
-is deemed necessary and appropriate to the circumstances. The project team is
-obligated to maintain confidentiality with regard to the reporter of an incident.
-Further details of specific enforcement policies may be posted separately.
-
-Project maintainers who do not follow or enforce the Code of Conduct in good
-faith may face temporary or permanent repercussions as determined by other
-members of the project's leadership.
-
-### Attribution
-
-This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 1.4,
-available at [http://contributor-covenant.org/version/1/4][version]
-
-[homepage]: http://contributor-covenant.org
-[version]: http://contributor-covenant.org/version/1/4/
+You can contribute by spreading a word about this library.
+It would also be a huge contribution to write
+a short article on how you are using this project.
+You can also share your best practices with us.

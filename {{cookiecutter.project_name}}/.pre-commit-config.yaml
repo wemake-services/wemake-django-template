@@ -4,11 +4,13 @@
   hooks:
     - id: config
       name: config
-      entry: docker-compose -f docker-compose.yml -f docker/docker-compose.prod.yml config --quiet
+      entry:
+        docker-compose -f docker-compose.yml
+        -f docker/docker-compose.prod.yml config --quiet
       pass_filenames: false
       language: system
     - id: qa
       name: qa
-      entry: docker-compose run --rm -e INSIDE_CI=0 web sh ./docker/ci.sh
+      entry: docker-compose run --rm web sh ./docker/ci.sh
       pass_filenames: false
       language: system

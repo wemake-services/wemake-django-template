@@ -22,6 +22,9 @@ SECRET_KEY = config('DJANGO_SECRET_KEY')
 # Application definition:
 
 INSTALLED_APPS: Tuple[str, ...] = (
+    # Your apps go here:
+    'server.main_app',
+
     # Default django apps:
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -36,13 +39,21 @@ INSTALLED_APPS: Tuple[str, ...] = (
     # Security:
     'axes',
 
-    # Your apps go here:
-    'server.main_app',
+    # Health checks:
+    # You may want to enable other checks as well,
+    # see: https://github.com/KristianOellegaard/django-health-check
+    'health_check',
+    'health_check.db',
+    'health_check.cache',
+    'health_check.storage',
 )
 
 MIDDLEWARE: Tuple[str, ...] = (
     # Content Security Policy:
     'csp.middleware.CSPMiddleware',
+
+    # Referrer Policy:
+    'django_referrer_policy.middleware.ReferrerPolicyMiddleware',
 
     # Django:
     'django.middleware.security.SecurityMiddleware',
@@ -146,10 +157,8 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR.joinpath('media')
 
 
-# Django default authentication system.
+# Django authentication system
 # https://docs.djangoproject.com/en/1.11/topics/auth/
-
-# AUTH_USER_MODEL = 'auth_app.User'
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
@@ -162,3 +171,17 @@ PASSWORD_HASHERS = [
     'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
     'django.contrib.auth.hashers.Argon2PasswordHasher',
 ]
+
+
+# Security
+# https://docs.djangoproject.com/en/1.11/topics/security/
+
+SESSION_COOKIE_HTTPONLY = True
+CSRF_COOKIE_HTTPONLY = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_BROWSER_XSS_FILTER = True
+
+X_FRAME_OPTIONS = 'DENY'
+
+# https://django-referrer-policy.readthedocs.io/
+REFERRER_POLICY = 'no-referrer'

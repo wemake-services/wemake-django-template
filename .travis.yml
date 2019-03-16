@@ -1,6 +1,6 @@
 language: python
 
-python: 3.6.6
+python: 3.6
 
 addons:
   apt:
@@ -11,17 +11,22 @@ services:
   - docker
 
 env:
-  - PIPENV_NOSPIN=true
+  - POETRY_VERSION=0.12.11
 
 install:
-  - pip install -U docker-compose pipenv
-  - docker --version && docker-compose --version
-  - pipenv --bare install --deploy --ignore-pipfile --dev
+  - pip freeze | xargs pip uninstall -y
+  - pip install -U docker-compose
+  - curl -sSL "https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py" | python
+  - source "$HOME/.poetry/env"
+  - docker --version && docker-compose --version && poetry --version
+  - poetry install --no-interaction --no-ansi
 
 script:
-  - pipenv run python -m pytest
+  - flake8 hooks tests
+  - pytest --strict
   - sh tests/test_integration.sh
-  - pipenv check -i 36333 # check local deps security, TODO: remove -i
+  - poetry check
+  - safety check --bare --full-report
 
 notifications:
   email:

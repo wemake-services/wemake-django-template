@@ -9,17 +9,17 @@ variables:
   PROJECT_NAME: "{{ cookiecutter.project_name }}"
   GROUP_NAME: "{{ cookiecutter.organization }}"
   REGISTRY: "registry.gitlab.com"
-  PIPENV_SHELL_COMPAT: "true"
   CONTAINER_RELEASE_IMAGE: "$REGISTRY/$GROUP_NAME/$PROJECT_NAME:latest"
 
 services:
   - docker:dind
 
 before_script:
-  # Installing docker-compose:
+  # Installing global dependencies:
   - apk update && apk upgrade
-  - apk add python python-dev py-pip git build-base
-  - pip install dump-env docker-compose
+  - apk add python3 python3-dev py3-pip git build-base
+  - pip3 install -U pip
+  - pip3 install dump-env docker-compose docker-image-size-limit
   # Creating `.env` configuration file:
   - dump-env -t config/.env.template -p 'SECRET_' > config/.env
   # Login into Docker registry:
@@ -31,18 +31,18 @@ before_script:
 test:
   stage: test
   script:
-    - docker-compose -f docker-compose.yml -f docker/docker-compose.prod.yml config --quiet
-    - docker-compose run -e INSIDE_CI=1 web sh ./docker/ci.sh
+    - docker-compose -f docker-compose.yml
+      -f docker/docker-compose.prod.yml config --quiet
+    - docker-compose run --rm web sh ./docker/ci.sh
+    - disl "${PROJECT_NAME}_web:latest" 500MiB
   coverage: '/[\d\.]+\%\s*$/'
-  artifacts:
-    paths:
-      - artifacts/
 
 # Releasing image, when tests pass:
 release-image:
   stage: deploy
   script:
-    - docker build -t "$CONTAINER_RELEASE_IMAGE" --build-arg DJANGO_ENV=production -f docker/django/Dockerfile .
+    - docker build -t "$CONTAINER_RELEASE_IMAGE"
+      --build-arg DJANGO_ENV=production -f docker/django/Dockerfile .
     - docker push "$CONTAINER_RELEASE_IMAGE"
   only:
     - master

@@ -13,7 +13,7 @@ mkdir -p "$HOME/.test" && cd "$HOME/.test"
 # Scaffold the project:
 PROJECT_NAME="fake_project"
 
-pipenv run cookiecutter "$TRAVIS_BUILD_DIR" \
+cookiecutter "$TRAVIS_BUILD_DIR" \
   --no-input --overwrite-if-exists \
   project_name="$PROJECT_NAME" \
   project_domain="myapp.com" \
@@ -21,5 +21,5 @@ pipenv run cookiecutter "$TRAVIS_BUILD_DIR" \
 
 cd "$PROJECT_NAME"
 
-# Run tests (without linting commits, since it is another repo):
-docker-compose run -e INSIDE_CI=0 web ./docker/ci.sh
+# Run tests that are located inside the generate project:
+docker-compose run --rm web ./docker/ci.sh

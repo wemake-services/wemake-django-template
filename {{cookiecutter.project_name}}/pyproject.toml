@@ -1,0 +1,53 @@
+[build-system]
+requires = ["poetry==0.12.11"]
+build-backend = "poetry.masonry.api"
+
+
+[tool.poetry]
+name = "{{ cookiecutter.project_name }}"
+description = "{{ cookiecutter.project_verbose_name }}"
+version = "0.1.0"
+readme = "README.md"
+authors = []
+
+
+[tool.poetry.dependencies]
+python = "3.6.8"
+django = "^1.11"
+django-split-settings = "^0.3"
+django-axes = "^4.5"
+django-csp = "^3.5"
+django-referrer-policy = "^1.0"
+django-health-check = "^3.9"
+psycopg2 = "^2.7"
+gunicorn = "^19.9"
+python-decouple = "^3.1"
+dump-env = "^0.2"
+bcrypt = "^3.1"
+
+
+[tool.poetry.dev-dependencies]
+django-debug-toolbar = "^1.11"
+django-querycount = "^0.7"
+nplusone = "^1.0"
+wemake-python-styleguide = "^0.8"
+flake8-pytest = "^1.3"
+flake8-django = "^0.0.4"
+pytest = "^4.3"
+pytest-django = "^3.4"
+pytest-cov = "^2.6"
+pytest-randomly = "^2.1"
+pytest-deadfixtures = "^2.1"
+pytest-testmon = "^0.9"
+pytest-timeout = "^1.3"
+pre-commit = "^1.14"
+xenon = "^0.5"
+mypy = "^0.670"
+ipython = "^7.3"
+sphinx = "^1.8"
+sphinx-autodoc-typehints = "^1.6"
+doc8 = "^0.8"
+yamllint = "^1.15"
+safety = "^1.8"
+dotenv-linter = "^0.1"
+polint = "^0.4"
