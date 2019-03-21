@@ -1388,7 +1388,7 @@ description = "The strictest and most opinionated python linter ever"
 name = "wemake-python-styleguide"
 optional = false
 python-versions = ">=3.6,<4.0"
-version = "0.8.0"
+version = "0.8.1"
 
 [package.dependencies]
 astor = ">=0.7.1,<0.8.0"
@@ -1586,7 +1586,7 @@ typing-extensions = ["07b2c978670896022a43c4b915df8958bec4a6b84add7f2c87b2b728bd
 urllib3 = ["61bf29cada3fc2fbefad4fdf059ea4bd1b4a86d2b6d15e1c7c0b582b9752fe39", "de9529817c93f27c8ccbfead6985011db27bd0ddfcdb2d86f3f663385c6a9c22"]
 virtualenv = ["6aebaf4dd2568a0094225ebbca987859e369e3e5c22dc7d52e5406d504890417", "984d7e607b0a5d1329425dd8845bd971b957424b5ba664729fab51ab8c11bc39"]
 wcwidth = ["3df37372226d6e63e1b1e1eda15c594bca98a22d33a23832a90998faa96bc65e", "f4ebe71925af7b40a864553f761ed559b43544f8f71746c2d756c7fe788ade7c"]
-wemake-python-styleguide = ["2b4350ebb7816795ce360799cc874332fa83080d6f3a1370f81e969b1cbc0566", "c5e645a08301bd8b68657d631c229de147dfb9c7cfcbd2d42bcadc334804c26b"]
+wemake-python-styleguide = ["0509b114f0446a30595e99d25566669c9f1ad9972b9d322ef27a22b8db19ba20", "0a94915dd1c48ca541a78a73b1c7e65cc023c3bd1c5d10b0a3f9dd23f2d4c4e6"]
 xenon = ["26f65adb5d411ba3efc361dc5ab6cd341a243a33b5a526c89350240c765899b9", "ff4bbecf0da99a7f60033e5e9616e28eb2a52d78dc154d90736f8c0124ec3e76"]
 yamllint = ["5a53b6ebea563f944420d2964233173532af00a9579ab2c48c4cf8c56b704050", "8f25759997acb42e52b96bf3af0b4b942e6516b51198bebd3402640102006af7"]
 zipp = ["55ca87266c38af6658b84db8cfb7343cdb0bf275f93c7afaea0d8e7a209c7478", "682b3e1c62b7026afe24eadf6be579fb45fec54c07ea218bded8092af07a68c4"]
