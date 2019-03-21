@@ -736,7 +736,7 @@ description = "The strictest and most opinionated python linter ever"
 name = "wemake-python-styleguide"
 optional = false
 python-versions = ">=3.6,<4.0"
-version = "0.8.0"
+version = "0.8.1"
 
 [package.dependencies]
 astor = ">=0.7.1,<0.8.0"
@@ -771,8 +771,8 @@ python-versions = "*"
 version = "0.5.2"
 
 [metadata]
-content-hash = "ad76afef23259f25363530c11f2f185d59466e37795bcb4f06918b94389eaa1d"
-python-versions = "3.6.8"
+content-hash = "4dc7dd894b0605612ee2ce3cddd3151aa4d12059c613c76dd59c7f44069482db"
+python-versions = "^3.6"
 
 [metadata.hashes]
 arrow = ["3397e5448952e18e1295bf047014659effa5ae8da6a5371d37ff0ddc46fa6872", "6f54d9f016c0b7811fac9fb8c2c7fa7421d80c54dbdd75ffb12913c55db60b8a"]
@@ -845,5 +845,5 @@ testfixtures = ["1ff15abd7c93a25c25e707e15bc245fb3d5723e43ce114e8fd6f72cff17926c
 typing = ["4027c5f6127a6267a435201981ba156de91ad0d1d98e9ddc2aa173453453492d", "57dcf675a99b74d64dacf6fba08fb17cf7e3d5fdff53d4a30ea2a5e7e52543d4", "a4c8473ce11a65999c8f59cb093e70686b6c84c98df58c1dae9b3b196089858a"]
 typing-extensions = ["07b2c978670896022a43c4b915df8958bec4a6b84add7f2c87b2b728bda3ba64", "f3f0e67e1d42de47b5c67c32c9b26641642e9170fe7e292991793705cd5fef7c", "fb2cd053238d33a8ec939190f30cfd736c00653a85a2919415cecf7dc3d9da71"]
 urllib3 = ["61bf29cada3fc2fbefad4fdf059ea4bd1b4a86d2b6d15e1c7c0b582b9752fe39", "de9529817c93f27c8ccbfead6985011db27bd0ddfcdb2d86f3f663385c6a9c22"]
-wemake-python-styleguide = ["2b4350ebb7816795ce360799cc874332fa83080d6f3a1370f81e969b1cbc0566", "c5e645a08301bd8b68657d631c229de147dfb9c7cfcbd2d42bcadc334804c26b"]
+wemake-python-styleguide = ["0509b114f0446a30595e99d25566669c9f1ad9972b9d322ef27a22b8db19ba20", "0a94915dd1c48ca541a78a73b1c7e65cc023c3bd1c5d10b0a3f9dd23f2d4c4e6"]
 whichcraft = ["7533870f751901a0ce43c93cc9850186e9eba7fe58c924dfb435968ba9c9fa4e", "fecddd531f237ffc5db8b215409afb18fa30300699064cca4817521b4fc81815"]
