@@ -4,8 +4,8 @@ build-backend = "poetry.masonry.api"
 
 
 [tool.poetry]
-name = "name"
-description = "des"
+name = "{{ cookiecutter.project_name }}"
+description = "{{ cookiecutter.project_verbose_name }}"
 version = "0.1.0"
 readme = "README.md"
 authors = []
