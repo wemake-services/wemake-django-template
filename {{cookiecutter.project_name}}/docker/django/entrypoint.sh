@@ -19,5 +19,6 @@ done
 # It is also possible to wait for other services as well: redis, elastic, mongo
 >&2 echo 'Postgres is up - continuing...'
 
-# Evaluating passed command:
+# Evaluating passed command (do not touch):
+# shellcheck disable=SC2086
 exec $cmd

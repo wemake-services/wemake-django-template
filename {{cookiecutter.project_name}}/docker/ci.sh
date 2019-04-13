@@ -19,7 +19,7 @@ pyclean () {
 
 run_ci () {
   # Running linting for all python files in the project:
-  flake8 **/*.py
+  flake8 ./**/*.py
 
   # Running tests and type checking:
   mypy server
@@ -58,7 +58,7 @@ run_ci () {
   polint -i location,unsorted locale
 
   # Also checking translation files for syntax errors:
-  if $(find locale -name '*.po' -print0 | grep -q "."); then
+  if find locale -name '*.po' -print0 | grep -q "."; then
     # Only executes when there is at least one `.po` file:
     dennis-cmd lint --errorsonly locale
   fi
