@@ -11,4 +11,4 @@ def index(request):
 
     Returns rendered default page to the user.
     """
-    return render(request, 'main_app/index.html')
+    return render(request, 'main/index.html')

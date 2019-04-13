@@ -1,1 +1,1 @@
-{{cookiecutter.project_name}}/server/main_app/templates/* linguist-vendored
+{{cookiecutter.project_name}}/server/apps/main/templates/* linguist-vendored

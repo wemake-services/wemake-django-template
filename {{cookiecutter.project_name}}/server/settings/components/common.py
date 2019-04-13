@@ -23,7 +23,7 @@ SECRET_KEY = config('DJANGO_SECRET_KEY')
 
 INSTALLED_APPS: Tuple[str, ...] = (
     # Your apps go here:
-    'server.main_app',
+    'server.apps.main',
 
     # Default django apps:
     'django.contrib.auth',
@@ -82,7 +82,7 @@ DATABASES = {
         'PORT': config('DJANGO_DATABASE_PORT', cast=int),
         'CONN_MAX_AGE': config('CONN_MAX_AGE', cast=int, default=60),
         'OPTIONS': {
-            'timeout': 10,
+            'connect_timeout': 10,
         },
     },
 }
@@ -178,5 +178,6 @@ SECURE_BROWSER_XSS_FILTER = True
 
 X_FRAME_OPTIONS = 'DENY'
 
-# https://django-referrer-policy.readthedocs.io/
-REFERRER_POLICY = 'no-referrer'
+
+# Timeouts
+EMAIL_TIMEOUT = 5

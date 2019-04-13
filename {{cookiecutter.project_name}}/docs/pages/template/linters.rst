@@ -82,15 +82,17 @@ See `dotenv-linter <https://github.com/wemake-services/dotenv-linter>`_ docs.
   dotenv-linter config/.env config/.env.template
 
 
-polint
-------
+polint and dennis
+-----------------
 
-Is used to lint your ``.po`` files.
+Are used to lint your ``.po`` files.
 See `polint <https://github.com/ziima/polint>`_ docs.
+Also see `dennis <https://dennis.readthedocs.io/en/latest/linting.html>`_ docs.
 
 .. code:: bash
 
-   polint -i location,unsorted locales
+   polint -i location,unsorted locale
+   dennis-cmd lint --errorsonly locale
 
 
 Packaging

@@ -56,6 +56,9 @@ run_ci () {
 
   # Checking translation files, ignoring ordering and locations:
   polint -i location,unsorted locale
+
+  # Also checking translation files for syntax errors:
+  dennis-cmd lint --errorsonly locale
 }
 
 # Remove any cache before the script:

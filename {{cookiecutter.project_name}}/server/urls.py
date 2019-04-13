@@ -18,15 +18,15 @@ from django.contrib.admindocs import urls as admindocs_urls
 from django.views.generic import TemplateView
 from health_check import urls as health_urls
 
-from server.main_app import urls as main_urls
-from server.main_app.views import index
+from server.apps.main import urls as main_urls
+from server.apps.main.views import index
 
 admin.autodiscover()
 
 
 urlpatterns = [
     # Apps:
-    url(r'^main/', include(main_urls, namespace='main_app')),
+    url(r'^main/', include(main_urls, namespace='main')),
 
     # Health checks:
     url(r'^health/', include(health_urls)),  # noqa: DJ05
