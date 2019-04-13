@@ -132,7 +132,7 @@ TEMPLATES = [{
     ],
     'OPTIONS': {
         'context_processors': [
-            # default template context processors
+            # Default template context processors:
             'django.contrib.auth.context_processors.auth',
             'django.template.context_processors.debug',
             'django.template.context_processors.i18n',
