@@ -23,7 +23,7 @@ services:
     depends_on:
       - web
     networks:
-      - webnet
+      - proxynet
 
   web:
     <<: &web

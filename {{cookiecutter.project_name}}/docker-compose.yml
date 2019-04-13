@@ -32,6 +32,7 @@ services:
         - db
       networks:
         - webnet
+        - proxynet
       env_file: ./config/.env
       environment:
         DJANGO_DATABASE_HOST: db
@@ -43,6 +44,10 @@ services:
 #   command: python manage.py worker_process
 
 networks:
+  # Network for your proxy server and application to connect them,
+  # do not use it for anything else!
+  proxynet:
+  # Network for your internals, use it by default:
   webnet:
 
 volumes:
