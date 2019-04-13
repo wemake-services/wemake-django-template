@@ -279,17 +279,6 @@ version = "0.7.0"
 
 [[package]]
 category = "main"
-description = "Referrer-Policy header implementation for Django."
-name = "django-referrer-policy"
-optional = false
-python-versions = "*"
-version = "1.0"
-
-[package.dependencies]
-Django = ">=1.11"
-
-[[package]]
-category = "main"
 description = "Organize Django settings into multiple files and directories. Easily override and modify settings. Use wildcards and optional settings files."
 name = "django-split-settings"
 optional = false
@@ -1448,7 +1437,7 @@ python-versions = ">=2.7"
 version = "0.3.3"
 
 [metadata]
-content-hash = "4d80621c14375cca58a11dc4d867426a2520d719112231cfc3e1103313e5fca8"
+content-hash = "6927bd44cc31c759b197cd8abd57d103a6fcbe7ca62febe1f3bc823edd42ed4b"
 python-versions = "3.6.8"
 
 [metadata.hashes]
@@ -1481,7 +1470,6 @@ django-debug-toolbar = ["89d75b60c65db363fb24688d977e5fbf0e73386c67acf562d278402
 django-health-check = ["99df177d266faf2a64d775c6e4c098c16f5408586ecc259717d8cb601c8753ea"]
 django-ipware = ["a7c7a8fd019dbdc9c357e6e582f65034e897572fc79a7e467674efa8aef9d00b"]
 django-querycount = ["8f5123d78716ff0704f2373e746a7200b8d8417798ce4a99bf2de87e3768f9ce"]
-django-referrer-policy = ["09e134324fa08c10efc12244a4bae7aee5defa7d332b92c603b09258c854615a"]
 django-split-settings = ["04f6b551111fdbcb4f669ac9004ac2d4a27197a36ca88444cb896378807ed777", "14b164dbd724e52aa9a0b0338eefa988a8a0f17f7cba34e0f983e5348682aeb7"]
 doc8 = ["2df89f9c1a5abfb98ab55d0175fed633cae0cf45025b8b1e0ee5ea772be28543", "d12f08aa77a4a65eb28752f4bc78f41f611f9412c4155e2b03f1f5d4a45efe04"]
 docopt = ["49b3a825280bd66b3aa83585ef59c4a8c82f2c8a522dbe754a8bc8d08c85c491"]

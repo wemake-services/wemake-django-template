@@ -4,8 +4,8 @@ build-backend = "poetry.masonry.api"
 
 
 [tool.poetry]
-name = "{{ cookiecutter.project_name }}"
-description = "{{ cookiecutter.project_verbose_name }}"
+name = "name"
+description = "des"
 version = "0.1.0"
 readme = "README.md"
 authors = []
@@ -17,7 +17,6 @@ django = "^1.11"
 django-split-settings = "^0.3"
 django-axes = "^4.5"
 django-csp = "^3.5"
-django-referrer-policy = "^1.0"
 django-health-check = "^3.9"
 psycopg2 = "^2.7"
 gunicorn = "^19.9"
