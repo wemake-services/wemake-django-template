@@ -58,7 +58,10 @@ run_ci () {
   polint -i location,unsorted locale
 
   # Also checking translation files for syntax errors:
-  dennis-cmd lint --errorsonly locale
+  if $(find locale -name '*.po' -print0 | grep -q "."); then
+    # Only executes when there is at least one `.po` file:
+    dennis-cmd lint --errorsonly locale
+  fi
 }
 
 # Remove any cache before the script:
