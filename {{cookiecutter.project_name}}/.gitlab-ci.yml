@@ -19,7 +19,6 @@ variables:
     # Installing global dependencies:
     - apk update && apk upgrade
     - apk add python3 python3-dev py3-pip git build-base
-    - pip3 install -U pip
     - pip3 install dump-env docker-image-size-limit 'docker-compose<1.24'
     # Creating `.env` configuration file:
     - dump-env -t config/.env.template -p 'SECRET_' > config/.env
@@ -38,12 +37,12 @@ test:
     - docker-compose run --rm web sh ./docker/ci.sh
     - disl "${PROJECT_NAME}_web:latest" 650MiB
   coverage: '/[\d\.]+\%\s*$/'
-  except:
-    - master
-    - schedules
-    - tags
+  only:
+    - merge_requests
 
-# Releasing image, when in `master` branch:
+# Releasing image, when in `master` branch,
+# can be replaced with `kira-release` bot:
+# https://github.com/wemake-services/kira-release
 release-image:
   extends: .docker
   stage: deploy
