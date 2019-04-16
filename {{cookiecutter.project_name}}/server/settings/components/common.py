@@ -10,7 +10,7 @@ For the full list of settings and their config, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
-from typing import Dict, Tuple, Union, List
+from typing import Dict, List, Tuple, Union
 
 from server.settings.components import BASE_DIR, config
 
