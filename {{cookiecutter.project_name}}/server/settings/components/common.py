@@ -10,7 +10,7 @@ For the full list of settings and their config, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
-from typing import Tuple
+from typing import Dict, Tuple, Union, List
 
 from server.settings.components import BASE_DIR, config
 
@@ -54,6 +54,7 @@ MIDDLEWARE: Tuple[str, ...] = (
 
     # Django:
     'django.middleware.security.SecurityMiddleware',
+    'django_feature_policy.FeaturePolicyMiddleware',  # django-feature-policy
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -177,6 +178,9 @@ SECURE_CONTENT_TYPE_NOSNIFF = True
 SECURE_BROWSER_XSS_FILTER = True
 
 X_FRAME_OPTIONS = 'DENY'
+
+# https://github.com/adamchainz/django-feature-policy#setting
+FEATURE_POLICY: Dict[str, Union[str, List[str]]] = {}
 
 
 # Timeouts

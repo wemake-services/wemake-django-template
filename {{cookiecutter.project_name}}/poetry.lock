@@ -258,6 +258,17 @@ sqlparse = ">=0.2.0"
 
 [[package]]
 category = "main"
+description = "Set the draft security HTTP header Feature-Policy on your Django app."
+name = "django-feature-policy"
+optional = false
+python-versions = ">=3.4"
+version = "2.0.0"
+
+[package.dependencies]
+Django = "*"
+
+[[package]]
+category = "main"
 description = "Run checks on services like databases, queue servers, celery processes, etc."
 name = "django-health-check"
 optional = false
@@ -1467,7 +1478,7 @@ python-versions = ">=2.7"
 version = "0.3.3"
 
 [metadata]
-content-hash = "dd9bb89bb285920b9cd6e925167bbbf1b879e328033c1aad731155f2a69db1e1"
+content-hash = "9947d2a3c46bfb6424833e19e178f2bef4463397b3f276fec8e4fa75e853f19a"
 python-versions = "3.7.3"
 
 [metadata.hashes]
@@ -1497,6 +1508,7 @@ django-appconf = ["35f13ca4d567f132b960e2cd4c832c2d03cb6543452d34e29b7ba10371ba8
 django-axes = ["6f2719c9040e5120ece56232b6ab499b9cc3f02aa58d9fdee04210f480c7c30c", "7c539b1bbcac6752319783a5bd41c20c7b765cded31da9568a86e4521524a91e"]
 django-csp = ["04600237701e6d6ff78ed7d41209ff923988148bf292c128f6b474b9befe444f", "8b9997df89a7a936d7c397e051367f974aa1d1a97d0b32acb4300087b3bed071"]
 django-debug-toolbar = ["89d75b60c65db363fb24688d977e5fbf0e73386c67acf562d278402a10fc3736", "c2b0134119a624f4ac9398b44f8e28a01c7686ac350a12a74793f3dd57a9eea0"]
+django-feature-policy = ["6b4d0ac8738cd66229d7c224e79280aa84bc36ba1be3451a84e2be1f69f0c958", "be54a6732d731ee852ae1aa87fb1efd7e6e1037945f91e2ce914259edc7c429e"]
 django-health-check = ["99df177d266faf2a64d775c6e4c098c16f5408586ecc259717d8cb601c8753ea"]
 django-ipware = ["a7c7a8fd019dbdc9c357e6e582f65034e897572fc79a7e467674efa8aef9d00b"]
 django-querycount = ["8f5123d78716ff0704f2373e746a7200b8d8417798ce4a99bf2de87e3768f9ce"]
