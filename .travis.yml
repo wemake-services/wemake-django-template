@@ -12,7 +12,7 @@ services:
   - docker
 
 env:
-  - POETRY_VERSION=0.12.11
+  - POETRY_VERSION=0.12.12
 
 install:
   - pip freeze | xargs pip uninstall -y
