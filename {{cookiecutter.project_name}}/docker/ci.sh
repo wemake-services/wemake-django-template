@@ -19,6 +19,7 @@ pyclean () {
 
 run_ci () {
   # Running linting for all python files in the project:
+  echo "Running flake* **/*.py"
   flake8 **/*.py
 
   # Running tests and type checking:
