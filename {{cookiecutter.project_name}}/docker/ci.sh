@@ -19,7 +19,7 @@ pyclean () {
 
 run_ci () {
   # Running linting for all python files in the project:
-  flake8 ./**/*.py
+  flake8 **/*.py
 
   # Running tests and type checking:
   mypy server
