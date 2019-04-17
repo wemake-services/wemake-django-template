@@ -19,8 +19,8 @@ pyclean () {
 
 run_ci () {
   # Running linting for all python files in the project:
-  echo "Running flake* **/*.py"
-  flake8 **/*.py
+  echo "Running flake8 linting"
+  flake8 .
 
   # Running tests and type checking:
   mypy server
