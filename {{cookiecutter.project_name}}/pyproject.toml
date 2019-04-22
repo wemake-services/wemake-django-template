@@ -13,7 +13,6 @@ authors = []
 
 [tool.poetry.dependencies]
 python = "3.7.3"
-django = "^1.11"
 django-split-settings = "^0.3"
 django-axes = "^4.5"
 django-csp = "^3.5"
@@ -24,6 +23,7 @@ gunicorn = "^19.9"
 python-decouple = "^3.1"
 dump-env = "^0.2"
 bcrypt = "^3.1"
+django = "^2.2"
 
 
 [tool.poetry.dev-dependencies]

@@ -24,7 +24,7 @@ ALLOWED_HOSTS = [
 ]
 
 # Static files:
-# https://docs.djangoproject.com/en/1.11/ref/settings/#std:setting-STATICFILES_DIRS
+# https://docs.djangoproject.com/en/2.2/ref/settings/#std:setting-STATICFILES_DIRS
 
 STATICFILES_DIRS: List[str] = []
 
