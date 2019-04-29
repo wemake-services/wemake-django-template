@@ -273,7 +273,7 @@ description = "Run checks on services like databases, queue servers, celery proc
 name = "django-health-check"
 optional = false
 python-versions = "*"
-version = "3.9.0"
+version = "3.10.0"
 
 [[package]]
 category = "main"
@@ -1478,7 +1478,7 @@ python-versions = ">=2.7"
 version = "0.3.3"
 
 [metadata]
-content-hash = "bd9d60041161da41ff251f7e7e41fb4b16e80169155a39db6cae3131ae399d23"
+content-hash = "f406cbd667fedaef5c5d3524beaa1a5f36af7d1b405451d7d0fbac3302f429dc"
 python-versions = "3.7.3"
 
 [metadata.hashes]
@@ -1509,7 +1509,7 @@ django-axes = ["6f2719c9040e5120ece56232b6ab499b9cc3f02aa58d9fdee04210f480c7c30c
 django-csp = ["04600237701e6d6ff78ed7d41209ff923988148bf292c128f6b474b9befe444f", "8b9997df89a7a936d7c397e051367f974aa1d1a97d0b32acb4300087b3bed071"]
 django-debug-toolbar = ["89d75b60c65db363fb24688d977e5fbf0e73386c67acf562d278402a10fc3736", "c2b0134119a624f4ac9398b44f8e28a01c7686ac350a12a74793f3dd57a9eea0"]
 django-feature-policy = ["6b4d0ac8738cd66229d7c224e79280aa84bc36ba1be3451a84e2be1f69f0c958", "be54a6732d731ee852ae1aa87fb1efd7e6e1037945f91e2ce914259edc7c429e"]
-django-health-check = ["99df177d266faf2a64d775c6e4c098c16f5408586ecc259717d8cb601c8753ea"]
+django-health-check = ["80be4191d3959be2c5ba7a690e7fe9b088626f04b84ae48134bd2424bad971da", "99a320c52251962aa995ab3d0f0b9580d1f179af3a201b4cdb546ee84aeeed56"]
 django-ipware = ["a7c7a8fd019dbdc9c357e6e582f65034e897572fc79a7e467674efa8aef9d00b"]
 django-querycount = ["8f5123d78716ff0704f2373e746a7200b8d8417798ce4a99bf2de87e3768f9ce"]
 django-split-settings = ["04f6b551111fdbcb4f669ac9004ac2d4a27197a36ca88444cb896378807ed777", "14b164dbd724e52aa9a0b0338eefa988a8a0f17f7cba34e0f983e5348682aeb7"]
