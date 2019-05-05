@@ -22,7 +22,7 @@ def main():
         # The above import may fail for some other reason. Ensure that the
         # issue is really that Django is missing to avoid masking other
         # exceptions on Python 2.
-        try:
+        try:  # noqa: Z464
             import django  # noqa: Z435, F401
         except ImportError:
             raise ImportError(
