@@ -11,7 +11,7 @@ import os
 import re
 
 import pytest
-from binaryornot.check import is_binary
+from binaryornot.check import is_binary  # noqa: I003
 from cookiecutter.exceptions import FailedHookException
 
 PATTERN = r'{{(\s?cookiecutter)[.](.*?)}}'
