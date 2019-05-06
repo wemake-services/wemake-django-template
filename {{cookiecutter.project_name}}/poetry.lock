@@ -224,14 +224,13 @@ category = "main"
 description = "Keep track of failed login attempts in Django-powered sites."
 name = "django-axes"
 optional = false
-python-versions = "*"
-version = "4.5.4"
+python-versions = "~=3.6"
+version = "5.0.1"
 
 [package.dependencies]
-django = "*"
-django-appconf = "*"
+django = ">=1.11"
+django-appconf = ">=1.0.3"
 django-ipware = ">=2.0.2"
-pytz = "*"
 
 [[package]]
 category = "main"
@@ -1478,7 +1477,7 @@ python-versions = ">=2.7"
 version = "0.3.3"
 
 [metadata]
-content-hash = "f406cbd667fedaef5c5d3524beaa1a5f36af7d1b405451d7d0fbac3302f429dc"
+content-hash = "f84773f56ed1bc3a3d45fd29870c176fa2da7ffb92a002750e15d8ac1d9688f3"
 python-versions = "3.7.3"
 
 [metadata.hashes]
@@ -1505,7 +1504,7 @@ decorator = ["86156361c50488b84a3f148056ea716ca587df2f0de1d34750d35c21312725de",
 dennis = ["8c942dd5da7d03c65daebc069c5ee5c7f1374ac9b0c8c89c627caa66fe822604", "f6487392ac91800c5f0684a99b404b7fd0f72ceb48faeb5a0ce4e2c24fb62d3f"]
 django = ["0a73696e0ac71ee6177103df984f9c1e07cd297f080f8ec4dc7c6f3fb74395b5", "43a99da08fee329480d27860d68279945b7d8bf7b537388ee2c8938c709b2041"]
 django-appconf = ["35f13ca4d567f132b960e2cd4c832c2d03cb6543452d34e29b7ba10371ba80e3", "c98a7af40062e996b921f5962a1c4f3f0c979fa7885f7be4710cceb90ebe13a6"]
-django-axes = ["6f2719c9040e5120ece56232b6ab499b9cc3f02aa58d9fdee04210f480c7c30c", "7c539b1bbcac6752319783a5bd41c20c7b765cded31da9568a86e4521524a91e"]
+django-axes = ["7ae72ac89004c7d9c0d69c9509e92518cb55aed2f95c1b56c43af17d2f8983dd", "be718c50d57f9d1c366be79c10e5a7bc85b8038496f1ff7abd4c05f5867745b8"]
 django-csp = ["04600237701e6d6ff78ed7d41209ff923988148bf292c128f6b474b9befe444f", "8b9997df89a7a936d7c397e051367f974aa1d1a97d0b32acb4300087b3bed071"]
 django-debug-toolbar = ["89d75b60c65db363fb24688d977e5fbf0e73386c67acf562d278402a10fc3736", "c2b0134119a624f4ac9398b44f8e28a01c7686ac350a12a74793f3dd57a9eea0"]
 django-feature-policy = ["6b4d0ac8738cd66229d7c224e79280aa84bc36ba1be3451a84e2be1f69f0c958", "be54a6732d731ee852ae1aa87fb1efd7e6e1037945f91e2ce914259edc7c429e"]
