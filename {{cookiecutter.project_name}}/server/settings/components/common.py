@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 from typing import Dict, List, Tuple, Union
 
 from server.settings.components import BASE_DIR, config
+from django.utils.translation import ugettext_lazy as _
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
@@ -98,8 +99,8 @@ USE_I18N = True
 USE_L10N = True
 
 LANGUAGES = (
-    ('en', 'English'),
-    ('ru', 'Russian'),
+    ('en', _('English')),
+    ('ru', _('Russian')),
 )
 
 LOCALE_PATHS = (
@@ -180,7 +181,7 @@ SECURE_BROWSER_XSS_FILTER = True
 X_FRAME_OPTIONS = 'DENY'
 
 # https://github.com/adamchainz/django-feature-policy#setting
-FEATURE_POLICY: Dict[str, Union[str, List[str]]] = {}
+FEATURE_POLICY: Dict[str, Union[str, List[str]]] = {}  # noqa: TAE002
 
 
 # Timeouts

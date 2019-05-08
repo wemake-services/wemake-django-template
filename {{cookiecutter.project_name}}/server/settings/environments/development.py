@@ -9,7 +9,11 @@ SECURITY WARNING: don't run with debug turned on in production!
 import logging
 from typing import List
 
-from server.settings.components.common import INSTALLED_APPS, MIDDLEWARE, config
+from server.settings.components.common import (
+    INSTALLED_APPS,
+    MIDDLEWARE,
+    config,
+)
 
 # Setting the development status:
 
@@ -18,7 +22,6 @@ DEBUG = True
 ALLOWED_HOSTS = [
     config('DOMAIN_NAME'),
     'localhost',
-    '0.0.0.0',
     '127.0.0.1',
     '[::1]',
 ]
