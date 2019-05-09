@@ -55,7 +55,7 @@ since you already know the structure.
 
 For each ``django`` application we tend to create
 a file called ``index.rst`` which is considered
-the main fail for the application.
+the main file for the application.
 
 And ``pages/project/index.rst`` is the main file for the whole project.
 
