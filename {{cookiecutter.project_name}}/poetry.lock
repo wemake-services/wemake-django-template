@@ -261,11 +261,11 @@ category = "main"
 description = "Set the draft security HTTP header Feature-Policy on your Django app."
 name = "django-feature-policy"
 optional = false
-python-versions = ">=3.4"
-version = "2.0.0"
+python-versions = ">=3.5"
+version = "2.3.0"
 
 [package.dependencies]
-Django = "*"
+Django = ">=1.11"
 
 [[package]]
 category = "main"
@@ -1478,7 +1478,7 @@ python-versions = ">=2.7"
 version = "0.3.3"
 
 [metadata]
-content-hash = "f406cbd667fedaef5c5d3524beaa1a5f36af7d1b405451d7d0fbac3302f429dc"
+content-hash = "b86d926b15e1c6c3c09048fdcb211ba904a3f6d0bcb178623ae50ea834303496"
 python-versions = "3.7.3"
 
 [metadata.hashes]
@@ -1508,7 +1508,7 @@ django-appconf = ["35f13ca4d567f132b960e2cd4c832c2d03cb6543452d34e29b7ba10371ba8
 django-axes = ["6f2719c9040e5120ece56232b6ab499b9cc3f02aa58d9fdee04210f480c7c30c", "7c539b1bbcac6752319783a5bd41c20c7b765cded31da9568a86e4521524a91e"]
 django-csp = ["04600237701e6d6ff78ed7d41209ff923988148bf292c128f6b474b9befe444f", "8b9997df89a7a936d7c397e051367f974aa1d1a97d0b32acb4300087b3bed071"]
 django-debug-toolbar = ["89d75b60c65db363fb24688d977e5fbf0e73386c67acf562d278402a10fc3736", "c2b0134119a624f4ac9398b44f8e28a01c7686ac350a12a74793f3dd57a9eea0"]
-django-feature-policy = ["6b4d0ac8738cd66229d7c224e79280aa84bc36ba1be3451a84e2be1f69f0c958", "be54a6732d731ee852ae1aa87fb1efd7e6e1037945f91e2ce914259edc7c429e"]
+django-feature-policy = ["7478abb88f20e7ad96367fd6e0468809d8250bbca52a70519702257f4e233569", "cb1f173cacaacb5ac83bd652622bc2601721d1ad21a5ad5cbc6c6989b30e8132"]
 django-health-check = ["74356a125747000723a141cae5761fc94b7b04f71fbec80df6d9f63d1fe3841f", "8578f0d8384af94b275f71dec5684d3585728cbe1e0f7aa38e1a35477194a671"]
 django-ipware = ["a7c7a8fd019dbdc9c357e6e582f65034e897572fc79a7e467674efa8aef9d00b"]
 django-querycount = ["8f5123d78716ff0704f2373e746a7200b8d8417798ce4a99bf2de87e3768f9ce"]
