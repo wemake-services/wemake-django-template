@@ -21,6 +21,7 @@ services:
   web:
     <<: &web
       build:
+        target: development_build
         context: .
         dockerfile: ./docker/django/Dockerfile
         args:

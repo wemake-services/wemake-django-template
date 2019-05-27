@@ -1,4 +1,7 @@
-FROM python:3.7.3-alpine3.9
+# This Dockerfile uses multi-stage build to customize DEV and PROD images:
+# https://docs.docker.com/develop/develop-images/multistage-build/
+
+FROM python:3.7.3-alpine3.9 as development_build
 
 LABEL maintainer="sobolevn@wemake.services"
 LABEL vendor="wemake.services"
@@ -30,9 +33,9 @@ RUN apk --no-cache add \
      tini \
   && pip install "poetry==$POETRY_VERSION"
 
-# Copy only requirements to cache them in docker layer
-WORKDIR /code
-COPY poetry.lock pyproject.toml /code/
+# Copy only requirements, to cache them in docker layer
+WORKDIR /pysetup
+COPY ./poetry.lock ./pyproject.toml /pysetup/
 
 # This is a special case. We need to run this script as an entry point:
 COPY ./docker/django/entrypoint.sh /docker-entrypoint.sh
@@ -42,7 +45,16 @@ RUN chmod +x "/docker-entrypoint.sh" \
   && poetry config settings.virtualenvs.create false \
   && poetry install $(test "$DJANGO_ENV" == production && echo "--no-dev") --no-interaction --no-ansi
 
-# Creating folders, and files for a project:
-COPY . /code
+# This dir will become the mountpoint of development code
+WORKDIR /code
 
 ENTRYPOINT ["/sbin/tini", "--", "/docker-entrypoint.sh"]
+
+
+# The following stage is only for Prod: 
+# https://wemake-django-template.readthedocs.io/en/latest/pages/template/production.html
+
+FROM development_build as production_build
+
+COPY . /code
+
