@@ -273,7 +273,7 @@ description = "Run checks on services like databases, queue servers, celery proc
 name = "django-health-check"
 optional = false
 python-versions = "*"
-version = "3.10.1"
+version = "3.10.2"
 
 [[package]]
 category = "main"
@@ -1510,7 +1510,7 @@ django-axes = ["6f2719c9040e5120ece56232b6ab499b9cc3f02aa58d9fdee04210f480c7c30c
 django-csp = ["04600237701e6d6ff78ed7d41209ff923988148bf292c128f6b474b9befe444f", "8b9997df89a7a936d7c397e051367f974aa1d1a97d0b32acb4300087b3bed071"]
 django-debug-toolbar = ["89d75b60c65db363fb24688d977e5fbf0e73386c67acf562d278402a10fc3736", "c2b0134119a624f4ac9398b44f8e28a01c7686ac350a12a74793f3dd57a9eea0"]
 django-feature-policy = ["7478abb88f20e7ad96367fd6e0468809d8250bbca52a70519702257f4e233569", "cb1f173cacaacb5ac83bd652622bc2601721d1ad21a5ad5cbc6c6989b30e8132"]
-django-health-check = ["74356a125747000723a141cae5761fc94b7b04f71fbec80df6d9f63d1fe3841f", "8578f0d8384af94b275f71dec5684d3585728cbe1e0f7aa38e1a35477194a671"]
+django-health-check = ["8f4a33e4376865dd4d704df1c1256779566b160e05c9803140b88ce281c018da", "ecd1b7c91563c8518b17fd8d1541ab7faa7cbac6c44120b109e1225b3652a88e"]
 django-ipware = ["a7c7a8fd019dbdc9c357e6e582f65034e897572fc79a7e467674efa8aef9d00b"]
 django-querycount = ["8f5123d78716ff0704f2373e746a7200b8d8417798ce4a99bf2de87e3768f9ce"]
 django-split-settings = ["04f6b551111fdbcb4f669ac9004ac2d4a27197a36ca88444cb896378807ed777", "14b164dbd724e52aa9a0b0338eefa988a8a0f17f7cba34e0f983e5348682aeb7"]
