@@ -12,7 +12,7 @@ files serving technique in development.
 """
 
 from django.conf import settings
-from django.conf.urls import include, path
+from django.urls import include, path
 from django.contrib import admin
 from django.contrib.admindocs import urls as admindocs_urls
 from django.views.generic import TemplateView
