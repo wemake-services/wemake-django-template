@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from django.conf.urls import url
+from django.urls import path
 
 from server.apps.main.views import index
 
@@ -9,5 +9,5 @@ from server.apps.main.views import index
 app_name = 'main'
 
 urlpatterns = [
-    url(r'^hello/$', index, name='hello'),
+    path('hello', index, name='hello'),
 ]

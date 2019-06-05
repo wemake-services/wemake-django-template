@@ -12,9 +12,9 @@ files serving technique in development.
 """
 
 from django.conf import settings
-from django.urls import include, path
 from django.contrib import admin
 from django.contrib.admindocs import urls as admindocs_urls
+from django.urls import include, path
 from django.views.generic import TemplateView
 from health_check import urls as health_urls
 
@@ -26,39 +26,38 @@ admin.autodiscover()
 
 urlpatterns = [
     # Apps:
-    path('^main/', include(main_urls, namespace='main')),
+    path('main/', include(main_urls, namespace='main')),
 
     # Health checks:
-    path(r'^health/', include(health_urls)),  # noqa: DJ05
+    path('health/', include(health_urls)),  # noqa: DJ05
 
     # django-admin:
-    path('^admin/doc/', include(admindocs_urls)),  # noqa: DJ05
-    path('^admin/', admin.site.urls),
+    path('admin/doc/', include(admindocs_urls)),  # noqa: DJ05
+    path('admin/', admin.site.urls),
 
     # Text and xml static files:
-    path('^robots\.txt$', TemplateView.as_view(
+    path('robots.txt', TemplateView.as_view(
         template_name='txt/robots.txt',
         content_type='text/plain',
     )),
-    path('^humans\.txt$', TemplateView.as_view(
+    path('humans.txt', TemplateView.as_view(
         template_name='txt/humans.txt',
         content_type='text/plain',
     )),
 
     # It is a good practice to have explicit index view:
-    path(r'^$', index, name='index'),
+    path('', index, name='index'),
 ]
 
 if settings.DEBUG:  # pragma: no cover
     import debug_toolbar  # noqa: Z435
-    from django.views.static import serve  # noqa: Z435
+    from django.conf.urls.static import static  # noqa: Z435
 
     urlpatterns = [
         # URLs specific only to django-debug-toolbar:
-        path('^__debug__/', include(debug_toolbar.urls)),  # noqa: DJ05
-
+        path('__debug__/', include(debug_toolbar.urls)),  # noqa: DJ05
+    ] + urlpatterns + static(
         # Serving media files in development only:
-        path('^media/(<path>.*)$', serve, {
-            'document_root': settings.MEDIA_ROOT,
-        }),
-    ] + urlpatterns
+        settings.MEDIA_URL,
+        document_root=settings.MEDIA_ROOT,
+    )
