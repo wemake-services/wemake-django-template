@@ -13,7 +13,7 @@ authors = []
 
 [tool.poetry.dependencies]
 python = "3.7.3"
-django = "^1.11"
+django = "^2.2"
 django-split-settings = "^0.3"
 django-axes = "^4.5"
 django-csp = "^3.5"
