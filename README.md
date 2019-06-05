@@ -4,7 +4,7 @@
 
 
 
-Bleeding edge `django` template focused on code quality and security.
+Bleeding edge `django2.2` template focused on code quality and security.
 
 ---
 
