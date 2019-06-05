@@ -25,4 +25,9 @@ python /code/manage.py collectstatic --noinput
 python /code/manage.py compilemessages
 
 # Start gunicorn with 4 workers:
-/usr/local/bin/gunicorn server.wsgi -w 4 -b 0.0.0.0:8000 --chdir=/code
+/usr/local/bin/gunicorn server.wsgi \
+  -w 4 \
+  -b 0.0.0.0:8000 \
+  --chdir=/code \
+  --log-file=- \
+  --worker-tmp-dir /dev/shm

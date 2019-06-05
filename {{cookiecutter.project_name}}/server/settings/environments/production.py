@@ -20,7 +20,7 @@ ALLOWED_HOSTS = [
 
 
 # Staticfiles
-# https://docs.djangoproject.com/en/1.11/ref/contrib/staticfiles/
+# https://docs.djangoproject.com/en/2.2/ref/contrib/staticfiles/
 
 # Adding STATIC_ROOT to collect static files via 'collectstatic'
 STATIC_ROOT = '/var/www/django/static'
@@ -37,7 +37,7 @@ MEDIA_ROOT = '/var/www/django/media'
 
 
 # Password validation
-# https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
+# https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
 _PASS = 'django.contrib.auth.password_validation'
 AUTH_PASSWORD_VALIDATORS = [
@@ -57,7 +57,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 # Security
-# https://docs.djangoproject.com/en/1.11/topics/security/
+# https://docs.djangoproject.com/en/2.2/topics/security/
 
 SECURE_HSTS_SECONDS = 518400
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
