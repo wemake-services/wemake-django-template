@@ -226,14 +226,13 @@ category = "main"
 description = "Keep track of failed login attempts in Django-powered sites."
 name = "django-axes"
 optional = false
-python-versions = "*"
-version = "4.5.4"
+python-versions = "~=3.6"
+version = "5.0.6"
 
 [package.dependencies]
-django = "*"
-django-appconf = "*"
+django = ">=1.11"
+django-appconf = ">=1.0.3"
 django-ipware = ">=2.0.2"
-pytz = "*"
 
 [[package]]
 category = "main"
@@ -1002,7 +1001,7 @@ category = "main"
 description = "C parser in Python"
 name = "pycparser"
 optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+python-versions = "*"
 version = "2.19"
 
 [[package]]
@@ -1061,7 +1060,7 @@ six = ">=1.10.0"
 wcwidth = "*"
 
 [package.dependencies.more-itertools]
-python = ">=2.8"
+python = ">2.7"
 version = ">=4.0.0"
 
 [[package]]
@@ -1154,7 +1153,7 @@ description = "YAML parser and emitter for Python"
 name = "pyyaml"
 optional = false
 python-versions = "*"
-version = "3.13"
+version = "4.2b4"
 
 [[package]]
 category = "dev"
@@ -1457,10 +1456,10 @@ description = "Monitor code metrics for Python on your CI server"
 name = "xenon"
 optional = false
 python-versions = "*"
-version = "0.5.4"
+version = "0.5.5"
 
 [package.dependencies]
-PyYAML = ">=3.11,<4.0"
+PyYAML = ">=4.2b1,<5.0"
 radon = ">=2,<3"
 requests = ">=2.0,<3.0"
 
@@ -1470,7 +1469,7 @@ description = "A linter for YAML files."
 name = "yamllint"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "1.15.0"
+version = "1.16.0"
 
 [package.dependencies]
 pathspec = ">=0.5.3"
@@ -1485,7 +1484,7 @@ python-versions = ">=2.7"
 version = "0.5.1"
 
 [metadata]
-content-hash = "5578d468a158f065b93064c96e98eb2d5c0df6af796010f5632fa7b6fda1febf"
+content-hash = "7aec5bcb678e4e6bed2667c4e46f4259a17ac9ca12496c4806081ccc615cc490"
 python-versions = "3.7.3"
 
 [metadata.hashes]
@@ -1512,7 +1511,7 @@ decorator = ["86156361c50488b84a3f148056ea716ca587df2f0de1d34750d35c21312725de",
 dennis = ["8c942dd5da7d03c65daebc069c5ee5c7f1374ac9b0c8c89c627caa66fe822604", "f6487392ac91800c5f0684a99b404b7fd0f72ceb48faeb5a0ce4e2c24fb62d3f"]
 django = ["753d30d3eb078064d2ddadfea65083c9848074a7f93d7b4dc7fa6b1380d278f5", "7cb67e8b934fab23b6daed7144da52e8a25a47eba7f360ca43d2b448506b01ad"]
 django-appconf = ["35f13ca4d567f132b960e2cd4c832c2d03cb6543452d34e29b7ba10371ba80e3", "c98a7af40062e996b921f5962a1c4f3f0c979fa7885f7be4710cceb90ebe13a6"]
-django-axes = ["6f2719c9040e5120ece56232b6ab499b9cc3f02aa58d9fdee04210f480c7c30c", "7c539b1bbcac6752319783a5bd41c20c7b765cded31da9568a86e4521524a91e"]
+django-axes = ["d68f3e27fc563ae4d4c6bb52bd914e57e90052f4be234118e1156a8b3546863b", "ff406aed9057ffeaefbed97c9b470f3b6a7d8021d4ae78234c8cfe8c58fb3d67"]
 django-csp = ["04600237701e6d6ff78ed7d41209ff923988148bf292c128f6b474b9befe444f", "8b9997df89a7a936d7c397e051367f974aa1d1a97d0b32acb4300087b3bed071"]
 django-debug-toolbar = ["89d75b60c65db363fb24688d977e5fbf0e73386c67acf562d278402a10fc3736", "c2b0134119a624f4ac9398b44f8e28a01c7686ac350a12a74793f3dd57a9eea0"]
 django-feature-policy = ["7478abb88f20e7ad96367fd6e0468809d8250bbca52a70519702257f4e233569", "cb1f173cacaacb5ac83bd652622bc2601721d1ad21a5ad5cbc6c6989b30e8132"]
@@ -1600,7 +1599,7 @@ pytest-testmon = ["df00594e55f8f8f826e0e345dc23863ebac066eb749f8229c515a0373669c
 pytest-timeout = ["4a30ba76837a32c7b7cd5c84ee9933fde4b9022b0cd20ea7d4a577c2a1649fb1", "d49f618c6448c14168773b6cdda022764c63ea80d42274e3156787e8088d04c6"]
 python-decouple = ["1317df14b43efee4337a4aa02914bf004f010cd56d6c4bd894e6474ec8c4fe2d"]
 pytz = ["303879e36b721603cc54604edcac9d20401bdbe31e1e4fdee5b9f98d5d31dfda", "d747dd3d23d77ef44c6a3526e274af6efeb0a6f1afd5a69ba4d5be4098c8e141"]
-pyyaml = ["3d7da3009c0f3e783b2c873687652d83b1bbfd5c88e9813fb7e5b03c0dd3108b", "3ef3092145e9b70e3ddd2c7ad59bdd0252a94dfe3949721633e41344de00a6bf", "40c71b8e076d0550b2e6380bada1f1cd1017b882f7e16f09a65be98e017f211a", "558dd60b890ba8fd982e05941927a3911dc409a63dcb8b634feaa0cda69330d3", "a7c28b45d9f99102fa092bb213aa12e0aaf9a6a1f5e395d36166639c1f96c3a1", "aa7dd4a6a427aed7df6fb7f08a580d68d9b118d90310374716ae90b710280af1", "bc558586e6045763782014934bfaf39d48b8ae85a2713117d16c39864085c613", "d46d7982b62e0729ad0175a9bc7e10a566fc07b224d2c79fafb5e032727eaa04", "d5eef459e30b09f5a098b9cea68bebfeb268697f78d647bd255a085371ac7f3f", "e01d3203230e1786cd91ccfdc8f8454c8069c91bee3962ad93b87a4b2860f537", "e170a9e6fcfd19021dd29845af83bb79236068bf5fd4df3327c1be18182b2531"]
+pyyaml = ["1cbc199009e78f92d9edf554be4fe40fb7b0bef71ba688602a00e97a51909110", "254bf6fda2b7c651837acb2c718e213df29d531eebf00edb54743d10bcb694eb", "3108529b78577327d15eec243f0ff348a0640b0c3478d67ad7f5648f93bac3e2", "3c17fb92c8ba2f525e4b5f7941d850e7a48c3a59b32d331e2502a3cdc6648e76", "6f89b5c95e93945b597776163403d47af72d243f366bf4622ff08bdfd1c950b7", "8d6d96001aa7f0a6a4a95e8143225b5d06e41b1131044913fecb8f85a125714b", "be622cc81696e24d0836ba71f6272a2b5767669b0d79fdcf0295d51ac2e156c8", "c8a88edd93ee29ede719080b2be6cb2333dfee1dccba213b422a9c8e97f2967b", "f39411e380e2182ad33be039e8ee5770a5d9efe01a2bfb7ae58d9ba31c4a2a9d"]
 radon = ["38e495a4aa4c1d7293d3c1733393961fb52209c9bc2d75163c3ba8124d8bbbaa", "f893f2faa632a060f6d0f01843d10a0395515bde865c759c0dd3f15239caf11b"]
 requests = ["11e007a8a2aa0323f5a921e9e6a2d7e4e67d9877e85773fba9ba6419025cbeb4", "9cf5292fcd0f598c671cfc1e0d7d1a7f13bb8085e9a590f48c010551dc6c4b31"]
 restructuredtext-lint = ["97b3da356d5b3a8514d8f1f9098febd8b41463bed6a1d9f126cf0a048b6fd908"]
@@ -1628,6 +1627,6 @@ urllib3 = ["b246607a25ac80bedac05c6f282e3cdaf3afb65420fd024ac94435cabe6e18d1", "
 virtualenv = ["99acaf1e35c7ccf9763db9ba2accbca2f4254d61d1912c5ee364f9cc4a8942a0", "fe51cdbf04e5d8152af06c075404745a7419de27495a83f0d72518ad50be3ce8"]
 wcwidth = ["3df37372226d6e63e1b1e1eda15c594bca98a22d33a23832a90998faa96bc65e", "f4ebe71925af7b40a864553f761ed559b43544f8f71746c2d756c7fe788ade7c"]
 wemake-python-styleguide = ["0509b114f0446a30595e99d25566669c9f1ad9972b9d322ef27a22b8db19ba20", "0a94915dd1c48ca541a78a73b1c7e65cc023c3bd1c5d10b0a3f9dd23f2d4c4e6"]
-xenon = ["03c6fa6820ca260a85931cec44bd60ae60194eec7eb22f53ba160b3c9578cdf1", "ac86e17741c6b6c0cc7e38e48b2d9f1cb9918e78f7a12f892d798ba73d5c2c09"]
-yamllint = ["5a53b6ebea563f944420d2964233173532af00a9579ab2c48c4cf8c56b704050", "8f25759997acb42e52b96bf3af0b4b942e6516b51198bebd3402640102006af7"]
+xenon = ["26f65adb5d411ba3efc361dc5ab6cd341a243a33b5a526c89350240c765899b9", "ff4bbecf0da99a7f60033e5e9616e28eb2a52d78dc154d90736f8c0124ec3e76"]
+yamllint = ["9a4fec2d40804979de5f54453fd1551bc1f8b59a7ad4a26fd7f26aeca34a83af", "f97cd763fe7b588444a94cc44fd3764b832a613b5250baa2bfe8b84c91e4c330"]
 zipp = ["8c1019c6aad13642199fbe458275ad6a84907634cc9f0989877ccc4a2840139d", "ca943a7e809cc12257001ccfb99e3563da9af99d52f261725e96dfe0f9275bc3"]
