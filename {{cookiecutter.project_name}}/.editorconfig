@@ -10,7 +10,11 @@ indent_style = space
 indent_size = 2
 trim_trailing_whitespace = true
 
-[*.{py, pyi}]
+[*.py]
+indent_style = space
+indent_size = 4
+
+[*.pyi]
 indent_style = space
 indent_size = 4
 
