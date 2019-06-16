@@ -30,6 +30,7 @@ services:
       image:
         "registry.gitlab.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}:latest"
       build:
+        target: production_build
         context: .
         dockerfile: ./docker/django/Dockerfile
         args:
