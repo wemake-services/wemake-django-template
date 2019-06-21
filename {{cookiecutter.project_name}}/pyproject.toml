@@ -27,7 +27,7 @@ bcrypt = "^3.1"
 
 
 [tool.poetry.dev-dependencies]
-django-debug-toolbar = "^1.11"
+django-debug-toolbar = "^2.0"
 django-querycount = "^0.7"
 nplusone = "^1.0"
 wemake-python-styleguide = "^0.8"
