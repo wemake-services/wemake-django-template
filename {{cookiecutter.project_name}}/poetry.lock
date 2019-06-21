@@ -844,7 +844,7 @@ description = "A Python Parser"
 name = "parso"
 optional = false
 python-versions = "*"
-version = "0.4.0"
+version = "0.5.0"
 
 [[package]]
 category = "dev"
@@ -1569,7 +1569,7 @@ mypy-extensions = ["37e0e956f41369209a3d5f34580150bcacfabaa57b33a15c0b25f4b5725e
 nodeenv = ["ad8259494cf1c9034539f6cced78a1da4840a4b157e23640bc4a0c0546b0cb7a"]
 nplusone = ["1726c0a10c0aa7eabb04e24db2882ff97b6b7ee29d729a8d97dcbd12ef5a5651", "96b1e6e29e6af3e71b67d0cc012a5ec8c97c6a2f5399f4ba41a2bbe0e253a9ac"]
 packaging = ["0c98a5d0be38ed775798ece1b9727178c4469d9c3b4ada66e8e6b7849f8732af", "9e1cbf8c12b1f1ce0bb5344b8d7ecf66a6f8a6e91bcb0c84593ed6d3ab5c4ab3"]
-parso = ["17cc2d7a945eb42c3569d4564cdf49bde221bc2b552af3eca9c1aad517dcdd33", "2e9574cb12e7112a87253e14e2c380ce312060269d04bd018478a3c92ea9a376"]
+parso = ["5052bb33be034cba784193e74b1cde6ebf29ae8b8c1e4ad94df0c4209bfc4826", "db5881df1643bf3e66c097bfd8935cf03eae73f4cb61ae4433c9ea4fb6613446"]
 pathspec = ["54a5eab895d89f342b52ba2bffe70930ef9f8d96e398cccf530d21fa0516a873"]
 pbr = ["0ce920b865091450bbcd452b35cf6d6eb8a6d9ce13ad2210d6e77557f85cf32b", "93d2dc6ee0c9af4dbc70bc1251d0e545a9910ca8863774761f92716dece400b6"]
 pep8-naming = ["01cb1dab2f3ce9045133d08449f1b6b93531dceacb9ef04f67087c11c723cea9", "0ec891e59eea766efd3059c3d81f1da304d858220678bdc351aab73c533f2fbb"]
