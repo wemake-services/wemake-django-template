@@ -54,3 +54,19 @@ release-image:
     - master
   environment:
     name: production  # used to track time with 'cycle analytics'
+
+pages:
+  stage: after_deploy
+  image: docker:latest
+  script:
+    - apk update && apk upgrade
+    - apk add make
+    - cd docs
+    - make html
+    - cd ..
+    - mv docs/_build/html public/
+  artifacts:
+    paths:
+      - public
+  only:
+    - master

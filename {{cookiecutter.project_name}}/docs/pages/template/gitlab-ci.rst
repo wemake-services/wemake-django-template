@@ -43,6 +43,12 @@ And these kind of variables are required *most* of the time.
 See :ref:`django` on how to use ``dump-env`` and ``gitlab-ci`` together.
 
 
+Documentation
+-------------
+After each deploy from master branch this documentation compiles into nice looking html page.
+See `gitlab pages info <https://docs.gitlab.com/ee/user/project/pages/>`_.
+
+
 Further reading
 ---------------
 
