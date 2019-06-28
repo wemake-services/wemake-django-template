@@ -22,7 +22,7 @@ django-feature-policy = "^2.3"
 psycopg2 = "^2.8"
 gunicorn = "^19.9"
 python-decouple = "^3.1"
-dump-env = "^0.2"
+dump-env = "^1.0"
 bcrypt = "^3.1"
 
 
