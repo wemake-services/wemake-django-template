@@ -481,7 +481,6 @@ version = "0.6.1"
 [[package]]
 category = "dev"
 description = "More routines for operating on iterables, beyond itertools"
-marker = "python_version > \"2.7\""
 name = "more-itertools"
 optional = false
 python-versions = ">=3.4"
@@ -586,23 +585,19 @@ category = "dev"
 description = "pytest: simple powerful testing with Python"
 name = "pytest"
 optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "4.6.3"
+python-versions = ">=3.5"
+version = "5.0.0"
 
 [package.dependencies]
 atomicwrites = ">=1.0"
 attrs = ">=17.4.0"
 colorama = "*"
 importlib-metadata = ">=0.12"
+more-itertools = ">=4.0.0"
 packaging = "*"
 pluggy = ">=0.12,<1.0"
 py = ">=1.5.0"
-six = ">=1.10.0"
 wcwidth = "*"
-
-[package.dependencies.more-itertools]
-python = ">=2.8"
-version = ">=4.0.0"
 
 [[package]]
 category = "dev"
@@ -803,7 +798,7 @@ python-versions = ">=2.7"
 version = "0.5.1"
 
 [metadata]
-content-hash = "0627b828214585449d61d28229d351e78343c28c394d37bf9db1fd6f99489fcb"
+content-hash = "f35e583ec1e59727d0a575b686dff06b52ad9d00c32c06098f867e2d87ba8771"
 python-versions = "^3.6"
 
 [metadata.hashes]
@@ -863,7 +858,7 @@ pycodestyle = ["95a2219d12372f05704562a14ec30bc76b05a5b297b21a5dfe3f6fac3491ae56
 pydocstyle = ["2258f9b0df68b97bf3a6c29003edc5238ff8879f1efb6f1999988d934e432bd8", "5741c85e408f9e0ddf873611085e819b809fca90b619f5fd7f34bd4959da3dd4", "ed79d4ec5e92655eccc21eb0c6cf512e69512b4a97d215ace46d17e4990f2039"]
 pyflakes = ["17dbeb2e3f4d772725c777fabc446d5634d1038f234e77343108ce445ea69ce0", "d976835886f8c5b31d47970ed689944a0262b5f3afa00a5a7b4dc81e5449f8a2"]
 pyparsing = ["66c9268862641abcac4a96ba74506e594c884e3f57690a696d21ad8210ed667a", "f6c5ef0d7480ad048c054c37632c67fca55299990fff127850181659eea33fc3"]
-pytest = ["4a784f1d4f2ef198fe9b7aef793e9fa1a3b2f84e822d9b3a64a181293a572d45", "926855726d8ae8371803f7b2e6ec0a69953d9c6311fa7c3b6c1b929ff92d27da"]
+pytest = ["2878de8ae1c79a62c012da6186b88ff0562ea96ce29c4208d2a9b11d9f607df1", "95b700cf21ed5b7e91bce7a6b5a573b2e3ef7b3643d00f681d8f9c4672f9fbdf"]
 pytest-cookies = ["7054b5abd87704c3769b46deb65c332fadba80905d4103b0b1e0b4fe8a9a852a", "a6f37393b697eb3357625a5c226888d9dd020cca3d112b38c630467ce9ff7844"]
 pytest-randomly = ["07b642e177c5921386fa36ee3995a4bda918a1d20b3806a4f397a02788f88331", "f5ac7c6e30a32c1aa5ae911e00b5ffd6a0df38eb818f6b539e1e7b89995724ed"]
 python-dateutil = ["7e6584c74aeed623791615e26efd690f29817a27c73085b78e4bad02493df2fb", "c89805f6f4d64db21ed966fda138f8a5ed7a4fdbc1a8ee329ce1b74e3c74da9e"]
