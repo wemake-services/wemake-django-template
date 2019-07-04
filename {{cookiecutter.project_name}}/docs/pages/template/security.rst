@@ -100,6 +100,7 @@ There are different tools to help you:
 - `XSStrike <https://github.com/s0md3v/XSStrike>`_ - automated tool to check that your application is not vulnerable to ``xss`` errors
 - `docker-bench <https://github.com/docker/docker-bench-security>`_ - a script that checks for dozens of common best-practices around deploying Docker containers in production
 - `lynis <https://cisofy.com/lynis/>`_ - a battle-tested security tool for systems running Linux, macOS, or Unix-based operating system
+- `trivy <https://github.com/knqyf263/trivy>`_ - a simple and comprehensive vulnerability scanner for containers
 
 But, even after all you attempts to secure your application,
 it **won't be 100% safe**. Do not fall into this false feeling of security.
