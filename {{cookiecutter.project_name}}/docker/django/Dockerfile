@@ -1,7 +1,7 @@
 # This Dockerfile uses multi-stage build to customize DEV and PROD images:
 # https://docs.docker.com/develop/develop-images/multistage-build/
 
-FROM python:3.7.3-alpine3.9 as development_build
+FROM python:3.7.4-alpine3.9 as development_build
 
 LABEL maintainer="sobolevn@wemake.services"
 LABEL vendor="wemake.services"
