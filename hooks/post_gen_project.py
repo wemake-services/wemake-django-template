@@ -9,10 +9,11 @@ It does the following:
 
 A portion of this code was adopted from Django's standard crypto functions and
 utilities, specifically:
-    https://github.com/django/django/blob/master/django/utils/crypto.py
+https://github.com/django/django/blob/master/django/utils/crypto.py
 
 And from pydanny's cookiecutter-django:
-    https://github.com/pydanny/cookiecutter-django
+https://github.com/pydanny/cookiecutter-django
+
 """
 
 import os
@@ -77,7 +78,7 @@ def copy_local_configuration():
     """
     Handler to copy local configuration.
 
-    It is copied from `.template`s files to the actual files.
+    It is copied from ``.template`` files to the actual files.
     """
     secret_template = os.path.join(
         PROJECT_DIRECTORY, 'config', '.env.template',
