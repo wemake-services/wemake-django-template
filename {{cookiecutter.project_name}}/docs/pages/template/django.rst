@@ -121,11 +121,11 @@ Here's a full list of the extensions for both development and production:
 - `django-health-check`_ - checks for various conditions and provides reports
   when anomalous behavior is detected
 - `django-add-default-value`_ - this django Migration Operation can be used to 
-transfer a Fields default value to the database scheme
+  transfer a Fields default value to the database scheme
 - `django-deprecate-fields`_ - this package allows deprecating model fields and 
-allows removing them in a backwards compatible manner
+  allows removing them in a backwards compatible manner
 - `django-migration-linter`_ - detect backward incompatible migrations for 
-your django project
+  your django project
 
 Development only extensions:
 
