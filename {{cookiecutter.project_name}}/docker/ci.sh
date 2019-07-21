@@ -22,7 +22,7 @@ run_ci () {
   flake8 .
 
   # Running tests and type checking:
-  mypy server
+  mypy server --warn-unreachable
   pytest --dead-fixtures --dup-fixtures
   pytest
 
