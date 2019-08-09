@@ -18,7 +18,7 @@ PATTERN = r'{{(\s?cookiecutter)[.](.*?)}}'
 RE_OBJ = re.compile(PATTERN)
 
 
-@pytest.fixture
+@pytest.fixture()
 def context():
     """Creates default prompt values."""
     return {
@@ -75,7 +75,7 @@ def test_variables_replaced(cookies, context):
     assert_variables_replaced(paths)
 
 
-@pytest.mark.parametrize('prompt,entered_value', [
+@pytest.mark.parametrize(('prompt', 'entered_value'), [
     ('project_name', 'myProject'),
     ('project_name', '43prject'),
     ('project_name', '_test'),

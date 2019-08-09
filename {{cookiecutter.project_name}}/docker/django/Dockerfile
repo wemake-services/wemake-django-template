@@ -1,7 +1,7 @@
 # This Dockerfile uses multi-stage build to customize DEV and PROD images:
 # https://docs.docker.com/develop/develop-images/multistage-build/
 
-FROM python:3.7.3-alpine3.9 as development_build
+FROM python:3.7.4-alpine3.9 as development_build
 
 LABEL maintainer="sobolevn@wemake.services"
 LABEL vendor="wemake.services"
@@ -51,10 +51,9 @@ WORKDIR /code
 ENTRYPOINT ["/sbin/tini", "--", "/docker-entrypoint.sh"]
 
 
-# The following stage is only for Prod: 
+# The following stage is only for Prod:
 # https://wemake-django-template.readthedocs.io/en/latest/pages/template/production.html
 
 FROM development_build as production_build
 
 COPY . /code
-

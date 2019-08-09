@@ -21,8 +21,11 @@ run_ci () {
   # Running linting for all python files in the project:
   flake8 .
 
-  # Running tests and type checking:
-  mypy server
+  # Running type checking:
+  # See: https://github.com/typeddjango/django-stubs
+  PYTHONPATH="$PYTHONPATH:$PWD" mypy server
+
+  # Running tests:
   pytest --dead-fixtures --dup-fixtures
   pytest
 

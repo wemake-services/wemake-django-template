@@ -13,7 +13,7 @@ files serving technique in development.
 
 from django.conf import settings
 from django.contrib import admin
-from django.contrib.admindocs import urls as admindocs_urls
+from django.contrib.admindocs import urls as admindocs_urls  # type: ignore
 from django.urls import include, path
 from django.views.generic import TemplateView
 from health_check import urls as health_urls
@@ -50,8 +50,8 @@ urlpatterns = [
 ]
 
 if settings.DEBUG:  # pragma: no cover
-    import debug_toolbar  # noqa: Z435
-    from django.conf.urls.static import static  # noqa: Z435
+    import debug_toolbar  # noqa: WPS433
+    from django.conf.urls.static import static  # noqa: WPS433
 
     urlpatterns = [
         # URLs specific only to django-debug-toolbar:

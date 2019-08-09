@@ -27,7 +27,7 @@ sys.path.insert(0, os.path.abspath('..'))
 # build process in ReadTheDocs?
 # https://github.com/wemake-services/wemake-django-template/issues/133
 with suppress(ImportError):
-    import django  # noqa: Z435
+    import django  # noqa: WPS433
 
     # Normal django setup. That's how it should be in development:
     os.environ['DJANGO_SETTINGS_MODULE'] = 'server.settings'
