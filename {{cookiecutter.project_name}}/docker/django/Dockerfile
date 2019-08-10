@@ -31,6 +31,7 @@ RUN apk --no-cache add \
      musl-dev \
      postgresql-dev \
      tini \
+  && pip install -U "pip<19.0" \
   && pip install "poetry==$POETRY_VERSION"
 
 # Copy only requirements, to cache them in docker layer
