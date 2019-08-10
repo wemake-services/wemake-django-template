@@ -12,6 +12,9 @@ if [ "$DJANGO_ENV" != 'development' ]; then
   exit 1
 fi
 
+# Python path is required for `mypy` to be run correcty with `django-stubs`:
+: "${PYTHONPATH:=''}"
+
 pyclean () {
   # Cleaning cache:
   find . | grep -E '(__pycache__|\.py[cod]$)' | xargs rm -rf

@@ -82,7 +82,7 @@ Running ``mypy`` is required before any commit:
 
 .. code:: bash
 
-    mypy server
+  mypy server
 
 This will eliminate a lot of possible ``TypeError`` and other issues.
 However, this will not make code 100% safe from errors.
@@ -91,6 +91,11 @@ So, both the testing and review process are still required.
 ``mypy`` is configured via ``setup.cfg``.
 Read the `docs <https://mypy.readthedocs.io/en/latest/>`_
 for more information.
+
+We also use `django-stubs <https://github.com/typeddjango/django-stubs>`_
+to type ``django`` internals.
+This package is optional and can be removed,
+if you don't what to type your ``django`` for some reason.
 
 
 pre-commit

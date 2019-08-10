@@ -36,6 +36,7 @@ We also use some extra plugins for ``flake8``
 that are not bundled with ``wemake-python-styleguide``:
 
 - `flake8-pytest <https://github.com/vikingco/flake8-pytest>`_ - ensures that ``pytest`` best practices are used
+- `flake8-pytest-style <https://github.com/m-burst/flake8-pytest-style>`_ - ensures that ``pytest`` tests and fixtures are written in a single style
 - `flake8-django <https://github.com/rocioar/flake8-django>`_ - plugin to enforce best practices in a ``django`` project
 
 
@@ -91,8 +92,8 @@ Also see `dennis <https://dennis.readthedocs.io/en/latest/linting.html>`_ docs.
 
 .. code:: bash
 
-   polint -i location,unsorted locale
-   dennis-cmd lint --errorsonly locale
+  polint -i location,unsorted locale
+  dennis-cmd lint --errorsonly locale
 
 
 Packaging
@@ -114,7 +115,7 @@ That's because they require another technology stack to be installed
 or just out of scope.
 
 We also recommend to check the list of linters
-`recommended by wemake-python-styleguide <https://wemake-python-styleguide.readthedocs.io/en/latest/pages/usage/integrations.html#extras>`_.
+`recommended by wemake-python-styleguide <https://wemake-python-stylegui.de/en/latest/pages/usage/integrations.html#extras>`_.
 
 Here's the list of these linters. You may still find them useful.
 
