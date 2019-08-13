@@ -1057,7 +1057,7 @@ category = "main"
 description = "C parser in Python"
 name = "pycparser"
 optional = false
-python-versions = "*"
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 version = "2.19"
 
 [[package]]
@@ -1204,7 +1204,7 @@ category = "dev"
 description = "YAML parser and emitter for Python"
 name = "pyyaml"
 optional = false
-python-versions = "*"
+python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 version = "4.2b4"
 
 [[package]]
@@ -1525,7 +1525,7 @@ description = "A linter for YAML files."
 name = "yamllint"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "1.16.0"
+version = "1.17.0"
 
 [package.dependencies]
 pathspec = ">=0.5.3"
@@ -1540,7 +1540,7 @@ python-versions = ">=2.7"
 version = "0.5.2"
 
 [metadata]
-content-hash = "df2f18f6fbadfd8199fff9bd9b6a65da50fa0f48b0b0f9732996602a189fb697"
+content-hash = "ee751d04c2df9087f2d1cc95c9f0f7384f15e4b00929b23e360d58cb39dbb796"
 python-versions = "3.7.4"
 
 [metadata.hashes]
@@ -1689,5 +1689,5 @@ virtualenv = ["6cb2e4c18d22dbbe283d0a0c31bb7d90771a606b2cb3415323eea008eaee6a9d"
 wcwidth = ["3df37372226d6e63e1b1e1eda15c594bca98a22d33a23832a90998faa96bc65e", "f4ebe71925af7b40a864553f761ed559b43544f8f71746c2d756c7fe788ade7c"]
 wemake-python-styleguide = ["5a25f6d877000cc6d657438a94474f44db6563adba3a518d75d6e17d8017cc4f", "933b5baf551daf73469cd61b124c222cfb06b851164681426aab8d44b94de4e7"]
 xenon = ["26f65adb5d411ba3efc361dc5ab6cd341a243a33b5a526c89350240c765899b9", "ff4bbecf0da99a7f60033e5e9616e28eb2a52d78dc154d90736f8c0124ec3e76"]
-yamllint = ["9a4fec2d40804979de5f54453fd1551bc1f8b59a7ad4a26fd7f26aeca34a83af", "f97cd763fe7b588444a94cc44fd3764b832a613b5250baa2bfe8b84c91e4c330"]
+yamllint = ["67173339f28868260ce5912abfefa10e115ceb1d2ac1c4d8c7acc8c4ef6c9a8a", "70a6f8316851254e197a6231c35577be29fa2fbe2c77390a54c9a50217cdaa13"]
 zipp = ["4970c3758f4e89a7857a973b1e2a5d75bcdc47794442f2e2dd4fe8e0466e809a", "8a5712cfd3bb4248015eb3b0b3c54a5f6ee3f2425963ef2a0125b8bc40aafaec"]
