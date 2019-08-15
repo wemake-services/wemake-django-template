@@ -1476,7 +1476,7 @@ description = "The strictest and most opinionated python linter ever"
 name = "wemake-python-styleguide"
 optional = false
 python-versions = ">=3.6,<4.0"
-version = "0.11.1"
+version = "0.12.0"
 
 [package.dependencies]
 astor = ">=0.7.1,<0.9.0"
@@ -1491,7 +1491,7 @@ flake8-coding = ">=1.3,<2.0"
 flake8-commas = ">=2.0,<3.0"
 flake8-comprehensions = ">=2.1,<3.0"
 flake8-debugger = ">=3.1,<4.0"
-flake8-docstrings = ">=1.3,<2.0"
+flake8-docstrings = ">=1.3.1,<2.0.0"
 flake8-eradicate = ">=0.2,<0.3"
 flake8-executable = ">=2.0,<3.0"
 flake8-isort = ">=2.6,<3.0"
@@ -1499,11 +1499,12 @@ flake8-logging-format = ">=0.6,<0.7"
 flake8-pep3101 = ">=1.2,<2.0"
 flake8-print = ">=3.1,<4.0"
 flake8-quotes = ">=2.0.1,<3.0.0"
-flake8-rst-docstrings = ">=0.0.10,<0.0.11"
+flake8-rst-docstrings = ">=0.0.10,<0.0.12"
 flake8-string-format = ">=0.2,<0.3"
 pep8-naming = ">=0.8.2,<0.9.0"
-pydocstyle = "<4"
+pydocstyle = "<4.0"
 pygments = ">=2.4,<3.0"
+radon = "<3"
 typing_extensions = ">=3.6,<4.0"
 
 [[package]]
@@ -1540,7 +1541,7 @@ python-versions = ">=2.7"
 version = "0.5.2"
 
 [metadata]
-content-hash = "ee751d04c2df9087f2d1cc95c9f0f7384f15e4b00929b23e360d58cb39dbb796"
+content-hash = "50651b37a3116713c5a8487dfeec12af4fbf9ab5f274052a7fd4c75b8fc62dfd"
 python-versions = "3.7.4"
 
 [metadata.hashes]
@@ -1687,7 +1688,7 @@ typing-extensions = ["2ed632b30bb54fc3941c382decfd0ee4148f5c591651c9272473fea2c6
 urllib3 = ["b246607a25ac80bedac05c6f282e3cdaf3afb65420fd024ac94435cabe6e18d1", "dbe59173209418ae49d485b87d1681aefa36252ee85884c31346debd19463232"]
 virtualenv = ["6cb2e4c18d22dbbe283d0a0c31bb7d90771a606b2cb3415323eea008eaee6a9d", "909fe0d3f7c9151b2df0a2cb53e55bdb7b0d61469353ff7a49fd47b0f0ab9285"]
 wcwidth = ["3df37372226d6e63e1b1e1eda15c594bca98a22d33a23832a90998faa96bc65e", "f4ebe71925af7b40a864553f761ed559b43544f8f71746c2d756c7fe788ade7c"]
-wemake-python-styleguide = ["5a25f6d877000cc6d657438a94474f44db6563adba3a518d75d6e17d8017cc4f", "933b5baf551daf73469cd61b124c222cfb06b851164681426aab8d44b94de4e7"]
+wemake-python-styleguide = ["9dde96f619c91864dced5d8de91d6db078eac47901b6fcd5e40cd772c3da9cee", "d5d41c5d11b18013ad860d15fed5bfec44ad4f3639279796168f6557596859c6"]
 xenon = ["26f65adb5d411ba3efc361dc5ab6cd341a243a33b5a526c89350240c765899b9", "ff4bbecf0da99a7f60033e5e9616e28eb2a52d78dc154d90736f8c0124ec3e76"]
 yamllint = ["67173339f28868260ce5912abfefa10e115ceb1d2ac1c4d8c7acc8c4ef6c9a8a", "70a6f8316851254e197a6231c35577be29fa2fbe2c77390a54c9a50217cdaa13"]
 zipp = ["4970c3758f4e89a7857a973b1e2a5d75bcdc47794442f2e2dd4fe8e0466e809a", "8a5712cfd3bb4248015eb3b0b3c54a5f6ee3f2425963ef2a0125b8bc40aafaec"]
