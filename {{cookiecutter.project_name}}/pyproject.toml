@@ -51,7 +51,7 @@ django-stubs = "^1.0"
 pre-commit = "^1.18"
 ipython = "^7.7"
 
-sphinx = "^2.1"
+sphinx = "^2.2"
 sphinx-autodoc-typehints = "^1.7"
 doc8 = "^0.8"
 
