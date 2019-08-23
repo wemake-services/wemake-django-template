@@ -48,6 +48,9 @@ INSTALLED_APPS: Tuple[str, ...] = (
     'health_check.db',
     'health_check.cache',
     'health_check.storage',
+
+    # Third party apps
+    'django_http_referrer_policy',
 )
 
 MIDDLEWARE: Tuple[str, ...] = (
@@ -67,6 +70,9 @@ MIDDLEWARE: Tuple[str, ...] = (
 
     # Axes:
     'axes.middleware.AxesMiddleware',
+
+    # Django HTTP Referrer Policy:
+    'django_http_referrer_policy.middleware.ReferrerPolicyMiddleware',
 )
 
 ROOT_URLCONF = 'server.urls'
@@ -183,6 +189,9 @@ SECURE_CONTENT_TYPE_NOSNIFF = True
 SECURE_BROWSER_XSS_FILTER = True
 
 X_FRAME_OPTIONS = 'DENY'
+
+# https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy#Syntax
+REFERRER_POLICY = 'no-referrer'
 
 # https://github.com/adamchainz/django-feature-policy#setting
 FEATURE_POLICY: Dict[str, Union[str, List[str]]] = {}  # noqa: TAE002
