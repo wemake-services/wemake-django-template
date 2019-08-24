@@ -51,17 +51,14 @@ def _get_random_string(length=50):
 
 
 def _create_secret_key(config_path):
-    with open(config_path) as config_file:
-        file_contents = config_file.read()
-
     # Generate a SECRET_KEY that matches the Django standard
     secret_key = _get_random_string()
 
-    # Replace CHANGEME with SECRET_KEY
-    file_contents = file_contents.replace(CHANGEME, secret_key, 1)
+    with open(config_path, 'rw') as config_file:
+        # Replace CHANGEME with SECRET_KEY
+        file_contents = config_file.read().replace(CHANGEME, secret_key, 1)
 
-    # Write the results to the file
-    with open(config_path, 'w') as config_file:
+        # Write the results to the file
         config_file.write(file_contents)
 
 

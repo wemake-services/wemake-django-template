@@ -11,23 +11,11 @@ import os
 import re
 
 import pytest
-from binaryornot.check import is_binary  # noqa: I003
+from binaryornot.check import is_binary
 from cookiecutter.exceptions import FailedHookException
 
 PATTERN = r'{{(\s?cookiecutter)[.](.*?)}}'
 RE_OBJ = re.compile(PATTERN)
-
-
-@pytest.fixture()
-def context():
-    """Creates default prompt values."""
-    return {
-        'project_name': 'test_project',
-        'project_verbose_name': 'Test Project',
-        'project_domain': 'myapp.com',
-        'organization': 'wemake.services',
-        'docker': 'y',
-    }
 
 
 def build_files_list(root_dir):

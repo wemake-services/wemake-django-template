@@ -24,7 +24,7 @@ We use `wemake-python-styleguide` as the main code style rules.
 Run:
 
 ```bash
-flake8 hooks tests
+flake8 .
 ```
 
 
