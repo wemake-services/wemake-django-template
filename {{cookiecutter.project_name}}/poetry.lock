@@ -672,7 +672,7 @@ description = "Python docstring reStructuredText (RST) validator"
 name = "flake8-rst-docstrings"
 optional = false
 python-versions = "*"
-version = "0.0.10"
+version = "0.0.11"
 
 [package.dependencies]
 flake8 = ">=3.0.0"
@@ -1487,10 +1487,10 @@ description = "The strictest and most opinionated python linter ever"
 name = "wemake-python-styleguide"
 optional = false
 python-versions = ">=3.6,<4.0"
-version = "0.11.1"
+version = "0.12.2"
 
 [package.dependencies]
-astor = ">=0.7.1,<0.9.0"
+astor = ">=0.8,<0.9"
 attrs = "*"
 flake8 = ">=3.7,<4.0"
 flake8-annotations-complexity = ">=0.0.2,<0.0.3"
@@ -1502,7 +1502,7 @@ flake8-coding = ">=1.3,<2.0"
 flake8-commas = ">=2.0,<3.0"
 flake8-comprehensions = ">=2.1,<3.0"
 flake8-debugger = ">=3.1,<4.0"
-flake8-docstrings = ">=1.3,<2.0"
+flake8-docstrings = ">=1.3.1,<2.0.0"
 flake8-eradicate = ">=0.2,<0.3"
 flake8-executable = ">=2.0,<3.0"
 flake8-isort = ">=2.6,<3.0"
@@ -1510,11 +1510,12 @@ flake8-logging-format = ">=0.6,<0.7"
 flake8-pep3101 = ">=1.2,<2.0"
 flake8-print = ">=3.1,<4.0"
 flake8-quotes = ">=2.0.1,<3.0.0"
-flake8-rst-docstrings = ">=0.0.10,<0.0.11"
+flake8-rst-docstrings = ">=0.0.11,<0.0.12"
 flake8-string-format = ">=0.2,<0.3"
 pep8-naming = ">=0.8.2,<0.9.0"
-pydocstyle = "<4"
+pydocstyle = ">=3.0,<4.0"
 pygments = ">=2.4,<3.0"
+radon = ">=2.4,<3.0"
 typing_extensions = ">=3.6,<4.0"
 
 [[package]]
@@ -1551,7 +1552,7 @@ python-versions = ">=2.7"
 version = "0.5.2"
 
 [metadata]
-content-hash = "fcba1708d052b962bd3c09628050175dfa66bb54e2dfbe40bcf890c2ddadd212"
+content-hash = "1a53063b223e9e99f7c4aefac8ea7a826ae61aca064fc5e0ff60885bf90555b3"
 python-versions = "3.7.4"
 
 [metadata.hashes]
@@ -1619,7 +1620,7 @@ flake8-print = ["5010e6c138b63b62400da4b06afa33becc5e08bd1fcce9af3752445cf3342f5
 flake8-pytest = ["61686128a79e1513db575b2bcac351081d5a293811ddce2d5dfc25e8c762d33e", "b4d6703f7d7b646af1e2660809e795886dd349df11843613dbe6515efa82c0f3"]
 flake8-pytest-style = ["1c2303998c509cd65c3fb047cd536787ddf953e8113bc7f086c0cd7468db4b1f", "820503cb50b7f6aa13a9889f4c47ba35bbd666877a72ed138ae5682a9bccaf9d"]
 flake8-quotes = ["5dbaf668887873f28346fb87943d6da2e4b9f77ce9f2169cff21764a0a4934ed"]
-flake8-rst-docstrings = ["009c278460394d7f5a88c9e4da91962e1b7cd6a351913c2c2947b873a4887625"]
+flake8-rst-docstrings = ["a2fa35c6ef978422234afae8c345f23ff721571d43f2895e29817e94be92dd6c"]
 flake8-string-format = ["68ea72a1a5b75e7018cae44d14f32473c798cf73d75cbaed86c6a9a907b770b2", "774d56103d9242ed968897455ef49b7d6de272000cfa83de5814273a868832f1"]
 gitdb2 = ["83361131a1836661a155172932a13c08bda2db3674e4caa32368aa6eb02f38c2", "e3a0141c5f2a3f635c7209d56c496ebe1ad35da82fe4d3ec4aaa36278d70648a"]
 gitpython = ["947cc75913e7b6da108458136607e2ee0e40c20be1e12d4284e7c6c12956c276", "d2f4945f8260f6981d724f5957bc076398ada55cb5d25aaee10108bcdc894100"]
@@ -1699,7 +1700,7 @@ typing-extensions = ["2ed632b30bb54fc3941c382decfd0ee4148f5c591651c9272473fea2c6
 urllib3 = ["b246607a25ac80bedac05c6f282e3cdaf3afb65420fd024ac94435cabe6e18d1", "dbe59173209418ae49d485b87d1681aefa36252ee85884c31346debd19463232"]
 virtualenv = ["94a6898293d07f84a98add34c4df900f8ec64a570292279f6d91c781d37fd305", "f6fc312c031f2d2344f885de114f1cb029dfcffd26aa6e57d2ee2296935c4e7d"]
 wcwidth = ["3df37372226d6e63e1b1e1eda15c594bca98a22d33a23832a90998faa96bc65e", "f4ebe71925af7b40a864553f761ed559b43544f8f71746c2d756c7fe788ade7c"]
-wemake-python-styleguide = ["5a25f6d877000cc6d657438a94474f44db6563adba3a518d75d6e17d8017cc4f", "933b5baf551daf73469cd61b124c222cfb06b851164681426aab8d44b94de4e7"]
+wemake-python-styleguide = ["398721d3ef3eddd6b60009ca6620336798d7e1a2982cac83581691a3920037fb", "60d9fe191c2d0cd55fffaa736c9efe503a7314583fc29e25411e7fe4f9f0097b"]
 xenon = ["03c6fa6820ca260a85931cec44bd60ae60194eec7eb22f53ba160b3c9578cdf1", "ac86e17741c6b6c0cc7e38e48b2d9f1cb9918e78f7a12f892d798ba73d5c2c09"]
 yamllint = ["67173339f28868260ce5912abfefa10e115ceb1d2ac1c4d8c7acc8c4ef6c9a8a", "70a6f8316851254e197a6231c35577be29fa2fbe2c77390a54c9a50217cdaa13"]
 zipp = ["4970c3758f4e89a7857a973b1e2a5d75bcdc47794442f2e2dd4fe8e0466e809a", "8a5712cfd3bb4248015eb3b0b3c54a5f6ee3f2425963ef2a0125b8bc40aafaec"]
