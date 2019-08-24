@@ -53,8 +53,9 @@ def _get_random_string(length=50):
 def _create_secret_key(config_path):
     # Generate a SECRET_KEY that matches the Django standard
     secret_key = _get_random_string()
+    print(os.path.curdir, PROJECT_NAME)
 
-    with open(config_path, 'rw') as config_file:
+    with open(config_path, 'r+') as config_file:
         # Replace CHANGEME with SECRET_KEY
         file_contents = config_file.read().replace(CHANGEME, secret_key, 1)
 
