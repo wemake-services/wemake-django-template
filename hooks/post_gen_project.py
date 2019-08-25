@@ -35,6 +35,11 @@ def _get_random_string(length=50):
 
     The default length of 12 with the a-z, A-Z, 0-9 character set returns
     a 71-bit value. log_2((26+26+10)^12) =~ 71 bits
+
+    >>> secret = _get_random_string()
+    >>> len(secret)
+    50
+
     """
     punctuation = string.punctuation.replace(
         '"', '',
@@ -53,14 +58,15 @@ def _get_random_string(length=50):
 def _create_secret_key(config_path):
     # Generate a SECRET_KEY that matches the Django standard
     secret_key = _get_random_string()
-    print(os.path.curdir, PROJECT_NAME)
 
     with open(config_path, 'r+') as config_file:
         # Replace CHANGEME with SECRET_KEY
         file_contents = config_file.read().replace(CHANGEME, secret_key, 1)
 
-        # Write the results to the file
+        # Write the results to the file:
+        config_file.seek(0)
         config_file.write(file_contents)
+        config_file.truncate()
 
 
 def print_futher_instuctions():

@@ -9,11 +9,8 @@ SECURITY WARNING: don't run with debug turned on in production!
 import logging
 from typing import List
 
-from server.settings.components.common import (
-    INSTALLED_APPS,
-    MIDDLEWARE,
-    config,
-)
+from server.settings.components import config
+from server.settings.components.common import INSTALLED_APPS, MIDDLEWARE
 
 # Setting the development status:
 
@@ -69,7 +66,9 @@ CSP_IMG_SRC = ("'self'", 'data:')
 # https://github.com/jmcarp/nplusone
 
 # Should be the first in line:
-MIDDLEWARE = ('nplusone.ext.django.NPlusOneMiddleware',) + MIDDLEWARE
+MIDDLEWARE = (  # noqa: WPS440
+    'nplusone.ext.django.NPlusOneMiddleware',
+) + MIDDLEWARE
 
 # Logging N+1 requests:
 NPLUSONE_RAISE = True  # comment out if you want to allow N+1 requests
