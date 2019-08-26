@@ -1065,7 +1065,7 @@ category = "main"
 description = "C parser in Python"
 name = "pycparser"
 optional = false
-python-versions = "*"
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 version = "2.19"
 
 [[package]]
@@ -1165,9 +1165,10 @@ description = "Pytest plugin to randomly order tests and control random.seed."
 name = "pytest-randomly"
 optional = false
 python-versions = ">=3.5"
-version = "3.0.0"
+version = "3.1.0"
 
 [package.dependencies]
+entrypoints = "*"
 pytest = "*"
 
 [[package]]
@@ -1214,7 +1215,7 @@ category = "dev"
 description = "YAML parser and emitter for Python"
 name = "pyyaml"
 optional = false
-python-versions = "*"
+python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 version = "4.2b4"
 
 [[package]]
@@ -1553,7 +1554,7 @@ version = "0.6.0"
 more-itertools = "*"
 
 [metadata]
-content-hash = "cf0984eb3dc62eaea5ed9065dd565526a71aca77ba325d5f5edb349cedbfae68"
+content-hash = "5f12c43d209097d0847fe229b49f72d99385563f5f5fa7f218d61f996b37398e"
 python-versions = "3.7.4"
 
 [metadata.hashes]
@@ -1669,7 +1670,7 @@ pytest = ["95b1f6db806e5b1b5b443efeb58984c24945508f93a866c1719e1a507a957d7c", "c
 pytest-cov = ["2b097cde81a302e1047331b48cadacf23577e431b61e9c6f49a1170bbe3d3da6", "e00ea4fdde970725482f1f35630d12f074e121a23801aabf2ae154ec6bdd343a"]
 pytest-deadfixtures = ["458b2314862696af11223d869c97814e63db8a7b9f61dcf42fe07a72a7ff9bd8", "61e34fb0f777bc0f321c7d45f39447e965fb1a6d2de243e47aa034387229d9d3"]
 pytest-django = ["264fb4c506db5d48a6364c311a0b00b7b48a52715bad8839b2d8bee9b99ed6bb", "4adfe5fb3ed47f0ba55506dd3daf688b1f74d5e69148c10ad2dd2f79f40c0d62"]
-pytest-randomly = ["07b642e177c5921386fa36ee3995a4bda918a1d20b3806a4f397a02788f88331", "f5ac7c6e30a32c1aa5ae911e00b5ffd6a0df38eb818f6b539e1e7b89995724ed"]
+pytest-randomly = ["5facc2b5ac56e36b9c4bf14f49cc7b4c95427835bbf4a3c739b71a5f5f82d58a", "9256c9ff88466f7bf9794d2eeeea8fbf1cd1bc8df1b3575df59e89b8813bffaa"]
 pytest-testmon = ["05648f9b22aeeda9d32e61b46fa78c9ff28f217d69005b3b19ffb75d5992187e"]
 pytest-timeout = ["4a30ba76837a32c7b7cd5c84ee9933fde4b9022b0cd20ea7d4a577c2a1649fb1", "d49f618c6448c14168773b6cdda022764c63ea80d42274e3156787e8088d04c6"]
 python-decouple = ["1317df14b43efee4337a4aa02914bf004f010cd56d6c4bd894e6474ec8c4fe2d"]
