@@ -852,7 +852,7 @@ description = "The strictest and most opinionated python linter ever"
 name = "wemake-python-styleguide"
 optional = false
 python-versions = ">=3.6,<4.0"
-version = "0.12.3"
+version = "0.12.4"
 
 [package.dependencies]
 astor = ">=0.8,<0.9"
@@ -902,7 +902,7 @@ version = "0.6.0"
 more-itertools = "*"
 
 [metadata]
-content-hash = "4b2b99c09285e11f05edd22d12983074efe308e881ac5ebed99263537e508ef6"
+content-hash = "49ae8caffe3a9e0a757548b4b13d057b484991f4b771d97cdc1faa980f2abf0a"
 python-versions = "^3.6"
 
 [metadata.hashes]
@@ -987,6 +987,6 @@ typing = ["91dfe6f3f706ee8cc32d38edbbf304e9b7583fb37108fef38229617f8b3eba23", "c
 typing-extensions = ["2ed632b30bb54fc3941c382decfd0ee4148f5c591651c9272473fea2c6397d95", "b1edbbf0652660e32ae780ac9433f4231e7339c7f9a8057d0f042fcbcea49b87", "d8179012ec2c620d3791ca6fe2bf7979d979acdbef1fca0bc56b37411db682ed"]
 urllib3 = ["b246607a25ac80bedac05c6f282e3cdaf3afb65420fd024ac94435cabe6e18d1", "dbe59173209418ae49d485b87d1681aefa36252ee85884c31346debd19463232"]
 wcwidth = ["3df37372226d6e63e1b1e1eda15c594bca98a22d33a23832a90998faa96bc65e", "f4ebe71925af7b40a864553f761ed559b43544f8f71746c2d756c7fe788ade7c"]
-wemake-python-styleguide = ["2a0e6c73f9239cec74f733ba0df4513169c46b89e7f13de187c61bcdd2e20add", "4e52d683377a1c6792fd7e30c90784fecd242d1ca96706b36453f027fd761288"]
+wemake-python-styleguide = ["2fb812ca3b947eab96b463eae0690bc038fc3adf2eb741178985cc5027d5736c", "348d7cb9e49e881796d31373e4840d20b61ebdbfdf1a7536e2d839b2cc022a1a"]
 whichcraft = ["0acf1d3aebb5ab16243edbf818024ce21938f06150563041665a23b33eb11dd8", "d54caa14cc3f7b1d2276f8753fd05f1dc5a554df6f83a36c5c2a551e81de2498"]
 zipp = ["3718b1cbcd963c7d4c5511a8240812904164b7f381b647143a89d3b98f9bcd8e", "f06903e9f1f43b12d371004b4ac7b06ab39a44adc747266928ae6debfa7b3335"]
