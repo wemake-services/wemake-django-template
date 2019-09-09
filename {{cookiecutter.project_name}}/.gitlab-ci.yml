@@ -21,7 +21,8 @@ variables:
     - apk add python3 python3-dev py3-pip git build-base
     - pip3 install dump-env docker-image-size-limit 'docker-compose<1.24'
     # Creating `.env` configuration file:
-    - dump-env -t config/.env.template -p 'SECRET_' > config/.env
+    - dump-env -t config/.env.template -p 'SECRET_' 
+      --strict=SECRET_DJANGO_SECRET_KEY > config/.env
     # Login into Docker registry:
     - docker login -u gitlab-ci-token -p "$CI_JOB_TOKEN" "$REGISTRY"
     # Debug information:
