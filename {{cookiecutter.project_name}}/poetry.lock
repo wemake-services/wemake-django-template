@@ -388,7 +388,7 @@ description = "A utility tool to create .env files"
 name = "dump-env"
 optional = false
 python-versions = ">=3.6,<4.0"
-version = "1.0.0"
+version = "1.1.0"
 
 [[package]]
 category = "dev"
@@ -1557,7 +1557,7 @@ version = "0.6.0"
 more-itertools = "*"
 
 [metadata]
-content-hash = "e1b8eb71fd714eff36b2822bed2a1c3d64d5bfff0651ca7d58833fc13e01489e"
+content-hash = "9159b619f14d457ea77b650204c07910f2a3d3dd33125d6ada22191182d65e18"
 python-versions = "3.7.4"
 
 [metadata.hashes]
@@ -1599,7 +1599,7 @@ docopt = ["49b3a825280bd66b3aa83585ef59c4a8c82f2c8a522dbe754a8bc8d08c85c491"]
 docutils = ["6c4f696463b79f1fb8ba0c594b63840ebd41f059e92b31957c46b74a4599b6d0", "9e4d7ecfc600058e07ba661411a2b7de2fd0fafa17d1a7f7361cd47b1175c827", "a2aeea129088da402665e92e0b25b04b073c04b2dce4ab65caaa38b7ce2e1a99"]
 dotenv-linter = ["4932a0209e2fdcd42c4ce2e3e1f121e836209b8401cb35ab6bc99cc22c7808e9", "6c19288b4fb68844aba13b612905db4d4567f6845d244edcd292acd8a9e345c4"]
 dparse = ["00a5fdfa900629e5159bf3600d44905b333f4059a3366f28e0dbd13eeab17b19", "cef95156fa0adedaf042cd42f9990974bec76f25dfeca4dc01f381a243d5aa5b"]
-dump-env = ["76c4deac11d06bd4678bd5a6d7a7c297e00caa706b164c7dc0f06ec2ef4669d7", "f929600c1497cb029edfa955ddfd84e5b7f18cadbbd77396aa2339685c7b4ec3"]
+dump-env = ["12574e9aaf17b1b2150285748af29492636b915f3a17d8383448aa49686fe70e", "afe4dc9f19cd993a1bdfeacdfe5a04e8efccae270e47b2c3a3269a14cdd72c40"]
 entrypoints = ["589f874b313739ad35be6e0cd7efde2a4e9b6fea91edcc34e58ecbb8dbe56d19", "c70dd71abe5a8c85e55e12c19bd91ccfeec11a6e99044204511f9ed547d48451"]
 eradicate = ["4ffda82aae6fd49dfffa777a857cb758d77502a1f2e0f54c9ac5155a39d2d01a"]
 flake8 = ["19241c1cbc971b9962473e4438a2ca19749a7dd002dd1a946eaba171b4114548", "8e9dfa3cecb2400b3738a42c54c3043e821682b9c840b0448c0503f781130696"]
