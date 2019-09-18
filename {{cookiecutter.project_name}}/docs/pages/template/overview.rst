@@ -82,8 +82,6 @@ docker
   used both for development and production
 - ``docker/django/entrypoint.sh`` - entry point script that is used
   when ``django`` container is starting
-- ``docker/django/wait-for-command.sh`` - utility that wait for other
-  containers to start before allowing to start this specific container.
 - ``docker/django/gunicorn.sh`` - production script for ``django``,
   that's how we configure ``gunicorn`` runner
 - ``docker/caddy/Caddyfile`` - configuration file for Caddy webserver
@@ -129,7 +127,7 @@ Some containers might have long starting times, for example:
 - frontend, like ``node.js``
 
 To be sure that container is started at the right time,
-we utilize ``wait-for-command.sh`` `script <https://github.com/ettore26/wait-for-command>`_.
+we utilize ``dockerize`` `script <https://github.com/jwilder/dockerize>`_.
 It is executed inside ``docker/django/entrypoint.sh`` file.
 
 We start containers with ``tini``.

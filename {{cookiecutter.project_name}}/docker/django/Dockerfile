@@ -15,6 +15,7 @@ ENV DJANGO_ENV=${DJANGO_ENV} \
   PIP_NO_CACHE_DIR=off \
   PIP_DISABLE_PIP_VERSION_CHECK=on \
   PIP_DEFAULT_TIMEOUT=100 \
+  DOCKERIZE_VERSION=v0.6.1 \
   POETRY_VERSION=0.12.17
 
 
@@ -28,11 +29,19 @@ RUN apk --no-cache add \
      git \
      libffi-dev \
      linux-headers \
+     openssl \
      musl-dev \
      postgresql-dev \
      tini \
+  # Installing `poetry` package manager:
+  # https://github.com/sdispater/poetry
   && pip install -U "pip<19.0" \
-  && pip install "poetry==$POETRY_VERSION"
+  && pip install "poetry==$POETRY_VERSION" \
+  # Installing `dockerize` utility:
+  # https://github.com/jwilder/dockerize
+  && wget "https://github.com/jwilder/dockerize/releases/download/${DOCKERIZE_VERSION}/dockerize-alpine-linux-amd64-${DOCKERIZE_VERSION}.tar.gz" \
+  && tar -C /usr/local/bin -xzvf "dockerize-alpine-linux-amd64-${DOCKERIZE_VERSION}.tar.gz" \
+  && rm "dockerize-alpine-linux-amd64-${DOCKERIZE_VERSION}.tar.gz"
 
 # Copy only requirements, to cache them in docker layer
 WORKDIR /pysetup
