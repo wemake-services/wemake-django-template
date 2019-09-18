@@ -7,8 +7,6 @@ So, we use different tools to make this possible.
 We use `mypy <http://mypy-lang.org/>`_ for optional
 static typing.
 We run tests with `pytest <https://pytest.org/>`_ framework.
-We use `pre-commit <https://pre-commit.com/>`_
-to run all checks locally before pushing a commit to CI.
 
 
 pytest
@@ -96,23 +94,3 @@ We also use `django-stubs <https://github.com/typeddjango/django-stubs>`_
 to type ``django`` internals.
 This package is optional and can be removed,
 if you don't what to type your ``django`` for some reason.
-
-
-pre-commit
-----------
-
-We are using several pre-commit hooks to make sure everything works just fine.
-Before you can run hooks, you need to have the pre-commit package installed.
-It comes bundled in our project requirements (specified in ``pyproject.toml``).
-To setup hooks after installing all the dependencies run:
-
-.. code:: bash
-
-  pre-commit install
-
-
-You will now see the test results before any commit.
-Before each commit the same testing routing as in CI
-will be run on your machine.
-Because we don't want to waste CI's and people's time
-dealing with the fallen builds.

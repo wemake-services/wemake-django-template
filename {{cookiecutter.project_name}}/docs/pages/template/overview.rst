@@ -38,7 +38,6 @@ root project
   It basically defines what to do with your project
   after pushing it to the repository. Currently it is used for testing
   and releasing a ``docker`` image
-- ``pre-commit-config.yaml`` - configuration file for ``pre-commit`` tool
 - ``docker-compose.yml`` - this the file specifies ``docker`` services
   that are needed for development and testing
 - ``docker-compose.override.yml`` - local override for ``docker-compose``.

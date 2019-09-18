@@ -21,7 +21,6 @@ Just like `django-admin.py startproject` but better.
 - [`mypy`](https://mypy.readthedocs.io) and [`django-stubs`](https://github.com/typeddjango/django-stubs) for static typing
 - [`pytest`](https://pytest.org/) for unit testing
 - [`flake8`](http://flake8.pycqa.org/en/latest/) and [`wemake-python-styleguide`](https://wemake-python-styleguide.readthedocs.io/en/latest/) for linting
-- [`pre-commit`](https://pre-commit.com/) hooks for consistent development
 - [`docker`](https://www.docker.com/) for development, testing, and production
 - [`sphinx`](http://www.sphinx-doc.org/en/master/) for documentation
 - [`Gitlab CI`](https://about.gitlab.com/gitlab-ci/) with full `build`, `test`, and `deploy` pipeline configured by default

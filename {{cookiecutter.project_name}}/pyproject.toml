@@ -54,7 +54,6 @@ pytest-timeout = "^1.3"
 mypy = "^0.720"
 django-stubs = "^1.1"
 
-pre-commit = "^1.18"
 ipython = "^7.8"
 
 sphinx = "^2.2"

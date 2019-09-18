@@ -149,8 +149,6 @@ Here's it would look like:
 This check is not included in the pipeline by default,
 because it is quite long to start all the machinery for this single check.
 
-You can install ``caddy`` locally and attach this check on a pre-commit hook.
-
 Disabling HTTPS
 ~~~~~~~~~~~~~~~
 
