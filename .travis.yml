@@ -16,7 +16,7 @@ env:
 
 install:
   - pip freeze | xargs pip uninstall -y
-  - pip install -U docker-compose
+  - pip install -U docker-compose docker-image-size-limit
   - curl -sSL "https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py" | python
   - source "$HOME/.poetry/env"
   - docker --version && docker-compose --version && poetry --version

@@ -48,8 +48,11 @@ run_ci () {
   # known vulnerabilities:
   safety check --bare --full-report
 
-  # Checking `pyproject.toml` file contents and dependencies status:
-  poetry check && pip check
+  # Checking `pyproject.toml` file contents:
+  poetry check
+
+  # Checking dependencies status:
+  pip check
 
   # Checking docs:
   doc8 -q docs
