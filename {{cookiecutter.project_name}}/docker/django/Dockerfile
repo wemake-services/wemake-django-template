@@ -3,36 +3,40 @@
 
 FROM python:3.7.4-alpine3.9 as development_build
 
-LABEL maintainer="sobolevn@wemake.services"
-LABEL vendor="wemake.services"
+LABEL maintainer="{{ cookiecutter.project_name }}@{{ cookiecutter.organization }}"
+LABEL vendor="{{ cookiecutter.organization }}"
 
 ARG DJANGO_ENV
 
 ENV DJANGO_ENV=${DJANGO_ENV} \
+  # python:
   PYTHONFAULTHANDLER=1 \
   PYTHONUNBUFFERED=1 \
   PYTHONHASHSEED=random \
+  # pip:
   PIP_NO_CACHE_DIR=off \
   PIP_DISABLE_PIP_VERSION_CHECK=on \
   PIP_DEFAULT_TIMEOUT=100 \
+  # dockerize:
   DOCKERIZE_VERSION=v0.6.1 \
+  # poetry:
   POETRY_VERSION=0.12.17
 
 
 # System deps:
 RUN apk --no-cache add \
-     bash \
-     build-base \
-     curl \
-     gcc \
-     gettext \
-     git \
-     libffi-dev \
-     linux-headers \
-     openssl \
-     musl-dev \
-     postgresql-dev \
-     tini \
+    bash \
+    build-base \
+    curl \
+    gcc \
+    gettext \
+    git \
+    libffi-dev \
+    linux-headers \
+    openssl \
+    musl-dev \
+    postgresql-dev \
+    tini \
   # Installing `poetry` package manager:
   # https://github.com/sdispater/poetry
   && pip install -U "pip<19.0" \
@@ -43,7 +47,7 @@ RUN apk --no-cache add \
   && tar -C /usr/local/bin -xzvf "dockerize-alpine-linux-amd64-${DOCKERIZE_VERSION}.tar.gz" \
   && rm "dockerize-alpine-linux-amd64-${DOCKERIZE_VERSION}.tar.gz"
 
-# Copy only requirements, to cache them in docker layer
+# Copy only requirements, to cache them in docker layer:
 WORKDIR /pysetup
 COPY ./poetry.lock ./pyproject.toml /pysetup/
 
@@ -55,7 +59,7 @@ RUN chmod +x "/docker-entrypoint.sh" \
   && poetry config settings.virtualenvs.create false \
   && poetry install $(test "$DJANGO_ENV" == production && echo "--no-dev") --no-interaction --no-ansi
 
-# This dir will become the mountpoint of development code
+# This dir will become the mountpoint of development code:
 WORKDIR /code
 
 ENTRYPOINT ["/sbin/tini", "--", "/docker-entrypoint.sh"]
