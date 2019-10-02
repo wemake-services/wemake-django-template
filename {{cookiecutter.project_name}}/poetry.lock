@@ -294,8 +294,8 @@ category = "main"
 description = "Organize Django settings into multiple files and directories. Easily override and modify settings. Use wildcards and optional settings files."
 name = "django-split-settings"
 optional = false
-python-versions = "*"
-version = "0.3.0"
+python-versions = ">=3.6,<4.0"
+version = "1.0.0"
 
 [[package]]
 category = "dev"
@@ -1602,7 +1602,7 @@ version = "0.6.0"
 more-itertools = "*"
 
 [metadata]
-content-hash = "6f87b1872f073ed941e3bc30526a2968419d21e042671f8429629643e8cdd6b3"
+content-hash = "99725bd999971eaa41088bcf85fd8e86645ddb935f5594b6f5fadc9b1552fe9c"
 python-versions = "3.7.4"
 
 [metadata.hashes]
@@ -1636,7 +1636,7 @@ django-health-check = ["3aa7319005673766c2897bfed743416589fa90dc146cc92b1cccdce0
 django-http-referrer-policy = ["3a867e2ac3f83b162a2bc1241dc2ed209e555e709e6566fef6bb1f716c733c00", "9847711f55991a9efd3a47e272370da0986c9dac4916e1ab1b4b6e1885b69365"]
 django-ipware = ["a7c7a8fd019dbdc9c357e6e582f65034e897572fc79a7e467674efa8aef9d00b"]
 django-querycount = ["8f5123d78716ff0704f2373e746a7200b8d8417798ce4a99bf2de87e3768f9ce"]
-django-split-settings = ["04f6b551111fdbcb4f669ac9004ac2d4a27197a36ca88444cb896378807ed777", "14b164dbd724e52aa9a0b0338eefa988a8a0f17f7cba34e0f983e5348682aeb7"]
+django-split-settings = ["db4d24a2da2f17e0aa97437f052eda7d043a3e2eaa9c8a85a171271e0f91852b", "f5a5c6431ab00a78959f7930a79faaf488b2fe8a4eddc4297ef8cd593e74868d"]
 django-stubs = ["cd6a7333d518b9168f001b8a31c4ea89a91dea40a9dd1535c798635f69a5f80a", "e3673348a42c7259e81a4ea141dae2b2e711220ec631a6215ba9dc23cdcabdf4"]
 doc8 = ["2df89f9c1a5abfb98ab55d0175fed633cae0cf45025b8b1e0ee5ea772be28543", "d12f08aa77a4a65eb28752f4bc78f41f611f9412c4155e2b03f1f5d4a45efe04"]
 docopt = ["49b3a825280bd66b3aa83585ef59c4a8c82f2c8a522dbe754a8bc8d08c85c491"]
