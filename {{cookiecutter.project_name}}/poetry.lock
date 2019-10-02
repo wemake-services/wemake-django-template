@@ -1183,7 +1183,7 @@ description = "find bugs 10x faster"
 name = "pytest-testmon"
 optional = false
 python-versions = "*"
-version = "0.9.18"
+version = "0.9.19"
 
 [package.dependencies]
 coverage = ">=4,<5"
@@ -1719,7 +1719,7 @@ pytest-cov = ["2b097cde81a302e1047331b48cadacf23577e431b61e9c6f49a1170bbe3d3da6"
 pytest-deadfixtures = ["458b2314862696af11223d869c97814e63db8a7b9f61dcf42fe07a72a7ff9bd8", "61e34fb0f777bc0f321c7d45f39447e965fb1a6d2de243e47aa034387229d9d3"]
 pytest-django = ["264fb4c506db5d48a6364c311a0b00b7b48a52715bad8839b2d8bee9b99ed6bb", "4adfe5fb3ed47f0ba55506dd3daf688b1f74d5e69148c10ad2dd2f79f40c0d62"]
 pytest-randomly = ["5facc2b5ac56e36b9c4bf14f49cc7b4c95427835bbf4a3c739b71a5f5f82d58a", "9256c9ff88466f7bf9794d2eeeea8fbf1cd1bc8df1b3575df59e89b8813bffaa"]
-pytest-testmon = ["05648f9b22aeeda9d32e61b46fa78c9ff28f217d69005b3b19ffb75d5992187e", "a81e4ae7fbc38752db362d9aaeb509b418eb486f63cd54d7374f7b770d45b9e3"]
+pytest-testmon = ["f542d168103d14748be7afd45071df2f1b1dda218e33dedd300a87885bffc2f4", "f622fd9d0f5a0df253f0e6773713c3df61306b64abdfb202d39a85dcba1d1f59"]
 pytest-timeout = ["4a30ba76837a32c7b7cd5c84ee9933fde4b9022b0cd20ea7d4a577c2a1649fb1", "d49f618c6448c14168773b6cdda022764c63ea80d42274e3156787e8088d04c6"]
 python-decouple = ["1317df14b43efee4337a4aa02914bf004f010cd56d6c4bd894e6474ec8c4fe2d"]
 python-slugify = ["a9f468227cb11e20e251670d78e1b5f6b0b15dd37bbd5c9814a25a904e44ff66"]
