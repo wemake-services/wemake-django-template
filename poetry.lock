@@ -502,8 +502,8 @@ category = "main"
 description = "Jinja2 extension to handle git-specific things"
 name = "jinja2-git"
 optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*"
-version = "0.2.0"
+python-versions = ">=3.6,<4.0"
+version = "1.0.0"
 
 [package.dependencies]
 jinja2 = ">=2.10,<3.0"
@@ -1020,7 +1020,7 @@ version = "0.6.0"
 more-itertools = "*"
 
 [metadata]
-content-hash = "972ea57364f126927bb21b9a1f39df068ec6deecc97b80fc43e1122c23748a50"
+content-hash = "48e4534e1448acc33715e7cd662a4a1bb5d8caed35fadecb26b2d562a108e686"
 python-versions = "^3.6"
 
 [metadata.hashes]
@@ -1071,7 +1071,7 @@ idna = ["c357b3f628cf53ae2c4c05627ecc484553142ca23264e593d327bcde5e9c3407", "ea8
 importlib-metadata = ["aa18d7378b00b40847790e7c27e11673d7fed219354109d0e7b9e5b25dc3ad26", "d5f18a79777f3aa179c145737780282e27b508fc8fd688cb17c7a813e8bd39af"]
 isort = ["54da7e92468955c4fceacd0c86bd0ec997b0e1ee80d97f67c35a78b719dccab1", "6e811fcb295968434526407adb8796944f1988c5b65e8139058f2014cbe100fd"]
 jinja2 = ["065c4f02ebe7f7cf559e49ee5a95fb800a9e4528727aec6f24402a5374c65013", "14dd6caf1527abb21f08f86c784eac40853ba93edb79552aa1e4b8aef1b61c7b"]
-jinja2-git = ["ad329ca97fadbb71745bdb1cb44f4d45c9cc53502b3edb93b32ae2ec49d5e856", "cba9dce285a6803d10d006b43936af7d0659d1e1e4c1be23f301dfa49a433480"]
+jinja2-git = ["0f85cfb11963771769615580b6ac3d9ff9f73a8f659fa2c656417408727ca0a7", "d12a27dd492b4dbd07d634d5e6d19efc2fed430333f80083f064b5ec39627c67"]
 jinja2-time = ["d14eaa4d315e7688daa4969f616f226614350c48730bfa1692d2caebd8c90d40", "d3eab6605e3ec8b7a0863df09cc1d23714908fa61aa6986a845c20ba488b4efa"]
 jmespath = ["3720a4b1bd659dd2eecad0666459b9788813e032b83e7ba58578e48254e0a0e6", "bde2aef6f44302dfb30320115b17d030798de8c4110e28d5cf6cf91a7a31074c"]
 mando = ["4ce09faec7e5192ffc3c57830e26acba0fd6cd11e1ee81af0d4df0657463bd1c", "79feb19dc0f097daa64a1243db578e7674909b75f88ac2220f1c065c10a0d960"]
