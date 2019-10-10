@@ -71,3 +71,5 @@ ENTRYPOINT ["/sbin/tini", "--", "/docker-entrypoint.sh"]
 FROM development_build as production_build
 
 COPY . /code
+
+RUN python /code/manage.py compilemessages
