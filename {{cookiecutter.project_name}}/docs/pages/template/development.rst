@@ -111,7 +111,7 @@ To start development server inside ``docker`` you will need to run:
 Running scripts inside docker
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-As you have already mentioned inside the previous section
+As we have already mentioned inside the previous section
 we use ``docker-compose run`` to run scripts inside docker.
 
 What do you need to know about it?
