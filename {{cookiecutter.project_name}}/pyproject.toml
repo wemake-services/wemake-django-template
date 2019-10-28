@@ -57,7 +57,7 @@ django-stubs = "^1.1"
 ipython = "^7.9"
 
 sphinx = "^2.2"
-sphinx-autodoc-typehints = "^1.8"
+sphinx-autodoc-typehints = "^1.9"
 doc8 = "^0.8"
 
 yamllint = "^1.18"
