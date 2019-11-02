@@ -16,7 +16,7 @@ authors = []
 
 
 [tool.poetry.dependencies]
-python = "3.7.4"
+python = "3.7.5"
 django = "^2.2"
 django-split-settings = "^1.0"
 django-axes = "^5.0"
