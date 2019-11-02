@@ -27,7 +27,6 @@ services:
         args:
           DJANGO_ENV: development
       volumes:
-        - .:/code
         - django-static:/var/www/django/static
       depends_on:
         - db
