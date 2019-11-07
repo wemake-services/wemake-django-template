@@ -213,7 +213,7 @@ description = "Keep track of failed login attempts in Django-powered sites."
 name = "django-axes"
 optional = false
 python-versions = "~=3.6"
-version = "5.0.18"
+version = "5.0.19"
 
 [package.dependencies]
 django = ">=1.11"
@@ -1628,7 +1628,7 @@ dennis = ["8c942dd5da7d03c65daebc069c5ee5c7f1374ac9b0c8c89c627caa66fe822604", "f
 dictdiffer = ["97cf4ef98ebc1acf737074aed41e379cf48ab5ff528c92109dfb8e2e619e6809", "b3ad476fc9cca60302b52c50e1839342d2092aeaba586d69cbf9249f87f52463"]
 django = ["4025317ca01f75fc79250ff7262a06d8ba97cd4f82e93394b2a0a6a4a925caeb", "a8ca1033acac9f33995eb2209a6bf18a4681c3e5269a878e9a7e0b7384ed1ca3"]
 django-appconf = ["35f13ca4d567f132b960e2cd4c832c2d03cb6543452d34e29b7ba10371ba80e3", "c98a7af40062e996b921f5962a1c4f3f0c979fa7885f7be4710cceb90ebe13a6"]
-django-axes = ["fb8ab21a9da0c6e0533311faef760bcf39588d065d7ab101e17ec760ccf00a4a", "fc622cdd3c338233b0dad9dd7b0cd517503d2905963a1df9d2112b36a6259faf"]
+django-axes = ["4dcff066dc2bea176fdd58cb784b08b64b2b8067b2bd0fd487eea26ece15eefb", "59359c393406c9bcb1f19e923b8f6ebaa6c240c6c45f987f7a62c544bab943e5"]
 django-csp = ["04600237701e6d6ff78ed7d41209ff923988148bf292c128f6b474b9befe444f", "8b9997df89a7a936d7c397e051367f974aa1d1a97d0b32acb4300087b3bed071"]
 django-debug-toolbar = ["17c53cd6bf4e7d69902aedf9a1d26c5d3b7369b54c5718744704f27b5a72f35d", "9a23ada2e43cd989195db3c18710b5d7451134a0d48127ab64c1d2ad81700342"]
 django-feature-policy = ["9300ea9860c7b4808463aedb7280ceeebd7fb3a304098e9c3c05e633fba1dd3f", "ad80458672ea3ae69577b0867b239b67bd659b939323bdd7456dd1b919163689"]
