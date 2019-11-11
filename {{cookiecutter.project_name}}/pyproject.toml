@@ -44,7 +44,7 @@ xenon = "^0.5"
 nitpick = "^0.21.2"
 
 pytest = "^5.2"
-pytest-django = "^3.6"
+pytest-django = "^3.7"
 pytest-cov = "^2.8"
 pytest-randomly = "^3.1"
 pytest-deadfixtures = "^2.1"
