@@ -156,3 +156,8 @@ Further reading
 
 - `django-split-settings tutorial <https://medium.com/wemake-services/managing-djangos-settings-e2b7f496120d>`_
 - `docker env-file docs <https://docs.docker.com/compose/env-file/>`_
+
+
+Django admin
+~~~~~~~~~~~~
+- `Django Admin Cookbook <https://books.agiliq.com/projects/django-admin-cookbook/en/latest/>`_
