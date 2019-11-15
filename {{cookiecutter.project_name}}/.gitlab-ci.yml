@@ -57,7 +57,7 @@ release-image:
     name: production  # used to track time with 'cycle analytics'
 
 pages:
-  stage: after_deploy
+  stage: .post
   image: docker:latest
   script:
     - apk update && apk upgrade
