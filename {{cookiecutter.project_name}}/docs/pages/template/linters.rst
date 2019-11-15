@@ -27,7 +27,7 @@ Running linting process for all ``python`` files in the project:
 
 .. code:: bash
 
-  flake8 **/*.py
+  flake8 .
 
 Extra plugins
 ~~~~~~~~~~~~~
