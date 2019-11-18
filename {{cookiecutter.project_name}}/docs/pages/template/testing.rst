@@ -18,6 +18,15 @@ It is configured inside ``setup.cfg`` file.
 We use a lot of ``pytest`` plugins that enhance our development experience.
 List of these plugins is available inside ``pyproject.toml`` file.
 
+Running:
+
+.. code:: bash
+
+  pytest
+
+We also have some options that are set on each run via ``--addopts``
+inside the ``setup.cfg`` file.
+
 Plugins
 ~~~~~~~
 
