@@ -152,7 +152,6 @@ TEMPLATES = [{
             'django.template.context_processors.request',
         ],
     },
-
 }]
 
 # Media files
