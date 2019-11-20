@@ -10,6 +10,7 @@ values are overridden.
 from server.settings.components import config
 
 # Production flags:
+# https://docs.djangoproject.com/en/2.2/howto/deployment/
 
 DEBUG = False
 
@@ -22,8 +23,8 @@ ALLOWED_HOSTS = [
 # Staticfiles
 # https://docs.djangoproject.com/en/2.2/ref/contrib/staticfiles/
 
-# Adding STATIC_ROOT to collect static files via 'collectstatic'
-STATIC_ROOT = '/var/www/django/static'
+# That's where 'collectstatic' command will copy files:
+STATIC_ROOT = config('DJANGO_STATIC_ROOT')
 
 STATICFILES_STORAGE = (
     # This is a string, not a tuple,

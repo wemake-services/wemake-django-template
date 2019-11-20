@@ -17,10 +17,12 @@ fi
 
 pyclean () {
   # Cleaning cache:
-  find . | grep -E '(__pycache__|\.py[cod]$)' | xargs rm -rf
+  find . | grep -E '(__pycache__|.static|\.py[cod]$)' | xargs rm -rf
 }
 
 run_ci () {
+  echo '[ci started]'
+
   # Running linting for all python files in the project:
   flake8 .
 
@@ -36,7 +38,8 @@ run_ci () {
   DJANGO_ENV=production python manage.py check --deploy --fail-level WARNING
 
   # Check that staticfiles app is working fine:
-  DJANGO_ENV=production python manage.py collectstatic --no-input --dry-run
+  DJANGO_ENV=production DJANGO_STATIC_ROOT=.static \
+    python manage.py collectstatic --no-input --dry-run
 
   # Check that all migrations worked fine:
   python manage.py makemigrations --dry-run --check
@@ -71,6 +74,8 @@ run_ci () {
     # Only executes when there is at least one `.po` file:
     dennis-cmd lint --errorsonly locale
   fi
+
+  echo '[ci finished]'
 }
 
 # Remove any cache before the script:
