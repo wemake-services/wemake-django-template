@@ -8,6 +8,14 @@ version = "0.7.12"
 
 [[package]]
 category = "dev"
+description = "A small Python module for determining appropriate platform-specific dirs, e.g. a \"user data dir\"."
+name = "appdirs"
+optional = false
+python-versions = "*"
+version = "1.4.3"
+
+[[package]]
+category = "dev"
 description = "Disable App Nap on OS X 10.9"
 marker = "sys_platform == \"darwin\""
 name = "appnope"
@@ -300,6 +308,18 @@ name = "django-ipware"
 optional = false
 python-versions = "*"
 version = "2.1.0"
+
+[[package]]
+category = "dev"
+description = "Detect backward incompatible migrations for your django project"
+name = "django-migration-linter"
+optional = false
+python-versions = "*"
+version = "1.4.0"
+
+[package.dependencies]
+appdirs = "1.4.3"
+django = ">=1.11"
 
 [[package]]
 category = "dev"
@@ -1638,11 +1658,12 @@ version = "0.6.0"
 more-itertools = "*"
 
 [metadata]
-content-hash = "f261ed9445f14c0895e3f810f2c970002525ab521daa98ee7f47104886e6645d"
+content-hash = "bbf234f6a01a95738c15513d69b278dd1b3c69a83bf4882e5d52b301a0f48795"
 python-versions = "3.7.5"
 
 [metadata.hashes]
 alabaster = ["446438bdcca0e05bd45ea2de1668c1d9b032e1a9154c2c259092d77031ddd359", "a661d72d58e6ea8a57f7a86e37d86716863ee5e92788398526d58b26a4e4dc02"]
+appdirs = ["9e5896d1372858f8dd3344faf4e5014d21849c756c8d5701f78f8a103b372d92", "d8b24664561d0d34ddfaec54636d502d7cea6e29c3eaf68f3df6180863e2166e"]
 appnope = ["5b26757dc6f79a3b7dc9fab95359328d5747fcb2409d331ea66d0272b90ab2a0", "8b995ffe925347a2138d7ac0fe77155e4311a0ea6d6da4f5128fe4b3cbe5ed71"]
 astor = ["0e41295809baf43ae8303350e031aff81ae52189b6f881f36d623fa8b2f1960e", "37a6eed8b371f1228db08234ed7f6cfdc7817a3ed3824797e20cbb11dc2a7862"]
 atomicwrites = ["03472c30eb2c5d1ba9227e4c2ca66ab8287fbfbbda3888aa93dc2e28fc6811b4", "75a9445bac02d8d058d5e1fe689654ba5a6556a1dfd8ce6ec55a0ed79866cfa6"]
@@ -1673,6 +1694,7 @@ django-feature-policy = ["32cdd45521e77fbb2f8dc7a6fb984da98024abf9347bb94b6ad3d2
 django-health-check = ["06efac9dcd30eb83c3d0184b834d7d86467bdb710da361f20c2c28853d7e6a5e", "c9bcc1b3ef77db3a9ba2d33585916707963cbb958220689f77741235f5fa553a"]
 django-http-referrer-policy = ["3a867e2ac3f83b162a2bc1241dc2ed209e555e709e6566fef6bb1f716c733c00", "9847711f55991a9efd3a47e272370da0986c9dac4916e1ab1b4b6e1885b69365"]
 django-ipware = ["a7c7a8fd019dbdc9c357e6e582f65034e897572fc79a7e467674efa8aef9d00b"]
+django-migration-linter = ["7cb2d1fc88ebd7bb27191ab26f4965ed14306e3e94d5e40b5b3895b924777d90", "a7bbc44268f1ff3877506111c29248dbb4d4ec8d1a53953cdc80b118a789d83e"]
 django-querycount = ["8f5123d78716ff0704f2373e746a7200b8d8417798ce4a99bf2de87e3768f9ce"]
 django-split-settings = ["db4d24a2da2f17e0aa97437f052eda7d043a3e2eaa9c8a85a171271e0f91852b", "f5a5c6431ab00a78959f7930a79faaf488b2fe8a4eddc4297ef8cd593e74868d"]
 django-stubs = ["cd6a7333d518b9168f001b8a31c4ea89a91dea40a9dd1535c798635f69a5f80a", "e3673348a42c7259e81a4ea141dae2b2e711220ec631a6215ba9dc23cdcabdf4"]

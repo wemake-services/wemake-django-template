@@ -23,19 +23,24 @@ ALLOWED_HOSTS = [
     '[::1]',
 ]
 
+
+# Installed apps for developement only:
+
+INSTALLED_APPS += (
+    'debug_toolbar',
+    'nplusone.ext.django',
+    'django_migration_linter',
+)
+
+
 # Static files:
 # https://docs.djangoproject.com/en/2.2/ref/settings/#std:setting-STATICFILES_DIRS
 
 STATICFILES_DIRS: List[str] = []
 
 
-# Django debug toolbar
-# django-debug-toolbar.readthedocs.io
-
-INSTALLED_APPS += (
-    'debug_toolbar',
-    'nplusone.ext.django',
-)
+# Django debug toolbar:
+# https://django-debug-toolbar.readthedocs.io
 
 MIDDLEWARE += (
     'debug_toolbar.middleware.DebugToolbarMiddleware',

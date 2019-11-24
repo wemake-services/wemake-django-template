@@ -44,6 +44,9 @@ run_ci () {
   # Check that all migrations worked fine:
   python manage.py makemigrations --dry-run --check
 
+  # Check that all migrations are backwards compatible:
+  python manage.py lintmigrations --exclude-apps=axes
+
   # Running code-quality check:
   xenon --max-absolute A --max-modules A --max-average A server
 

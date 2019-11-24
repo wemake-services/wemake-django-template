@@ -163,4 +163,5 @@ Further reading
 
 Django admin
 ~~~~~~~~~~~~
+
 - `Django Admin Cookbook <https://books.agiliq.com/projects/django-admin-cookbook/en/latest/>`_
