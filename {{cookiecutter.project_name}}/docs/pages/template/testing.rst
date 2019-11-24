@@ -35,6 +35,7 @@ Here's the full list of things we use:
 
 - `pytest-django`_ - plugin that introduce a lot of ``django`` specific
   helpers, fixtures, and configuration
+- `django-test-migrations`_ - plugin to test Django migrations and their order
 - `pytest-cov`_ - plugin to measure test coverage
 - `pytest-randomly`_ - plugin to execute tests in random order and
   also set predictable random seed, so you can easily debug
@@ -46,6 +47,7 @@ Here's the full list of things we use:
   tests that are affected by your code changes
 
 .. _pytest-django: https://github.com/pytest-dev/pytest-django
+.. _django-test-migrations: https://github.com/wemake-services/django-test-migrations
 .. _pytest-cov: https://github.com/pytest-dev/pytest-cov
 .. _pytest-randomly: https://github.com/pytest-dev/pytest-randomly
 .. _pytest-deadfixtures: https://github.com/jllorencetti/pytest-deadfixtures
