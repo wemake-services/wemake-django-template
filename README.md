@@ -20,7 +20,7 @@ Just like `django-admin.py startproject` but better.
 - Supports latest `python3.7+`
 - [`poetry`](https://github.com/sdispater/poetry) for managing dependencies
 - [`mypy`](https://mypy.readthedocs.io) and [`django-stubs`](https://github.com/typeddjango/django-stubs) for static typing
-- [`pytest`](https://pytest.org/) for unit testing
+- [`pytest`](https://pytest.org/) and [`hypothesis`](https://github.com/HypothesisWorks/hypothesis) for unit tests
 - [`flake8`](http://flake8.pycqa.org/en/latest/) and [`wemake-python-styleguide`](https://wemake-python-styleguide.readthedocs.io/en/latest/) for linting
 - [`docker`](https://www.docker.com/) for development, testing, and production
 - [`sphinx`](http://www.sphinx-doc.org/en/master/) for documentation
