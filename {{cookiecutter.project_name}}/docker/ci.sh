@@ -17,7 +17,7 @@ fi
 
 pyclean () {
   # Cleaning cache:
-  find . | grep -E '(__pycache__|.static|\.py[cod]$)' | xargs rm -rf
+  find . | grep -E '(__pycache__|\.static|\.py[cod]$)' | xargs rm -rf
 }
 
 run_ci () {
