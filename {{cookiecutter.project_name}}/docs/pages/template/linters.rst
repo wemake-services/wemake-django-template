@@ -134,7 +134,7 @@ That's because they require another technology stack to be installed
 or just out of scope.
 
 We also recommend to check the list of linters
-`recommended by wemake-python-styleguide <https://wemake-python-stylegui.de/en/latest/pages/usage/integrations.html#extras>`_.
+`recommended by wemake-python-styleguide <https://wemake-python-stylegui.de/en/latest/pages/usage/integrations/extras.html>`_.
 
 Here's the list of these linters. You may still find them useful.
 
