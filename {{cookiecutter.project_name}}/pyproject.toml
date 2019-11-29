@@ -56,7 +56,7 @@ hypothesis = "^4.50"
 mypy = "^0.720"
 django-stubs = "^1.1"
 
-ipython = "^7.9"
+ipython = "^7.10"
 
 sphinx = "^2.2"
 sphinx-autodoc-typehints = "^1.10"
