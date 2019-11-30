@@ -23,8 +23,13 @@ ALLOWED_HOSTS = [
 # Staticfiles
 # https://docs.djangoproject.com/en/2.2/ref/contrib/staticfiles/
 
-# That's where 'collectstatic' command will copy files:
-STATIC_ROOT = config('DJANGO_STATIC_ROOT')
+# This is a hack to allow a special flag to be used with `--dry-run`
+# to test things locally.
+_COLLECTSTATIC_DRYRUN = config(
+    'DJANGO_COLLECTSTATIC_DRYRUN', cast=bool, default=False,
+)
+# Adding STATIC_ROOT to collect static files via 'collectstatic':
+STATIC_ROOT = '.static' if _COLLECTSTATIC_DRYRUN else '/var/www/django/static'
 
 STATICFILES_STORAGE = (
     # This is a string, not a tuple,
@@ -33,7 +38,9 @@ STATICFILES_STORAGE = (
 )
 
 
-# Mediafiles
+# Media files
+# https://docs.djangoproject.com/en/2.2/topics/files/
+
 MEDIA_ROOT = '/var/www/django/media'
 
 

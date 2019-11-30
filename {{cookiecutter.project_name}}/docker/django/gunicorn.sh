@@ -8,7 +8,7 @@ set -o nounset
 
 # Check that $DJANGO_ENV is set to "production",
 # fail otherwise, since it may break things:
-echo "ENV is $DJANGO_ENV"
+echo "DJANGO_ENV is $DJANGO_ENV"
 if [ "$DJANGO_ENV" != 'production' ]; then
   echo 'Error: DJANGO_ENV is not set to "production".'
   echo 'Application will not start.'
@@ -22,6 +22,7 @@ export DJANGO_ENV
 # docs/pages/template/production-checklist.rst
 python /code/manage.py migrate --noinput
 python /code/manage.py collectstatic --noinput
+python /code/manage.py compilemessages
 
 # Start gunicorn with 4 workers:
 /usr/local/bin/gunicorn server.wsgi \

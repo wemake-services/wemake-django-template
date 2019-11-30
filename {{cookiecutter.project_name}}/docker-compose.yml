@@ -60,3 +60,4 @@ volumes:
   pgdata:
   django-static:
   django-media:
+  django-locale:

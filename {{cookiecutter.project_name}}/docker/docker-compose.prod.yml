@@ -38,6 +38,7 @@ services:
       restart: unless-stopped
       volumes:
         - django-media:/var/www/django/media  # since in dev it is app's folder
+        - django-locale:./locale  # since in dev it is app's folder
     command: sh ./docker/django/gunicorn.sh
     expose:
       - 8000
