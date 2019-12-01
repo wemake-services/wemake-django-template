@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
 
-# FIXME: remove this line, when `django-stubs` will stop
-# using `Any` inside.
-# mypy: disallow_any_explicit = False
-
 import textwrap
 
 from django.db import models
