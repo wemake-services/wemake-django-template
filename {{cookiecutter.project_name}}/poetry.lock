@@ -24,6 +24,14 @@ python-versions = "*"
 version = "0.1.0"
 
 [[package]]
+category = "main"
+description = "ASGI specs, helper code, and adapters"
+name = "asgiref"
+optional = false
+python-versions = "*"
+version = "3.2.3"
+
+[[package]]
 category = "dev"
 description = "Read/rewrite/write Python ASTs"
 name = "astor"
@@ -216,12 +224,13 @@ category = "main"
 description = "A high-level Python Web framework that encourages rapid development and clean, pragmatic design."
 name = "django"
 optional = false
-python-versions = ">=3.5"
-version = "2.2.7"
+python-versions = ">=3.6"
+version = "3.0"
 
 [package.dependencies]
+asgiref = ">=3.2,<4.0"
 pytz = "*"
-sqlparse = "*"
+sqlparse = ">=0.2.2"
 
 [[package]]
 category = "main"
@@ -1658,13 +1667,14 @@ version = "0.6.0"
 more-itertools = "*"
 
 [metadata]
-content-hash = "964435c1ac23be88f4a71b8bfc7bc7a3af69e1b7d919ad045f69af0cb1bb5b3f"
+content-hash = "70133227b47332ca8a467e5e3df46098295208c1fe174eae32afddf31d71bbea"
 python-versions = "3.7.5"
 
 [metadata.hashes]
 alabaster = ["446438bdcca0e05bd45ea2de1668c1d9b032e1a9154c2c259092d77031ddd359", "a661d72d58e6ea8a57f7a86e37d86716863ee5e92788398526d58b26a4e4dc02"]
 appdirs = ["9e5896d1372858f8dd3344faf4e5014d21849c756c8d5701f78f8a103b372d92", "d8b24664561d0d34ddfaec54636d502d7cea6e29c3eaf68f3df6180863e2166e"]
 appnope = ["5b26757dc6f79a3b7dc9fab95359328d5747fcb2409d331ea66d0272b90ab2a0", "8b995ffe925347a2138d7ac0fe77155e4311a0ea6d6da4f5128fe4b3cbe5ed71"]
+asgiref = ["7e06d934a7718bf3975acbf87780ba678957b87c7adc056f13b6215d610695a0", "ea448f92fc35a0ef4b1508f53a04c4670255a3f33d22a81c8fc9c872036adbe5"]
 astor = ["0e41295809baf43ae8303350e031aff81ae52189b6f881f36d623fa8b2f1960e", "37a6eed8b371f1228db08234ed7f6cfdc7817a3ed3824797e20cbb11dc2a7862"]
 atomicwrites = ["03472c30eb2c5d1ba9227e4c2ca66ab8287fbfbbda3888aa93dc2e28fc6811b4", "75a9445bac02d8d058d5e1fe689654ba5a6556a1dfd8ce6ec55a0ed79866cfa6"]
 attrs = ["08a96c641c3a74e44eb59afb61a24f2cb9f4d7188748e76ba4bb5edfa3cb7d1c", "f7b7ce16570fe9965acd6d30101a28f62fb4a7f9e926b3bbc9b61f8b04247e72"]
@@ -1685,7 +1695,7 @@ darglint = ["2fe546c4b5d60f523dae4e9f975542c5b1b42838b22e8be64254684e361b0a5f", 
 decorator = ["54c38050039232e1db4ad7375cfce6748d7b41c29e95a081c8a6d2c30364a2ce", "5d19b92a3c8f7f101c8dd86afd86b0f061a8ce4540ab8cd401fa2542756bce6d"]
 dennis = ["8c942dd5da7d03c65daebc069c5ee5c7f1374ac9b0c8c89c627caa66fe822604", "f6487392ac91800c5f0684a99b404b7fd0f72ceb48faeb5a0ce4e2c24fb62d3f"]
 dictdiffer = ["97cf4ef98ebc1acf737074aed41e379cf48ab5ff528c92109dfb8e2e619e6809", "b3ad476fc9cca60302b52c50e1839342d2092aeaba586d69cbf9249f87f52463"]
-django = ["16040e1288c6c9f68c6da2fe75ebde83c0a158f6f5d54f4c5177b0c1478c5b86", "89c2007ca4fa5b351a51a279eccff298520783b713bf28efb89dfb81c80ea49b"]
+django = ["6f857bd4e574442ba35a7172f1397b303167dae964cf18e53db5e85fe248d000", "d98c9b6e5eed147bc51f47c014ff6826bd1ab50b166956776ee13db5a58804ae"]
 django-appconf = ["35f13ca4d567f132b960e2cd4c832c2d03cb6543452d34e29b7ba10371ba80e3", "c98a7af40062e996b921f5962a1c4f3f0c979fa7885f7be4710cceb90ebe13a6"]
 django-axes = ["4dcff066dc2bea176fdd58cb784b08b64b2b8067b2bd0fd487eea26ece15eefb", "59359c393406c9bcb1f19e923b8f6ebaa6c240c6c45f987f7a62c544bab943e5"]
 django-csp = ["04600237701e6d6ff78ed7d41209ff923988148bf292c128f6b474b9befe444f", "8b9997df89a7a936d7c397e051367f974aa1d1a97d0b32acb4300087b3bed071"]
