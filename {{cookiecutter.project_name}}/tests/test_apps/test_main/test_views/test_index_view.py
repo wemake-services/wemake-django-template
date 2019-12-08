@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from django.shortcuts import reverse
+from django.urls import reverse
 
 
 def test_main_page(client, main_heading):

@@ -91,9 +91,13 @@ Running ``mypy`` is required before any commit:
 
 .. code:: bash
 
-  mypy server
+  mypy server tests/**/*.py
 
-This will eliminate a lot of possible ``TypeError`` and other issues.
+This will eliminate a lot of possible ``TypeError`` and other issues
+in both `server/` and `tests/` directories.
+We use `tests/**/*.py` because `tests/` is not a python package,
+so it is not importable.
+
 However, this will not make code 100% safe from errors.
 So, both the testing and review process are still required.
 
