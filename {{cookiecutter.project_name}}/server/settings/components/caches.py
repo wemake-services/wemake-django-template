@@ -14,7 +14,6 @@ CACHES = {
 
 
 # django-axes
-# https://django-axes.readthedocs.io/en/latest/configuration.html
-# See #known-configuration-problems section
+# https://django-axes.readthedocs.io/en/latest/4_configuration.html#configuring-caches
 
 AXES_CACHE = 'axes_cache'
