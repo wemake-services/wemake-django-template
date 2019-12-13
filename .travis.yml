@@ -27,6 +27,7 @@ script:
   - pytest
   - sh tests/test_integration.sh
   - poetry check
+  - pip check
   - poetry run safety check --bare --full-report
 
 notifications:
