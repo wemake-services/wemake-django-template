@@ -6,7 +6,7 @@ using this template.
 
 ## Dependencies
 
-We use `poetry` to manage the [dependencies](https://github.com/sdispater/poetry).
+We use `poetry` to manage the [dependencies](https://github.com/python-poetry/poetry).
 
 To install them you would need to run `install` command:
 

@@ -42,7 +42,7 @@ This version requires a manual migration step.
 3. You need to adjust name, version, description, and authors meta fields
 4. You need to copy-paste dependencies from ``Pipfile`` to ``pyproject.toml``
 5. You need to set correct version for each dependency in the list,
-   use ``"^x.y"`` `notation <https://github.com/sdispater/poetry#caret-requirement>`_
+   use ``"^x.y"`` `notation <https://github.com/python-poetry/poetry#caret-requirement>`_
 6. You need to adjust ``[build-system]`` tag and ``POETRY_VERSION`` variable
    to fit your ``poetry`` version
 7. Create ``poetry.lock`` file with ``poetry lock``

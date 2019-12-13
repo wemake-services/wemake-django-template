@@ -38,8 +38,7 @@ RUN apk --no-cache add \
     postgresql-dev \
     tini \
   # Installing `poetry` package manager:
-  # https://github.com/sdispater/poetry
-  && pip install -U "pip<19.0" \
+  # https://github.com/python-poetry/poetry
   && pip install "poetry==$POETRY_VERSION" \
   # Installing `dockerize` utility:
   # https://github.com/jwilder/dockerize
@@ -61,7 +60,6 @@ RUN chmod +x "/docker-entrypoint.sh" \
 
 # This dir will become the mountpoint of development code:
 WORKDIR /code
-
 ENTRYPOINT ["/sbin/tini", "--", "/docker-entrypoint.sh"]
 
 

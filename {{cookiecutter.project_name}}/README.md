@@ -23,7 +23,7 @@ You will need:
 When developing locally, we use:
 
 - [`editorconfig`](http://editorconfig.org/) plugin (**required**)
-- [`poetry`](https://github.com/sdispater/poetry) (**required**)
+- [`poetry`](https://github.com/python-poetry/poetry) (**required**)
 - `pycharm 2017+` or `vscode`
 
 
