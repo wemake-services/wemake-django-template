@@ -20,7 +20,7 @@ ENV DJANGO_ENV=${DJANGO_ENV} \
   # dockerize:
   DOCKERIZE_VERSION=v0.6.1 \
   # poetry:
-  POETRY_VERSION=0.12.17
+  POETRY_VERSION=1.0.0
 
 
 # System deps:

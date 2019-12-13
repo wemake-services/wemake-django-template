@@ -1,5 +1,5 @@
 [build-system]
-requires = ["poetry==0.12.17"]
+requires = ["poetry==1.0.0"]
 build-backend = "poetry.masonry.api"
 
 
@@ -18,7 +18,7 @@ authors = [
 
 
 [tool.poetry.dependencies]
-python = "^3.6"
+python = "^3.7"
 cookiecutter = "^1.6"
 jinja2-git = "^1.0"
 
