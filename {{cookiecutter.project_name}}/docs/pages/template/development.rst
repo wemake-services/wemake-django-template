@@ -155,11 +155,12 @@ Local database
 
 When using local development environment without ``docker``,
 you will need a ``postgres`` up and running.
-To create new development database run:
+To create new development database run
+(make sure that database and user names are correct for your case):
 
 .. code:: bash
 
-  psql postgres -f sql/create_database.sql
+  psql postgres -U postgres -f sql/create_database.sql
 
 Then migrate your database:
 

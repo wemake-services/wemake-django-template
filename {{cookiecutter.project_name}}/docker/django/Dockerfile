@@ -56,7 +56,7 @@ COPY ./docker/django/entrypoint.sh /docker-entrypoint.sh
 
 # Project initialization:
 RUN chmod +x "/docker-entrypoint.sh" \
-  && poetry config settings.virtualenvs.create false \
+  && poetry config virtualenvs.create false \
   && poetry install $(test "$DJANGO_ENV" == production && echo "--no-dev") --no-interaction --no-ansi
 
 # This dir will become the mountpoint of development code:
