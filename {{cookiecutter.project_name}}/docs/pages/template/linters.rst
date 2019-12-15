@@ -40,27 +40,6 @@ that are not bundled with ``wemake-python-styleguide``:
 - `flake8-django <https://github.com/rocioar/flake8-django>`_ - plugin to enforce best practices in a ``django`` project
 
 
-xenon
------
-
-We are also using `xenon <https://github.com/rubik/xenon>`_ to measure
-code complexity and quality.
-
-Here are our standards:
-
-- A single block of code can not go below ``A`` mark
-- A single module can not go below ``A`` mark
-- Overall mark cannot go below ``A`` mark
-
-If your commit breaks this rule: well, the build won't succeed.
-
-.. code:: bash
-
-  xenon --max-absolute A --max-modules A --max-average A server
-
-It will return status code ``0`` if everything is fine.
-
-
 django-migration-linter
 -----------------------
 

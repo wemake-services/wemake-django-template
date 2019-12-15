@@ -46,9 +46,6 @@ run_ci () {
   # Check that all migrations are backwards compatible:
   python manage.py lintmigrations --exclude-apps=axes
 
-  # Running code-quality check:
-  xenon --max-absolute A --max-modules A --max-average A server
-
   # Checking if all the dependencies are secure and do not have any
   # known vulnerabilities:
   safety check --bare --full-report

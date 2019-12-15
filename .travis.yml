@@ -16,17 +16,17 @@ env:
 
 install:
   - pip freeze | xargs pip uninstall -y
-  - pip install -U docker-compose docker-image-size-limit
   - curl -sSL "https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py" | python
   - source "$HOME/.poetry/env"
-  - docker --version && docker-compose --version && poetry --version
   - poetry install
+  - docker --version && docker-compose --version && poetry --version
 
 script:
   - flake8 .
   - pytest
   - sh tests/test_integration.sh
   - poetry check
+  - pip check
   - poetry run safety check --bare --full-report
 
 notifications:
