@@ -5,7 +5,7 @@ This module is called after project is created.
 
 It does the following:
 1. Generates and saves random secret key
-2. Removes docker files if it is not used
+2. Prints further instructions
 
 A portion of this code was adopted from Django's standard crypto functions and
 utilities, specifically:

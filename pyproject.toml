@@ -16,6 +16,8 @@ authors = [
   "Nikita Sobolev <mail@sobolevn.me>"
 ]
 
+license = "MIT"
+
 
 [tool.poetry.dependencies]
 python = "^3.7"

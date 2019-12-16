@@ -11,5 +11,4 @@ def context():
         'project_verbose_name': 'Test Project',
         'project_domain': 'myapp.com',
         'organization': 'wemake.services',
-        'docker': 'y',
     }
