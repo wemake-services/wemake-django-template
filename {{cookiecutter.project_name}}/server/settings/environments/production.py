@@ -17,6 +17,9 @@ DEBUG = False
 ALLOWED_HOSTS = [
     # TODO: check production hosts
     config('DOMAIN_NAME'),
+    
+    # We need this value for `healthcheck` to work:
+    'localhost',
 ]
 
 
