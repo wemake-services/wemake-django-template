@@ -11,6 +11,7 @@ import os
 import re
 
 import pytest
+import tomlkit
 from binaryornot.check import is_binary
 from cookiecutter.exceptions import FailedHookException
 
@@ -61,6 +62,18 @@ def test_variables_replaced(cookies, context):
     paths = build_files_list(str(baked_project.project))
 
     assert_variables_replaced(paths)
+
+
+def test_pyproject_toml(cookies, context):
+    """Ensures that all variables are replaced inside project files."""
+    baked_project = cookies.bake(extra_context=context)
+    path = os.path.join(str(baked_project.project), 'pyproject.toml')
+
+    with open(path) as pyproject:
+        poetry = tomlkit.parse(pyproject.read())['tool']['poetry']
+
+    assert poetry['name'] == context['project_name']
+    assert poetry['description'] == context['project_verbose_name']
 
 
 @pytest.mark.parametrize(('prompt', 'entered_value'), [

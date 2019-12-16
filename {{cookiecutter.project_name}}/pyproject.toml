@@ -8,8 +8,8 @@ style = "https://raw.githubusercontent.com/wemake-services/wemake-python-stylegu
 
 
 [tool.poetry]
-name = "n"
-description = "d"
+name = "{{ cookiecutter.project_name }}"
+description = "{{ cookiecutter.project_verbose_name }}"
 version = "0.1.0"
 readme = "README.md"
 authors = []
