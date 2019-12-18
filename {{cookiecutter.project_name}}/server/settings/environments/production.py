@@ -17,7 +17,7 @@ DEBUG = False
 ALLOWED_HOSTS = [
     # TODO: check production hosts
     config('DOMAIN_NAME'),
-    
+
     # We need this value for `healthcheck` to work:
     'localhost',
 ]
@@ -52,18 +52,10 @@ MEDIA_ROOT = '/var/www/django/media'
 
 _PASS = 'django.contrib.auth.password_validation'  # noqa: S105
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': '{0}.UserAttributeSimilarityValidator'.format(_PASS),
-    },
-    {
-        'NAME': '{0}.MinimumLengthValidator'.format(_PASS),
-    },
-    {
-        'NAME': '{0}.CommonPasswordValidator'.format(_PASS),
-    },
-    {
-        'NAME': '{0}.NumericPasswordValidator'.format(_PASS),
-    },
+    {'NAME': '{0}.UserAttributeSimilarityValidator'.format(_PASS)},
+    {'NAME': '{0}.MinimumLengthValidator'.format(_PASS)},
+    {'NAME': '{0}.CommonPasswordValidator'.format(_PASS)},
+    {'NAME': '{0}.NumericPasswordValidator'.format(_PASS)},
 ]
 
 
