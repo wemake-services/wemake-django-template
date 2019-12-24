@@ -38,11 +38,15 @@ services:
         DJANGO_DATABASE_HOST: db
     command: python -Wd manage.py runserver 0.0.0.0:8000
     healthcheck:
-      test: curl --fail http://localhost:8000/health/?format=json || exit 1
-      interval: 1m
+      test: |
+        /usr/bin/test $$(
+          /usr/bin/curl --fail http://localhost:8000/health/?format=json
+          --write-out "%{http_code}" --silent --output /dev/null
+        ) -eq 200
+      interval: 10s
       timeout: 5s
-      retries: 2
-      start_period: 1m
+      retries: 5
+      start_period: 30s
 
 # This task is an example of how to extend existing ones:
 # some_worker:
