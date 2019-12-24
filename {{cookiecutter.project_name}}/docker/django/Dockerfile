@@ -1,7 +1,7 @@
 # This Dockerfile uses multi-stage build to customize DEV and PROD images:
 # https://docs.docker.com/develop/develop-images/multistage-build/
 
-FROM python:3.7.5-alpine3.9 as development_build
+FROM python:3.7.6-alpine3.9 as development_build
 
 LABEL maintainer="{{ cookiecutter.project_name }}@{{ cookiecutter.organization }}"
 LABEL vendor="{{ cookiecutter.organization }}"
