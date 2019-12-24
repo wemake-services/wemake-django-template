@@ -24,10 +24,17 @@ python /code/manage.py migrate --noinput
 python /code/manage.py collectstatic --noinput
 python /code/manage.py compilemessages
 
-# Start gunicorn with 4 workers:
+# Start gunicorn:
+# Docs: http://docs.gunicorn.org/en/stable/settings.html
 /usr/local/bin/gunicorn server.wsgi \
-  -w 4 \
-  -b 0.0.0.0:8000 \
+  # Sync worker settings:
+  # https://github.com/wemake-services/wemake-django-template/issues/1022
+  --workers=4 \
+  --max-requests=2000 \
+  --max-requests-jitter=200 \
+  # Run Django on 8000 port:
+  --bind=0.0.0.0:8000 \
+  # Locations:
   --chdir=/code \
   --log-file=- \
   --worker-tmp-dir /dev/shm
