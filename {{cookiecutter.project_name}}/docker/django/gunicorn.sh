@@ -31,10 +31,10 @@ python /code/manage.py compilemessages
   # https://github.com/wemake-services/wemake-django-template/issues/1022
   --workers=4 \
   --max-requests=2000 \
-  --max-requests-jitter=200 \
+  --max-requests-jitter=400 \
   # Run Django on 8000 port:
-  --bind=0.0.0.0:8000 \
+  --bind='0.0.0.0:8000' \
   # Locations:
-  --chdir=/code \
+  --chdir='/code' \
   --log-file=- \
-  --worker-tmp-dir /dev/shm
+  --worker-tmp-dir='/dev/shm'
