@@ -66,9 +66,14 @@ def validate_domain():
         )
 
 
-try:
-    validate_project_name()
-    validate_domain()
-except ValueError as ex:
-    print(ex)
-    sys.exit(1)
+validators = (
+    validate_project_name,
+    validate_domain,
+)
+
+for validator in validators:
+    try:
+        validator()
+    except ValueError as ex:
+        print(ex)
+        sys.exit(1)

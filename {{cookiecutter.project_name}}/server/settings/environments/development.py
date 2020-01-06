@@ -23,19 +23,24 @@ ALLOWED_HOSTS = [
     '[::1]',
 ]
 
-# Static files:
-# https://docs.djangoproject.com/en/1.11/ref/settings/#std:setting-STATICFILES_DIRS
 
-STATICFILES_DIRS: List[str] = []
-
-
-# Django debug toolbar
-# django-debug-toolbar.readthedocs.io
+# Installed apps for developement only:
 
 INSTALLED_APPS += (
     'debug_toolbar',
     'nplusone.ext.django',
+    'django_migration_linter',
 )
+
+
+# Static files:
+# https://docs.djangoproject.com/en/2.2/ref/settings/#std:setting-STATICFILES_DIRS
+
+STATICFILES_DIRS: List[str] = []
+
+
+# Django debug toolbar:
+# https://django-debug-toolbar.readthedocs.io
 
 MIDDLEWARE += (
     'debug_toolbar.middleware.DebugToolbarMiddleware',
@@ -66,7 +71,9 @@ CSP_IMG_SRC = ("'self'", 'data:')
 # https://github.com/jmcarp/nplusone
 
 # Should be the first in line:
-MIDDLEWARE = ('nplusone.ext.django.NPlusOneMiddleware',) + MIDDLEWARE
+MIDDLEWARE = (  # noqa: WPS440
+    'nplusone.ext.django.NPlusOneMiddleware',
+) + MIDDLEWARE
 
 # Logging N+1 requests:
 NPLUSONE_RAISE = True  # comment out if you want to allow N+1 requests

@@ -120,6 +120,14 @@ Here's a full list of the extensions for both development and production:
 - `django-referrer-policy`_ - middleware implementing the `Referrer-Policy`_
 - `django-health-check`_ - checks for various conditions and provides reports
   when anomalous behavior is detected
+- `django-add-default-value`_ - this django Migration Operation can be used to
+  transfer a Fields default value to the database scheme
+- `django-deprecate-fields`_ - this package allows deprecating model fields and
+  allows removing them in a backwards compatible manner
+- `django-migration-linter`_ - detect backward incompatible migrations for
+  your django project
+- `zero-downtime-migrations`_ - apply ``django`` migrations on PostgreSql
+  without long locks on tables
 
 Development only extensions:
 
@@ -135,7 +143,11 @@ Development only extensions:
 .. _`Content Security Policy`: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
 .. _django-referrer-policy: https://github.com/ubernostrum/django-referrer-policy
 .. _`Referrer-Policy`: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
-.. _django-health-check: _https://github.com/KristianOellegaard/django-health-check
+.. _django-health-check: https://github.com/KristianOellegaard/django-health-check
+.. _django-add-default-value: https://github.com/3YOURMIND/django-add-default-value
+.. _django-deprecate-fields: https://github.com/3YOURMIND/django-deprecate-fields
+.. _django-migration-linter: https://github.com/3YOURMIND/django-migration-linter
+.. _zero-downtime-migrations: https://github.com/yandex/zero-downtime-migrations
 .. _django-debug-toolbar: https://github.com/jazzband/django-debug-toolbar
 .. _django-querycount: https://github.com/bradmontgomery/django-querycount
 .. _nplusone: https://github.com/jmcarp/nplusone
@@ -147,3 +159,9 @@ Further reading
 
 - `django-split-settings tutorial <https://medium.com/wemake-services/managing-djangos-settings-e2b7f496120d>`_
 - `docker env-file docs <https://docs.docker.com/compose/env-file/>`_
+
+
+Django admin
+~~~~~~~~~~~~
+
+- `Django Admin Cookbook <https://books.agiliq.com/projects/django-admin-cookbook/en/latest/>`_

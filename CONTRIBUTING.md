@@ -6,7 +6,7 @@ using this template.
 
 ## Dependencies
 
-We use `poetry` to manage the [dependencies](https://github.com/sdispater/poetry).
+We use `poetry` to manage the [dependencies](https://github.com/python-poetry/poetry).
 
 To install them you would need to run `install` command:
 
@@ -24,7 +24,7 @@ We use `wemake-python-styleguide` as the main code style rules.
 Run:
 
 ```bash
-flake8 hooks tests
+flake8 .
 ```
 
 

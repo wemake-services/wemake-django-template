@@ -20,8 +20,6 @@ When developing this template we had several goals in mind:
 - Development environment should be bootstrapped easily,
   so we use ``docker-compose`` for that
 - Development should be consistent, so we use strict quality and style checks
-- You should not push broken code to the repo,
-  so we use ``pre-commit`` hooks for that
 - Development, testing, and production should have the same environment,
   so again we develop, test, and run our apps in ``docker`` containers
 - Documentation and codebase are the only sources of truth

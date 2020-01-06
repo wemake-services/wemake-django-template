@@ -21,21 +21,32 @@ services:
   web:
     <<: &web
       build:
+        target: development_build
         context: .
         dockerfile: ./docker/django/Dockerfile
         args:
           DJANGO_ENV: development
       volumes:
-        - .:/code
         - django-static:/var/www/django/static
       depends_on:
         - db
       networks:
         - webnet
+        - proxynet
       env_file: ./config/.env
       environment:
         DJANGO_DATABASE_HOST: db
     command: python -Wd manage.py runserver 0.0.0.0:8000
+    healthcheck:
+      test: |
+        /usr/bin/test $$(
+          /usr/bin/curl --fail http://localhost:8000/health/?format=json
+          --write-out "%{http_code}" --silent --output /dev/null
+        ) -eq 200
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
 
 # This task is an example of how to extend existing ones:
 # some_worker:
@@ -43,9 +54,14 @@ services:
 #   command: python manage.py worker_process
 
 networks:
+  # Network for your proxy server and application to connect them,
+  # do not use it for anything else!
+  proxynet:
+  # Network for your internals, use it by default:
   webnet:
 
 volumes:
   pgdata:
   django-static:
   django-media:
+  django-locale:

@@ -9,7 +9,7 @@ We use a lot of 3rd party tools to achieve that.
 Django
 ------
 
-Django has a lot of `security-specific settings <https://docs.djangoproject.com/en/1.11/topics/security/>`_
+Django has a lot of `security-specific settings <https://docs.djangoproject.com/en/2.2/topics/security/>`_
 that are all turned on by default in this template.
 
 We also :ref:`enforce <going-to-production#checks>` all the best practices
@@ -100,6 +100,7 @@ There are different tools to help you:
 - `XSStrike <https://github.com/s0md3v/XSStrike>`_ - automated tool to check that your application is not vulnerable to ``xss`` errors
 - `docker-bench <https://github.com/docker/docker-bench-security>`_ - a script that checks for dozens of common best-practices around deploying Docker containers in production
 - `lynis <https://cisofy.com/lynis/>`_ - a battle-tested security tool for systems running Linux, macOS, or Unix-based operating system
+- `trivy <https://github.com/knqyf263/trivy>`_ - a simple and comprehensive vulnerability scanner for containers
 
 But, even after all you attempts to secure your application,
 it **won't be 100% safe**. Do not fall into this false feeling of security.

@@ -22,4 +22,7 @@ cookiecutter "$TRAVIS_BUILD_DIR" \
 cd "$PROJECT_NAME"
 
 # Run tests that are located inside the generate project:
+docker-compose -f docker-compose.yml \
+  -f docker/docker-compose.prod.yml config --quiet
 docker-compose run --rm web ./docker/ci.sh
+disl "${PROJECT_NAME}_web:latest" 650MiB

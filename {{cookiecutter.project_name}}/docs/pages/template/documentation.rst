@@ -55,7 +55,7 @@ since you already know the structure.
 
 For each ``django`` application we tend to create
 a file called ``index.rst`` which is considered
-the main fail for the application.
+the main file for the application.
 
 And ``pages/project/index.rst`` is the main file for the whole project.
 
@@ -92,7 +92,7 @@ Further reading
 ---------------
 
 - `sphinx <http://www.sphinx-doc.org/en/stable/>`_
-- `sphinx with django <https://docs.djangoproject.com/en/1.11/internals/contributing/writing-documentation/#getting-started-with-sphinx>`_
+- `sphinx with django <https://docs.djangoproject.com/en/2.2/internals/contributing/writing-documentation/#getting-started-with-sphinx>`_
 - `sphinx-autodoc-typehints <https://github.com/agronholm/sphinx-autodoc-typehints>`_
 - `Architecture Decision Record (ADR) <https://github.com/joelparkerhenderson/architecture_decision_record>`_
 - `adr-tools <https://github.com/npryce/adr-tools>`_

@@ -27,7 +27,7 @@ Running linting process for all ``python`` files in the project:
 
 .. code:: bash
 
-  flake8 **/*.py
+  flake8 .
 
 Extra plugins
 ~~~~~~~~~~~~~
@@ -36,28 +36,27 @@ We also use some extra plugins for ``flake8``
 that are not bundled with ``wemake-python-styleguide``:
 
 - `flake8-pytest <https://github.com/vikingco/flake8-pytest>`_ - ensures that ``pytest`` best practices are used
+- `flake8-pytest-style <https://github.com/m-burst/flake8-pytest-style>`_ - ensures that ``pytest`` tests and fixtures are written in a single style
 - `flake8-django <https://github.com/rocioar/flake8-django>`_ - plugin to enforce best practices in a ``django`` project
 
 
-xenon
------
+django-migration-linter
+-----------------------
 
-We are also using `xenon <https://github.com/rubik/xenon>`_ to measure
-code complexity and quality.
+We use ``django-migration-linter`` to find backward incompatible migrations.
+It allows us to write 0-downtime friendly code.
 
-Here are our standards:
+See `django-migration-linter <https://github.com/3YOURMIND/django-migration-linter>`_
+docs, it contains a lot of useful information about ways and tools to do it.
 
-- A single block of code can not go below ``A`` mark
-- A single module can not go below ``A`` mark
-- Overall mark cannot go below ``A`` mark
-
-If your commit breaks this rule: well, the build won't succeed.
+That's how this check is executed:
 
 .. code:: bash
 
-  xenon --max-absolute A --max-modules A --max-average A server
+  python manage.py lintmigrations --exclude-apps=axes
 
-It will return status code ``0`` if everything is fine.
+Important note: you might want to exclude some packages with broken migrations.
+Sometimes, there's nothing we can do about it.
 
 
 yamllint
@@ -82,15 +81,17 @@ See `dotenv-linter <https://github.com/wemake-services/dotenv-linter>`_ docs.
   dotenv-linter config/.env config/.env.template
 
 
-polint
-------
+polint and dennis
+-----------------
 
-Is used to lint your ``.po`` files.
+Are used to lint your ``.po`` files.
 See `polint <https://github.com/ziima/polint>`_ docs.
+Also see `dennis <https://dennis.readthedocs.io/en/latest/linting.html>`_ docs.
 
 .. code:: bash
 
-   polint -i location,unsorted locales
+  polint -i location,unsorted locale
+  dennis-cmd lint --errorsonly locale
 
 
 Packaging
@@ -112,7 +113,7 @@ That's because they require another technology stack to be installed
 or just out of scope.
 
 We also recommend to check the list of linters
-`recommended by wemake-python-styleguide <https://wemake-python-styleguide.readthedocs.io/en/latest/pages/usage.html#extras>`_.
+`recommended by wemake-python-styleguide <https://wemake-python-stylegui.de/en/latest/pages/usage/integrations/extras.html>`_.
 
 Here's the list of these linters. You may still find them useful.
 

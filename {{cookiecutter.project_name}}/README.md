@@ -13,7 +13,7 @@ This project was generated with [`wemake-django-template`](https://github.com/we
 
 You will need:
 
-- `python3.6` (see `pyproject.toml` for full version)
+- `python3.7` (see `pyproject.toml` for full version)
 - `postgresql` with version `9.6`
 - `docker` with [version at least](https://docs.docker.com/compose/compose-file/#compose-and-docker-compatibility-matrix) `18.02`
 
@@ -23,7 +23,7 @@ You will need:
 When developing locally, we use:
 
 - [`editorconfig`](http://editorconfig.org/) plugin (**required**)
-- [`poetry`](https://github.com/sdispater/poetry) (**required**)
+- [`poetry`](https://github.com/python-poetry/poetry) (**required**)
 - `pycharm 2017+` or `vscode`
 
 

@@ -8,7 +8,7 @@ set -o nounset
 
 # Check that $DJANGO_ENV is set to "production",
 # fail otherwise, since it may break things:
-echo "ENV is $DJANGO_ENV"
+echo "DJANGO_ENV is $DJANGO_ENV"
 if [ "$DJANGO_ENV" != 'production' ]; then
   echo 'Error: DJANGO_ENV is not set to "production".'
   echo 'Application will not start.'
@@ -24,5 +24,17 @@ python /code/manage.py migrate --noinput
 python /code/manage.py collectstatic --noinput
 python /code/manage.py compilemessages
 
-# Start gunicorn with 4 workers:
-/usr/local/bin/gunicorn server.wsgi -w 4 -b 0.0.0.0:8000 --chdir=/code
+# Start gunicorn:
+# Docs: http://docs.gunicorn.org/en/stable/settings.html
+/usr/local/bin/gunicorn server.wsgi \
+  # Sync worker settings:
+  # https://github.com/wemake-services/wemake-django-template/issues/1022
+  --workers=4 \
+  --max-requests=2000 \
+  --max-requests-jitter=400 \
+  # Run Django on 8000 port:
+  --bind='0.0.0.0:8000' \
+  # Locations:
+  --chdir='/code' \
+  --log-file=- \
+  --worker-tmp-dir='/dev/shm'

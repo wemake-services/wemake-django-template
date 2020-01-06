@@ -1,6 +1,10 @@
 [build-system]
-requires = ["poetry==0.12.11"]
+requires = ["poetry>=1.0.0"]
 build-backend = "poetry.masonry.api"
+
+
+[tool.nitpick]
+style = "https://raw.githubusercontent.com/wemake-services/wemake-python-styleguide/master/styles/nitpick-style.toml"
 
 
 [tool.poetry]
@@ -8,20 +12,37 @@ name = "wemake-django-template"
 description = "Bleeding edge django template focused on code quality and security"
 version = "0.1.0"
 readme = "README.md"
-authors = []
+authors = [
+  "Nikita Sobolev <mail@sobolevn.me>"
+]
+
+license = "MIT"
 
 
 [tool.poetry.dependencies]
-python = "^3.6"
+python = "^3.7"
 cookiecutter = "^1.6"
-jinja2-git = "^0.2"
+jinja2-git = "^1.0"
+
+# TODO: remove after this issue is fixed:
+# https://github.com/python-poetry/poetry/issues/1740
+importlib-metadata = "<0.24,>=0.23"
 
 
 [tool.poetry.dev-dependencies]
 binaryornot = "^0.4"
-wemake-python-styleguide = "^0.8"
+
+wemake-python-styleguide = "^0.13.3"
 flake8-pytest = "^1.3"
-pytest = "^4.3"
-pytest-randomly = "^2.1"
+flake8-pytest-style = "^0.1.3"
+nitpick = "^0.21.3"
+
+pytest = "^5.3"
+pytest-randomly = "^3.1"
 pytest-cookies = "^0.3"
+
 safety = "^1.8"
+
+docker-compose = "^1.25.0"
+docker-image-size-limit = "^0.2.0"
+tomlkit = "^0.5.8"

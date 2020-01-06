@@ -11,23 +11,12 @@ import os
 import re
 
 import pytest
+import tomlkit
 from binaryornot.check import is_binary
 from cookiecutter.exceptions import FailedHookException
 
 PATTERN = r'{{(\s?cookiecutter)[.](.*?)}}'
 RE_OBJ = re.compile(PATTERN)
-
-
-@pytest.fixture
-def context():
-    """Creates default prompt values."""
-    return {
-        'project_name': 'test_project',
-        'project_verbose_name': 'Test Project',
-        'project_domain': 'myapp.com',
-        'organization': 'wemake.services',
-        'docker': 'y',
-    }
 
 
 def build_files_list(root_dir):
@@ -75,7 +64,19 @@ def test_variables_replaced(cookies, context):
     assert_variables_replaced(paths)
 
 
-@pytest.mark.parametrize('prompt,entered_value', [
+def test_pyproject_toml(cookies, context):
+    """Ensures that all variables are replaced inside project files."""
+    baked_project = cookies.bake(extra_context=context)
+    path = os.path.join(str(baked_project.project), 'pyproject.toml')
+
+    with open(path) as pyproject:
+        poetry = tomlkit.parse(pyproject.read())['tool']['poetry']
+
+    assert poetry['name'] == context['project_name']
+    assert poetry['description'] == context['project_verbose_name']
+
+
+@pytest.mark.parametrize(('prompt', 'entered_value'), [
     ('project_name', 'myProject'),
     ('project_name', '43prject'),
     ('project_name', '_test'),

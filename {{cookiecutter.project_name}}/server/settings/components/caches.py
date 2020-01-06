@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # Caching
-# https://docs.djangoproject.com/en/1.11/topics/cache/
+# https://docs.djangoproject.com/en/2.2/topics/cache/
 
 CACHES = {
     'default': {
@@ -14,7 +14,6 @@ CACHES = {
 
 
 # django-axes
-# https://django-axes.readthedocs.io/en/latest/configuration.html
-# See #known-configuration-problems section
+# https://django-axes.readthedocs.io/en/latest/4_configuration.html#configuring-caches
 
 AXES_CACHE = 'axes_cache'

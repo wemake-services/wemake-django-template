@@ -38,7 +38,6 @@ root project
   It basically defines what to do with your project
   after pushing it to the repository. Currently it is used for testing
   and releasing a ``docker`` image
-- ``pre-commit-config.yaml`` - configuration file for ``pre-commit`` tool
 - ``docker-compose.yml`` - this the file specifies ``docker`` services
   that are needed for development and testing
 - ``docker-compose.override.yml`` - local override for ``docker-compose``.
@@ -60,9 +59,10 @@ server
 ~~~~~~
 
 - ``server/__init__.py`` - package definition, empty file
-- ``server/urls.py`` - ``django`` `urls definition <https://docs.djangoproject.com/en/1.11/topics/http/urls/>`_
+- ``server/urls.py`` - ``django`` `urls definition <https://docs.djangoproject.com/en/2.2/topics/http/urls/>`_
 - ``server/wsgi.py`` - ``django`` `wsgi definition <https://en.wikipedia.org/wiki/Web_Server_Gateway_Interface>`_
-- ``server/main_app`` - ``django`` application, used as an example,
+- ``server/apps/`` - place to put all your apps into
+- ``server/apps/main`` - ``django`` application, used as an example,
   could be removed
 - ``server/settings`` - settings defined with ``django-split-settings``,
   see this `tutorial <https://medium.com/wemake-services/managing-djangos-settings-e2b7f496120d>`_
@@ -81,8 +81,6 @@ docker
   used both for development and production
 - ``docker/django/entrypoint.sh`` - entry point script that is used
   when ``django`` container is starting
-- ``docker/django/wait-for-command.sh`` - utility that wait for other
-  containers to start before allowing to start this specific container.
 - ``docker/django/gunicorn.sh`` - production script for ``django``,
   that's how we configure ``gunicorn`` runner
 - ``docker/caddy/Caddyfile`` - configuration file for Caddy webserver
@@ -92,7 +90,7 @@ tests
 
 - ``tests/test_server`` - tests that ensures that basic ``django``
   stuff is working, should not be removed
-- ``tests/test_main_app`` - example tests for the ``django`` app,
+- ``tests/test_apps/test_main`` - example tests for the ``django`` app,
   could be removed
 - ``tests/conftest.py`` - main configuration file for ``pytest`` runner
 
@@ -128,7 +126,7 @@ Some containers might have long starting times, for example:
 - frontend, like ``node.js``
 
 To be sure that container is started at the right time,
-we utilize ``wait-for-command.sh`` `script <https://github.com/ettore26/wait-for-command>`_.
+we utilize ``dockerize`` `script <https://github.com/jwilder/dockerize>`_.
 It is executed inside ``docker/django/entrypoint.sh`` file.
 
 We start containers with ``tini``.
