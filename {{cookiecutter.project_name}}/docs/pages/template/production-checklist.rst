@@ -38,7 +38,7 @@ We also check that static files can be collected:
 
 However, this check does not cover all the cases.
 Sometimes ``ManifestStaticFilesStorage`` will fail on real cases,
-but will pass with ``--dry-dun`` option.
+but will pass with ``--dry-run`` option.
 You can disable ``--dry-run`` option if you know what you are doing.
 Be careful with this option, when working with auto-uploading
 your static files to any kind of CDNs.
