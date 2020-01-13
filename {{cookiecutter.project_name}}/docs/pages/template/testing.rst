@@ -108,4 +108,4 @@ for more information.
 We also use `django-stubs <https://github.com/typeddjango/django-stubs>`_
 to type ``django`` internals.
 This package is optional and can be removed,
-if you don't what to type your ``django`` for some reason.
+if you don't want to type your ``django`` for some reason.
