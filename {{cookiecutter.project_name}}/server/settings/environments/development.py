@@ -19,6 +19,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     config('DOMAIN_NAME'),
     'localhost',
+    '0.0.0.0',  # noqa: S104
     '127.0.0.1',
     '[::1]',
 ]
@@ -79,3 +80,6 @@ MIDDLEWARE = (  # noqa: WPS440
 NPLUSONE_RAISE = True  # comment out if you want to allow N+1 requests
 NPLUSONE_LOGGER = logging.getLogger('django')
 NPLUSONE_LOG_LEVEL = logging.WARN
+NPLUSONE_WHITELIST = [
+    {'model': 'admin.*'},
+]
