@@ -32,7 +32,7 @@ root project
   copied to the ``docker`` image
 - ``.editorconfig`` - file with format specification.
   You need to install the required plugin for your IDE in order to enable it
-- ``.gitingore`` - file that specifies
+- ``.gitignore`` - file that specifies
   what should we commit into the repository and we should not
 - ``.gitlab-ci.yml`` - GitLab CI configuration file.
   It basically defines what to do with your project
