@@ -33,6 +33,13 @@ def _auth_backends(settings):
     )
 
 
+@pytest.fixture(autouse=True)
+def _templates_debug(settings):
+    """Activates TEMPLATE debug mode for coverage."""
+    for template in settings.TEMPLATES:
+        template['OPTIONS']['debug'] = True
+
+
 @pytest.fixture()
 def main_heading():
     """An example fixture containing some html fragment."""
