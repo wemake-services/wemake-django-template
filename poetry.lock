@@ -1,10 +1,10 @@
 [[package]]
 category = "main"
-description = "Better dates & times for Python"
+description = "Better dates and times for Python"
 name = "arrow"
 optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
-version = "0.15.5"
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
+version = "0.13.2"
 
 [package.dependencies]
 python-dateutil = "*"
@@ -968,15 +968,16 @@ testing = ["argcomplete", "hypothesis (>=3.56)", "mock", "nose", "requests", "xm
 
 [[package]]
 category = "dev"
-description = "A Pytest plugin for your Cookiecutter templates"
+description = "The pytest plugin for your Cookiecutter templates. 🍪"
 name = "pytest-cookies"
 optional = false
-python-versions = "*"
-version = "0.3.0"
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "0.5.1"
 
 [package.dependencies]
-cookiecutter = ">=1.4.0"
-pytest = ">=2.8.1"
+arrow = "<0.14.0"
+cookiecutter = ">=1.4.0,<1.8.0"
+pytest = ">=3.3.0,<6.0.0"
 
 [[package]]
 category = "dev"
@@ -1308,13 +1309,13 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "ebf08551b6448688a62f0cd4d58888998d1ffa9e18d33cd557de9e232c2e14a5"
+content-hash = "ea7ef8d3ba786bfc6afc03f1a2b4e2a326de99188649748862efd3050f6093eb"
 python-versions = "^3.7"
 
 [metadata.files]
 arrow = [
-    {file = "arrow-0.15.5-py2.py3-none-any.whl", hash = "sha256:70729bcc831da496ca3cb4b7e89472c8e2d27d398908155e0796179f6d2d41ee"},
-    {file = "arrow-0.15.5.tar.gz", hash = "sha256:5390e464e2c5f76971b60ffa7ee29c598c7501a294bc9f5e6dadcb251a5d027b"},
+    {file = "arrow-0.13.2-py2.py3-none-any.whl", hash = "sha256:002f2315cf4c8404de737c42860441732d339bbc57fee584e2027520e055ecc1"},
+    {file = "arrow-0.13.2.tar.gz", hash = "sha256:82dd5e13b733787d4eb0fef42d1ee1a99136dc1d65178f70373b3678b3181bfc"},
 ]
 astor = [
     {file = "astor-0.8.1-py2.py3-none-any.whl", hash = "sha256:070a54e890cefb5b3739d19f30f5a5ec840ffc9c50ffa7d23cc9fc1a38ebbfc5"},
@@ -1660,8 +1661,8 @@ pytest = [
     {file = "pytest-5.4.1.tar.gz", hash = "sha256:84dde37075b8805f3d1f392cc47e38a0e59518fb46a431cfdaf7cf1ce805f970"},
 ]
 pytest-cookies = [
-    {file = "pytest-cookies-0.3.0.tar.gz", hash = "sha256:7054b5abd87704c3769b46deb65c332fadba80905d4103b0b1e0b4fe8a9a852a"},
-    {file = "pytest_cookies-0.3.0-py2.py3-none-any.whl", hash = "sha256:a6f37393b697eb3357625a5c226888d9dd020cca3d112b38c630467ce9ff7844"},
+    {file = "pytest-cookies-0.5.1.tar.gz", hash = "sha256:b33f7f51772444b9b25991c4eeaea74a69dc9a6e08b09596b9574548a8812f34"},
+    {file = "pytest_cookies-0.5.1-py2.py3-none-any.whl", hash = "sha256:9dc21d7ae56ef38a5fddb0e11eb5cb4c993907a6cafb6dd11d62c41e47af391b"},
 ]
 pytest-randomly = [
     {file = "pytest-randomly-3.2.1.tar.gz", hash = "sha256:d9273db715bc7f8945cdb3efb994a9d15596a6087fb71a2e87030c5f2677317e"},
