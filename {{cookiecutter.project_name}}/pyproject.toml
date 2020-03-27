@@ -57,7 +57,7 @@ pytest-deadfixtures = "^2.1"
 pytest-testmon = "^1.0"
 pytest-timeout = "^1.3"
 django-test-migrations = "^0.1.0"
-hypothesis = "^4.53"
+hypothesis = "^5.8"
 
 mypy = "^0.761"
 django-stubs = "^1.4"
