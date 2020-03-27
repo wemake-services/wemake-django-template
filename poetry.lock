@@ -211,11 +211,15 @@ description = ""
 name = "docker-image-size-limit"
 optional = false
 python-versions = ">=3.6,<4.0"
-version = "0.2.0"
+version = "0.3.0"
 
 [package.dependencies]
 docker = ">=3.7,<5.0"
-humanfriendly = ">=4.18,<5.0"
+humanfriendly = ">=4.18,<9.0"
+
+[package.dependencies.importlib-metadata]
+python = "<3.8"
+version = "*"
 
 [[package]]
 category = "dev"
@@ -1308,7 +1312,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "ebf08551b6448688a62f0cd4d58888998d1ffa9e18d33cd557de9e232c2e14a5"
+content-hash = "c200a22a729078e1ba73f82ac9560973f24d3b2be6d6e5e2ee9cf5cf076afd18"
 python-versions = "^3.7"
 
 [metadata.files]
@@ -1380,8 +1384,8 @@ docker-compose = [
     {file = "docker_compose-1.25.4-py2.py3-none-any.whl", hash = "sha256:1de906a211c7f4a647f907b1382cd07bbceaf60f4af41c1eebbac74a82210fa5"},
 ]
 docker-image-size-limit = [
-    {file = "docker-image-size-limit-0.2.0.tar.gz", hash = "sha256:c866d33a19779d2c4a78ace4a6e7ebea33457b3cc292f246a006029addb3bcda"},
-    {file = "docker_image_size_limit-0.2.0-py3-none-any.whl", hash = "sha256:885b1ae5df3aec101a511408f59fd2760830f6de3a3f0f8d19503af813b86347"},
+    {file = "docker-image-size-limit-0.3.0.tar.gz", hash = "sha256:3ddf8a1164dcc505b89150a9150b4f788e40272599e5b52e75dcc37d9aa06a25"},
+    {file = "docker_image_size_limit-0.3.0-py3-none-any.whl", hash = "sha256:67126fce8acb66ff45d0952eb54511cad0c5bdf7cdb22720a487f04ee3da8b32"},
 ]
 dockerpty = [
     {file = "dockerpty-0.4.1.tar.gz", hash = "sha256:69a9d69d573a0daa31bcd1c0774eeed5c15c295fe719c61aca550ed1393156ce"},
