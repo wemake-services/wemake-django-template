@@ -69,7 +69,8 @@ COPY ./docker/django/entrypoint.sh /docker-entrypoint.sh
 
 # Setting up proper permissions:
 RUN chmod +x '/docker-entrypoint.sh' \
-  && groupadd -r web && useradd -d /code -r -g web web
+  && groupadd -r web && useradd -d /code -r -g web web \
+  && chown -R web:web /code
 
 # Running as non-root user:
 USER web
