@@ -22,6 +22,7 @@ pyclean () {
 
 run_ci () {
   echo '[ci started]'
+  set -x
 
   # Running linting for all python files in the project:
   flake8 .
@@ -74,6 +75,7 @@ run_ci () {
     dennis-cmd lint --errorsonly locale
   fi
 
+  set +x
   echo '[ci finished]'
 }
 

@@ -196,7 +196,7 @@ X_FRAME_OPTIONS = 'DENY'
 REFERRER_POLICY = 'same-origin'
 
 # https://github.com/adamchainz/django-feature-policy#setting
-FEATURE_POLICY: Dict[str, Union[str, List[str]]] = {}  # noqa: TAE002
+FEATURE_POLICY: Dict[str, Union[str, List[str]]] = {}  # noqa: WPS234
 
 
 # Timeouts

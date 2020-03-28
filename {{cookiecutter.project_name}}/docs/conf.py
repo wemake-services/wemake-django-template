@@ -68,7 +68,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'wemake-django-template'
-copyright = '2017, wemake.services'  # noqa: A001
+copyright = '2017, wemake.services'  # noqa: WPS125
 author = 'wemake.services'
 
 # The version info for the project you're documenting, acts as replacement for
