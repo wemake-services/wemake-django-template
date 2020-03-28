@@ -4,7 +4,6 @@ on: [push, pull_request]
 
 jobs:
   build:
-    needs: Linting
     runs-on: ubuntu-latest
     strategy:
       matrix:
