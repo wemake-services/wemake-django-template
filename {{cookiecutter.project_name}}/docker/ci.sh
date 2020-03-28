@@ -24,6 +24,9 @@ run_ci () {
   echo '[ci started]'
   set -x
 
+  ls -alh .
+  whoami
+
   # Running linting for all python files in the project:
   flake8 .
 
