@@ -1,0 +1,29 @@
+body {
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wemake-services-body {
+  height: 95vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wemake-services-logo {
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.github-corner img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+}
