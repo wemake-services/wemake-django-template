@@ -25,4 +25,4 @@ cd "$PROJECT_NAME"
 docker-compose -f docker-compose.yml \
   -f docker/docker-compose.prod.yml config --quiet
 docker-compose run --rm web ./docker/ci.sh
-disl "${PROJECT_NAME}_web:latest" 650MiB
+disl "${PROJECT_NAME}_web:latest" 700MiB
