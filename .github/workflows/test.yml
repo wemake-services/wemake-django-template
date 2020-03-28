@@ -19,7 +19,6 @@ jobs:
     - name: Install poetry
       run: |
         curl -sSL "https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py" | python
-        source "$HOME/.poetry/env"
         docker --version && docker-compose --version && poetry --version
 
     - name: Set up cache
@@ -28,7 +27,9 @@ jobs:
         path: .venv
         key: venv-${{ matrix.python-version }}-${{ hashFiles('poetry.lock') }}
     - name: Install dependencies
-      run: poetry install
+      run: |
+        source "$HOME/.poetry/env"
+        poetry install
 
     - name: Run checks
       run: |
