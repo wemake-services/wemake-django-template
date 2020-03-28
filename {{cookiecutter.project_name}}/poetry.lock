@@ -461,7 +461,7 @@ toml = "*"
 pipenv = ["pipenv"]
 
 [[package]]
-category = "main"
+category = "dev"
 description = "A utility tool to create .env files"
 name = "dump-env"
 optional = false
@@ -1785,7 +1785,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "4daa61b40b1f191f158ac94997f382aae24dbc3b6026ad7b908034e6d53e8874"
+content-hash = "a0f682eedeeddeb628d570b6e495938f9d044e6137d6dea6db9020b1d6b53cc1"
 python-versions = "3.7.7"
 
 [metadata.files]

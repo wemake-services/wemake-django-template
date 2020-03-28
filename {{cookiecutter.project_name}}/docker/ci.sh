@@ -45,7 +45,7 @@ run_ci () {
   python manage.py makemigrations --dry-run --check
 
   # Check that all migrations are backwards compatible:
-  python manage.py lintmigrations --exclude-apps=axes
+  python manage.py lintmigrations --exclude-apps=axes --warnings-as-errors
 
   # Checking if all the dependencies are secure and do not have any
   # known vulnerabilities:
