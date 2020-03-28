@@ -69,8 +69,7 @@ COPY ./docker/django/entrypoint.sh /docker-entrypoint.sh
 
 # Setting up proper permissions:
 RUN chmod +x '/docker-entrypoint.sh' \
-  && groupadd -r web && useradd -d /code -r -g web web \
-  && chown -R web:web /code
+  && groupadd -r web && useradd -d /code -r -g web web
 
 # Running as non-root user:
 USER web
@@ -81,7 +80,5 @@ ENTRYPOINT ["tini", "--", "/docker-entrypoint.sh"]
 
 # The following stage is only for Prod:
 # https://wemake-django-template.readthedocs.io/en/latest/pages/template/production.html
-
 FROM development_build as production_build
-
-COPY . /code
+COPY --chown=web:web . /code
