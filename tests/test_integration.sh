@@ -13,7 +13,7 @@ mkdir -p "$HOME/.test" && cd "$HOME/.test"
 # Scaffold the project:
 PROJECT_NAME="fake_project"
 
-cookiecutter "$TRAVIS_BUILD_DIR" \
+cookiecutter "${GITHUB_WORKSPACE}/${GITHUB_REPOSITORY}" \
   --no-input --overwrite-if-exists \
   project_name="$PROJECT_NAME" \
   project_domain="myapp.com" \
