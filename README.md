@@ -56,6 +56,9 @@ We offer free email support for anyone who is using this.
 If you have any problems or questions, drop us a line at [`contact@wemake.services`](mailto:contact@wemake.services).
 And we will try to help you.
 
+Here's a [nice list of real-life open-source usages](https://github.com/search?q=wemake-django-template&type=Code) 
+of this template.
+
 
 ## License
 
