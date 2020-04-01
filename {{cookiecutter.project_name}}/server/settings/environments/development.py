@@ -66,6 +66,7 @@ DEBUG_TOOLBAR_CONFIG = {
 # since `ddt` loads some scripts from `ajax.googleapis.com`:
 CSP_SCRIPT_SRC = ("'self'", 'ajax.googleapis.com')
 CSP_IMG_SRC = ("'self'", 'data:')
+CSP_CONNECT_SRC = ("'self'",)
 
 
 # nplusone
