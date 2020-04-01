@@ -74,7 +74,7 @@ RUN chmod +x '/docker-entrypoint.sh' \
 # Running as non-root user:
 USER web
 
-# This dir will become the mountpoint of development code:
+# We customize how our app is loaded with the custom entrypoint:
 ENTRYPOINT ["tini", "--", "/docker-entrypoint.sh"]
 
 
