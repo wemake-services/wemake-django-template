@@ -17,12 +17,17 @@ fi
 
 pyclean () {
   # Cleaning cache:
-  find . | grep -E '(__pycache__|\.cache|\.static|\.py[cod]$)' | xargs rm -rf
+  find . \
+  | grep -E '(__pycache__|\.perm|\.cache|\.static|\.py[cod]$)' \
+  | xargs rm -rf
 }
 
 run_ci () {
   echo '[ci started]'
-  set -x
+  set -x  # we want to print commands during the CI process.
+
+  # Testing filesystem and permissions:
+  touch .perm && rm -f .perm
 
   # Running linting for all python files in the project:
   flake8 .
