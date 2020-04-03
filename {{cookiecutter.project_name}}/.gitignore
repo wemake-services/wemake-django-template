@@ -240,3 +240,6 @@ artifacts/
 
 # pytest:
 .pytest_cache/
+
+# ipython:
+.ipython/
