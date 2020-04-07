@@ -49,7 +49,7 @@ flake8-django = "^0.0.4"
 nitpick = "^0.21"
 
 pytest = "^5.4"
-pytest-django = "^3.7"
+pytest-django = "^3.9"
 pytest-cov = "^2.8"
 pytest-randomly = "^3.1"
 pytest-deadfixtures = "^2.1"
