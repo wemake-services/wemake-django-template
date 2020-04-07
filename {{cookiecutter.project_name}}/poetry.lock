@@ -160,7 +160,7 @@ click = "*"
 [[package]]
 category = "dev"
 description = "Cross-platform colored terminal text."
-marker = "platform_system == \"Windows\" or sys_platform == \"win32\""
+marker = "sys_platform == \"win32\" or platform_system == \"Windows\""
 name = "colorama"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
@@ -968,7 +968,7 @@ description = "Flake8 plugin to enforce the same lint configuration (flake8, iso
 name = "nitpick"
 optional = false
 python-versions = ">=3.5,<4.0"
-version = "0.21.4"
+version = "0.22.1"
 
 [package.dependencies]
 attrs = "*"
@@ -1785,7 +1785,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "a0f682eedeeddeb628d570b6e495938f9d044e6137d6dea6db9020b1d6b53cc1"
+content-hash = "69c66e45788cb73ca65db1c6635f15bce722b75577b1c8048fd6b8d9ae1b07c4"
 python-versions = "3.7.7"
 
 [metadata.files]
@@ -2226,8 +2226,8 @@ mypy-extensions = [
     {file = "mypy_extensions-0.4.3.tar.gz", hash = "sha256:2d82818f5bb3e369420cb3c4060a7970edba416647068eb4c5343488a6c604a8"},
 ]
 nitpick = [
-    {file = "nitpick-0.21.4-py3-none-any.whl", hash = "sha256:512aa47267b5292f52070c4f1718e0e679d6ff476d164da9c625d2613cad71f2"},
-    {file = "nitpick-0.21.4.tar.gz", hash = "sha256:052135bf8599b42aa2950d80c0bb8bdeaf19491be45e0f5f308c922062318b7a"},
+    {file = "nitpick-0.22.1-py3-none-any.whl", hash = "sha256:f876b4428a61c679865c4e81a794b7d9d7b269685c5b52afbc45acc41280fbfe"},
+    {file = "nitpick-0.22.1.tar.gz", hash = "sha256:9754b0d647538aafce35d4a679bde3025d83ebc5059e68bac4df93f4df0ef192"},
 ]
 nplusone = [
     {file = "nplusone-1.0.0-py2.py3-none-any.whl", hash = "sha256:96b1e6e29e6af3e71b67d0cc012a5ec8c97c6a2f5399f4ba41a2bbe0e253a9ac"},
