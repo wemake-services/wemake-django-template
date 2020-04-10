@@ -63,7 +63,7 @@ django-stubs = "^1.4"
 
 ipython = "^7.13"
 
-sphinx = "^2.4"
+sphinx = "^3.0"
 sphinx-autodoc-typehints = "^1.10"
 doc8 = "^0.8"
 
