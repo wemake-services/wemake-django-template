@@ -313,10 +313,10 @@ description = "Set the draft security HTTP header Feature-Policy on your Django 
 name = "django-feature-policy"
 optional = false
 python-versions = ">=3.5"
-version = "3.2.0"
+version = "3.3.0"
 
 [package.dependencies]
-Django = ">=1.11"
+Django = ">=2.0"
 
 [[package]]
 category = "main"
@@ -1785,7 +1785,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "b19c14fa0a49bdf938f104f62d9c423afc3e88aa3137a5b8a40ba22fab47aa33"
+content-hash = "2b18e8cfe306988a858895111572862bf297f47b0774b28cb0c67ff5308647a0"
 python-versions = "3.7.7"
 
 [metadata.files]
@@ -1973,8 +1973,8 @@ django-debug-toolbar = [
     {file = "django_debug_toolbar-2.2-py3-none-any.whl", hash = "sha256:ff94725e7aae74b133d0599b9bf89bd4eb8f5d2c964106e61d11750228c8774c"},
 ]
 django-feature-policy = [
-    {file = "django-feature-policy-3.2.0.tar.gz", hash = "sha256:e255ec692a54448a603ad6450d201b38bf62e2ce6f2ef7161eb07ba89e8b3269"},
-    {file = "django_feature_policy-3.2.0-py3-none-any.whl", hash = "sha256:191d4cb190a01d0d30b899e3d43a2c9c58f2480b938c90a59028d99c33ba2253"},
+    {file = "django-feature-policy-3.3.0.tar.gz", hash = "sha256:dec5067ba4479abd71f69f4364759e9dba5f75edfc69f3396cec0d40d33cf7fc"},
+    {file = "django_feature_policy-3.3.0-py3-none-any.whl", hash = "sha256:34d0547b8e1bf02b2bdcbd91ca86969aa4691df1cace473a276ef3106ba64312"},
 ]
 django-health-check = [
     {file = "django-health-check-3.12.1.tar.gz", hash = "sha256:0563827e003d25fd4d9ebbd7467dea5f390435628d645aaa63f8889deaded73a"},
