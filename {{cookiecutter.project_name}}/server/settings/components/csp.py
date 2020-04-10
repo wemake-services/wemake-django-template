@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 """
 This file contains a definition for Content-Security-Policy headers.

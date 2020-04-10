@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 """
 This file contains all the settings used in production.

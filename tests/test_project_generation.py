@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 """
 Does some basic tests on the generated project.

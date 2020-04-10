@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 """
 This module is called after project is created.

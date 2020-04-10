@@ -28,7 +28,7 @@ services:
   web:
     <<: &web
       # Image for production:
-      image: "{{ cookiecutter.project_name }}:latest"
+      image: "registry.gitlab.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}:latest"
       build:
         target: production_build
         args:

@@ -47,7 +47,7 @@ services:
     command: python -Wd manage.py runserver 0.0.0.0:8000
     healthcheck:
       test: |
-        /usr/bin/test $$(
+        /usr/bin/test $(
           /usr/bin/curl --fail http://localhost:8000/health/?format=json
           --write-out "%{http_code}" --silent --output /dev/null
         ) -eq 200
