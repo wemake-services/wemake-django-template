@@ -109,7 +109,7 @@ version = "7.1.1"
 [[package]]
 category = "dev"
 description = "Cross-platform colored terminal text."
-marker = "platform_system == \"Windows\" or sys_platform == \"win32\""
+marker = "sys_platform == \"win32\" or platform_system == \"Windows\""
 name = "colorama"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
@@ -190,7 +190,7 @@ description = "Multi-container orchestration for Docker"
 name = "docker-compose"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "1.25.4"
+version = "1.25.5"
 
 [package.dependencies]
 PyYAML = ">=3.10,<6"
@@ -1247,7 +1247,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "c283ca08f6ca9c83372b64ef6a9c210a87deca413582c5d1be9db5e2437309e9"
+content-hash = "067f6205dc3613ce3e189398da3bab22a00d9dff6c7ff2ab8d0f0f9751e97d48"
 python-versions = "^3.7"
 
 [metadata.files]
@@ -1319,8 +1319,8 @@ docker = [
     {file = "docker-4.2.0.tar.gz", hash = "sha256:ddae66620ab5f4bce769f64bcd7934f880c8abe6aa50986298db56735d0f722e"},
 ]
 docker-compose = [
-    {file = "docker-compose-1.25.4.tar.gz", hash = "sha256:fabae2bee4abfa7bdd09125b6bbdcdda81f946c7b16e3ccc6bb2d821ef6488f3"},
-    {file = "docker_compose-1.25.4-py2.py3-none-any.whl", hash = "sha256:1de906a211c7f4a647f907b1382cd07bbceaf60f4af41c1eebbac74a82210fa5"},
+    {file = "docker-compose-1.25.5.tar.gz", hash = "sha256:7a2eb6d8173fdf408e505e6f7d497ac0b777388719542be9e49a0efd477a50c6"},
+    {file = "docker_compose-1.25.5-py2.py3-none-any.whl", hash = "sha256:9d33520ae976f524968a64226516ec631dce09fba0974ce5366ad403e203eb5d"},
 ]
 docker-image-size-limit = [
     {file = "docker-image-size-limit-0.3.0.tar.gz", hash = "sha256:3ddf8a1164dcc505b89150a9150b4f788e40272599e5b52e75dcc37d9aa06a25"},
