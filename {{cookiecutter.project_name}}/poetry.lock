@@ -1773,7 +1773,7 @@ description = "A linter for YAML files."
 name = "yamllint"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "1.22.0"
+version = "1.22.1"
 
 [package.dependencies]
 pathspec = ">=0.5.3"
@@ -2555,8 +2555,8 @@ wemake-python-styleguide = [
     {file = "wemake_python_styleguide-0.14.0-py3-none-any.whl", hash = "sha256:21e09b786a38f62399dc727ca801f49084dcbc025b5ac44faf8182f959deb6e0"},
 ]
 yamllint = [
-    {file = "yamllint-1.22.0-py2.py3-none-any.whl", hash = "sha256:7ef024017c54850f788da133155fc8b4f8cb75778ea89c724da66fe47594e061"},
-    {file = "yamllint-1.22.0.tar.gz", hash = "sha256:a6cb7d27d70628b6b5129ed62f2e97a27065c2ec4d9019b00221c72e3f8f9428"},
+    {file = "yamllint-1.22.1-py2.py3-none-any.whl", hash = "sha256:1b0dfb4f5679ca3effcfa9c67d2d79f81e4b8239a725ad9f0118bdd8f5b36d8f"},
+    {file = "yamllint-1.22.1.tar.gz", hash = "sha256:dd8eb7540e6fd929494280a4def7dc76c1f802d43446a0b612c19b850d70945e"},
 ]
 zipp = [
     {file = "zipp-3.1.0-py3-none-any.whl", hash = "sha256:aa36550ff0c0b7ef7fa639055d797116ee891440eac1a56f378e2d3179e0320b"},
