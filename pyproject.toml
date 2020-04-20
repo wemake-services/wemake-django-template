@@ -34,7 +34,7 @@ flake8-pytest-style = "^1.1.1"
 nitpick = "^0.22"
 
 pytest = "^5.4"
-pytest-randomly = "^3.1"
+pytest-randomly = "^3.3"
 pytest-cookies = "^0.5"
 
 safety = "^1.8.7"
