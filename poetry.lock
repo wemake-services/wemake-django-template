@@ -121,18 +121,18 @@ description = "A command-line utility that creates projects from project templat
 name = "cookiecutter"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
-version = "1.7.1"
+version = "1.7.2"
 
 [package.dependencies]
-Jinja2 = "<=2.11.0"
+Jinja2 = "<3.0.0"
 MarkupSafe = "<2.0.0"
 binaryornot = ">=0.4.4"
-click = ">=7.1.1"
+click = ">=7.0"
 jinja2-time = ">=0.2.0"
 poyo = ">=0.5.0"
 python-slugify = ">=4.0.0"
 requests = ">=2.23.0"
-six = ">=1.14"
+six = ">=1.10"
 
 [[package]]
 category = "dev"
@@ -1285,8 +1285,8 @@ colorama = [
     {file = "colorama-0.4.3.tar.gz", hash = "sha256:e96da0d330793e2cb9485e9ddfd918d456036c7149416295932478192f4436a1"},
 ]
 cookiecutter = [
-    {file = "cookiecutter-1.7.1-py2.py3-none-any.whl", hash = "sha256:ae22b7c53c2aeb98806ab0504b1ff4820c015a2995647aa2cbf6e362fa7059c8"},
-    {file = "cookiecutter-1.7.1.tar.gz", hash = "sha256:de42211a21fbea8364542a4382dcdd9ff81dec90533888f15b6aeb5fea975cce"},
+    {file = "cookiecutter-1.7.2-py2.py3-none-any.whl", hash = "sha256:430eb882d028afb6102c084bab6cf41f6559a77ce9b18dc6802e3bc0cc5f4a30"},
+    {file = "cookiecutter-1.7.2.tar.gz", hash = "sha256:efb6b2d4780feda8908a873e38f0e61778c23f6a2ea58215723bcceb5b515dac"},
 ]
 darglint = [
     {file = "darglint-1.2.2-py3-none-any.whl", hash = "sha256:3874faf685c3ca5309f72a7d955fcc4e71f53e762aa76f5ff3c2beab99a15184"},
