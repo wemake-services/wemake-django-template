@@ -456,7 +456,7 @@ description = "A utility tool to create .env files"
 name = "dump-env"
 optional = false
 python-versions = ">=3.6,<4.0"
-version = "1.1.1"
+version = "1.2.0"
 
 [[package]]
 category = "dev"
@@ -1730,7 +1730,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "2b0fca632fa8388fa09cbb0a3c07bca22189883c5fb42d04464e917c13dc2e15"
+content-hash = "e3b9319471e5768584f0ac19bb4a0b8fff3544476d1ffc8c16a3e15f5e606fdb"
 python-versions = "3.7.7"
 
 [metadata.files]
@@ -1968,8 +1968,8 @@ dparse = [
     {file = "dparse-0.5.1.tar.gz", hash = "sha256:a1b5f169102e1c894f9a7d5ccf6f9402a836a5d24be80a986c7ce9eaed78f367"},
 ]
 dump-env = [
-    {file = "dump-env-1.1.1.tar.gz", hash = "sha256:528357530892b02bc5ba62b1f0d31f5f80d063a3133f3e1aa54704a16aa5e8cd"},
-    {file = "dump_env-1.1.1-py3-none-any.whl", hash = "sha256:eba700e26c2907ae2dcb30d52f76b1b2ba068e5857f013f6935f3d24c34b984b"},
+    {file = "dump-env-1.2.0.tar.gz", hash = "sha256:9b9ee7a8afe2a8194a712d12a925cc54f0b3178833491fdced5dcb6f68b56c60"},
+    {file = "dump_env-1.2.0-py3-none-any.whl", hash = "sha256:ca26f6d87a33418adb794338e748a0d3507014e3388250077c696e8c96634562"},
 ]
 entrypoints = [
     {file = "entrypoints-0.3-py2.py3-none-any.whl", hash = "sha256:589f874b313739ad35be6e0cd7efde2a4e9b6fea91edcc34e58ecbb8dbe56d19"},
