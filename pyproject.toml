@@ -23,7 +23,7 @@ license = "MIT"
 python = "^3.7"
 
 cookiecutter = "^1.7"
-jinja2-git = "^1.0"
+jinja2-git = "^1.1"
 
 
 [tool.poetry.dev-dependencies]

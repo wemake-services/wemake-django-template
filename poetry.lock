@@ -564,7 +564,7 @@ description = "Jinja2 extension to handle git-specific things"
 name = "jinja2-git"
 optional = false
 python-versions = ">=3.6,<4.0"
-version = "1.0.0"
+version = "1.1.0"
 
 [package.dependencies]
 jinja2 = ">=2.10,<3.0"
@@ -1162,7 +1162,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "477b64b7f2d0be9b9f3a4c30a7243c28a4031a282128d0d63af1c1cafa05eb7f"
+content-hash = "54409b1acf087fbe3a7ca27787d122c310f5d3ba2e23115fdb9ba91a3f3a4091"
 python-versions = "^3.7"
 
 [metadata.files]
@@ -1344,8 +1344,8 @@ jinja2 = [
     {file = "Jinja2-2.11.0.tar.gz", hash = "sha256:d6609ae5ec3d56212ca7d802eda654eaf2310000816ce815361041465b108be4"},
 ]
 jinja2-git = [
-    {file = "jinja2-git-1.0.0.tar.gz", hash = "sha256:0f85cfb11963771769615580b6ac3d9ff9f73a8f659fa2c656417408727ca0a7"},
-    {file = "jinja2_git-1.0.0-py3-none-any.whl", hash = "sha256:d12a27dd492b4dbd07d634d5e6d19efc2fed430333f80083f064b5ec39627c67"},
+    {file = "jinja2-git-1.1.0.tar.gz", hash = "sha256:366107d03df0c3ff549c9ccf922a92cb763453fc613e5651123aaa38233c61d0"},
+    {file = "jinja2_git-1.1.0-py3-none-any.whl", hash = "sha256:e06cac17a8bc18b277af78417f04886b50dda446a20250f85c1ffbce534daa36"},
 ]
 jinja2-time = [
     {file = "jinja2-time-0.2.0.tar.gz", hash = "sha256:d14eaa4d315e7688daa4969f616f226614350c48730bfa1692d2caebd8c90d40"},
