@@ -30,6 +30,7 @@ INSTALLED_APPS += (
     'debug_toolbar',
     'nplusone.ext.django',
     'django_migration_linter',
+    'django_test_migrations.contrib.django_checks.AutoNames',
 )
 
 
@@ -83,3 +84,12 @@ NPLUSONE_LOG_LEVEL = logging.WARN
 NPLUSONE_WHITELIST = [
     {'model': 'admin.*'},
 ]
+
+
+# django-test-migrations
+# https://github.com/wemake-services/django-test-migrations
+
+# Set of badly named migrations to ignore:
+DTM_IGNORED_MIGRATIONS = frozenset((
+    ('axes', '*'),
+))
