@@ -4,6 +4,7 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
+    """This migration only adds new meta-data fields, no schema change."""
 
     dependencies = [
         ('main', '0001_initial'),
@@ -12,6 +13,9 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterModelOptions(
             name='blogpost',
-            options={'verbose_name': 'BlogPost', 'verbose_name_plural': 'BlogPosts'},
+            options={
+                'verbose_name': 'BlogPost',
+                'verbose_name_plural': 'BlogPosts',
+            },
         ),
     ]
