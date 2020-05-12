@@ -342,10 +342,10 @@ description = "Detect backward incompatible migrations for your django project"
 name = "django-migration-linter"
 optional = false
 python-versions = "*"
-version = "2.1.0"
+version = "2.2.0"
 
 [package.dependencies]
-appdirs = "1.4.3"
+appdirs = ">=1.4.3"
 django = ">=1.11"
 six = "1.14.0"
 
@@ -1730,7 +1730,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "f4547ba9d8ba313cfedd31a5186394ab988081845ee343b7f782f7c1d47bea93"
+content-hash = "5017eb15d8ca196c0b613a019bd80c18d8f2040ed3dff009c7f15cc5be35731a"
 python-versions = "3.7.7"
 
 [metadata.files]
@@ -1930,8 +1930,8 @@ django-ipware = [
     {file = "django-ipware-2.1.0.tar.gz", hash = "sha256:a7c7a8fd019dbdc9c357e6e582f65034e897572fc79a7e467674efa8aef9d00b"},
 ]
 django-migration-linter = [
-    {file = "django-migration-linter-2.1.0.tar.gz", hash = "sha256:85473556050955322a3509adccf82fd5b545a229cfc6227b0d9f50182dade8ab"},
-    {file = "django_migration_linter-2.1.0-py2.py3-none-any.whl", hash = "sha256:966d4af0da98edd2186f262a0da17946aadd6ad93a97d523f3011879928b3152"},
+    {file = "django-migration-linter-2.2.0.tar.gz", hash = "sha256:ef71659b365d93d57b4156030691d9e54a0cb6d6b3d3400127973ee1fb49876e"},
+    {file = "django_migration_linter-2.2.0-py2.py3-none-any.whl", hash = "sha256:7c1dd101d17ed9c93979e859563fce86133bad764c1d1ba4fecc85118c34e035"},
 ]
 django-querycount = [
     {file = "django-querycount-0.7.0.tar.gz", hash = "sha256:8f5123d78716ff0704f2373e746a7200b8d8417798ce4a99bf2de87e3768f9ce"},
