@@ -86,12 +86,9 @@ release-image:
     - docker pull "${IMAGE_FULL_NAME}:dev" || true
 
     # Building the image itself:
-    - docker build -t "${IMAGE_FULL_NAME}:latest"
-      --cache-from="${IMAGE_FULL_NAME}:latest"
-      --cache-from="${IMAGE_FULL_NAME}:dev"
-      --cache-from="*"
-      --build-arg DJANGO_ENV=production
-      -f docker/django/Dockerfile .
+    - docker-compose -f docker-compose.yml
+      -f docker/docker-compose.prod.yml build
+
   script:
     - docker push "${IMAGE_FULL_NAME}:latest"
   only:
