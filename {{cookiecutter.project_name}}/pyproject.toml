@@ -27,7 +27,7 @@ django-axes = "^5.3"
 django-csp = "^3.5"
 django-health-check = "^3.11"
 django-http-referrer-policy = "^1.0"
-django-feature-policy = "^3.1"
+django-feature-policy = "^3.4"
 
 psycopg2 = "^2.8"
 gunicorn = "^20.0"
