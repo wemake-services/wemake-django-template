@@ -342,12 +342,12 @@ description = "Detect backward incompatible migrations for your django project"
 name = "django-migration-linter"
 optional = false
 python-versions = "*"
-version = "2.2.1"
+version = "2.2.2"
 
 [package.dependencies]
 appdirs = ">=1.4.3"
 django = ">=1.11"
-six = "1.14.0"
+six = ">=1.14.0"
 
 [package.extras]
 test = ["tox (3.14.3)", "mysqlclient (1.4.6)", "psycopg2-binary (2.8.4)", "django-add-default-value (0.3.2)"]
@@ -1930,8 +1930,8 @@ django-ipware = [
     {file = "django-ipware-2.1.0.tar.gz", hash = "sha256:a7c7a8fd019dbdc9c357e6e582f65034e897572fc79a7e467674efa8aef9d00b"},
 ]
 django-migration-linter = [
-    {file = "django-migration-linter-2.2.1.tar.gz", hash = "sha256:917687973b47d8f02d74c1d7c01c60b4817f749b2678042a32f54d2ecc66fc80"},
-    {file = "django_migration_linter-2.2.1-py2.py3-none-any.whl", hash = "sha256:5ee5bde561b0106a502978bcb7bfab4a91f6e7f93e35c620ff4ee6548b557a71"},
+    {file = "django-migration-linter-2.2.2.tar.gz", hash = "sha256:a29c07b0a98a8846e83be209c6efa19acbc06277de613f4d40816f880e72bcc0"},
+    {file = "django_migration_linter-2.2.2-py2.py3-none-any.whl", hash = "sha256:1e5513db5f4facd00336a68a92f75721632a24feac88d423d682ee1afe2454bd"},
 ]
 django-querycount = [
     {file = "django-querycount-0.7.0.tar.gz", hash = "sha256:8f5123d78716ff0704f2373e746a7200b8d8417798ce4a99bf2de87e3768f9ce"},
