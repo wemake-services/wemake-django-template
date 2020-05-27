@@ -20,12 +20,19 @@ services:
 
   web:
     <<: &web
+      # Image name is changed in production:
+      image: "{{ cookiecutter.project_name }}:dev"
       build:
         target: development_build
         context: .
         dockerfile: ./docker/django/Dockerfile
         args:
           DJANGO_ENV: development
+        cache_from:
+          - "{{ cookiecutter.project_name }}:dev"
+          - "{{ cookiecutter.project_name }}:latest"
+          - "*"
+
       volumes:
         - django-static:/var/www/django/static
       depends_on:
@@ -36,8 +43,12 @@ services:
       env_file: ./config/.env
       environment:
         DJANGO_DATABASE_HOST: db
+
     command: python -Wd manage.py runserver 0.0.0.0:8000
     healthcheck:
+      # We use `$$` here because:
+      # one `$` goes to shell,
+      # one $ goes to `docker-compose.yml` escaping
       test: |
         /usr/bin/test $$(
           /usr/bin/curl --fail http://localhost:8000/health/?format=json

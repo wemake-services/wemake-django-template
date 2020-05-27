@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 """
 This module is called after project is created.
@@ -20,6 +19,7 @@ import os
 import secrets
 import shutil
 import string
+import textwrap
 
 # CHANGEME mark
 CHANGEME = '__CHANGEME__'
@@ -71,11 +71,14 @@ def _create_secret_key(config_path):
 
 def print_futher_instuctions():
     """Shows user what to do next after project creation."""
-    print()
-    print('Your project {0} is created.'.format(PROJECT_NAME))
-    print('Now you can start working on it:')
-    print()
-    print('    cd {0}'.format(PROJECT_NAME))
+    message = textwrap.dedent("""
+    Your project {0} is created.
+    Now you can start working on it:
+
+        cd {0}
+
+    """)
+    print(message.format(PROJECT_NAME))  # noqa: WPS421
 
 
 def copy_local_configuration():

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 from hypothesis import given
 from hypothesis.extra import django

@@ -17,11 +17,17 @@ fi
 
 pyclean () {
   # Cleaning cache:
-  find . | grep -E '(__pycache__|\.static|\.py[cod]$)' | xargs rm -rf
+  find . \
+  | grep -E '(__pycache__|\.perm|\.cache|\.static|\.py[cod]$)' \
+  | xargs rm -rf
 }
 
 run_ci () {
   echo '[ci started]'
+  set -x  # we want to print commands during the CI process.
+
+  # Testing filesystem and permissions:
+  touch .perm && rm -f .perm
 
   # Running linting for all python files in the project:
   flake8 .
@@ -44,7 +50,7 @@ run_ci () {
   python manage.py makemigrations --dry-run --check
 
   # Check that all migrations are backwards compatible:
-  python manage.py lintmigrations --exclude-apps=axes
+  python manage.py lintmigrations --exclude-apps=axes --warnings-as-errors
 
   # Checking if all the dependencies are secure and do not have any
   # known vulnerabilities:
@@ -74,6 +80,7 @@ run_ci () {
     dennis-cmd lint --errorsonly locale
   fi
 
+  set +x
   echo '[ci finished]'
 }
 

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 """
 This file contains all the settings that defines the development server.
@@ -31,6 +30,7 @@ INSTALLED_APPS += (
     'debug_toolbar',
     'nplusone.ext.django',
     'django_migration_linter',
+    'django_test_migrations.contrib.django_checks.AutoNames',
 )
 
 
@@ -66,6 +66,7 @@ DEBUG_TOOLBAR_CONFIG = {
 # since `ddt` loads some scripts from `ajax.googleapis.com`:
 CSP_SCRIPT_SRC = ("'self'", 'ajax.googleapis.com')
 CSP_IMG_SRC = ("'self'", 'data:')
+CSP_CONNECT_SRC = ("'self'",)
 
 
 # nplusone
@@ -83,3 +84,12 @@ NPLUSONE_LOG_LEVEL = logging.WARN
 NPLUSONE_WHITELIST = [
     {'model': 'admin.*'},
 ]
+
+
+# django-test-migrations
+# https://github.com/wemake-services/django-test-migrations
+
+# Set of badly named migrations to ignore:
+DTM_IGNORED_MIGRATIONS = frozenset((
+    ('axes', '*'),
+))

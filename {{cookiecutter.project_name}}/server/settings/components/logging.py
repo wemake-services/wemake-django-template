@@ -1,37 +1,49 @@
-# -*- coding: utf-8 -*-
 
 # Logging
 # https://docs.djangoproject.com/en/2.2/topics/logging/
 
+# See also:
+# 'Do not log' by Nikita Sobolev (@sobolevn)
+# https://sobolevn.me/2020/03/do-not-log
+
+import structlog
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
+
+    # We use these formatters in our `'handlers'` configration.
+    # Probably, you won't need to modify these lines.
+    # Unless, you know what you are doing.
     'formatters': {
-        'verbose': {
-            'format': (
-                '%(asctime)s [%(process)d] [%(levelname)s] ' +
-                'pathname=%(pathname)s lineno=%(lineno)s ' +
-                'funcname=%(funcName)s %(message)s'
-            ),
-            'datefmt': '%Y-%m-%d %H:%M:%S',
+        'json_formatter': {
+            '()': structlog.stdlib.ProcessorFormatter,
+            'processor': structlog.processors.JSONRenderer(),
         },
-        'simple': {
-            'format': '%(asctime)s [%(levelname)s] %(message)s',
-            'datefmt': '%Y-%m-%d %H:%M:%S',
+        'console': {
+            '()': structlog.stdlib.ProcessorFormatter,
+            'processor': structlog.processors.KeyValueRenderer(
+                key_order=['timestamp', 'level', 'event', 'logger'],
+            ),
         },
     },
+
+    # You can easily swap `key/value` (default) output and `json` ones.
+    # Use `'json_console'` if you need `json` logs.
     'handlers': {
         'console': {
-            'level': 'DEBUG',
             'class': 'logging.StreamHandler',
-            'formatter': 'simple',
+            'formatter': 'console',
         },
-        'console-verbose': {
-            'level': 'DEBUG',
+        'json_console': {
             'class': 'logging.StreamHandler',
-            'formatter': 'verbose',
+            'formatter': 'json_formatter',
         },
     },
+
+    # These loggers are required by our app:
+    # - django is required when using `logger.getLogger('django')`
+    # - security is required by `axes`
     'loggers': {
         'django': {
             'handlers': ['console'],
@@ -39,9 +51,28 @@ LOGGING = {
             'level': 'INFO',
         },
         'security': {
-            'handlers': ['console-verbose'],
+            'handlers': ['console'],
             'level': 'ERROR',
             'propagate': False,
         },
     },
 }
+
+structlog.configure(
+    processors=[
+        structlog.stdlib.filter_by_level,
+        structlog.processors.TimeStamper(fmt='iso'),
+        structlog.stdlib.add_logger_name,
+        structlog.stdlib.add_log_level,
+        structlog.stdlib.PositionalArgumentsFormatter(),
+        structlog.processors.StackInfoRenderer(),
+        structlog.processors.format_exc_info,
+        structlog.processors.UnicodeDecoder(),
+        structlog.processors.ExceptionPrettyPrinter(),
+        structlog.stdlib.ProcessorFormatter.wrap_for_formatter,
+    ],
+    context_class=structlog.threadlocal.wrap_dict(dict),
+    logger_factory=structlog.stdlib.LoggerFactory(),
+    wrapper_class=structlog.stdlib.BoundLogger,
+    cache_logger_on_first_use=True,
+)

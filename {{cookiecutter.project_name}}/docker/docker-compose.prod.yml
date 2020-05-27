@@ -27,18 +27,18 @@ services:
 
   web:
     <<: &web
-      image:
-        "registry.gitlab.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}:latest"
+      # Image for production:
+      image: "registry.gitlab.com/{{ cookiecutter.organization }}/{{ cookiecutter.project_name }}:latest"
       build:
         target: production_build
-        context: .
-        dockerfile: ./docker/django/Dockerfile
         args:
           DJANGO_ENV: production
+
       restart: unless-stopped
       volumes:
         - django-media:/var/www/django/media  # since in dev it is app's folder
-        - django-locale:./locale  # since in dev it is app's folder
+        - django-locale:/code/locale  # since in dev it is app's folder
+
     command: sh ./docker/django/gunicorn.sh
     expose:
       - 8000

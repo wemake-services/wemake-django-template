@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 """
 This module is used to provide configuration, fixtures, and plugins for pytest.

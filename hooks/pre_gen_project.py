@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 import re
 import sys
@@ -75,5 +74,5 @@ for validator in validators:
     try:
         validator()
     except ValueError as ex:
-        print(ex)
+        print(ex)  # noqa: WPS421
         sys.exit(1)

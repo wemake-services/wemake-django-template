@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 import textwrap
 
@@ -25,6 +24,10 @@ class BlogPost(models.Model):
 
     created_at = models.DateTimeField(auto_now_add=True)
     modifiet_at = models.DateTimeField(auto_now=True)
+
+    class Meta(object):
+        verbose_name = 'BlogPost'  # You can probably use `gettext` for this
+        verbose_name_plural = 'BlogPosts'
 
     def __str__(self) -> str:
         """All django models should have this method."""

@@ -3,43 +3,70 @@
 variables:
   GROUP_NAME: "{{ cookiecutter.organization }}"
   PROJECT_NAME: "{{ cookiecutter.project_name }}"
+  REGISTRY: "registry.gitlab.com"
+  IMAGE_FULL_NAME: "${REGISTRY}/${GROUP_NAME}/${PROJECT_NAME}"
 
-# This is a base job template for all `docker`-based jobs. It won't be executed.
-.docker:
-  image: docker:latest
+
+# Base scripts
+# ============
+
+.docker-before-script: &docker-before-script
+  # Installing global dependencies:
+  - apk update && apk upgrade
+  - apk add python3 python3-dev py3-pip git build-base
+  - pip3 install dump-env docker-image-size-limit 'docker-compose<1.24'
+  # Creating `.env` configuration file:
+  - dump-env -t config/.env.template -p 'SECRET_' > config/.env
+  # Login into Docker registry:
+  - docker login -u gitlab-ci-token -p "$CI_JOB_TOKEN" "$REGISTRY"
+  # Debug information:
+  - docker info && docker-compose --version && git --version
+
+.base-docker:
+  services:
+    - docker:dind
   variables:
     # When using dind, it's wise to use the overlayfs driver for
     # improved performance:
     DOCKER_DRIVER: overlay2
-    REGISTRY: "registry.gitlab.com"
-    CONTAINER_RELEASE_IMAGE: "$REGISTRY/$GROUP_NAME/$PROJECT_NAME:latest"
-  services:
-    - docker:dind
-  before_script:
-    # Installing global dependencies:
-    - apk update && apk upgrade
-    - apk add python3 python3-dev py3-pip git build-base
-    - pip3 install dump-env docker-image-size-limit 'docker-compose<1.24'
-    # Creating `.env` configuration file:
-    - dump-env -t config/.env.template -p 'SECRET_'
-      --strict=SECRET_DJANGO_SECRET_KEY > config/.env
-    # Login into Docker registry:
-    - docker login -u gitlab-ci-token -p "$CI_JOB_TOKEN" "$REGISTRY"
-    # Debug information:
-    - docker info && docker-compose --version && git --version
 
-# Testing application:
+.docker:
+  extends: .base-docker
+  image: docker:latest
+  interruptible: true
+
+
+# Test scripts
+# ============
+
 test:
-  extends: .docker
   stage: test
+  extends: .docker
+  before_script:
+    - *docker-before-script
   script:
+    # Checking config:
     - docker-compose -f docker-compose.yml
       -f docker/docker-compose.prod.yml config --quiet
+
+    # Pulling cache:
+    - docker pull "${IMAGE_FULL_NAME}:dev" || true
+    - docker tag "${IMAGE_FULL_NAME}:dev" "${PROJECT_NAME}:dev" || true
+
+    # The logic itself:
+    - docker-compose build
     - docker-compose run --rm web sh ./docker/ci.sh
-    - disl "${PROJECT_NAME}_web:latest" 650MiB
-  coverage: '/[\d\.]+\%\s*$/'
+    - disl "${PROJECT_NAME}:dev" 700MiB
+
+    # Pushing back the result for future runs:
+    - docker tag "${PROJECT_NAME}:dev" "${IMAGE_FULL_NAME}:dev"
+    - docker push "${IMAGE_FULL_NAME}:dev"
   only:
     - merge_requests
+
+
+# Release scripts
+# ===============
 
 # Releasing image, when in `master` branch,
 # can be replaced with `kira-release` bot:
@@ -47,27 +74,24 @@ test:
 release-image:
   extends: .docker
   stage: deploy
+  allow_failure: false
+  before_script:
+    # Build local image to be released to gitlab registry,
+    # modify it to suite your needs as you wish.
+    # We only care about the name of the image:
+    - *docker-before-script
+
+    # Now we need the latest images for cache and improved build times:
+    - docker pull "${IMAGE_FULL_NAME}:latest" || true
+    - docker pull "${IMAGE_FULL_NAME}:dev" || true
+
+    # Building the image itself:
+    - docker-compose -f docker-compose.yml
+      -f docker/docker-compose.prod.yml build
+
   script:
-    - docker build -t "$CONTAINER_RELEASE_IMAGE"
-      --build-arg DJANGO_ENV=production -f docker/django/Dockerfile .
-    - docker push "$CONTAINER_RELEASE_IMAGE"
+    - docker push "${IMAGE_FULL_NAME}:latest"
   only:
     - master
   environment:
     name: production  # used to track time with 'cycle analytics'
-
-pages:
-  stage: .post
-  image: docker:latest
-  script:
-    - apk update && apk upgrade
-    - apk add make
-    - cd docs
-    - make html
-    - cd ..
-    - mv docs/_build/html public/
-  artifacts:
-    paths:
-      - public
-  only:
-    - master

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 """
 Main URL mapping configuration file.

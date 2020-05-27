@@ -26,15 +26,13 @@ python /code/manage.py compilemessages
 
 # Start gunicorn:
 # Docs: http://docs.gunicorn.org/en/stable/settings.html
+# Concerning `workers` setting see:
+# https://github.com/wemake-services/wemake-django-template/issues/1022
 /usr/local/bin/gunicorn server.wsgi \
-  # Sync worker settings:
-  # https://github.com/wemake-services/wemake-django-template/issues/1022
-  --workers=4 \
+  --workers=4 `# Sync worker settings` \
   --max-requests=2000 \
   --max-requests-jitter=400 \
-  # Run Django on 8000 port:
-  --bind='0.0.0.0:8000' \
-  # Locations:
-  --chdir='/code' \
+  --bind='0.0.0.0:8000' `# Run Django on 8000 port` \
+  --chdir='/code'       `# Locations` \
   --log-file=- \
   --worker-tmp-dir='/dev/shm'

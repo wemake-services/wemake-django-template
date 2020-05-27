@@ -2,7 +2,7 @@
 
 [![wemake.services](https://img.shields.io/badge/%20-wemake.services-green.svg?label=%20&logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC%2FxhBQAAAAFzUkdCAK7OHOkAAAAbUExURQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP%2F%2F%2F5TvxDIAAAAIdFJOUwAjRA8xXANAL%2Bv0SAAAADNJREFUGNNjYCAIOJjRBdBFWMkVQeGzcHAwksJnAPPZGOGAASzPzAEHEGVsLExQwE7YswCb7AFZSF3bbAAAAABJRU5ErkJggg%3D%3D)](https://wemake.services) 
 [![Awesome](https://awesome.re/badge-flat2.svg)](https://awesomestacks.dev/production-ready-django-docker) 
-[![Build Status](https://travis-ci.com/wemake-services/wemake-django-template.svg?branch=master)](https://travis-ci.com/wemake-services/wemake-django-template)
+[![Build status](https://github.com/wemake-services/wemake-django-template/workflows/test/badge.svg?branch=master&event=push)](https://github.com/wemake-services/wemake-django-template/actions?query=workflow%3Atest)
 [![Documentation Status](https://readthedocs.org/projects/wemake-django-template/badge/?version=latest)](http://wemake-django-template.readthedocs.io/en/latest/?badge=latest) 
 [![Dependencies Status](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg)](https://github.com/wemake-services/wemake-django-template/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Aapp%2Fdependabot) 
 [![wemake-python-styleguide](https://img.shields.io/badge/style-wemake-000000.svg)](https://github.com/wemake-services/wemake-python-styleguide)
@@ -55,6 +55,9 @@ If you use our template, please add yourself or your company [in the list](https
 We offer free email support for anyone who is using this.
 If you have any problems or questions, drop us a line at [`contact@wemake.services`](mailto:contact@wemake.services).
 And we will try to help you.
+
+Here's a [nice list of real-life open-source usages](https://github.com/search?q=wemake-django-template&type=Code) 
+of this template.
 
 
 ## License
