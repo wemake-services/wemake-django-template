@@ -39,6 +39,6 @@ pytest-cookies = "^0.5"
 
 safety = "^1.9.0"
 
-docker-compose = "^1.25.5"
+docker-compose = "^1.26.0"
 docker-image-size-limit = "^0.3.0"
 tomlkit = "^0.6.0"

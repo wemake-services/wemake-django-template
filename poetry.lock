@@ -150,6 +150,14 @@ tests = ["check-manifest (>=0.25)", "coverage (>=4.0)", "isort (>=4.2.2)", "mock
 
 [[package]]
 category = "dev"
+description = "Distro - an OS platform information API"
+name = "distro"
+optional = false
+python-versions = "*"
+version = "1.5.0"
+
+[[package]]
+category = "dev"
 description = "A Python library for the Docker Engine API."
 name = "docker"
 optional = false
@@ -175,15 +183,17 @@ description = "Multi-container orchestration for Docker"
 name = "docker-compose"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "1.25.5"
+version = "1.26.0"
 
 [package.dependencies]
 PyYAML = ">=3.10,<6"
 cached-property = ">=1.2.0,<2"
 colorama = ">=0.4,<1"
+distro = ">=1.5.0,<2"
 dockerpty = ">=0.4.1,<1"
 docopt = ">=0.6.1,<1"
 jsonschema = ">=2.5.1,<4"
+python-dotenv = ">=0.13.0,<1"
 requests = ">=2.20.0,<3"
 six = ">=1.3.0,<2"
 texttable = ">=0.9.0,<2"
@@ -195,6 +205,7 @@ version = ">=3.7.0,<5"
 
 [package.extras]
 socks = ["PySocks (>=1.5.6,<1.5.7 || >1.5.7,<2)"]
+tests = ["ddt (>=1.2.2,<2)", "mock (>=1.0.1,<4)", "pytest (<6)"]
 
 [[package]]
 category = "dev"
@@ -886,6 +897,17 @@ version = "2.8.1"
 six = ">=1.5"
 
 [[package]]
+category = "dev"
+description = "Add .env support to your django/flask apps in development and deployments"
+name = "python-dotenv"
+optional = false
+python-versions = "*"
+version = "0.13.0"
+
+[package.extras]
+cli = ["click (>=5.0)"]
+
+[[package]]
 category = "main"
 description = "A Python Slugify application that handles Unicode"
 name = "python-slugify"
@@ -1162,7 +1184,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "d59d43eb035a071bafc22a4515f3915f94372b4e0d4264567cabdea1b802032f"
+content-hash = "280161fe63e3746705838d958c58a4653bd4d7608000677f1bf4b8c0dc8c0031"
 python-versions = "^3.7"
 
 [metadata.files]
@@ -1222,13 +1244,17 @@ dictdiffer = [
     {file = "dictdiffer-0.8.1-py2.py3-none-any.whl", hash = "sha256:d79d9a39e459fe33497c858470ca0d2e93cb96621751de06d631856adfd9c390"},
     {file = "dictdiffer-0.8.1.tar.gz", hash = "sha256:1adec0d67cdf6166bda96ae2934ddb5e54433998ceab63c984574d187cc563d2"},
 ]
+distro = [
+    {file = "distro-1.5.0-py2.py3-none-any.whl", hash = "sha256:df74eed763e18d10d0da624258524ae80486432cd17392d9c3d96f5e83cd2799"},
+    {file = "distro-1.5.0.tar.gz", hash = "sha256:0e58756ae38fbd8fc3020d54badb8eae17c5b9dcbed388b17bb55b8a5928df92"},
+]
 docker = [
     {file = "docker-4.2.0-py2.py3-none-any.whl", hash = "sha256:1c2ddb7a047b2599d1faec00889561316c674f7099427b9c51e8cb804114b553"},
     {file = "docker-4.2.0.tar.gz", hash = "sha256:ddae66620ab5f4bce769f64bcd7934f880c8abe6aa50986298db56735d0f722e"},
 ]
 docker-compose = [
-    {file = "docker-compose-1.25.5.tar.gz", hash = "sha256:7a2eb6d8173fdf408e505e6f7d497ac0b777388719542be9e49a0efd477a50c6"},
-    {file = "docker_compose-1.25.5-py2.py3-none-any.whl", hash = "sha256:9d33520ae976f524968a64226516ec631dce09fba0974ce5366ad403e203eb5d"},
+    {file = "docker-compose-1.26.0.tar.gz", hash = "sha256:7e836102d139aca667d6af53f0f4d942c9459ec24d6dd4f0203d74359b0fd311"},
+    {file = "docker_compose-1.26.0-py2.py3-none-any.whl", hash = "sha256:82ddf7b3908635426e7b0f552ad9926ad6448be8c0fdb768505819763a5eb2e6"},
 ]
 docker-image-size-limit = [
     {file = "docker-image-size-limit-0.3.0.tar.gz", hash = "sha256:3ddf8a1164dcc505b89150a9150b4f788e40272599e5b52e75dcc37d9aa06a25"},
@@ -1484,6 +1510,10 @@ pytest-randomly = [
 python-dateutil = [
     {file = "python-dateutil-2.8.1.tar.gz", hash = "sha256:73ebfe9dbf22e832286dafa60473e4cd239f8592f699aa5adaf10050e6e1823c"},
     {file = "python_dateutil-2.8.1-py2.py3-none-any.whl", hash = "sha256:75bb3f31ea686f1197762692a9ee6a7550b59fc6ca3a1f4b5d7e32fb98e2da2a"},
+]
+python-dotenv = [
+    {file = "python-dotenv-0.13.0.tar.gz", hash = "sha256:3b9909bc96b0edc6b01586e1eed05e71174ef4e04c71da5786370cebea53ad74"},
+    {file = "python_dotenv-0.13.0-py2.py3-none-any.whl", hash = "sha256:25c0ff1a3e12f4bde8d592cc254ab075cfe734fc5dd989036716fd17ee7e5ec7"},
 ]
 python-slugify = [
     {file = "python-slugify-4.0.0.tar.gz", hash = "sha256:a8fc3433821140e8f409a9831d13ae5deccd0b033d4744d94b31fea141bdd84c"},
