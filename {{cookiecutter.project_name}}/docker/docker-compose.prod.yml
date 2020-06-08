@@ -9,14 +9,15 @@
 version: "3.6"
 services:
   caddy:
-    image: "wemakeservices/caddy-docker:0.10.11-1"
+    image: "caddy:2.0.0"
     restart: unless-stopped
     env_file: ./config/.env
     volumes:
-      - ./docker/caddy/certs:/root/.caddy  # saving certificates
-      - ./docker/caddy/Caddyfile:/etc/Caddyfile:ro  # configuration
-      - django-static:/var/www/django/static:ro  # serving django's statics
-      - django-media:/var/www/django/media:ro  # serving django's media
+      - ./docker/caddy/Caddyfile:/etc/caddy/Caddyfile  # configuration
+      - caddy-config:/config  # configuation autosaves
+      - caddy-data:/data  # saving certificates
+      - django-static:/var/www/django/static  # serving django's statics
+      - django-media:/var/www/django/media  # serving django's media
     ports:
       - "80:80"
       - "443:443"
@@ -49,3 +50,7 @@ services:
 #   command: python manage.py worker_process
 #   deploy:
 #     replicas: 2
+
+volumes:
+  caddy-config:
+  caddy-data:
