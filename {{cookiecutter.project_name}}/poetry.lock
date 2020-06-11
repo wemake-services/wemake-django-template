@@ -252,10 +252,10 @@ description = "Keep track of failed login attempts in Django-powered sites."
 name = "django-axes"
 optional = false
 python-versions = "~=3.6"
-version = "5.3.2"
+version = "5.3.4"
 
 [package.dependencies]
-django = ">=1.11"
+django = ">=2.0"
 django-appconf = ">=1.0.3"
 django-ipware = ">=2.0.2"
 
@@ -1900,8 +1900,8 @@ django-appconf = [
     {file = "django_appconf-1.0.4-py2.py3-none-any.whl", hash = "sha256:1b1d0e1069c843ebe8ae5aa48ec52403b1440402b320c3e3a206a0907e97bb06"},
 ]
 django-axes = [
-    {file = "django-axes-5.3.2.tar.gz", hash = "sha256:298246a88939eeb26ac5f71a0f115f5a337f9274d04453dff8ff4ea9d0608b4f"},
-    {file = "django_axes-5.3.2-py3-none-any.whl", hash = "sha256:7d4ba1961765a77b8d7acc7161cc1e5e6b8ec104a857c63d26ba02667c7a3fa4"},
+    {file = "django-axes-5.3.4.tar.gz", hash = "sha256:d4d8b5bb9ce2cc2e1ff9f8c0ec80853abe52721ce90b4e4dc9497281ca20e600"},
+    {file = "django_axes-5.3.4-py3-none-any.whl", hash = "sha256:2e1a9bdadfa0ef3ed2347e3a6ba5ba1f0a5af4d4c070d4b5b3d8888a4c452ae0"},
 ]
 django-coverage-plugin = [
     {file = "django_coverage_plugin-1.8.0.tar.gz", hash = "sha256:d53cbf3828fd83d6b89ff7292c6805de5274e36411711692043e67bcde25ae0c"},
