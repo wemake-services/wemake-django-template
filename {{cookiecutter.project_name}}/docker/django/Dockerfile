@@ -30,13 +30,13 @@ ENV DJANGO_ENV=${DJANGO_ENV} \
 # System deps:
 RUN apt-get update \
   && apt-get install --no-install-recommends -y \
-    bash \
-    build-essential \
-    curl \
-    gettext \
-    git \
-    libpq-dev \
-    wget \
+  bash \
+  build-essential \
+  curl \
+  gettext \
+  git \
+  libpq-dev \
+  wget \
   # Cleaning cache:
   && apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/* \
   # Installing `dockerize` utility:
@@ -59,8 +59,8 @@ COPY ./poetry.lock ./pyproject.toml /code/
 # Project initialization:
 RUN echo "$DJANGO_ENV" \
   && poetry install \
-    $(if [ "$DJANGO_ENV" = 'production' ]; then echo '--no-dev'; fi) \
-    --no-interaction --no-ansi \
+  $(if [ "$DJANGO_ENV" = 'production' ]; then echo '--no-dev'; fi) \
+  --no-interaction --no-ansi \
   # Cleaning poetry installation's cache for production:
   && if [ "$DJANGO_ENV" = 'production' ]; then rm -rf "$POETRY_CACHE_DIR"; fi
 
@@ -70,7 +70,9 @@ COPY ./docker/django/entrypoint.sh /docker-entrypoint.sh
 # Setting up proper permissions:
 RUN chmod +x '/docker-entrypoint.sh' \
   && groupadd -r web && useradd -d /code -r -g web web \
-  && chown web:web -R /code
+  && chown web:web -R /code \
+  && mkdir -p /var/www/django/static /var/www/django/media \
+  && chown web:web /var/www/django/static /var/www/django/media
 
 # Running as non-root user:
 USER web
