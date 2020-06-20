@@ -39,4 +39,6 @@ jobs:
         poetry run sh tests/test_integration.sh
         poetry run poetry check
         poetry run pip check
-        poetry run safety check --bare --full-report
+        # Ignoring sphinx@2 security issue for now, see:
+        # https://github.com/miyakogi/m2r/issues/51
+        poetry run safety check --bare --full-report -i 38330

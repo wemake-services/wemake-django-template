@@ -54,7 +54,9 @@ run_ci () {
 
   # Checking if all the dependencies are secure and do not have any
   # known vulnerabilities:
-  safety check --bare --full-report
+  # Ignoring sphinx@2 security issue for now, see:
+  # https://github.com/miyakogi/m2r/issues/51
+  safety check --bare --full-report -i 38330
 
   # Checking `pyproject.toml` file contents:
   poetry check
