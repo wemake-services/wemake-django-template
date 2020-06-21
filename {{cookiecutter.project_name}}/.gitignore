@@ -213,6 +213,7 @@ fabric.properties
 # Directories:
 media/
 .static/
+/static/
 
 # File types:
 *.sqlite3
