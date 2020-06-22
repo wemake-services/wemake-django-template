@@ -342,7 +342,7 @@ description = "Detect backward incompatible migrations for your django project"
 name = "django-migration-linter"
 optional = false
 python-versions = "*"
-version = "2.2.2"
+version = "2.3.0"
 
 [package.dependencies]
 appdirs = ">=1.4.3"
@@ -350,7 +350,7 @@ django = ">=1.11"
 six = ">=1.14.0"
 
 [package.extras]
-test = ["tox (3.14.3)", "mysqlclient (1.4.6)", "psycopg2-binary (2.8.4)", "django-add-default-value (0.3.2)"]
+test = ["tox (>=3.15.2)", "mysqlclient (>=1.4.6)", "psycopg2-binary (>=2.8.5)", "django-add-default-value (>=0.4.0)", "mock (>=3.0.5)"]
 
 [[package]]
 category = "dev"
@@ -1730,7 +1730,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "81aebdbf723253b296c4b5cf6c27318a8090f4c2d51762f8cf1b1ad72f91e13a"
+content-hash = "77c7ac688193af90d00cb01db34d00f5ac461570b042d1c83d0fa5786f7f49e4"
 python-versions = "3.7.7"
 
 [metadata.files]
@@ -1930,8 +1930,8 @@ django-ipware = [
     {file = "django-ipware-2.1.0.tar.gz", hash = "sha256:a7c7a8fd019dbdc9c357e6e582f65034e897572fc79a7e467674efa8aef9d00b"},
 ]
 django-migration-linter = [
-    {file = "django-migration-linter-2.2.2.tar.gz", hash = "sha256:a29c07b0a98a8846e83be209c6efa19acbc06277de613f4d40816f880e72bcc0"},
-    {file = "django_migration_linter-2.2.2-py2.py3-none-any.whl", hash = "sha256:1e5513db5f4facd00336a68a92f75721632a24feac88d423d682ee1afe2454bd"},
+    {file = "django-migration-linter-2.3.0.tar.gz", hash = "sha256:c3813f3e38a13591abee4e47accc60ee990eec6d0381246d94f660c97e0b4d72"},
+    {file = "django_migration_linter-2.3.0-py2.py3-none-any.whl", hash = "sha256:1a5404374aacbe5bad88fa31c985c2893619f624dfa316556ca1521c844972a6"},
 ]
 django-querycount = [
     {file = "django-querycount-0.7.0.tar.gz", hash = "sha256:8f5123d78716ff0704f2373e746a7200b8d8417798ce4a99bf2de87e3768f9ce"},
@@ -2321,6 +2321,7 @@ pyyaml = [
     {file = "PyYAML-5.3.1.tar.gz", hash = "sha256:b8eac752c5e14d3eca0e6dd9199cd627518cb5ec06add0de9d32baeee6fe645d"},
 ]
 requests = [
+    {file = "requests-2.23.0-py2.7.egg", hash = "sha256:5d2d0ffbb515f39417009a46c14256291061ac01ba8f875b90cad137de83beb4"},
     {file = "requests-2.23.0-py2.py3-none-any.whl", hash = "sha256:43999036bfa82904b6af1d99e4882b560e5e2c68e5c4b0aa03b655f3d7d73fee"},
     {file = "requests-2.23.0.tar.gz", hash = "sha256:b3f43d496c6daba4493e7c431722aeb7dbc6288f52a6e04e7b6023b0247817e6"},
 ]
