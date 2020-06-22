@@ -1291,7 +1291,7 @@ description = "py.test plugin to abort hanging tests"
 name = "pytest-timeout"
 optional = false
 python-versions = "*"
-version = "1.3.4"
+version = "1.4.1"
 
 [package.dependencies]
 pytest = ">=3.6.0"
@@ -1730,7 +1730,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "77c7ac688193af90d00cb01db34d00f5ac461570b042d1c83d0fa5786f7f49e4"
+content-hash = "915e377b9032e1747a4705a8124ba3b903ba4fd3f017e9ffb3f08cb1ad6e4207"
 python-versions = "3.7.7"
 
 [metadata.files]
@@ -2294,8 +2294,8 @@ pytest-testmon = [
     {file = "pytest_testmon-1.0.2-py3-none-any.whl", hash = "sha256:e79852203894bbd5a6adb7e0541316c0a3a84322e9766f746ed6b8b62f9897d9"},
 ]
 pytest-timeout = [
-    {file = "pytest-timeout-1.3.4.tar.gz", hash = "sha256:80faa19cd245a42b87a51699d640c00d937c02b749052bfca6bae8bdbe12c48e"},
-    {file = "pytest_timeout-1.3.4-py2.py3-none-any.whl", hash = "sha256:95ca727d4a1dace6ec5f0534d2940b8417ff8b782f7eef0ea09240bdd94d95c2"},
+    {file = "pytest-timeout-1.4.1.tar.gz", hash = "sha256:6d0fb4ce74cebb81be252e4e0d9c2a91f30270b33208cfa0f1da6eed9abf18ac"},
+    {file = "pytest_timeout-1.4.1-py2.py3-none-any.whl", hash = "sha256:c10650550e0c4fef5b06274411377c8b54c7b370c34b632fd4ce1a9b170f5ba3"},
 ]
 python-decouple = [
     {file = "python-decouple-3.3.tar.gz", hash = "sha256:55c546b85b0c47a15a47a4312d451a437f7344a9be3e001660bccd93b637de95"},
