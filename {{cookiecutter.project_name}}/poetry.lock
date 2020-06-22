@@ -387,7 +387,10 @@ description = "Test django schema and data migrations, including ordering"
 name = "django-test-migrations"
 optional = false
 python-versions = ">=3.6,<4.0"
-version = "0.3.0"
+version = "1.0.0"
+
+[package.dependencies]
+typing_extensions = ">=3.7.4,<4.0.0"
 
 [[package]]
 category = "dev"
@@ -1730,7 +1733,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "77c7ac688193af90d00cb01db34d00f5ac461570b042d1c83d0fa5786f7f49e4"
+content-hash = "4ee062fbd3c6c5ad14aed2d23e597bd73e2fa0f55cab8cfa3a02762890316433"
 python-versions = "3.7.7"
 
 [metadata.files]
@@ -1945,8 +1948,8 @@ django-stubs = [
     {file = "django_stubs-1.5.0-py3-none-any.whl", hash = "sha256:4a03df70e062f4133085efc461148d0934f36ccfd60a2b6d7bc35821f62008b6"},
 ]
 django-test-migrations = [
-    {file = "django-test-migrations-0.3.0.tar.gz", hash = "sha256:fa0c32942abf0447d7b146eefd7404abdc3d1d543f394efe56a48d1c8299fac4"},
-    {file = "django_test_migrations-0.3.0-py3-none-any.whl", hash = "sha256:3aa2e705d71ede19571c354144b8fdef60348a57aa7bc9225cfea1d4eecf2bff"},
+    {file = "django-test-migrations-1.0.0.tar.gz", hash = "sha256:e5747e2ad0b7e4d3b8d9ccd40d414b0f186316d3757af022b4bbdec700897521"},
+    {file = "django_test_migrations-1.0.0-py3-none-any.whl", hash = "sha256:d120d0287e1dd82ed62fe083747a1e99c0398d56beda52594e8391b94a41bef5"},
 ]
 doc8 = [
     {file = "doc8-0.8.0-py2.py3-none-any.whl", hash = "sha256:d12f08aa77a4a65eb28752f4bc78f41f611f9412c4155e2b03f1f5d4a45efe04"},
