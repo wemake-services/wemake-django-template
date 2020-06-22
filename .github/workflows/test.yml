@@ -41,4 +41,4 @@ jobs:
         poetry run pip check
         # Ignoring sphinx@2 security issue for now, see:
         # https://github.com/miyakogi/m2r/issues/51
-        poetry run safety check --bare --full-report -i 38330
+        poetry run safety check --full-report -i 38330

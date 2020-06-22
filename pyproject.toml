@@ -29,16 +29,16 @@ jinja2-git = "^1.1"
 [tool.poetry.dev-dependencies]
 binaryornot = "^0.4"
 
-wemake-python-styleguide = "^0.14.0"
-flake8-pytest-style = "^1.1.1"
+wemake-python-styleguide = "^0.14"
+flake8-pytest-style = "^1.2"
 nitpick = "^0.22"
 
 pytest = "^5.4"
 pytest-randomly = "^3.4"
 pytest-cookies = "^0.5"
 
-safety = "^1.9.0"
+safety = "^1.9"
 
-docker-compose = "^1.25.5"
-docker-image-size-limit = "^0.3.0"
-tomlkit = "^0.6.0"
+docker-compose = "^1.26"
+docker-image-size-limit = "^0.3"
+tomlkit = "^0.6"
