@@ -1,31 +1,40 @@
 # See https://caddyserver.com/docs
 
+# Email for Let's Encrypt expiration notices
+{
+  email {$TLS_EMAIL}
+}
+
 # "www" redirect to "non-www" version
 www.{$DOMAIN_NAME} {
-  redir https://{$DOMAIN_NAME}
+  redir https://{$DOMAIN_NAME}{uri}
 }
 
 {$DOMAIN_NAME} {
   # HTTPS options:
-  tls {$TLS_EMAIL}
-  header / Strict-Transport-Security "max-age=31536000;"
+  header Strict-Transport-Security max-age=31536000;
 
   # Removing some headers for improved security:
-  header / -Server
+  header -Server
 
-  # Serves static files, should be the same as `STATIC_ROOT` setting:
-  root /var/www/django
-
-  # Serving dynamic requests:
-  proxy / web:8000 {
-    except /static /media
-    transparent
+  # Exclude matcher for Django assets
+  @excludeDirs {
+    not path /static/* /media/*
   }
 
-  # Allows to use `.gz` files when available:
-  gzip
+  # Serving dynamic requests:
+  reverse_proxy @excludeDirs web:8000
+
+  # Serves static files, should be the same as `STATIC_ROOT` setting:
+  file_server {
+    root /var/www/django
+  }
+
+   # Allows to use `.gz` files when available:
+  encode gzip
 
   # Logs:
-  log stdout
-  errors stdout
+  log {
+	  output stdout
+  }
 }
