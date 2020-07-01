@@ -20,7 +20,7 @@ to enforce even more security rules:
 
 - `django-axes <https://github.com/jazzband/django-axes>`_ to track and ban repeating access requests
 - `django-csp <https://github.com/mozilla/django-csp>`_ to enforce `Content-Security Policy <https://www.w3.org/TR/CSP/>`_ for our webpages
-- `django-referrer-policy <https://django-referrer-policy.readthedocs.io>`_ to enforce `Referrer Policy <https://www.w3.org/TR/referrer-policy/>`_ for our webpages
+- `django-http-referrer-policy <https://django-referrer-policy.readthedocs.io>`_ to enforce `Referrer Policy <https://www.w3.org/TR/referrer-policy/>`_ for our webpages
 
 And there are also some awesome extensions that are not included:
 
