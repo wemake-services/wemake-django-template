@@ -101,7 +101,7 @@ version = "7.1.2"
 [[package]]
 category = "dev"
 description = "Cross-platform colored terminal text."
-marker = "platform_system == \"Windows\" or sys_platform == \"win32\""
+marker = "sys_platform == \"win32\" or platform_system == \"Windows\""
 name = "colorama"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
@@ -183,7 +183,7 @@ description = "Multi-container orchestration for Docker"
 name = "docker-compose"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "1.26.0"
+version = "1.26.1"
 
 [package.dependencies]
 PyYAML = ">=3.10,<6"
@@ -201,11 +201,11 @@ websocket-client = ">=0.32.0,<1"
 
 [package.dependencies.docker]
 extras = ["ssh"]
-version = ">=3.7.0,<5"
+version = ">=4.2.1,<5"
 
 [package.extras]
 socks = ["PySocks (>=1.5.6,<1.5.7 || >1.5.7,<2)"]
-tests = ["ddt (>=1.2.2,<2)", "mock (>=1.0.1,<4)", "pytest (<6)"]
+tests = ["ddt (>=1.2.2,<2)", "pytest (<6)"]
 
 [[package]]
 category = "dev"
@@ -1247,8 +1247,8 @@ docker = [
     {file = "docker-4.2.1.tar.gz", hash = "sha256:380a20d38fbfaa872e96ee4d0d23ad9beb0f9ed57ff1c30653cbeb0c9c0964f2"},
 ]
 docker-compose = [
-    {file = "docker-compose-1.26.0.tar.gz", hash = "sha256:7e836102d139aca667d6af53f0f4d942c9459ec24d6dd4f0203d74359b0fd311"},
-    {file = "docker_compose-1.26.0-py2.py3-none-any.whl", hash = "sha256:82ddf7b3908635426e7b0f552ad9926ad6448be8c0fdb768505819763a5eb2e6"},
+    {file = "docker-compose-1.26.1.tar.gz", hash = "sha256:85460909def3f528911ad371eb4e865bb9f7f8d55df1fe66a8f10747ad62ed65"},
+    {file = "docker_compose-1.26.1-py2.py3-none-any.whl", hash = "sha256:8b1daea0980a506c4f881de286a451c9beab6248021ff8e813eda9155c475d1c"},
 ]
 docker-image-size-limit = [
     {file = "docker-image-size-limit-0.3.0.tar.gz", hash = "sha256:3ddf8a1164dcc505b89150a9150b4f788e40272599e5b52e75dcc37d9aa06a25"},
