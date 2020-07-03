@@ -20,9 +20,9 @@ ENV DJANGO_ENV=${DJANGO_ENV} \
   # dockerize:
   DOCKERIZE_VERSION=v0.6.1 \
   # tini:
-  TINI_VERSION=v0.18.0 \
+  TINI_VERSION=v0.19.0 \
   # poetry:
-  POETRY_VERSION=1.0.5 \
+  POETRY_VERSION=1.0.9 \
   POETRY_VIRTUALENVS_CREATE=false \
   POETRY_CACHE_DIR='/var/cache/pypoetry'
 
