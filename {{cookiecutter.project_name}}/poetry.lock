@@ -252,12 +252,12 @@ description = "Keep track of failed login attempts in Django-powered sites."
 name = "django-axes"
 optional = false
 python-versions = "~=3.6"
-version = "5.3.5"
+version = "5.4.1"
 
 [package.dependencies]
 django = ">=2.0"
 django-appconf = ">=1.0.3"
-django-ipware = ">=2.0.2,<3"
+django-ipware = ">=3,<4"
 
 [[package]]
 category = "dev"
@@ -334,7 +334,7 @@ description = "A Django utility application that returns client's real IP addres
 name = "django-ipware"
 optional = false
 python-versions = "*"
-version = "2.1.0"
+version = "3.0.0"
 
 [[package]]
 category = "dev"
@@ -1728,7 +1728,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "77984cb1edd06c3068a38264eefaf30b85af279993385111ac25732d55d408e6"
+content-hash = "746cd667ad8fe3c41e5108a3f1d2cd2d0fa2175cbe02b96dfff92987b24ca7ad"
 python-versions = "3.7.7"
 
 [metadata.files]
@@ -1898,8 +1898,8 @@ django-appconf = [
     {file = "django_appconf-1.0.4-py2.py3-none-any.whl", hash = "sha256:1b1d0e1069c843ebe8ae5aa48ec52403b1440402b320c3e3a206a0907e97bb06"},
 ]
 django-axes = [
-    {file = "django-axes-5.3.5.tar.gz", hash = "sha256:7c03b95cff99cd0cc69e0617df7888c5ffdf36daeb9772e83ca851062e5af599"},
-    {file = "django_axes-5.3.5-py3-none-any.whl", hash = "sha256:6a1fa03b7a35783d00dd1f665931553d6f98ecaaf31b012ff0765de4b410486b"},
+    {file = "django-axes-5.4.1.tar.gz", hash = "sha256:652a5f1fec0fdfb9fd8d6f44b0ce22189577a8c5932b60827a8ff074d6d093d9"},
+    {file = "django_axes-5.4.1-py3-none-any.whl", hash = "sha256:1e2532e8bf3b9d7c283f8b079e2c716e9fd97c921e95053549d262cef0eb3691"},
 ]
 django-coverage-plugin = [
     {file = "django_coverage_plugin-1.8.0.tar.gz", hash = "sha256:d53cbf3828fd83d6b89ff7292c6805de5274e36411711692043e67bcde25ae0c"},
@@ -1925,7 +1925,7 @@ django-http-referrer-policy = [
     {file = "django_http_referrer_policy-1.0.1-py2.py3-none-any.whl", hash = "sha256:3a867e2ac3f83b162a2bc1241dc2ed209e555e709e6566fef6bb1f716c733c00"},
 ]
 django-ipware = [
-    {file = "django-ipware-2.1.0.tar.gz", hash = "sha256:a7c7a8fd019dbdc9c357e6e582f65034e897572fc79a7e467674efa8aef9d00b"},
+    {file = "django-ipware-3.0.0.tar.gz", hash = "sha256:161605eb011439550dd3ee496d0e999720b13f01952be25ea9e88982fbe48e83"},
 ]
 django-migration-linter = [
     {file = "django-migration-linter-2.4.0.tar.gz", hash = "sha256:445c17d87c1245f018b4855bef31232f3a4e0e707e473cc1c1947402c3ea2b6e"},
