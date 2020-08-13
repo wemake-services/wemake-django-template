@@ -277,7 +277,7 @@ description = "Django Content Security Policy support."
 name = "django-csp"
 optional = false
 python-versions = "*"
-version = "3.6"
+version = "3.7"
 
 [package.dependencies]
 Django = ">=1.8"
@@ -1737,7 +1737,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "59687e86393960387ac32058d47a85f61566237772017c9f62c0c49241c7d66c"
+content-hash = "ba10d52fec3e9e1b30acfc615d12d712eac8f5019a24d2799db66e6b02c2eb1d"
 python-versions = "3.7.7"
 
 [metadata.files]
@@ -1915,8 +1915,8 @@ django-coverage-plugin = [
     {file = "django_coverage_plugin-1.8.0.tar.gz", hash = "sha256:d53cbf3828fd83d6b89ff7292c6805de5274e36411711692043e67bcde25ae0c"},
 ]
 django-csp = [
-    {file = "django_csp-3.6-py2.py3-none-any.whl", hash = "sha256:d9ee5a8c6442aa54854e8de627c2826786208ed38fb4ea8ced08c42332673eb1"},
-    {file = "django_csp-3.6.tar.gz", hash = "sha256:0a38aa9618c675cbf5f5e517e20d5846a3e100ef7b307e32e7fb18c58aa47723"},
+    {file = "django_csp-3.7-py2.py3-none-any.whl", hash = "sha256:01443a07723f9a479d498bd7bb63571aaa771e690f64bde515db6cdb76e8041a"},
+    {file = "django_csp-3.7.tar.gz", hash = "sha256:01eda02ad3f10261c74131cdc0b5a6a62b7c7ad4fd017fbefb7a14776e0a9727"},
 ]
 django-debug-toolbar = [
     {file = "django-debug-toolbar-2.2.tar.gz", hash = "sha256:eabbefe89881bbe4ca7c980ff102e3c35c8e8ad6eb725041f538988f2f39a943"},
