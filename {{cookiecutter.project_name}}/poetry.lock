@@ -734,7 +734,7 @@ description = "A library for property-based testing"
 name = "hypothesis"
 optional = false
 python-versions = ">=3.5.2"
-version = "5.25.0"
+version = "5.26.0"
 
 [package.dependencies]
 attrs = ">=19.2.0"
@@ -1739,7 +1739,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "4df1977c3aded3a61842ccc9971c645feae351bc12b39672955818fc683b3b34"
+content-hash = "e3e93075a3d60f1b38ad07b65f7c8a56dc8085d7a49f8cbd9f7e49daa931ff90"
 python-versions = "3.7.7"
 
 [metadata.files]
@@ -2064,8 +2064,8 @@ gunicorn = [
     {file = "gunicorn-20.0.4.tar.gz", hash = "sha256:1904bb2b8a43658807108d59c3f3d56c2b6121a701161de0ddf9ad140073c626"},
 ]
 hypothesis = [
-    {file = "hypothesis-5.25.0-py3-none-any.whl", hash = "sha256:164b853ed986cec41cb1414cfe0897cd34353823937b12e9dd6f0d6c66623d6a"},
-    {file = "hypothesis-5.25.0.tar.gz", hash = "sha256:555aa0f013940075d94875fbfb080df4f1970321fa5ef781494e2543cf7e4184"},
+    {file = "hypothesis-5.26.0-py3-none-any.whl", hash = "sha256:88260b37437f4ae311822589bdb798a15c3def70db1839d86fa0a3ff4b63d564"},
+    {file = "hypothesis-5.26.0.tar.gz", hash = "sha256:54f3ce8d7146cb59eef419a26d5edfdf4e8518615b9df8c7e1f5392a2c5c9c36"},
 ]
 idna = [
     {file = "idna-2.9-py2.py3-none-any.whl", hash = "sha256:a068a21ceac8a4d63dbfd964670474107f541babbd2250d61922f029858365fa"},
