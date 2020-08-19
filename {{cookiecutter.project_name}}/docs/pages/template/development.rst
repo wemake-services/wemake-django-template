@@ -89,7 +89,7 @@ That's where ``[build-system]`` tag shines. It specifies the exact version of
 your ``poetry`` installation that must be used for the project.
 Version mismatch will fail your build.
 
-When you to update ``poetry``, you have to bump it in several places:
+When you want to update ``poetry``, you have to bump it in several places:
 
 1. ``pyproject.toml``
 2. ``docker/django/Dockerfile``
