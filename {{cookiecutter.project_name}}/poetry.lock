@@ -735,7 +735,7 @@ description = "A library for property-based testing"
 name = "hypothesis"
 optional = false
 python-versions = ">=3.5.2"
-version = "5.33.0"
+version = "5.33.1"
 
 [package.dependencies]
 attrs = ">=19.2.0"
@@ -2054,8 +2054,8 @@ gunicorn = [
     {file = "gunicorn-20.0.4.tar.gz", hash = "sha256:1904bb2b8a43658807108d59c3f3d56c2b6121a701161de0ddf9ad140073c626"},
 ]
 hypothesis = [
-    {file = "hypothesis-5.33.0-py3-none-any.whl", hash = "sha256:37d106550f7fa3a81e4e2c318df2922b31568ab3f77153f30370acf4065b0369"},
-    {file = "hypothesis-5.33.0.tar.gz", hash = "sha256:d2207d1e570c8aeb571a69c93175dad9488db88a632b60f1e43a815cb26e0904"},
+    {file = "hypothesis-5.33.1-py3-none-any.whl", hash = "sha256:e376add85242e0e6388399ac2e07af41474f9d1265a04c605d2f0d8deb9d5e5f"},
+    {file = "hypothesis-5.33.1.tar.gz", hash = "sha256:e5f7b9214bad11588d5066d0600fa9371b6a2fcf68f8507a5748c0e3cda05f33"},
 ]
 idna = [
     {file = "idna-2.9-py2.py3-none-any.whl", hash = "sha256:a068a21ceac8a4d63dbfd964670474107f541babbd2250d61922f029858365fa"},
