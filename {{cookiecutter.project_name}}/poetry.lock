@@ -238,26 +238,14 @@ bcrypt = ["bcrypt"]
 
 [[package]]
 category = "main"
-description = "A helper class for handling configuration defaults of packaged apps gracefully."
-name = "django-appconf"
-optional = false
-python-versions = "*"
-version = "1.0.4"
-
-[package.dependencies]
-django = "*"
-
-[[package]]
-category = "main"
 description = "Keep track of failed login attempts in Django-powered sites."
 name = "django-axes"
 optional = false
 python-versions = "~=3.6"
-version = "5.5.2"
+version = "5.6.0"
 
 [package.dependencies]
 django = ">=2.0"
-django-appconf = ">=1.0.3"
 django-ipware = ">=3,<4"
 
 [[package]]
@@ -1740,7 +1728,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "5c453386fae07685b789a40e99adeba75110f4bfd37bb5aac346d9580def47eb"
+content-hash = "df3169113e0684833e6b6ec744f0e9baf4e4f0e629981b50d7580451688dda4d"
 lock-version = "1.0"
 python-versions = "3.7.7"
 
@@ -1895,13 +1883,9 @@ django = [
     {file = "Django-2.2.13-py3-none-any.whl", hash = "sha256:e8fe3c2b2212dce6126becab7a693157f1a441a07b62ec994c046c76af5bb66d"},
     {file = "Django-2.2.13.tar.gz", hash = "sha256:84f370f6acedbe1f3c41e1a02de44ac206efda3355e427139ecb785b5f596d80"},
 ]
-django-appconf = [
-    {file = "django-appconf-1.0.4.tar.gz", hash = "sha256:be58deb54a43d77d2e1621fe59f787681376d3cd0b8bd8e4758ef6c3a6453380"},
-    {file = "django_appconf-1.0.4-py2.py3-none-any.whl", hash = "sha256:1b1d0e1069c843ebe8ae5aa48ec52403b1440402b320c3e3a206a0907e97bb06"},
-]
 django-axes = [
-    {file = "django-axes-5.5.2.tar.gz", hash = "sha256:92344a7f595c3096569186bae33036f8d64b7b3bd367edd05b2e494dce403e17"},
-    {file = "django_axes-5.5.2-py3-none-any.whl", hash = "sha256:cda4d7539c6fc3ef3081f51c46d173056d8574da22fffc2ad50606b9bd95b0c1"},
+    {file = "django-axes-5.6.0.tar.gz", hash = "sha256:d50f25d60fee0e2bcfa2a4c0e52fd46f5333a7e8d55605faa98f375d69030bb8"},
+    {file = "django_axes-5.6.0-py3-none-any.whl", hash = "sha256:2bcd2b8c681d64479e4914b41806d3a950d68789b75362dc345648d6120e3272"},
 ]
 django-coverage-plugin = [
     {file = "django_coverage_plugin-1.8.0.tar.gz", hash = "sha256:d53cbf3828fd83d6b89ff7292c6805de5274e36411711692043e67bcde25ae0c"},
