@@ -304,7 +304,7 @@ description = "Run checks on services like databases, queue servers, celery proc
 name = "django-health-check"
 optional = false
 python-versions = "*"
-version = "3.12.1"
+version = "3.14.0"
 
 [package.dependencies]
 django = ">=1.11"
@@ -1747,7 +1747,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "804da6242d480b4b842260d3aa822151a5795d8170cda019c0f7870f14676e89"
+content-hash = "8234c348aa96d7c1777d2f8774c911691e6407b4d7f8a388c7aa449c1323c103"
 lock-version = "1.0"
 python-versions = "3.7.7"
 
@@ -1922,8 +1922,8 @@ django-feature-policy = [
     {file = "django_feature_policy-3.4.0-py3-none-any.whl", hash = "sha256:b300a6ceeb2ff31ccaa7960c8308e08fd3ab95912d48bb98640dafc2f2625c46"},
 ]
 django-health-check = [
-    {file = "django-health-check-3.12.1.tar.gz", hash = "sha256:0563827e003d25fd4d9ebbd7467dea5f390435628d645aaa63f8889deaded73a"},
-    {file = "django_health_check-3.12.1-py2.py3-none-any.whl", hash = "sha256:9e6b7d93d4902901474efd4e25d31b5aaea7563b570c0260adce52cd3c3a9e36"},
+    {file = "django-health-check-3.14.0.tar.gz", hash = "sha256:66776f6eb69f93c2e819058bb2bd21cf404511a1c85aa2d846538f8cab593661"},
+    {file = "django_health_check-3.14.0-py2.py3-none-any.whl", hash = "sha256:0ee96267e48d0d198673d62013c6cbc28303438c6f687211690049d079bff49b"},
 ]
 django-http-referrer-policy = [
     {file = "django-http-referrer-policy-1.0.1.tar.gz", hash = "sha256:9847711f55991a9efd3a47e272370da0986c9dac4916e1ab1b4b6e1885b69365"},
