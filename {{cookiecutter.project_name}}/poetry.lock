@@ -281,10 +281,10 @@ description = "A configurable set of panels that display various debug informati
 name = "django-debug-toolbar"
 optional = false
 python-versions = ">=3.5"
-version = "2.2"
+version = "3.0"
 
 [package.dependencies]
-Django = ">=1.11"
+Django = ">=2.2"
 sqlparse = ">=0.2.0"
 
 [[package]]
@@ -1747,7 +1747,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "738fec47d514d0057e5d2a6110c9adea1fc63f2518ebd23f29d0fb530a3fd184"
+content-hash = "804da6242d480b4b842260d3aa822151a5795d8170cda019c0f7870f14676e89"
 lock-version = "1.0"
 python-versions = "3.7.7"
 
@@ -1914,8 +1914,8 @@ django-csp = [
     {file = "django_csp-3.7.tar.gz", hash = "sha256:01eda02ad3f10261c74131cdc0b5a6a62b7c7ad4fd017fbefb7a14776e0a9727"},
 ]
 django-debug-toolbar = [
-    {file = "django-debug-toolbar-2.2.tar.gz", hash = "sha256:eabbefe89881bbe4ca7c980ff102e3c35c8e8ad6eb725041f538988f2f39a943"},
-    {file = "django_debug_toolbar-2.2-py3-none-any.whl", hash = "sha256:ff94725e7aae74b133d0599b9bf89bd4eb8f5d2c964106e61d11750228c8774c"},
+    {file = "django-debug-toolbar-3.0.tar.gz", hash = "sha256:23129b4f771605c7ccf8733cc53558a68c5d463d60cdc83408d34b713acf4f5f"},
+    {file = "django_debug_toolbar-3.0-py3-none-any.whl", hash = "sha256:7c9bf93eabb1e745fe1fca830242d49f3c839d35163e5b53914009ed111209b1"},
 ]
 django-feature-policy = [
     {file = "django-feature-policy-3.4.0.tar.gz", hash = "sha256:eb1db62abd061c1402c24226428e18417cd4aa7e5d310199170c84f36d54b3f4"},
