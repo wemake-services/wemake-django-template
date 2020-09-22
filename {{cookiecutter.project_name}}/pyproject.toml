@@ -38,7 +38,7 @@ typing_extensions = "^3.7.4"
 
 
 [tool.poetry.dev-dependencies]
-django-debug-toolbar = "^3.0"
+django-debug-toolbar = "^3.1"
 django-querycount = "^0.7"
 django-migration-linter = "^2.4"
 django-coverage-plugin = "^1.8"
