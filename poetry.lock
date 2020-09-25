@@ -180,7 +180,7 @@ description = "Multi-container orchestration for Docker"
 name = "docker-compose"
 optional = false
 python-versions = ">=3.4"
-version = "1.27.3"
+version = "1.27.4"
 
 [package.dependencies]
 PyYAML = ">=3.10,<6"
@@ -1251,8 +1251,8 @@ docker = [
     {file = "docker-4.3.1.tar.gz", hash = "sha256:bad94b8dd001a8a4af19ce4becc17f41b09f228173ffe6a4e0355389eef142f2"},
 ]
 docker-compose = [
-    {file = "docker-compose-1.27.3.tar.gz", hash = "sha256:401838bb36e8b1e255fdf22fe6991508193c09d09f57dc923b66d3f2fa663133"},
-    {file = "docker_compose-1.27.3-py2.py3-none-any.whl", hash = "sha256:e97a60ab2f7793641777809c7c8ae1433329ae5f2204b8628b524214729620c7"},
+    {file = "docker-compose-1.27.4.tar.gz", hash = "sha256:5a5690f24c27d4b43dcbe6b3fae91ba680713208e99ee863352b3bae37bcaa83"},
+    {file = "docker_compose-1.27.4-py2.py3-none-any.whl", hash = "sha256:84ca2edad226435e3a378ea24ca2ca4e1a77cc7c8de057e2812124c6dcb55147"},
 ]
 docker-image-size-limit = [
     {file = "docker-image-size-limit-0.3.0.tar.gz", hash = "sha256:3ddf8a1164dcc505b89150a9150b4f788e40272599e5b52e75dcc37d9aa06a25"},
