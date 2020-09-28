@@ -242,7 +242,7 @@ description = "Keep track of failed login attempts in Django-powered sites."
 name = "django-axes"
 optional = false
 python-versions = "~=3.6"
-version = "5.6.2"
+version = "5.7.1"
 
 [package.dependencies]
 django = ">=2.0"
@@ -1746,7 +1746,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "0ea0d63d2ff4bd6cfe006e390fd469e062bf7e8d97db1f59c83caf340615d71a"
+content-hash = "a88cb48ad2806afa5628e9382026d4b48ac97485bd4254da22dc4766cc0b0b25"
 lock-version = "1.0"
 python-versions = "3.7.7"
 
@@ -1902,8 +1902,8 @@ django = [
     {file = "Django-2.2.13.tar.gz", hash = "sha256:84f370f6acedbe1f3c41e1a02de44ac206efda3355e427139ecb785b5f596d80"},
 ]
 django-axes = [
-    {file = "django-axes-5.6.2.tar.gz", hash = "sha256:c10809ef82e6991c0e4753acd5393979aac6e58890dd2afc966fb39b8b8a143d"},
-    {file = "django_axes-5.6.2-py3-none-any.whl", hash = "sha256:1b0f3af6a10b82928d43167a9c7fafec8fabd0899fbd520f24f4ee92d4dbd352"},
+    {file = "django-axes-5.7.1.tar.gz", hash = "sha256:70eeb5c43eab845dff40eb070154bfe7ce1ff51f70b998730dfe6bdde9980b7e"},
+    {file = "django_axes-5.7.1-py3-none-any.whl", hash = "sha256:859a533871fad51b9fba5cc3b18f235f51129a9531bb5548bd29b85a6d1dc08e"},
 ]
 django-coverage-plugin = [
     {file = "django_coverage_plugin-1.8.0.tar.gz", hash = "sha256:d53cbf3828fd83d6b89ff7292c6805de5274e36411711692043e67bcde25ae0c"},
