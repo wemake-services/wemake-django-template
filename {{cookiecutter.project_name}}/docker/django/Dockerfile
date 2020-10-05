@@ -22,7 +22,7 @@ ENV DJANGO_ENV=${DJANGO_ENV} \
   # tini:
   TINI_VERSION=v0.19.0 \
   # poetry:
-  POETRY_VERSION=1.1.0 \
+  POETRY_VERSION=1.1.1 \
   POETRY_VIRTUALENVS_CREATE=false \
   POETRY_CACHE_DIR='/var/cache/pypoetry'
 
