@@ -723,14 +723,14 @@ description = "A library for property-based testing"
 name = "hypothesis"
 optional = false
 python-versions = ">=3.6"
-version = "5.36.2"
+version = "5.37.0"
 
 [package.dependencies]
 attrs = ">=19.2.0"
 sortedcontainers = ">=2.1.0,<3.0.0"
 
 [package.extras]
-all = ["black (>=19.10b0)", "click (>=7.0)", "django (>=2.2)", "dpcontracts (>=0.4)", "lark-parser (>=0.6.5)", "numpy (>=1.9.0)", "pandas (>=0.19)", "pytest (>=4.3)", "python-dateutil (>=1.4)", "pytz (>=2014.1)"]
+all = ["black (>=19.10b0)", "click (>=7.0)", "django (>=2.2)", "dpcontracts (>=0.4)", "lark-parser (>=0.6.5)", "numpy (>=1.9.0)", "pandas (>=0.19)", "pytest (>=4.3)", "python-dateutil (>=1.4)", "pytz (>=2014.1)", "redis (>=3.0.0)"]
 cli = ["click (>=7.0)", "black (>=19.10b0)"]
 dateutil = ["python-dateutil (>=1.4)"]
 django = ["pytz (>=2014.1)", "django (>=2.2)"]
@@ -741,6 +741,7 @@ numpy = ["numpy (>=1.9.0)"]
 pandas = ["pandas (>=0.19)"]
 pytest = ["pytest (>=4.3)"]
 pytz = ["pytz (>=2014.1)"]
+redis = ["redis (>=3.0.0)"]
 
 [[package]]
 category = "dev"
@@ -1747,7 +1748,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "d4aa0451611ef50db32e72d36b4926a2114d1be3e28fa60475acbf692e14cb95"
+content-hash = "6d27fb343395804554317a446a2331199626f2434294f9f6be52a28e013a15b1"
 lock-version = "1.0"
 python-versions = "3.7.7"
 
@@ -2057,8 +2058,8 @@ gunicorn = [
     {file = "gunicorn-20.0.4.tar.gz", hash = "sha256:1904bb2b8a43658807108d59c3f3d56c2b6121a701161de0ddf9ad140073c626"},
 ]
 hypothesis = [
-    {file = "hypothesis-5.36.2-py3-none-any.whl", hash = "sha256:6d67514a61dd595a129f589be1b44a68a70898e20712e49229150e8947b57da8"},
-    {file = "hypothesis-5.36.2.tar.gz", hash = "sha256:43a62bdbaa50cd3886e63571489e1af978e6c66274f8029ced194e19d7d66ebe"},
+    {file = "hypothesis-5.37.0-py3-none-any.whl", hash = "sha256:180507e78a4f52b1c470164d1a03b74b0032e473a98cc2933e85e72aee40c6a1"},
+    {file = "hypothesis-5.37.0.tar.gz", hash = "sha256:b3a6ae80e8661b6cab0a722cc437d26274d5e3d0759ef2f6a6a1c3b066dd3185"},
 ]
 identify = [
     {file = "identify-1.5.3-py2.py3-none-any.whl", hash = "sha256:d02d004568c5a01261839a05e91705e3e9f5c57a3551648f9b3fb2b9c62c0f62"},
