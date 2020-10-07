@@ -1,6 +1,6 @@
 [build-system]
-requires = ["poetry>=1.0"]
-build-backend = "poetry.masonry.api"
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
 
 
 [tool.nitpick]
@@ -18,14 +18,14 @@ authors = []
 [tool.poetry.dependencies]
 python = "3.7.7"
 
-# TODO: remove after https://github.com/python-poetry/poetry/issues/2042
-importlib-metadata = "<1.2.0,>=1.1.3"
+# TODO: remove after https://github.com/python-poetry/poetry/issues/2102
+poetry = {version = "^1.1.2", optional = true}
 
 django = "^2.2.11"
 django-split-settings = "^1.0"
 django-axes = "^5.7"
 django-csp = "^3.7"
-django-health-check = "^3.11"
+django-health-check = "3.12.1"
 django-http-referrer-policy = "^1.0"
 django-feature-policy = "^3.4"
 
