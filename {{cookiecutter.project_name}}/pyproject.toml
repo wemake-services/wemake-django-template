@@ -16,10 +16,7 @@ authors = []
 
 
 [tool.poetry.dependencies]
-python = "3.7.7"
-
-# TODO: remove after https://github.com/python-poetry/poetry/issues/2102
-poetry = {version = "^1.1.2", optional = true}
+python = "3.8.6"
 
 django = "^2.2.11"
 django-split-settings = "^1.0"
@@ -34,7 +31,6 @@ gunicorn = "^20.0"
 python-decouple = "^3.3"
 bcrypt = "^3.2"
 structlog = "^20.1.0"
-typing_extensions = "^3.7.4"
 
 
 [tool.poetry.dev-dependencies]
