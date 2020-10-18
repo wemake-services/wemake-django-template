@@ -1,8 +1,7 @@
-
 import textwrap
+from typing import Final, final
 
 from django.db import models
-from typing_extensions import Final, final
 
 #: That's how constants should be defined.
 _POST_TITLE_MAX_LENGTH: Final = 80
