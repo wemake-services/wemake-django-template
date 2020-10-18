@@ -1,6 +1,6 @@
 [build-system]
-requires = ["poetry>=1.0"]
-build-backend = "poetry.masonry.api"
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
 
 
 [tool.nitpick]
@@ -16,59 +16,56 @@ authors = []
 
 
 [tool.poetry.dependencies]
-python = "3.7.7"
-
-# TODO: remove after https://github.com/python-poetry/poetry/issues/2042
-importlib-metadata = "<1.2.0,>=1.1.3"
+python = "3.8.6"
 
 django = "^2.2.11"
 django-split-settings = "^1.0"
-django-axes = "^5.3"
-django-csp = "^3.5"
-django-health-check = "^3.11"
+django-axes = "^5.7"
+django-csp = "^3.7"
+django-health-check = "3.12.1"
 django-http-referrer-policy = "^1.0"
-django-feature-policy = "^3.4"
+django-feature-policy = "^3.5"
 
 psycopg2 = "^2.8"
 gunicorn = "^20.0"
 python-decouple = "^3.3"
-bcrypt = "^3.1"
+bcrypt = "^3.2"
 structlog = "^20.1.0"
 
 
 [tool.poetry.dev-dependencies]
-django-debug-toolbar = "^2.1"
+django-debug-toolbar = "^3.1"
 django-querycount = "^0.7"
-django-migration-linter = "^2.2"
+django-migration-linter = "^2.4"
 django-coverage-plugin = "^1.8"
 nplusone = "^1.0"
 
 wemake-python-styleguide = "^0.14"
-flake8-pytest-style = "^1.1"
+flake8-pytest-style = "^1.3"
 flake8-django = "^1.1"
 flake8-logging-format = "^0.6"
-nitpick = "^0.22"
+nitpick = "^0.23"
 
-pytest = "^5.4"
-pytest-django = "^3.9"
-pytest-cov = "^2.9"
+pytest = "^6.1"
+pytest-django = "^4.0"
+pytest-cov = "^2.10"
 pytest-randomly = "^3.4"
-pytest-deadfixtures = "^2.1"
+pytest-deadfixtures = "^2.2"
 pytest-testmon = "^1.0"
-pytest-timeout = "^1.3"
-django-test-migrations = "^0.3"
-hypothesis = "^5.16"
+pytest-timeout = "^1.4"
+django-test-migrations = "^1.0"
+hypothesis = "^5.37"
 
 mypy = "^0.770"
 django-stubs = "^1.4"
 
-ipython = "^7.15"
+ipython = "^7.18"
 
 sphinx = "^2.4"
 sphinx-autodoc-typehints = "^1.10"
 doc8 = "^0.8"
 
-yamllint = "^1.23"
+yamllint = "^1.25"
 safety = "^1.9"
 dotenv-linter = "^0.1"
 polint = "^0.4"

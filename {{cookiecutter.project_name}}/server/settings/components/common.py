@@ -191,7 +191,7 @@ SECURE_BROWSER_XSS_FILTER = True
 X_FRAME_OPTIONS = 'DENY'
 
 # https://github.com/DmytroLitvinov/django-http-referrer-policy
-# https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy#Syntax
+# https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
 REFERRER_POLICY = 'same-origin'
 
 # https://github.com/adamchainz/django-feature-policy#setting
@@ -199,4 +199,6 @@ FEATURE_POLICY: Dict[str, Union[str, List[str]]] = {}  # noqa: WPS234
 
 
 # Timeouts
+# https://docs.djangoproject.com/en/2.2/ref/settings/#std:setting-EMAIL_TIMEOUT
+
 EMAIL_TIMEOUT = 5

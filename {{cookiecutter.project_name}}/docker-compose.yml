@@ -48,7 +48,7 @@ services:
     healthcheck:
       # We use `$$` here because:
       # one `$` goes to shell,
-      # one $ goes to `docker-compose.yml` escaping
+      # one `$` goes to `docker-compose.yml` escaping
       test: |
         /usr/bin/test $$(
           /usr/bin/curl --fail http://localhost:8000/health/?format=json
