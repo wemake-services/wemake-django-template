@@ -24,6 +24,7 @@ python = "^3.8"
 
 cookiecutter = "^1.7"
 jinja2-git = "^1.1"
+typing_extensions = "^3.7.4"
 
 
 [tool.poetry.dev-dependencies]
