@@ -24,6 +24,7 @@ python = "^3.8"
 
 cookiecutter = "^1.7"
 jinja2-git = "^1.1"
+certifi = "2020.4.5.1"
 
 
 [tool.poetry.dev-dependencies]
