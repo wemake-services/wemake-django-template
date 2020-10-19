@@ -23,6 +23,7 @@ ENV DJANGO_ENV=${DJANGO_ENV} \
   TINI_VERSION=v0.19.0 \
   # poetry:
   POETRY_VERSION=1.1.3 \
+  POETRY_NO_INTERACTION=1 \
   POETRY_VIRTUALENVS_CREATE=false \
   POETRY_CACHE_DIR='/var/cache/pypoetry'
 
@@ -50,7 +51,8 @@ RUN apt-get update \
   && chmod +x /usr/local/bin/tini && tini --version \
   # Installing `poetry` package manager:
   # https://github.com/python-poetry/poetry
-  && pip install "poetry==$POETRY_VERSION" && poetry --version
+  && curl -sSL 'https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py' | python \
+  && poetry --version
 
 # Copy only requirements, to cache them in docker layer
 WORKDIR /code

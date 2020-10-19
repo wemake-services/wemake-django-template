@@ -17,7 +17,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
 
     - name: Install poetry
-      run:
+      run: |
         curl -sSL "https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py" | python
 
         # Adding `poetry` to `$PATH`:
