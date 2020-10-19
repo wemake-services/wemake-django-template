@@ -17,7 +17,11 @@ jobs:
         python-version: ${{ matrix.python-version }}
 
     - name: Install poetry
-      run: curl -sSL "https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py" | python
+      run:
+        curl -sSL "https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py" | python
+
+        # Adding `poetry` to `$PATH`:
+        echo "$HOME/.poetry/bin" >> $GITHUB_PATH
 
     - name: Set up cache
       uses: actions/cache@v1
@@ -26,14 +30,11 @@ jobs:
         key: venv-${{ matrix.python-version }}-${{ hashFiles('poetry.lock') }}
     - name: Install dependencies
       run: |
-        source "$HOME/.poetry/env"
         poetry config virtualenvs.in-project true
         poetry install
 
     - name: Run checks
       run: |
-        source "$HOME/.poetry/env"
-
         poetry run flake8 .
         poetry run pytest
         poetry run sh tests/test_integration.sh

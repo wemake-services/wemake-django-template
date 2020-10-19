@@ -24,5 +24,15 @@ cd "$PROJECT_NAME"
 # Run tests that are located inside the generate project:
 docker-compose -f docker-compose.yml \
   -f docker/docker-compose.prod.yml config --quiet
+
+# Buidling dev image:
+docker-compose build
 docker-compose run --user=root --rm web ./docker/ci.sh
+
+# Building prod image:
+docker-compose -f docker-compose.yml \
+  -f docker/docker-compose.prod.yml build
+
+# Checking the size of final images:
 disl "${PROJECT_NAME}:dev" 750MiB
+disl "${PROJECT_NAME}:latest" 100MiB
