@@ -11,13 +11,14 @@ set -o nounset
 mkdir -p "$HOME/.test" && cd "$HOME/.test"
 
 # Scaffold the project:
-PROJECT_NAME="fake_project"
+PROJECT_NAME='fake_project'
+PROJECT_ORGANIZATION='wemake.services'
 
 cookiecutter "$GITHUB_WORKSPACE" \
   --no-input --overwrite-if-exists \
   project_name="$PROJECT_NAME" \
-  project_domain="myapp.com" \
-  organization="wemake.services"
+  project_domain='myapp.com' \
+  organization="$PROJECT_ORGANIZATION"
 
 cd "$PROJECT_NAME"
 
@@ -35,4 +36,4 @@ docker-compose -f docker-compose.yml \
 
 # Checking the size of final images:
 disl "${PROJECT_NAME}:dev" 800MiB
-disl "${PROJECT_NAME}:latest" 100MiB
+disl "registry.gitlab.com/${PROJECT_ORGANIZATION}/${PROJECT_NAME}:latest" 100MiB
