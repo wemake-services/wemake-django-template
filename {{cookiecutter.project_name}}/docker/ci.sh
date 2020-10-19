@@ -18,7 +18,7 @@ fi
 pyclean () {
   # Cleaning cache:
   find . \
-  | grep -E '(__pycache__|\.perm|\.cache|\.static|\.py[cod]$)' \
+  | grep -E '(__pycache__|\.hypothesis|\.perm|\.cache|\.static|\.py[cod]$)' \
   | xargs rm -rf
 }
 
@@ -33,7 +33,7 @@ run_ci () {
   flake8 .
 
   # Running type checking, see https://github.com/typeddjango/django-stubs
-  mypy server tests/**/*.py
+  mypy server ./tests/**/*.py
 
   # Running tests:
   pytest --dead-fixtures --dup-fixtures
