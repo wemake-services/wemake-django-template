@@ -25,7 +25,8 @@ ENV DJANGO_ENV=${DJANGO_ENV} \
   POETRY_VERSION=1.1.3 \
   POETRY_NO_INTERACTION=1 \
   POETRY_VIRTUALENVS_CREATE=false \
-  POETRY_CACHE_DIR='/var/cache/pypoetry'
+  POETRY_CACHE_DIR='/var/cache/pypoetry' \
+  PATH="$PATH:$HOME/.poetry/bin"
 
 
 # System deps:
