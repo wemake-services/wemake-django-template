@@ -26,13 +26,15 @@ cd "$PROJECT_NAME"
 docker-compose -f docker-compose.yml \
   -f docker/docker-compose.prod.yml config --quiet
 
-# Buidling dev image:
+# Buidling and testing dev image:
 docker-compose build
 docker-compose run --user=root --rm web ./docker/ci.sh
 
-# Building prod image:
+# Building and testing prod image:
 docker-compose -f docker-compose.yml \
   -f docker/docker-compose.prod.yml build
+docker-compose run --user=root --rm web \
+  python manage.py check --deploy --fail-level WARNING
 
 # Checking the size of final images:
 disl "${PROJECT_NAME}:dev" 800MiB
