@@ -34,5 +34,5 @@ docker-compose -f docker-compose.yml \
   -f docker/docker-compose.prod.yml build
 
 # Checking the size of final images:
-disl "${PROJECT_NAME}:dev" 750MiB
+disl "${PROJECT_NAME}:dev" 800MiB
 disl "${PROJECT_NAME}:latest" 100MiB
