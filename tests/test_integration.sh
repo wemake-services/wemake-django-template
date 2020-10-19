@@ -33,7 +33,9 @@ docker-compose run --user=root --rm web ./docker/ci.sh
 # Building and testing prod image:
 docker-compose -f docker-compose.yml \
   -f docker/docker-compose.prod.yml build
-docker-compose run --user=root --rm web \
+docker-compose -f docker-compose.yml \
+  -f docker/docker-compose.prod.yml build \
+  run --user=root --rm web \
   python manage.py check --deploy --fail-level WARNING
 
 # Checking the size of final images:
