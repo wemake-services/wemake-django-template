@@ -1,4 +1,3 @@
-
 """
 This is a django-split-settings main file.
 
