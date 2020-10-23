@@ -16,7 +16,7 @@ from split_settings.tools import include, optional
 environ.setdefault('DJANGO_ENV', 'development')
 _ENV = environ['DJANGO_ENV']
 
-_base_settings = [
+_base_settings = (
     'components/common.py',
     'components/logging.py',
     'components/csp.py',
@@ -30,7 +30,7 @@ _base_settings = [
 
     # Optionally override some settings:
     optional('environments/local.py'),
-]
+)
 
 # Include settings:
 include(*_base_settings)
