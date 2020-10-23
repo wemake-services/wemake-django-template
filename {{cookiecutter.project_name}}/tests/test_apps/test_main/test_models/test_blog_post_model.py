@@ -1,4 +1,3 @@
-
 from hypothesis import given
 from hypothesis.extra import django
 

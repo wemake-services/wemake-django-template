@@ -1,4 +1,3 @@
-
 """
 This file contains a definition for Content-Security-Policy headers.
 

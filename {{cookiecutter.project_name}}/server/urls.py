@@ -1,4 +1,3 @@
-
 """
 Main URL mapping configuration file.
 

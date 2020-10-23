@@ -1,4 +1,3 @@
-
 """
 WSGI config for server project.
 

@@ -10,7 +10,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 from typing import Dict, List, Tuple, Union
 
-from django.utils.translation import ugettext_lazy as ugt
+from django.utils.translation import ugettext_lazy as _
 
 from server.settings.components import BASE_DIR, config
 
@@ -106,8 +106,8 @@ USE_I18N = True
 USE_L10N = True
 
 LANGUAGES = (
-    ('en', ugt('English')),
-    ('ru', ugt('Russian')),
+    ('en', _('English')),
+    ('ru', _('Russian')),
 )
 
 LOCALE_PATHS = (

@@ -1,4 +1,3 @@
-
 from pathlib import PurePath
 
 from decouple import AutoConfig

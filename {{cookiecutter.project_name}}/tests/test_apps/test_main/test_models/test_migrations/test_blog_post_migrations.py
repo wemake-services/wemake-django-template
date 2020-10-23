@@ -1,4 +1,3 @@
-
 import pytest
 
 from server.apps.main.urls import app_name

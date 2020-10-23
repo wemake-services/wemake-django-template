@@ -1,4 +1,3 @@
-
 """
 This file contains all the settings used in production.
 
