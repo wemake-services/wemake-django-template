@@ -13,7 +13,7 @@ class BlogPost(models.Model):
     This model is used just as an example.
 
     With it we show how one can:
-    - Use fixtures and factoris
+    - Use fixtures and factories
     - Use migrations testing
 
     """
