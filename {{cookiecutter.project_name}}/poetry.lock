@@ -297,7 +297,7 @@ Django = ">=2.2"
 
 [[package]]
 name = "django-health-check"
-version = "3.14.3"
+version = "3.12.1"
 description = "Run checks on services like databases, queue servers, celery processes, etc."
 category = "main"
 optional = false
@@ -1676,7 +1676,7 @@ pyyaml = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "3.8.6"
-content-hash = "b8b2daafdf9759e5b92e8846e880ab694a349eda84e42c324121c61b25fcc307"
+content-hash = "f121e69efe2289aaba31ecc9185ac5c3c95728ec545dc31506ee2d42122b91a2"
 
 [metadata.files]
 alabaster = [
@@ -1859,8 +1859,8 @@ django-feature-policy = [
     {file = "django_feature_policy-3.5.0-py3-none-any.whl", hash = "sha256:68bc103f71dcfc3ae7704270002226eb45e9e3aad40b1d438e5829b453657557"},
 ]
 django-health-check = [
-    {file = "django-health-check-3.14.3.tar.gz", hash = "sha256:6e84e7a3e5f1fcb82b7692833fa205bc274415850d333d5a50259de06080dfa8"},
-    {file = "django_health_check-3.14.3-py2.py3-none-any.whl", hash = "sha256:d5f5cbf3c34bc5ea297696e183c5084b0c15d3bd13d9eb997c25258241589c75"},
+    {file = "django-health-check-3.12.1.tar.gz", hash = "sha256:0563827e003d25fd4d9ebbd7467dea5f390435628d645aaa63f8889deaded73a"},
+    {file = "django_health_check-3.12.1-py2.py3-none-any.whl", hash = "sha256:9e6b7d93d4902901474efd4e25d31b5aaea7563b570c0260adce52cd3c3a9e36"},
 ]
 django-http-referrer-policy = [
     {file = "django-http-referrer-policy-1.0.1.tar.gz", hash = "sha256:9847711f55991a9efd3a47e272370da0986c9dac4916e1ab1b4b6e1885b69365"},
