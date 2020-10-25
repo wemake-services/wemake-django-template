@@ -1676,7 +1676,7 @@ pyyaml = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "3.8.6"
-content-hash = "f121e69efe2289aaba31ecc9185ac5c3c95728ec545dc31506ee2d42122b91a2"
+content-hash = "c482a02f52a0beda269d9d9a00045975cd44944e7dbd8f41771bf86c10921780"
 
 [metadata.files]
 alabaster = [
