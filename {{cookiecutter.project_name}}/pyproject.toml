@@ -22,15 +22,15 @@ django = "^2.2.11"
 django-split-settings = "^1.0"
 django-axes = "^5.8"
 django-csp = "^3.7"
-django-health-check = "3.12.1"
+django-health-check = "^3.14"
 django-http-referrer-policy = "^1.0"
 django-feature-policy = "^3.5"
 
-psycopg2 = "^2.8"
+psycopg2-binary = "^2.8"
 gunicorn = "^20.0"
 python-decouple = "^3.3"
 bcrypt = "^3.2"
-structlog = "^20.1.0"
+structlog = "^20.1"
 
 
 [tool.poetry.dev-dependencies]
@@ -56,8 +56,8 @@ pytest-timeout = "^1.4"
 django-test-migrations = "^1.0"
 hypothesis = "^5.37"
 
-mypy = "^0.770"
-django-stubs = "^1.4"
+mypy = "^0.782"
+django-stubs = "^1.6"
 
 ipython = "^7.18"
 
