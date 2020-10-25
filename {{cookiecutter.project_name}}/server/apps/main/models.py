@@ -22,7 +22,7 @@ class BlogPost(models.Model):
     body = models.TextField()
 
     created_at = models.DateTimeField(auto_now_add=True)
-    modifiet_at = models.DateTimeField(auto_now=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     class Meta(object):
         verbose_name = 'BlogPost'  # You can probably use `gettext` for this
