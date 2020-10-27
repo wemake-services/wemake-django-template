@@ -46,9 +46,6 @@ INSTALLED_APPS: Tuple[str, ...] = (
     'health_check.db',
     'health_check.cache',
     'health_check.storage',
-
-    # Third party apps
-    'django_http_referrer_policy',
 )
 
 MIDDLEWARE: Tuple[str, ...] = (
