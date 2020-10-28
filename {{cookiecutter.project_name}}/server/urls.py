@@ -21,7 +21,6 @@ from server.apps.main.views import index
 
 admin.autodiscover()
 
-
 urlpatterns = [
     # Apps:
     path('main/', include(main_urls, namespace='main')),
