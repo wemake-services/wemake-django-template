@@ -30,6 +30,7 @@ INSTALLED_APPS += (
     'nplusone.ext.django',
     'django_migration_linter',
     'django_test_migrations.contrib.django_checks.AutoNames',
+    'extra_checks',
 )
 
 
@@ -51,14 +52,14 @@ MIDDLEWARE += (
 )
 
 
-def custom_show_toolbar(request):
+def _custom_show_toolbar(request):
     """Only show the debug toolbar to users with the superuser flag."""
     return request.user.is_superuser
 
 
 DEBUG_TOOLBAR_CONFIG = {
     'SHOW_TOOLBAR_CALLBACK':
-        'server.settings.environments.development.custom_show_toolbar',
+        'server.settings.environments.development._custom_show_toolbar',
 }
 
 # This will make debug toolbar to work with django-csp,
@@ -92,3 +93,34 @@ NPLUSONE_WHITELIST = [
 DTM_IGNORED_MIGRATIONS = frozenset((
     ('axes', '*'),
 ))
+
+
+# django-extra-checks
+# https://github.com/kalekseev/django-extra-checks
+
+EXTRA_CHECKS = {
+    'checks': [
+        # Forbid `unique_together`:
+        'no-unique-together',
+        # Require non empty `upload_to` argument:
+        'field-file-upload-to',
+        # Use the indexes option instead:
+        'no-index-together',
+        # Each model must be registered in admin:
+        'model-admin',
+        # FileField/ImageField must have non empty `upload_to` argument:
+        'field-file-upload-to',
+        # Text fields shoudn't use `null=True`:
+        'field-text-null',
+        # Prefer using BooleanField(null=True) instead of NullBooleanField:
+        'field-boolean-null',
+        # Don't pass `null=False` to model fields (this is django default)
+        'field-null',
+        # ForeignKey fields must specify db_index explicitly if used in
+        # other indexes:
+        {'id': 'field-foreign-key-db-index', 'when': 'indexes'},
+        # If field nullable `(null=True)`,
+        # then default=None argument is redundant and should be removed:
+        'field-default-null',
+    ]
+}
