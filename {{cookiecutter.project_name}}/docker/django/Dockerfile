@@ -41,7 +41,7 @@ RUN apt-get update \
     libpq-dev \
     wget \
   # Cleaning cache:
-  && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
+  && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
   && apt-get clean -y && rm -rf /var/lib/apt/lists/* \
   # Installing `dockerize` utility:
   # https://github.com/jwilder/dockerize
