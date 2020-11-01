@@ -11,8 +11,8 @@ set -o nounset
 mkdir -p "$HOME/.test" && cd "$HOME/.test"
 
 # Scaffold the project:
-PROJECT_NAME='fake_project'
-PROJECT_ORGANIZATION='wemake.services'
+readonly PROJECT_NAME='fake_project'
+readonly PROJECT_ORGANIZATION='wemake.services'
 
 cookiecutter "$GITHUB_WORKSPACE" \
   --no-input --overwrite-if-exists \
