@@ -2,6 +2,7 @@
 
 set -o errexit
 set -o nounset
+set -o pipefail
 
 # Initializing global variables and functions:
 : "${DJANGO_ENV:=development}"

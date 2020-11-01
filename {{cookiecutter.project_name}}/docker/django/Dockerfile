@@ -13,6 +13,7 @@ ENV DJANGO_ENV=${DJANGO_ENV} \
   PYTHONFAULTHANDLER=1 \
   PYTHONUNBUFFERED=1 \
   PYTHONHASHSEED=random \
+  PYTHONDONTWRITEBYTECODE=1 \
   # pip:
   PIP_NO_CACHE_DIR=off \
   PIP_DISABLE_PIP_VERSION_CHECK=on \
@@ -40,7 +41,8 @@ RUN apt-get update \
     libpq-dev \
     wget \
   # Cleaning cache:
-  && apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/* \
+  && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
+  && apt-get clean -y && rm -rf /var/lib/apt/lists/* \
   # Installing `dockerize` utility:
   # https://github.com/jwilder/dockerize
   && wget "https://github.com/jwilder/dockerize/releases/download/${DOCKERIZE_VERSION}/dockerize-linux-amd64-${DOCKERIZE_VERSION}.tar.gz" \
