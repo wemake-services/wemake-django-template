@@ -308,7 +308,7 @@ Django = ">=2.2"
 
 [[package]]
 name = "django-health-check"
-version = "3.12.1"
+version = "3.16.0"
 description = "Run checks on services like databases, queue servers, celery processes, etc."
 category = "main"
 optional = false
@@ -1690,7 +1690,7 @@ pyyaml = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "3.8.6"
-content-hash = "de0c63022e4a207c4726eba70c2d9b0b093e7e8bc40ee65b4a21405cd1bc4a85"
+content-hash = "da2726f22ae815665307f130ee8a61e4255f23f9dcd41c680c6a65152ee35d23"
 
 [metadata.files]
 alabaster = [
@@ -1878,8 +1878,8 @@ django-feature-policy = [
     {file = "django_feature_policy-3.5.0-py3-none-any.whl", hash = "sha256:68bc103f71dcfc3ae7704270002226eb45e9e3aad40b1d438e5829b453657557"},
 ]
 django-health-check = [
-    {file = "django-health-check-3.12.1.tar.gz", hash = "sha256:0563827e003d25fd4d9ebbd7467dea5f390435628d645aaa63f8889deaded73a"},
-    {file = "django_health_check-3.12.1-py2.py3-none-any.whl", hash = "sha256:9e6b7d93d4902901474efd4e25d31b5aaea7563b570c0260adce52cd3c3a9e36"},
+    {file = "django-health-check-3.16.0.tar.gz", hash = "sha256:11f67ef1a1dd2549bfb334c481909d421ea542bd1d0edb349c75c1637d491366"},
+    {file = "django_health_check-3.16.0-py2.py3-none-any.whl", hash = "sha256:201e9d164c5d5c1599deec078936bbb4edab92bc4f8a495704307b226f169113"},
 ]
 django-http-referrer-policy = [
     {file = "django-http-referrer-policy-1.1.1.tar.gz", hash = "sha256:917f5ed62054b27eff3172b7eccfb018469e85ddd538767328553282a70493c3"},
@@ -2215,6 +2215,8 @@ psycopg2-binary = [
     {file = "psycopg2_binary-2.8.6-cp39-cp39-macosx_10_9_x86_64.macosx_10_9_intel.macosx_10_10_intel.macosx_10_10_x86_64.whl", hash = "sha256:89705f45ce07b2dfa806ee84439ec67c5d9a0ef20154e0e475e2b2ed392a5b83"},
     {file = "psycopg2_binary-2.8.6-cp39-cp39-manylinux1_i686.whl", hash = "sha256:42ec1035841b389e8cc3692277a0bd81cdfe0b65d575a2c8862cec7a80e62e52"},
     {file = "psycopg2_binary-2.8.6-cp39-cp39-manylinux1_x86_64.whl", hash = "sha256:7312e931b90fe14f925729cde58022f5d034241918a5c4f9797cac62f6b3a9dd"},
+    {file = "psycopg2_binary-2.8.6-cp39-cp39-win32.whl", hash = "sha256:6422f2ff0919fd720195f64ffd8f924c1395d30f9a495f31e2392c2efafb5056"},
+    {file = "psycopg2_binary-2.8.6-cp39-cp39-win_amd64.whl", hash = "sha256:15978a1fbd225583dd8cdaf37e67ccc278b5abecb4caf6b2d6b8e2b948e953f6"},
 ]
 ptyprocess = [
     {file = "ptyprocess-0.6.0-py2.py3-none-any.whl", hash = "sha256:d7cc528d76e76342423ca640335bd3633420dc1366f258cb31d05e865ef5ca1f"},
