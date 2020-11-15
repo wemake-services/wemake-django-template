@@ -38,14 +38,17 @@ mirror-github-build:
 variables:
   GROUP_NAME: 'sobolevn'
   PROJECT_NAME: 'wemake-django-template'
-  CI_PROJECT_DIR: '.test/wemake-django-template'
 
 
 test:
+  variables:
+    CI_PROJECT_DIR: '.test/wemake-django-template'
   only:
     - external_pull_requests
 
 
 release-image:
+  variables:
+    CI_PROJECT_DIR: '.test/wemake-django-template'
   only:
     - external_pull_requests
