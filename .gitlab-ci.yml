@@ -20,7 +20,6 @@ mirror-github-build:
     # Installing dependencies:
     - poetry config virtualenvs.in-project true
     - poetry install --no-dev
-
   script:
     - poetry run sh tests/test_gitlab.sh
   only:
@@ -29,7 +28,7 @@ mirror-github-build:
     name: "template-build"
     expire_in: 1 week
     paths:
-      - '.test/fake_project/'
+      - '.test/fake_project'
 
 # Redefining how tests are executed:
 test:
