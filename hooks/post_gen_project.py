@@ -75,7 +75,6 @@ def print_futher_instuctions():
     Now you can start working on it:
 
         cd {0}
-
     """)
     print(message.format(PROJECT_NAME))  # noqa: WPS421
 
