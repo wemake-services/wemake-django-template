@@ -4,11 +4,23 @@ include:
 mirror-github-build:
   stage: build
   image: "python:3.8"
+  variables:
+    - PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+  cache:  # we use cache to speed up `pip` installs
+    key:
+      files:
+        - poetry.lock
+    paths:
+      - "$PIP_CACHE_DIR"
+      - '.venv/'
   before_script:
     # Installing poetry:
     - apt-get install -y curl
     - curl -sSL "https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py" | python
     - export PATH="$HOME/.poetry/bin:$PATH"
+    # Installing dependencies:
+    - poetry config virtualenvs.in-project true
+    - poetry install
 
   script:
     - poetry run sh tests/test_gitlab.sh
@@ -23,3 +35,4 @@ test:
   only:
     - pull_requests
     - master
+    - external_pull_requests
