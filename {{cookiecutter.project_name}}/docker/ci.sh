@@ -23,10 +23,6 @@ run_ci () {
   echo '[ci started]'
   set -x  # we want to print commands during the CI process.
 
-  pwd
-  ls -alh
-  whoami
-
   # Testing filesystem and permissions:
   touch .perm && rm -f .perm
   touch '/var/www/django/media/.perm' && rm -f '/var/www/django/media/.perm'
