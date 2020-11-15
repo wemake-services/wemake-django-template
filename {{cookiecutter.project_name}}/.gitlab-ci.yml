@@ -38,7 +38,7 @@ variables:
   image: docker:latest
   interruptible: true
   variables:
-    PIP_CACHE_DIR: "/var/.cache/pip"
+    PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
   # We use cache to speed up `pip` installs:
   cache:
     key:
@@ -67,7 +67,7 @@ test:
 
     # The logic itself:
     - docker-compose build
-    - docker-compose run --rm web sh ./docker/ci.sh
+    - docker-compose run --user=root --rm web sh ./docker/ci.sh
     - disl "${PROJECT_NAME}:dev" 750MiB
 
     # Pushing back the result for future runs:

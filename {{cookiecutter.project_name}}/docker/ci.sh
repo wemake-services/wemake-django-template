@@ -29,6 +29,7 @@ run_ci () {
 
   # Testing filesystem and permissions:
   touch .perm && rm -f .perm
+  touch '/var/www/django/media/.perm' && rm -f '/var/www/django/media/.perm'
 
   # Running linting for all python files in the project:
   flake8 .
