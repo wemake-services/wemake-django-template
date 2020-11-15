@@ -15,7 +15,6 @@ mirror-github-build:
       - '.venv/'
   before_script:
     # Installing poetry:
-    - apt-get install -y curl
     - curl -sSL "https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py" | python
     - export PATH="$HOME/.poetry/bin:$PATH"
     # Installing dependencies:
@@ -24,18 +23,17 @@ mirror-github-build:
 
   script:
     - poetry run sh tests/test_gitlab.sh
-    - ls /root/.test/fake_project/
   only:
     - external_pull_requests
   artifacts:
     name: "template-build"
     expire_in: 1 week
     paths:
-      - '/root/.test/fake_project/'
+      - '.test/fake_project/'
 
 # Redefining how tests are executed:
 test:
   variables:
-    CI_PROJECT_DIR: '/root/.test/fake_project'
+    CI_PROJECT_DIR: '.test/fake_project'
   only:
     - external_pull_requests
