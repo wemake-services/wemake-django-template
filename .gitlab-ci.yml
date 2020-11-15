@@ -44,6 +44,7 @@ test:
   variables:
     CI_PROJECT_DIR: '.test/wemake-django-template'
   only:
+    - master
     - external_pull_requests
 
 
@@ -51,4 +52,5 @@ release-image:
   variables:
     CI_PROJECT_DIR: '.test/wemake-django-template'
   only:
+    - master
     - external_pull_requests
