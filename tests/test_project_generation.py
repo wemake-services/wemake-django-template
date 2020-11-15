@@ -76,7 +76,8 @@ def test_pyproject_toml(cookies, context):
 
 @pytest.mark.parametrize(('prompt', 'entered_value'), [
     ('project_name', 'myProject'),
-    ('project_name', '43prject'),
+    ('project_name', 'my_project'),
+    ('project_name', '43project'),
     ('project_name', '_test'),
     ('project_name', 'test_'),
     ('project_name', '1_test'),
