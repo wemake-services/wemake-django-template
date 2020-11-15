@@ -24,11 +24,14 @@ mirror-github-build:
 
   script:
     - poetry run sh tests/test_gitlab.sh
+    - ls /root/.test/fake_project/
   only:
     - external_pull_requests
   artifacts:
+    name: "template-build"
+    expire_in: 1 week
     paths:
-      - '/root/.test/fake_project'
+      - '/root/.test/fake_project/'
 
 # Redefining how tests are executed:
 test:
