@@ -11,6 +11,8 @@ variables:
 # ============
 
 .docker-before-script: &docker-before-script
+  - pwd
+  - ls
   # Installing global dependencies:
   - apk update && apk upgrade
   - apk add python3 python3-dev py3-pip py3-wheel

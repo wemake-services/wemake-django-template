@@ -20,19 +20,20 @@ mirror-github-build:
     - export PATH="$HOME/.poetry/bin:$PATH"
     # Installing dependencies:
     - poetry config virtualenvs.in-project true
-    - poetry install
+    - poetry install --no-dev
 
   script:
     - poetry run sh tests/test_gitlab.sh
-    - pwd
   only:
     - external_pull_requests
+  artifacts:
+    paths:
+      - "$HOME/.test/fake_project"
 
 # Redefining how tests are executed:
 test:
-  script:
-    - pwd
+  variables:
+    CI_PROJECT_DIR: "$HOME/.test/fake_project"
+    PWD: "$CI_PROJECT_DIR"
   only:
-    - pull_requests
-    - master
     - external_pull_requests
