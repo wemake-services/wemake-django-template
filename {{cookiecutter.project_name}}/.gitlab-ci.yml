@@ -13,7 +13,7 @@ variables:
 .docker-before-script: &docker-before-script
   # Installing global dependencies:
   - apk update && apk upgrade
-  - apk add python3 python3-dev py3-pip py3-wheel 
+  - apk add python3 python3-dev py3-pip py3-wheel
             libffi-dev openssl-dev build-base
   - pip3 install dump-env docker-image-size-limit docker-compose
   # Creating `.env` configuration file:

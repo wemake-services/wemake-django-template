@@ -37,16 +37,6 @@ pytest
 ```
 
 
-## Integration tests
-
-We use `docker` to run integration tests.
-Make sure it is up and running. Then run:
-
-```bash
-sh tests/test_integration.sh
-```
-
-
 ## Other help
 
 You can contribute by spreading a word about this library.

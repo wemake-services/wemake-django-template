@@ -1,4 +1,25 @@
-on-pull-requests:
-  script: echo 'this should run on pull requests'
+include:
+  - local: '{{cookiecutter.project_name}}/.gitlab-ci.yml'
+
+mirror-github-build:
+  stage: build
+  image: "python:3.8"
+  before_script:
+    # Installing poetry:
+    - apt-get install -y curl
+    - curl -sSL "https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py" | python
+    - export PATH="$HOME/.poetry/bin:$PATH"
+
+  script:
+    - poetry run sh tests/test_gitlab.sh
+    - pwd
   only:
     - external_pull_requests
+
+# Redefining how tests are executed:
+test:
+  script:
+    - pwd
+  only:
+    - pull_requests
+    - master

@@ -6,21 +6,11 @@ set -o nounset
 # This file is used to setup fake project,
 # run tests inside it,
 # and remove this project completely.
+source "$CURRENT_PROJECT/tests/build.sh"
 
-# Creating a test directory:
-mkdir -p "$HOME/.test" && cd "$HOME/.test"
-
-# Scaffold the project:
-readonly PROJECT_NAME='fake_project'
-readonly PROJECT_ORGANIZATION='wemake.services'
-
-cookiecutter "$GITHUB_WORKSPACE" \
-  --no-input --overwrite-if-exists \
-  project_name="$PROJECT_NAME" \
-  project_domain='myapp.com' \
-  organization="$PROJECT_ORGANIZATION"
-
-cd "$PROJECT_NAME"
+# Building the template:
+run_cookiecutter_build "$GITHUB_WORKSPACE"
+cd "$PROJECT_PATH"
 
 # Run tests that are located inside the generate project:
 docker-compose -f docker-compose.yml \
