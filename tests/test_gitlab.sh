@@ -6,7 +6,7 @@ set -o nounset
 # This file is used to setup fake project,
 # run tests inside it,
 # and remove this project completely.
-source "$CURRENT_PROJECT/tests/build.sh"
+source "$CI_PROJECT_DIR/tests/build.sh"
 
 # Building the template:
 run_cookiecutter_build "$CI_PROJECT_DIR"
