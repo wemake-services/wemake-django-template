@@ -11,8 +11,8 @@ variables:
 # ============
 
 .docker-before-script: &docker-before-script
-  # Making sure we are in the right directory:
-  - cd "$CI_PROJECT_DIR"
+  # Making sure we are in the right directory, does nothing by default:
+  - pwd && echo "$CI_PROJECT_DIR" && cd "$CI_PROJECT_DIR"
   # Installing global dependencies:
   - apk update && apk upgrade
   - apk add python3 python3-dev py3-pip py3-wheel

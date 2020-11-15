@@ -1,6 +1,3 @@
-include:
-  - local: '{{cookiecutter.project_name}}/.gitlab-ci.yml'
-
 mirror-github-build:
   stage: build
   image: "python:3.8"
@@ -29,6 +26,12 @@ mirror-github-build:
     expire_in: 1 week
     paths:
       - '.test/fake_project'
+
+      
+# Reusing built gitlab definition:
+include:
+  - local: '.test/fake_project/.gitlab-ci.yml'
+
 
 # Redefining how tests are executed:
 test:

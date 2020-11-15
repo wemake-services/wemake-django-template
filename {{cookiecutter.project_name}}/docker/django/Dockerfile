@@ -35,11 +35,11 @@ RUN apt-get update \
   && apt-get install --no-install-recommends -y \
     bash \
     build-essential \
+    curl \
     gettext \
     git \
     libpq-dev \
     # Defining build-time-only dependencies:
-    curl \
     wget \
   # Installing `dockerize` utility:
   # https://github.com/jwilder/dockerize
@@ -56,7 +56,6 @@ RUN apt-get update \
   && poetry --version \
   # Removing build-time-only dependencies:
   && apt-get remove -y \
-    curl \
     wget \
   # Cleaning cache:
   && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
