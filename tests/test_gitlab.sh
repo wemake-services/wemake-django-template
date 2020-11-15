@@ -11,3 +11,5 @@ set -o nounset
 # Building the template:
 run_cookiecutter_build "$CI_PROJECT_DIR"
 cd "$PROJECT_PATH"
+
+echo "Built $PROJECT_PATH"

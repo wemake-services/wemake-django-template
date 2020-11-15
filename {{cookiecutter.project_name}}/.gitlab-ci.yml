@@ -13,6 +13,9 @@ variables:
 .docker-before-script: &docker-before-script
   - pwd
   - ls
+  - echo "CI_PROJECT_DIR"
+  - ls "$CI_PROJECT_DIR"
+  - ls "$HOME/.test/fake_project"
   # Installing global dependencies:
   - apk update && apk upgrade
   - apk add python3 python3-dev py3-pip py3-wheel
