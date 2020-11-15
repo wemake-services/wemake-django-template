@@ -13,7 +13,8 @@ variables:
 .docker-before-script: &docker-before-script
   # Installing global dependencies:
   - apk update && apk upgrade
-  - apk add python3 python3-dev py3-pip git build-base
+  - apk add python3 python3-dev py3-pip py3-wheel 
+            libffi-dev openssl-dev build-base
   - pip3 install dump-env docker-image-size-limit docker-compose
   # Creating `.env` configuration file:
   - dump-env -t config/.env.template -p 'SECRET_' > config/.env
@@ -34,6 +35,12 @@ variables:
   extends: .base-docker
   image: docker:latest
   interruptible: true
+  variables:
+    PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+  # We use cache to speed up `pip` installs:
+  cache:
+    paths:
+      - "$PIP_CACHE_DIR"
 
 
 # Test scripts
