@@ -16,7 +16,7 @@ variables:
   # Installing global dependencies:
   - apk update && apk upgrade
   - apk add python3 python3-dev py3-pip py3-wheel
-            libffi-dev openssl-dev build-base
+            libffi-dev openssl-dev build-base git
   - pip3 install dump-env docker-image-size-limit docker-compose
   # Creating `.env` configuration file:
   - dump-env -t config/.env.template -p 'SECRET_' > config/.env
