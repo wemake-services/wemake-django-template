@@ -1,3 +1,9 @@
+# Reusing built gitlab definition:
+include:
+  - local: '{{cookiecutter.project_name}}/.gitlab-ci.yml'
+
+
+# Building template project:
 mirror-github-build:
   stage: build
   image: "python:3.8"
@@ -27,13 +33,13 @@ mirror-github-build:
     paths:
       - '.test/fake_project'
 
-      
-# Reusing built gitlab definition:
-include:
-  - local: '.test/fake_project/.gitlab-ci.yml'
-
 
 # Redefining how tests are executed:
+variables:
+  GROUP_NAME: "sobolevn"
+  PROJECT_NAME: "wemake-django-template"
+
+
 test:
   variables:
     CI_PROJECT_DIR: '.test/fake_project'
