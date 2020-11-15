@@ -13,7 +13,7 @@ variables:
 .docker-before-script: &docker-before-script
   - pwd
   - ls
-  - echo "CI_PROJECT_DIR"
+  - echo "$CI_PROJECT_DIR"
   - ls "$CI_PROJECT_DIR"
   - ls "$HOME/.test/fake_project"
   # Installing global dependencies:

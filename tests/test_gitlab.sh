@@ -13,3 +13,4 @@ run_cookiecutter_build "$CI_PROJECT_DIR"
 cd "$PROJECT_PATH"
 
 echo "Built $PROJECT_PATH"
+ls "$PROJECT_PATH"
