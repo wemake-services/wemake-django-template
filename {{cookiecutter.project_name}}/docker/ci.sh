@@ -15,7 +15,7 @@ fi
 pyclean () {
   # Cleaning cache:
   find . \
-  | grep -E '(__pycache__|\.hypothesis|\.perm|\.cache|\.static|\.py[cod]$)' \
+  | grep -E '(__pycache__|\.hypothesis|\.perm|\.static|\.py[cod]$)' \
   | xargs rm -rf
 }
 
