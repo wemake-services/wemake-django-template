@@ -31,7 +31,7 @@ mirror-github-build:
     name: "template-build"
     expire_in: 1 week
     paths:
-      - '.test/fake_project'
+      - '.test/wemake-django-template'
 
 
 # Redefining how tests are executed:
@@ -42,6 +42,6 @@ variables:
 
 test:
   variables:
-    CI_PROJECT_DIR: '.test/fake_project'
+    CI_PROJECT_DIR: '.test/wemake-django-template'
   only:
     - external_pull_requests

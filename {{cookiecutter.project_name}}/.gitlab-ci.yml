@@ -20,7 +20,6 @@ variables:
   - pip3 install dump-env docker-image-size-limit docker-compose
   # Creating `.env` configuration file:
   - dump-env -t config/.env.template -p 'SECRET_' > config/.env
-  - cat config/.env
   # Login into Docker registry:
   - docker login -u gitlab-ci-token -p "$CI_JOB_TOKEN" "$REGISTRY"
   # Debug information:

@@ -7,7 +7,7 @@ set -o nounset
 readonly TEST_DIR='./.test'
 
 # Scaffold the project:
-readonly PROJECT_NAME='fake_project'
+readonly PROJECT_NAME='wemake-django-template'
 readonly PROJECT_ORGANIZATION='wemake.services'
 
 readonly PROJECT_PATH="$TEST_DIR/$PROJECT_NAME"
