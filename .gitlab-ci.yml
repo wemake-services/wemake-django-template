@@ -26,6 +26,7 @@ mirror-github-build:
   script:
     - poetry run sh tests/test_gitlab.sh
   only:
+    - master
     - external_pull_requests
   artifacts:
     name: "template-build"
