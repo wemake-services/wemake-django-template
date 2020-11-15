@@ -38,9 +38,12 @@ variables:
   image: docker:latest
   interruptible: true
   variables:
-    PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+    PIP_CACHE_DIR: "/var/.cache/pip"
   # We use cache to speed up `pip` installs:
   cache:
+    key:
+      files:
+        - .gitlab-ci.yml
     paths:
       - "$PIP_CACHE_DIR"
 
