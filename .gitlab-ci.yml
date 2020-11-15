@@ -5,7 +5,7 @@ mirror-github-build:
   stage: build
   image: "python:3.8"
   variables:
-    - PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+    PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
   cache:  # we use cache to speed up `pip` installs
     key:
       files:
