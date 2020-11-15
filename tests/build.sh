@@ -4,7 +4,7 @@ set -o errexit
 set -o nounset
 
 # Creating a test directory:
-readonly TEST_DIR=".test"
+readonly TEST_DIR='./.test'
 
 # Scaffold the project:
 readonly PROJECT_NAME='fake_project'
@@ -20,6 +20,8 @@ run_cookiecutter_build () {
     project_name="$PROJECT_NAME" \
     project_domain='myapp.com' \
     organization="$PROJECT_ORGANIZATION"
+
+  cd '..'
 }
 
 # Exporting variables:
