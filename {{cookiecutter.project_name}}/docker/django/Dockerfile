@@ -39,10 +39,8 @@ RUN apt-get update \
     gettext \
     git \
     libpq-dev \
+    # Defining build-time-only dependencies:
     wget \
-  # Cleaning cache:
-  && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
-  && apt-get clean -y && rm -rf /var/lib/apt/lists/* \
   # Installing `dockerize` utility:
   # https://github.com/jwilder/dockerize
   && wget "https://github.com/jwilder/dockerize/releases/download/${DOCKERIZE_VERSION}/dockerize-linux-amd64-${DOCKERIZE_VERSION}.tar.gz" \
@@ -55,7 +53,13 @@ RUN apt-get update \
   # Installing `poetry` package manager:
   # https://github.com/python-poetry/poetry
   && curl -sSL 'https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py' | python \
-  && poetry --version
+  && poetry --version \
+  # Removing build-time-only dependencies:
+  && apt-get remove -y \
+    wget \
+  # Cleaning cache:
+  && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
+  && apt-get clean -y && rm -rf /var/lib/apt/lists/*
 
 # Copy only requirements, to cache them in docker layer
 WORKDIR /code

@@ -11,9 +11,12 @@ variables:
 # ============
 
 .docker-before-script: &docker-before-script
+  # Making sure we are in the right directory, does nothing by default:
+  - pwd && echo "$CI_PROJECT_DIR" && cd "$CI_PROJECT_DIR"
   # Installing global dependencies:
   - apk update && apk upgrade
-  - apk add python3 python3-dev py3-pip git build-base
+  - apk add python3 python3-dev py3-pip py3-wheel
+            libffi-dev openssl-dev build-base git
   - pip3 install dump-env docker-image-size-limit docker-compose
   # Creating `.env` configuration file:
   - dump-env -t config/.env.template -p 'SECRET_' > config/.env
@@ -34,6 +37,15 @@ variables:
   extends: .base-docker
   image: docker:latest
   interruptible: true
+  variables:
+    PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+  # We use cache to speed up `pip` installs:
+  cache:
+    key:
+      files:
+        - .gitlab-ci.yml
+    paths:
+      - "$PIP_CACHE_DIR"
 
 
 # Test scripts
@@ -55,8 +67,8 @@ test:
 
     # The logic itself:
     - docker-compose build
-    - docker-compose run --rm web sh ./docker/ci.sh
-    - disl "${PROJECT_NAME}:dev" 750MiB
+    - docker-compose run --user=root --rm web sh ./docker/ci.sh
+    - disl "${PROJECT_NAME}:dev" 800MiB
 
     # Pushing back the result for future runs:
     - docker tag "${PROJECT_NAME}:dev" "${IMAGE_FULL_NAME}:dev"
@@ -84,11 +96,13 @@ release-image:
     # Now we need the latest images for cache and improved build times:
     - docker pull "${IMAGE_FULL_NAME}:latest" || true
     - docker pull "${IMAGE_FULL_NAME}:dev" || true
+    # Create correct tags:
+    - docker tag "${IMAGE_FULL_NAME}:latest" "${PROJECT_NAME}:latest" || true
+    - docker tag "${IMAGE_FULL_NAME}:dev" "${PROJECT_NAME}:dev" || true
 
     # Building the image itself:
     - docker-compose -f docker-compose.yml
       -f docker/docker-compose.prod.yml build
-
   script:
     - docker push "${IMAGE_FULL_NAME}:latest"
   only:
