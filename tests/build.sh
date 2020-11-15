@@ -8,7 +8,7 @@ readonly TEST_DIR='./.test'
 
 # Scaffold the project:
 readonly PROJECT_NAME='wemake-django-template'
-readonly PROJECT_ORGANIZATION='wemake.services'
+readonly PROJECT_ORGANIZATION='sobolevn'
 
 readonly PROJECT_PATH="$TEST_DIR/$PROJECT_NAME"
 
