@@ -6,6 +6,8 @@ set -o nounset
 # This file is used to setup fake project,
 # run tests inside it,
 # and remove this project completely.
+pwd
+ls './tests/build.sh'
 source './tests/build.sh'
 
 # Building the template:
