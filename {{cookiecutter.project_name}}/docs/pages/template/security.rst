@@ -12,7 +12,7 @@ Django
 Django has a lot of `security-specific settings <https://docs.djangoproject.com/en/2.2/topics/security/>`_
 that are all turned on by default in this template.
 
-We also :ref:`enforce <going-to-production#checks>` all the best practices
+We also :ref:`enforce <going-to-production>` all the best practices
 by running ``django`` checks inside CI for each commit.
 
 We also use a set of custom ``django`` apps
