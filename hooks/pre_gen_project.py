@@ -20,9 +20,9 @@ def validate_project_name():
     if not re.match(MODULE_REGEX, MODULE_NAME):
         # Validates project's module name:
         message = [
-            'ERROR: The project slug {0} is not a valid Python module name.',
+            'ERROR: The project slug {0} is not a valid name.',
             'Start with a lowercase letter.',
-            'Followed by any lowercase letters, numbers or underscores.',
+            'Followed by any lowercase letters, numbers, or dashes (-).',
         ]
         raise ValueError(' '.join(message).format(MODULE_NAME))
 

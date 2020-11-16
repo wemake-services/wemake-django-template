@@ -9,6 +9,8 @@ LABEL vendor="wemake.services"
 ARG DJANGO_ENV
 
 ENV DJANGO_ENV=${DJANGO_ENV} \
+  # build:
+  BUILD_ONLY_PACKAGES='wget' \
   # python:
   PYTHONFAULTHANDLER=1 \
   PYTHONUNBUFFERED=1 \
@@ -31,8 +33,7 @@ ENV DJANGO_ENV=${DJANGO_ENV} \
 
 
 # System deps:
-RUN BUILD_PACKAGES='wget' \
-  apt-get update \
+RUN apt-get update \
   && apt-get install --no-install-recommends -y \
     bash \
     build-essential \
@@ -41,7 +42,7 @@ RUN BUILD_PACKAGES='wget' \
     git \
     libpq-dev \
     # Defining build-time-only dependencies:
-    $BUILD_PACKAGES \
+    $BUILD_ONLY_PACKAGES \
   # Installing `dockerize` utility:
   # https://github.com/jwilder/dockerize
   && wget "https://github.com/jwilder/dockerize/releases/download/${DOCKERIZE_VERSION}/dockerize-linux-amd64-${DOCKERIZE_VERSION}.tar.gz" \
@@ -56,7 +57,7 @@ RUN BUILD_PACKAGES='wget' \
   && curl -sSL 'https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py' | python \
   && poetry --version \
   # Removing build-time-only dependencies:
-  && apt-get remove -y $BUILD_PACKAGES \
+  && apt-get remove -y $BUILD_ONLY_PACKAGES \
   # Cleaning cache:
   && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
   && apt-get clean -y && rm -rf /var/lib/apt/lists/*
