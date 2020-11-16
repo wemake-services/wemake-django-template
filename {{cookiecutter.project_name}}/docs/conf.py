@@ -46,7 +46,7 @@ def _get_project_meta():
 
 pkg_meta = _get_project_meta()
 project = str(pkg_meta['name'])
-author = str(pkg_meta['author'][0])
+author = str(pkg_meta['authors'][0])
 copyright = author  # noqa: WPS125
 
 # The short X.Y version
