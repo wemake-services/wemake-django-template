@@ -8,5 +8,3 @@ python:
 sphinx:
   configuration: '{{cookiecutter.project_name}}/docs/conf.py'
   fail_on_warning: true
-
-formats: all

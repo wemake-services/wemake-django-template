@@ -12,7 +12,7 @@ name = "{{ cookiecutter.project_name }}"
 description = "{{ cookiecutter.project_verbose_name }}"
 version = "0.1.0"
 readme = "README.md"
-authors = []
+authors = ["{{ cookiecutter.project_domain }}"]
 
 
 [tool.poetry.dependencies]
@@ -63,6 +63,7 @@ django-stubs = "^1.7"
 
 sphinx = "^3.3"
 sphinx-autodoc-typehints = "^1.11"
+tomlkit = "^0.7"
 doc8 = "^0.8"
 
 yamllint = "^1.25"
