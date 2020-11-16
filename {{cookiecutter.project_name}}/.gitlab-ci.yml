@@ -56,20 +56,19 @@ test:
   extends: .docker
   before_script:
     - *docker-before-script
+    # Pulling cache:
+    - docker pull "${IMAGE_FULL_NAME}:dev" || true
+    - docker tag "${IMAGE_FULL_NAME}:dev" "${PROJECT_NAME}:dev" || true
   script:
     # Checking config:
     - docker-compose -f docker-compose.yml
       -f docker/docker-compose.prod.yml config --quiet
 
-    # Pulling cache:
-    - docker pull "${IMAGE_FULL_NAME}:dev" || true
-    - docker tag "${IMAGE_FULL_NAME}:dev" "${PROJECT_NAME}:dev" || true
-
     # The logic itself:
     - docker-compose build
     - docker-compose run --user=root --rm web sh ./docker/ci.sh
     - disl "${PROJECT_NAME}:dev" 800MiB
-
+  after_script:
     # Pushing back the result for future runs:
     - docker tag "${PROJECT_NAME}:dev" "${IMAGE_FULL_NAME}:dev"
     - docker push "${IMAGE_FULL_NAME}:dev"
