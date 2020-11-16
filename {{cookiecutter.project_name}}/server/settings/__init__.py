@@ -11,9 +11,14 @@ To change settings file:
 
 from os import environ
 
+import django_stubs_ext
 from split_settings.tools import include, optional
 
-# Managing environment via DJANGO_ENV variable:
+# Monkeypatching Django, so stubs will work for all generics,
+# see: https://github.com/typeddjango/django-stubs
+django_stubs_ext.monkeypatch()
+
+# Managing environment via `DJANGO_ENV` variable:
 environ.setdefault('DJANGO_ENV', 'development')
 _ENV = environ['DJANGO_ENV']
 
@@ -22,9 +27,6 @@ _base_settings = (
     'components/logging.py',
     'components/csp.py',
     'components/caches.py',
-
-    # You can even use glob:
-    # 'components/*.py'
 
     # Select the right env:
     'environments/{0}.py'.format(_ENV),

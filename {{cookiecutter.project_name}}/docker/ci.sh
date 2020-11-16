@@ -26,12 +26,16 @@ run_ci () {
   # Testing filesystem and permissions:
   touch .perm && rm -f .perm
   touch '/var/www/django/media/.perm' && rm -f '/var/www/django/media/.perm'
+  touch '/var/www/django/static/.perm' && rm -f '/var/www/django/static/.perm'
+
+  # Checking `.env` files:
+  dotenv-linter config/.env config/.env.template
 
   # Running linting for all python files in the project:
   flake8 .
 
   # Running type checking, see https://github.com/typeddjango/django-stubs
-  mypy manage.py server ./tests/**/*.py
+  mypy manage.py server $(find tests -name '*.py')
 
   # Running tests:
   pytest --dead-fixtures --dup-fixtures
@@ -55,9 +59,7 @@ run_ci () {
 
   # Checking if all the dependencies are secure and do not have any
   # known vulnerabilities:
-  # Ignoring sphinx@2 security issue for now, see:
-  # https://github.com/miyakogi/m2r/issues/51
-  safety check --full-report -i 38330
+  safety check --full-report
 
   # Checking `pyproject.toml` file contents:
   poetry check
@@ -70,9 +72,6 @@ run_ci () {
 
   # Checking `yaml` files:
   yamllint -d '{"extends": "default", "ignore": ".venv"}' -s .
-
-  # Checking `.env` files:
-  dotenv-linter config/.env config/.env.template
 
   # Checking translation files, ignoring ordering and locations:
   polint -i location,unsorted locale
