@@ -10,42 +10,37 @@ variables:
 # Base scripts
 # ============
 
-.docker-before-script: &docker-before-script
-  # Making sure we are in the right directory, does nothing by default:
-  - pwd && echo "$CI_PROJECT_DIR" && cd "$CI_PROJECT_DIR"
-  # Installing global dependencies:
-  - apk update && apk upgrade
-  - apk add python3 python3-dev py3-pip py3-wheel
-            libffi-dev openssl-dev build-base git
-  - pip3 install dump-env docker-image-size-limit docker-compose
-  # Creating `.env` configuration file:
-  - dump-env -t config/.env.template -p 'SECRET_' > config/.env
-  # Login into Docker registry:
-  - docker login -u gitlab-ci-token -p "$CI_JOB_TOKEN" "$REGISTRY"
-  # Debug information:
-  - docker info && docker-compose --version && git --version
-
-.base-docker:
+.docker:
+  image: docker:latest
+  interruptible: true
+  variables:
+    PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+  cache:  # We use cache to speed up `pip` installs for CI build tasks:
+    key: 
+      files:
+        - .gitlab-ci.yml
+    paths:
+      - "$PIP_CACHE_DIR"
   services:
     - docker:dind
   variables:
     # When using dind, it's wise to use the overlayfs driver for
     # improved performance:
     DOCKER_DRIVER: overlay2
-
-.docker:
-  extends: .base-docker
-  image: docker:latest
-  interruptible: true
-  variables:
-    PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
-  # We use cache to speed up `pip` installs:
-  cache:
-    key:
-      files:
-        - .gitlab-ci.yml
-    paths:
-      - "$PIP_CACHE_DIR"
+  before_script: &docker-before-script
+    # Making sure we are in the right directory, does nothing by default:
+    - pwd && echo "$CI_PROJECT_DIR" && cd "$CI_PROJECT_DIR"
+    # Installing global dependencies:
+    - apk update && apk upgrade
+    - apk add python3 python3-dev py3-pip py3-wheel
+              libffi-dev openssl-dev build-base git
+    - pip3 install dump-env docker-image-size-limit docker-compose
+    # Creating `.env` configuration file:
+    - dump-env -t config/.env.template -p 'SECRET_' > config/.env
+    # Login into Docker registry:
+    - docker login -u gitlab-ci-token -p "$CI_JOB_TOKEN" "$REGISTRY"
+    # Debug information:
+    - docker info && docker-compose --version && git --version
 
 
 # Test scripts
