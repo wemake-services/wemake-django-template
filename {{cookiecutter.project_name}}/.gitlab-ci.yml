@@ -13,8 +13,6 @@ variables:
 .docker:
   image: docker:latest
   interruptible: true
-  variables:
-    PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
   cache:  # We use cache to speed up `pip` installs for CI build tasks:
     key: 
       files:
@@ -24,9 +22,8 @@ variables:
   services:
     - docker:dind
   variables:
-    # When using dind, it's wise to use the overlayfs driver for
-    # improved performance:
     DOCKER_DRIVER: overlay2
+    PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
   before_script: &docker-before-script
     # Making sure we are in the right directory, does nothing by default:
     - pwd && echo "$CI_PROJECT_DIR" && cd "$CI_PROJECT_DIR"
