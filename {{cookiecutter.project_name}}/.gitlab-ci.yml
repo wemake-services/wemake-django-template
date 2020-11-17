@@ -14,7 +14,7 @@ variables:
   image: docker:latest
   interruptible: true
   cache:  # We use cache to speed up `pip` installs for CI build tasks:
-    key: 
+    key:
       files:
         - .gitlab-ci.yml
     paths:
