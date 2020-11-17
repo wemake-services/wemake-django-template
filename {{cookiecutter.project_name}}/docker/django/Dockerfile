@@ -62,6 +62,8 @@ RUN apt-get update \
   && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
   && apt-get clean -y && rm -rf /var/lib/apt/lists/*
 
+WORKDIR /code
+
 # This is a special case. We need to run this script as an entry point:
 COPY ./docker/django/entrypoint.sh /docker-entrypoint.sh
 
@@ -73,7 +75,6 @@ RUN chmod +x '/docker-entrypoint.sh' \
   && chown web:web /var/www/django/static /var/www/django/media
 
 # Copy only requirements, to cache them in docker layer
-WORKDIR /code
 COPY --chown=web:web ./poetry.lock ./pyproject.toml /code/
 
 # Project initialization:
