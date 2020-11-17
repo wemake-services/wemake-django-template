@@ -18,7 +18,7 @@ docker-compose -f docker-compose.yml \
 
 # Buidling and testing dev image:
 docker-compose build
-docker-compose run --user=root --rm web ./docker/ci.sh
+docker-compose run --rm web ./docker/ci.sh
 
 # Building and testing prod image:
 docker-compose -f docker-compose.yml \
