@@ -5,14 +5,14 @@ workflow:
   rules:
     - changes:
       - .gitlab-ci.yml
-      - './{{cookiecutter.project_name}}/.gitlab-ci.yml'
-      - ./tests/build.sh
-      - ./tests/test_gitlab.sh
+      - '{{cookiecutter.project_name}}/.gitlab-ci.yml'
+      - tests/build.sh
+      - tests/test_gitlab.sh
 
 
 # Reusing built gitlab definition:
 include:
-  - local: './{{cookiecutter.project_name}}/.gitlab-ci.yml'
+  - local: '{{cookiecutter.project_name}}/.gitlab-ci.yml'
 
 
 # Building template project:
