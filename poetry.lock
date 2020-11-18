@@ -247,7 +247,7 @@ tests = ["ddt (>=1.2.2,<2)", "pytest (<6)"]
 
 [[package]]
 name = "docker-image-size-limit"
-version = "0.3.0"
+version = "0.4.0"
 description = ""
 category = "dev"
 optional = false
@@ -1191,7 +1191,7 @@ typing_extensions = ">=3.6,<4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "69e36a25fb6300bc3b7decf9bde4bcbd3dde41fa872317d45597b6b01359369f"
+content-hash = "c338ed355f7b7e5235885b431e08ffcf822191470e35c798961f3cc96961fa12"
 
 [metadata.files]
 arrow = [
@@ -1334,8 +1334,8 @@ docker-compose = [
     {file = "docker_compose-1.27.4-py2.py3-none-any.whl", hash = "sha256:84ca2edad226435e3a378ea24ca2ca4e1a77cc7c8de057e2812124c6dcb55147"},
 ]
 docker-image-size-limit = [
-    {file = "docker-image-size-limit-0.3.0.tar.gz", hash = "sha256:3ddf8a1164dcc505b89150a9150b4f788e40272599e5b52e75dcc37d9aa06a25"},
-    {file = "docker_image_size_limit-0.3.0-py3-none-any.whl", hash = "sha256:67126fce8acb66ff45d0952eb54511cad0c5bdf7cdb22720a487f04ee3da8b32"},
+    {file = "docker-image-size-limit-0.4.0.tar.gz", hash = "sha256:5a82d12a8f1bd9924873987191f9f198b004dd253ed5a29fcee5e4f7270e69ea"},
+    {file = "docker_image_size_limit-0.4.0-py3-none-any.whl", hash = "sha256:9833b8ceccc847abae0263b307ac6e40377cf1ad0bf5439a92728814c6c1bd67"},
 ]
 dockerpty = [
     {file = "dockerpty-0.4.1.tar.gz", hash = "sha256:69a9d69d573a0daa31bcd1c0774eeed5c15c295fe719c61aca550ed1393156ce"},
