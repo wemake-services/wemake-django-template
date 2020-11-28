@@ -32,8 +32,9 @@ def _auth_backends(settings) -> None:
 
 
 @pytest.fixture(autouse=True)
-def _templates_debug(settings) -> None:
-    """Activates TEMPLATE debug mode for coverage."""
+def _debug(settings) -> None:
+    """Sets proper DEBUG and TEMPLATE debug mode for coverage."""
+    settings.DEBUG = False
     for template in settings.TEMPLATES:
         template['OPTIONS']['debug'] = True
 
