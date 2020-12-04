@@ -274,11 +274,11 @@ tests = ["pytest (<4.0)", "pytest-django", "pytest-flakes (==1.0.1)", "pytest-pe
 
 [[package]]
 name = "django-debug-toolbar"
-version = "3.1.1"
+version = "3.2"
 description = "A configurable set of panels that display various debug information about the current request/response."
 category = "dev"
 optional = false
-python-versions = ">=3.5"
+python-versions = ">=3.6"
 
 [package.dependencies]
 Django = ">=2.2"
@@ -1710,7 +1710,7 @@ pyyaml = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "3.8.6"
-content-hash = "74d9dbcc40de96ecb7c5a6d9cb50b27b9edd3cbe7f6a2232804d3b26c06938a2"
+content-hash = "3e4f3c798bd4fe231619d50a157bd446991e680195b99eb000b3361f3f750a27"
 
 [metadata.files]
 alabaster = [
@@ -1886,8 +1886,8 @@ django-csp = [
     {file = "django_csp-3.7.tar.gz", hash = "sha256:01eda02ad3f10261c74131cdc0b5a6a62b7c7ad4fd017fbefb7a14776e0a9727"},
 ]
 django-debug-toolbar = [
-    {file = "django-debug-toolbar-3.1.1.tar.gz", hash = "sha256:c97921a9cd421d392e7860dc4b464db8e06c8628df4dc58fedab012888c293c6"},
-    {file = "django_debug_toolbar-3.1.1-py3-none-any.whl", hash = "sha256:a1ce0665f7ef47d27b8df4b5d1058748e1f08500a01421a30d35164f38aaaf4c"},
+    {file = "django-debug-toolbar-3.2.tar.gz", hash = "sha256:84e2607d900dbd571df0a2acf380b47c088efb787dce9805aefeb407341961d2"},
+    {file = "django_debug_toolbar-3.2-py3-none-any.whl", hash = "sha256:9e5a25d0c965f7e686f6a8ba23613ca9ca30184daa26487706d4829f5cfb697a"},
 ]
 django-extra-checks = [
     {file = "django-extra-checks-0.7.1.tar.gz", hash = "sha256:357bd39511c3df1ea86cbc9347bffcf0e23e6cd61f73f8c0ec9b2c191e4a1f91"},
