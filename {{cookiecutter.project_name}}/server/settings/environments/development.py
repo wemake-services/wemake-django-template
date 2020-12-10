@@ -122,5 +122,8 @@ EXTRA_CHECKS = {
         # If field nullable `(null=True)`,
         # then default=None argument is redundant and should be removed:
         'field-default-null',
+        # Fields with choices must have companion CheckConstraint
+        # to enforce choices on database level
+        'field-choices-constraint',
     ],
 }
