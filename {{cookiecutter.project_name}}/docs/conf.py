@@ -1,4 +1,3 @@
-
 # wemake-django-template documentation build configuration file, created by
 # sphinx-quickstart on Sat Sep 30 12:42:34 2017.
 #
