@@ -9,7 +9,7 @@
 version: "3.6"
 services:
   caddy:
-    image: "caddy:2.0.0"
+    image: "caddy:2"
     restart: unless-stopped
     env_file: ./config/.env
     volumes:
