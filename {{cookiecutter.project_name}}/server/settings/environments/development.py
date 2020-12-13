@@ -23,7 +23,7 @@ ALLOWED_HOSTS = [
 ]
 
 
-# Installed apps for developement only:
+# Installed apps for development only:
 
 INSTALLED_APPS += (
     'debug_toolbar',
@@ -110,7 +110,7 @@ EXTRA_CHECKS = {
         'model-admin',
         # FileField/ImageField must have non empty `upload_to` argument:
         'field-file-upload-to',
-        # Text fields shoudn't use `null=True`:
+        # Text fields shouldn't use `null=True`:
         'field-text-null',
         # Prefer using BooleanField(null=True) instead of NullBooleanField:
         'field-boolean-null',

@@ -16,7 +16,7 @@ cd "$PROJECT_PATH"
 docker-compose -f docker-compose.yml \
   -f docker/docker-compose.prod.yml config --quiet
 
-# Buidling and testing dev image:
+# Building and testing dev image:
 docker-compose build
 docker-compose run --user=root --rm web ./docker/ci.sh
 
