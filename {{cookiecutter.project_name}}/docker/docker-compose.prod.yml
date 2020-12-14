@@ -46,17 +46,17 @@ services:
     expose:
       - 8000
 
-  # This task is an example of how to extend existing ones:
-  # some_wroker:
-  #   <<: *web
-  #   command: python manage.py worker_process
-  #   deploy:
-  #     replicas: 2
+# This task is an example of how to extend existing ones:
+#   some_wroker:
+#     <<: *web
+#     command: python manage.py worker_process
+#     deploy:
+#       replicas: 2
 
 networks:
   # Network for your proxy server and application to connect them,
   # do not use it for anything else!
-  proxynet:  
+  proxynet:
 
 volumes:
   django-media:
