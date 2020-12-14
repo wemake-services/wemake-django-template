@@ -437,14 +437,14 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [[package]]
 name = "dotenv-linter"
-version = "0.1.5"
+version = "0.2.0"
 description = "Linting dotenv files like a charm!"
 category = "dev"
 optional = false
 python-versions = ">=3.6,<4.0"
 
 [package.dependencies]
-click = ">=6.0,<7.0"
+click = ">=6,<8"
 click_default_group = ">=1.2,<2.0"
 ply = ">=3.11,<4.0"
 typing_extensions = ">=3.6,<4.0"
@@ -1711,7 +1711,7 @@ pyyaml = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "3.8.6"
-content-hash = "608b7f67572698bd897d4f3783243477de62089a6d2f0ca21b23a99d4cc2df7e"
+content-hash = "11b6272a16237b764d10689a6b337db97f27869680265f932e141a36746956c2"
 
 [metadata.files]
 alabaster = [
@@ -1944,8 +1944,8 @@ docutils = [
     {file = "docutils-0.16.tar.gz", hash = "sha256:c2de3a60e9e7d07be26b7f2b00ca0309c207e06c100f9cc2a94931fc75a478fc"},
 ]
 dotenv-linter = [
-    {file = "dotenv-linter-0.1.5.tar.gz", hash = "sha256:425381b1772fa9608afc524a795cba6f771c6c74bf9f799f33805085ce57b1f7"},
-    {file = "dotenv_linter-0.1.5-py3-none-any.whl", hash = "sha256:6118bbfced641be67f1b2a4aeeae3ec20615c13d25d8cc41980768252e2c3984"},
+    {file = "dotenv-linter-0.2.0.tar.gz", hash = "sha256:c99b981966450e48007b92547ed8e16355ec88f1dac5494a4576440546467cf7"},
+    {file = "dotenv_linter-0.2.0-py3-none-any.whl", hash = "sha256:536992ef6f6bf803e58e2984cf428486491059ca750b13bd9eb6b5186110709a"},
 ]
 dparse = [
     {file = "dparse-0.5.1-py3-none-any.whl", hash = "sha256:e953a25e44ebb60a5c6efc2add4420c177f1d8404509da88da9729202f306994"},
