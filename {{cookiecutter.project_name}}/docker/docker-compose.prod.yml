@@ -41,16 +41,25 @@ services:
         - django-locale:/code/locale  # since in dev it is app's folder
 
     command: sh ./docker/django/gunicorn.sh
+    networks:
+      - proxynet
     expose:
       - 8000
 
-# This task is an example of how to extend existing ones:
-# some_wroker:
-#   <<: *web
-#   command: python manage.py worker_process
-#   deploy:
-#     replicas: 2
+  # This task is an example of how to extend existing ones:
+  # some_wroker:
+  #   <<: *web
+  #   command: python manage.py worker_process
+  #   deploy:
+  #     replicas: 2
+
+networks:
+  # Network for your proxy server and application to connect them,
+  # do not use it for anything else!
+  proxynet:  
 
 volumes:
+  django-media:
+  django-locale:
   caddy-config:
   caddy-data:
