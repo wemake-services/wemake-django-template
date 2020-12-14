@@ -35,8 +35,8 @@ variables:
     # Creating `.env` configuration file:
     - dump-env -t config/.env.template -p 'SECRET_' > config/.env
     # Login into Docker registry:
-    - echo "$CI_JOB_TOKEN" | docker login 
-      -u gitlab-ci-token --password-stdin "$REGISTRY"
+    - echo "$CI_JOB_TOKEN" | docker login "$REGISTRY"
+      -u gitlab-ci-token --password-stdin
     # Debug information:
     - docker info && docker-compose --version && git --version
 
