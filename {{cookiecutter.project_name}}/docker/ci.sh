@@ -38,7 +38,7 @@ run_ci () {
   mypy manage.py server $(find tests -name '*.py')
 
   # Running tests:
-  pytest --dead-fixtures --dup-fixtures
+  pytest --dead-fixtures
   pytest
 
   # Run checks to be sure we follow all django's best practices:
