@@ -67,7 +67,7 @@ tomlkit = "^0.7"
 doc8 = "^0.8"
 
 yamllint = "^1.25"
-safety = "^1.9"
+safety = "^1.10"
 dotenv-linter = "^0.2"
 polint = "^0.4"
 dennis = "^0.9"
