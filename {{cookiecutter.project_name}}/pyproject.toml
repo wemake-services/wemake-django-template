@@ -61,7 +61,7 @@ hypothesis = "^5.43"
 mypy = "^0.790"
 django-stubs = "^1.7"
 
-sphinx = "^3.3"
+sphinx = "^3.4"
 sphinx-autodoc-typehints = "^1.11"
 tomlkit = "^0.7"
 doc8 = "^0.8"
