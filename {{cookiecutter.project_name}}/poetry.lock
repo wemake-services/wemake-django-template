@@ -235,7 +235,7 @@ bcrypt = ["bcrypt"]
 
 [[package]]
 name = "django-axes"
-version = "5.9.1"
+version = "5.10.0"
 description = "Keep track of failed login attempts in Django-powered sites."
 category = "main"
 optional = false
@@ -1710,7 +1710,7 @@ pyyaml = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "3.8.6"
-content-hash = "5a87563cb8a0e5fb29249a329db27d9433a7e7e533c3d1280b0b1e8a1edaac88"
+content-hash = "ec89cffd000efa338dfcfb315897fd87bc65946ff3bb1574c3f8b7e2286208ac"
 
 [metadata.files]
 alabaster = [
@@ -1875,8 +1875,8 @@ django = [
     {file = "Django-2.2.17.tar.gz", hash = "sha256:cf5370a4d7765a9dd6d42a7b96b53c74f9446cd38209211304b210fe0404b861"},
 ]
 django-axes = [
-    {file = "django-axes-5.9.1.tar.gz", hash = "sha256:62be89424a30e59fc6e45e5d29bab84feca711472e81ae5275951a01a8174586"},
-    {file = "django_axes-5.9.1-py3-none-any.whl", hash = "sha256:a0b54a60fd5e5de78cb41788d5d4a7d13d23b9cb35fe0c4223f2f9a741511b52"},
+    {file = "django-axes-5.10.0.tar.gz", hash = "sha256:8a62cd4cc78ef08007e8102def34be83832995eb6e3e0c814d605741b82a2796"},
+    {file = "django_axes-5.10.0-py3-none-any.whl", hash = "sha256:3c81ddca8a9d7fd0019cb440f711cc873c3039546f7eacb3f2ec616bf0ec1b32"},
 ]
 django-coverage-plugin = [
     {file = "django_coverage_plugin-1.8.0.tar.gz", hash = "sha256:d53cbf3828fd83d6b89ff7292c6805de5274e36411711692043e67bcde25ae0c"},
