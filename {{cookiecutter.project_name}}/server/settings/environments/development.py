@@ -30,6 +30,7 @@ INSTALLED_APPS += (
     'nplusone.ext.django',
     'django_migration_linter',
     'django_test_migrations.contrib.django_checks.AutoNames',
+    'django_test_migrations.contrib.django_checks.DatabaseConfiguration',
     'extra_checks',
 )
 
