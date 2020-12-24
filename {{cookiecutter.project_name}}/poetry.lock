@@ -394,7 +394,7 @@ django = "*"
 
 [[package]]
 name = "django-test-migrations"
-version = "1.0.0"
+version = "1.1.0"
 description = "Test django schema and data migrations, including ordering"
 category = "dev"
 optional = false
@@ -1710,7 +1710,7 @@ pyyaml = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "3.8.6"
-content-hash = "b2752f13e8eef70237e303762d9d55efe0a5f99bde19f05bcee7dbdb1143beee"
+content-hash = "1ec37d06097596bdd46238eb7a5f2db5a152dab9dee248c4106aa96ca0438e90"
 
 [metadata.files]
 alabaster = [
@@ -1928,8 +1928,8 @@ django-stubs-ext = [
     {file = "django_stubs_ext-0.1.0-py3-none-any.whl", hash = "sha256:663469e7452ead59ae9235eb62b35ef09a15ae94f2193fedf1b84aea471fc011"},
 ]
 django-test-migrations = [
-    {file = "django-test-migrations-1.0.0.tar.gz", hash = "sha256:e5747e2ad0b7e4d3b8d9ccd40d414b0f186316d3757af022b4bbdec700897521"},
-    {file = "django_test_migrations-1.0.0-py3-none-any.whl", hash = "sha256:d120d0287e1dd82ed62fe083747a1e99c0398d56beda52594e8391b94a41bef5"},
+    {file = "django-test-migrations-1.1.0.tar.gz", hash = "sha256:27c0127552920bbdc339a84de360f1792abc8c353e2c8d2b86af92dc1ade6703"},
+    {file = "django_test_migrations-1.1.0-py3-none-any.whl", hash = "sha256:7ea17dac1a0b0c8084681899c6563d85f4262832f2fbb0c6240b12e554333934"},
 ]
 doc8 = [
     {file = "doc8-0.8.1-py2.py3-none-any.whl", hash = "sha256:4d58a5c8c56cedd2b2c9d6e3153be5d956cf72f6051128f0f2255c66227df721"},
