@@ -727,7 +727,7 @@ tornado = ["tornado (>=0.2)"]
 
 [[package]]
 name = "hypothesis"
-version = "5.43.3"
+version = "5.43.4"
 description = "A library for property-based testing"
 category = "dev"
 optional = false
@@ -2037,8 +2037,8 @@ gunicorn = [
     {file = "gunicorn-20.0.4.tar.gz", hash = "sha256:1904bb2b8a43658807108d59c3f3d56c2b6121a701161de0ddf9ad140073c626"},
 ]
 hypothesis = [
-    {file = "hypothesis-5.43.3-py3-none-any.whl", hash = "sha256:f0d968ca06be596d7e9aced33d6132060042f9695ad63ff4d862851b59a3eb6e"},
-    {file = "hypothesis-5.43.3.tar.gz", hash = "sha256:d97ba7ae2cfe7096b0c045fdb611ee9850ccdd6050a9b36cb96812242062c2cc"},
+    {file = "hypothesis-5.43.4-py3-none-any.whl", hash = "sha256:6dfc4c233f3903f1524242c1e1c92b5e06fb4b689d3fd2abbd22783af25d3c27"},
+    {file = "hypothesis-5.43.4.tar.gz", hash = "sha256:6094f922c1d2bef808b8e6cf3ab8cdb8ad76faa12519a25ac4250eed524e25c0"},
 ]
 identify = [
     {file = "identify-1.5.9-py2.py3-none-any.whl", hash = "sha256:5dd84ac64a9a115b8e0b27d1756b244b882ad264c3c423f42af8235a6e71ca12"},
