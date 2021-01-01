@@ -31,7 +31,7 @@ psycopg2-binary = "^2.8"
 gunicorn = "^20.0"
 python-decouple = "^3.3"
 bcrypt = "^3.2"
-structlog = "^20.1"
+structlog = "^20.2"
 
 
 [tool.poetry.dev-dependencies]
