@@ -70,7 +70,7 @@ structlog.configure(
         structlog.processors.ExceptionPrettyPrinter(),
         structlog.stdlib.ProcessorFormatter.wrap_for_formatter,
     ],
-    context_class=structlog.threadlocal.wrap_dict(dict),  # typing: ignore
+    context_class=structlog.threadlocal.wrap_dict(dict),  # type: ignore
     logger_factory=structlog.stdlib.LoggerFactory(),
     wrapper_class=structlog.stdlib.BoundLogger,
     cache_logger_on_first_use=True,
