@@ -3,14 +3,16 @@
 # by Github Actions.
 workflow:
   rules:
-    - changes:
-      - .gitlab-ci.yml
-      - '{{cookiecutter.project_name}}/.gitlab-ci.yml'
-      - tests/build.sh
-      - tests/test_gitlab.sh
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event" || $CI_PIPELINE_SOURCE == "push"'
+      when: always
+      changes:
+        - .gitlab-ci.yml
+        - '{{cookiecutter.project_name}}/.gitlab-ci.yml'
+        - tests/build.sh
+        - tests/test_gitlab.sh
 
 
-# Reusing built gitlab definition:
+# Reusing existing gitlab definition:
 include:
   - local: '{{cookiecutter.project_name}}/.gitlab-ci.yml'
 
