@@ -3,7 +3,7 @@
 # by Github Actions.
 workflow:
   rules:
-    - if: '$CI_PIPELINE_SOURCE == "merge_request_event" || $CI_PIPELINE_SOURCE == "push"'
+    - if: '$CI_PIPELINE_SOURCE'
       when: always
       changes:
         - .gitlab-ci.yml
