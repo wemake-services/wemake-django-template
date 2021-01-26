@@ -297,7 +297,7 @@ dev = ["pytest", "pytest-django", "pytest-cov", "django", "djangorestframework",
 
 [[package]]
 name = "django-feature-policy"
-version = "3.6.0"
+version = "3.7.0"
 description = "Set the draft security HTTP header Permissions-Policy (previously Feature-Policy) on your Django app."
 category = "main"
 optional = false
@@ -1707,7 +1707,7 @@ pyyaml = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "3.8.6"
-content-hash = "36c9134df76fea8e395ed06aefd9accc65d5141c6542800db295c81a02a232d8"
+content-hash = "8244bcfabdf3c7ca49ce30731128c6dbcf5277b1bc76a61e4ebb2ca189ba254f"
 
 [metadata.files]
 alabaster = [
@@ -1906,8 +1906,8 @@ django-extra-checks = [
     {file = "django_extra_checks-0.8.0-py3-none-any.whl", hash = "sha256:a37a4a9a22f2efa0e04a277b8d36e52f037a9e7edbcfcc2bb0860d608908d4c5"},
 ]
 django-feature-policy = [
-    {file = "django-feature-policy-3.6.0.tar.gz", hash = "sha256:dd6212e565b66c233945f8a080d7e06bf4968c8d2827a7dbc6e448c9a38d1b2a"},
-    {file = "django_feature_policy-3.6.0-py3-none-any.whl", hash = "sha256:7c8fee6138c3c393292b9bd75661bd0e7bf008f4f35a30715f49c8f4b210f764"},
+    {file = "django-feature-policy-3.7.0.tar.gz", hash = "sha256:9fcfd35bb4caf6c8025765e5cb530d421b687035133def51f185215a4dd0ad79"},
+    {file = "django_feature_policy-3.7.0-py3-none-any.whl", hash = "sha256:2ecf80de74c55f9a039487de3063099d0d9f95cd39285c0704c9ee454a8a24cb"},
 ]
 django-health-check = [
     {file = "django-health-check-3.16.2.tar.gz", hash = "sha256:d5edf773b59e4091ac6bd65280091dbb13d92e70eba5cf8573faa738a9cb481c"},
