@@ -221,7 +221,7 @@ tls = ["pyOpenSSL (>=17.5.0)", "cryptography (>=1.3.4)", "idna (>=2.0.0)"]
 
 [[package]]
 name = "docker-compose"
-version = "1.28.0"
+version = "1.28.2"
 description = "Multi-container orchestration for Docker"
 category = "dev"
 optional = false
@@ -1321,8 +1321,8 @@ docker = [
     {file = "docker-4.4.1.tar.gz", hash = "sha256:0604a74719d5d2de438753934b755bfcda6f62f49b8e4b30969a4b0a2a8a1220"},
 ]
 docker-compose = [
-    {file = "docker-compose-1.28.0.tar.gz", hash = "sha256:947888fe9377b48c260d59b6511ba205655c6beb45a4b70fbce28f753aacf75a"},
-    {file = "docker_compose-1.28.0-py2.py3-none-any.whl", hash = "sha256:f7649e5ac356ed0aa4b91204b46052e5f50375b33a1668d4300ea9a9085183df"},
+    {file = "docker-compose-1.28.2.tar.gz", hash = "sha256:2f148b590414915d029dad7551f4cdf0b03a774dc9baa674480217236d260cc1"},
+    {file = "docker_compose-1.28.2-py2.py3-none-any.whl", hash = "sha256:9e334a1684c35a929ac8eedb0f26434a389eb17776799ae090be9f55c6e9dab0"},
 ]
 docker-image-size-limit = [
     {file = "docker-image-size-limit-0.4.0.tar.gz", hash = "sha256:5a82d12a8f1bd9924873987191f9f198b004dd253ed5a29fcee5e4f7270e69ea"},
