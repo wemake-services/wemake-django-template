@@ -8,7 +8,11 @@ import logging
 from typing import List
 
 from server.settings.components import config
-from server.settings.components.common import INSTALLED_APPS, MIDDLEWARE
+from server.settings.components.common import (
+    DATABASES,
+    INSTALLED_APPS,
+    MIDDLEWARE,
+)
 
 # Setting the development status:
 
@@ -128,3 +132,7 @@ EXTRA_CHECKS = {
         'field-choices-constraint',
     ],
 }
+
+# Disable persistent DB connections
+# https://docs.djangoproject.com/en/2.2/ref/databases/#caveats
+DATABASES['default']['CONN_MAX_AGE'] = 0
