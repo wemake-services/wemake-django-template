@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 
 [tool.nitpick]
-style = "https://raw.githubusercontent.com/wemake-services/wemake-python-styleguide/master/styles/nitpick-style-wemake.toml"
+style = "https://raw.githubusercontent.com/wemake-services/wemake-python-styleguide/0.15.0/styles/nitpick-style-wemake.toml"
 
 
 [tool.poetry]
@@ -42,7 +42,7 @@ django-extra-checks = "^0.8"
 django-coverage-plugin = "^1.8"
 nplusone = "^1.0"
 
-wemake-python-styleguide = "^0.14"
+wemake-python-styleguide = "^0.15"
 flake8-pytest-style = "^1.3"
 flake8-django = "^1.1"
 flake8-logging-format = "^0.6"

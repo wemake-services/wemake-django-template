@@ -18,7 +18,6 @@ import os
 import secrets
 import shutil
 import string
-import textwrap
 
 # CHANGEME mark
 CHANGEME = '__CHANGEME__'
@@ -26,6 +25,14 @@ CHANGEME = '__CHANGEME__'
 # Get the root project directory
 PROJECT_DIRECTORY = os.path.realpath(os.path.curdir)
 PROJECT_NAME = '{{ cookiecutter.project_name }}'
+
+# Messages
+PROJECT_SUCCESS = """
+Your project {0} is created.
+Now you can start working on it:
+
+    cd {0}
+"""
 
 
 def _get_random_string(length=50):
@@ -70,13 +77,7 @@ def _create_secret_key(config_path):
 
 def print_futher_instuctions():
     """Shows user what to do next after project creation."""
-    message = textwrap.dedent("""
-    Your project {0} is created.
-    Now you can start working on it:
-
-        cd {0}
-    """)
-    print(message.format(PROJECT_NAME))  # noqa: WPS421
+    print(PROJECT_SUCCESS.format(PROJECT_NAME))  # noqa: WPS421
 
 
 def copy_local_configuration():
