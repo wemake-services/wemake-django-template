@@ -29,12 +29,8 @@ variables:
     - pwd && echo "$CI_PROJECT_DIR" && cd "$CI_PROJECT_DIR"
     # Installing global dependencies:
     - apk update && apk upgrade
-    - apk add
-              # Python:
-              python3 python3-dev py3-pip py3-wheel
-              # System deps:
+    - apk add python3 python3-dev py3-pip py3-wheel
               libffi-dev openssl-dev build-base git
-              # Rust deps (required for the latest cryptography releases):
               cargo gcc musl-dev
     - pip3 install -U pip && pip3 --version
     - pip3 install dump-env docker-image-size-limit docker-compose
