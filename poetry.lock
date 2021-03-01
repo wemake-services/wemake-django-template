@@ -202,7 +202,7 @@ python-versions = "*"
 
 [[package]]
 name = "docker"
-version = "4.4.3"
+version = "4.4.4"
 description = "A Python library for the Docker Engine API."
 category = "dev"
 optional = false
@@ -221,7 +221,7 @@ tls = ["pyOpenSSL (>=17.5.0)", "cryptography (>=1.3.4)", "idna (>=2.0.0)"]
 
 [[package]]
 name = "docker-compose"
-version = "1.28.4"
+version = "1.28.5"
 description = "Multi-container orchestration for Docker"
 category = "dev"
 optional = false
@@ -231,7 +231,7 @@ python-versions = ">=3.4"
 cached-property = ">=1.2.0,<2"
 colorama = {version = ">=0.4,<1", markers = "sys_platform == \"win32\""}
 distro = ">=1.5.0,<2"
-docker = {version = ">=4.4.3,<5", extras = ["ssh"]}
+docker = {version = ">=4.4.4,<5", extras = ["ssh"]}
 dockerpty = ">=0.4.1,<1"
 docopt = ">=0.6.1,<1"
 jsonschema = ">=2.5.1,<4"
@@ -1311,12 +1311,12 @@ distro = [
     {file = "distro-1.5.0.tar.gz", hash = "sha256:0e58756ae38fbd8fc3020d54badb8eae17c5b9dcbed388b17bb55b8a5928df92"},
 ]
 docker = [
-    {file = "docker-4.4.3-py2.py3-none-any.whl", hash = "sha256:d4625e70e3d5a12d7cbf1fd68cef2e081ac86b83889e00e5466d975f90e50dad"},
-    {file = "docker-4.4.3.tar.gz", hash = "sha256:de5753b7f6486dd541a98393e423e387579b8974a5068748b83f852cc76a89d6"},
+    {file = "docker-4.4.4-py2.py3-none-any.whl", hash = "sha256:f3607d5695be025fa405a12aca2e5df702a57db63790c73b927eb6a94aac60af"},
+    {file = "docker-4.4.4.tar.gz", hash = "sha256:d3393c878f575d3a9ca3b94471a3c89a6d960b35feb92f033c0de36cc9d934db"},
 ]
 docker-compose = [
-    {file = "docker-compose-1.28.4.tar.gz", hash = "sha256:681aca74e70e238ae43c810a62f471b645942f0ce97b6a0ca375fcb64f3aca85"},
-    {file = "docker_compose-1.28.4-py2.py3-none-any.whl", hash = "sha256:92375b30ab7134e8c32470b621e7cf9a3c0771ce2c20de7e1f11cd71f83a088e"},
+    {file = "docker-compose-1.28.5.tar.gz", hash = "sha256:b3ff8f0352eb4055c4c483cb498aeff7c90195fa679f3caf7098a2d6fa6030e5"},
+    {file = "docker_compose-1.28.5-py2.py3-none-any.whl", hash = "sha256:2c09c6a7d320f1191d14ae6e7d93190d459313c8393cc5c74cb15f9205a8f23f"},
 ]
 docker-image-size-limit = [
     {file = "docker-image-size-limit-0.4.0.tar.gz", hash = "sha256:5a82d12a8f1bd9924873987191f9f198b004dd253ed5a29fcee5e4f7270e69ea"},
