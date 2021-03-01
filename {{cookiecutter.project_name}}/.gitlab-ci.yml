@@ -53,7 +53,7 @@ test:
     # The logic itself:
     - docker-compose build
     - docker-compose run --user=root --rm web sh ./docker/ci.sh
-    - disl "${PROJECT_NAME}:dev" 850MiB
+    - disl "${PROJECT_NAME}:dev" 900MiB
 
     # Pushing back the result for future runs:
     - docker tag "${PROJECT_NAME}:dev" "${IMAGE_FULL_NAME}:dev"
