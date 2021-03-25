@@ -329,14 +329,14 @@ dev = ["pytest (>=6,<7)", "pytest-cov (>=2,<3)", "pytest-django (>=4,<5)", "Djan
 
 [[package]]
 name = "django-feature-policy"
-version = "3.8.0"
-description = "Set the draft security HTTP header Permissions-Policy (previously Feature-Policy) on your Django app."
+version = "4.0.0"
+description = "django-feature-policy is now django-permissions-policy."
 category = "main"
 optional = false
-python-versions = ">=3.6"
+python-versions = "*"
 
 [package.dependencies]
-Django = ">=2.2"
+django-permissions-policy = "*"
 
 [[package]]
 name = "django-health-check"
@@ -383,6 +383,17 @@ six = ">=1.14.0"
 
 [package.extras]
 test = ["tox (>=3.15.2)", "mysqlclient (>=1.4.6)", "psycopg2-binary (>=2.8.5)", "django-add-default-value (>=0.4.0)", "mock (>=3.0.5)", "backports.tempfile (>=1.0)"]
+
+[[package]]
+name = "django-permissions-policy"
+version = "4.0.0"
+description = "Set the draft security HTTP header Permissions-Policy (previously Feature-Policy) on your Django app."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+Django = ">=2.2"
 
 [[package]]
 name = "django-querycount"
@@ -1786,7 +1797,7 @@ pyyaml = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "3.8.6"
-content-hash = "921ce2e4f776abcc98c6f32eb6350cc116ea6cd9c4060f79040110c9f87b5ec9"
+content-hash = "48d767e8b5064a56c87fc77f6d224c929a54dd285e52e6e2da745fffea6d06f7"
 
 [metadata.files]
 alabaster = [
@@ -2002,8 +2013,8 @@ django-extra-checks = [
     {file = "django_extra_checks-0.10.0-py3-none-any.whl", hash = "sha256:3648ae929a4685d9a0ca056c0c290815f75b52e360e752cb0d11931ebba75023"},
 ]
 django-feature-policy = [
-    {file = "django-feature-policy-3.8.0.tar.gz", hash = "sha256:a1a91a57c1e2722d037dea138645518aa75809e85a586b9a40400194013fb19b"},
-    {file = "django_feature_policy-3.8.0-py3-none-any.whl", hash = "sha256:020878ce3ce331fc1178f96b63b88b6d550e8e5383f0241e75693084e1f8ace6"},
+    {file = "django-feature-policy-4.0.0.tar.gz", hash = "sha256:13a9ed57c68fe949544b2ffcf2b1a1d70ad8e32b0d420d1a5c1623cd8575ec94"},
+    {file = "django_feature_policy-4.0.0-py3-none-any.whl", hash = "sha256:0ab63a635aab662add72c0e8c78a8896bed7eaf45be5b52ee56a8c1e4bcbb145"},
 ]
 django-health-check = [
     {file = "django-health-check-3.16.3.tar.gz", hash = "sha256:a6aa6ea423eae4fd0665f6372b826af1ed20dfc3e88cf52789d0b49cfb64969c"},
@@ -2019,6 +2030,10 @@ django-ipware = [
 django-migration-linter = [
     {file = "django-migration-linter-2.5.1.tar.gz", hash = "sha256:32f552b09e122c278acbef84d92c2f01ecf03dfa0c72b4918762b7e39f598691"},
     {file = "django_migration_linter-2.5.1-py2.py3-none-any.whl", hash = "sha256:e4209e74393ddb86f31e8b7a13555fcecd1def506a04e1fe16b470248661dec7"},
+]
+django-permissions-policy = [
+    {file = "django-permissions-policy-4.0.0.tar.gz", hash = "sha256:fc468017e4a6d98f91695b40d6754fe592c2cd25b1ed97a602d12400093aa144"},
+    {file = "django_permissions_policy-4.0.0-py3-none-any.whl", hash = "sha256:2e69d6432a8fa16654a4344b20fc98642604b6cf86ef43ead23dba51645bd839"},
 ]
 django-querycount = [
     {file = "django-querycount-0.7.0.tar.gz", hash = "sha256:8f5123d78716ff0704f2373e746a7200b8d8417798ce4a99bf2de87e3768f9ce"},
