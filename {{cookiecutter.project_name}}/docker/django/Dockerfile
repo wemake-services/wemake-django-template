@@ -33,7 +33,7 @@ ENV DJANGO_ENV=${DJANGO_ENV} \
 
 
 # System deps:
-RUN apt-get update && apt-get upgrade \
+RUN apt-get update && apt-get upgrade -y \
   && apt-get install --no-install-recommends -y \
     bash \
     build-essential \
