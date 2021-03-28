@@ -29,5 +29,5 @@ docker-compose -f docker-compose.yml \
   python manage.py check --deploy --fail-level WARNING
 
 # Checking the size of final images:
-disl "${PROJECT_NAME}:dev" 900MiB
+disl "${PROJECT_NAME}:dev" 950MiB
 disl "registry.gitlab.com/${PROJECT_ORGANIZATION}/${PROJECT_NAME}:latest" 600MiB
