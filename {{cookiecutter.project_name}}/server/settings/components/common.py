@@ -54,7 +54,8 @@ MIDDLEWARE: Tuple[str, ...] = (
 
     # Django:
     'django.middleware.security.SecurityMiddleware',
-    'django_feature_policy.FeaturePolicyMiddleware',  # django-feature-policy
+    # django-permissions-policy
+    'django_permissions_policy.PermissionsPolicyMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -190,8 +191,8 @@ X_FRAME_OPTIONS = 'DENY'
 # https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
 REFERRER_POLICY = 'same-origin'
 
-# https://github.com/adamchainz/django-feature-policy#setting
-FEATURE_POLICY: Dict[str, Union[str, List[str]]] = {}  # noqa: WPS234
+# https://github.com/adamchainz/django-permissions-policy#setting
+PERMISSIONS_POLICY: Dict[str, Union[str, List[str]]] = {}  # noqa: WPS234
 
 
 # Timeouts
