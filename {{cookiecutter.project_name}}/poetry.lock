@@ -402,7 +402,7 @@ python-versions = ">=3.6,<4.0"
 
 [[package]]
 name = "django-stubs"
-version = "1.7.0"
+version = "1.8.0"
 description = "Mypy stubs for Django"
 category = "dev"
 optional = false
@@ -410,6 +410,7 @@ python-versions = ">=3.6"
 
 [package.dependencies]
 django = "*"
+django-stubs-ext = "*"
 mypy = ">=0.790"
 typing-extensions = "*"
 
@@ -1814,7 +1815,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pyt
 [metadata]
 lock-version = "1.1"
 python-versions = "3.8.9"
-content-hash = "c0aaa65612525ed1f503588ec3d2c5c66fac997261b8b2a00f7355448cc556de"
+content-hash = "58d7487286e790e49e3897ac9fd7c0cf5336441b50f0ffaca16f23f66f74f1e7"
 
 [metadata.files]
 alabaster = [
@@ -2056,8 +2057,8 @@ django-split-settings = [
     {file = "django_split_settings-1.0.1-py3-none-any.whl", hash = "sha256:8d636649023289d0ef0ba08b0a4f37761adc94a29ee0ebfe65922c3cb0594ede"},
 ]
 django-stubs = [
-    {file = "django-stubs-1.7.0.tar.gz", hash = "sha256:ddd190aca5b9adb4d30760d5c64f67cb3658703f5f42c3bb0c2c71ff4d752c39"},
-    {file = "django_stubs-1.7.0-py3-none-any.whl", hash = "sha256:30a7d99c694acf79c5d93d69a5a8e4b54d2a8c11dd672aa869006789e2189fa6"},
+    {file = "django-stubs-1.8.0.tar.gz", hash = "sha256:717967d7fee0a6af0746724a0be80d72831a982a40fa8f245a6a46f4cafd157b"},
+    {file = "django_stubs-1.8.0-py3-none-any.whl", hash = "sha256:bde9e44e3c4574c2454e74a3e607cc3bc23b0441bb7d1312cd677d5e30984b74"},
 ]
 django-stubs-ext = [
     {file = "django-stubs-ext-0.1.0.tar.gz", hash = "sha256:2cf0f9615c0f7c399d23e4be4d9ab4b354e550480a950f659cdf1aa3ba19bd38"},
