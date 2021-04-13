@@ -500,7 +500,7 @@ pipenv = ["pipenv"]
 
 [[package]]
 name = "dump-env"
-version = "1.2.0"
+version = "1.3.0"
 description = "A utility tool to create .env files"
 category = "dev"
 optional = false
@@ -1815,7 +1815,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pyt
 [metadata]
 lock-version = "1.1"
 python-versions = "3.8.9"
-content-hash = "58d7487286e790e49e3897ac9fd7c0cf5336441b50f0ffaca16f23f66f74f1e7"
+content-hash = "8024bb9375b8ca48682a977339db23ad3f05a7634a195a1b7e4bee3ba384c2b9"
 
 [metadata.files]
 alabaster = [
@@ -2088,8 +2088,8 @@ dparse = [
     {file = "dparse-0.5.1.tar.gz", hash = "sha256:a1b5f169102e1c894f9a7d5ccf6f9402a836a5d24be80a986c7ce9eaed78f367"},
 ]
 dump-env = [
-    {file = "dump-env-1.2.0.tar.gz", hash = "sha256:9b9ee7a8afe2a8194a712d12a925cc54f0b3178833491fdced5dcb6f68b56c60"},
-    {file = "dump_env-1.2.0-py3-none-any.whl", hash = "sha256:ca26f6d87a33418adb794338e748a0d3507014e3388250077c696e8c96634562"},
+    {file = "dump-env-1.3.0.tar.gz", hash = "sha256:6c2874c7f30c7cea945f3438e37e67e081644bd6c5383189613e5fc31c277837"},
+    {file = "dump_env-1.3.0-py3-none-any.whl", hash = "sha256:c2f3bdda16f0dbb79fca0b22f8df763cff4009d311342c73ce36bcd1ad8b007c"},
 ]
 eradicate = [
     {file = "eradicate-2.0.0.tar.gz", hash = "sha256:27434596f2c5314cc9b31410c93d8f7e8885747399773cd088d3adea647a60c8"},
