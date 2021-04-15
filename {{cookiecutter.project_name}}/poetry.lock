@@ -416,7 +416,7 @@ typing-extensions = "*"
 
 [[package]]
 name = "django-stubs-ext"
-version = "0.1.0"
+version = "0.2.0"
 description = "Monkey-patching and extensions for django-stubs"
 category = "main"
 optional = false
@@ -1815,7 +1815,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pyt
 [metadata]
 lock-version = "1.1"
 python-versions = "3.8.9"
-content-hash = "8024bb9375b8ca48682a977339db23ad3f05a7634a195a1b7e4bee3ba384c2b9"
+content-hash = "9e6916954300f2ecf6660f743ee7b89559465530dad4bdfe7ff9b8874e8bd71e"
 
 [metadata.files]
 alabaster = [
@@ -2061,8 +2061,8 @@ django-stubs = [
     {file = "django_stubs-1.8.0-py3-none-any.whl", hash = "sha256:bde9e44e3c4574c2454e74a3e607cc3bc23b0441bb7d1312cd677d5e30984b74"},
 ]
 django-stubs-ext = [
-    {file = "django-stubs-ext-0.1.0.tar.gz", hash = "sha256:2cf0f9615c0f7c399d23e4be4d9ab4b354e550480a950f659cdf1aa3ba19bd38"},
-    {file = "django_stubs_ext-0.1.0-py3-none-any.whl", hash = "sha256:663469e7452ead59ae9235eb62b35ef09a15ae94f2193fedf1b84aea471fc011"},
+    {file = "django-stubs-ext-0.2.0.tar.gz", hash = "sha256:c14f297835a42c1122421ec7e2d06579996b29d33b8016002762afa5d78863af"},
+    {file = "django_stubs_ext-0.2.0-py3-none-any.whl", hash = "sha256:bd4a1e36ef2ba0ef15801933c85c68e59b383302c873795c6ecfc25950c7ecdb"},
 ]
 django-test-migrations = [
     {file = "django-test-migrations-1.1.0.tar.gz", hash = "sha256:27c0127552920bbdc339a84de360f1792abc8c353e2c8d2b86af92dc1ade6703"},
