@@ -18,3 +18,7 @@ services:
     volumes:
       # We only mount source code in development:
       - .:/code
+    # set env variables. See: https://github.com/wemake-services/wemake-django-template/issues/1518
+    environment:
+      - USER_ID=${UID?Variable not set}
+      - USER_GID=${GID?Variable not set}

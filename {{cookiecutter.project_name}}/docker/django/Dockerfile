@@ -8,6 +8,7 @@ LABEL vendor="wemake.services"
 
 ARG DJANGO_ENV
 
+ENV USER=web USER_ID=1000 USER_GID=1000
 ENV DJANGO_ENV=${DJANGO_ENV} \
   # build:
   BUILD_ONLY_PACKAGES='wget' \
@@ -69,10 +70,10 @@ COPY ./docker/django/entrypoint.sh /docker-entrypoint.sh
 
 # Setting up proper permissions:
 RUN chmod +x '/docker-entrypoint.sh' \
-  && groupadd -r web && useradd -d /code -r -g web web \
-  && chown web:web -R /code \
+  && groupadd -r ${USER} --gid ${USER_GID} && useradd --uid ${USER_ID} --gid ${USER_GID} -d /code -r -g ${USER} ${USER} \
+  && chown ${USER}:${USER} -R /code \
   && mkdir -p /var/www/django/static /var/www/django/media \
-  && chown web:web /var/www/django/static /var/www/django/media
+  && chown ${USER}:${USER} /var/www/django/static /var/www/django/media
 
 # Copy only requirements, to cache them in docker layer
 COPY --chown=web:web ./poetry.lock ./pyproject.toml /code/
