@@ -8,7 +8,10 @@ LABEL vendor="wemake.services"
 
 ARG DJANGO_ENV
 
-ENV USER=web USER_ID=1000 USER_GID=1000
+# user args
+ARG USER=web
+ARG USER_ID=1000
+ARG USER_GID=1000
 
 ENV DJANGO_ENV=${DJANGO_ENV} \
   # build:
