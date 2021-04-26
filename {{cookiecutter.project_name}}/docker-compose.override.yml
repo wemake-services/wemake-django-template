@@ -19,7 +19,8 @@ services:
       # We only mount source code in development:
       - .:/code
     build:
-      # set env variables. See: https://github.com/wemake-services/wemake-django-template/issues/1518
+      # Set build args.
+      # See: https://github.com/wemake-services/wemake-django-template/issues/1518
       args:
         USER_ID: ${UID:-1000}
         USER_GID: ${GID:-1000}

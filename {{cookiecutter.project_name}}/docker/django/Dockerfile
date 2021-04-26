@@ -91,7 +91,7 @@ RUN echo "$DJANGO_ENV" \
   && if [ "$DJANGO_ENV" = 'production' ]; then rm -rf "$POETRY_CACHE_DIR"; fi
 
 # Running as non-root user:
-USER web
+USER $USER
 
 # We customize how our app is loaded with the custom entrypoint:
 ENTRYPOINT ["tini", "--", "/docker-entrypoint.sh"]
