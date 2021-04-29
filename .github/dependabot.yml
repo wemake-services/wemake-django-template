@@ -1,0 +1,83 @@
+version: 2
+updates:
+- package-ecosystem: pip
+  directory: "/{{cookiecutter.project_name}}"
+  schedule:
+    interval: daily
+    time: "02:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: hypothesis
+    versions:
+    - 6.8.4
+    - 6.9.0
+  - dependency-name: sphinx
+    versions:
+    - 3.5.4
+  - dependency-name: django
+    versions:
+    - 3.1.6
+    - 3.1.7
+    - "3.2"
+  - dependency-name: django-feature-policy
+    versions:
+    - 4.0.0
+  - dependency-name: flake8-pytest-style
+    versions:
+    - 1.4.0
+  - dependency-name: nitpick
+    versions:
+    - 0.24.0
+    - 0.24.1
+  - dependency-name: wemake-python-styleguide
+    versions:
+    - 0.15.0
+  - dependency-name: django-migration-linter
+    versions:
+    - 2.5.0
+- package-ecosystem: pip
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "02:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: nitpick
+    versions:
+    - 0.24.0
+    - 0.25.0
+  - dependency-name: wemake-python-styleguide
+    versions:
+    - 0.15.0
+    - 0.15.2
+  - dependency-name: cryptography
+    versions:
+    - 3.3.2
+- package-ecosystem: pip
+  directory: "/{{cookiecutter.project_name}}/docs"
+  schedule:
+    interval: daily
+    time: "02:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: sphinx
+    versions:
+    - 3.5.4
+- package-ecosystem: docker
+  directory: "/{{cookiecutter.project_name}}/docker/django"
+  schedule:
+    interval: daily
+    time: "02:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: python
+    versions:
+    - 3.9.2.pre.slim.pre.buster
+    - 3.9.3.pre.slim.pre.buster
+    - 3.9.4.pre.slim.pre.buster
+- package-ecosystem: github-actions
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "02:00"
+  open-pull-requests-limit: 10
