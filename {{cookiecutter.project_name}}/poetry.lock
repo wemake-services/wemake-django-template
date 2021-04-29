@@ -1354,7 +1354,7 @@ pytest = "*"
 
 [[package]]
 name = "pytest-testmon"
-version = "1.1.0"
+version = "1.1.1"
 description = "selects tests affected by changed files and methods"
 category = "dev"
 optional = false
@@ -2171,6 +2171,7 @@ gitpython = [
     {file = "GitPython-3.1.14.tar.gz", hash = "sha256:be27633e7509e58391f10207cd32b2a6cf5b908f92d9cd30da2e514e1137af61"},
 ]
 gunicorn = [
+    {file = "gunicorn-20.1.0-py3-none-any.whl", hash = "sha256:9dcc4547dbb1cb284accfb15ab5667a0e5d1881cc443e0677b4882a4067a807e"},
     {file = "gunicorn-20.1.0.tar.gz", hash = "sha256:e0a968b5ba15f8a328fdfd7ab1fcb5af4470c28aaf7e55df02a99bc13138e6e8"},
 ]
 hypothesis = [
@@ -2492,7 +2493,7 @@ pytest-randomly = [
     {file = "pytest_randomly-3.7.0-py3-none-any.whl", hash = "sha256:cd68c1da7d152509f59fec725f5314437727937fad31a50028693269c9261d90"},
 ]
 pytest-testmon = [
-    {file = "pytest-testmon-1.1.0.tar.gz", hash = "sha256:f88a53d28f89836509732e9dee611d66c61f5b8217201bb822a0456f2c323d19"},
+    {file = "pytest-testmon-1.1.1.tar.gz", hash = "sha256:c8810f991545e352f646fb382e5962ff54b8aa52b09d62d35ae04f0d7a9c58d9"},
 ]
 pytest-timeout = [
     {file = "pytest-timeout-1.4.2.tar.gz", hash = "sha256:20b3113cf6e4e80ce2d403b6fb56e9e1b871b510259206d40ff8d609f48bda76"},
