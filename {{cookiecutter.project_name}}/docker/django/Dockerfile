@@ -82,6 +82,8 @@ RUN echo "$DJANGO_ENV" \
   && poetry install \
     $(if [ "$DJANGO_ENV" = 'production' ]; then echo '--no-dev'; fi) \
     --no-interaction --no-ansi \
+  # Upgrading pip, it is insecure, remove after `pip@21.1`
+  && poetry run pip install -U pip \
   # Cleaning poetry installation's cache for production:
   && if [ "$DJANGO_ENV" = 'production' ]; then rm -rf "$POETRY_CACHE_DIR"; fi
 
