@@ -843,7 +843,7 @@ python-versions = "*"
 
 [[package]]
 name = "ipython"
-version = "7.23.0"
+version = "7.23.1"
 description = "IPython: Productive Interactive Computing"
 category = "dev"
 optional = false
@@ -2212,8 +2212,8 @@ iniconfig = [
     {file = "iniconfig-1.1.1.tar.gz", hash = "sha256:bc3af051d7d14b2ee5ef9969666def0cd1a000e121eaea580d4a313df4b37f32"},
 ]
 ipython = [
-    {file = "ipython-7.23.0-py3-none-any.whl", hash = "sha256:3455b020a895710c4366e8d1b326e5ee6aa684607907fc96895e7b8359569f49"},
-    {file = "ipython-7.23.0.tar.gz", hash = "sha256:69178f32bf9c6257430b6f592c3ae230c32861a1966d2facec454e09078e232d"},
+    {file = "ipython-7.23.1-py3-none-any.whl", hash = "sha256:f78c6a3972dde1cc9e4041cbf4de583546314ba52d3c97208e5b6b2221a9cb7d"},
+    {file = "ipython-7.23.1.tar.gz", hash = "sha256:714810a5c74f512b69d5f3b944c86e592cee0a5fb9c728e582f074610f6cf038"},
 ]
 ipython-genutils = [
     {file = "ipython_genutils-0.2.0-py2.py3-none-any.whl", hash = "sha256:72dd37233799e619666c9f639a9da83c34013a73e8bbc79a7a6348d93c61fab8"},
