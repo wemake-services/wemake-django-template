@@ -977,7 +977,7 @@ pytest = ">=3.3.0,<6.0.0"
 
 [[package]]
 name = "pytest-randomly"
-version = "3.7.0"
+version = "3.8.0"
 description = "Pytest plugin to randomly order tests and control random.seed."
 category = "dev"
 optional = false
@@ -1288,7 +1288,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pyt
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "9f99e78e341ad875d6f0fad397bf182d7bc4bafdf276a3faf0e0fc9e109dc321"
+content-hash = "d76ce55479df2d22cf89ad56437f3159a3482b1af97dd7d3ceee7c40486d346c"
 
 [metadata.files]
 arrow = [
@@ -1751,8 +1751,8 @@ pytest-cookies = [
     {file = "pytest_cookies-0.5.1-py2.py3-none-any.whl", hash = "sha256:9dc21d7ae56ef38a5fddb0e11eb5cb4c993907a6cafb6dd11d62c41e47af391b"},
 ]
 pytest-randomly = [
-    {file = "pytest-randomly-3.7.0.tar.gz", hash = "sha256:89a4f98aed1753c447a3927b66571a796e53cdecbf671e7318f6c57d79c7f6a3"},
-    {file = "pytest_randomly-3.7.0-py3-none-any.whl", hash = "sha256:cd68c1da7d152509f59fec725f5314437727937fad31a50028693269c9261d90"},
+    {file = "pytest-randomly-3.8.0.tar.gz", hash = "sha256:d9e21a72446757129378beea00bc9a32df1fb1cfd0bbe408be1ae9685bdf1209"},
+    {file = "pytest_randomly-3.8.0-py3-none-any.whl", hash = "sha256:f5b7a09e84ee1eabcdedbb73c51d0929ae2f582bab6941dbb513bb49296d6340"},
 ]
 python-dateutil = [
     {file = "python-dateutil-2.8.1.tar.gz", hash = "sha256:73ebfe9dbf22e832286dafa60473e4cd239f8592f699aa5adaf10050e6e1823c"},
