@@ -35,7 +35,7 @@ nitpick = "^0.26"
 
 pytest = "^5.4"
 pytest-randomly = "^3.8"
-pytest-cookies = "^0.5"
+pytest-cookies = "^0.6"
 
 safety = "^1.10"
 
