@@ -48,7 +48,7 @@ cookiecutter gh:wemake-services/wemake-django-template
 ```
 
 
-## Who are using this template?
+## Who is using this template?
 
 If you use our template, please add yourself or your company [in the list](https://github.com/wemake-services/wemake-django-template/wiki/Who-is-using-this-template).
 
