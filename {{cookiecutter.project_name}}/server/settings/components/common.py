@@ -90,6 +90,7 @@ DATABASES = {
         'CONN_MAX_AGE': config('CONN_MAX_AGE', cast=int, default=60),
         'OPTIONS': {
             'connect_timeout': 10,
+            'statement_timeout': 15000,
         },
     },
 }
