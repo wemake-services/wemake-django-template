@@ -10,7 +10,7 @@
 version: "3.6"
 services:
   db:
-    image: "postgres:9.6-alpine"
+    image: "postgres:13-alpine"
     restart: unless-stopped
     volumes:
       - pgdata:/var/lib/postgresql/data
