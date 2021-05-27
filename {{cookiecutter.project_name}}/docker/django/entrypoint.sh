@@ -7,7 +7,7 @@ readonly cmd="$*"
 
 postgres_ready () {
   # Check that postgres is up and running on port `5432`:
-  dockerize -wait 'tcp://db:5432' -timeout 5s
+  dockerize -wait 'tcp://db:5432' -timeout 10s
 }
 
 # We need this line to make sure that this container is started
