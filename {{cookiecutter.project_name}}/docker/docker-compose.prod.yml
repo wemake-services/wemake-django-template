@@ -6,10 +6,10 @@
 # This setup is supposed to be used with `docker-swarm`.
 # See `./docs/pages/template/production.rst` docs.
 
-version: "3.6"
+version: "3.8"
 services:
   caddy:
-    image: "caddy:2.2.1"
+    image: "caddy:2.4.1"
     restart: unless-stopped
     env_file: ./config/.env
     volumes:
