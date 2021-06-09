@@ -279,7 +279,7 @@ django-ipware = ">=3,<4"
 
 [[package]]
 name = "django-coverage-plugin"
-version = "1.8.0"
+version = "2.0.0"
 description = "Django template coverage.py plugin"
 category = "dev"
 optional = false
@@ -1831,7 +1831,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pyt
 [metadata]
 lock-version = "1.1"
 python-versions = "3.8.9"
-content-hash = "4b104980c33cae33fa7dcad2c1dc191fa530fb6e2d0dca66c719b327f232ff34"
+content-hash = "3d1c7f1ccd081bef4622ea796ef7aad850518c1972487bbe4beb7c7d2d265abc"
 
 [metadata.files]
 alabaster = [
@@ -2044,7 +2044,7 @@ django-axes = [
     {file = "django_axes-5.17.0-py3-none-any.whl", hash = "sha256:2ee839526bb6b2bc9cecf48bdfbfbfa4855d8ecd94690837cf2828206da2baf3"},
 ]
 django-coverage-plugin = [
-    {file = "django_coverage_plugin-1.8.0.tar.gz", hash = "sha256:d53cbf3828fd83d6b89ff7292c6805de5274e36411711692043e67bcde25ae0c"},
+    {file = "django_coverage_plugin-2.0.0.tar.gz", hash = "sha256:5a7ac412528876563a45f9b54ad9962e33e5f95b409843c4c6c92cb0247eee66"},
 ]
 django-csp = [
     {file = "django_csp-3.7-py2.py3-none-any.whl", hash = "sha256:01443a07723f9a479d498bd7bb63571aaa771e690f64bde515db6cdb76e8041a"},
