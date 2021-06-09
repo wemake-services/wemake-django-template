@@ -58,7 +58,7 @@ pytest-timeout = "^1.4"
 django-test-migrations = "^1.1"
 hypothesis = "^6.13"
 
-mypy = "^0.812"
+mypy = "^0.901"
 django-stubs = "^1.8"
 
 sphinx = "^4.0"
