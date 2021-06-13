@@ -1,4 +1,3 @@
-
 from hypothesis import given
 from hypothesis.extra import django
 
@@ -9,7 +8,7 @@ class TestBlogPost(django.TestCase):
     """This is a property-based test that ensures model correctness."""
 
     @given(django.from_model(BlogPost))
-    def test_model_properties(self, instance):
+    def test_model_properties(self, instance: BlogPost) -> None:
         """Tests that instance can be saved and has correct representation."""
         instance.save()
 

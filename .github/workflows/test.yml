@@ -1,44 +1,50 @@
 name: test
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.7]
+        python-version: [3.8]
 
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v1
+      uses: actions/setup-python@v2
       with:
         python-version: ${{ matrix.python-version }}
 
     - name: Install poetry
-      run: curl -sSL "https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py" | python
+      run: |
+        curl -sSL "https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py" | python
+
+        # Adding `poetry` to `$PATH`:
+        echo "$HOME/.poetry/bin" >> $GITHUB_PATH
 
     - name: Set up cache
-      uses: actions/cache@v1
+      uses: actions/cache@v2
       with:
         path: .venv
         key: venv-${{ matrix.python-version }}-${{ hashFiles('poetry.lock') }}
     - name: Install dependencies
       run: |
-        source "$HOME/.poetry/env"
         poetry config virtualenvs.in-project true
         poetry install
 
+        poetry run pip install -U pip
+
     - name: Run checks
       run: |
-        source "$HOME/.poetry/env"
-
         poetry run flake8 .
         poetry run pytest
-        poetry run sh tests/test_integration.sh
+        poetry run sh tests/test_github.sh
         poetry run poetry check
         poetry run pip check
-        # Ignoring sphinx@2 security issue for now, see:
-        # https://github.com/miyakogi/m2r/issues/51
-        poetry run safety check --bare --full-report -i 38330
+        poetry run safety check --full-report

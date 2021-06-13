@@ -1,4 +1,3 @@
-
 """
 Django settings for server project.
 
@@ -11,7 +10,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 from typing import Dict, List, Tuple, Union
 
-from django.utils.translation import ugettext_lazy as ugt
+from django.utils.translation import ugettext_lazy as _
 
 from server.settings.components import BASE_DIR, config
 
@@ -47,9 +46,6 @@ INSTALLED_APPS: Tuple[str, ...] = (
     'health_check.db',
     'health_check.cache',
     'health_check.storage',
-
-    # Third party apps
-    'django_http_referrer_policy',
 )
 
 MIDDLEWARE: Tuple[str, ...] = (
@@ -58,7 +54,8 @@ MIDDLEWARE: Tuple[str, ...] = (
 
     # Django:
     'django.middleware.security.SecurityMiddleware',
-    'django_feature_policy.FeaturePolicyMiddleware',  # django-feature-policy
+    # django-permissions-policy
+    'django_permissions_policy.PermissionsPolicyMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -107,8 +104,8 @@ USE_I18N = True
 USE_L10N = True
 
 LANGUAGES = (
-    ('en', ugt('English')),
-    ('ru', ugt('Russian')),
+    ('en', _('English')),
+    ('ru', _('Russian')),
 )
 
 LOCALE_PATHS = (
@@ -191,12 +188,14 @@ SECURE_BROWSER_XSS_FILTER = True
 X_FRAME_OPTIONS = 'DENY'
 
 # https://github.com/DmytroLitvinov/django-http-referrer-policy
-# https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy#Syntax
+# https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
 REFERRER_POLICY = 'same-origin'
 
-# https://github.com/adamchainz/django-feature-policy#setting
-FEATURE_POLICY: Dict[str, Union[str, List[str]]] = {}  # noqa: WPS234
+# https://github.com/adamchainz/django-permissions-policy#setting
+PERMISSIONS_POLICY: Dict[str, Union[str, List[str]]] = {}  # noqa: WPS234
 
 
 # Timeouts
+# https://docs.djangoproject.com/en/2.2/ref/settings/#std:setting-EMAIL_TIMEOUT
+
 EMAIL_TIMEOUT = 5

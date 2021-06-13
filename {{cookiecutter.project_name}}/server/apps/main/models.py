@@ -1,8 +1,7 @@
-
 import textwrap
+from typing import Final, final
 
 from django.db import models
-from typing_extensions import Final, final
 
 #: That's how constants should be defined.
 _POST_TITLE_MAX_LENGTH: Final = 80
@@ -14,7 +13,7 @@ class BlogPost(models.Model):
     This model is used just as an example.
 
     With it we show how one can:
-    - Use fixtures and factoris
+    - Use fixtures and factories
     - Use migrations testing
 
     """
@@ -23,7 +22,7 @@ class BlogPost(models.Model):
     body = models.TextField()
 
     created_at = models.DateTimeField(auto_now_add=True)
-    modifiet_at = models.DateTimeField(auto_now=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     class Meta(object):
         verbose_name = 'BlogPost'  # You can probably use `gettext` for this

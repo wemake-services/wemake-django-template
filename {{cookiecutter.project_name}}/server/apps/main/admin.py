@@ -1,4 +1,8 @@
+from django.contrib import admin
 
-from django.contrib import admin  # noqa: F401
+from server.apps.main.models import BlogPost
 
-# Register your models here.
+
+@admin.register(BlogPost)
+class BlogPostAdmin(admin.ModelAdmin[BlogPost]):
+    """Admin panel example for ``BlogPost`` model."""

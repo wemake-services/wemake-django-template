@@ -12,7 +12,7 @@ Django
 Django has a lot of `security-specific settings <https://docs.djangoproject.com/en/2.2/topics/security/>`_
 that are all turned on by default in this template.
 
-We also :ref:`enforce <going-to-production#checks>` all the best practices
+We also :ref:`enforce <going-to-production>` all the best practices
 by running ``django`` checks inside CI for each commit.
 
 We also use a set of custom ``django`` apps
@@ -20,7 +20,7 @@ to enforce even more security rules:
 
 - `django-axes <https://github.com/jazzband/django-axes>`_ to track and ban repeating access requests
 - `django-csp <https://github.com/mozilla/django-csp>`_ to enforce `Content-Security Policy <https://www.w3.org/TR/CSP/>`_ for our webpages
-- `django-referrer-policy <https://django-referrer-policy.readthedocs.io>`_ to enforce `Referrer Policy <https://www.w3.org/TR/referrer-policy/>`_ for our webpages
+- `django-http-referrer-policy <https://django-referrer-policy.readthedocs.io>`_ to enforce `Referrer Policy <https://www.w3.org/TR/referrer-policy/>`_ for our webpages
 
 And there are also some awesome extensions that are not included:
 

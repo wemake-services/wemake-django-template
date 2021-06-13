@@ -4,6 +4,7 @@ This is a how-to-contribute guide for the template itself.
 This guide is not about contributing to the project that is created
 using this template.
 
+
 ## Dependencies
 
 We use `poetry` to manage the [dependencies](https://github.com/python-poetry/poetry).
@@ -37,14 +38,12 @@ pytest
 ```
 
 
-## Integration tests
+## Gitlab pipelines
 
-We use `docker` to run integration tests.
-Make sure it is up and running. Then run:
+[![pipeline status](https://gitlab.com/sobolevn/wemake-django-template/badges/master/pipeline.svg)](https://gitlab.com/sobolevn/wemake-django-template/-/commits/master)
 
-```bash
-sh tests/test_integration.sh
-```
+We also use Gitlab to run our full build / test pipelines on every `.gitlab-ci.yml` changes.
+It is required to make sure we have a valid CI definition.
 
 
 ## Other help

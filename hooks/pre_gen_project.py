@@ -1,9 +1,8 @@
-
 import re
 import sys
 from urllib.parse import urlparse
 
-MODULE_REGEX = r'^[a-z][a-z0-9_]+[a-z0-9]$'
+MODULE_REGEX = r'^[a-z][a-z0-9\-]+[a-z0-9]$'
 MODULE_NAME = '{{ cookiecutter.project_name }}'
 
 DOMAIN_NAME = '{{ cookiecutter.project_domain }}'
@@ -21,9 +20,9 @@ def validate_project_name():
     if not re.match(MODULE_REGEX, MODULE_NAME):
         # Validates project's module name:
         message = [
-            'ERROR: The project slug {0} is not a valid Python module name.',
+            'ERROR: The project slug {0} is not a valid name.',
             'Start with a lowercase letter.',
-            'Followed by any lowercase letters, numbers or underscores.',
+            'Followed by any lowercase letters, numbers, or dashes (-).',
         ]
         raise ValueError(' '.join(message).format(MODULE_NAME))
 

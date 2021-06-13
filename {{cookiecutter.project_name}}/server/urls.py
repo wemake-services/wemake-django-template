@@ -1,4 +1,3 @@
-
 """
 Main URL mapping configuration file.
 
@@ -21,7 +20,6 @@ from server.apps.main import urls as main_urls
 from server.apps.main.views import index
 
 admin.autodiscover()
-
 
 urlpatterns = [
     # Apps:
@@ -55,7 +53,7 @@ if settings.DEBUG:  # pragma: no cover
     urlpatterns = [
         # URLs specific only to django-debug-toolbar:
         path('__debug__/', include(debug_toolbar.urls)),  # noqa: DJ05
-    ] + urlpatterns + static(
+    ] + urlpatterns + static(  # type: ignore
         # Serving media files in development only:
         settings.MEDIA_URL,
         document_root=settings.MEDIA_ROOT,

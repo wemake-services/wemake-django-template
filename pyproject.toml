@@ -1,6 +1,6 @@
 [build-system]
-requires = ["poetry>=1.0.5"]
-build-backend = "poetry.masonry.api"
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
 
 
 [tool.nitpick]
@@ -20,7 +20,7 @@ license = "MIT"
 
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.8"
 
 cookiecutter = "^1.7"
 jinja2-git = "^1.1"
@@ -29,16 +29,16 @@ jinja2-git = "^1.1"
 [tool.poetry.dev-dependencies]
 binaryornot = "^0.4"
 
-wemake-python-styleguide = "^0.14.0"
-flake8-pytest-style = "^1.1.1"
-nitpick = "^0.22"
+wemake-python-styleguide = "^0.15"
+flake8-pytest-style = "^1.4"
+nitpick = "^0.26"
 
-pytest = "^5.4"
-pytest-randomly = "^3.4"
-pytest-cookies = "^0.5"
+pytest = "^6.2"
+pytest-randomly = "^3.8"
+pytest-cookies = "^0.6"
 
-safety = "^1.9.0"
+safety = "^1.10"
 
-docker-compose = "^1.25.5"
-docker-image-size-limit = "^0.3.0"
-tomlkit = "^0.6.0"
+docker-compose = "^1.28"
+docker-image-size-limit = "^0.4"
+tomlkit = "^0.7"

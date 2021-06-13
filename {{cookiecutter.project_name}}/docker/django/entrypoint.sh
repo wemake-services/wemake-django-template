@@ -3,7 +3,7 @@
 set -o errexit
 set -o nounset
 
-cmd="$*"
+readonly cmd="$*"
 
 postgres_ready () {
   # Check that postgres is up and running on port `5432`:

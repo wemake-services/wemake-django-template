@@ -1,0 +1,10 @@
+version: 2
+
+python:
+  version: 3.8
+  install:
+    - requirements: '{{cookiecutter.project_name}}/docs/requirements.txt'
+
+sphinx:
+  configuration: '{{cookiecutter.project_name}}/docs/conf.py'
+  fail_on_warning: true
