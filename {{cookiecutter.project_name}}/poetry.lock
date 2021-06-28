@@ -359,7 +359,7 @@ python-versions = "*"
 
 [[package]]
 name = "django-migration-linter"
-version = "2.5.3"
+version = "3.0.0"
 description = "Detect backward incompatible migrations for your django project"
 category = "dev"
 optional = false
@@ -369,9 +369,10 @@ python-versions = "*"
 appdirs = ">=1.4.3"
 django = ">=1.11"
 six = ">=1.14.0"
+toml = ">=0.10.2"
 
 [package.extras]
-test = ["tox (>=3.15.2)", "mysqlclient (>=1.4.6)", "psycopg2-binary (>=2.8.5)", "django-add-default-value (>=0.4.0)", "mock (>=3.0.5)", "backports.tempfile (>=1.0)"]
+test = ["tox (>=3.15.2)", "mysqlclient (>=1.4.6)", "psycopg2-binary (>=2.8.5,<2.9)", "django-add-default-value (>=0.4.0)", "coverage (>=5.5)", "mock (>=3.0.5)", "backports.tempfile (>=1.0)"]
 
 [[package]]
 name = "django-permissions-policy"
@@ -1825,7 +1826,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pyt
 [metadata]
 lock-version = "1.1"
 python-versions = "3.8.9"
-content-hash = "519dc8716d5a2fadba9d6f48eb53c415d5faada0ed4256b167509048f081a77c"
+content-hash = "6b527dfd96b7fd27465e76563224c01aacec156896ad4846b88bd4f662e2c70a"
 
 [metadata.files]
 alabaster = [
@@ -2064,8 +2065,8 @@ django-ipware = [
     {file = "django-ipware-3.0.2.tar.gz", hash = "sha256:c7df8e1410a8e5d6b1fbae58728402ea59950f043c3582e033e866f0f0cf5e94"},
 ]
 django-migration-linter = [
-    {file = "django-migration-linter-2.5.3.tar.gz", hash = "sha256:32cfb5423dcdb77dbbb452f45cef56172a234bd34b9967f03536bfcb1f1ba8a9"},
-    {file = "django_migration_linter-2.5.3-py2.py3-none-any.whl", hash = "sha256:fb71ca0edec938c512a60e660e35fd05958153be1686bcfd5a500900287ececf"},
+    {file = "django-migration-linter-3.0.0.tar.gz", hash = "sha256:a45d955bbd01fff57d19978cd7e99599e7592fb94c27032edfd026ef51e45a05"},
+    {file = "django_migration_linter-3.0.0-py2.py3-none-any.whl", hash = "sha256:beb62cf9777b6e3a9d902726fd5e514f73edae3398e1e948c5497c34315c87ad"},
 ]
 django-permissions-policy = [
     {file = "django-permissions-policy-4.1.0.tar.gz", hash = "sha256:30df0dfe6579f60743d181378c7cbbb44526a5df469aa633251234387d3819f1"},
