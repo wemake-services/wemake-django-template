@@ -18,7 +18,7 @@ docs.
 Things that are included in the linting process:
 
 - `flake8 <http://flake8.pycqa.org/>`_ is used a general tool for linting
-- `isort <https://github.com/timothycrosley/isort>`_ is used to validate ``import`` order
+- `isort <https://github.com/PyCQA/isort>`_ is used to validate ``import`` order
 - `bandit <https://github.com/PyCQA/bandit>`_ for static security checks
 - `eradicate <https://github.com/myint/eradicate>`_ to find dead code
 - and more!
