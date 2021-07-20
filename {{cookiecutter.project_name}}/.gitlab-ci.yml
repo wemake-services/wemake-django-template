@@ -80,15 +80,11 @@ release-image:
 
     # Now we need the latest images for cache and improved build times:
     - docker pull "${IMAGE_FULL_NAME}:latest" || true
-    - docker pull "${IMAGE_FULL_NAME}:dev" || true
-    # Create correct tags:
     - docker tag "${IMAGE_FULL_NAME}:latest" "${PROJECT_NAME}:latest" || true
-    - docker tag "${IMAGE_FULL_NAME}:dev" "${PROJECT_NAME}:dev" || true
-
+  script:
     # Building the image itself:
     - docker-compose -f docker-compose.yml
       -f docker/docker-compose.prod.yml build
-  script:
     - docker push "${IMAGE_FULL_NAME}:latest"
   only:
     - master
