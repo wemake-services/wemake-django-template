@@ -51,7 +51,7 @@ test:
       -f docker/docker-compose.prod.yml config --quiet
 
     # The logic itself:
-    - docker-compose build
+    - docker-compose build web
     - docker-compose run --user=root --rm web sh ./docker/ci.sh
     - disl "${PROJECT_NAME}:dev" 950MiB
 
@@ -84,7 +84,7 @@ release-image:
   script:
     # Building the image itself:
     - docker-compose -f docker-compose.yml
-      -f docker/docker-compose.prod.yml build
+      -f docker/docker-compose.prod.yml build web
     - docker push "${IMAGE_FULL_NAME}:latest"
   only:
     - master
