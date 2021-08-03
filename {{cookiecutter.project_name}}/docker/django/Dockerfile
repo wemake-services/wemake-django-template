@@ -77,7 +77,7 @@ RUN chmod +x '/docker-entrypoint.sh' \
 COPY --chown=web:web ./poetry.lock ./pyproject.toml /code/
 
 # Project initialization:
-RUN echo "$DJANGO_ENV" \
+RUN echo "$DJANGO_ENV" && poetry version \
   && poetry install \
     $(if [ "$DJANGO_ENV" = 'production' ]; then echo '--no-dev'; fi) \
     --no-interaction --no-ansi \
