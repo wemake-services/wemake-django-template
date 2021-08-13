@@ -376,7 +376,7 @@ test = ["tox (>=3.15.2)", "mysqlclient (>=1.4.6)", "psycopg2-binary (>=2.8.5,<2.
 
 [[package]]
 name = "django-permissions-policy"
-version = "4.1.0"
+version = "4.2.0"
 description = "Set the draft security HTTP header Permissions-Policy (previously Feature-Policy) on your Django app."
 category = "main"
 optional = false
@@ -1826,7 +1826,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pyt
 [metadata]
 lock-version = "1.1"
 python-versions = "3.8.9"
-content-hash = "f2a6f443ca975fc30388b9828e50d576498ff4106e03c6b9e1ce13fb844c23c3"
+content-hash = "37e1af25272cdcbff452c634cfb217662dfe47d84ac0bfc3fef8c91ed844035c"
 
 [metadata.files]
 alabaster = [
@@ -2069,8 +2069,8 @@ django-migration-linter = [
     {file = "django_migration_linter-3.0.0-py2.py3-none-any.whl", hash = "sha256:beb62cf9777b6e3a9d902726fd5e514f73edae3398e1e948c5497c34315c87ad"},
 ]
 django-permissions-policy = [
-    {file = "django-permissions-policy-4.1.0.tar.gz", hash = "sha256:30df0dfe6579f60743d181378c7cbbb44526a5df469aa633251234387d3819f1"},
-    {file = "django_permissions_policy-4.1.0-py3-none-any.whl", hash = "sha256:774ca81646c84793c8c5645e581ecd4d08a88d492cf90c8983648d8fddcbb3c8"},
+    {file = "django-permissions-policy-4.2.0.tar.gz", hash = "sha256:3db789ce4aa27ace3492dcd9106afa1674c72a6c059890ba2fbb98bcc68afc68"},
+    {file = "django_permissions_policy-4.2.0-py3-none-any.whl", hash = "sha256:93bfd0295ca221fc9b8e13545558f669f9b75770044c757b8a4a9872c2629c63"},
 ]
 django-querycount = [
     {file = "django-querycount-0.7.0.tar.gz", hash = "sha256:8f5123d78716ff0704f2373e746a7200b8d8417798ce4a99bf2de87e3768f9ce"},
