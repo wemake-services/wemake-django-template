@@ -2,7 +2,7 @@
 
 # This compose-file is production only. So, it should not be called directly.
 #
-# Instead, it should be a part of your deploy strategy.
+# Instead, it should be a part of your deployment strategy.
 # This setup is supposed to be used with `docker-swarm`.
 # See `./docs/pages/template/production.rst` docs.
 
@@ -47,7 +47,7 @@ services:
       - 8000
 
 # This task is an example of how to extend existing ones:
-#   some_wroker:
+#   some_worker:
 #     <<: *web
 #     command: python manage.py worker_process
 #     deploy:
