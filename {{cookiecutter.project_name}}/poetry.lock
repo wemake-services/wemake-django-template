@@ -1397,7 +1397,7 @@ pytest = ">=3.6.0"
 
 [[package]]
 name = "python-decouple"
-version = "3.4"
+version = "3.5"
 description = "Strict separation of settings from code."
 category = "main"
 optional = false
@@ -1827,7 +1827,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pyt
 [metadata]
 lock-version = "1.1"
 python-versions = "3.8.9"
-content-hash = "94af8d6f84aa4d3dbc665058e47b60486bfb8645a63c607e1257fe36b30e6771"
+content-hash = "816a6c3b9c9441bcc14855be44b1a199783cceffbd0e1aea002c744c482dc75f"
 
 [metadata.files]
 alabaster = [
@@ -2532,8 +2532,7 @@ pytest-timeout = [
     {file = "pytest_timeout-1.4.2-py2.py3-none-any.whl", hash = "sha256:541d7aa19b9a6b4e475c759fd6073ef43d7cdc9a92d95644c260076eb257a063"},
 ]
 python-decouple = [
-    {file = "python-decouple-3.4.tar.gz", hash = "sha256:2e5adb0263a4f963b58d7407c4760a2465d464ee212d733e2a2c179e54c08d8f"},
-    {file = "python_decouple-3.4-py3-none-any.whl", hash = "sha256:a8268466e6389a639a20deab9d880faee186eb1eb6a05e54375bdf158d691981"},
+    {file = "python-decouple-3.5.tar.gz", hash = "sha256:68e4b3fcc97e24bc90eecc514852d0bf970f4ff031f5f7a6728ddafa9afefcaf"},
 ]
 python-slugify = [
     {file = "python-slugify-5.0.2.tar.gz", hash = "sha256:f13383a0b9fcbe649a1892b9c8eb4f8eab1d6d84b84bb7a624317afa98159cab"},
