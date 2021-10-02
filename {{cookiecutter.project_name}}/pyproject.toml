@@ -59,7 +59,7 @@ django-test-migrations = "^1.1"
 hypothesis = "^6.23"
 
 mypy = "^0.910"
-django-stubs = "^1.8"
+django-stubs = "^1.9"
 
 sphinx = "^4.2"
 sphinx-autodoc-typehints = "^1.12"
