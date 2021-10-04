@@ -50,7 +50,7 @@ nitpick = "^0.27"
 
 pytest = "^6.2"
 pytest-django = "^4.4"
-pytest-cov = "^2.12"
+pytest-cov = "^3.0"
 pytest-randomly = "^3.10"
 pytest-deadfixtures = "^2.2"
 pytest-testmon = "^1.2"
