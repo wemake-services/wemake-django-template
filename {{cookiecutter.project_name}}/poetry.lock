@@ -297,7 +297,7 @@ django-ipware = ">=3,<5"
 
 [[package]]
 name = "django-coverage-plugin"
-version = "2.0.0"
+version = "2.0.1"
 description = "Django template coverage.py plugin"
 category = "dev"
 optional = false
@@ -2067,7 +2067,7 @@ django-axes = [
     {file = "django_axes-5.25.0-py3-none-any.whl", hash = "sha256:c72e19981aae1426dc356b9e69a6e168b3e7e91ff305beec9a375a232f579724"},
 ]
 django-coverage-plugin = [
-    {file = "django_coverage_plugin-2.0.0.tar.gz", hash = "sha256:5a7ac412528876563a45f9b54ad9962e33e5f95b409843c4c6c92cb0247eee66"},
+    {file = "django_coverage_plugin-2.0.1.tar.gz", hash = "sha256:cf8b0265d5556f20b8458114a4babc01258f841fe3b96630de4f0deaf8fa8619"},
 ]
 django-csp = [
     {file = "django_csp-3.7-py2.py3-none-any.whl", hash = "sha256:01443a07723f9a479d498bd7bb63571aaa771e690f64bde515db6cdb76e8041a"},
