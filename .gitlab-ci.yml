@@ -20,7 +20,7 @@ include:
 # Building template project:
 mirror-github-build:
   stage: build
-  image: "python:3.8"
+  image: "python:3.9"
   variables:
     PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
   cache:  # we use cache to speed up `pip` installs
