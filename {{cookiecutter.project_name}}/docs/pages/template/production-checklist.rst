@@ -53,7 +53,7 @@ These warnings are raised by ``django``
 when it detects any configuration issues.
 
 This command should give not warnings or errors.
-It is bundled into `docker`, so the container will not work with any warnings.
+It is bundled into ``docker``, so the container will not work with any warnings.
 
 Static and media files
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -154,7 +154,7 @@ Disabling HTTPS
 
 You would need to `disable <https://caddyserver.com/docs/tls>`_
 ``https`` inside ``Caddy`` and in production settings for Django.
-Because Django itself also redirects to `https`.
+Because Django itself also redirects to ``https``.
 See `docs <https://docs.djangoproject.com/en/3.2/ref/settings/#secure-ssl-redirect>`_.
 
 You would also need to disable ``manage.py check``
