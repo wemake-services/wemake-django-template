@@ -1400,14 +1400,14 @@ pytest = ">=5,<7"
 
 [[package]]
 name = "pytest-timeout"
-version = "1.4.2"
-description = "py.test plugin to abort hanging tests"
+version = "2.0.0"
+description = "pytest plugin to abort hanging tests"
 category = "dev"
 optional = false
 python-versions = "*"
 
 [package.dependencies]
-pytest = ">=3.6.0"
+pytest = ">=5.0.0"
 
 [[package]]
 name = "python-decouple"
@@ -1862,7 +1862,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "3.9.7"
-content-hash = "9721fe95bb38651c7401e0937a0ece195a07be07c2105382f066a357969be874"
+content-hash = "582803d069a74f70805f867087737655b260a1704368aa18fc8f532fea4d4c32"
 
 [metadata.files]
 alabaster = [
@@ -2535,8 +2535,8 @@ pytest-testmon = [
     {file = "pytest-testmon-1.2.0.tar.gz", hash = "sha256:2c61ae6185ea7dc07ea0d4db3984be62f1a176a5c16615fd208c5945aa411599"},
 ]
 pytest-timeout = [
-    {file = "pytest-timeout-1.4.2.tar.gz", hash = "sha256:20b3113cf6e4e80ce2d403b6fb56e9e1b871b510259206d40ff8d609f48bda76"},
-    {file = "pytest_timeout-1.4.2-py2.py3-none-any.whl", hash = "sha256:541d7aa19b9a6b4e475c759fd6073ef43d7cdc9a92d95644c260076eb257a063"},
+    {file = "pytest-timeout-2.0.0.tar.gz", hash = "sha256:b0c96583f97f4caf349a317453cf82dd4fb8434b3b05bc8acff8716a6b86c034"},
+    {file = "pytest_timeout-2.0.0-py3-none-any.whl", hash = "sha256:fa04c8336fab9476e2ae71e9730f80b88490bc1d2899dec6e65e837e96f2d328"},
 ]
 python-decouple = [
     {file = "python-decouple-3.5.tar.gz", hash = "sha256:68e4b3fcc97e24bc90eecc514852d0bf970f4ff031f5f7a6728ddafa9afefcaf"},
