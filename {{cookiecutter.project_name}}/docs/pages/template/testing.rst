@@ -64,7 +64,7 @@ There are several options you can provide or remove to make your tests faster:
   ``-n auto``  to schedule several numbers of workers,
   sometimes when there are a lot of tests it may increase the testing speed.
   But on a small project with a small amount of test it just
-  gives you an overhead, so removing it (together with `--boxed`)
+  gives you an overhead, so removing it (together with ``--boxed``)
   will boost your testing performance
 - If there are a lot of tests with database access
   it may be wise to add
@@ -94,8 +94,8 @@ Running ``mypy`` is required before any commit:
   mypy server tests/**/*.py
 
 This will eliminate a lot of possible ``TypeError`` and other issues
-in both `server/` and `tests/` directories.
-We use `tests/**/*.py` because `tests/` is not a python package,
+in both ``server/`` and ``tests/`` directories.
+We use ``tests/**/*.py`` because ``tests/`` is not a python package,
 so it is not importable.
 
 However, this will not make code 100% safe from errors.

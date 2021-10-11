@@ -35,6 +35,6 @@ www.{$DOMAIN_NAME} {
 
   # Logs:
   log {
-	  output stdout
+    output stdout
   }
 }
