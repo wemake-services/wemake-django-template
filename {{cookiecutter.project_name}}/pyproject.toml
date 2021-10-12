@@ -20,7 +20,7 @@ python = "3.9.7"
 
 django = "^3.2"
 django-split-settings = "^1.1"
-django-axes = "^5.25"
+django-axes = "^5.26"
 django-csp = "^3.7"
 django-health-check = "^3.16"
 django-http-referrer-policy = "^1.1"
