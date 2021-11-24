@@ -23,11 +23,13 @@ jobs:
         python-version: ${{ matrix.python-version }}
 
     - name: Install poetry
+      env:
+        POETRY_VERSION: "1.1.11"
       run: |
-        curl -sSL "https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py" | python
+        curl -sSL "https://install.python-poetry.org" | python -
 
         # Adding `poetry` to `$PATH`:
-        echo "$HOME/.poetry/bin" >> $GITHUB_PATH
+        echo "$HOME/.local/bin" >> $GITHUB_PATH
 
     - name: Set up cache
       uses: actions/cache@v2
