@@ -23,6 +23,7 @@ mirror-github-build:
   image: "python:3.9"
   variables:
     PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+    POETRY_VERSION: "1.1.11"
   cache:  # we use cache to speed up `pip` installs
     key:
       files:
@@ -32,8 +33,8 @@ mirror-github-build:
       - '.venv/'
   before_script:
     # Installing poetry:
-    - curl -sSL "https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py" | python
-    - export PATH="$HOME/.poetry/bin:$PATH"
+    - curl -sSL "https://install.python-poetry.org" | python -
+    - export PATH="$HOME/.local/bin:$PATH"
     # Installing dependencies:
     - poetry config virtualenvs.in-project true
     - poetry install --no-dev
