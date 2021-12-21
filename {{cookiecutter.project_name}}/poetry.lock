@@ -1400,7 +1400,7 @@ pytest = ">=5,<7"
 
 [[package]]
 name = "pytest-timeout"
-version = "2.0.1"
+version = "2.0.2"
 description = "pytest plugin to abort hanging tests"
 category = "dev"
 optional = false
@@ -2558,8 +2558,8 @@ pytest-testmon = [
     {file = "pytest-testmon-1.2.2.tar.gz", hash = "sha256:e69d5aeac4e371986f94e8ad06e56d70633870d026f2306fca44051f02fcb688"},
 ]
 pytest-timeout = [
-    {file = "pytest-timeout-2.0.1.tar.gz", hash = "sha256:a5ec4eceddb8ea726911848593d668594107e797621e97f93a1d1dbc6fbb9080"},
-    {file = "pytest_timeout-2.0.1-py3-none-any.whl", hash = "sha256:329bdea323d3e5bea4737070dd85a0d1021dbecb2da5342dc25284fdb929dff0"},
+    {file = "pytest-timeout-2.0.2.tar.gz", hash = "sha256:e6f98b54dafde8d70e4088467ff621260b641eb64895c4195b6e5c8f45638112"},
+    {file = "pytest_timeout-2.0.2-py3-none-any.whl", hash = "sha256:fe9c3d5006c053bb9e062d60f641e6a76d6707aedb645350af9593e376fcc717"},
 ]
 python-decouple = [
     {file = "python-decouple-3.5.tar.gz", hash = "sha256:68e4b3fcc97e24bc90eecc514852d0bf970f4ff031f5f7a6728ddafa9afefcaf"},
