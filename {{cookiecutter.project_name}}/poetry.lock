@@ -1683,7 +1683,7 @@ pbr = ">=2.0.0,<2.1.0 || >2.1.0"
 
 [[package]]
 name = "structlog"
-version = "21.3.0"
+version = "21.5.0"
 description = "Structured Logging for Python"
 category = "main"
 optional = false
@@ -1862,7 +1862,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "3.9.9"
-content-hash = "bfed7f7e6f826446ab13ccbb83bc9f8a3c353ad0d4b3dae4794c9ce1afb5fe1f"
+content-hash = "cdc4bcae38a993b2c45817ec12261f2109921c4f2f42765f89b19fba8d47b4ab"
 
 [metadata.files]
 alabaster = [
@@ -2700,8 +2700,8 @@ stevedore = [
     {file = "stevedore-3.4.0.tar.gz", hash = "sha256:59b58edb7f57b11897f150475e7bc0c39c5381f0b8e3fa9f5c20ce6c89ec4aa1"},
 ]
 structlog = [
-    {file = "structlog-21.3.0-py3-none-any.whl", hash = "sha256:063216becff8e6f6558122a9b00734f7e50bfef309eb730c85a52c74ed861a96"},
-    {file = "structlog-21.3.0.tar.gz", hash = "sha256:4da2aec0aebf6dee7beb884eb0fda26ed9d6cce5338fcd523e8597d0f1826746"},
+    {file = "structlog-21.5.0-py3-none-any.whl", hash = "sha256:fd7922e195262b337da85c2a91c84be94ccab1f8fd1957bd6986f6904e3761c8"},
+    {file = "structlog-21.5.0.tar.gz", hash = "sha256:68c4c29c003714fe86834f347cb107452847ba52414390a7ee583472bde00fc9"},
 ]
 testfixtures = [
     {file = "testfixtures-6.18.3-py2.py3-none-any.whl", hash = "sha256:6ddb7f56a123e1a9339f130a200359092bd0a6455e31838d6c477e8729bb7763"},
