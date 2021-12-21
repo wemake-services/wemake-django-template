@@ -1797,7 +1797,7 @@ python-versions = "*"
 
 [[package]]
 name = "wemake-python-styleguide"
-version = "0.15.3"
+version = "0.16.0"
 description = "The strictest and most opinionated python linter ever"
 category = "dev"
 optional = false
@@ -1807,9 +1807,9 @@ python-versions = ">=3.6,<4.0"
 astor = ">=0.8,<0.9"
 attrs = "*"
 darglint = ">=1.2,<2.0"
-flake8 = ">=3.7,<4.0"
+flake8 = ">=3.7,<5"
 flake8-bandit = ">=2.1,<3.0"
-flake8-broken-line = ">=0.3,<0.4"
+flake8-broken-line = ">=0.3,<0.5"
 flake8-bugbear = ">=20.1,<22.0"
 flake8-commas = ">=2.0,<3.0"
 flake8-comprehensions = ">=3.1,<4.0"
@@ -1820,9 +1820,9 @@ flake8-isort = ">=4.0,<5.0"
 flake8-quotes = ">=3.0,<4.0"
 flake8-rst-docstrings = ">=0.2.3,<0.3.0"
 flake8-string-format = ">=0.3,<0.4"
-pep8-naming = ">=0.11,<0.12"
+pep8-naming = ">=0.11,<0.13"
 pygments = ">=2.4,<3.0"
-typing_extensions = ">=3.6,<4.0"
+typing_extensions = ">=3.6,<5.0"
 
 [[package]]
 name = "win32-setctime"
@@ -1862,7 +1862,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "3.9.9"
-content-hash = "bfed7f7e6f826446ab13ccbb83bc9f8a3c353ad0d4b3dae4794c9ce1afb5fe1f"
+content-hash = "cdfbcb34242a58882028836128cb34bc27823b4d107857cc33a41a682dc1c930"
 
 [metadata.files]
 alabaster = [
@@ -2749,8 +2749,8 @@ wcwidth = [
     {file = "wcwidth-0.2.5.tar.gz", hash = "sha256:c4d647b99872929fdb7bdcaa4fbe7f01413ed3d98077df798530e5b04f116c83"},
 ]
 wemake-python-styleguide = [
-    {file = "wemake-python-styleguide-0.15.3.tar.gz", hash = "sha256:8b89aedabae67b7b915908ed06c178b702068137c0d8afe1fb59cdc829cd2143"},
-    {file = "wemake_python_styleguide-0.15.3-py3-none-any.whl", hash = "sha256:a382f6c9ec87d56daa08a11e47cab019c99b384f1393b32564ebc74c6da80441"},
+    {file = "wemake-python-styleguide-0.16.0.tar.gz", hash = "sha256:3bf0a4962404e6fd6fa479e72e2ba3fb75d5920ea6c44b72b45240c9e519543c"},
+    {file = "wemake_python_styleguide-0.16.0-py3-none-any.whl", hash = "sha256:8caa92b4aa77b08a505d718553238812d1b612b1036bc171ca3aa18345efe0b4"},
 ]
 win32-setctime = [
     {file = "win32_setctime-1.0.3-py3-none-any.whl", hash = "sha256:dc925662de0a6eb987f0b01f599c01a8236cb8c62831c22d9cada09ad958243e"},
