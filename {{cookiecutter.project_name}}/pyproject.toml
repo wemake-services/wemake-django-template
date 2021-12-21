@@ -55,7 +55,7 @@ pytest-randomly = "^3.10"
 pytest-deadfixtures = "^2.2"
 pytest-testmon = "^1.2"
 pytest-timeout = "^2.0"
-django-test-migrations = "^1.1"
+django-test-migrations = "^1.2"
 hypothesis = "^6.27"
 
 mypy = "^0.920"
