@@ -268,16 +268,16 @@ tests = ["check-manifest (>=0.42)", "mock (>=1.3.0)", "pytest-cov (>=2.10.1)", "
 
 [[package]]
 name = "django"
-version = "3.2.9"
-description = "A high-level Python Web framework that encourages rapid development and clean, pragmatic design."
+version = "4.0"
+description = "A high-level Python web framework that encourages rapid development and clean, pragmatic design."
 category = "main"
 optional = false
-python-versions = ">=3.6"
+python-versions = ">=3.8"
 
 [package.dependencies]
-asgiref = ">=3.3.2,<4"
-pytz = "*"
+asgiref = ">=3.4.1,<4"
 sqlparse = ">=0.2.2"
+tzdata = {version = "*", markers = "sys_platform == \"win32\""}
 
 [package.extras]
 argon2 = ["argon2-cffi (>=19.1.0)"]
@@ -1435,7 +1435,7 @@ unidecode = ["Unidecode (>=1.1.1)"]
 name = "pytz"
 version = "2021.3"
 description = "World timezone definitions, modern and historical"
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -1775,6 +1775,14 @@ optional = false
 python-versions = "*"
 
 [[package]]
+name = "tzdata"
+version = "2021.5"
+description = "Provider of IANA time zone data"
+category = "main"
+optional = false
+python-versions = ">=2"
+
+[[package]]
 name = "urllib3"
 version = "1.26.7"
 description = "HTTP library with thread-safe connection pooling, file post, and more."
@@ -1862,7 +1870,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "3.9.9"
-content-hash = "5d6e8d74eb3850fc38bc34df22455f27e2d7791e11d83cf2a62dad23fa6e19e6"
+content-hash = "eac82ef10788bcf848194012468d70689d0dbdfb0ab003a5de6387a40f64ee22"
 
 [metadata.files]
 alabaster = [
@@ -2048,8 +2056,8 @@ dictdiffer = [
     {file = "dictdiffer-0.9.0.tar.gz", hash = "sha256:17bacf5fbfe613ccf1b6d512bd766e6b21fb798822a133aa86098b8ac9997578"},
 ]
 django = [
-    {file = "Django-3.2.9-py3-none-any.whl", hash = "sha256:e22c9266da3eec7827737cde57694d7db801fedac938d252bf27377cec06ed1b"},
-    {file = "Django-3.2.9.tar.gz", hash = "sha256:51284300f1522ffcdb07ccbdf676a307c6678659e1284f0618e5a774127a6a08"},
+    {file = "Django-4.0-py3-none-any.whl", hash = "sha256:59304646ebc6a77b9b6a59adc67d51ecb03c5e3d63ed1f14c909cdfda84e8010"},
+    {file = "Django-4.0.tar.gz", hash = "sha256:d5a8a14da819a8b9237ee4d8c78dfe056ff6e8a7511987be627192225113ee75"},
 ]
 django-axes = [
     {file = "django-axes-5.27.0.tar.gz", hash = "sha256:65c8f71025a42d03b65d0db3ef779ec2f672cfc40f6017b2aa3bcb5b560e5fd0"},
@@ -2616,6 +2624,10 @@ restructuredtext-lint = [
     {file = "ruamel.yaml-0.17.16.tar.gz", hash = "sha256:1a771fc92d3823682b7f0893ad56cb5a5c87c48e62b5399d6f42c8759a583b33"},
 ]
 "ruamel.yaml.clib" = [
+    {file = "ruamel.yaml.clib-0.2.6-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:6e7be2c5bcb297f5b82fee9c665eb2eb7001d1050deaba8471842979293a80b0"},
+    {file = "ruamel.yaml.clib-0.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl", hash = "sha256:221eca6f35076c6ae472a531afa1c223b9c29377e62936f61bc8e6e8bdc5f9e7"},
+    {file = "ruamel.yaml.clib-0.2.6-cp310-cp310-win32.whl", hash = "sha256:1070ba9dd7f9370d0513d649420c3b362ac2d687fe78c6e888f5b12bf8bc7bee"},
+    {file = "ruamel.yaml.clib-0.2.6-cp310-cp310-win_amd64.whl", hash = "sha256:77df077d32921ad46f34816a9a16e6356d8100374579bc35e15bab5d4e9377de"},
     {file = "ruamel.yaml.clib-0.2.6-cp35-cp35m-macosx_10_6_intel.whl", hash = "sha256:cfdb9389d888c5b74af297e51ce357b800dd844898af9d4a547ffc143fa56751"},
     {file = "ruamel.yaml.clib-0.2.6-cp35-cp35m-manylinux1_x86_64.whl", hash = "sha256:7b2927e92feb51d830f531de4ccb11b320255ee95e791022555971c466af4527"},
     {file = "ruamel.yaml.clib-0.2.6-cp35-cp35m-win32.whl", hash = "sha256:ada3f400d9923a190ea8b59c8f60680c4ef8a4b0dfae134d2f2ff68429adfab5"},
@@ -2738,6 +2750,10 @@ typing-extensions = [
     {file = "typing_extensions-3.10.0.2-py2-none-any.whl", hash = "sha256:d8226d10bc02a29bcc81df19a26e56a9647f8b0a6d4a83924139f4a8b01f17b7"},
     {file = "typing_extensions-3.10.0.2-py3-none-any.whl", hash = "sha256:f1d25edafde516b146ecd0613dabcc61409817af4766fbbcfb8d1ad4ec441a34"},
     {file = "typing_extensions-3.10.0.2.tar.gz", hash = "sha256:49f75d16ff11f1cd258e1b988ccff82a3ca5570217d7ad8c5f48205dd99a677e"},
+]
+tzdata = [
+    {file = "tzdata-2021.5-py2.py3-none-any.whl", hash = "sha256:3eee491e22ebfe1e5cfcc97a4137cd70f092ce59144d81f8924a844de05ba8f5"},
+    {file = "tzdata-2021.5.tar.gz", hash = "sha256:68dbe41afd01b867894bbdfd54fa03f468cfa4f0086bfb4adcd8de8f24f3ee21"},
 ]
 urllib3 = [
     {file = "urllib3-1.26.7-py2.py3-none-any.whl", hash = "sha256:c4fdf4019605b6e5423637e01bc9fe4daef873709a7973e195ceba0a62bbc844"},
