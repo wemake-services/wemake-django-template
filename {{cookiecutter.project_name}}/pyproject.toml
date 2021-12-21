@@ -68,7 +68,7 @@ doc8 = "^0.10"
 
 yamllint = "^1.26"
 safety = "^1.10"
-dotenv-linter = "^0.2"
+dotenv-linter = "^0.3"
 polint = "^0.4"
 dennis = "^0.9"
 dump-env = "^1.3"
