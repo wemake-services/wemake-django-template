@@ -347,7 +347,7 @@ dev = ["pytest (>=6,<7)", "pytest-cov (>=2,<3)", "pytest-django (>=4,<5)", "Djan
 
 [[package]]
 name = "django-health-check"
-version = "3.16.4"
+version = "3.16.5"
 description = "Run checks on services like databases, queue servers, celery processes, etc."
 category = "main"
 optional = false
@@ -2072,8 +2072,8 @@ django-extra-checks = [
     {file = "django_extra_checks-0.11.0-py3-none-any.whl", hash = "sha256:b1a19c03243d67c380c8af60c1ef837323c21e2fd888e0fd532d1df5f1866ba0"},
 ]
 django-health-check = [
-    {file = "django-health-check-3.16.4.tar.gz", hash = "sha256:334bcbbb9273a6dbd9c928e78474306e623dfb38cc442281cb9fd230a20a7fdb"},
-    {file = "django_health_check-3.16.4-py2.py3-none-any.whl", hash = "sha256:86a8869d67e72394a1dd73e37819a7d2cfd915588b96927fda611d7451fd4735"},
+    {file = "django-health-check-3.16.5.tar.gz", hash = "sha256:1edfd49293ccebbce29f9da609c407f307aee240ab799ab4201031341ae78c0f"},
+    {file = "django_health_check-3.16.5-py2.py3-none-any.whl", hash = "sha256:8d66781a0ea82b1a8b44878187b38a27370e94f18287312e39be0593e72d8983"},
 ]
 django-http-referrer-policy = [
     {file = "django-http-referrer-policy-1.1.1.tar.gz", hash = "sha256:917f5ed62054b27eff3172b7eccfb018469e85ddd538767328553282a70493c3"},
