@@ -1361,7 +1361,7 @@ pytest = ">=3.0.0"
 
 [[package]]
 name = "pytest-django"
-version = "4.4.0"
+version = "4.5.2"
 description = "A Django plugin for pytest."
 category = "dev"
 optional = false
@@ -1862,7 +1862,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "3.9.9"
-content-hash = "bfed7f7e6f826446ab13ccbb83bc9f8a3c353ad0d4b3dae4794c9ce1afb5fe1f"
+content-hash = "7fb3fcadbaf711723686c2ca6aec82725adb227197296ff349dd2f053c59b9bf"
 
 [metadata.files]
 alabaster = [
@@ -2544,8 +2544,8 @@ pytest-deadfixtures = [
     {file = "pytest_deadfixtures-2.2.1-py2.py3-none-any.whl", hash = "sha256:db71533f2d9456227084e00a1231e732973e299ccb7c37ab92e95032ab6c083e"},
 ]
 pytest-django = [
-    {file = "pytest-django-4.4.0.tar.gz", hash = "sha256:b5171e3798bf7e3fc5ea7072fe87324db67a4dd9f1192b037fed4cc3c1b7f455"},
-    {file = "pytest_django-4.4.0-py3-none-any.whl", hash = "sha256:65783e78382456528bd9d79a35843adde9e6a47347b20464eb2c885cb0f1f606"},
+    {file = "pytest-django-4.5.2.tar.gz", hash = "sha256:d9076f759bb7c36939dbdd5ae6633c18edfc2902d1a69fdbefd2426b970ce6c2"},
+    {file = "pytest_django-4.5.2-py3-none-any.whl", hash = "sha256:c60834861933773109334fe5a53e83d1ef4828f2203a1d6a0fa9972f4f75ab3e"},
 ]
 pytest-randomly = [
     {file = "pytest-randomly-3.10.3.tar.gz", hash = "sha256:22154cdcff7ba44e0599596490e6b75278ca973a33812ea6a54bf14d0b042ef1"},
