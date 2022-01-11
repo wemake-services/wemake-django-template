@@ -1006,11 +1006,11 @@ pytest = ">=3.3.0"
 
 [[package]]
 name = "pytest-randomly"
-version = "3.10.3"
+version = "3.11.0"
 description = "Pytest plugin to randomly order tests and control random.seed."
 category = "dev"
 optional = false
-python-versions = ">=3.6"
+python-versions = ">=3.7"
 
 [package.dependencies]
 importlib-metadata = {version = ">=3.6.0", markers = "python_version < \"3.10\""}
@@ -1309,7 +1309,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "bf0535c4cc0832bc74a80793f11a28292c7b2fa497099e6e12fa28dedf5d479f"
+content-hash = "3bf6bc4f834a5059e3b8d49ad5b77ef8c0eaf1e5c4d02a8295aca9aa5f84a8a4"
 
 [metadata.files]
 arrow = [
@@ -1338,10 +1338,13 @@ bandit = [
     {file = "bandit-1.7.1.tar.gz", hash = "sha256:a81b00b5436e6880fa8ad6799bc830e02032047713cbb143a12939ac67eb756c"},
 ]
 bcrypt = [
+    {file = "bcrypt-3.2.0-cp36-abi3-macosx_10_10_universal2.whl", hash = "sha256:b589229207630484aefe5899122fb938a5b017b0f4349f769b8c13e78d99a8fd"},
     {file = "bcrypt-3.2.0-cp36-abi3-macosx_10_9_x86_64.whl", hash = "sha256:c95d4cbebffafcdd28bd28bb4e25b31c50f6da605c81ffd9ad8a3d1b2ab7b1b6"},
     {file = "bcrypt-3.2.0-cp36-abi3-manylinux1_x86_64.whl", hash = "sha256:63d4e3ff96188e5898779b6057878fecf3f11cfe6ec3b313ea09955d587ec7a7"},
     {file = "bcrypt-3.2.0-cp36-abi3-manylinux2010_x86_64.whl", hash = "sha256:cd1ea2ff3038509ea95f687256c46b79f5fc382ad0aa3664d200047546d511d1"},
     {file = "bcrypt-3.2.0-cp36-abi3-manylinux2014_aarch64.whl", hash = "sha256:cdcdcb3972027f83fe24a48b1e90ea4b584d35f1cc279d76de6fc4b13376239d"},
+    {file = "bcrypt-3.2.0-cp36-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl", hash = "sha256:a0584a92329210fcd75eb8a3250c5a941633f8bfaf2a18f81009b097732839b7"},
+    {file = "bcrypt-3.2.0-cp36-abi3-musllinux_1_1_x86_64.whl", hash = "sha256:56e5da069a76470679f312a7d3d23deb3ac4519991a0361abc11da837087b61d"},
     {file = "bcrypt-3.2.0-cp36-abi3-win32.whl", hash = "sha256:a67fb841b35c28a59cebed05fbd3e80eea26e6d75851f0574a9273c80f3e9b55"},
     {file = "bcrypt-3.2.0-cp36-abi3-win_amd64.whl", hash = "sha256:81fec756feff5b6818ea7ab031205e1d323d8943d237303baca2c5f9c7846f34"},
     {file = "bcrypt-3.2.0.tar.gz", hash = "sha256:5b93c1726e50a93a033c36e5ca7fdcd29a5c7395af50a6892f5d9e7c6cfbfb29"},
@@ -1839,8 +1842,8 @@ pytest-cookies = [
     {file = "pytest_cookies-0.6.1-py3-none-any.whl", hash = "sha256:2e2383c12a321753676c8944fb75b3c8ccac70fce58e27d6b201e1a3ff3dab27"},
 ]
 pytest-randomly = [
-    {file = "pytest-randomly-3.10.3.tar.gz", hash = "sha256:22154cdcff7ba44e0599596490e6b75278ca973a33812ea6a54bf14d0b042ef1"},
-    {file = "pytest_randomly-3.10.3-py3-none-any.whl", hash = "sha256:b05a7a45f54cae2b5095752c6a10cb559df84448421b0420ae492dd2fb1727ef"},
+    {file = "pytest-randomly-3.11.0.tar.gz", hash = "sha256:9f013b8c1923130f3d0a286fde56e1fc52cfb3547b8eedf2765c460cee979c7f"},
+    {file = "pytest_randomly-3.11.0-py3-none-any.whl", hash = "sha256:a3c680d2b8150cf766311a80a1f92da64c3dd819045cda834fbf1b0ac4891610"},
 ]
 python-dateutil = [
     {file = "python-dateutil-2.8.2.tar.gz", hash = "sha256:0123cacc1627ae19ddf3c27a5de5bd67ee4586fbdd6440d9748f8abb483d3e86"},
