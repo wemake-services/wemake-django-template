@@ -1383,11 +1383,11 @@ testing = ["django", "django-configurations (>=2.0)"]
 
 [[package]]
 name = "pytest-randomly"
-version = "3.10.3"
+version = "3.11.0"
 description = "Pytest plugin to randomly order tests and control random.seed."
 category = "dev"
 optional = false
-python-versions = ">=3.6"
+python-versions = ">=3.7"
 
 [package.dependencies]
 importlib-metadata = {version = ">=3.6.0", markers = "python_version < \"3.10\""}
@@ -1869,7 +1869,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "3.9.9"
-content-hash = "d341da4d6639260ac3894ea255b0c3b29befe679101be74517f4878aafcda4a6"
+content-hash = "cc9b888e65ecdb0aaaad9f88c8ac2c34d3e90c11c8228476a3217b78902dbda0"
 
 [metadata.files]
 alabaster = [
@@ -2597,8 +2597,8 @@ pytest-django = [
     {file = "pytest_django-4.5.2-py3-none-any.whl", hash = "sha256:c60834861933773109334fe5a53e83d1ef4828f2203a1d6a0fa9972f4f75ab3e"},
 ]
 pytest-randomly = [
-    {file = "pytest-randomly-3.10.3.tar.gz", hash = "sha256:22154cdcff7ba44e0599596490e6b75278ca973a33812ea6a54bf14d0b042ef1"},
-    {file = "pytest_randomly-3.10.3-py3-none-any.whl", hash = "sha256:b05a7a45f54cae2b5095752c6a10cb559df84448421b0420ae492dd2fb1727ef"},
+    {file = "pytest-randomly-3.11.0.tar.gz", hash = "sha256:9f013b8c1923130f3d0a286fde56e1fc52cfb3547b8eedf2765c460cee979c7f"},
+    {file = "pytest_randomly-3.11.0-py3-none-any.whl", hash = "sha256:a3c680d2b8150cf766311a80a1f92da64c3dd819045cda834fbf1b0ac4891610"},
 ]
 pytest-testmon = [
     {file = "pytest-testmon-1.2.2.tar.gz", hash = "sha256:e69d5aeac4e371986f94e8ad06e56d70633870d026f2306fca44051f02fcb688"},
