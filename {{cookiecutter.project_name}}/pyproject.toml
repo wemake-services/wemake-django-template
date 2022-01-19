@@ -54,7 +54,7 @@ pytest-cov = "^3.0"
 pytest-randomly = "^3.11"
 pytest-deadfixtures = "^2.2"
 pytest-testmon = "^1.2"
-pytest-timeout = "^2.0"
+pytest-timeout = "^2.1"
 django-test-migrations = "^1.2"
 hypothesis = "^6.35"
 
