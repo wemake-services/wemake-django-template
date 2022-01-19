@@ -1591,7 +1591,7 @@ test = ["pytest", "pytest-cov", "html5lib", "cython", "typed-ast"]
 
 [[package]]
 name = "sphinx-autodoc-typehints"
-version = "1.15.2"
+version = "1.15.3"
 description = "Type hints (PEP 484) support for the Sphinx autodoc extension"
 category = "dev"
 optional = false
@@ -2707,8 +2707,8 @@ sphinx = [
     {file = "Sphinx-4.4.0.tar.gz", hash = "sha256:6caad9786055cb1fa22b4a365c1775816b876f91966481765d7d50e9f0dd35cc"},
 ]
 sphinx-autodoc-typehints = [
-    {file = "sphinx_autodoc_typehints-1.15.2-py3-none-any.whl", hash = "sha256:bd6b70b93fc53d63a167738ba4fb40643ef7eb9b8d915a886c372949981b8eac"},
-    {file = "sphinx_autodoc_typehints-1.15.2.tar.gz", hash = "sha256:1480d4af8ac465aa87b793e22bb0feb4578b9c93b36e01b35c983bd6f596326f"},
+    {file = "sphinx_autodoc_typehints-1.15.3-py3-none-any.whl", hash = "sha256:5bf7ae28f98dd2cae8b93c4f723fb5f4761ae340194d02d2742a81c7694d2e0a"},
+    {file = "sphinx_autodoc_typehints-1.15.3.tar.gz", hash = "sha256:91eb3c227ff0824bee39fabf92d92e21835546903d2ddde5467fd9b6fa10ad7f"},
 ]
 sphinxcontrib-applehelp = [
     {file = "sphinxcontrib-applehelp-1.0.2.tar.gz", hash = "sha256:a072735ec80e7675e3f432fcae8610ecf509c5f1869d17e2eecff44389cdbc58"},
