@@ -809,7 +809,7 @@ tornado = ["tornado (>=0.2)"]
 
 [[package]]
 name = "hypothesis"
-version = "6.35.1"
+version = "6.36.0"
 description = "A library for property-based testing"
 category = "dev"
 optional = false
@@ -1875,7 +1875,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "3.9.9"
-content-hash = "5649bcc14bc9eec957c29a6c5b250fc947360cbb474fb6ec864410a42b020573"
+content-hash = "d4d2d23aad88f97f5aa7db7e9184cb45c8b9aaeb7aa5df4c8404091217e42753"
 
 [metadata.files]
 alabaster = [
@@ -2261,8 +2261,8 @@ gunicorn = [
     {file = "gunicorn-20.1.0.tar.gz", hash = "sha256:e0a968b5ba15f8a328fdfd7ab1fcb5af4470c28aaf7e55df02a99bc13138e6e8"},
 ]
 hypothesis = [
-    {file = "hypothesis-6.35.1-py3-none-any.whl", hash = "sha256:536b928d14934809d0da676579436aaa379b06df84408b4c154412e8fd4e1b91"},
-    {file = "hypothesis-6.35.1.tar.gz", hash = "sha256:8533812bd277925b0c594ef2681dc8f4289a7b6be0169cc2df295d096c7cd783"},
+    {file = "hypothesis-6.36.0-py3-none-any.whl", hash = "sha256:fa9f845b06199ea87e68c6da04a609ff46e381b5d542351184790d54eaca144c"},
+    {file = "hypothesis-6.36.0.tar.gz", hash = "sha256:2b9c56faa067d660f0802679689f825bf142eec8261ab9e2e6ea916b1d8278a1"},
 ]
 identify = [
     {file = "identify-2.4.0-py2.py3-none-any.whl", hash = "sha256:eba31ca80258de6bb51453084bff4a923187cd2193b9c13710f2516ab30732cc"},
