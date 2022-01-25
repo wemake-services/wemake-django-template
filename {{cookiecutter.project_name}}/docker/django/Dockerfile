@@ -50,7 +50,9 @@ RUN apt-get update && apt-get upgrade -y \
   && rm "dockerize-linux-amd64-${DOCKERIZE_VERSION}.tar.gz" && dockerize --version \
   # Installing `tini` utility:
   # https://github.com/krallin/tini
-  && wget -O /usr/local/bin/tini "https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini" \
+  # Get architecture to download appropriate tini release: See https://github.com/wemake-services/wemake-django-template/issues/1725
+  && dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')" \
+  && wget -O /usr/local/bin/tini "https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini-${dpkgArch}" \
   && chmod +x /usr/local/bin/tini && tini --version \
   # Installing `poetry` package manager:
   # https://github.com/python-poetry/poetry
