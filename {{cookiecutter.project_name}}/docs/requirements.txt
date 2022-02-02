@@ -3,4 +3,4 @@
 
 sphinx==4.4.0
 sphinx_autodoc_typehints==1.16.0
-tomlkit==0.8.0
+tomlkit==0.9.0
