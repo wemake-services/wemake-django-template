@@ -62,7 +62,7 @@ mypy = "^0.931"
 django-stubs = "^1.9"
 
 sphinx = "^4.4"
-sphinx-autodoc-typehints = "^1.16"
+sphinx-autodoc-typehints = "^1.17"
 tomlkit = "^0.9"
 doc8 = "^0.10"
 
