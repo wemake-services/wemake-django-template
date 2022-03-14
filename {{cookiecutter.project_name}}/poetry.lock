@@ -1439,7 +1439,7 @@ pytest = "*"
 
 [[package]]
 name = "pytest-testmon"
-version = "1.3.0"
+version = "1.3.1"
 description = "selects tests affected by changed files and methods"
 category = "dev"
 optional = false
@@ -2652,7 +2652,7 @@ pytest-randomly = [
     {file = "pytest_randomly-3.11.0-py3-none-any.whl", hash = "sha256:a3c680d2b8150cf766311a80a1f92da64c3dd819045cda834fbf1b0ac4891610"},
 ]
 pytest-testmon = [
-    {file = "pytest-testmon-1.3.0.tar.gz", hash = "sha256:d50caba2ae83bf5d44682191023d7d6ca4017d1cf6e974a1e53258ef103fbc11"},
+    {file = "pytest-testmon-1.3.1.tar.gz", hash = "sha256:ea05960ad9bf1879278632f245d55fe3692879a48ace4e7f574d7bdc310b9a3d"},
 ]
 pytest-timeout = [
     {file = "pytest-timeout-2.1.0.tar.gz", hash = "sha256:c07ca07404c612f8abbe22294b23c368e2e5104b521c1790195561f37e1ac3d9"},
