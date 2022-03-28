@@ -1,6 +1,6 @@
 # This file is required since we use ReadTheDocs services.
 # If it is not used, feel free to delete it.
 
-sphinx==4.4.0
+sphinx==4.5.0
 sphinx_autodoc_typehints==1.17.0
 tomlkit==0.10.1
