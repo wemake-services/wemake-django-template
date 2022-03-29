@@ -31,6 +31,7 @@ ENV DJANGO_ENV=${DJANGO_ENV} \
   POETRY_CACHE_DIR='/var/cache/pypoetry' \
   PATH="$PATH:/root/.local/bin"
 
+SHELL ["/bin/bash", "-eo", "pipefail", "-c"]
 
 # System deps:
 RUN apt-get update && apt-get upgrade -y \
