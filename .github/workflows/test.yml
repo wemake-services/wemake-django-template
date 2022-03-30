@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 concurrency: 
-  group: ${{ github.head_ref || github.run_id }}
+  group: test-${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
 
 jobs:
@@ -27,8 +27,8 @@ jobs:
         python-version: ${{ matrix.python-version }}
 
     - name: Install poetry
-      env:
-        POETRY_VERSION: "1.1.11"
+      env:  # Keep in sync with `POETRY_VERSION` in `Dockerfile`
+        POETRY_VERSION: "1.1.13"
       run: |
         curl -sSL "https://install.python-poetry.org" | python -
 
