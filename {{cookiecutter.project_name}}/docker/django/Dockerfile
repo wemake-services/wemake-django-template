@@ -9,8 +9,6 @@ LABEL vendor="wemake.services"
 ARG DJANGO_ENV
 
 ENV DJANGO_ENV=${DJANGO_ENV} \
-  # build:
-  BUILD_ONLY_PACKAGES='wget' \
   # python:
   PYTHONFAULTHANDLER=1 \
   PYTHONUNBUFFERED=1 \
@@ -29,11 +27,12 @@ ENV DJANGO_ENV=${DJANGO_ENV} \
   POETRY_NO_INTERACTION=1 \
   POETRY_VIRTUALENVS_CREATE=false \
   POETRY_CACHE_DIR='/var/cache/pypoetry' \
-  PATH="$PATH:/root/.local/bin"
+  POETRY_HOME='/usr/local'
 
 SHELL ["/bin/bash", "-eo", "pipefail", "-c"]
 
-# System deps:
+# System deps, we don't use exact versions because it is hard to update them, pin when needed:
+# hadolint ignore=DL3008
 RUN apt-get update && apt-get upgrade -y \
   && apt-get install --no-install-recommends -y \
     bash \
@@ -42,25 +41,21 @@ RUN apt-get update && apt-get upgrade -y \
     gettext \
     git \
     libpq-dev \
-    # Defining build-time-only dependencies:
-    $BUILD_ONLY_PACKAGES \
   # Installing `dockerize` utility:
   # https://github.com/jwilder/dockerize
-  && wget "https://github.com/jwilder/dockerize/releases/download/${DOCKERIZE_VERSION}/dockerize-linux-amd64-${DOCKERIZE_VERSION}.tar.gz" \
+  && curl -sSLO "https://github.com/jwilder/dockerize/releases/download/${DOCKERIZE_VERSION}/dockerize-linux-amd64-${DOCKERIZE_VERSION}.tar.gz" \
   && tar -C /usr/local/bin -xzvf "dockerize-linux-amd64-${DOCKERIZE_VERSION}.tar.gz" \
   && rm "dockerize-linux-amd64-${DOCKERIZE_VERSION}.tar.gz" && dockerize --version \
   # Installing `tini` utility:
   # https://github.com/krallin/tini
   # Get architecture to download appropriate tini release: See https://github.com/wemake-services/wemake-django-template/issues/1725
   && dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')" \
-  && wget -O /usr/local/bin/tini "https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini-${dpkgArch}" \
+  && curl -o /usr/local/bin/tini -sSLO "https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini-${dpkgArch}" \
   && chmod +x /usr/local/bin/tini && tini --version \
   # Installing `poetry` package manager:
   # https://github.com/python-poetry/poetry
   && curl -sSL 'https://install.python-poetry.org' | python - \
   && poetry --version \
-  # Removing build-time-only dependencies:
-  && apt-get remove -y $BUILD_ONLY_PACKAGES \
   # Cleaning cache:
   && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
   && apt-get clean -y && rm -rf /var/lib/apt/lists/*
@@ -81,6 +76,7 @@ RUN chmod +x '/docker-entrypoint.sh' \
 COPY --chown=web:web ./poetry.lock ./pyproject.toml /code/
 
 # Project initialization:
+# hadolint ignore=SC2046
 RUN echo "$DJANGO_ENV" && poetry version \
   && poetry install \
     $(if [ "$DJANGO_ENV" = 'production' ]; then echo '--no-dev'; fi) \
