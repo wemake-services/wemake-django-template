@@ -6,16 +6,14 @@ set -o pipefail
 
 readonly cmd="$*"
 
-postgres_ready () {
-  # Check that postgres is up and running on port `5432`:
-  dockerize -wait "tcp://${DJANGO_DATABASE_HOST:-db}:${DJANGO_DATABASE_PORT:-5432}" -timeout 10s
-}
+: "${DJANGO_DATABASE_HOST:=db}"
+: "${DJANGO_DATABASE_PORT:=5432}"
 
 # We need this line to make sure that this container is started
 # after the one with postgres:
-until postgres_ready; do
-  >&2 echo 'Postgres is unavailable - sleeping'
-done
+dockerize \
+  -wait "tcp://${DJANGO_DATABASE_HOST}:${DJANGO_DATABASE_PORT}" \
+  -timeout 90s
 
 # It is also possible to wait for other services as well: redis, elastic, mongo
 >&2 echo 'Postgres is up - continuing...'
