@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Used by both `test_github` and `test_gitlab`
+
 set -o errexit
 set -o nounset
 set -o pipefail
