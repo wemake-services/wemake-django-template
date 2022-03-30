@@ -26,7 +26,11 @@ variables:
     # Making sure we are in the right directory, does nothing by default:
     - pwd && echo "$CI_PROJECT_DIR" && cd "$CI_PROJECT_DIR"
     # Creating `.env` configuration file:
-    - dump-env -t config/.env.template -p 'SECRET_' > config/.env
+    - |
+      dump-env \
+        -t config/.env.template \
+        -p 'SECRET_' \
+        --strict SECRET_DJANGO_SECRET_KEY > config/.env
     # Login into Docker registry:
     - echo "$CI_JOB_TOKEN" | docker login "$REGISTRY"
       -u gitlab-ci-token --password-stdin

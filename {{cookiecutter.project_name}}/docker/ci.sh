@@ -47,8 +47,6 @@ run_ci () {
   # Run checks to be sure we follow all django's best practices:
   python manage.py check --fail-level WARNING
 
-  cat config/.env 
-
   # Run checks to be sure settings are correct (production flag is required):
   DJANGO_ENV=production python manage.py check --deploy --fail-level WARNING
 
