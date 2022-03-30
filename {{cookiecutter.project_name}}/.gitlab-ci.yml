@@ -52,7 +52,7 @@ test:
 
     # The logic itself:
     - docker-compose build web
-    - docker-compose run --user=root --rm web bash ./docker/ci.sh
+    - docker-compose run --user=root --rm web ./docker/ci.sh
     - disl "${PROJECT_NAME}:dev" 950MiB
 
     # Pushing back the result for future runs:
