@@ -4,7 +4,11 @@ on:
   push:
     branches:
       - master
+    paths:
+      - '{{cookiecutter.project_name}}/docker/django/Dockerfile'
   pull_request:
+    paths:
+      - '{{cookiecutter.project_name}}/docker/django/Dockerfile'
   workflow_dispatch:
 
 concurrency: 
