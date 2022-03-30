@@ -27,7 +27,7 @@ ENV DJANGO_ENV=${DJANGO_ENV} \
   POETRY_NO_INTERACTION=1 \
   POETRY_VIRTUALENVS_CREATE=false \
   POETRY_CACHE_DIR='/var/cache/pypoetry' \
-  PATH="$PATH:/root/.local/bin"
+  POETRY_HOME='/usr/local'
 
 SHELL ["/bin/bash", "-eo", "pipefail", "-c"]
 
@@ -43,14 +43,14 @@ RUN apt-get update && apt-get upgrade -y \
     libpq-dev \
   # Installing `dockerize` utility:
   # https://github.com/jwilder/dockerize
-  && curl -sSL "https://github.com/jwilder/dockerize/releases/download/${DOCKERIZE_VERSION}/dockerize-linux-amd64-${DOCKERIZE_VERSION}.tar.gz" \
+  && curl -sSLO "https://github.com/jwilder/dockerize/releases/download/${DOCKERIZE_VERSION}/dockerize-linux-amd64-${DOCKERIZE_VERSION}.tar.gz" \
   && tar -C /usr/local/bin -xzvf "dockerize-linux-amd64-${DOCKERIZE_VERSION}.tar.gz" \
   && rm "dockerize-linux-amd64-${DOCKERIZE_VERSION}.tar.gz" && dockerize --version \
   # Installing `tini` utility:
   # https://github.com/krallin/tini
   # Get architecture to download appropriate tini release: See https://github.com/wemake-services/wemake-django-template/issues/1725
   && dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')" \
-  && curl -o /usr/local/bin/tini -sSL "https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini-${dpkgArch}" \
+  && curl -o /usr/local/bin/tini -sSLO "https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini-${dpkgArch}" \
   && chmod +x /usr/local/bin/tini && tini --version \
   # Installing `poetry` package manager:
   # https://github.com/python-poetry/poetry
