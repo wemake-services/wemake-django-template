@@ -28,7 +28,7 @@ mirror-github-build:
     - export PATH="$HOME/.local/bin:$PATH"
     # Installing dependencies:
     - poetry config virtualenvs.in-project true
-    - poetry install
+    - poetry install --no-dev
   script:
     - poetry run bash tests/test_gitlab.sh
   only:
