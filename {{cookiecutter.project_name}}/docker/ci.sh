@@ -1,7 +1,8 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 set -o errexit
 set -o nounset
+set -o pipefail
 
 # Initializing global variables and functions:
 : "${DJANGO_ENV:=development}"
@@ -15,8 +16,9 @@ fi
 pyclean () {
   # Cleaning cache:
   find . \
-  | grep -E '(__pycache__|\.hypothesis|\.perm|\.cache|\.static|\.py[cod]$)' \
-  | xargs rm -rf
+    | grep -E '(__pycache__|\.hypothesis|\.perm|\.cache|\.static|\.py[cod]$)' \
+    | xargs rm -rf \
+  || true
 }
 
 run_ci () {
@@ -35,6 +37,7 @@ run_ci () {
   flake8 .
 
   # Running type checking, see https://github.com/typeddjango/django-stubs
+  # shellcheck disable=SC2046
   mypy manage.py server $(find tests -name '*.py')
 
   # Running tests:

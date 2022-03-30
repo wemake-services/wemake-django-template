@@ -11,7 +11,6 @@ workflow:
         - tests/build.sh
         - tests/test_gitlab.sh
 
-
 # Reusing existing gitlab definition:
 include:
   - local: '{{cookiecutter.project_name}}/.gitlab-ci.yml'
@@ -20,17 +19,9 @@ include:
 # Building template project:
 mirror-github-build:
   stage: build
-  image: "python:3.9"
+  image: python:3.9
   variables:
-    PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
-    POETRY_VERSION: "1.1.11"
-  cache:  # we use cache to speed up `pip` installs
-    key:
-      files:
-        - poetry.lock
-    paths:
-      - "$PIP_CACHE_DIR"
-      - '.venv/'
+    POETRY_VERSION: "1.1.13"
   before_script:
     # Installing poetry:
     - curl -sSL "https://install.python-poetry.org" | python -
@@ -39,7 +30,7 @@ mirror-github-build:
     - poetry config virtualenvs.in-project true
     - poetry install --no-dev
   script:
-    - poetry run sh tests/test_gitlab.sh
+    - poetry run bash tests/test_gitlab.sh
   only:
     - master
     - external_pull_requests

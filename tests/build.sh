@@ -1,7 +1,10 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
+
+# Used by both `test_github` and `test_gitlab`
 
 set -o errexit
 set -o nounset
+set -o pipefail
 
 # Creating a test directory:
 readonly TEST_DIR='./.test'

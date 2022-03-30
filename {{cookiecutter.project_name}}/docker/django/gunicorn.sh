@@ -1,7 +1,8 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 set -o errexit
 set -o nounset
+set -o pipefail
 
 # We are using `gunicorn` for production, see:
 # http://docs.gunicorn.org/en/stable/configure.html
