@@ -7,7 +7,7 @@ on:
   pull_request:
   workflow_dispatch:
 
-concurrency: 
+concurrency:
   group: test-${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
 
@@ -51,7 +51,7 @@ jobs:
       run: |
         poetry run flake8 .
         poetry run pytest
-        poetry run sh tests/test_github.sh
+        poetry run bash tests/test_github.sh
         poetry run poetry check
         poetry run pip check
         poetry run safety check --full-report

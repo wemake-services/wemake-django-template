@@ -39,7 +39,7 @@ mirror-github-build:
     - poetry config virtualenvs.in-project true
     - poetry install --no-dev
   script:
-    - poetry run sh tests/test_gitlab.sh
+    - poetry run bash tests/test_gitlab.sh
   only:
     - master
     - external_pull_requests
