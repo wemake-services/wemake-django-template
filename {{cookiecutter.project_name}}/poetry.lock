@@ -479,7 +479,7 @@ typing_extensions = ">=3.6,<5"
 
 [[package]]
 name = "doc8"
-version = "0.10.1"
+version = "0.11.0"
 description = "Style checker for Sphinx (or other) RST documentation"
 category = "dev"
 optional = false
@@ -2008,7 +2008,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = "3.9.10"
-content-hash = "a7a7dd35972606359ece32b34d3469722703f9dcb879200e52af20afd7f7b42e"
+content-hash = "ca17a87b55db13758aba787fcebaa8b9427e83a6213c988f9eb2911f62ae65aa"
 
 [metadata.files]
 alabaster = [
@@ -2277,8 +2277,8 @@ django-test-migrations = [
     {file = "django_test_migrations-1.2.0-py3-none-any.whl", hash = "sha256:9e8b9b4364fef70dde10a5f85c5a75d447ca2189ec648325610fab1268daec97"},
 ]
 doc8 = [
-    {file = "doc8-0.10.1-py3-none-any.whl", hash = "sha256:551a61df5915f0107e518d582fead47a0a56df7d4a9374feab955ea14dedea84"},
-    {file = "doc8-0.10.1.tar.gz", hash = "sha256:376e50f4e70a1ae935416ddfcf93db35dd5d4cc0e557f2ec72f0667d0ace4548"},
+    {file = "doc8-0.11.0-py3-none-any.whl", hash = "sha256:1e533c6c8a112f030032b8ba0af3ea4f15d4c94f54f53eeeef7946aa6b543696"},
+    {file = "doc8-0.11.0.tar.gz", hash = "sha256:282c1375e414292683738125d0d150b6639039be83ea0ee12def745d235ff1e7"},
 ]
 docopt = [
     {file = "docopt-0.6.2.tar.gz", hash = "sha256:49b3a825280bd66b3aa83585ef59c4a8c82f2c8a522dbe754a8bc8d08c85c491"},
