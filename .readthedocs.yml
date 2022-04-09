@@ -7,7 +7,10 @@ build:
 
 python:
   install:
-    - requirements: '{{cookiecutter.project_name}}/docs/requirements.txt'
+    - method: pip
+      path: '{{cookiecutter.project_name}}'
+      extra_requirements:
+        - docs
 
 sphinx:
   configuration: '{{cookiecutter.project_name}}/docs/conf.py'
