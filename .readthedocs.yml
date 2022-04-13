@@ -8,7 +8,7 @@ build:
 python:
   install:
     - method: pip
-      path: '\{\{cookiecutter.project_name\}\}'
+      path: '{{cookiecutter.project_name}}'
       extra_requirements:
         - docs
 
