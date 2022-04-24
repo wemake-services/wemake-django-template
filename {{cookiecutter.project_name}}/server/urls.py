@@ -26,10 +26,10 @@ urlpatterns = [
     path('main/', include(main_urls, namespace='main')),
 
     # Health checks:
-    path('health/', include(health_urls)),  # noqa: DJ05
+    path('health/', include(health_urls)),
 
     # django-admin:
-    path('admin/doc/', include(admindocs_urls)),  # noqa: DJ05
+    path('admin/doc/', include(admindocs_urls)),
     path('admin/', admin.site.urls),
 
     # Text and xml static files:
@@ -52,9 +52,8 @@ if settings.DEBUG:  # pragma: no cover
 
     urlpatterns = [
         # URLs specific only to django-debug-toolbar:
-        path('__debug__/', include(debug_toolbar.urls)),  # noqa: DJ05
-    ] + urlpatterns + static(  # type: ignore
+        path('__debug__/', include(debug_toolbar.urls)),
+        *urlpatterns,
         # Serving media files in development only:
-        settings.MEDIA_URL,
-        document_root=settings.MEDIA_ROOT,
-    )
+        *static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT),
+    ]
