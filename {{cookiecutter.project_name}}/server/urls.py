@@ -53,8 +53,7 @@ if settings.DEBUG:  # pragma: no cover
     urlpatterns = [
         # URLs specific only to django-debug-toolbar:
         path('__debug__/', include(debug_toolbar.urls)),  # noqa: DJ05
-    ] + urlpatterns + static(  # type: ignore
+        *urlpatterns,
         # Serving media files in development only:
-        settings.MEDIA_URL,
-        document_root=settings.MEDIA_ROOT,
-    )
+        *static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT),
+    ]
