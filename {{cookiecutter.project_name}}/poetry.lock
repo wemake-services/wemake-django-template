@@ -315,7 +315,7 @@ django-ipware = ">=3"
 
 [[package]]
 name = "django-coverage-plugin"
-version = "2.0.2"
+version = "2.0.3"
 description = "Django template coverage.py plugin"
 category = "dev"
 optional = false
@@ -2230,8 +2230,8 @@ django-axes = [
     {file = "django_axes-5.32.0-py3-none-any.whl", hash = "sha256:02793a3b007ee1d6c71a0dfc2e165471d50fdf806bb29451bea85b4d70d6d099"},
 ]
 django-coverage-plugin = [
-    {file = "django_coverage_plugin-2.0.2-py3-none-any.whl", hash = "sha256:4206c85ffba0301f83aecc38e5b01b1b9a4b45a545d9456a827e3fabea18d952"},
-    {file = "django_coverage_plugin-2.0.2.tar.gz", hash = "sha256:e91e3a0c8de2b3766a144cdd30dbbf7a79e5c532a5dcc1373ce7eaad83b358b3"},
+    {file = "django_coverage_plugin-2.0.3-py3-none-any.whl", hash = "sha256:fd888f2ff41e3410a004d799b198cf8b19694d692a2d2264e8c944b9321bedc3"},
+    {file = "django_coverage_plugin-2.0.3.tar.gz", hash = "sha256:e73231e3bfddb2ac836fd43cb0e6ec2ab3a97457b1d9ca2468085e506beb7935"},
 ]
 django-csp = [
     {file = "django_csp-3.7-py2.py3-none-any.whl", hash = "sha256:01443a07723f9a479d498bd7bb63571aaa771e690f64bde515db6cdb76e8041a"},
