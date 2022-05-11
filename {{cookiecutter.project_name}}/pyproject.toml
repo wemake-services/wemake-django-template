@@ -15,7 +15,7 @@ django-axes = "^5.32"
 django-csp = "^3.7"
 django-health-check = "^3.16"
 django-http-referrer-policy = "^1.1"
-django-permissions-policy = "^4.9"
+django-permissions-policy = "^4.10"
 django-stubs-ext = "^0.4"
 
 psycopg2-binary = "^2.9"
