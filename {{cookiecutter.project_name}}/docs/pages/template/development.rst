@@ -122,23 +122,6 @@ What do you need to know about it?
 
 **Note**: ``docker`` commands do not need to use ``virtualenv`` at all.
 
-Extra configuration
-~~~~~~~~~~~~~~~~~~~
-
-You might want to tweak ``INTERNAL_IPS`` ``django`` setting
-to include your ``docker`` container address into it.
-Otherwise ``django-debug-toolbar`` might not show up.
-
-To get your ``docker`` ip run:
-
-.. code:: bash
-
-  docker inspect your-container-name | grep -e '"Gateway"'
-
-You can also configure a permanent hostname inside your ``/etc/hosts`` to
-access your ``docker`` containers with a permanent hostname.
-
-
 Local development
 -----------------
 
