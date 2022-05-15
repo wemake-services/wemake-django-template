@@ -6,6 +6,13 @@ updates:
     interval: daily
     time: "02:00"
   open-pull-requests-limit: 10
+  ignore:
+    - dependency-name: "django"
+      # Ignore non-LTS Django releases
+      # https://www.djangoproject.com/download/#supported-versions
+      versions:
+        - ">=4.0,<4.2"
+        - ">=5.0,<5.2"
 
 - package-ecosystem: pip
   directory: "/"
