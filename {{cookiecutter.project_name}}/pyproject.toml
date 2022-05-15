@@ -9,7 +9,7 @@ authors = ["{{ cookiecutter.project_domain }}"]
 [tool.poetry.dependencies]
 python = "3.9.10"
 
-django = "^3.2"
+django = { version = "^3.2", extras = ["argon2"] }
 django-split-settings = "^1.1"
 django-axes = "^5.32"
 django-csp = "^3.7"
@@ -21,7 +21,6 @@ django-stubs-ext = "^0.4"
 psycopg2-binary = "^2.9"
 gunicorn = "^20.0"
 python-decouple = "^3.6"
-bcrypt = "^3.2"
 structlog = "^21.5"
 
 
