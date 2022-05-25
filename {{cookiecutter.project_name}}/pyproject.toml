@@ -53,7 +53,7 @@ django-stubs = "^1.10"
 
 sphinx = "^4.5"
 sphinx-autodoc-typehints = "^1.18"
-tomlkit = "^0.10"
+tomlkit = "^0.11"
 doc8 = "^0.11"
 
 yamllint = "^1.26"
