@@ -46,4 +46,4 @@ safety = "^1.10"
 
 docker-compose = "^1.29"
 docker-image-size-limit = "^0.4"
-tomlkit = "^0.10"
+tomlkit = "^0.11"
