@@ -182,7 +182,7 @@ testing = ["sphinx", "flake8", "pytest", "pytest-cov", "pytest-virtualenv", "pyt
 
 [[package]]
 name = "cookiecutter"
-version = "2.1.0"
+version = "2.1.1"
 description = "A command-line utility that creates projects from project templates, e.g. creating a Python package project from a Python package project template."
 category = "main"
 optional = false
@@ -1531,8 +1531,8 @@ configupdater = [
     {file = "ConfigUpdater-3.1.tar.gz", hash = "sha256:ddcc5250f508b9131c45fd1dbceae3f112907ddd7597da1cff30c51bf7c87edb"},
 ]
 cookiecutter = [
-    {file = "cookiecutter-2.1.0-py2.py3-none-any.whl", hash = "sha256:5f3ee1fc5bae5a5f62a9a3bf5171258913e507d11c8d278208e3a7f61c1b95ac"},
-    {file = "cookiecutter-2.1.0.tar.gz", hash = "sha256:eca3133ebd0d138f226616c38dc456caafae7da45d6d33a3eeb83bf7f56f9c64"},
+    {file = "cookiecutter-2.1.1-py2.py3-none-any.whl", hash = "sha256:9f3ab027cec4f70916e28f03470bdb41e637a3ad354b4d65c765d93aad160022"},
+    {file = "cookiecutter-2.1.1.tar.gz", hash = "sha256:f3982be8d9c53dac1261864013fdec7f83afd2e42ede6f6dd069c5e149c540d5"},
 ]
 cryptography = [
     {file = "cryptography-36.0.2-cp36-abi3-macosx_10_10_universal2.whl", hash = "sha256:4e2dddd38a5ba733be6a025a1475a9f45e4e41139d1321f412c6b360b19070b6"},
