@@ -276,11 +276,11 @@ python-versions = ">=3.5"
 
 [[package]]
 name = "dennis"
-version = "0.9"
-description = "Utilities for working with PO and POT files to ease development and improve localization quality"
+version = "1.0.0"
+description = "Utilities for working with gettext PO and POT files to ease development and improve localization quality"
 category = "dev"
 optional = false
-python-versions = "*"
+python-versions = ">=3.7"
 
 [package.dependencies]
 click = ">=6"
@@ -2023,7 +2023,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = "3.9.10"
-content-hash = "6277c76c2b35e95f3986b8801642f31b00480b1765d2fe40c544a8d2501bc439"
+content-hash = "5380000bda2863dd03319e78a325b8edea40ae4228f4034ac72d3d03ead5a176"
 
 [metadata.files]
 alabaster = [
@@ -2236,8 +2236,8 @@ decorator = [
     {file = "decorator-5.1.1.tar.gz", hash = "sha256:637996211036b6385ef91435e4fae22989472f9d571faba8927ba8253acbc330"},
 ]
 dennis = [
-    {file = "dennis-0.9-py2.py3-none-any.whl", hash = "sha256:f6487392ac91800c5f0684a99b404b7fd0f72ceb48faeb5a0ce4e2c24fb62d3f"},
-    {file = "dennis-0.9.tar.gz", hash = "sha256:8c942dd5da7d03c65daebc069c5ee5c7f1374ac9b0c8c89c627caa66fe822604"},
+    {file = "dennis-1.0.0-py3-none-any.whl", hash = "sha256:9691317bbea10494080395e2a310c372377a5a85de8a3d6388c706c0aa551145"},
+    {file = "dennis-1.0.0.tar.gz", hash = "sha256:07381af4e0c16340186446313ad72937a6188b68022e5961f1a35da67e4d3610"},
 ]
 dictdiffer = [
     {file = "dictdiffer-0.9.0-py2.py3-none-any.whl", hash = "sha256:442bfc693cfcadaf46674575d2eba1c53b42f5e404218ca2c2ff549f2df56595"},
