@@ -3,7 +3,7 @@
 
 FROM python:3.9.10-slim-buster AS development_build
 
-LABEL maintainer="sobolevn@wemake.services"
+LABEL maintainer="mail@sobolevn.me"
 LABEL vendor="wemake.services"
 
 ARG DJANGO_ENV

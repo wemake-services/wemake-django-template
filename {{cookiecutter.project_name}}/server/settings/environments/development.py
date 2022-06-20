@@ -70,10 +70,14 @@ MIDDLEWARE += (
 )
 
 # https://django-debug-toolbar.readthedocs.io/en/stable/installation.html#configure-internal-ips
-INTERNAL_IPS = [
-    '{0}.1'.format(ip[:ip.rfind('.')])
-    for ip in socket.gethostbyname_ex(socket.gethostname())[2]
-] + ['127.0.0.1', '10.0.2.2']
+try:
+    INTERNAL_IPS = [
+        '{0}.1'.format(ip[:ip.rfind('.')])
+        for ip in socket.gethostbyname_ex(socket.gethostname())[2]
+    ]
+except socket.error:  # This might fail on some OS
+    INTERNAL_IPS = []
+INTERNAL_IPS += ['127.0.0.1', '10.0.2.2']
 
 
 def _custom_show_toolbar(request):
