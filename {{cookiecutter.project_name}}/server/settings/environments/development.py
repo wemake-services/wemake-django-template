@@ -70,7 +70,7 @@ MIDDLEWARE += (
 )
 
 # https://django-debug-toolbar.readthedocs.io/en/stable/installation.html#configure-internal-ips
-try:
+try:  # pragma: no cover
     INTERNAL_IPS = [
         '{0}.1'.format(ip[:ip.rfind('.')])
         for ip in socket.gethostbyname_ex(socket.gethostname())[2]
