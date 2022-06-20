@@ -43,8 +43,6 @@ Here's the full list of things we use:
 - `pytest-deadfixtures`_ - plugin to find unused or duplicate fixtures
 - `pytest-timeout`_ - plugin to raise errors for tests
   that take too long to finish, this way you can control test execution speed
-- `pytest-testmon`_ - plugin for `Test Driven Development`_ which executes
-  tests that are affected by your code changes
 
 .. _pytest-django: https://github.com/pytest-dev/pytest-django
 .. _django-test-migrations: https://github.com/wemake-services/django-test-migrations
@@ -52,8 +50,6 @@ Here's the full list of things we use:
 .. _pytest-randomly: https://github.com/pytest-dev/pytest-randomly
 .. _pytest-deadfixtures: https://github.com/jllorencetti/pytest-deadfixtures
 .. _pytest-timeout: https://pypi.org/project/pytest-timeout
-.. _pytest-testmon: https://github.com/tarpas/pytest-testmon
-.. _`Test Driven Development`: https://en.wikipedia.org/wiki/Test-driven_development
 
 Tweaking tests performance
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
