@@ -18,3 +18,8 @@ services:
     volumes:
       # We only mount source code in development:
       - .:/code
+    build:
+      # Needed for fixing permissions of files created by Docker
+      args:
+        - UID=${UID:-1000}
+        - GID=${GID:-1000}
