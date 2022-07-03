@@ -8,6 +8,10 @@ LABEL vendor="wemake.services"
 
 ARG DJANGO_ENV
 
+# Needed for fixing permissions of files created by Docker
+ARG UID=1000
+ARG GID=1000
+
 ENV DJANGO_ENV=${DJANGO_ENV} \
   # python:
   PYTHONFAULTHANDLER=1 \
@@ -62,7 +66,8 @@ RUN apt-get update && apt-get upgrade -y \
 
 WORKDIR /code
 
-RUN groupadd -r web && useradd -d /code -r -g web web \
+RUN groupadd -g "${GID}" -r web \
+  && useradd -d /code -g web -l -r -u "${UID}" web \
   && chown web:web -R /code \
   && mkdir -p /var/www/django/static /var/www/django/media \
   && chown web:web /var/www/django/static /var/www/django/media
