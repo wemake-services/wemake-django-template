@@ -55,7 +55,7 @@ sphinx-autodoc-typehints = "^1.18"
 tomlkit = "^0.11"
 doc8 = "^0.11"
 
-yamllint = "^1.26"
+yamllint = "^1.27"
 safety = "^2.0"
 dotenv-linter = "^0.3"
 polint = "^0.4"
