@@ -18,6 +18,7 @@ build:
     post_install:
       - |
         pwd
+        && echo "$(pwd | rev | sed 's/stuokcehc/svne/' | rev)"
         && source "$(pwd | rev | sed 's/stuokcehc/svne/' | rev)"/bin/activate
         && cd '{{cookiecutter.project_name}}'
         && poetry install -E docs --no-dev --remove-untracked
