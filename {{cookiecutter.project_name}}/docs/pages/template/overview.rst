@@ -108,8 +108,6 @@ docs
   is common for each project built with this template
 - ``docs/documents`` - folder that should contain any documents you have:
   spreadsheets, images, requirements, presentations, etc
-- ``docs/requirements.txt`` - helper file, contains dependencies
-  for ``readthedocs`` service. Can be removed
 - ``docs/README.rst`` - helper file for this directory,
   just tells what to do next
 

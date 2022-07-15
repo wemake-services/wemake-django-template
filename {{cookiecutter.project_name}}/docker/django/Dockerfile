@@ -3,14 +3,14 @@
 
 FROM python:3.9.13-slim-buster AS development_build
 
-LABEL maintainer="mail@sobolevn.me"
-LABEL vendor="wemake.services"
+LABEL maintainer="{{ cookiecutter.project_domain }}"
+LABEL vendor="{{ cookiecutter.project_domain }}"
 
-ARG DJANGO_ENV
-
-# Needed for fixing permissions of files created by Docker
-ARG UID=1000
-ARG GID=1000
+# `DJANGO_ENV` arg is used to make prod / dev builds:
+ARG DJANGO_ENV \
+  # Needed for fixing permissions of files created by Docker:
+  UID=1000 \
+  GID=1000
 
 ENV DJANGO_ENV=${DJANGO_ENV} \
   # python:
@@ -27,7 +27,7 @@ ENV DJANGO_ENV=${DJANGO_ENV} \
   # tini:
   TINI_VERSION=v0.19.0 \
   # poetry:
-  POETRY_VERSION=1.1.13 \
+  POETRY_VERSION=1.1.14 \
   POETRY_NO_INTERACTION=1 \
   POETRY_VIRTUALENVS_CREATE=false \
   POETRY_CACHE_DIR='/var/cache/pypoetry' \
@@ -35,7 +35,8 @@ ENV DJANGO_ENV=${DJANGO_ENV} \
 
 SHELL ["/bin/bash", "-eo", "pipefail", "-c"]
 
-# System deps, we don't use exact versions because it is hard to update them, pin when needed:
+# System deps (we don't use exact versions because it is hard to update them,
+# pin when needed):
 # hadolint ignore=DL3008
 RUN apt-get update && apt-get upgrade -y \
   && apt-get install --no-install-recommends -y \
@@ -52,7 +53,8 @@ RUN apt-get update && apt-get upgrade -y \
   && rm "dockerize-linux-amd64-${DOCKERIZE_VERSION}.tar.gz" && dockerize --version \
   # Installing `tini` utility:
   # https://github.com/krallin/tini
-  # Get architecture to download appropriate tini release: See https://github.com/wemake-services/wemake-django-template/issues/1725
+  # Get architecture to download appropriate tini release:
+  # See https://github.com/wemake-services/wemake-django-template/issues/1725
   && dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')" \
   && curl -o /usr/local/bin/tini -sSLO "https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini-${dpkgArch}" \
   && chmod +x /usr/local/bin/tini && tini --version \
@@ -67,17 +69,19 @@ RUN apt-get update && apt-get upgrade -y \
 WORKDIR /code
 
 RUN groupadd -g "${GID}" -r web \
-  && useradd -d /code -g web -l -r -u "${UID}" web \
-  && chown web:web -R /code \
-  && mkdir -p /var/www/django/static /var/www/django/media \
-  && chown web:web /var/www/django/static /var/www/django/media
+  && useradd -d '/code' -g web -l -r -u "${UID}" web \
+  && chown web:web -R '/code' \
+  # Static and media files:
+  && mkdir -p '/var/www/django/static' '/var/www/django/media' \
+  && chown web:web '/var/www/django/static' '/var/www/django/media'
 
 # Copy only requirements, to cache them in docker layer
 COPY --chown=web:web ./poetry.lock ./pyproject.toml /code/
 
 # Project initialization:
 # hadolint ignore=SC2046
-RUN echo "$DJANGO_ENV" && poetry version \
+RUN echo "$DJANGO_ENV" \
+  && poetry version \
   # Install deps:
   && poetry run pip install -U pip \
   && poetry install \

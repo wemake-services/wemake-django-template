@@ -1,13 +1,19 @@
 version: 2
 
+# Set the version of Python and other tools you might need
 build:
   os: ubuntu-20.04
   tools:
     python: '3.9'
-
-python:
-  install:
-    - requirements: '{{cookiecutter.project_name}}/docs/requirements.txt'
+  jobs:
+    # See https://github.com/readthedocs/readthedocs.org/issues/4912
+    pre_create_environment:
+      - asdf plugin add poetry
+      - asdf install poetry latest
+      - asdf global poetry latest
+      - poetry config virtualenvs.create false
+    install:
+      - cd '{{cookiecutter.project_name}}' && poetry install -E docs
 
 sphinx:
   configuration: '{{cookiecutter.project_name}}/docs/conf.py'

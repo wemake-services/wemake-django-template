@@ -16,31 +16,23 @@
 
 import os
 import sys
-from contextlib import suppress
 
-import tomlkit
+import django
+import tomli
 
+# We need `server` to be importable from here:
 sys.path.insert(0, os.path.abspath('..'))
 
-# We need this block, because
-# django might be not installed, maybe we are running our
-# build process in ReadTheDocs?
-# https://github.com/wemake-services/wemake-django-template/issues/133
-with suppress(ImportError):
-    import django  # noqa: WPS433
-
-    # Normal django setup. That's how it should be in development:
-    os.environ['DJANGO_SETTINGS_MODULE'] = 'server.settings'
-    django.setup()
+# Django setup, all deps must be present to succeed:
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'server.settings')
+django.setup()
 
 
 # -- Project information -----------------------------------------------------
 
 def _get_project_meta():
     with open('../pyproject.toml') as pyproject:
-        file_contents = pyproject.read()
-
-    return tomlkit.parse(file_contents)['tool']['poetry']
+        return tomli.load(pyproject)['tool']['poetry']
 
 
 pkg_meta = _get_project_meta()
