@@ -17,8 +17,8 @@ build:
       - poetry config virtualenvs.create false
     post_install:
       - |
-        cd '{{cookiecutter.project_name}}'
-        && source "$(dirname "$(which python)")/activate"
+        source "$(dirname "$(which python)")/activate"
+        && cd '{{cookiecutter.project_name}}'
         && poetry install -E docs --no-dev --remove-untracked
 
 sphinx:
