@@ -1,3 +1,6 @@
+# Docs:
+# https://docs.readthedocs.io/en/stable/config-file/v2.html
+# https://docs.readthedocs.io/en/stable/build-customization.html
 version: 2
 
 # Set the version of Python and other tools you might need
@@ -13,7 +16,10 @@ build:
       - asdf global poetry latest
       - poetry config virtualenvs.create false
     post_install:
-      - which python && which python3 && cd '{{cookiecutter.project_name}}' && poetry install -E docs --no-dev --remove-untracked
+      - |
+        cd '{{cookiecutter.project_name}}' \
+        && poetry env use python \
+        && poetry install -E docs --no-dev --remove-untracked
 
 sphinx:
   configuration: '{{cookiecutter.project_name}}/docs/conf.py'
