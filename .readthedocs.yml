@@ -16,9 +16,9 @@ build:
       - asdf global poetry latest
       - poetry config virtualenvs.create false
     post_install:
-      - pwd
       - |
-        source './envs/2021/bin/activate'
+        pwd
+        && source "$(pwd | sed 's/checkouts/envs/g')/bin/activate"
         && cd '{{cookiecutter.project_name}}'
         && poetry install -E docs --no-dev --remove-untracked
 
