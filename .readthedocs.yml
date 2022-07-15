@@ -12,7 +12,7 @@ build:
       - asdf install poetry latest
       - asdf global poetry latest
       - poetry config virtualenvs.create false
-    install:
+    post_install:
       - cd '{{cookiecutter.project_name}}' && poetry install -E docs
 
 sphinx:
