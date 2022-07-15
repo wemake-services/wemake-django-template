@@ -18,6 +18,8 @@ build:
     post_install:
       - |
         pwd
+        && echo "$(pwd | sed 's/checkouts/envs/g')"
+        && ls "$(pwd | sed 's/checkouts/envs/g')"
         && source "$(pwd | sed 's/checkouts/envs/g')/bin/activate"
         && cd '{{cookiecutter.project_name}}'
         && poetry install -E docs --no-dev --remove-untracked
