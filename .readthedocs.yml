@@ -18,6 +18,8 @@ build:
     post_install:
       - echo "$(dirname "$(which python)")"
       - ls "$(dirname "$(which python)")"
+      - echo "$(dirname "$(which python3)")"
+      - ls "$(dirname "$(which python3)")"
       - |
         source "$(dirname "$(which python)")/activate"
         && cd '{{cookiecutter.project_name}}'
