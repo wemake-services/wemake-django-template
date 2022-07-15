@@ -16,12 +16,8 @@ build:
       - asdf global poetry latest
       - poetry config virtualenvs.create false
     post_install:
-      - echo "$(dirname "$(which python)")"
-      - ls "$(dirname "$(which python)")"
-      - echo "$(dirname "$(which python3)")"
-      - ls "$(dirname "$(which python3)")"
       - |
-        source "$(dirname "$(which python)")/activate"
+        source './envs/2021/bin/activate'
         && cd '{{cookiecutter.project_name}}'
         && poetry install -E docs --no-dev --remove-untracked
 
