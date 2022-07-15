@@ -20,8 +20,8 @@ build:
         pwd
         && echo "$(pwd | rev | sed 's/stuokcehc/svne/' | rev)"
         && ls "$(pwd | rev | sed 's/stuokcehc/svne/' | rev)"
-        && ls "/home/docs/checkouts/readthedocs.org/user_builds/wemake-django-template/envs/2021"
-        && source "$(pwd | rev | sed 's/stuokcehc/svne/' | rev)"/bin/activate
+        && ls "/home/docs/checkouts/readthedocs.org/user_builds/wemake-django-template/envs/2021/bin"
+        && source "$(pwd | rev | sed 's/stuokcehc/svne/' | rev)/bin/activate"
         && cd '{{cookiecutter.project_name}}'
         && poetry install -E docs --no-dev --remove-untracked
 
