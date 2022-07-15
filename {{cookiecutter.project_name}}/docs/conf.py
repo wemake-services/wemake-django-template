@@ -31,7 +31,7 @@ django.setup()
 # -- Project information -----------------------------------------------------
 
 def _get_project_meta():
-    with open('../pyproject.toml') as pyproject:
+    with open('../pyproject.toml', mode='rb') as pyproject:
         return tomli.load(pyproject)['tool']['poetry']
 
 

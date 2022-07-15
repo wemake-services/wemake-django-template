@@ -16,6 +16,8 @@ build:
       - asdf global poetry latest
       - poetry config virtualenvs.create false
     post_install:
+      - echo "$(dirname "$(which python)")"
+      - ls "$(dirname "$(which python)")"
       - |
         source "$(dirname "$(which python)")/activate"
         && cd '{{cookiecutter.project_name}}'
