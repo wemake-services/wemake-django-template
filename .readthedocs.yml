@@ -16,6 +16,7 @@ build:
       - asdf global poetry latest
       - poetry config virtualenvs.create false
     post_install:
+      - pwd
       - |
         source './envs/2021/bin/activate'
         && cd '{{cookiecutter.project_name}}'
