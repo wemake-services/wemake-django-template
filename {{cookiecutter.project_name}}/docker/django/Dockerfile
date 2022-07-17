@@ -1,3 +1,4 @@
+# syntax = docker/dockerfile:1
 # This Dockerfile uses multi-stage build to customize DEV and PROD images:
 # https://docs.docker.com/develop/develop-images/multistage-build/
 
@@ -80,7 +81,8 @@ COPY --chown=web:web ./poetry.lock ./pyproject.toml /code/
 
 # Project initialization:
 # hadolint ignore=SC2046
-RUN echo "$DJANGO_ENV" \
+RUN --mount=type=cache,target=/var/cache/pypoetry \ 
+  echo "$DJANGO_ENV" \
   && poetry version \
   # Install deps:
   && poetry run pip install -U pip \

@@ -36,7 +36,8 @@ variables:
       -u gitlab-ci-token --password-stdin
     # Debug information:
     - docker info && docker-compose --version && git --version
-
+    # enable docker buildkit
+    - export DOCKER_BUILDKIT=1 COMPOSE_DOCKER_CLI_BUILD=1
 
 # Test scripts
 # ============
@@ -55,7 +56,7 @@ test:
       -f docker/docker-compose.prod.yml config --quiet
 
     # The logic itself:
-    - docker-compose build web
+    - docker-compose build --progress=plain web
     - docker-compose run --user=root --rm web ./docker/ci.sh
     - disl "${PROJECT_NAME}:dev" 950MiB
 
@@ -88,7 +89,7 @@ release-image:
   script:
     # Building the image itself:
     - docker-compose -f docker-compose.yml
-      -f docker/docker-compose.prod.yml build web
+      -f docker/docker-compose.prod.yml build --progress=plain web
     - docker push "${IMAGE_FULL_NAME}:latest"
   only:
     - master
