@@ -13,6 +13,9 @@ set -o pipefail
 run_cookiecutter_build "$GITHUB_WORKSPACE"
 cd "$PROJECT_PATH"
 
+# enable docker buildkit
+export DOCKER_BUILDKIT=1 COMPOSE_DOCKER_CLI_BUILD=1
+
 # Run tests that are located inside the generate project:
 docker-compose -f docker-compose.yml \
   -f docker/docker-compose.prod.yml config --quiet
