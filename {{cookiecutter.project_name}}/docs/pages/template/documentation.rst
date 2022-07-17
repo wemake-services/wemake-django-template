@@ -16,14 +16,14 @@ We use ``sphinx.ext.napoleon`` to write
 pretty docstrings inside the source code.
 We also use ``sphinx_autodoc_typehints`` to inject type annotations into docs.
 
-We also use two sources of truth for the dependencies here:
+We use ``pyproject.toml`` as the source of truth for our deps.
+All docs-related packages are stored under ``docs`` extra.
 
-- ``docs/requirements.txt``
-- ``pyproject.toml``
+To install them use:
 
-Why? Because we are using ReadTheDocs
-for this template (only for original Github repo), and it
-does only support traditional ``requirements.txt``.
+.. code:: bash
+
+  poetry install -E docs
 
 
 Structure
