@@ -17,8 +17,7 @@ build:
       - poetry config virtualenvs.create false
     post_install:
       - |
-        pwd
-        && . "$(pwd | rev | sed 's/stuokcehc/svne/' | rev)/bin/activate"
+        . "$(pwd | rev | sed 's/stuokcehc/svne/' | rev)/bin/activate"
         && cd '{{cookiecutter.project_name}}'
         && poetry install -E docs --no-dev --remove-untracked
 
