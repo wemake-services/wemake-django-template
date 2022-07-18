@@ -81,7 +81,7 @@ COPY --chown=web:web ./poetry.lock ./pyproject.toml /code/
 
 # Project initialization:
 # hadolint ignore=SC2046
-RUN --mount=type=cache,target=$POETRY_CACHE_DIR \
+RUN --mount=type=cache,target="$POETRY_CACHE_DIR" \
   echo "$DJANGO_ENV" \
   && poetry version \
   # Install deps:
