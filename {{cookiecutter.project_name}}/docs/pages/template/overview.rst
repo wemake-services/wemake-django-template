@@ -74,17 +74,21 @@ server
 docker
 ~~~~~~
 
-- ``docker/ci.sh`` - file that specifies all possible checks that
-  we execute during our CI process
 - ``docker/docker-compose.prod.yml`` - additional service definition file
   used for production
 - ``docker/django/Dockerfile`` - ``django`` container definition,
   used both for development and production
 - ``docker/django/entrypoint.sh`` - entry point script that is used
   when ``django`` container is starting
-- ``docker/django/gunicorn.sh`` - production script for ``django``,
-  that's how we configure ``gunicorn`` runner
+- ``docker/django/gunicorn_config.py`` - that's how we
+  configure ``gunicorn`` runner
+- ``docker/django/gunicorn.sh`` - production script
+  for ``django`` using ``gunicorn``
+- ``docker/django/ci.sh`` - file that specifies all possible checks that
+  we execute during our CI process for django
 - ``docker/caddy/Caddyfile`` - configuration file for Caddy webserver
+- ``docker/caddy/ci.sh`` - file that specifies all possible checks that
+  we execute during our CI process for caddy
 
 tests
 ~~~~~

@@ -21,8 +21,8 @@ docker-compose -f docker-compose.yml \
   -f docker/docker-compose.prod.yml config --quiet
 
 # Building and testing dev image:
-docker-compose build
-docker-compose run --user=root --rm web ./docker/ci.sh
+docker-compose build --build-arg BUILDKIT_INLINE_CACHE=1
+docker-compose run --user=root --rm web ./docker/django/ci.sh
 
 # Building and testing prod image:
 docker-compose -f docker-compose.yml \
@@ -31,6 +31,11 @@ docker-compose -f docker-compose.yml \
   -f docker/docker-compose.prod.yml run \
   --user=root --rm web \
   python manage.py check --deploy --fail-level WARNING
+
+# Testing caddy configuration:
+docker-compose -f docker-compose.yml \
+  -f docker/docker-compose.prod.yml run \
+  --rm caddy sh /etc/ci.sh
 
 # Checking the size of final images:
 disl "${PROJECT_NAME}:dev" 950MiB
