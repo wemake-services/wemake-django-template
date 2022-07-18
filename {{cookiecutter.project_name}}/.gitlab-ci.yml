@@ -36,7 +36,7 @@ variables:
       -u gitlab-ci-token --password-stdin
     # Debug information:
     - docker info && docker-compose --version && git --version
-    # enable docker buildkit
+    # Enable docker buildkit:
     - export DOCKER_BUILDKIT=1 COMPOSE_DOCKER_CLI_BUILD=1
 
 # Test scripts
