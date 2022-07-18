@@ -13,7 +13,8 @@ services:
     restart: unless-stopped
     env_file: ./config/.env
     volumes:
-      - ./docker/caddy/Caddyfile:/etc/caddy/Caddyfile  # configuration
+      - ./docker/caddy/Caddyfile:/srv/Caddyfile  # configuration
+      - ./docker/caddy/ci.sh:/etc/ci.sh  # test script
       - caddy-config:/config  # configuration autosaves
       - caddy-data:/data  # saving certificates
       - django-static:/var/www/django/static  # serving django's statics

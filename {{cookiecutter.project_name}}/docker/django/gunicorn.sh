@@ -27,7 +27,7 @@ python /code/manage.py compilemessages
 
 # Start gunicorn:
 # Docs: http://docs.gunicorn.org/en/stable/settings.html
-# Make sure it is in sync with `ci.sh` check:
+# Make sure it is in sync with `django/ci.sh` check:
 /usr/local/bin/gunicorn \
   --config python:docker.django.gunicorn_config \
   server.wsgi

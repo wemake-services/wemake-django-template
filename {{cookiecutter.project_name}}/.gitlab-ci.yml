@@ -54,11 +54,13 @@ test:
     - docker-compose -f docker-compose.yml
       -f docker/docker-compose.prod.yml config --quiet
 
-    # The logic itself:
+    # Build and run tests:
     - docker-compose build
       --build-arg BUILDKIT_INLINE_CACHE=1
       --progress=plain web
-    - docker-compose run --user=root --rm web ./docker/ci.sh
+    - docker-compose run --user=root --rm web ./docker/django/ci.sh
+
+    # Check the result image size:
     - disl "${PROJECT_NAME}:dev" 950MiB
 
     # Pushing back the result for future runs:
@@ -76,6 +78,21 @@ test:
       coverage_report:
         coverage_format: cobertura
         path: coverage.xml
+
+# Testing caddy configuration if it changes.
+test-caddy:
+  stage: test
+  extends: .docker
+  script:
+    - docker-compose
+      -f docker-compose.yml
+      -f docker/docker-compose.prod.yml
+      run --no-deps --rm caddy sh /etc/ci.sh
+  only:
+    refs:
+      - merge_requests
+    changes:
+      - docker/caddy/*
 
 
 # Release scripts
