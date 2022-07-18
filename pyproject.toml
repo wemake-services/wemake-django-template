@@ -23,7 +23,7 @@ license = "MIT"
 python = "^3.9"
 
 cookiecutter = "^2.1"
-jinja2-git = "^1.1"
+jinja2-git = "^1.2"
 
 # TODO: remove after fix is released:
 # https://github.com/pallets/markupsafe/issues/286
