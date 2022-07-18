@@ -21,13 +21,6 @@ updates:
     time: "02:00"
   open-pull-requests-limit: 10
 
-- package-ecosystem: pip
-  directory: "/{{cookiecutter.project_name}}/docs"
-  schedule:
-    interval: daily
-    time: "02:00"
-  open-pull-requests-limit: 10
-
 - package-ecosystem: docker
   directory: "/{{cookiecutter.project_name}}/docker/django"
   schedule:
