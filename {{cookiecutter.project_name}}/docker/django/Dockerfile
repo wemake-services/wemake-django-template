@@ -1,3 +1,4 @@
+# syntax = docker/dockerfile:1
 # This Dockerfile uses multi-stage build to customize DEV and PROD images:
 # https://docs.docker.com/develop/develop-images/multistage-build/
 
@@ -80,15 +81,14 @@ COPY --chown=web:web ./poetry.lock ./pyproject.toml /code/
 
 # Project initialization:
 # hadolint ignore=SC2046
-RUN echo "$DJANGO_ENV" \
+RUN --mount=type=cache,target="$POETRY_CACHE_DIR" \
+  echo "$DJANGO_ENV" \
   && poetry version \
   # Install deps:
   && poetry run pip install -U pip \
   && poetry install \
     $(if [ "$DJANGO_ENV" = 'production' ]; then echo '--no-dev'; fi) \
-    --no-interaction --no-ansi \
-  # Cleaning poetry installation's cache for production:
-  && if [ "$DJANGO_ENV" = 'production' ]; then rm -rf "$POETRY_CACHE_DIR"; fi
+    --no-interaction --no-ansi
 
 # This is a special case. We need to run this script as an entry point:
 COPY ./docker/django/entrypoint.sh /docker-entrypoint.sh
