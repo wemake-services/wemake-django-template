@@ -64,6 +64,16 @@ test:
     - docker push "${IMAGE_FULL_NAME}:dev"
   only:
     - merge_requests
+  # Coverage reporting:
+  # https://docs.gitlab.com/ee/ci/yaml/index.html#coverage
+  coverage: '/^TOTAL\s+\d+\s+\d+\s+\d+\s+\d+\s+(\d+\%)/'
+  # Coverage visualisation, needs `--cov-report=xml` in `setup.cfg`.
+  # Docs: https://docs.gitlab.com/ee/ci/testing/test_coverage_visualization.html
+  artifacts:
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: coverage.xml
 
 
 # Release scripts
