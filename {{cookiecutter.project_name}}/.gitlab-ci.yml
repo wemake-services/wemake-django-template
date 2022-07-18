@@ -22,22 +22,21 @@ variables:
     - docker:dind
   variables:
     DOCKER_DRIVER: overlay2
+    DOCKER_BUILDKIT: 1
+    COMPOSE_DOCKER_CLI_BUILD: 1
   before_script: &docker-before-script
     # Making sure we are in the right directory, does nothing by default:
     - pwd && echo "$CI_PROJECT_DIR" && cd "$CI_PROJECT_DIR"
     # Creating `.env` configuration file:
-    - |
-      dump-env \
-        -t config/.env.template \
-        -p 'SECRET_' \
-        --strict SECRET_DJANGO_SECRET_KEY > config/.env
+    - dump-env
+      -t config/.env.template
+      -p 'SECRET_'
+      --strict SECRET_DJANGO_SECRET_KEY > config/.env
     # Login into Docker registry:
     - echo "$CI_JOB_TOKEN" | docker login "$REGISTRY"
       -u gitlab-ci-token --password-stdin
     # Debug information:
     - docker info && docker-compose --version && git --version
-    # Enable docker buildkit:
-    - export DOCKER_BUILDKIT=1 COMPOSE_DOCKER_CLI_BUILD=1
 
 # Test scripts
 # ============
@@ -56,7 +55,9 @@ test:
       -f docker/docker-compose.prod.yml config --quiet
 
     # The logic itself:
-    - docker-compose build --progress=plain web
+    - docker-compose build
+      --build-arg BUILDKIT_INLINE_CACHE=1
+      --progress=plain web
     - docker-compose run --user=root --rm web ./docker/ci.sh
     - disl "${PROJECT_NAME}:dev" 950MiB
 
@@ -98,8 +99,10 @@ release-image:
     - docker tag "${IMAGE_FULL_NAME}:latest" "${PROJECT_NAME}:latest" || true
   script:
     # Building the image itself:
-    - docker-compose -f docker-compose.yml
-      -f docker/docker-compose.prod.yml build --progress=plain web
+    - docker-compose
+      -f docker-compose.yml
+      -f docker/docker-compose.prod.yml
+      build --progress=plain web
     - docker push "${IMAGE_FULL_NAME}:latest"
   only:
     - master
