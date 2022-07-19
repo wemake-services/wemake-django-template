@@ -1,15 +1,7 @@
 # We only run this pipeline when something gitlab-related in changed,
 # no need to execute it on every run, because basic testing is covered
 # by Github Actions.
-workflow:
-  rules:
-    - if: '$CI_PIPELINE_SOURCE'
-      when: always
-      changes:
-        - .gitlab-ci.yml
-        - '{{cookiecutter.project_name}}/.gitlab-ci.yml'
-        - tests/build.sh
-        - tests/test_gitlab.sh
+
 
 # Reusing existing gitlab definition:
 include:
