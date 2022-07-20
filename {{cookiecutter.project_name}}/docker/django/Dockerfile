@@ -42,6 +42,7 @@ SHELL ["/bin/bash", "-eo", "pipefail", "-c"]
 RUN apt-get update && apt-get upgrade -y \
   && apt-get install --no-install-recommends -y \
     bash \
+    brotli \
     build-essential \
     curl \
     gettext \
