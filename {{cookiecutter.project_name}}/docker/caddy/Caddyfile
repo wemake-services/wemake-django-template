@@ -17,20 +17,32 @@ www.{$DOMAIN_NAME} {
 	# Removing some headers for improved security:
 	header -Server
 
-	# Exclude matcher for Django assets
-	@excludeDirs {
-		not path /static/* /media/*
+	# Serve static files
+	handle_path /static/* {
+		# STATIC_ROOT
+		root * /var/www/django/static
+
+		file_server {
+			# Staticfiles are pre-compressed in `gunicorn.sh`
+			precompressed br gzip
+		}
 	}
 
-	# Serving dynamic requests:
-	reverse_proxy @excludeDirs web:8000
+	# Serve media files
+	handle_path /media/* {
+		# MEDIA_ROOT
+		root * /var/www/django/media
 
-	# Serves static files, should be the same as `STATIC_ROOT` setting:
-	file_server {
-		root /var/www/django
+		file_server
 	}
 
-	# Allows to use `.gz` files when available:
+	# Serve Django app
+	handle {
+		reverse_proxy web:8000
+	}
+
+	# Dynamically compress response with gzip when it makes sense.
+	# This setting is ignored for precompressed files.
 	encode gzip
 
 	# Logs:
