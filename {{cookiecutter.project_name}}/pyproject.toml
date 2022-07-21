@@ -21,7 +21,7 @@ django-stubs-ext = "^0.5"
 psycopg2-binary = "^2.9"
 gunicorn = "^20.0"
 python-decouple = "^3.6"
-structlog = "^21.5"
+structlog = "^22.1"
 
 # Docs extra:
 sphinx = { version = "^5.0", optional = true }
