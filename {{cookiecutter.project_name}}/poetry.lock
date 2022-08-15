@@ -372,14 +372,15 @@ sqlparse = ">=0.2.0"
 
 [[package]]
 name = "django-extra-checks"
-version = "0.11.0"
+version = "0.12.0"
 description = "Collection of useful checks for Django Checks Framework"
 category = "dev"
 optional = false
 python-versions = ">=3.6"
 
 [package.extras]
-dev = ["black (==20.8b1)", "tox (>=3,<4)", "pdbpp", "isort (>=5,<6)", "pre-commit (==2.9.3)", "flake8-bugbear (==20.11.1)", "flake8 (==3.8.0)", "djangorestframework-stubs (==1.3.0)", "django-stubs (==1.7.0)", "djangorestframework (>=3.12)", "Django (>=3.1,<3.2)", "pytest-django (>=4,<5)", "pytest-cov (>=2,<3)", "pytest (>=6,<7)"]
+test = ["pytest-django", "pytest-cov", "pytest"]
+dev = ["black", "pdbpp", "isort", "pre-commit", "flake8-bugbear", "flake8", "djangorestframework-stubs", "django-stubs", "djangorestframework", "django"]
 
 [[package]]
 name = "django-health-check"
@@ -2036,7 +2037,7 @@ docs = ["sphinx", "sphinx-autodoc-typehints", "tomli"]
 [metadata]
 lock-version = "1.1"
 python-versions = "3.9.13"
-content-hash = "7b576096555ee60b2ed0311594470628e4826c73737ba1a9633098d2a0cf7cc7"
+content-hash = "68f38e68a36a362ba29a86b53cbf32137655fb69ad0019bc7491eb122720c88c"
 
 [metadata.files]
 alabaster = [
@@ -2290,8 +2291,8 @@ django-debug-toolbar = [
     {file = "django_debug_toolbar-3.5.0-py3-none-any.whl", hash = "sha256:89a52128309eb4da12738801ff0c202d2ff8730d1c3225fac6acf630c303e661"},
 ]
 django-extra-checks = [
-    {file = "django-extra-checks-0.11.0.tar.gz", hash = "sha256:61681433f2df8b8932676c216472b7f5554bda0018058d0a0bac89bf377347bd"},
-    {file = "django_extra_checks-0.11.0-py3-none-any.whl", hash = "sha256:b1a19c03243d67c380c8af60c1ef837323c21e2fd888e0fd532d1df5f1866ba0"},
+    {file = "django-extra-checks-0.12.0.tar.gz", hash = "sha256:057a47de3807e47db91f62998958caa60fc2477611fd5367444c32d45a32d70f"},
+    {file = "django_extra_checks-0.12.0-py3-none-any.whl", hash = "sha256:380b102364582f7f7ebc160cc769512e4f25ace7c3620b42c1ee573ba475f51d"},
 ]
 django-health-check = [
     {file = "django-health-check-3.16.5.tar.gz", hash = "sha256:1edfd49293ccebbce29f9da609c407f307aee240ab799ab4201031341ae78c0f"},
