@@ -56,7 +56,7 @@ hypothesis = "^6.54"
 mypy = "^0.971"
 django-stubs = "^1.12"
 
-yamllint = "^1.27"
+yamllint = "^1.28"
 safety = "^2.1"
 dotenv-linter = "^0.3"
 polint = "^0.4"
