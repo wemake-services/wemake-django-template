@@ -159,3 +159,8 @@ EXTRA_CHECKS = {
 # Disable persistent DB connections
 # https://docs.djangoproject.com/en/3.2/ref/databases/#caveats
 DATABASES['default']['CONN_MAX_AGE'] = 0
+
+# Celery local development using redis
+
+CELERY_BROKER_URL = "redis://redis:6379/0"
+CELERY_RESULT_BACKEND = "redis://redis:6379/0"

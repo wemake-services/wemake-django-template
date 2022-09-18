@@ -9,14 +9,6 @@
 
 version: "3.8"
 services:
-  db:
-    image: "postgres:14-alpine"
-    restart: unless-stopped
-    volumes:
-      - pgdata:/var/lib/postgresql/data
-    networks:
-      - webnet
-    env_file: ./config/.env
 
   web:
     <<: &web
@@ -37,6 +29,7 @@ services:
         - django-static:/var/www/django/static
       depends_on:
         - db
+        - redis
       networks:
         - webnet
       env_file: ./config/.env
@@ -57,6 +50,10 @@ services:
       timeout: 5s
       retries: 5
       start_period: 30s
+
+  celery_worker:
+    <<: *web
+    command: celery -A server worker -l INFO
 
 # This task is an example of how to extend existing ones:
 #   some_worker:

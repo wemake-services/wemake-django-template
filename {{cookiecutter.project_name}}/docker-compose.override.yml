@@ -11,10 +11,35 @@
 
 version: "3.8"
 services:
+
+  db:
+    image: "postgres:14-alpine"
+    restart: unless-stopped
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - webnet
+    env_file: ./config/.env
+
+  redis:
+    image: redis:7-alpine
+    networks:
+      - webnet
+
   web:
     ports:
       # We only bind ports directly in development:
       - "8000:8000"
+    volumes:
+      # We only mount source code in development:
+      - .:/code
+    build:
+      # Needed for fixing permissions of files created by Docker
+      args:
+        - UID=${UID:-1000}
+        - GID=${GID:-1000}
+
+  celery_worker:
     volumes:
       # We only mount source code in development:
       - .:/code
