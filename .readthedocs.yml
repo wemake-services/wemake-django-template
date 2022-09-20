@@ -26,7 +26,7 @@ build:
       - |
         . "$(pwd | rev | sed 's/stuokcehc/svne/' | rev)/bin/activate"
         && cd '{{cookiecutter.project_name}}'
-        && poetry install -E docs --no-dev
+        && poetry install --only main --only docs
 
 sphinx:
   configuration: '{{cookiecutter.project_name}}/docs/conf.py'

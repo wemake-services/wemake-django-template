@@ -28,7 +28,7 @@ jobs:
 
     - name: Install poetry
       env:  # Keep in sync with `POETRY_VERSION` in `Dockerfile`
-        POETRY_VERSION: "1.1.14"
+        POETRY_VERSION: "1.2.1"
       run: |
         curl -sSL "https://install.python-poetry.org" | python -
 
