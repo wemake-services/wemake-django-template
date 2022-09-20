@@ -35,17 +35,9 @@ jobs:
         # Adding `poetry` to `$PATH`:
         echo "$HOME/.local/bin" >> $GITHUB_PATH
 
-    - name: Set up cache
-      uses: actions/cache@v3
-      with:
-        path: .venv
-        key: venv-${{ matrix.python-version }}-${{ hashFiles('poetry.lock') }}
-
     - name: Install dependencies
       run: |
-        poetry config virtualenvs.in-project true
         poetry install
-
         poetry run pip install -U pip
 
     - name: Run checks

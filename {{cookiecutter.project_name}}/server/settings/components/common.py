@@ -49,6 +49,9 @@ INSTALLED_APPS: Tuple[str, ...] = (
 )
 
 MIDDLEWARE: Tuple[str, ...] = (
+    # Logging:
+    'server.settings.components.logging.LoggingContextVarsMiddleware',
+
     # Content Security Policy:
     'csp.middleware.CSPMiddleware',
 

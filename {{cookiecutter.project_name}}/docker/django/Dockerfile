@@ -88,7 +88,7 @@ RUN --mount=type=cache,target="$POETRY_CACHE_DIR" \
   # Install deps:
   && poetry run pip install -U pip \
   && poetry install \
-    $(if [ "$DJANGO_ENV" = 'production' ]; then echo '--no-dev'; fi) \
+    $(if [ "$DJANGO_ENV" = 'production' ]; then echo '--only main'; fi) \
     --no-interaction --no-ansi
 
 # This is a special case. We need to run this script as an entry point:
