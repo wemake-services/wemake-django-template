@@ -12,7 +12,7 @@ run_ci () {
   # TODO: we use this hack, because `caddy fmt` does not have `--check` arg.
   old_caddyfile="$(md5sum /srv/Caddyfile)"
 
-  caddy fmt -overwrite
+  caddy fmt -h
 
   if [ "$old_caddyfile" != "$(md5sum /srv/Caddyfile)" ]; then
     echo 'Invalid format'
