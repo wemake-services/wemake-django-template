@@ -24,13 +24,12 @@ mirror-github-build:
   stage: build
   image: python:3.9
   variables:
-    POETRY_VERSION: '1.1.14'
+    POETRY_VERSION: '1.2.1'
   before_script:
     # Installing poetry:
     - curl -sSL 'https://install.python-poetry.org' | python -
     - export PATH="$HOME/.local/bin:$PATH"
     # Installing dependencies:
-    - poetry config virtualenvs.in-project true
     - poetry install --no-dev
   script:
     - poetry run bash tests/test_gitlab.sh
