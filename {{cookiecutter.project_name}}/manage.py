@@ -3,6 +3,12 @@
 import os
 import sys
 
+PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
+APPS_PATH = os.path.abspath(os.path.join(PROJECT_PATH, 'server', 'apps',))
+
+if APPS_PATH not in sys.path:
+    sys.path.insert(0, APPS_PATH)
+
 
 def main() -> None:
     """
