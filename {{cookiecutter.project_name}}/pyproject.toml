@@ -10,7 +10,7 @@ authors = ["{{ cookiecutter.project_domain }}"]
 python = "3.9.13"
 
 django = { version = "^3.2", extras = ["argon2"] }
-django-split-settings = "^1.1"
+django-split-settings = "^1.2"
 django-axes = "^5.39"
 django-csp = "^3.7"
 django-health-check = "^3.16"
