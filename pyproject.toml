@@ -13,7 +13,7 @@ license = "MIT"
 python = "^3.9"
 
 cookiecutter = "^2.1"
-jinja2-git = "^1.2"
+jinja2-git = "^1.3"
 
 [tool.poetry.group.test.dependencies]
 binaryornot = "^0.4"
