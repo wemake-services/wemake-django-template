@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: hadolint/hadolint-action@v2.1.0
+      - uses: hadolint/hadolint-action@v3.0.0
         with:
           dockerfile: '{{cookiecutter.project_name}}/docker/django/Dockerfile'
           failure-threshold: style
