@@ -65,7 +65,8 @@ run_ci () {
 
   # Checking if all the dependencies are secure and do not have any
   # known vulnerabilities:
-  safety check --full-report
+  # TODO: remove once `py` / `pytest` package are updated
+  safety check --full-report --ignore=51457
 
   # Checking `pyproject.toml` file contents:
   poetry check
