@@ -13,8 +13,7 @@ version: 2
 build:
   os: ubuntu-20.04
   tools:
-    # TODO: keep in sync with other places where python version is specified.
-    python: '3.9.15'
+    python: '3.9'
   jobs:
     # See https://github.com/readthedocs/readthedocs.org/issues/4912
     pre_create_environment:
