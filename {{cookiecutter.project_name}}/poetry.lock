@@ -1860,7 +1860,7 @@ test = ["pylint", "pytest", "pytest-black", "pytest-cov", "pytest-pylint"]
 
 [[package]]
 name = "structlog"
-version = "22.2.0"
+version = "22.3.0"
 description = "Structured Logging for Python"
 category = "main"
 optional = false
@@ -2040,7 +2040,7 @@ testing = ["flake8 (<5)", "func-timeout", "jaraco.functools", "jaraco.itertools"
 [metadata]
 lock-version = "1.1"
 python-versions = "~3.9"
-content-hash = "31a9abcd6a01feb73e5012d808cf1d63c9e7b0e80a38d85540135718780dac68"
+content-hash = "5ed3292d2ef9729b1390d44268972012a252875a32dc4f3134029ff848ad9af3"
 
 [metadata.files]
 alabaster = [
@@ -2975,8 +2975,8 @@ StrEnum = [
     {file = "StrEnum-0.4.8.tar.gz", hash = "sha256:08a7647f4fac2977470e5618cccd5e8b939768f02e5f5dd7864adaa329559949"},
 ]
 structlog = [
-    {file = "structlog-22.2.0-py3-none-any.whl", hash = "sha256:bb1aa189214c30372a8afaa592f9556756aeb690e1ad7eb34391d7b5fa0f09b2"},
-    {file = "structlog-22.2.0.tar.gz", hash = "sha256:4edfe1d9f15f8a4bf365a817f7182af5d610596c155434b7564bfe7d40c2753c"},
+    {file = "structlog-22.3.0-py3-none-any.whl", hash = "sha256:b403f344f902b220648fa9f286a23c0cc5439a5844d271fec40562dbadbc70ad"},
+    {file = "structlog-22.3.0.tar.gz", hash = "sha256:e7509391f215e4afb88b1b80fa3ea074be57a5a17d794bd436a5c949da023333"},
 ]
 text-unidecode = [
     {file = "text-unidecode-1.3.tar.gz", hash = "sha256:bad6603bb14d279193107714b288be206cac565dfa49aa5b105294dd5c4aab93"},
