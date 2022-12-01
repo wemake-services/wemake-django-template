@@ -427,7 +427,7 @@ test = ["coverage (>=5.5)", "django-add-default-value (>=0.4.0)", "mysqlclient (
 
 [[package]]
 name = "django-permissions-policy"
-version = "4.13.0"
+version = "4.14.0"
 description = "Set the draft security HTTP header Permissions-Policy (previously Feature-Policy) on your Django app."
 category = "main"
 optional = false
@@ -2040,7 +2040,7 @@ testing = ["flake8 (<5)", "func-timeout", "jaraco.functools", "jaraco.itertools"
 [metadata]
 lock-version = "1.1"
 python-versions = "~3.9"
-content-hash = "5ed3292d2ef9729b1390d44268972012a252875a32dc4f3134029ff848ad9af3"
+content-hash = "e34630f17d7baa825a8647ae7b5f6dc92eb2baee0e5aa95bff06d260366dc19e"
 
 [metadata.files]
 alabaster = [
@@ -2321,8 +2321,8 @@ django-migration-linter = [
     {file = "django_migration_linter-4.1.0-py3-none-any.whl", hash = "sha256:5d47577231d91a6d2c524066a07808d6e36086e1b8d9a52eb14b0d21246cc597"},
 ]
 django-permissions-policy = [
-    {file = "django-permissions-policy-4.13.0.tar.gz", hash = "sha256:c340f822de6ea48888b8620214f98f516c53501d0f54de53d172715ab94e0da2"},
-    {file = "django_permissions_policy-4.13.0-py3-none-any.whl", hash = "sha256:2c9aa83a7bb49d32f9bb77384d3fcf81b141f18df3c2bcf8810a154860a22e63"},
+    {file = "django-permissions-policy-4.14.0.tar.gz", hash = "sha256:923db75e74b1e363c84f2a7723c4af6fd78a5baa6c7fbdb0850e5b38d88e0a06"},
+    {file = "django_permissions_policy-4.14.0-py3-none-any.whl", hash = "sha256:a0f20a2c56409126c67bb4f85ef0e51625aec6a0a02b912fda70b466fcf2c0ed"},
 ]
 django-querycount = [
     {file = "django-querycount-0.7.0.tar.gz", hash = "sha256:8f5123d78716ff0704f2373e746a7200b8d8417798ce4a99bf2de87e3768f9ce"},
