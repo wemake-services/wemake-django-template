@@ -38,10 +38,10 @@ run_ci () {
 
   # Running type checking, see https://github.com/typeddjango/django-stubs
   # shellcheck disable=SC2046
-  mypy manage.py server $(find tests -name '*.py')
+  mypy manage.py server
+  mypy tests
 
   # Running tests:
-  pytest --dead-fixtures
   pytest
 
   # Run checks to be sure we follow all django's best practices:
