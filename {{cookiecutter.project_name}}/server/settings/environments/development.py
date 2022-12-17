@@ -6,7 +6,6 @@ SECURITY WARNING: don't run with debug turned on in production!
 
 import logging
 import socket
-from typing import List
 
 from server.settings.components import config
 from server.settings.components.common import (
