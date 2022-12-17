@@ -52,12 +52,6 @@ INSTALLED_APPS += (
 )
 
 
-# Static files:
-# https://docs.djangoproject.com/en/3.2/ref/settings/#std:setting-STATICFILES_DIRS
-
-STATICFILES_DIRS: List[str] = []
-
-
 # Django debug toolbar:
 # https://django-debug-toolbar.readthedocs.io
 
