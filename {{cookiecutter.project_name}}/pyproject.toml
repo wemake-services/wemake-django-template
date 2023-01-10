@@ -20,7 +20,7 @@ django-stubs-ext = "^0.7"
 
 psycopg2-binary = "^2.9"
 gunicorn = "^20.0"
-python-decouple = "^3.6"
+python-decouple = "^3.7"
 structlog = "^22.3"
 
 
