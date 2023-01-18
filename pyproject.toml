@@ -26,7 +26,7 @@ pytest = "^7.1"
 pytest-randomly = "^3.12"
 pytest-cookies = "^0.6"
 
-safety = "^2.0"
+safety = "^2.3"
 
 docker-compose = "^1.29"
 docker-image-size-limit = "^0.4"
