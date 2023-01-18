@@ -22,7 +22,7 @@ wemake-python-styleguide = "^0.16"
 flake8-pytest-style = "^1.6"
 nitpick = "^0.32"
 
-pytest = "^7.1"
+pytest = "^7.2"
 pytest-randomly = "^3.12"
 pytest-cookies = "^0.6"
 
