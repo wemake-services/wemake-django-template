@@ -5,7 +5,7 @@
 # 'Do not log' by Nikita Sobolev (@sobolevn)
 # https://sobolevn.me/2020/03/do-not-log
 
-from typing import TYPE_CHECKING, Callable
+from typing import TYPE_CHECKING, Callable, final
 
 import structlog
 
@@ -63,6 +63,7 @@ LOGGING = {
 }
 
 
+@final
 class LoggingContextVarsMiddleware(object):
     """Used to reset ContextVars in structlog on each request."""
 
