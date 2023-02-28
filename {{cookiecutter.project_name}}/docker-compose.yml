@@ -15,7 +15,7 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
     networks:
-      - webnet
+      - postgresnet
     env_file: ./config/.env
 
   web:
@@ -39,6 +39,7 @@ services:
         - db
       networks:
         - webnet
+        - postgresnet
       env_file: ./config/.env
       environment:
         DJANGO_DATABASE_HOST: db
@@ -64,6 +65,8 @@ services:
 #     command: python manage.py worker_process
 
 networks:
+  # Network for postgres, use it for services that need access to the db:
+  postgresnet:
   # Network for your internals, use it by default:
   webnet:
 
