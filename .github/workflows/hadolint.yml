@@ -6,9 +6,11 @@ on:
       - master
     paths:
       - '{{cookiecutter.project_name}}/docker/django/Dockerfile'
+      - '.github/workflows/hadolint.yml'
   pull_request:
     paths:
       - '{{cookiecutter.project_name}}/docker/django/Dockerfile'
+      - '.github/workflows/hadolint.yml'
   workflow_dispatch:
 
 concurrency:

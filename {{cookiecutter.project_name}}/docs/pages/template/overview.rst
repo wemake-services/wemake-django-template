@@ -129,7 +129,7 @@ Some containers might have long starting times, for example:
 - frontend, like ``node.js``
 
 To be sure that container is started at the right time,
-we utilize ``dockerize`` `script <https://github.com/jwilder/dockerize>`_.
+we utilize ``wait-for-it`` `script <https://github.com/vishnubob/wait-for-it>`_.
 It is executed inside ``docker/django/entrypoint.sh`` file.
 
 We start containers with ``tini``.
