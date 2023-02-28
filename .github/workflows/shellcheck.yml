@@ -7,10 +7,12 @@ on:
     paths:
       - 'tests/**/*.sh'
       - '{{cookiecutter.project_name}}/**/*.sh'
+      - '.github/workflows/shellcheck.yml'
   pull_request:
     paths:
       - 'tests/**/*.sh'
       - '{{cookiecutter.project_name}}/**/*.sh'
+      - '.github/workflows/shellcheck.yml'
   workflow_dispatch:
 
 concurrency:
