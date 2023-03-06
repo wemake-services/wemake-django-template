@@ -18,7 +18,7 @@ wait-for-it \
   --strict
 
 # It is also possible to wait for other services as well: redis, elastic, mongo
-echo 'Postgres is up - continuing...'
+echo "Postgres ${DJANGO_DATABASE_HOST}:${DJANGO_DATABASE_PORT} is up"
 
 # Evaluating passed command (do not touch):
 # shellcheck disable=SC2086
