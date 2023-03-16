@@ -705,18 +705,18 @@ sqlparse = ">=0.2"
 
 [[package]]
 name = "django-extra-checks"
-version = "0.12.0"
+version = "0.13.3"
 description = "Collection of useful checks for Django Checks Framework"
 category = "dev"
 optional = false
 python-versions = ">=3.6"
 files = [
-    {file = "django-extra-checks-0.12.0.tar.gz", hash = "sha256:057a47de3807e47db91f62998958caa60fc2477611fd5367444c32d45a32d70f"},
-    {file = "django_extra_checks-0.12.0-py3-none-any.whl", hash = "sha256:380b102364582f7f7ebc160cc769512e4f25ace7c3620b42c1ee573ba475f51d"},
+    {file = "django-extra-checks-0.13.3.tar.gz", hash = "sha256:02782cee0763f48f4cd471e8cb4a3aeee6b3b5a02d351a8ed32b0f3213e30385"},
+    {file = "django_extra_checks-0.13.3-py3-none-any.whl", hash = "sha256:4f62eb1788219ec2635ccc83ba46d78dc0af7452058842dcffb1634710360b6d"},
 ]
 
 [package.extras]
-dev = ["Django", "black", "django-stubs", "djangorestframework", "djangorestframework-stubs", "flake8", "flake8-bugbear", "isort", "pdbpp", "pre-commit"]
+dev = ["Django", "black", "django-stubs", "djangorestframework", "djangorestframework-stubs", "flake8", "flake8-bugbear", "isort", "mypy (<0.990)", "pdbpp", "pre-commit"]
 test = ["pytest", "pytest-cov", "pytest-django"]
 
 [[package]]
@@ -3119,4 +3119,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = "~3.9"
-content-hash = "199fd6d32f0bed9692e82749b9515cdac74083ab7d35b8bb072c0854aac4171e"
+content-hash = "9bffaeaf78d9922b808d8af6ffba0df4ed39b08f04ef4ff8b044542bd849d4f9"
