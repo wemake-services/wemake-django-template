@@ -62,7 +62,7 @@ ipython = "^8.11"
 optional = true
 
 [tool.poetry.group.docs.dependencies]
-sphinx = "^5.1"
+sphinx = "^6.1"
 sphinx-autodoc-typehints = "^1.19"
 tomli = "^2.0"
 
