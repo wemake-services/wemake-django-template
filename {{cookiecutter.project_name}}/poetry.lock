@@ -1498,14 +1498,14 @@ files = [
 
 [[package]]
 name = "ipython"
-version = "8.10.0"
+version = "8.11.0"
 description = "IPython: Productive Interactive Computing"
 category = "dev"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "ipython-8.10.0-py3-none-any.whl", hash = "sha256:b38c31e8fc7eff642fc7c597061fff462537cf2314e3225a19c906b7b0d8a345"},
-    {file = "ipython-8.10.0.tar.gz", hash = "sha256:b13a1d6c1f5818bd388db53b7107d17454129a70de2b87481d555daede5eb49e"},
+    {file = "ipython-8.11.0-py3-none-any.whl", hash = "sha256:5b54478e459155a326bf5f42ee4f29df76258c0279c36f21d71ddb560f88b156"},
+    {file = "ipython-8.11.0.tar.gz", hash = "sha256:735cede4099dbc903ee540307b9171fbfef4aa75cfcacc5a273b2cda2f02be04"},
 ]
 
 [package.dependencies]
@@ -1517,7 +1517,7 @@ jedi = ">=0.16"
 matplotlib-inline = "*"
 pexpect = {version = ">4.3", markers = "sys_platform != \"win32\""}
 pickleshare = "*"
-prompt-toolkit = ">=3.0.30,<3.1.0"
+prompt-toolkit = ">=3.0.30,<3.0.37 || >3.0.37,<3.1.0"
 pygments = ">=2.4.0"
 stack-data = "*"
 traitlets = ">=5"
@@ -2047,14 +2047,14 @@ tests = ["mock"]
 
 [[package]]
 name = "prompt-toolkit"
-version = "3.0.37"
+version = "3.0.38"
 description = "Library for building powerful interactive command lines in Python"
 category = "dev"
 optional = false
 python-versions = ">=3.7.0"
 files = [
-    {file = "prompt_toolkit-3.0.37-py3-none-any.whl", hash = "sha256:6a2948ec427dfcc7c983027b1044b355db6aaa8be374f54ad2015471f7d81c5b"},
-    {file = "prompt_toolkit-3.0.37.tar.gz", hash = "sha256:d5d73d4b5eb1a92ba884a88962b157f49b71e06c4348b417dd622b25cdd3800b"},
+    {file = "prompt_toolkit-3.0.38-py3-none-any.whl", hash = "sha256:45ea77a2f7c60418850331366c81cf6b5b9cf4c7fd34616f733c5427e6abbb1f"},
+    {file = "prompt_toolkit-3.0.38.tar.gz", hash = "sha256:23ac5d50538a9a38c8bde05fecb47d0b403ecd0662857a86f886f798563d5b9b"},
 ]
 
 [package.dependencies]
@@ -3119,4 +3119,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = "~3.9"
-content-hash = "956f95106faed608c3610417755502f4203b893e507015960b16ee5afb17646c"
+content-hash = "d90ab1f364baf8955ec6bb83ea57399c50c1694637e0a4e128de6abfadcaf1af"
