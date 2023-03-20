@@ -2,19 +2,19 @@
 
 set -o errexit
 set -o nounset
-
+CADDYFILE_PATH="/etc/caddy/Caddyfile"
 
 run_ci () {
   # Validating:
-  caddy validate --config /etc/caddy/Caddyfile
+  caddy validate --config $CADDYFILE_PATH
 
   # Checking formatting:
   # TODO: we use this hack, because `caddy fmt` does not have `--check` arg.
-  old_caddyfile="$(md5sum /etc/caddy/Caddyfile)"
+  old_caddyfile="$(md5sum $CADDYFILE_PATH)"
 
-  caddy fmt --overwrite /etc/caddy/Caddyfile
+  caddy fmt --overwrite $CADDYFILE_PATH
  
-  if [ "$old_caddyfile" != "$(md5sum /etc/caddy/Caddyfile)" ]; then
+  if [ "$old_caddyfile" != "$(md5sum $CADDYFILE_PATH)" ]; then
     echo 'Invalid format'
     exit 1
   else
