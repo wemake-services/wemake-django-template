@@ -1,9 +1,12 @@
+from typing import final
+
 from hypothesis import given
 from hypothesis.extra import django
 
 from server.apps.main.models import BlogPost
 
 
+@final
 class TestBlogPost(django.TestCase):
     """This is a property-based test that ensures model correctness."""
 
