@@ -92,6 +92,9 @@ COPY ./docker/django/entrypoint.sh /docker-entrypoint.sh
 # Setting up proper permissions:
 RUN chmod +x '/docker-entrypoint.sh'
 
+# Replacing line separator CRLF with LF for Windows users:
+RUN sed -i 's/\r$//g' '/docker-entrypoint.sh'
+
 # Running as non-root user:
 USER web
 
