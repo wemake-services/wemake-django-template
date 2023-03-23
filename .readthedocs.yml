@@ -23,10 +23,7 @@ build:
       - poetry config virtualenvs.create false
     post_install:
       # We build django with `DJANGO_ENV=production`, so no dev deps:
-      - |
-        . "$(pwd | rev | sed 's/stuokcehc/svne/' | rev)/bin/activate"
-        && cd '{{cookiecutter.project_name}}'
-        && poetry install --only main --only docs
+      - . "$(pwd | rev | sed 's/stuokcehc/svne/' | rev)/bin/activate" && cd '{{cookiecutter.project_name}}' && poetry install --only main --only docs
 
 sphinx:
   configuration: '{{cookiecutter.project_name}}/docs/conf.py'
