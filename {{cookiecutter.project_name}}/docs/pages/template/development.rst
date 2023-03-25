@@ -144,7 +144,7 @@ To create new development database run
 
 .. code:: bash
 
-  psql postgres -U postgres -f sql/create_database.sql
+  psql postgres -U postgres -f scripts/create_dev_database.sql
 
 Then migrate your database:
 
