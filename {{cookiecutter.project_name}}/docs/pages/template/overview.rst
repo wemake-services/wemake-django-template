@@ -52,7 +52,7 @@ root project
 - ``setup.cfg`` - configuration file, that is used by all tools in this project
 - ``locale/`` - helper folder, that is used to store locale data,
   empty by default
-- ``sql/`` - helper folder, that contains ``sql`` script for database setup
+- ``scripts/`` - helper folder, that contains ``sql`` script for database setup
   and teardown for local development
 
 server
