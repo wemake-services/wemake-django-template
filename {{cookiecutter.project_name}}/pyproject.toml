@@ -25,7 +25,7 @@ structlog = "^22.3"
 
 
 [tool.poetry.group.dev.dependencies]
-django-debug-toolbar = "^3.6"
+django-debug-toolbar = "^4.0"
 django-querycount = "^0.8"
 django-migration-linter = "^4.1"
 django-extra-checks = "^0.13"
