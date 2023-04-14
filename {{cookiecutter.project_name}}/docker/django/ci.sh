@@ -36,6 +36,12 @@ run_ci () {
   # Running linting for all python files in the project:
   flake8 .
 
+  # Check HTML formatting
+  djlint --check server
+
+  # Lint HTML
+  djlint --lint server
+
   # Running type checking, see https://github.com/typeddjango/django-stubs
   # shellcheck disable=SC2046
   mypy manage.py server
