@@ -50,7 +50,7 @@ hypothesis = "^6.72"
 mypy = "^1.2"
 django-stubs = "^1.16"
 
-djlint = "^1.24"
+djlint = "^1.25"
 yamllint = "^1.31"
 safety = "^2.3"
 dotenv-linter = "^0.4"
