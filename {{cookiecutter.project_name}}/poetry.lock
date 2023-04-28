@@ -853,14 +853,14 @@ compatible-mypy = ["mypy (>=1.1.1,<1.2)"]
 
 [[package]]
 name = "django-stubs-ext"
-version = "0.8.0"
+version = "4.2.0"
 description = "Monkey-patching and extensions for django-stubs"
 category = "main"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "django-stubs-ext-0.8.0.tar.gz", hash = "sha256:9a9ba9e2808737949de96a0fce8b054f12d38e461011d77ebc074ffe8c43dfcb"},
-    {file = "django_stubs_ext-0.8.0-py3-none-any.whl", hash = "sha256:a454d349d19c26d6c50c4c6dbc1e8af4a9cda4ce1dc4104e3dd4c0330510cc56"},
+    {file = "django-stubs-ext-4.2.0.tar.gz", hash = "sha256:7789f0caeca7152fef07ad6b94dec7310a05d0b8dab77f7979e19db0037b5127"},
+    {file = "django_stubs_ext-4.2.0-py3-none-any.whl", hash = "sha256:55b2e3077f883e0131a7596f8ff8b19f8fc3ca325a3318ccacf5331acb2601e4"},
 ]
 
 [package.dependencies]
@@ -3360,4 +3360,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = "~3.9"
-content-hash = "a81971db688c5b8f1053417659c21d7d9e8d02cca78862d99565c0e7c8189810"
+content-hash = "26efb5afe5bdfcdb39d2ba81eb70fe872c3e4167efa033785157acf95a67dfad"
