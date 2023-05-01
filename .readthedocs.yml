@@ -17,6 +17,10 @@ build:
   jobs:
     # See https://github.com/readthedocs/readthedocs.org/issues/4912
     pre_create_environment:
+      # Select Python version (keep in sync with other versions):
+      - asdf global python 3.9.16
+
+      # Install poetry:
       - asdf plugin add poetry
       - asdf install poetry latest
       - asdf global poetry latest
