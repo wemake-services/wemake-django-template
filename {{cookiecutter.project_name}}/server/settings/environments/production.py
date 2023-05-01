@@ -34,10 +34,12 @@ _COLLECTSTATIC_DRYRUN = config(
 # Adding STATIC_ROOT to collect static files via 'collectstatic':
 STATIC_ROOT = '.static' if _COLLECTSTATIC_DRYRUN else '/var/www/django/static'
 
-STORAGES = {
-    STATICFILES_STORAGE_ALIAS:
-        'django.contrib.staticfiles.storage.ManifestStaticFilesStorage',
-}
+# TODO: convert to `STORAGES`
+STATICFILES_STORAGE = (
+    # This is a string, not a tuple,
+    # but it does not fit into 80 characters rule.
+    'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+)
 
 
 # Media files
