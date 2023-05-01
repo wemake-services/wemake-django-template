@@ -20,6 +20,7 @@ build:
       # Select Python version (keep in sync with other versions):
       - asdf install python 3.9.16
       - asdf global python 3.9.16
+      - python -m pip install --upgrade --no-cache-dir virtualenv
 
       # Install poetry:
       - asdf plugin add poetry
@@ -28,7 +29,7 @@ build:
       - poetry config virtualenvs.create false
     post_install:
       # We build django with `DJANGO_ENV=production`, so no dev deps:
-      - . "$(pwd | rev | sed 's/stuokcehc/svne/' | rev)/bin/activate" && cd '{{cookiecutter.project_name}}' && poetry install --only main --only docs
+      - . "$READTHEDOCS_VIRTUALENV_PATH/bin/activate" && cd '{{cookiecutter.project_name}}' && poetry install --only main --only docs
 
 sphinx:
   configuration: '{{cookiecutter.project_name}}/docs/conf.py'
