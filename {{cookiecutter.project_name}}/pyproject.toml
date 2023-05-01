@@ -48,7 +48,7 @@ django-test-migrations = "^1.2"
 hypothesis = "^6.75"
 
 mypy = "^1.2"
-django-stubs = "^1.16"
+django-stubs = "^4.2"
 
 djlint = "^1.25"
 yamllint = "^1.31"
