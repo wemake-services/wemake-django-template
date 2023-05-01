@@ -92,7 +92,7 @@ Further reading
 ---------------
 
 - `sphinx <http://www.sphinx-doc.org/en/stable/>`_
-- `sphinx with django <https://docs.djangoproject.com/en/3.2/internals/contributing/writing-documentation/#getting-started-with-sphinx>`_
+- `sphinx with django <https://docs.djangoproject.com/en/4.2/internals/contributing/writing-documentation/#getting-started-with-sphinx>`_
 - `sphinx-autodoc-typehints <https://github.com/agronholm/sphinx-autodoc-typehints>`_
 - `Architecture Decision Record (ADR) <https://github.com/joelparkerhenderson/architecture_decision_record>`_
 - `adr-tools <https://github.com/npryce/adr-tools>`_

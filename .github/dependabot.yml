@@ -11,8 +11,7 @@ updates:
       # Ignore non-LTS Django releases
       # https://www.djangoproject.com/download/#supported-versions
       versions:
-        - ">=4.0,<4.2"
-        - ">=5.0,<5.2"
+        - ">=4.3,<5.2"
 
 - package-ecosystem: pip
   directory: "/"

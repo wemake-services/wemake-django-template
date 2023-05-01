@@ -2,7 +2,7 @@
 # This Dockerfile uses multi-stage build to customize DEV and PROD images:
 # https://docs.docker.com/develop/develop-images/multistage-build/
 
-FROM python:3.9.15-slim-buster AS development_build
+FROM python:3.9.16-slim-buster AS development_build
 
 LABEL maintainer="{{ cookiecutter.project_domain }}"
 LABEL vendor="{{ cookiecutter.project_domain }}"
@@ -27,7 +27,7 @@ ENV DJANGO_ENV=${DJANGO_ENV} \
   # tini:
   TINI_VERSION=v0.19.0 \
   # poetry:
-  POETRY_VERSION=1.3.2 \
+  POETRY_VERSION=1.4.2 \
   POETRY_NO_INTERACTION=1 \
   POETRY_VIRTUALENVS_CREATE=false \
   POETRY_CACHE_DIR='/var/cache/pypoetry' \
