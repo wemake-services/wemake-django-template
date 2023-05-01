@@ -35,7 +35,7 @@ STATIC_ROOT = '.static' if _COLLECTSTATIC_DRYRUN else '/var/www/django/static'
 STORAGES = {
     'staticfiles':
         'django.contrib.staticfiles.storage.ManifestStaticFilesStorage',
-)
+}
 
 
 # Media files
