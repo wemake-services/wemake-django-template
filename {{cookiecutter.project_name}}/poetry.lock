@@ -869,14 +869,14 @@ typing-extensions = "*"
 
 [[package]]
 name = "django-test-migrations"
-version = "1.2.0"
+version = "1.3.0"
 description = "Test django schema and data migrations, including ordering"
 category = "dev"
 optional = false
-python-versions = ">=3.6,<4.0"
+python-versions = ">=3.8,<4.0"
 files = [
-    {file = "django-test-migrations-1.2.0.tar.gz", hash = "sha256:874884ff4e980583cd9f1c986bb9fbfe72b436e759be23004e4f52c26a15f363"},
-    {file = "django_test_migrations-1.2.0-py3-none-any.whl", hash = "sha256:9e8b9b4364fef70dde10a5f85c5a75d447ca2189ec648325610fab1268daec97"},
+    {file = "django_test_migrations-1.3.0-py3-none-any.whl", hash = "sha256:b52b29475f9a1bcaa4512f2ec8fad08b5f470cf1cf522e86b7d950252fb6fbf1"},
+    {file = "django_test_migrations-1.3.0.tar.gz", hash = "sha256:b42edb1af481e08c9d91c95aa9b373e76e905a931bc19c086ec00a6cb936876e"},
 ]
 
 [package.dependencies]
@@ -3360,4 +3360,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = "~3.9"
-content-hash = "77c8163795f64a92f2f515e968ed395f5a45888672d24d7cbe119466a9b493e3"
+content-hash = "8dfe8a54409a4307df859cf06c57b6e07e4413c8cf4d07cdd76632abd9539c52"
