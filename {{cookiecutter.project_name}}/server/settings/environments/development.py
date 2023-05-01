@@ -136,8 +136,6 @@ EXTRA_CHECKS = {
         'field-file-upload-to',
         # Text fields shouldn't use `null=True`:
         'field-text-null',
-        # Prefer using BooleanField(null=True) instead of NullBooleanField:
-        'field-boolean-null',
         # Don't pass `null=False` to model fields (this is django default)
         'field-null',
         # ForeignKey fields must specify db_index explicitly if used in

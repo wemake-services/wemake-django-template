@@ -5,6 +5,8 @@ This file is required and if development.py is present these
 values are overridden.
 """
 
+from django.conf import STATICFILES_STORAGE_ALIAS
+
 from server.settings.components import config
 
 # Production flags:
@@ -33,7 +35,7 @@ _COLLECTSTATIC_DRYRUN = config(
 STATIC_ROOT = '.static' if _COLLECTSTATIC_DRYRUN else '/var/www/django/static'
 
 STORAGES = {
-    'staticfiles':
+    STATICFILES_STORAGE_ALIAS:
         'django.contrib.staticfiles.storage.ManifestStaticFilesStorage',
 }
 
