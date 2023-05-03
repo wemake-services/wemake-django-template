@@ -9,7 +9,7 @@ We use a lot of 3rd party tools to achieve that.
 Django
 ------
 
-Django has a lot of `security-specific settings <https://docs.djangoproject.com/en/3.2/topics/security/>`_
+Django has a lot of `security-specific settings <https://docs.djangoproject.com/en/4.2/topics/security/>`_
 that are all turned on by default in this template.
 
 We also :ref:`enforce <going-to-production>` all the best practices

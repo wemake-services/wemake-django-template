@@ -136,8 +136,6 @@ EXTRA_CHECKS = {
         'field-file-upload-to',
         # Text fields shouldn't use `null=True`:
         'field-text-null',
-        # Prefer using BooleanField(null=True) instead of NullBooleanField:
-        'field-boolean-null',
         # Don't pass `null=False` to model fields (this is django default)
         'field-null',
         # ForeignKey fields must specify db_index explicitly if used in
@@ -153,5 +151,5 @@ EXTRA_CHECKS = {
 }
 
 # Disable persistent DB connections
-# https://docs.djangoproject.com/en/3.2/ref/databases/#caveats
+# https://docs.djangoproject.com/en/4.2/ref/databases/#caveats
 DATABASES['default']['CONN_MAX_AGE'] = 0

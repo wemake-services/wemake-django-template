@@ -9,7 +9,7 @@
 
 
 
-Bleeding edge `django3.2` template focused on code quality and security.
+Bleeding edge `django4.2` template focused on code quality and security.
 
 ---
 
