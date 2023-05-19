@@ -642,20 +642,22 @@ bcrypt = ["bcrypt"]
 
 [[package]]
 name = "django-axes"
-version = "5.41.1"
+version = "6.0.1"
 description = "Keep track of failed login attempts in Django-powered sites."
 category = "main"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "django-axes-5.41.1.tar.gz", hash = "sha256:aa43fe3a5763bea28d320b1d98e481c12e2dbc12f4dd851aaf7308e80629df9f"},
-    {file = "django_axes-5.41.1-py3-none-any.whl", hash = "sha256:38b89dc71104ace0498d08d7100a1af67688d151206e3c17d98f75bff1351c38"},
+    {file = "django-axes-6.0.1.tar.gz", hash = "sha256:598de5438615d5d3dea7ef3075ae3236e693c9cbc34721bd313d0f52f613eb92"},
+    {file = "django_axes-6.0.1-py3-none-any.whl", hash = "sha256:0d18cecaae77ad35b11d87f491f38a4d9197efb443438c97ca111e1191eaa473"},
 ]
 
 [package.dependencies]
 django = ">=3.2"
-django-ipware = ">=3"
 setuptools = "*"
+
+[package.extras]
+ipware = ["django-ipware (>=3)"]
 
 [[package]]
 name = "django-coverage-plugin"
@@ -756,18 +758,6 @@ files = [
 
 [package.dependencies]
 Django = ">=1.11"
-
-[[package]]
-name = "django-ipware"
-version = "5.0.0"
-description = "A Django application to retrieve user's IP address"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-files = [
-    {file = "django-ipware-5.0.0.tar.gz", hash = "sha256:4fa5607ee85e12ee5e158bc7569ff1e134fb1579681aa1ff3f0ed04be21be153"},
-    {file = "django_ipware-5.0.0-py2.py3-none-any.whl", hash = "sha256:80b52a3f571a371519cc552798f1015b934dd5dd7738bfad87e101e861bd21b8"},
-]
 
 [[package]]
 name = "django-migration-linter"
@@ -3376,4 +3366,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = "~3.9"
-content-hash = "f6607fe20954c99950d126238a67a4b3db07cb4929dbe8e083dc811cfb5cf13e"
+content-hash = "e4b7cf6cb7213668d7058a117975ecc2d04d42a7ddd5afde29c324d6cf0aa162"
