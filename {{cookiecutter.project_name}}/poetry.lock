@@ -3479,14 +3479,14 @@ files = [
 
 [[package]]
 name = "yamllint"
-version = "1.31.0"
+version = "1.32.0"
 description = "A linter for YAML files."
 category = "dev"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "yamllint-1.31.0-py3-none-any.whl", hash = "sha256:15f4bdb645e6a4a0a22fe5415bc38b4a934c51419b30104896d2f3f95e329185"},
-    {file = "yamllint-1.31.0.tar.gz", hash = "sha256:2d83f1d12f733e162a87e06b176149d7bb9c5bae4a9e5fce1c771d7f703f7a65"},
+    {file = "yamllint-1.32.0-py3-none-any.whl", hash = "sha256:d97a66e48da820829d96077d76b8dfbe6c6140f106e558dae87e81ac4e6b30b7"},
+    {file = "yamllint-1.32.0.tar.gz", hash = "sha256:d01dde008c65de5b235188ab3110bebc59d18e5c65fc8a58267cd211cd9df34a"},
 ]
 
 [package.dependencies]
@@ -3515,4 +3515,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = "~3.9"
-content-hash = "6535a08ea498cac3e963cbcd6c19b412b7e1ab6d633371ecbd0de0482e312b52"
+content-hash = "18b1833583fa5e1b136ba9308c666147ba2f69824b9ef9cc00c67f20a08533c7"
