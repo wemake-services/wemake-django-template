@@ -45,7 +45,7 @@ django-coverage-plugin = "^3.0"
 pytest-randomly = "^3.12"
 pytest-timeout = "^2.1"
 django-test-migrations = "^1.3"
-hypothesis = "^6.76"
+hypothesis = "^6.78"
 
 mypy = "^1.3"
 django-stubs = "^4.2"
