@@ -10,7 +10,7 @@ import pytest
 
 
 @pytest.fixture(autouse=True)
-def _media_root(settings, tmpdir_factory) -> None:
+def _media_root(settings, tmpdir_factory: pytest.TempPathFactory) -> None:
     """Forces django to save media files into temp folder."""
     settings.MEDIA_ROOT = tmpdir_factory.mktemp('media', numbered=True)
 
