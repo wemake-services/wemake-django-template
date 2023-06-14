@@ -35,7 +35,16 @@ Just like `django-admin.py startproject` but better.
 
 ## Installation
 
-Firstly, you will need to install [dependencies](https://cookiecutter.readthedocs.io/en/latest/):
+Firstly, you will need to install [dependencies](https://cookiecutter.readthedocs.io/en/latest/).
+
+The recommended way is via [`pipx`](https://github.com/pypa/pipx):
+
+```bash
+pipx install cookiecutter
+pipx inject cookiecutter jinja2-git
+```
+
+Or via global `pip`:
 
 ```bash
 pip install cookiecutter jinja2-git
