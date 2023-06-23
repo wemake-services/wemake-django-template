@@ -665,13 +665,13 @@ bcrypt = ["bcrypt"]
 
 [[package]]
 name = "django-axes"
-version = "6.0.3"
+version = "6.0.4"
 description = "Keep track of failed login attempts in Django-powered sites."
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "django-axes-6.0.3.tar.gz", hash = "sha256:000a2df2de8eb4da4602a86422aa75d8ad8d4d1e0968ac2bc855f9f43d5d4f01"},
-    {file = "django_axes-6.0.3-py3-none-any.whl", hash = "sha256:cee405bd34bfef45985e0e0dc7d7ba1f086dd84da1f923f894e002fe048be146"},
+    {file = "django-axes-6.0.4.tar.gz", hash = "sha256:f3fefc811b5c0d3726d5600c373618c795b58771cca0ead69a1063a9fe72a892"},
+    {file = "django_axes-6.0.4-py3-none-any.whl", hash = "sha256:36c985bf5a672d00151f6732e80cd3105ee0cfdd65ec95adf0466eca0beea560"},
 ]
 
 [package.dependencies]
