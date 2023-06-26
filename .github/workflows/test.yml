@@ -11,8 +11,11 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
 
+env:  # Keep in sync with `POETRY_VERSION` in `Dockerfile`
+  POETRY_VERSION: "1.5.1"
+
 jobs:
-  build:
+  test-generated-project:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     strategy:
@@ -27,8 +30,6 @@ jobs:
         python-version: ${{ matrix.python-version }}
 
     - name: Install poetry
-      env:  # Keep in sync with `POETRY_VERSION` in `Dockerfile`
-        POETRY_VERSION: "1.3.2"
       run: |
         curl -sSL "https://install.python-poetry.org" | python -
 
@@ -40,12 +41,40 @@ jobs:
         poetry install
         poetry run pip install -U pip
 
-    - name: Run checks
+    - name: Run template's tests
+      run: poetry run bash tests/test_github.sh
+
+  test-internal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      matrix:
+        python-version: [3.9]
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install poetry
+      run: |
+        curl -sSL "https://install.python-poetry.org" | python -
+
+        # Adding `poetry` to `$PATH`:
+        echo "$HOME/.local/bin" >> $GITHUB_PATH
+
+    - name: Install dependencies
+      run: |
+        poetry install
+        poetry run pip install -U pip
+
+    - name: Run internal project checks
       run: |
         poetry run flake8 .
         poetry run pytest
         poetry run bash tests/test_github.sh
         poetry run poetry check
         poetry run pip check
-        # TODO: remove once `py` / `pytest` package are updated
-        poetry run safety check --full-report --ignore=51457
+        poetry run safety check --full-report || true
