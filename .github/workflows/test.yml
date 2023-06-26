@@ -15,7 +15,7 @@ env:  # Keep in sync with `POETRY_VERSION` in `Dockerfile`
   POETRY_VERSION: "1.5.1"
 
 jobs:
-  test-template:
+  test-generated-project:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     strategy:
@@ -44,7 +44,7 @@ jobs:
     - name: Run template's tests
       run: poetry run bash tests/test_github.sh
 
-  test-project:
+  test-internal:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     strategy:
