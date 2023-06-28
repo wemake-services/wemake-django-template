@@ -854,13 +854,13 @@ compatible-mypy = ["mypy (>=1.3.0,<1.4)"]
 
 [[package]]
 name = "django-stubs-ext"
-version = "4.2.1"
+version = "4.2.2"
 description = "Monkey-patching and extensions for django-stubs"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "django-stubs-ext-4.2.1.tar.gz", hash = "sha256:2696d6f7d8538341b060cffa9565c72ea797e866687e040b86d29cad8799e5fe"},
-    {file = "django_stubs_ext-4.2.1-py3-none-any.whl", hash = "sha256:4b6b63e49f4ba30d93ec46f87507648c99c9de6911e651ad69db7084fd5b2f4e"},
+    {file = "django-stubs-ext-4.2.2.tar.gz", hash = "sha256:c69d1cc46f1c4c3b7894b685a5022c29b2a36c7cfb52e23762eaf357ebfc2c98"},
+    {file = "django_stubs_ext-4.2.2-py3-none-any.whl", hash = "sha256:fdacc65a14d2d4b97334b58ff178a5853ec8c8c76cec406e417916ad67536ce4"},
 ]
 
 [package.dependencies]
