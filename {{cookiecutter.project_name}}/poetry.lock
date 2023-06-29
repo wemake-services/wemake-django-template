@@ -831,13 +831,13 @@ files = [
 
 [[package]]
 name = "django-stubs"
-version = "4.2.2"
+version = "4.2.3"
 description = "Mypy stubs for Django"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "django-stubs-4.2.2.tar.gz", hash = "sha256:061c6fad4b53bea5548ac241262cce1b426606d303a3ed2acbfc9ba1e296427e"},
-    {file = "django_stubs-4.2.2-py3-none-any.whl", hash = "sha256:602b569b3c212e0fed074a708f4e165512970c7971fa060a3da3e63a5084fefe"},
+    {file = "django-stubs-4.2.3.tar.gz", hash = "sha256:dadab39b46d9ae8f37a8e879c590f39a9e042b565c03fa0c5a8f754b441b1f23"},
+    {file = "django_stubs-4.2.3-py3-none-any.whl", hash = "sha256:e30e2e4927ba14bec587ed2c686404b6b8e473cabe9baca445e7d2e1e0d7b14f"},
 ]
 
 [package.dependencies]
