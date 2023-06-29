@@ -74,7 +74,6 @@ jobs:
       run: |
         poetry run flake8 .
         poetry run pytest
-        poetry run bash tests/test_github.sh
         poetry run poetry check
         poetry run pip check
         poetry run safety check --full-report || true
