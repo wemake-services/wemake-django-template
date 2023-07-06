@@ -7,7 +7,7 @@ authors = ["{{ cookiecutter.project_domain }}"]
 
 
 [tool.poetry.dependencies]
-python = "3.9.16"
+python = "3.9.17"
 
 django = { version = "^4.2", extras = ["argon2"] }
 django-split-settings = "^1.2"
