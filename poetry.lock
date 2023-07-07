@@ -364,20 +364,20 @@ testing = ["flake8", "pytest", "pytest-cov", "pytest-virtualenv", "pytest-xdist"
 
 [[package]]
 name = "cookiecutter"
-version = "2.1.1"
+version = "2.2.0"
 description = "A command-line utility that creates projects from project templates, e.g. creating a Python package project from a Python package project template."
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "cookiecutter-2.1.1-py2.py3-none-any.whl", hash = "sha256:9f3ab027cec4f70916e28f03470bdb41e637a3ad354b4d65c765d93aad160022"},
-    {file = "cookiecutter-2.1.1.tar.gz", hash = "sha256:f3982be8d9c53dac1261864013fdec7f83afd2e42ede6f6dd069c5e149c540d5"},
+    {file = "cookiecutter-2.2.0-py3-none-any.whl", hash = "sha256:6e1bb4a641e1fc86754a7c55da6ff740e81c1cfb0b3e2fb5699296a395ea2ce2"},
+    {file = "cookiecutter-2.2.0.tar.gz", hash = "sha256:b3437f49d04d359a200b03b63fb9e51be9eb0e751372c318a712a868d72c4f82"},
 ]
 
 [package.dependencies]
+arrow = "*"
 binaryornot = ">=0.4.4"
 click = ">=7.0,<9.0.0"
 Jinja2 = ">=2.7,<4.0.0"
-jinja2-time = ">=0.2.0"
 python-slugify = ">=4.0.0"
 pyyaml = ">=5.3.1"
 requests = ">=2.23.0"
@@ -1017,21 +1017,6 @@ files = [
 
 [package.dependencies]
 jinja2 = ">=2.10,<4.0"
-
-[[package]]
-name = "jinja2-time"
-version = "0.2.0"
-description = "Jinja2 Extension for Dates and Times"
-optional = false
-python-versions = "*"
-files = [
-    {file = "jinja2-time-0.2.0.tar.gz", hash = "sha256:d14eaa4d315e7688daa4969f616f226614350c48730bfa1692d2caebd8c90d40"},
-    {file = "jinja2_time-0.2.0-py2.py3-none-any.whl", hash = "sha256:d3eab6605e3ec8b7a0863df09cc1d23714908fa61aa6986a845c20ba488b4efa"},
-]
-
-[package.dependencies]
-arrow = "*"
-jinja2 = "*"
 
 [[package]]
 name = "jmespath"
@@ -2121,4 +2106,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "3d564afa90ac4d9112cf48a605860ea2abbe9aee5dfbe33fca392688a32d6d3f"
+content-hash = "54bf9033cbc2d1a0f79c1f5e415bdb1c521cf78b07c921ed471303027fe6d685"
