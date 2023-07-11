@@ -683,13 +683,13 @@ ipware = ["django-ipware (>=3)"]
 
 [[package]]
 name = "django-coverage-plugin"
-version = "3.0.0"
+version = "3.1.0"
 description = "Django template coverage.py plugin"
 optional = false
 python-versions = "*"
 files = [
-    {file = "django_coverage_plugin-3.0.0-py3-none-any.whl", hash = "sha256:245ecd6e91e5be7a66e0f811fd57091c46b55c0eb85c7fe1a1e4aebca9842a5f"},
-    {file = "django_coverage_plugin-3.0.0.tar.gz", hash = "sha256:c063d8d49ba2da30fe95d91cf3f0f9f659b55c3f80d4a029d619b2b3144b1206"},
+    {file = "django_coverage_plugin-3.1.0-py3-none-any.whl", hash = "sha256:eb0ea8ffdb0db11a02994fc99be6500550efb496c350d709f418ff3d8e553a67"},
+    {file = "django_coverage_plugin-3.1.0.tar.gz", hash = "sha256:223d34bf92bebadcb8b7b89932480e41c7bd98b44a8156934488fbe7f4a71f99"},
 ]
 
 [package.dependencies]
@@ -3387,4 +3387,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = "~3.9"
-content-hash = "b6705807d7cd2e1833dca1dbf1a3a51e4bff572edda3b99202379d2f4c0059cd"
+content-hash = "74ceb8493c124beee0dd397edfe0a0e149fbf41e075c81d2ce036ec955f079b7"
