@@ -9,6 +9,10 @@ authors = [
 
 license = "MIT"
 
+classifiers = [
+  "Private :: Do not Upload",
+]
+
 [tool.poetry.dependencies]
 python = "^3.9"
 
