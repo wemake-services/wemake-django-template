@@ -4,6 +4,9 @@ description = "{{ cookiecutter.project_verbose_name }}"
 version = "0.1.0"
 readme = "README.md"
 authors = ["{{ cookiecutter.project_domain }}"]
+classifiers = [
+  "Private :: Do not Upload",
+]
 
 
 [tool.poetry.dependencies]
