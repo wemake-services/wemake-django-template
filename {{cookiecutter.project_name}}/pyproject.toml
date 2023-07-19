@@ -22,7 +22,7 @@ django-permissions-policy = "^4.17"
 django-stubs-ext = "^4.2"
 
 psycopg2-binary = "^2.9"
-gunicorn = "^21.0"
+gunicorn = "^21.1"
 python-decouple = "^3.8"
 structlog = "^23.1"
 
