@@ -883,13 +883,13 @@ typing_extensions = ">=3.6,<5"
 
 [[package]]
 name = "djlint"
-version = "1.31.1"
+version = "1.32.0"
 description = "HTML Template Linter and Formatter"
 optional = false
 python-versions = ">=3.8.0,<4.0.0"
 files = [
-    {file = "djlint-1.31.1-py3-none-any.whl", hash = "sha256:9b2e2fc3a059a8e5a62f309edea15c1aeee331a279ab2699b9fb51a31d8c0934"},
-    {file = "djlint-1.31.1.tar.gz", hash = "sha256:a11739e2f919f760b3986eb13d06e00171f3bd342b8d88e9bd914a4260eaa8ce"},
+    {file = "djlint-1.32.0-py3-none-any.whl", hash = "sha256:b1b14731a39c36be654712a930c6a8b41dd0eefddf83641d8d6e00cfa798644c"},
+    {file = "djlint-1.32.0.tar.gz", hash = "sha256:0f53692b9b9731966d955b805dc8c6d43c99b967a7c2222d112451cb96145bd2"},
 ]
 
 [package.dependencies]
@@ -3387,4 +3387,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = "~3.9"
-content-hash = "afab6652b73d0b39c17ec8a1f517e6c91e31e30cd97cfa40803f8ac7326e436b"
+content-hash = "44f8208c3bad9cd31200a4da71054266696abe94c219d0e5f0a0af7d66dc5e3c"
