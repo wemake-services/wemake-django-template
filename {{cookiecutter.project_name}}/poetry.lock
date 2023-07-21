@@ -883,13 +883,13 @@ typing_extensions = ">=3.6,<5"
 
 [[package]]
 name = "djlint"
-version = "1.32.0"
+version = "1.32.1"
 description = "HTML Template Linter and Formatter"
 optional = false
 python-versions = ">=3.8.0,<4.0.0"
 files = [
-    {file = "djlint-1.32.0-py3-none-any.whl", hash = "sha256:b1b14731a39c36be654712a930c6a8b41dd0eefddf83641d8d6e00cfa798644c"},
-    {file = "djlint-1.32.0.tar.gz", hash = "sha256:0f53692b9b9731966d955b805dc8c6d43c99b967a7c2222d112451cb96145bd2"},
+    {file = "djlint-1.32.1-py3-none-any.whl", hash = "sha256:8aaec6776376cfd41f3e742ed9f5e3c46dc7c6cd7646abf9e99860fb1ec9f19a"},
+    {file = "djlint-1.32.1.tar.gz", hash = "sha256:c1e2141acf1547d244af7ef8abd15fbbae2abcc7a03e2bf31f8a491de69a6c72"},
 ]
 
 [package.dependencies]
