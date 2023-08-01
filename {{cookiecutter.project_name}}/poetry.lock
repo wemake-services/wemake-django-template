@@ -1162,13 +1162,12 @@ pycodestyle = "*"
 
 [[package]]
 name = "flake8-django"
-version = "1.3"
+version = "1.4"
 description = "Plugin to catch bad style specific to Django Projects."
 optional = false
 python-versions = ">=3.7.2,<4.0.0"
 files = [
-    {file = "flake8_django-1.3-py3-none-any.whl", hash = "sha256:b6017c024308feca83e178b5c6d69695e3007008e268caee9c360b9ae8fe8deb"},
-    {file = "flake8_django-1.3.tar.gz", hash = "sha256:66fb4227eb9805d1ce5d74d6bf33ba93008aeb4ff1806c0591d1d4a62e38b20e"},
+    {file = "flake8_django-1.4.tar.gz", hash = "sha256:4debba883084191568e3187416d1d6bdd4abd826da988f197a3c36572e9f30de"},
 ]
 
 [package.dependencies]
@@ -3386,4 +3385,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = "~3.9"
-content-hash = "d3009d60108a27d5e03a0282414559b82293f86b877cd94f794e903eb24a1733"
+content-hash = "7934e0971c15b62e7baa78cc672bbe596128c4550f304b1ccc4ee3bd680f3b7c"
