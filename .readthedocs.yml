@@ -17,9 +17,6 @@ build:
   jobs:
     # See https://github.com/readthedocs/readthedocs.org/issues/4912
     pre_create_environment:
-      # Select Python version (keep in sync with other versions):
-      - asdf install python 3.9.16
-      - asdf global python 3.9.16
       - python -m pip install --upgrade --no-cache-dir virtualenv
 
       # Install poetry:
