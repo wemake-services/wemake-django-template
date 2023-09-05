@@ -36,7 +36,7 @@ variables:
     - echo "$CI_JOB_TOKEN" | docker login "$REGISTRY"
       -u gitlab-ci-token --password-stdin
     # Debug information:
-    - docker info && docker-compose --version && git --version
+    - docker info && docker compose --version && git --version
 
 # Test scripts
 # ============
@@ -51,14 +51,14 @@ test:
     - docker tag "${IMAGE_FULL_NAME}:dev" "${PROJECT_NAME}:dev" || true
   script:
     # Checking config:
-    - docker-compose -f docker-compose.yml
+    - docker compose -f docker-compose.yml
       -f docker/docker-compose.prod.yml config --quiet
 
     # Build and run tests:
-    - docker-compose build
+    - docker compose build
       --build-arg BUILDKIT_INLINE_CACHE=1
       --progress=plain web
-    - docker-compose run --user=root --rm web ./docker/django/ci.sh
+    - docker compose run --user=root --rm web ./docker/django/ci.sh
 
     # Check the result image size:
     - disl "${PROJECT_NAME}:dev" 950MiB

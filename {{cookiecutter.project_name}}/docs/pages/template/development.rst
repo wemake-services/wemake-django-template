@@ -30,7 +30,7 @@ Before going any further, please,
 take a moment to read the `official documentation <https://poetry.eustace.io/>`_
 about ``poetry`` to know some basics.
 
-If you are using ``docker`` then prepend ``docker-compose run --rm web``
+If you are using ``docker`` then prepend ``docker compose run --rm web``
 before any of those commands to execute them.
 
 Please, note that you don't need almost all of them with ``docker``.
@@ -105,15 +105,15 @@ To start development server inside ``docker`` you will need to run:
 .. code:: bash
 
   export DOCKER_BUILDKIT=1 COMPOSE_DOCKER_CLI_BUILD=1 # enable buildkit
-  docker-compose build
-  docker-compose run --rm web python manage.py migrate
-  docker-compose up
+  docker compose build
+  docker compose run --rm web python manage.py migrate
+  docker compose up
 
 Running scripts inside docker
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 As we have already mentioned inside the previous section
-we use ``docker-compose run`` to run scripts inside docker.
+we use ``docker compose run`` to run scripts inside docker.
 
 What do you need to know about it?
 

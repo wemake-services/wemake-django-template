@@ -22,9 +22,9 @@ include:
 # Building template project:
 mirror-github-build:
   stage: build
-  image: python:3.9
+  image: python:3.11.5
   variables:
-    POETRY_VERSION: '1.5.1'
+    POETRY_VERSION: '1.6.1'
   before_script:
     # Installing poetry:
     - curl -sSL 'https://install.python-poetry.org' | python -

@@ -143,8 +143,8 @@ Here's it would look like:
 
 .. code:: bash
 
-  docker-compose -f docker-compose.yml -f docker/docker-compose.prod.yml
-  run --rm caddy -validate
+  docker compose -f docker-compose.yml -f docker/docker-compose.prod.yml \
+    run --rm caddy -validate
 
 This check is not included in the pipeline by default,
 because it is quite long to start all the machinery for this single check.

@@ -26,7 +26,7 @@ which is not required into the development build.
 
 .. code:: bash
 
-  docker-compose -f docker-compose.yml -f docker/docker-compose.prod.yml up
+  docker compose -f docker-compose.yml -f docker/docker-compose.prod.yml up
 
 
 Pulling pre-built images
@@ -73,5 +73,5 @@ containers.
 Further reading
 ---------------
 
-- Production with `docker-compose <https://docs.docker.com/compose/production>`_
+- Production with `docker compose <https://docs.docker.com/compose/production>`_
 - `Full tutorial <https://docs.docker.com/get-started>`_
