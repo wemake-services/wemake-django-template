@@ -11,6 +11,9 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
 
+permissions:
+  contents: read
+
 env:  # Keep in sync with `POETRY_VERSION` in `Dockerfile`
   POETRY_VERSION: "1.5.1"
 
