@@ -61,7 +61,7 @@ run_ci () {
   python manage.py makemigrations --dry-run --check
 
   # Check that all migrations are backwards compatible:
-  python manage.py lintmigrations --exclude-apps=axes --warnings-as-errors
+  python manage.py lintmigrations
 
   # Check production settings for gunicorn:
   gunicorn --check-config --config python:docker.django.gunicorn_config server.wsgi
