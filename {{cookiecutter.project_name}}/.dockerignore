@@ -68,5 +68,8 @@ docker/docker-compose.prod.yml
 # JetBrains
 .idea/
 
+# import-linter
+.import_linter_cache/
+
 # kira-release script
 release.config.js
