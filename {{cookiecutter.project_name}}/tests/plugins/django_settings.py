@@ -1,4 +1,3 @@
-
 import pytest
 from django.conf import LazySettings
 
