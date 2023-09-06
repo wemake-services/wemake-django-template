@@ -125,6 +125,15 @@ DTM_IGNORED_MIGRATIONS = frozenset((
 ))
 
 
+# django-migration-linter
+# https://github.com/3YOURMIND/django-migration-linter
+
+MIGRATION_LINTER_OPTIONS = {
+    'exclude_apps': ['axes'],
+    'exclude_migration_tests': ['CREATE_INDEX', 'CREATE_INDEX_EXCLUSIVE'],
+}
+
+
 # django-extra-checks
 # https://github.com/kalekseev/django-extra-checks
 
