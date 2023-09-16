@@ -84,7 +84,7 @@ RUN --mount=type=cache,target="$POETRY_CACHE_DIR" \
   && poetry run pip install -U pip \
   && poetry install \
     $(if [ "$DJANGO_ENV" = 'production' ]; then echo '--only main'; fi) \
-    --no-interaction --no-ansi
+    --no-interaction --no-ansi --sync
 
 # This is a special case. We need to run this script as an entry point:
 COPY ./docker/django/entrypoint.sh /docker-entrypoint.sh
