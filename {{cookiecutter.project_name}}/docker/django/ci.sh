@@ -41,8 +41,7 @@ run_ci () {
   djlint --lint server
 
   # Running type checking, see https://github.com/typeddjango/django-stubs
-  mypy manage.py server
-  mypy tests
+  mypy manage.py server tests
 
   # Running tests:
   pytest
