@@ -873,13 +873,13 @@ typing_extensions = ">=3.6,<5"
 
 [[package]]
 name = "djlint"
-version = "1.33.0"
+version = "1.34.0"
 description = "HTML Template Linter and Formatter"
 optional = false
 python-versions = ">=3.8.0,<4.0.0"
 files = [
-    {file = "djlint-1.33.0-py3-none-any.whl", hash = "sha256:aaf7bcbcfe937de5ff52747b573a8c78146b739d058dc817350640206aa477cc"},
-    {file = "djlint-1.33.0.tar.gz", hash = "sha256:427e1d0b1cf2dc1922808d27d5a1078369d0c05b0fd2267f0bef06e9049bf3cf"},
+    {file = "djlint-1.34.0-py3-none-any.whl", hash = "sha256:bdc26cc607dee8b46e262654eb0fbac7862c34d68172c8adc25a0b56fc7d8173"},
+    {file = "djlint-1.34.0.tar.gz", hash = "sha256:60b4f4ca99fd83106603bdd466f35314fda33776f3a6e70ea9d674da9d0ad053"},
 ]
 
 [package.dependencies]
@@ -3350,4 +3350,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "sphinx"]
 [metadata]
 lock-version = "2.0"
 python-versions = "3.11.5"
-content-hash = "1baea0049b083a5bcaf778e4998477f52103c00bf470521fc05f30305c57164d"
+content-hash = "a75f32069ab7e1c27efd2d37c88ec2bbd41153bb5559c74b3eb96bbea769ba4c"
