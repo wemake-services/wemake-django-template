@@ -29,6 +29,11 @@ LOGGING = {
             'processor': structlog.processors.KeyValueRenderer(
                 key_order=['timestamp', 'level', 'event', 'logger'],
             ),
+            'foreign_pre_chain': [
+                structlog.stdlib.add_log_level,
+                structlog.stdlib.add_logger_name,
+                structlog.processors.TimeStamper(fmt='iso'),
+            ],
         },
     },
 
