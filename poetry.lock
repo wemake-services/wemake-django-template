@@ -262,13 +262,13 @@ testing = ["flake8", "pytest", "pytest-cov", "pytest-virtualenv", "pytest-xdist"
 
 [[package]]
 name = "cookiecutter"
-version = "2.3.1"
+version = "2.4.0"
 description = "A command-line utility that creates projects from project templates, e.g. creating a Python package project from a Python package project template."
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "cookiecutter-2.3.1-py3-none-any.whl", hash = "sha256:a583118324edb95e01da3c8468209c2d5562e4553009866b1d891c50e72b2373"},
-    {file = "cookiecutter-2.3.1.tar.gz", hash = "sha256:42aa1d27368f58be600d13e56d5d2177684f8f69a40d9cbad84851ba44f842de"},
+    {file = "cookiecutter-2.4.0-py3-none-any.whl", hash = "sha256:8344663028abc08ec09b912e663636a97e1775bffe973425ec0107431acd390e"},
+    {file = "cookiecutter-2.4.0.tar.gz", hash = "sha256:6d1494e66a784f23324df9d593f3e43af3db4f4b926b9e49e6ff060169fc042a"},
 ]
 
 [package.dependencies]
@@ -1684,4 +1684,4 @@ dev = ["black (>=19.3b0)", "pytest (>=4.6.2)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "1b89fac31e9e1682ec7950fb05b2338ae74a3fafbff79f39ac468a304b9f5b3b"
+content-hash = "4c944b650a8a9a333a7a365a25d9fac9323a286528b03f908ac49a5d430fc2b3"
