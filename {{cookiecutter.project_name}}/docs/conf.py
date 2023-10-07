@@ -30,18 +30,18 @@ django.setup()
 
 # -- Project information -----------------------------------------------------
 
-def _get_project_meta():
+def _get_project_meta() -> dict[str, str]:  # lying abour return type
     with open('../pyproject.toml', mode='rb') as pyproject:
         return tomli.load(pyproject)['tool']['poetry']
 
 
 pkg_meta = _get_project_meta()
-project = str(pkg_meta['name'])
-author = str(pkg_meta['authors'][0])
+project = pkg_meta['name']
+author = pkg_meta['authors'][0]
 copyright = author  # noqa: WPS125
 
 # The short X.Y version
-version = str(pkg_meta['version'])
+version = pkg_meta['version']
 # The full version, including alpha/beta/rc tags
 release = version
 
@@ -49,7 +49,7 @@ release = version
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
-needs_sphinx = '5.0'
+needs_sphinx = '7.2'
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
