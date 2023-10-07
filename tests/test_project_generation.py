@@ -13,8 +13,7 @@ import tomli
 from binaryornot.check import is_binary
 from cookiecutter.exceptions import FailedHookException
 
-PATTERN = r'{{(\s?cookiecutter)[.](.*?)}}'
-RE_OBJ = re.compile(PATTERN)
+RE_OBJ = re.compile(r'{{(\s?cookiecutter)[.](.*?)}}')
 
 
 def build_files_list(root_dir):
