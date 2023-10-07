@@ -2,11 +2,11 @@
 #
 
 # You can set these variables from the command line.
-SPHINXOPTS    =
-SPHINXBUILD   = python -msphinx
-SPHINXPROJ    = wemake-django-template
-SOURCEDIR     = .
-BUILDDIR      = _build
+SPHINXOPTS=
+SPHINXBUILD=python -msphinx
+SPHINXPROJ={{cookiecutter.project_name}}
+SOURCEDIR=.
+BUILDDIR=_build
 
 # Put it first so that "make" without argument is like "make help".
 help:
