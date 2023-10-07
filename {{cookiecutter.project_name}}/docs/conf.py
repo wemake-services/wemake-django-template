@@ -68,6 +68,11 @@ extensions = [
     'sphinx_autodoc_typehints',
 ]
 
+# If true, Sphinx will warn about all references
+# where the target cannot be found. Default is `False``.
+# You can activate this mode temporarily using the `-n` command-line switch.
+nitpicky = True
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
