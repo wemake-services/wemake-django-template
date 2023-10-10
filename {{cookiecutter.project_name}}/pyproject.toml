@@ -24,7 +24,7 @@ django-stubs-ext = "^4.2"
 psycopg2-binary = "^2.9"
 gunicorn = "^21.2"
 python-decouple = "^3.8"
-structlog = "^23.1"
+structlog = "^23.2"
 
 
 [tool.poetry.group.dev.dependencies]
