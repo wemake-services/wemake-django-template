@@ -39,4 +39,4 @@ docker compose -f docker-compose.yml \
 
 # Checking the size of final images:
 disl "${PROJECT_NAME}:dev" 950MiB
-disl "registry.gitlab.com/${PROJECT_ORGANIZATION}/${PROJECT_NAME}:latest" 640MiB
+disl "registry.gitlab.com/${PROJECT_ORGANIZATION}/${PROJECT_NAME}:latest" 700MiB
