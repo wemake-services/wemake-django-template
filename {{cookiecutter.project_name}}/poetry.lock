@@ -1371,13 +1371,13 @@ files = [
 
 [[package]]
 name = "hypothesis"
-version = "6.89.1"
+version = "6.90.0"
 description = "A library for property-based testing"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "hypothesis-6.89.1-py3-none-any.whl", hash = "sha256:85a8668ee62dbe0c176da343dafa5a5292e8a7493e32427139c5123feb469d54"},
-    {file = "hypothesis-6.89.1.tar.gz", hash = "sha256:bd1cd35c876b3c5e70a4c5497cd7815b6deb87a861dd962df6ca1091de6182e9"},
+    {file = "hypothesis-6.90.0-py3-none-any.whl", hash = "sha256:4d7d3d3d5e4e4a9954b448fc8220cd73573e3e32adb00059f6907de6b55dcd5e"},
+    {file = "hypothesis-6.90.0.tar.gz", hash = "sha256:0ab33900b9362318bd03d911a77a0dda8629c1877420074d87ae466919f6e4c0"},
 ]
 
 [package.dependencies]
@@ -3338,4 +3338,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "sphinx"]
 [metadata]
 lock-version = "2.0"
 python-versions = "3.11.5"
-content-hash = "ebc3d769fe0a7423c03c19ece7de9609b8abe48958e7ee974be943163e18ea01"
+content-hash = "7d00f0fe3ea0d0fddada06110fc1a0fc183f5e24c5dd5267a332c2d8a68a2b05"
