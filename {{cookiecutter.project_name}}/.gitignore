@@ -244,3 +244,6 @@ artifacts/
 
 # ipython:
 .ipython/
+
+# ruff:
+.ruff_cache/
