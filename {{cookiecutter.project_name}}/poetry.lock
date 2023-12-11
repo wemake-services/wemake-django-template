@@ -631,13 +631,13 @@ bcrypt = ["bcrypt"]
 
 [[package]]
 name = "django-axes"
-version = "6.1.1"
+version = "6.2.0"
 description = "Keep track of failed login attempts in Django-powered sites."
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "django-axes-6.1.1.tar.gz", hash = "sha256:cd1bc4f7becc8e9243eb4090dffa258d7d7125ca0ce3153b6ffc920bccbf2c3f"},
-    {file = "django_axes-6.1.1-py3-none-any.whl", hash = "sha256:29c48ff5f09046afd5e9a16e96d3bbb79f6c11c59f0a7bbd732559e60d0aa9fa"},
+    {file = "django-axes-6.2.0.tar.gz", hash = "sha256:4307b34d06b037469a3930ca68bf3f9e8a7791af9c0f6f5ce599c5ce26b93190"},
+    {file = "django_axes-6.2.0-py3-none-any.whl", hash = "sha256:d32626e46fc178498e3f1955fe3e0f77130450bc1e60f322be5aae11d72e990f"},
 ]
 
 [package.dependencies]
@@ -3327,4 +3327,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "sphinx"]
 [metadata]
 lock-version = "2.0"
 python-versions = "3.11.5"
-content-hash = "8b5070c94ccd68bb79e8d1fbcab8ea51c7ccbe742b5fa2c400999a6af9550717"
+content-hash = "a314e44ebfa9041c47388578989cbc988fed55cce1e3ac38d2d20f644dce1604"
