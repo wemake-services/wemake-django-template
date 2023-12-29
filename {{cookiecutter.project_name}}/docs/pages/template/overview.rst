@@ -38,6 +38,13 @@ root project
   It basically defines what to do with your project
   after pushing it to the repository. Currently it is used for testing
   and releasing a ``docker`` image
+- ``.python-version`` - file that specifies the Python version
+  to be used for the project. It helps in maintaining a consistent
+  Python environment across different machines and environments.
+- ``CHANGELOG.md`` - file that contains a chronological
+  log of all notable changes made to the project. It provides
+  a comprehensive overview of the project's evolution and
+  helps users and contributors understand the development history.
 - ``docker-compose.yml`` - this the file specifies ``docker`` services
   that are needed for development and testing
 - ``docker-compose.override.yml`` - local override for ``docker-compose``.
@@ -93,6 +100,7 @@ docker
 tests
 ~~~~~
 
+- ``tests/plugins`` - ``pytest`` plugins that are used in this project
 - ``tests/test_server`` - tests that ensures that basic ``django``
   stuff is working, should not be removed
 - ``tests/test_apps/test_main`` - example tests for the ``django`` app,
