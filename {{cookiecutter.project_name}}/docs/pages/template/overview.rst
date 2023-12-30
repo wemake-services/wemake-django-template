@@ -40,8 +40,8 @@ root project
   and releasing a ``docker`` image
 - ``.python-version`` - file that specifies the Python version
   to be used for the project, particularly when using `pyenv`.
-  This file helps in maintaining a consistent Python environment across different
-  machines and environments
+  This file helps in maintaining a consistent Python environment
+  across different machines and environments
 - ``CHANGELOG.md`` - file that contains a chronological
   log of all notable changes made to the project. It provides
   a comprehensive overview of the project's evolution and
