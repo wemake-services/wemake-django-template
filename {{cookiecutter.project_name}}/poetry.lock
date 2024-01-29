@@ -770,13 +770,13 @@ test = ["pytest", "pytest-cov", "pytest-django"]
 
 [[package]]
 name = "django-health-check"
-version = "3.17.0"
+version = "3.18.0"
 description = "Run checks on services like databases, queue servers, celery processes, etc."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "django-health-check-3.17.0.tar.gz", hash = "sha256:d1b8671e79d1de6e3dd1a9c69566222b0bfcfacca8b90511a4407b2d0d3d2778"},
-    {file = "django_health_check-3.17.0-py2.py3-none-any.whl", hash = "sha256:20dc5ccb516a4e7163593fd4026f0a7531e3027b47d23ebe3bd9dbc99ac4354c"},
+    {file = "django-health-check-3.18.0.tar.gz", hash = "sha256:523e71b7bd18512679a1cd0e64e450b9938d0cdb5c4143abc5b5b89fa12b6d68"},
+    {file = "django_health_check-3.18.0-py2.py3-none-any.whl", hash = "sha256:ef538d5ba82fee85bfde95a09939514893e6661b9309a685f82b6208344367b5"},
 ]
 
 [package.dependencies]
@@ -3503,4 +3503,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "sphinx"]
 [metadata]
 lock-version = "2.0"
 python-versions = "3.11.5"
-content-hash = "de7037ee8fe4ec17af17fa6d03abf4d5af7e44f1b670275d1ced340e5df16739"
+content-hash = "c6d2d25b5d0dde4e0123063e284669ad3d37dbcb61893f8d3880f99c8a281377"
