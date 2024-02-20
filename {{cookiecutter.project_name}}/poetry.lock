@@ -764,17 +764,17 @@ sqlparse = ">=0.2"
 
 [[package]]
 name = "django-extra-checks"
-version = "0.13.3"
+version = "0.14.0"
 description = "Collection of useful checks for Django Checks Framework"
 optional = false
-python-versions = ">=3.6"
+python-versions = ">=3.8"
 files = [
-    {file = "django-extra-checks-0.13.3.tar.gz", hash = "sha256:02782cee0763f48f4cd471e8cb4a3aeee6b3b5a02d351a8ed32b0f3213e30385"},
-    {file = "django_extra_checks-0.13.3-py3-none-any.whl", hash = "sha256:4f62eb1788219ec2635ccc83ba46d78dc0af7452058842dcffb1634710360b6d"},
+    {file = "django_extra_checks-0.14.0-py3-none-any.whl", hash = "sha256:3e0d7413bac22eae7c26bf1b1be4eb7c7e5b86eb7eaa3f9c546c910553f6fbcf"},
+    {file = "django_extra_checks-0.14.0.tar.gz", hash = "sha256:1f3436d485ef23b0836afc6d7447b53bd64a088ba0a1a617d9500e876548fb77"},
 ]
 
 [package.extras]
-dev = ["Django", "black", "django-stubs", "djangorestframework", "djangorestframework-stubs", "flake8", "flake8-bugbear", "isort", "mypy (<0.990)", "pdbpp", "pre-commit"]
+dev = ["django", "django-stubs", "djangorestframework", "djangorestframework-stubs", "mypy", "pdbpp", "pre-commit", "ruff"]
 test = ["pytest", "pytest-cov", "pytest-django"]
 
 [[package]]
@@ -3512,4 +3512,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "sphinx"]
 [metadata]
 lock-version = "2.0"
 python-versions = "3.11.5"
-content-hash = "9f5898256eff4efa81264aa0f47a5ea6f8f1a5ddb4d7f8ce43f9bf661fc60f4c"
+content-hash = "45b3a6e1e23e4d951e775d75cb5a042b049d5b84860cf6690efcfc5ed5c7806f"
