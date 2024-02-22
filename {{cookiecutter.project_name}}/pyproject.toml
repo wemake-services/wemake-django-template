@@ -3,7 +3,7 @@ name = "{{ cookiecutter.project_name }}"
 description = "{{ cookiecutter.project_verbose_name }}"
 version = "0.1.0"
 readme = "README.md"
-authors = ["{{ cookiecutter.project_domain }}"]
+authors = []
 classifiers = [
   "Private :: Do not Upload",
 ]
