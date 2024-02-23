@@ -332,20 +332,18 @@ ssh = ["paramiko (>=2.4.3)"]
 
 [[package]]
 name = "docker-image-size-limit"
-version = "1.0.1"
+version = "1.1.0"
 description = ""
 optional = false
-python-versions = ">=3.8,<4.0"
+python-versions = ">=3.9,<4.0"
 files = [
-    {file = "docker_image_size_limit-1.0.1-py3-none-any.whl", hash = "sha256:9d6e59d48df316f9940c05633f6cdcb07ff75b8462d3764f05b734edd9373b10"},
-    {file = "docker_image_size_limit-1.0.1.tar.gz", hash = "sha256:ce391464ee1974332de2fd36d76c3008af1930abb583a84a4bf07a8ba2868977"},
+    {file = "docker_image_size_limit-1.1.0-py3-none-any.whl", hash = "sha256:101425bc782422ec4d74578f7cc453563a5b7ed83e3f248f99c92b39fee09132"},
+    {file = "docker_image_size_limit-1.1.0.tar.gz", hash = "sha256:e6a5a37d4fa4487f09e8ec87f9626521c500dac73b1d4d43111ec9bac88ce065"},
 ]
 
 [package.dependencies]
-docker = ">=3.7,<7.0"
+docker = ">=3.7"
 humanfriendly = ">=4.18,<11.0"
-requests = "<2.29"
-urllib3 = "<2"
 
 [[package]]
 name = "docutils"
@@ -1700,4 +1698,4 @@ dev = ["black (>=19.3b0)", "pytest (>=4.6.2)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "226ef1c6964fa1375639e7708da0a9d9bb8b8129141c74f889554e709f825f53"
+content-hash = "3dc6ecb75018df7afcbd7b94b94177bb6d6a1bd44bbf035f09cc70d4549263bd"
