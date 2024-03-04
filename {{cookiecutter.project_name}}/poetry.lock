@@ -731,21 +731,21 @@ coverage = "*"
 
 [[package]]
 name = "django-csp"
-version = "3.7"
+version = "3.8"
 description = "Django Content Security Policy support."
 optional = false
 python-versions = "*"
 files = [
-    {file = "django_csp-3.7-py2.py3-none-any.whl", hash = "sha256:01443a07723f9a479d498bd7bb63571aaa771e690f64bde515db6cdb76e8041a"},
-    {file = "django_csp-3.7.tar.gz", hash = "sha256:01eda02ad3f10261c74131cdc0b5a6a62b7c7ad4fd017fbefb7a14776e0a9727"},
+    {file = "django_csp-3.8-py3-none-any.whl", hash = "sha256:19b2978b03fcd73517d7d67acbc04fbbcaec0facc3e83baa502965892d1e0719"},
+    {file = "django_csp-3.8.tar.gz", hash = "sha256:ef0f1a9f7d8da68ae6e169c02e9ac661c0ecf04db70e0d1d85640512a68471c0"},
 ]
 
 [package.dependencies]
-Django = ">=1.8"
+Django = ">=3.2"
 
 [package.extras]
 jinja2 = ["jinja2 (>=2.9.6)"]
-tests = ["jinja2 (>=2.9.6)", "mock (==1.0.1)", "pep8 (==1.4.6)", "pytest (<4.0)", "pytest-django", "pytest-flakes (==1.0.1)", "pytest-pep8 (==1.0.6)", "six (==1.12.0)"]
+tests = ["jinja2 (>=2.9.6)", "pytest", "pytest-cov", "pytest-django", "pytest-ruff"]
 
 [[package]]
 name = "django-debug-toolbar"
@@ -3512,4 +3512,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "sphinx"]
 [metadata]
 lock-version = "2.0"
 python-versions = "3.11.5"
-content-hash = "d8def6c47ebf785badfb6e3c6b2371863fc3fba30af36e36cb7868caa406b365"
+content-hash = "58e996b3758a095c60ce68c346be51503447c420e8555f6b859e822b187a53b3"
