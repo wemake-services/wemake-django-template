@@ -854,13 +854,13 @@ files = [
 
 [[package]]
 name = "django-split-settings"
-version = "1.2.0"
+version = "1.3.0"
 description = "Organize Django settings into multiple files and directories. Easily override and modify settings. Use wildcards and optional settings files."
 optional = false
-python-versions = ">=3.7,<4.0"
+python-versions = ">=3.9,<4.0"
 files = [
-    {file = "django-split-settings-1.2.0.tar.gz", hash = "sha256:31415a618256b54c5cee8662cbaa72a890683b8b7465d64ba88fdd3affdd6c60"},
-    {file = "django_split_settings-1.2.0-py3-none-any.whl", hash = "sha256:4b3be146776d49c61bd9dcf89fad40edb1544f13ab27a87a0b1aecf5a0d636f4"},
+    {file = "django_split_settings-1.3.0-py3-none-any.whl", hash = "sha256:003068ab6cf4016ebb37eb743edd401d92405ef12bf80e42cd7bd9bcf86304fc"},
+    {file = "django_split_settings-1.3.0.tar.gz", hash = "sha256:725af58709b6c93a185fdf9d697089ca810fef48f716457fe70724b373e0fe3b"},
 ]
 
 [[package]]
@@ -3511,4 +3511,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "sphinx"]
 [metadata]
 lock-version = "2.0"
 python-versions = "3.11.5"
-content-hash = "7f4ca868a86466c09969058895c3b13d0c08ac860d0b4b80f4459ca40c9c47c4"
+content-hash = "74ca6ba48e4d55e9a67c409db905553c5a5a0d19b62478fae49732f59ace28af"
