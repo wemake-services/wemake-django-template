@@ -1027,13 +1027,13 @@ files = [
 
 [[package]]
 name = "dump-env"
-version = "1.4.0"
+version = "1.5.0"
 description = "A utility tool to create .env files"
 optional = false
-python-versions = ">=3.7,<4.0"
+python-versions = "<4.0,>=3.9"
 files = [
-    {file = "dump-env-1.4.0.tar.gz", hash = "sha256:98ed844c6e10c0c05ee693dbf3f73d9bb33f187d57886390b759f95dc324d972"},
-    {file = "dump_env-1.4.0-py3-none-any.whl", hash = "sha256:f9260e5075703753b9e917fd0e810e63ea3d883b2143c299cf17cfe6f38e4fc1"},
+    {file = "dump_env-1.5.0-py3-none-any.whl", hash = "sha256:daf05283bcf5eb2cc7c740907800947ea258278614c19d20d2b170373dde68e6"},
+    {file = "dump_env-1.5.0.tar.gz", hash = "sha256:11f05ceec5a76f26e916c51da80f2e07ce4d69fb160710e46169e550c503e9e4"},
 ]
 
 [[package]]
@@ -3512,4 +3512,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "sphinx"]
 [metadata]
 lock-version = "2.0"
 python-versions = "3.11.5"
-content-hash = "9d61980817f92d204cd4b6b78c6a124f91b76cbe5fa6512562d02866ddfcc706"
+content-hash = "f2c55c060be8959ed4b044fa6bc94b6adc1f47b1d4ad619c7dd5944cf350348d"
