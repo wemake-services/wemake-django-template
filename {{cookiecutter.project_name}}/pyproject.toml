@@ -59,7 +59,7 @@ safety = "^3.0"
 dotenv-linter = "^0.5"
 polint = "^0.4"
 dennis = "^1.1"
-dump-env = "^1.3"
+dump-env = "^1.5"
 ipython = "^8.22"
 
 [tool.poetry.group.docs]
