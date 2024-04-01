@@ -810,13 +810,13 @@ Django = ">=1.11"
 
 [[package]]
 name = "django-migration-linter"
-version = "5.0.0"
+version = "5.1.0"
 description = "Detect backward incompatible migrations for your django project"
 optional = false
-python-versions = "*"
+python-versions = ">=3.7"
 files = [
-    {file = "django-migration-linter-5.0.0.tar.gz", hash = "sha256:83d8bdabaa8aac92953aaf96be08bc1d0bde413d73bcad43c56077260e2d6f1b"},
-    {file = "django_migration_linter-5.0.0-py2.py3-none-any.whl", hash = "sha256:3d3134d317125e63e5d53b98cc4a2e34f4b0199213335d7cc43675c2e9864163"},
+    {file = "django-migration-linter-5.1.0.tar.gz", hash = "sha256:638a6f39b0109fb95a747f10cb3ae4362b4ca46e7f45eee9546d3dd4c322b83a"},
+    {file = "django_migration_linter-5.1.0-py3-none-any.whl", hash = "sha256:eefdca0cd60b0bacdf61420b0779b2c680dd29d3b43e9ccb0d8d2aa89f036474"},
 ]
 
 [package.dependencies]
@@ -3512,4 +3512,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "sphinx"]
 [metadata]
 lock-version = "2.0"
 python-versions = "3.11.5"
-content-hash = "27b59bed687e00a4ce6c1c11ea0f90d7eb486ea37731d5ae102e74a34d974c59"
+content-hash = "2af531baee9b34c7fca9987f7f7dac2fe0e003be32c7fa51331dbc7b33d6976b"
