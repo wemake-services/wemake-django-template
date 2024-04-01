@@ -1519,13 +1519,13 @@ files = [
 
 [[package]]
 name = "ipython"
-version = "8.22.2"
+version = "8.23.0"
 description = "IPython: Productive Interactive Computing"
 optional = false
 python-versions = ">=3.10"
 files = [
-    {file = "ipython-8.22.2-py3-none-any.whl", hash = "sha256:3c86f284c8f3d8f2b6c662f885c4889a91df7cd52056fd02b7d8d6195d7f56e9"},
-    {file = "ipython-8.22.2.tar.gz", hash = "sha256:2dcaad9049f9056f1fef63514f176c7d41f930daa78d05b82a176202818f2c14"},
+    {file = "ipython-8.23.0-py3-none-any.whl", hash = "sha256:07232af52a5ba146dc3372c7bf52a0f890a23edf38d77caef8d53f9cdc2584c1"},
+    {file = "ipython-8.23.0.tar.gz", hash = "sha256:7468edaf4f6de3e1b912e57f66c241e6fd3c7099f2ec2136e239e142e800274d"},
 ]
 
 [package.dependencies]
@@ -1538,12 +1538,14 @@ prompt-toolkit = ">=3.0.41,<3.1.0"
 pygments = ">=2.4.0"
 stack-data = "*"
 traitlets = ">=5.13.0"
+typing-extensions = {version = "*", markers = "python_version < \"3.12\""}
 
 [package.extras]
-all = ["ipython[black,doc,kernel,nbconvert,nbformat,notebook,parallel,qtconsole,terminal]", "ipython[test,test-extra]"]
+all = ["ipython[black,doc,kernel,matplotlib,nbconvert,nbformat,notebook,parallel,qtconsole]", "ipython[test,test-extra]"]
 black = ["black"]
 doc = ["docrepr", "exceptiongroup", "ipykernel", "ipython[test]", "matplotlib", "setuptools (>=18.5)", "sphinx (>=1.3)", "sphinx-rtd-theme", "sphinxcontrib-jquery", "stack-data", "typing-extensions"]
 kernel = ["ipykernel"]
+matplotlib = ["matplotlib"]
 nbconvert = ["nbconvert"]
 nbformat = ["nbformat"]
 notebook = ["ipywidgets", "notebook"]
@@ -3512,4 +3514,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "sphinx"]
 [metadata]
 lock-version = "2.0"
 python-versions = "3.11.5"
-content-hash = "13c999376fd0a1a264dc657b54162c5875881cc8a20098aea75aa04299bb422e"
+content-hash = "9e991124fe9559e744129b7ebd1ad13ead4febab0834987d6995c1dc7369b7ef"
