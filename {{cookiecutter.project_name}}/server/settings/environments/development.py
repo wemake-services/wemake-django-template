@@ -9,16 +9,8 @@ import socket
 from typing import TYPE_CHECKING
 
 from server.settings.components import config
-from server.settings.components.common import (
-    DATABASES,
-    INSTALLED_APPS,
-    MIDDLEWARE,
-)
-from server.settings.components.csp import (
-    CSP_CONNECT_SRC,
-    CSP_IMG_SRC,
-    CSP_SCRIPT_SRC,
-)
+from server.settings.components.common import DATABASES, INSTALLED_APPS, MIDDLEWARE
+from server.settings.components.csp import CSP_CONNECT_SRC, CSP_IMG_SRC, CSP_SCRIPT_SRC
 
 if TYPE_CHECKING:
     from django.http import HttpRequest
@@ -57,6 +49,7 @@ INSTALLED_APPS += (
 
     # django-extra-checks:
     'extra_checks',
+    'query_counter',
 )
 
 
@@ -66,9 +59,9 @@ INSTALLED_APPS += (
 MIDDLEWARE += (
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 
-    # https://github.com/bradmontgomery/django-querycount
+    # https://github.com/conformist-mw/django-query-counter
     # Prints how many queries were executed, useful for the APIs.
-    'querycount.middleware.QueryCountMiddleware',
+    'query_counter.middleware.DjangoQueryCounterMiddleware',
 )
 
 # https://django-debug-toolbar.readthedocs.io/en/stable/installation.html#configure-internal-ips
