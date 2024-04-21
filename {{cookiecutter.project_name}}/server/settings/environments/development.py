@@ -57,6 +57,7 @@ INSTALLED_APPS += (
 
     # django-extra-checks:
     'extra_checks',
+    # django-query-counter:
     'query_counter',
 )
 
