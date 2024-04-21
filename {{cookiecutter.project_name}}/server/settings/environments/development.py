@@ -9,8 +9,16 @@ import socket
 from typing import TYPE_CHECKING
 
 from server.settings.components import config
-from server.settings.components.common import DATABASES, INSTALLED_APPS, MIDDLEWARE
-from server.settings.components.csp import CSP_CONNECT_SRC, CSP_IMG_SRC, CSP_SCRIPT_SRC
+from server.settings.components.common import (
+    DATABASES,
+    INSTALLED_APPS,
+    MIDDLEWARE,
+)
+from server.settings.components.csp import (
+    CSP_CONNECT_SRC,
+    CSP_IMG_SRC,
+    CSP_SCRIPT_SRC,
+)
 
 if TYPE_CHECKING:
     from django.http import HttpRequest
