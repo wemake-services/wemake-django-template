@@ -60,7 +60,7 @@ polint = "^0.4"
 dennis = "^1.1"
 dump-env = "^1.5"
 ipython = "^8.23"
-django-query-counter = "^0.4.0"
+django-query-counter = "^0.4"
 
 [tool.poetry.group.docs]
 optional = true
