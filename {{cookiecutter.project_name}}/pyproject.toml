@@ -29,7 +29,6 @@ structlog = "^24.1"
 
 [tool.poetry.group.dev.dependencies]
 django-debug-toolbar = "^4.3"
-django-querycount = "^0.8"
 django-migration-linter = "^5.1"
 django-extra-checks = "^0.14"
 nplusone = "^1.0"
@@ -61,6 +60,7 @@ polint = "^0.4"
 dennis = "^1.1"
 dump-env = "^1.5"
 ipython = "^8.23"
+django-query-counter = "^0.4"
 
 [tool.poetry.group.docs]
 optional = true
