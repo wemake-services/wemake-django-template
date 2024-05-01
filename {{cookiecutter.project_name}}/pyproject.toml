@@ -40,7 +40,7 @@ flake8-logging-format = "^0.9"
 nitpick = "^0.35"
 doc8 = "^1.0"
 
-pytest = "^8.2"
+pytest = "^8.1.1"
 pytest-django = "^4.8"
 pytest-cov = "^5.0"
 covdefaults = "^2.3"
@@ -72,7 +72,7 @@ tomli = "^2.0"
 
 
 [build-system]
-requires = ["poetry-core>=1.6"]
+requires = ["poetry-core>=1.9"]
 build-backend = "poetry.core.masonry.api"
 
 
