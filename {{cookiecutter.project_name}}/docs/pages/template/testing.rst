@@ -37,18 +37,18 @@ Here's the full list of things we use:
   helpers, fixtures, and configuration
 - `django-test-migrations`_ - plugin to test Django migrations and their order
 - `pytest-cov`_ - plugin to measure test coverage
+- `covdefaults`_ - plugin for ``coverage`` to smartly ignore more meaningless lines.
 - `pytest-randomly`_ - plugin to execute tests in random order and
   also set predictable random seed, so you can easily debug
   what went wrong for tests that rely on random behavior
-- `pytest-deadfixtures`_ - plugin to find unused or duplicate fixtures
 - `pytest-timeout`_ - plugin to raise errors for tests
   that take too long to finish, this way you can control test execution speed
 
 .. _pytest-django: https://github.com/pytest-dev/pytest-django
 .. _django-test-migrations: https://github.com/wemake-services/django-test-migrations
 .. _pytest-cov: https://github.com/pytest-dev/pytest-cov
+.. _covdefaults: https://github.com/asottile/covdefaults
 .. _pytest-randomly: https://github.com/pytest-dev/pytest-randomly
-.. _pytest-deadfixtures: https://github.com/jllorencetti/pytest-deadfixtures
 .. _pytest-timeout: https://pypi.org/project/pytest-timeout
 
 Tweaking tests performance

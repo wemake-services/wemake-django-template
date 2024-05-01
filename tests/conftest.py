@@ -1,7 +1,7 @@
 import pytest
 
 
-@pytest.fixture()
+@pytest.fixture
 def context():
     """Creates default prompt values."""
     return {
