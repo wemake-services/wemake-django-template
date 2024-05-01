@@ -37,7 +37,8 @@ Here's the full list of things we use:
   helpers, fixtures, and configuration
 - `django-test-migrations`_ - plugin to test Django migrations and their order
 - `pytest-cov`_ - plugin to measure test coverage
-- `covdefaults`_ - plugin for ``coverage`` to smartly ignore more meaningless lines.
+- `covdefaults`_ - plugin for ``coverage`` to smartly ignore
+  more meaningless lines.
 - `pytest-randomly`_ - plugin to execute tests in random order and
   also set predictable random seed, so you can easily debug
   what went wrong for tests that rely on random behavior
