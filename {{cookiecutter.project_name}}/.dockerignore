@@ -71,5 +71,12 @@ docker/docker-compose.prod.yml
 # import-linter
 .import_linter_cache/
 
+# pytest and hypothesis
+.pytest_cache/
+.hypothesis/
+
+# mypy
+.mypy_cache/
+
 # kira-release script
 release.config.js
