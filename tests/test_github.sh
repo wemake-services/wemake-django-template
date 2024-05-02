@@ -24,6 +24,8 @@ docker compose -f docker-compose.yml \
 docker compose build --build-arg BUILDKIT_INLINE_CACHE=1
 docker compose run --user=root --rm web ./docker/django/ci.sh
 
+la -alh
+
 # Building and testing prod image:
 docker compose -f docker-compose.yml \
   -f docker/docker-compose.prod.yml build
