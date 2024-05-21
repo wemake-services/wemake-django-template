@@ -15,7 +15,7 @@ permissions:
   contents: read
 
 env:  # Keep in sync with `POETRY_VERSION` in `Dockerfile`
-  POETRY_VERSION: "1.6.1"
+  POETRY_VERSION: "1.8.3"
 
 jobs:
   test-generated-project:
