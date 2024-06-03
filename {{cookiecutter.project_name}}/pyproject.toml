@@ -59,7 +59,7 @@ dotenv-linter = "^0.5"
 polint = "^0.4"
 dennis = "^1.1"
 dump-env = "^1.5"
-ipython = "^8.24"
+ipython = "^8.25"
 django-query-counter = "^0.4"
 
 [tool.poetry.group.docs]
