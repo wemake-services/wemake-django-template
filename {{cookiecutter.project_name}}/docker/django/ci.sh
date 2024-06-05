@@ -67,7 +67,7 @@ run_ci () {
 
   # Generate a report about the state of dependencies' safety,
   # it is not blocking, because there are too many false positives:
-  safety check --full-report || true 
+  safety check --full-report || true
 
   # Checking `pyproject.toml` file contents:
   poetry check
