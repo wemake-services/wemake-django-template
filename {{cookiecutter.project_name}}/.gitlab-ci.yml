@@ -36,7 +36,7 @@ variables:
     - echo "$CI_JOB_TOKEN" | docker login "$REGISTRY"
       -u gitlab-ci-token --password-stdin
     # Debug information:
-    - docker info && docker compose --version && git --version
+    - docker info && docker compose version && git --version
 
 # Test scripts
 # ============
