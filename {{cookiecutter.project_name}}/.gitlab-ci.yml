@@ -1,10 +1,7 @@
 ---
 
 variables:
-  GROUP_NAME: "{{ cookiecutter.organization }}"
-  PROJECT_NAME: "{{ cookiecutter.project_name }}"
-  REGISTRY: "registry.gitlab.com"
-  IMAGE_FULL_NAME: "${REGISTRY}/${GROUP_NAME}/${PROJECT_NAME}"
+  IMAGE_FULL_NAME: "${CI_REGISTRY}/${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}"
 
 
 # Base scripts
@@ -33,7 +30,7 @@ variables:
       -p 'SECRET_'
       --strict SECRET_DJANGO_SECRET_KEY > config/.env
     # Login into Docker registry:
-    - echo "$CI_JOB_TOKEN" | docker login "$REGISTRY"
+    - echo "$CI_JOB_TOKEN" | docker login "$CI_REGISTRY"
       -u gitlab-ci-token --password-stdin
     # Debug information:
     - docker info && docker compose version && git --version
@@ -48,7 +45,7 @@ test:
     - *docker-before-script
     # Pulling cache:
     - docker pull "${IMAGE_FULL_NAME}:dev" || true
-    - docker tag "${IMAGE_FULL_NAME}:dev" "${PROJECT_NAME}:dev" || true
+    - docker tag "${IMAGE_FULL_NAME}:dev" "${CI_PROJECT_NAME}:dev" || true
   script:
     # Checking config:
     - docker compose -f docker-compose.yml
@@ -61,10 +58,10 @@ test:
     - docker compose run --user=root --rm web ./docker/django/ci.sh
 
     # Check the result image size:
-    - disl "${PROJECT_NAME}:dev" 950MiB
+    - disl "${CI_PROJECT_NAME}:dev" 950MiB
 
     # Pushing back the result for future runs:
-    - docker tag "${PROJECT_NAME}:dev" "${IMAGE_FULL_NAME}:dev"
+    - docker tag "${CI_PROJECT_NAME}:dev" "${IMAGE_FULL_NAME}:dev"
     - docker push "${IMAGE_FULL_NAME}:dev"
   only:
     - merge_requests
@@ -113,7 +110,7 @@ release-image:
 
     # Now we need the latest images for cache and improved build times:
     - docker pull "${IMAGE_FULL_NAME}:latest" || true
-    - docker tag "${IMAGE_FULL_NAME}:latest" "${PROJECT_NAME}:latest" || true
+    - docker tag "${IMAGE_FULL_NAME}:latest" "${CI_PROJECT_NAME}:latest" || true
   script:
     # Building the image itself:
     - docker compose
