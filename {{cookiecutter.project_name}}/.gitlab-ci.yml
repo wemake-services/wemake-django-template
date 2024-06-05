@@ -84,7 +84,7 @@ test-caddy:
   stage: test
   extends: .docker
   script:
-    - docker-compose
+    - docker compose
       -f docker-compose.yml
       -f docker/docker-compose.prod.yml
       run --no-deps --rm caddy sh /etc/ci.sh
@@ -116,7 +116,7 @@ release-image:
     - docker tag "${IMAGE_FULL_NAME}:latest" "${PROJECT_NAME}:latest" || true
   script:
     # Building the image itself:
-    - docker-compose
+    - docker compose
       -f docker-compose.yml
       -f docker/docker-compose.prod.yml
       build --progress=plain web
