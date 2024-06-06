@@ -8,7 +8,7 @@
 
 services:
   caddy:
-    image: "caddy:2.8.0"
+    image: "caddy:2.8.4-alpine"
     restart: unless-stopped
     env_file: ./config/.env
     volumes:
