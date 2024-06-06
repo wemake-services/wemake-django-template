@@ -247,3 +247,6 @@ artifacts/
 
 # ruff:
 .ruff_cache/
+
+# import-linter:
+.import_linter_cache/
