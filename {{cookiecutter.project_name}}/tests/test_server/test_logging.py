@@ -3,8 +3,8 @@ import logging
 import pytest
 
 
-@pytest.fixture
-def logger() -> logging.Logger:
+@pytest.fixture(name='logger')
+def _logger() -> logging.Logger:
     """Returns the current logger instance."""
     return logging.getLogger(__name__)
 
@@ -16,6 +16,6 @@ def test_logging_format(
     """This test ensures logging is done correctly."""
     message = 'Test message'
 
-    logger.error(msg)
+    logger.error(message)
 
-    assert caplog.record_tuples == []
+    assert caplog.record_tuples == [()]
