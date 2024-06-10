@@ -22,7 +22,7 @@ include:
 # Building template project:
 mirror-github-build:
   stage: build
-  image: python:3.11.5
+  image: python:3.11.9
   variables:
     POETRY_VERSION: '1.8.3'
   before_script:
