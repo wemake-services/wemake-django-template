@@ -18,4 +18,4 @@ def test_logging_format(
 
     logger.error(message)
 
-    assert caplog.record_tuples == [('a', 1, 'b')]
+    assert caplog.text == 'abc'
