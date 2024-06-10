@@ -4,7 +4,7 @@ import pytest
 
 
 @pytest.fixture(name='logger')
-def _logger() -> logging.Logger:
+def logger_fixture() -> logging.Logger:
     """Returns the current logger instance."""
     return logging.getLogger(__name__)
 
