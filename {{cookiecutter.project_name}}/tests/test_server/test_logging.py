@@ -6,7 +6,7 @@ import pytest
 @pytest.fixture(name='logger')
 def logger_fixture() -> logging.Logger:
     """Returns the current logger instance."""
-    return logging.getLogger(__name__)
+    return logging.getLogger('django')
 
 
 def test_logging_format(
