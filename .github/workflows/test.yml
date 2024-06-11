@@ -70,8 +70,9 @@ jobs:
 
     - name: Install dependencies
       run: |
-        poetry install
+        poetry config virtualenvs.in-project true
         poetry run pip install -U pip
+        poetry install
 
     - name: Run internal project checks
       run: |
