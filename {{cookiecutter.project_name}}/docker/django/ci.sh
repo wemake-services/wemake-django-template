@@ -58,6 +58,7 @@ run_ci () {
 
   # Check that all migrations worked fine:
   python manage.py makemigrations --dry-run --check
+  python manage.py makemigrations --dry-run --lint --warnings-as-errors
 
   # Check that all migrations are backwards compatible:
   python manage.py lintmigrations
