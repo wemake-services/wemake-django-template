@@ -66,7 +66,7 @@ MIDDLEWARE: tuple[str, ...] = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
     # Axes:
-    'axes.middleware.AxesMiddleware',
+    'axes.backends.AxesStandaloneBackend',
 
     # Django HTTP Referrer Policy:
     'django_http_referrer_policy.middleware.ReferrerPolicyMiddleware',
