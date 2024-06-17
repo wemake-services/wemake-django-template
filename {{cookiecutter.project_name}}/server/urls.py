@@ -34,11 +34,11 @@ urlpatterns = [
 
     # Text and xml static files:
     path('robots.txt', TemplateView.as_view(
-        template_name='txt/robots.txt',
+        template_name='common/txt/robots.txt',
         content_type='text/plain',
     )),
     path('humans.txt', TemplateView.as_view(
-        template_name='txt/humans.txt',
+        template_name='common/txt/humans.txt',
         content_type='text/plain',
     )),
 
