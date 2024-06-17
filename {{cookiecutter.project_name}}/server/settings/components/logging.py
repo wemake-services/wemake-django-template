@@ -5,7 +5,8 @@
 # 'Do not log' by Nikita Sobolev (@sobolevn)
 # https://sobolevn.me/2020/03/do-not-log
 
-from typing import TYPE_CHECKING, Callable, final
+from collections.abc import Callable
+from typing import TYPE_CHECKING, final
 
 import structlog
 
