@@ -138,7 +138,7 @@ TEMPLATES = [{
     'BACKEND': 'django.template.backends.django.DjangoTemplates',
     'DIRS': [
         # Contains plain text templates, like `robots.txt`:
-        BASE_DIR.joinpath('server', 'templates'),
+        BASE_DIR.joinpath('server', 'common', 'django', 'templates'),
     ],
     'OPTIONS': {
         'context_processors': [

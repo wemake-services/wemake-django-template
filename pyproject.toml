@@ -35,7 +35,7 @@ tomli = "^2.0"
 
 
 [build-system]
-requires = ["poetry-core>=1.6"]
+requires = ["poetry-core>=1.9"]
 build-backend = "poetry.core.masonry.api"
 
 
