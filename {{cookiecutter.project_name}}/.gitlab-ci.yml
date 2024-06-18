@@ -15,6 +15,7 @@ variables:
   # https://github.com/wemake-services/wemake-dind/
   image: wemakeservices/wemake-dind:latest
   interruptible: true
+  timeout: 20m
   services:
     - docker:dind
   variables:
