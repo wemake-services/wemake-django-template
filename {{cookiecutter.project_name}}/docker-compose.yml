@@ -45,14 +45,7 @@ services:
 
     command: python -Wd manage.py runserver 0.0.0.0:8000
     healthcheck:
-      # We use `$$` here because:
-      # one `$` goes to shell,
-      # one `$` goes to `docker-compose.yml` escaping
-      test: |
-        /usr/bin/test $$(
-          /usr/bin/curl --fail http://localhost:8000/health/?format=json
-          --write-out "%{http_code}" --silent --output /dev/null
-        ) -eq 200
+      test: /bin/sh /code/docker/django/healthcheck.sh
       interval: 10s
       timeout: 5s
       retries: 5
