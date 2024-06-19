@@ -55,7 +55,7 @@ To install dependencies for production use, you will need to run:
 
 .. code:: bash
 
-  poetry install --no-dev
+  poetry install --only=main
 
 And to activate ``virtualenv`` created by ``poetry`` run:
 
@@ -69,7 +69,7 @@ Adding new dependencies
 To add a new dependency you can run:
 
 - ``poetry add django`` to install ``django`` as a production dependency
-- ``poetry add --dev pytest`` to install ``pytest``
+- ``poetry add -G dev pytest`` to install ``pytest``
   as a development dependency
 
 This command might be used with ``docker``.
