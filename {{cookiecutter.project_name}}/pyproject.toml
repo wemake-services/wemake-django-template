@@ -67,7 +67,7 @@ optional = true
 
 [tool.poetry.group.docs.dependencies]
 sphinx = "^7.3"
-sphinx-autodoc-typehints = "^2.1"
+sphinx-autodoc-typehints = "^2.2"
 tomli = "^2.0"
 
 
