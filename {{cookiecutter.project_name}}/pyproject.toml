@@ -30,7 +30,7 @@ structlog = "^24.2"
 [tool.poetry.group.dev.dependencies]
 django-debug-toolbar = "^4.4"
 django-migration-linter = "^5.1"
-django-extra-checks = "^0.14"
+django-extra-checks = "^0.15"
 nplusone = "^1.0"
 
 wemake-python-styleguide = "^0.18"
