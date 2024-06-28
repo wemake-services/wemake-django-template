@@ -750,13 +750,13 @@ i18n = ["Babel (>=2.7)"]
 
 [[package]]
 name = "jinja2-git"
-version = "1.3.0"
+version = "1.4.0"
 description = "Jinja2 extension to handle git-specific things"
 optional = false
-python-versions = ">=3.7,<4.0"
+python-versions = "<4.0,>=3.9"
 files = [
-    {file = "jinja2-git-1.3.0.tar.gz", hash = "sha256:20b15497548cf86eefb116b11141e30ed2a690e0ea5d71f0e5cd17ccdf77491a"},
-    {file = "jinja2_git-1.3.0-py3-none-any.whl", hash = "sha256:b12d160e898b0afd6a9903c3d67c5c8fb7383674b34d79f3604681e95bd4f536"},
+    {file = "jinja2_git-1.4.0-py3-none-any.whl", hash = "sha256:149163fabe1dbf98cdb0adb0fea0f33d98bc4323432ab346082966479422e8b5"},
+    {file = "jinja2_git-1.4.0.tar.gz", hash = "sha256:7f0fbe896fc5116276b8a47dfc8bc52fd5e9f5ee54deee71dcb7986b03cf7973"},
 ]
 
 [package.dependencies]
@@ -1685,4 +1685,4 @@ dev = ["black (>=19.3b0)", "pytest (>=4.6.2)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "4f91d00ed2d33c6d049cd46c77870f9e2728898460fa1f7c9419a22485b1c397"
+content-hash = "67393c9eac0a1092a06a02126e12a7121c7c97627b96919aea20e1b30462f088"
