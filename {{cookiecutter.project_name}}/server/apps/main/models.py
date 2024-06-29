@@ -24,7 +24,7 @@ class BlogPost(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    class Meta(object):
+    class Meta:
         verbose_name = 'BlogPost'  # You can probably use `gettext` for this
         verbose_name_plural = 'BlogPosts'
 
