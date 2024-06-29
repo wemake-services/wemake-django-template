@@ -5,6 +5,8 @@
 # 'Do not log' by Nikita Sobolev (@sobolevn)
 # https://sobolevn.me/2020/03/do-not-log
 
+from __future__ import annotations
+
 from collections.abc import Callable
 from typing import TYPE_CHECKING, final
 
@@ -70,17 +72,17 @@ LOGGING = {
 
 
 @final
-class LoggingContextVarsMiddleware(object):
+class LoggingContextVarsMiddleware:
     """Used to reset ContextVars in structlog on each request."""
 
     def __init__(
         self,
-        get_response: 'Callable[[HttpRequest], HttpResponse]',
+        get_response: Callable[[HttpRequest], HttpResponse],
     ) -> None:
         """Django's API-compatible constructor."""
         self.get_response = get_response
 
-    def __call__(self, request: 'HttpRequest') -> 'HttpResponse':
+    def __call__(self, request: HttpRequest) -> HttpResponse:
         """
         Handle requests.
 
