@@ -16,6 +16,7 @@
 
 import os
 import sys
+from typing import cast
 
 import django
 import tomli
@@ -30,9 +31,9 @@ django.setup()
 
 # -- Project information -----------------------------------------------------
 
-def _get_project_meta() -> dict[str, str]:  # lying abour return type
+def _get_project_meta() -> dict[str, str]:  # lying about return type
     with open('../pyproject.toml', mode='rb') as pyproject:
-        return tomli.load(pyproject)['tool']['poetry']
+        return cast(dict[str, str], tomli.load(pyproject)['tool']['poetry'])
 
 
 pkg_meta = _get_project_meta()
