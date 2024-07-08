@@ -754,13 +754,13 @@ tests = ["jinja2 (>=2.9.6)", "pytest", "pytest-cov", "pytest-django", "pytest-ru
 
 [[package]]
 name = "django-debug-toolbar"
-version = "4.4.3"
+version = "4.4.5"
 description = "A configurable set of panels that display various debug information about the current request/response."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "django_debug_toolbar-4.4.3-py3-none-any.whl", hash = "sha256:c01296649dcaa05522d58bbb29461b5def06b687bf2af767069b5f805ac57d43"},
-    {file = "django_debug_toolbar-4.4.3.tar.gz", hash = "sha256:1418397daa1bd41d0c282e6cb20756eec008cb8e1330cf776de45e58b1e5b44c"},
+    {file = "django_debug_toolbar-4.4.5-py3-none-any.whl", hash = "sha256:91425606673ee674d780f7aeedf3595c264eb382dcf41f55c6779577900904c0"},
+    {file = "django_debug_toolbar-4.4.5.tar.gz", hash = "sha256:8298ce966b4c8fc71430082dd4739ef2badb5f867734e1973a413c4ab2ea81b7"},
 ]
 
 [package.dependencies]
