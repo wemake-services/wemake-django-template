@@ -3,6 +3,7 @@ name = "{{ cookiecutter.project_name }}"
 description = "{{ cookiecutter.project_verbose_name }}"
 version = "0.1.0"
 readme = "README.md"
+package-mode = false
 authors = []
 classifiers = [
   "Private :: Do not Upload",
@@ -69,6 +70,7 @@ optional = true
 sphinx = "^7.3"
 sphinx-autodoc-typehints = "^2.2"
 tomli = "^2.0"
+myst-parser = "^3.0"
 
 
 [build-system]
@@ -77,7 +79,7 @@ build-backend = "poetry.core.masonry.api"
 
 
 [tool.djlint]
-ignore = "H006,H030,H031"
+ignore = "T003,H006,H030,H031"
 include = "H017,H035"
 indent = 2
 blank_line_after_tag = "load,extends"

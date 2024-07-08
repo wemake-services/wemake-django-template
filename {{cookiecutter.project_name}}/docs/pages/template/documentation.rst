@@ -23,7 +23,7 @@ To install them use:
 
 .. code:: bash
 
-  poetry install -E docs
+  poetry install --with=docs
 
 
 Structure
