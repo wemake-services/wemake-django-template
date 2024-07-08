@@ -2,7 +2,7 @@
 #
 
 # You can set these variables from the command line.
-SPHINXOPTS=
+SPHINXOPTS=-W
 SPHINXBUILD=python -msphinx
 SPHINXPROJ={{cookiecutter.project_name}}
 SOURCEDIR=.

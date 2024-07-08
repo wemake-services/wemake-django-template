@@ -250,3 +250,6 @@ artifacts/
 
 # import-linter:
 .import_linter_cache/
+
+# safety:
+.safety/

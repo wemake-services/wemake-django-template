@@ -10,6 +10,7 @@ if "%SPHINXBUILD%" == "" (
 set SOURCEDIR=.
 set BUILDDIR=_build
 set SPHINXPROJ=wemake-django-template
+set SPHINXOPTS=-W
 
 if "%1" == "" goto help
 
