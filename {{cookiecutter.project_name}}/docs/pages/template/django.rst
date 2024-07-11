@@ -80,7 +80,7 @@ All sensible settings are stored in ``config/.env`` file,
 which is not tracked by the version control.
 
 So, how do we store secrets? We store them as secret environment variables
-in `GitLab CI <https://docs.gitlab.com/ce/ci/variables/README.html#secret-variables>`_.
+in `GitLab CI <https://docs.gitlab.com/ee/ci/variables/#cicd-variable-security>`_.
 Then we use `dump-env <https://github.com/sobolevn/dump-env>`_
 to dump variables from both environment and ``.env`` file template.
 Then, this file is copied inside ``docker`` image and when

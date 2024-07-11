@@ -152,7 +152,7 @@ because it is quite long to start all the machinery for this single check.
 Disabling HTTPS
 ~~~~~~~~~~~~~~~
 
-You would need to `disable <https://caddyserver.com/docs/tls>`_
+You would need to `disable <https://caddyserver.com/docs/caddyfile/directives/tls#tls>`_
 ``https`` inside ``Caddy`` and in production settings for Django.
 Because Django itself also redirects to ``https``.
 See `docs <https://docs.djangoproject.com/en/4.2/ref/settings/#secure-ssl-redirect>`_.
