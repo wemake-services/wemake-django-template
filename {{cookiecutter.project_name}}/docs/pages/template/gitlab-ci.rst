@@ -52,5 +52,5 @@ See `gitlab pages info <https://docs.gitlab.com/ee/user/project/pages/>`_.
 Further reading
 ---------------
 
-- `Container Registry <https://gitlab.com/help/user/project/container_registry>`_
-- `Gitlab CI/CD <https://about.gitlab.com/features/gitlab-ci-cd/>`_
+- `Container Registry <https://docs.gitlab.com/ee/user/packages/container_registry/>`_
+- `Gitlab CI/CD <https://about.gitlab.com/solutions/continuous-integration/>`_

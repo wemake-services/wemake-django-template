@@ -48,7 +48,7 @@ And now you are ready to pull your images:
 
    docker pull your-image:latest
 
-See `official Gitlab docs <https://docs.gitlab.com/ee/user/project/container_registry.html>`_.
+See `official Gitlab docs <https://docs.gitlab.com/ee/user/packages/container_registry/>`_.
 
 
 Updating already running service

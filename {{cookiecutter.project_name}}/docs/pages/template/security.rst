@@ -85,7 +85,7 @@ We store secrets separately from code. So, it is harder for them to leak.
 However, we encourage to use tools like
 `truffleHog <https://github.com/dxa4481/truffleHog>`_ or `detect-secrets <https://github.com/Yelp/detect-secrets>`_ inside your workflow.
 
-You can also turn on `Gitlab secrets checker <https://docs.gitlab.com/ee/push_rules/push_rules.html#prevent-pushing-secrets-to-the-repository>`_ which we highly recommend.
+You can also turn on `Gitlab secrets checker <https://docs.gitlab.com/ee/user/project/repository/push_rules.html#prevent-pushing-secrets-to-the-repository>`_ which we highly recommend.
 
 
 Audits
@@ -109,6 +109,6 @@ it **won't be 100% safe**. Do not fall into this false feeling of security.
 Further reading
 ---------------
 
-- `Open Web Application Security Project <https://www.owasp.org/images/3/33/OWASP_Application_Security_Verification_Standard_3.0.1.pdf>`_
+- `Open Web Application Security Project <https://github.com/OWASP/ASVS>`_
 - `Docker security <https://docs.docker.com/engine/security/security/>`_
 - `AppArmor <https://docs.docker.com/engine/security/apparmor/>`_ and `bane <https://github.com/genuinetools/bane>`_
