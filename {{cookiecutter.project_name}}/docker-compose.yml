@@ -43,7 +43,7 @@ services:
       environment:
         DJANGO_DATABASE_HOST: db
 
-    command: python -Wd manage.py runserver 0.0.0.0:8000
+    command: python -We -bb manage.py runserver 0.0.0.0:8000
     healthcheck:
       test: /bin/sh /code/docker/django/healthcheck.sh
       interval: 10s
