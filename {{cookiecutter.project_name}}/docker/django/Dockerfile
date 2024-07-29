@@ -57,7 +57,7 @@ RUN apt-get update && apt-get upgrade -y \
   && chmod +x /usr/local/bin/tini && tini --version \
   # Installing `poetry` package manager:
   # https://github.com/python-poetry/poetry
-  && curl -sSL 'https://install.python-poetry.org' | python - || cat /poetry-installer-error-8liq7gm_.log \
+  && curl -sSL 'https://install.python-poetry.org' | python - || cat /*.log \
   && poetry --version \
   # Cleaning cache:
   && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
