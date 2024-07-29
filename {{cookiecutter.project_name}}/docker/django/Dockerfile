@@ -35,6 +35,9 @@ ENV DJANGO_ENV=${DJANGO_ENV} \
 
 SHELL ["/bin/bash", "-eo", "pipefail", "-c"]
 
+# Copy constrains for pip:
+COPY docker/django/pip_constraint.txt /var/cache/pip_constraint.txt
+
 # System deps (we don't use exact versions because it is hard to update them,
 # pin when needed):
 # hadolint ignore=DL3008
@@ -71,9 +74,6 @@ RUN groupadd -g "${GID}" -r web \
   # Static and media files:
   && mkdir -p '/var/www/django/static' '/var/www/django/media' \
   && chown web:web '/var/www/django/static' '/var/www/django/media'
-
-# Copy constrains for pip:
-COPY docker/django/pip_constraint.txt /var/cache/pip_constraint.txt
 
 # Copy only requirements, to cache them in docker layer:
 COPY --chown=web:web ./poetry.lock ./pyproject.toml /code/
