@@ -2,6 +2,7 @@ import textwrap
 from typing import Final, final
 
 from django.db import models
+from typing_extensions import override
 
 #: That's how constants should be defined.
 _POST_TITLE_MAX_LENGTH: Final = 80
@@ -28,6 +29,7 @@ class BlogPost(models.Model):
         verbose_name = 'BlogPost'  # You can probably use `gettext` for this
         verbose_name_plural = 'BlogPosts'
 
+    @override
     def __str__(self) -> str:
         """All django models should have this method."""
         return textwrap.wrap(self.title, _POST_TITLE_MAX_LENGTH // 4)[0]

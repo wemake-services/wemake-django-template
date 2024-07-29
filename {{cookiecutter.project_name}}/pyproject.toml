@@ -28,6 +28,10 @@ python-decouple = "^3.8"
 structlog = "^24.4"
 wheel = "^0.43"
 
+# TODO: remove after
+# https://github.com/python-poetry/poetry/issues/9585
+setuptools = "<70"
+
 
 [tool.poetry.group.dev.dependencies]
 django-debug-toolbar = "^4.4"
@@ -52,7 +56,7 @@ pytest-timeout = "^2.3"
 django-test-migrations = "^1.3"
 hypothesis = "^6.108"
 
-django-stubs = { version = "^4.2.7", extras = ["compatible-mypy"] }
+django-stubs = { version = "^5.0.4", extras = ["compatible-mypy"] }
 
 djlint = "^1.34"
 yamllint = "^1.35"
