@@ -80,7 +80,9 @@ RUN --mount=type=cache,target="$POETRY_CACHE_DIR" \
   echo "$DJANGO_ENV" \
   && poetry version \
   # Install deps:
-  && poetry run pip install -U pip \
+  # TODO: remove `pip` bound after:
+  # https://github.com/python-poetry/poetry/issues/9585
+  && poetry run pip install -U 'pip<24.2' \
   && poetry install \
     $(if [ "$DJANGO_ENV" = 'production' ]; then echo '--only main'; fi) \
     --no-interaction --no-ansi --sync
