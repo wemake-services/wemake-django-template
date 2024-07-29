@@ -37,6 +37,9 @@ ENV PIP_CONSTRAINT='/var/cache/constraints.txt'
 
 SHELL ["/bin/bash", "-eo", "pipefail", "-c"]
 
+# TODO: remove
+RUN echo 'setuptools<70' > "$PIP_CONSTRAINT"
+
 # System deps (we don't use exact versions because it is hard to update them,
 # pin when needed):
 # hadolint ignore=DL3008
@@ -82,8 +85,8 @@ COPY --chown=web:web ./poetry.lock ./pyproject.toml /code/
 RUN --mount=type=cache,target="$POETRY_CACHE_DIR" \
   echo "$DJANGO_ENV" \
   && poetry version \
-  # TODO: remove
-  && echo 'setuptools<72' > "$PIP_CONSTRAINT" \
+  # Install deps:
+  && poetry run pip install -U pip \
   && poetry install \
     $(if [ "$DJANGO_ENV" = 'production' ]; then echo '--only main'; fi) \
     --no-interaction --no-ansi --sync
