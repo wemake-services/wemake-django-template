@@ -30,7 +30,7 @@ wheel = "^0.43"
 
 # TODO: remove after
 # https://github.com/python-poetry/poetry/issues/9585
-setuptools = "65.5.1"
+setuptools = "70.0.0"
 
 
 [tool.poetry.group.dev.dependencies]
