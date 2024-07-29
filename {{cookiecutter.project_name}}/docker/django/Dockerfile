@@ -24,7 +24,7 @@ ENV DJANGO_ENV=${DJANGO_ENV} \
   PIP_DISABLE_PIP_VERSION_CHECK=1 \
   PIP_DEFAULT_TIMEOUT=100 \
   PIP_ROOT_USER_ACTION=ignore \
-  PIP_CONSTRAINT_PATH='/var/cache/pip_constraint.txt' \
+  PIP_CONSTRAINT='/var/cache/pip_constraint.txt' \
   # tini:
   TINI_VERSION=v0.19.0 \
   # poetry:
@@ -57,7 +57,7 @@ RUN apt-get update && apt-get upgrade -y \
   && chmod +x /usr/local/bin/tini && tini --version \
   # Installing `poetry` package manager:
   # https://github.com/python-poetry/poetry
-  && curl -sSL 'https://install.python-poetry.org' | python - \
+  && curl -sSL 'https://install.python-poetry.org' | python - || cat /poetry-installer-error-8liq7gm_.log \
   && poetry --version \
   # Cleaning cache:
   && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
@@ -83,7 +83,7 @@ COPY --chown=web:web ./poetry.lock ./pyproject.toml /code/
 RUN --mount=type=cache,target="$POETRY_CACHE_DIR" \
   echo "$DJANGO_ENV" \
   && pip freeze \
-  && pip install --constraint="$PIP_CONSTRAINT_PATH" pip setuptools \
+  && pip install --constraint="$PIP_CONSTRAINT" pip setuptools \
   && pip freeze \
   && poetry --version \
   && poetry install \
