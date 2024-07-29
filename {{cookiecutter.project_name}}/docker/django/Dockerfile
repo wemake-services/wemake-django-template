@@ -32,6 +32,9 @@ ENV DJANGO_ENV=${DJANGO_ENV} \
   POETRY_CACHE_DIR='/var/cache/pypoetry' \
   POETRY_HOME='/usr/local'
 
+# TODO: remove
+ENV PIP_CONSTRAINT='/var/cache/constraints.txt'
+
 SHELL ["/bin/bash", "-eo", "pipefail", "-c"]
 
 # System deps (we don't use exact versions because it is hard to update them,
@@ -79,6 +82,8 @@ COPY --chown=web:web ./poetry.lock ./pyproject.toml /code/
 RUN --mount=type=cache,target="$POETRY_CACHE_DIR" \
   echo "$DJANGO_ENV" \
   && poetry version \
+  # TODO: remove
+  && echo 'setuptools<72' > "$PIP_CONSTRAINT" \
   && poetry install \
     $(if [ "$DJANGO_ENV" = 'production' ]; then echo '--only main'; fi) \
     --no-interaction --no-ansi --sync
