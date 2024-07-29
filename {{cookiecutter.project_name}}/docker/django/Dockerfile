@@ -24,7 +24,7 @@ ENV DJANGO_ENV=${DJANGO_ENV} \
   PIP_DISABLE_PIP_VERSION_CHECK=1 \
   PIP_DEFAULT_TIMEOUT=100 \
   PIP_ROOT_USER_ACTION=ignore \
-  PIP_CONSTRAINT='/var/cache/pip_constraint.txt' \
+  PIP_CONSTRAINT_PATH='/var/cache/pip_constraint.txt' \
   # tini:
   TINI_VERSION=v0.19.0 \
   # poetry:
@@ -83,7 +83,7 @@ COPY --chown=web:web ./poetry.lock ./pyproject.toml /code/
 RUN --mount=type=cache,target="$POETRY_CACHE_DIR" \
   echo "$DJANGO_ENV" \
   && pip freeze \
-  && pip install --constraint="$PIP_CONSTRAINT" pip setuptools \
+  && pip install --constraint="$PIP_CONSTRAINT_PATH" pip setuptools \
   && pip freeze \
   && poetry --version \
   && poetry install \
