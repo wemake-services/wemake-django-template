@@ -24,6 +24,7 @@ ENV DJANGO_ENV=${DJANGO_ENV} \
   PIP_DISABLE_PIP_VERSION_CHECK=1 \
   PIP_DEFAULT_TIMEOUT=100 \
   PIP_ROOT_USER_ACTION=ignore \
+  PIP_CONSTRAINT='/var/cache/pip_constraint.txt' \
   # tini:
   TINI_VERSION=v0.19.0 \
   # poetry:
@@ -33,6 +34,9 @@ ENV DJANGO_ENV=${DJANGO_ENV} \
   POETRY_HOME='/usr/local'
 
 SHELL ["/bin/bash", "-eo", "pipefail", "-c"]
+
+# Copy constrains for pip:
+COPY docker/django/pip_constraint.txt /var/cache/pip_constraint.txt
 
 # System deps (we don't use exact versions because it is hard to update them,
 # pin when needed):
@@ -71,16 +75,15 @@ RUN groupadd -g "${GID}" -r web \
   && mkdir -p '/var/www/django/static' '/var/www/django/media' \
   && chown web:web '/var/www/django/static' '/var/www/django/media'
 
-# Copy only requirements, to cache them in docker layer
+# Copy only requirements, to cache them in docker layer:
 COPY --chown=web:web ./poetry.lock ./pyproject.toml /code/
 
 # Project initialization:
 # hadolint ignore=SC2046
 RUN --mount=type=cache,target="$POETRY_CACHE_DIR" \
   echo "$DJANGO_ENV" \
-  && poetry version \
-  # Install deps:
-  && poetry run pip install -U pip \
+  && poetry run pip install --constraint="$PIP_CONSTRAINT" pip \
+  && poetry --version && poetry run pip --version \
   && poetry install \
     $(if [ "$DJANGO_ENV" = 'production' ]; then echo '--only main'; fi) \
     --no-interaction --no-ansi --sync
