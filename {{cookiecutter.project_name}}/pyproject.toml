@@ -28,10 +28,6 @@ python-decouple = "^3.8"
 structlog = "^24.4"
 wheel = "^0.43"
 
-# TODO: remove after
-# https://github.com/python-poetry/poetry/issues/9585
-setuptools = "70.0.0"
-
 
 [tool.poetry.group.dev.dependencies]
 django-debug-toolbar = "^4.4"

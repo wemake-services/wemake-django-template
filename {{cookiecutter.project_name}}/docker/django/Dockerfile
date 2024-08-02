@@ -60,7 +60,7 @@ RUN apt-get update && apt-get upgrade -y \
   && chmod +x /usr/local/bin/tini && tini --version \
   # Installing `poetry` package manager:
   # https://github.com/python-poetry/poetry
-  && curl -sSL 'https://install.python-poetry.org' | python - || cat /*.log \
+  && curl -sSL 'https://install.python-poetry.org' | python - \
   && poetry --version \
   # Cleaning cache:
   && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
@@ -82,10 +82,8 @@ COPY --chown=web:web ./poetry.lock ./pyproject.toml /code/
 # hadolint ignore=SC2046
 RUN --mount=type=cache,target="$POETRY_CACHE_DIR" \
   echo "$DJANGO_ENV" \
-  && pip freeze \
-  && pip install --constraint="$PIP_CONSTRAINT" pip setuptools \
-  && pip freeze \
-  && poetry --version \
+  && pip install --constraint="$PIP_CONSTRAINT" pip \
+  && pip --version && poetry --version \
   && poetry install \
     $(if [ "$DJANGO_ENV" = 'production' ]; then echo '--only main'; fi) \
     --no-interaction --no-ansi --sync
