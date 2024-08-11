@@ -68,15 +68,24 @@ docker/docker-compose.prod.yml
 # JetBrains
 .idea/
 
-# import-linter
-.import_linter_cache/
+# mypy:
+.mypy_cache/
 
 # pytest and hypothesis
 .pytest_cache/
 .hypothesis/
 
-# mypy
-.mypy_cache/
+# ipython:
+.ipython/
+
+# ruff:
+.ruff_cache/
+
+# import-linter:
+.import_linter_cache/
+
+# safety:
+.safety/
 
 # kira-release script
 release.config.js
