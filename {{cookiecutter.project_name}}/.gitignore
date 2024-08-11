@@ -239,8 +239,9 @@ artifacts/
 # mypy:
 .mypy_cache/
 
-# pytest:
+# pytest and hypothesis
 .pytest_cache/
+.hypothesis/
 
 # ipython:
 .ipython/
