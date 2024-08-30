@@ -923,27 +923,27 @@ typing_extensions = ">=4.0"
 
 [[package]]
 name = "djlint"
-version = "1.34.2"
+version = "1.35.2"
 description = "HTML Template Linter and Formatter"
 optional = false
-python-versions = "<4.0.0,>=3.8.0"
+python-versions = "<4.0,>=3.8"
 files = [
-    {file = "djlint-1.34.2-py3-none-any.whl", hash = "sha256:4825389e395eb77371857c77f547fa5ebd1a644b1bc4fe9fed19d49a2786b9e5"},
-    {file = "djlint-1.34.2.tar.gz", hash = "sha256:db9b2e59203a452b83532499bc243c749279090b905cc1f657973f78e7a31ddd"},
+    {file = "djlint-1.35.2-py3-none-any.whl", hash = "sha256:4ba995bad378f2afa77c8ea56ba1c14429d9ff26a18e8ae23bc71eedb9152243"},
+    {file = "djlint-1.35.2.tar.gz", hash = "sha256:318de9d4b9b0061a111f8f5164ecbacd8215f449dd4bd5a76d2a691c815ee103"},
 ]
 
 [package.dependencies]
-click = ">=8.0.1,<9.0.0"
-colorama = ">=0.4.4,<0.5.0"
-cssbeautifier = ">=1.14.4,<2.0.0"
-html-tag-names = ">=0.1.2,<0.2.0"
-html-void-elements = ">=0.1.0,<0.2.0"
-jsbeautifier = ">=1.14.4,<2.0.0"
-json5 = ">=0.9.11,<0.10.0"
-pathspec = ">=0.12.0,<0.13.0"
-PyYAML = ">=6.0,<7.0"
-regex = ">=2023.0.0,<2024.0.0"
-tqdm = ">=4.62.2,<5.0.0"
+click = ">=8.0.1"
+colorama = ">=0.4.4"
+cssbeautifier = ">=1.14.4"
+html-tag-names = ">=0.1.2"
+html-void-elements = ">=0.1.0"
+jsbeautifier = ">=1.14.4"
+json5 = ">=0.9.11"
+pathspec = ">=0.12.0"
+PyYAML = ">=6.0"
+regex = ">=2023"
+tqdm = ">=4.62.2"
 
 [[package]]
 name = "doc8"
@@ -3505,4 +3505,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "sphinx"]
 [metadata]
 lock-version = "2.0"
 python-versions = "3.11.9"
-content-hash = "61ef259a44409c93eb1b20ce658dcf789bf1121a1d77089fe5c8a855c5ac1efc"
+content-hash = "c0a4d1a459a0b64cc385c19b31ea3b9af7d5d423fba6524172ed4a1f099c7f60"
