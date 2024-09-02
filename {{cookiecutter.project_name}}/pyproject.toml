@@ -61,7 +61,7 @@ dotenv-linter = "^0.5"
 polint = "^0.4"
 dennis = "^1.1"
 dump-env = "^1.5"
-ipython = "^8.25"
+ipython = "^8.27"
 
 [tool.poetry.group.docs]
 optional = true
