@@ -764,13 +764,13 @@ sqlparse = ">=0.2"
 
 [[package]]
 name = "django-extra-checks"
-version = "0.15.0"
+version = "0.15.1"
 description = "Collection of useful checks for Django Checks Framework"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "django_extra_checks-0.15.0-py3-none-any.whl", hash = "sha256:e76a33d81375a1772cbe2e8638e40ce01fe0ff626c71448e1684a7c2ff1e77ae"},
-    {file = "django_extra_checks-0.15.0.tar.gz", hash = "sha256:e6585da13dd21da590e2d7169938f266145999ee1f8efa95ff372dacd1bb1237"},
+    {file = "django_extra_checks-0.15.1-py3-none-any.whl", hash = "sha256:3e724a76285331ca42cf340f94cea82cef99ebfe435ec27831b5edddcc9d5bcb"},
+    {file = "django_extra_checks-0.15.1.tar.gz", hash = "sha256:9a9ceba3d2c405cbf01fef718c46fbbdba46d3b402767869a05fe57684fc716d"},
 ]
 
 [package.extras]
