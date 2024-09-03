@@ -43,7 +43,7 @@ nitpick = "^0.35"
 doc8 = "^1.1"
 
 pytest = "^8.3.2"
-pytest-django = "^4.8"
+pytest-django = "^4.9"
 pytest-cov = "^5.0"
 covdefaults = "^2.3"
 django-coverage-plugin = "^3.1"
