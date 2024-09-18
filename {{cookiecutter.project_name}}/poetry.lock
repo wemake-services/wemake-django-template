@@ -3046,13 +3046,13 @@ test = ["cython (>=3.0)", "defusedxml (>=0.7.1)", "pytest (>=8.0)", "setuptools 
 
 [[package]]
 name = "sphinx-autodoc-typehints"
-version = "2.4.1"
+version = "2.4.3"
 description = "Type hints (PEP 484) support for the Sphinx autodoc extension"
 optional = false
 python-versions = ">=3.10"
 files = [
-    {file = "sphinx_autodoc_typehints-2.4.1-py3-none-any.whl", hash = "sha256:af37abb816ebd2cf56c7a8174fd2f34d0f2f84fbf58265f89429ae107212fe6f"},
-    {file = "sphinx_autodoc_typehints-2.4.1.tar.gz", hash = "sha256:cfe410920cecf08ade046bb387b0007edb83e992de59686c62d194c762f1e45c"},
+    {file = "sphinx_autodoc_typehints-2.4.3-py3-none-any.whl", hash = "sha256:1962db6c4957f1a7539183c514c00c04a41ba88e9cd715348f7671184c42a065"},
+    {file = "sphinx_autodoc_typehints-2.4.3.tar.gz", hash = "sha256:dbe1ff07e26762084e1fa8feafa052b569b64178eab15a8e7d67da3309707c26"},
 ]
 
 [package.dependencies]
