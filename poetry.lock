@@ -355,13 +355,13 @@ websockets = ["websocket-client (>=1.3.0)"]
 
 [[package]]
 name = "docker-image-size-limit"
-version = "1.1.0"
+version = "2.0.0"
 description = ""
 optional = false
-python-versions = ">=3.9,<4.0"
+python-versions = "<4.0,>=3.9"
 files = [
-    {file = "docker_image_size_limit-1.1.0-py3-none-any.whl", hash = "sha256:101425bc782422ec4d74578f7cc453563a5b7ed83e3f248f99c92b39fee09132"},
-    {file = "docker_image_size_limit-1.1.0.tar.gz", hash = "sha256:e6a5a37d4fa4487f09e8ec87f9626521c500dac73b1d4d43111ec9bac88ce065"},
+    {file = "docker_image_size_limit-2.0.0-py3-none-any.whl", hash = "sha256:52f16a1e628f97842fe0c6bf9f0c5a64a7a18e718c9a3adf41e659233667ec37"},
+    {file = "docker_image_size_limit-2.0.0.tar.gz", hash = "sha256:591703b475964fd12d9b7c04fb5b6d71a6306e45f3bc10fef8e92d62520a12f1"},
 ]
 
 [package.dependencies]
@@ -1685,4 +1685,4 @@ dev = ["black (>=19.3b0)", "pytest (>=4.6.2)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "43e85930435817ada730c406695860a3dbfb2676f32122a45a8787daf3dd98ca"
+content-hash = "5ddd59c10e72bd63e0b2fc7dd810e5a2b4c8a5d63a0834402394bd18fe317a28"
