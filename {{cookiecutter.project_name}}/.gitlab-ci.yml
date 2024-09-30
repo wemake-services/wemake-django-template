@@ -59,7 +59,7 @@ test:
     - docker compose run --user=root --rm web ./docker/django/ci.sh
 
     # Check the result image size:
-    - disl "${CI_PROJECT_NAME}:dev" 950MiB
+    - disl --max-layers=13 "${CI_PROJECT_NAME}:dev" 950MiB
 
     # Pushing back the result for future runs:
     - docker tag "${CI_PROJECT_NAME}:dev" "${IMAGE_FULL_NAME}:dev"
