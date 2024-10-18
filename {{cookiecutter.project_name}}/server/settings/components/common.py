@@ -94,6 +94,10 @@ DATABASES = {
     },
 }
 
+# Default primary key field type
+# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
@@ -197,8 +201,3 @@ PERMISSIONS_POLICY: dict[str, str | list[str]] = {}  # noqa: WPS234
 # https://docs.djangoproject.com/en/4.2/ref/settings/#std:setting-EMAIL_TIMEOUT
 
 EMAIL_TIMEOUT = 5
-
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
-DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
