@@ -67,9 +67,6 @@ MIDDLEWARE: tuple[str, ...] = (
 
     # Axes:
     'axes.middleware.AxesMiddleware',
-
-    # Django HTTP Referrer Policy:
-    'django_http_referrer_policy.middleware.ReferrerPolicyMiddleware',
 )
 
 ROOT_URLCONF = 'server.urls'
@@ -188,9 +185,9 @@ SECURE_BROWSER_XSS_FILTER = True
 
 X_FRAME_OPTIONS = 'DENY'
 
-# https://github.com/DmytroLitvinov/django-http-referrer-policy
+# https://docs.djangoproject.com/en/3.0/ref/middleware/#referrer-policy
 # https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
-REFERRER_POLICY = 'same-origin'
+SECURE_REFERRER_POLICY = 'same-origin'
 
 # https://github.com/adamchainz/django-permissions-policy#setting
 PERMISSIONS_POLICY: dict[str, str | list[str]] = {}  # noqa: WPS234
