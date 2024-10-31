@@ -950,13 +950,13 @@ typing_extensions = ">=4.0"
 
 [[package]]
 name = "djlint"
-version = "1.35.2"
+version = "1.35.3"
 description = "HTML Template Linter and Formatter"
 optional = false
-python-versions = "<4.0,>=3.8"
+python-versions = ">=3.9"
 files = [
-    {file = "djlint-1.35.2-py3-none-any.whl", hash = "sha256:4ba995bad378f2afa77c8ea56ba1c14429d9ff26a18e8ae23bc71eedb9152243"},
-    {file = "djlint-1.35.2.tar.gz", hash = "sha256:318de9d4b9b0061a111f8f5164ecbacd8215f449dd4bd5a76d2a691c815ee103"},
+    {file = "djlint-1.35.3-py3-none-any.whl", hash = "sha256:bf2f23798909f9c5a110925c369538383de0141f9a2be37ee0d26422d41b7543"},
+    {file = "djlint-1.35.3.tar.gz", hash = "sha256:780ea3e25662fca89033fa96ecf656099954d6f81dce039eac90f4bba3cbe850"},
 ]
 
 [package.dependencies]
@@ -964,11 +964,11 @@ click = ">=8.0.1"
 colorama = ">=0.4.4"
 cssbeautifier = ">=1.14.4"
 html-tag-names = ">=0.1.2"
-html-void-elements = ">=0.1.0"
+html-void-elements = ">=0.1"
 jsbeautifier = ">=1.14.4"
 json5 = ">=0.9.11"
-pathspec = ">=0.12.0"
-PyYAML = ">=6.0"
+pathspec = ">=0.12"
+pyyaml = ">=6"
 regex = ">=2023"
 tqdm = ">=4.62.2"
 
