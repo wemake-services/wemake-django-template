@@ -53,7 +53,7 @@ hypothesis = "^6.116"
 
 django-stubs = { version = "^5.1.1", extras = ["compatible-mypy"] }
 
-djlint = "^1.35"
+djlint = "^1.36"
 yamllint = "^1.35"
 safety = "^3.2"
 dotenv-linter = "^0.5"
