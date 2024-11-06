@@ -950,48 +950,45 @@ typing_extensions = ">=4.0"
 
 [[package]]
 name = "djlint"
-version = "1.35.4"
+version = "1.36.0"
 description = "HTML Template Linter and Formatter"
 optional = false
 python-versions = ">=3.9"
 files = [
-    {file = "djlint-1.35.4-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:14a278a340a46f8e1187afba8e0bccdd6ebee58ac129807448d35f6445671665"},
-    {file = "djlint-1.35.4-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:e741641de0a26025ef6ba04978aea9480a1d3ddd4d9060820cbc250a34a552bf"},
-    {file = "djlint-1.35.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:2effff20e821199439882843a56179e6b1c158c2c2a1b058e1e5d87643f84c77"},
-    {file = "djlint-1.35.4-cp310-cp310-win_amd64.whl", hash = "sha256:085fdc16d359abf270f1bfe7b22d4cc73c85ab070147cefb09b32d962cefddc3"},
-    {file = "djlint-1.35.4-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:66db077a033c03abe26ebdd7819229a86cee9edb7ce6c5eab03100c5dc178202"},
-    {file = "djlint-1.35.4-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:d62563deae046bc2e94747110bc785cce416088e9ee6db6c31702c01d0f5212f"},
-    {file = "djlint-1.35.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:9c4bfbaba4622a1439d30956da891315aefce7c56ffaefe1220cfeb1d99cf628"},
-    {file = "djlint-1.35.4-cp311-cp311-win_amd64.whl", hash = "sha256:677d95914d45b6fdeaf3f356dd857feef55be041804909e5a35042acc7c7c196"},
-    {file = "djlint-1.35.4-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:c5dddbf2d5cb2bbbf4ef53c6e7c0042e41ff3e7097eed3f1ce53a8e4c2cb7eec"},
-    {file = "djlint-1.35.4-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:65ebe3f4dcee2944d101e3ccadc71cab13a4c59cebd428bb5ba59609d365c232"},
-    {file = "djlint-1.35.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:b457e672fca03eefdfcf6e4c1dd4bfc2c324e8b0755e5def2d94c9273eb6edc7"},
-    {file = "djlint-1.35.4-cp312-cp312-win_amd64.whl", hash = "sha256:6982bebd9e2587bc503d6bd0fdea492fd70ebac79aad7cbecd0d67dfebe1de4e"},
-    {file = "djlint-1.35.4-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:7b12ad12048c4a44a61bd39e5f85147e9b8f1ca85b76c5066603747f660a2922"},
-    {file = "djlint-1.35.4-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:24aca63394d2f060d5f6367c34e3dca3ecb1c5c5a908ce24147243bccc8710c9"},
-    {file = "djlint-1.35.4-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:858e6bce13aedaf387a20d625e4795113b78ac1fb572bd4d03abb76f89822722"},
-    {file = "djlint-1.35.4-cp313-cp313-win_amd64.whl", hash = "sha256:491a41c23981164bbc7bc754ab0d39c99f5aa1887680a3fd00543f6dd50fc907"},
-    {file = "djlint-1.35.4-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:519546a873909ab7832cb1b07f9503fa8b6fee2a8178e4ee42ae62640eb19b93"},
-    {file = "djlint-1.35.4-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:c7864eceffed926eabc78f52a2aeda3895df8eb38b6ff17e4455debba64cd922"},
-    {file = "djlint-1.35.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:8adcfb56fcb20010f4c778b879846ec488689356a1f9e502326d980e582e78a9"},
-    {file = "djlint-1.35.4-cp39-cp39-win_amd64.whl", hash = "sha256:0c41a21de3de0e60cc02154d432d407577e83e21e2ac7ca45f195095beb57099"},
-    {file = "djlint-1.35.4-py3-none-any.whl", hash = "sha256:ed6088d416019e453c1451463ed44ffbf3f84c3bd8b1dfeadc456103fd1e5d14"},
-    {file = "djlint-1.35.4.tar.gz", hash = "sha256:d4a1342d83e65171059925b87ab351a1d5201289a764f9e092ef7a99e312554e"},
+    {file = "djlint-1.36.0-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:285eef75559b6fb89b064b8f5f82aa81be3dcf7d98bc64eac64c9540c1d7c382"},
+    {file = "djlint-1.36.0-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:84132b86fc71da429874574a812346c62095f7f0a72eec992db8b2719c009e5e"},
+    {file = "djlint-1.36.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:911ce39481310b7cf956122cfba1cad506a7fea91b20416b28c2279faa3ecf05"},
+    {file = "djlint-1.36.0-cp310-cp310-win_amd64.whl", hash = "sha256:927eab288635a33d2ed4548363e42202655cad9d5eda5b27c39164be1ecbbc3d"},
+    {file = "djlint-1.36.0-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:166994f48446321a449c71215da97354eae00488e755bbb100e216ef2f222860"},
+    {file = "djlint-1.36.0-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:2c273a23d2f8053b08da0ddf3d98df432807b2f9646ca3361a3fde538924eae2"},
+    {file = "djlint-1.36.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:bd55db8740a7e454558809fd489c54303a85da33ad2724b3e7686c1f96145b7d"},
+    {file = "djlint-1.36.0-cp311-cp311-win_amd64.whl", hash = "sha256:a50b5d45cd8c6299893ab69f0909d72545acde07fbf77f2c0bc857b292ffe619"},
+    {file = "djlint-1.36.0-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:f60d6a50a6f9a78d0ffaedf2921aa181f88342d51b330c63309109af5845dccf"},
+    {file = "djlint-1.36.0-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:a85d79b5fcb7c829e3466e106f5851a8cff0b363ab42aa79e7efb8b1aa68894d"},
+    {file = "djlint-1.36.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:dcff6d3013ba55a26604abb0ce63b185de192b250c7220242e373d5fb6fa3700"},
+    {file = "djlint-1.36.0-cp312-cp312-win_amd64.whl", hash = "sha256:8fd87e4ca1a1d5595e9fb8566b4eb5df025836d3dedec5fe6d8579a1dcbce8c2"},
+    {file = "djlint-1.36.0-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:393542dce74fe1eee0f4da8ef0ef6df262200eeb6c9fda37332f10c20c2d2a9b"},
+    {file = "djlint-1.36.0-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:03473829eccc0b02538b7325ccee43122365083cfd1375c8291672eb84348c8a"},
+    {file = "djlint-1.36.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:9f99be7522e37451b4adb9cd601822a8942ae393da9a36880072a089930c4903"},
+    {file = "djlint-1.36.0-cp313-cp313-win_amd64.whl", hash = "sha256:b79804a64e2435fb9d474e814fa0c39a1dd0e0566f4cfca3b979a6ac65e893fa"},
+    {file = "djlint-1.36.0-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:1da98e2e3cf46b593d1cc8d884969ca2aa30117260459e03e44f675740815b9e"},
+    {file = "djlint-1.36.0-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:a59f8463de9fe8b5c5bdea3f787ee197cf790f479c5e0c0b3deb44e13416a2f4"},
+    {file = "djlint-1.36.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:171ac17fd6826257705fe725ff4155e63e5d11da206466e730072a75806e72bc"},
+    {file = "djlint-1.36.0-cp39-cp39-win_amd64.whl", hash = "sha256:e57a167c0bf284b5dd697ca4ef2def25e9290c9db5b191bcc889db4385d977f7"},
+    {file = "djlint-1.36.0-py3-none-any.whl", hash = "sha256:dc10fe009b8d6dfafa800b326e8e3cfff6267d7040a485ff635f2ff09e200a44"},
+    {file = "djlint-1.36.0.tar.gz", hash = "sha256:c6a16905d69d02bfd745084a3ebf065707efbaf0a31762b34441802beb206b51"},
 ]
 
 [package.dependencies]
 click = ">=8.0.1"
 colorama = ">=0.4.4"
 cssbeautifier = ">=1.14.4"
-html-tag-names = ">=0.1.2"
-html-void-elements = ">=0.1"
 jsbeautifier = ">=1.14.4"
 json5 = ">=0.9.11"
 pathspec = ">=0.12"
 pyyaml = ">=6"
 regex = ">=2023"
 tqdm = ">=4.62.2"
-typing-extensions = ">=3.7.4"
 
 [[package]]
 name = "doc8"
@@ -1442,28 +1439,6 @@ gevent = ["gevent (>=1.4.0)"]
 setproctitle = ["setproctitle"]
 testing = ["coverage", "eventlet", "gevent", "pytest", "pytest-cov"]
 tornado = ["tornado (>=0.2)"]
-
-[[package]]
-name = "html-tag-names"
-version = "0.1.2"
-description = "List of known HTML tag names"
-optional = false
-python-versions = ">=3.7,<4.0"
-files = [
-    {file = "html-tag-names-0.1.2.tar.gz", hash = "sha256:04924aca48770f36b5a41c27e4d917062507be05118acb0ba869c97389084297"},
-    {file = "html_tag_names-0.1.2-py3-none-any.whl", hash = "sha256:eeb69ef21078486b615241f0393a72b41352c5219ee648e7c61f5632d26f0420"},
-]
-
-[[package]]
-name = "html-void-elements"
-version = "0.1.0"
-description = "List of HTML void tag names."
-optional = false
-python-versions = ">=3.7,<4.0"
-files = [
-    {file = "html-void-elements-0.1.0.tar.gz", hash = "sha256:931b88f84cd606fee0b582c28fcd00e41d7149421fb673e1e1abd2f0c4f231f0"},
-    {file = "html_void_elements-0.1.0-py3-none-any.whl", hash = "sha256:784cf39db03cdeb017320d9301009f8f3480f9d7b254d0974272e80e0cb5e0d2"},
-]
 
 [[package]]
 name = "hypothesis"
@@ -3581,4 +3556,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "sphinx"]
 [metadata]
 lock-version = "2.0"
 python-versions = "3.11.9"
-content-hash = "2d2464953cfadbc9dd31c20f00f79fd46482ea847ac781f6038332a9cb4a6d0c"
+content-hash = "481cfd544b20ee071e526f227e9fc5ffaf9542c35a7624f9d97aed2d9bfc3dda"
