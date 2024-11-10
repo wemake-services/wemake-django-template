@@ -14,7 +14,7 @@ updates:
         - ">=4.3,<5.2"
 
 - package-ecosystem: pip
-  directory: "{{cookiecutter.project_name}}/docker/django/pip_constraint.txt"
+  directory: "{{cookiecutter.project_name}}/docker/django"
   schedule:
     interval: daily
     time: "02:00"
