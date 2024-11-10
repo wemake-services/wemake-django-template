@@ -13,6 +13,14 @@ updates:
       versions:
         - ">=4.3,<5.2"
 
+
+- package-ecosystem: pip
+  directory: "{{cookiecutter.project_name}}/docker/django/pip_constraint.txt"
+  schedule:
+    interval: daily
+    time: "02:00"
+  open-pull-requests-limit: 10
+
 - package-ecosystem: pip
   directory: "/"
   schedule:
