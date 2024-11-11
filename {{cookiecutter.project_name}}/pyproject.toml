@@ -25,7 +25,7 @@ psycopg2-binary = "^2.9"
 gunicorn = "^23.0"
 python-decouple = "^3.8"
 structlog = "^24.4"
-wheel = "^0.44"
+wheel = "^0.45"
 
 
 [tool.poetry.group.dev.dependencies]
