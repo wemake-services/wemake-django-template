@@ -1048,20 +1048,20 @@ typing_extensions = ">=4.0,<5.0"
 
 [[package]]
 name = "dparse"
-version = "0.6.4b0"
+version = "0.6.4"
 description = "A parser for Python dependency files"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "dparse-0.6.4b0-py3-none-any.whl", hash = "sha256:592ff183348b8a5ea0a18442a7965e29445d3a26063654ec2c7e8ef42cd5753c"},
-    {file = "dparse-0.6.4b0.tar.gz", hash = "sha256:f8d49b41a527f3d16a269f854e6665245b325e50e41d2c213810cb984553e5c8"},
+    {file = "dparse-0.6.4-py3-none-any.whl", hash = "sha256:fbab4d50d54d0e739fbb4dedfc3d92771003a5b9aa8545ca7a7045e3b174af57"},
+    {file = "dparse-0.6.4.tar.gz", hash = "sha256:90b29c39e3edc36c6284c82c4132648eaf28a01863eb3c231c2512196132201a"},
 ]
 
 [package.dependencies]
 packaging = "*"
 
 [package.extras]
-all = ["dparse[conda]", "dparse[pipenv]", "dparse[poetry]"]
+all = ["pipenv", "poetry", "pyyaml"]
 conda = ["pyyaml"]
 pipenv = ["pipenv"]
 poetry = ["poetry"]
@@ -2946,19 +2946,19 @@ files = [
 
 [[package]]
 name = "safety"
-version = "3.2.10"
+version = "3.2.11"
 description = "Checks installed dependencies for known vulnerabilities and licenses."
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "safety-3.2.10-py3-none-any.whl", hash = "sha256:3f177107ed3d0859ee081c56491739c13fcb12b5cf854f35d62eb324d5c0a581"},
-    {file = "safety-3.2.10.tar.gz", hash = "sha256:8ed71c43869f96613797c3ef9f0e27927db6c05d1ff81d5439bb64c13cc45242"},
+    {file = "safety-3.2.11-py3-none-any.whl", hash = "sha256:3c339c380c9ea6a2d3ab09e88c01ee7ecaabaf963a1c98c021e13aacb9eeea3a"},
+    {file = "safety-3.2.11.tar.gz", hash = "sha256:70a3b7cc75ba41907bf1705bcbbeab232688657c21088e108712ecb601fe0f20"},
 ]
 
 [package.dependencies]
 Authlib = ">=1.2.0"
 Click = ">=8.0.2"
-dparse = ">=0.6.4b0"
+dparse = ">=0.6.4"
 filelock = ">=3.12.2,<3.13.0"
 jinja2 = ">=3.1.0"
 marshmallow = ">=3.15.0"
