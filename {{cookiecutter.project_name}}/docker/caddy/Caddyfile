@@ -17,6 +17,34 @@ www.{$DOMAIN_NAME} {
 	# Removing some headers for improved security:
 	header -Server
 
+	rate_limit {
+		# Enable distributed limitation if you have multiple Caddy nodes.
+		# Works ok for one node.
+		distributed
+
+		zone static {
+			match {
+				method GET
+				path /static/* /media/*
+			}
+			key {remote_host}
+			# TODO fix events and window for your requests
+			events 100
+			window 10s
+		}
+
+		zone dynamic {
+			match {
+				not path /static/* /media/*
+			}
+			key {remote_host}
+			# TODO fix events and window for your requests
+			events 10
+			window 3s
+		}
+
+		log_key
+	}
 	# Serve static files
 	handle_path /static/* {
 		# STATIC_ROOT
