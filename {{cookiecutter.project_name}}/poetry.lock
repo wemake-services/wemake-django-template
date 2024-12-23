@@ -1442,13 +1442,13 @@ tornado = ["tornado (>=0.2)"]
 
 [[package]]
 name = "hypothesis"
-version = "6.122.4"
+version = "6.122.6"
 description = "A library for property-based testing"
 optional = false
 python-versions = ">=3.9"
 files = [
-    {file = "hypothesis-6.122.4-py3-none-any.whl", hash = "sha256:77f6799115d68a4b95c06d3b28ba2cfe40de6d5e656ad9b751232b25beba790d"},
-    {file = "hypothesis-6.122.4.tar.gz", hash = "sha256:edbcc1b36eea8159e4df9afa669ae8570416f96df5591bec7ad561f2dd0d4931"},
+    {file = "hypothesis-6.122.6-py3-none-any.whl", hash = "sha256:4fd14a4303c5a28b7ee11b024baa622b90899311db851666f7a6775a1f54b151"},
+    {file = "hypothesis-6.122.6.tar.gz", hash = "sha256:2642598dc4426945d62b849a915d0d3e2d53f0fb17090f0cf10d8a545a421dc1"},
 ]
 
 [package.dependencies]
