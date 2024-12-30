@@ -1,7 +1,7 @@
 version: 2
 updates:
 - package-ecosystem: pip
-  directory: "/\{\{cookiecutter.project_name\}\}"
+  directory: "/{{cookiecutter.project_name}}"
   schedule:
     interval: daily
     time: "02:00"
@@ -14,7 +14,7 @@ updates:
         - ">=4.3,<5.2"
 
 - package-ecosystem: pip
-  directory: "/\{\{cookiecutter.project_name\}\}/docker/django"
+  directory: "/{{cookiecutter.project_name}}/docker/django"
   schedule:
     interval: daily
     time: "02:00"
@@ -28,7 +28,7 @@ updates:
   open-pull-requests-limit: 10
 
 - package-ecosystem: docker
-  directory: "/\{\{cookiecutter.project_name\}\}/docker/django"
+  directory: "/{{cookiecutter.project_name}}/docker/django"
   schedule:
     interval: daily
     time: "02:00"
