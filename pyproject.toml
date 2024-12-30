@@ -22,7 +22,7 @@ jinja2-git = "^1.4"
 [tool.poetry.group.test.dependencies]
 binaryornot = "^0.4"
 
-wemake-python-styleguide = "^0.19"
+wemake-python-styleguide = "^1.0"
 flake8-pytest-style = "^2.0"
 nitpick = "^0.35"
 
