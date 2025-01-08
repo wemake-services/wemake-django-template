@@ -857,13 +857,13 @@ test = ["coverage (>=7.2.7)", "django-add-default-value (>=0.4.0)", "mysqlclient
 
 [[package]]
 name = "django-permissions-policy"
-version = "4.23.0"
-description = "Set the draft security HTTP header Permissions-Policy (previously Feature-Policy) on your Django app."
+version = "4.24.0"
+description = "Set the Permissions-Policy HTTP header on your Django app."
 optional = false
 python-versions = ">=3.9"
 files = [
-    {file = "django_permissions_policy-4.23.0-py3-none-any.whl", hash = "sha256:54e67d50fce3f93e5288e0e56a4292731b5dd1afe8c1322ec001b236eb21ecbe"},
-    {file = "django_permissions_policy-4.23.0.tar.gz", hash = "sha256:11a9b481bb0cfe5925534f2edd7ce1307a4ed81d1e33c59f6b8fddb511badf74"},
+    {file = "django_permissions_policy-4.24.0-py3-none-any.whl", hash = "sha256:0839eefb0d376a055f9f3336e4fd917fc8d2b110426ba6a387a07a8897c5b94d"},
+    {file = "django_permissions_policy-4.24.0.tar.gz", hash = "sha256:540388c7f7a19ec20d6d314ffdccb730ca164c177354c742cb0f51f27d3bae07"},
 ]
 
 [package.dependencies]
@@ -3572,4 +3572,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "sphinx"]
 [metadata]
 lock-version = "2.0"
 python-versions = "3.11.9"
-content-hash = "79ffe9eb5425887b059575650bae7d81bfdfbcd69cb13fea178a9f9e9faf9dd9"
+content-hash = "678be59e0918b5f31a63a5809deea03ce9571b1427600816c4a1c8c98e9781cc"
