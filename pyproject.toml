@@ -23,7 +23,7 @@ jinja2-git = "^1.4"
 binaryornot = "^0.4"
 
 wemake-python-styleguide = "^0.19"
-flake8-pytest-style = "^2.0"
+flake8-pytest-style = "^2.1"
 nitpick = "^0.35"
 
 pytest = "^8.3"
