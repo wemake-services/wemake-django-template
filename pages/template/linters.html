@@ -265,35 +265,27 @@
           <section id="linters">
 <span id="id1"></span><h1>Linters<a class="headerlink" href="#linters" title="Link to this heading">¶</a></h1>
 <p>This project uses several linters to make coding style consistent.
-All configuration is stored inside <code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code>.</p>
+All configuration is stored inside <code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code> and <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code>.</p>
+<section id="ruff">
+<h2>ruff<a class="headerlink" href="#ruff" title="Link to this heading">¶</a></h2>
+<p>We use <code class="docutils literal notranslate"><span class="pre">ruff</span></code> to format and lint our code.</p>
+<p>To run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ruff<span class="w"> </span>check<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>ruff<span class="w"> </span>format
+</pre></div>
+</div>
+<p>See <a class="reference external" href="https://docs.astral.sh/ruff">ruff docs</a> on how to use it.
+The configuration is stored in <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code>.</p>
+</section>
 <section id="wemake-python-styleguide">
 <h2>wemake-python-styleguide<a class="headerlink" href="#wemake-python-styleguide" title="Link to this heading">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">wemake-python-styleguide</span></code> is a <code class="docutils literal notranslate"><span class="pre">flake8</span></code> based plugin.
 And it is also the strictest and most opinionated python linter ever.
 See <a class="reference external" href="https://wemake-python-styleguide.readthedocs.io/en/latest/">wemake-python-styleguide</a>
 docs.</p>
-<p>Things that are included in the linting process:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="http://flake8.pycqa.org/">flake8</a> is used a general tool for linting</p></li>
-<li><p><a class="reference external" href="https://github.com/PyCQA/isort">isort</a> is used to validate <code class="docutils literal notranslate"><span class="pre">import</span></code> order</p></li>
-<li><p><a class="reference external" href="https://github.com/PyCQA/bandit">bandit</a> for static security checks</p></li>
-<li><p><a class="reference external" href="https://github.com/myint/eradicate">eradicate</a> to find dead code</p></li>
-<li><p>and more!</p></li>
-</ul>
 <p>Running linting process for all <code class="docutils literal notranslate"><span class="pre">python</span></code> files in the project:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>flake8<span class="w"> </span>.
 </pre></div>
 </div>
-<section id="extra-plugins">
-<h3>Extra plugins<a class="headerlink" href="#extra-plugins" title="Link to this heading">¶</a></h3>
-<p>We also use some extra plugins for <code class="docutils literal notranslate"><span class="pre">flake8</span></code>
-that are not bundled with <code class="docutils literal notranslate"><span class="pre">wemake-python-styleguide</span></code>:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://github.com/vikingco/flake8-pytest">flake8-pytest</a> - ensures that <code class="docutils literal notranslate"><span class="pre">pytest</span></code> best practices are used</p></li>
-<li><p><a class="reference external" href="https://github.com/m-burst/flake8-pytest-style">flake8-pytest-style</a> - ensures that <code class="docutils literal notranslate"><span class="pre">pytest</span></code> tests and fixtures are written in a single style</p></li>
-<li><p><a class="reference external" href="https://github.com/rocioar/flake8-django">flake8-django</a> - plugin to enforce best practices in a <code class="docutils literal notranslate"><span class="pre">django</span></code> project</p></li>
-</ul>
-</section>
 </section>
 <section id="django-migration-linter">
 <h2>django-migration-linter<a class="headerlink" href="#django-migration-linter" title="Link to this heading">¶</a></h2>
@@ -428,10 +420,8 @@ See <a class="reference external" href="https://github.com/hadolint/hadolint">ha
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Linters</a><ul>
-<li><a class="reference internal" href="#wemake-python-styleguide">wemake-python-styleguide</a><ul>
-<li><a class="reference internal" href="#extra-plugins">Extra plugins</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#ruff">ruff</a></li>
+<li><a class="reference internal" href="#wemake-python-styleguide">wemake-python-styleguide</a></li>
 <li><a class="reference internal" href="#django-migration-linter">django-migration-linter</a></li>
 <li><a class="reference internal" href="#yamllint">yamllint</a></li>
 <li><a class="reference internal" href="#djlint">djlint</a></li>
