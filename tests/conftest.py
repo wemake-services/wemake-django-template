@@ -2,7 +2,7 @@ import pytest
 
 
 @pytest.fixture
-def context():
+def context() -> dict[str, str]:
     """Creates default prompt values."""
     return {
         'project_name': 'test-project',

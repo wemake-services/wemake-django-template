@@ -14,20 +14,21 @@ https://github.com/pydanny/cookiecutter-django
 
 """
 
-import os
 import secrets
 import shutil
 import string
+from pathlib import Path
+from typing import Final
 
 # CHANGEME mark
-CHANGEME = '__CHANGEME__'
+CHANGEME: Final = '__CHANGEME__'
 
 # Get the root project directory
-PROJECT_DIRECTORY = os.path.realpath(os.path.curdir)
-PROJECT_NAME = '{{ cookiecutter.project_name }}'
+PROJECT_DIRECTORY: Final = Path.cwd().resolve(strict=True)
+PROJECT_NAME: Final = '{{ cookiecutter.project_name }}'
 
 # Messages
-PROJECT_SUCCESS = """
+PROJECT_SUCCESS: Final = """
 Your project {0} is created.
 Now you can start working on it:
 
@@ -35,37 +36,43 @@ Now you can start working on it:
 """
 
 
-def _get_random_string(length=50):
+def _get_random_string(length: int = 50) -> str:
     """
     Returns a securely generated random string.
-
-    The default length of 12 with the a-z, A-Z, 0-9 character set returns
-    a 71-bit value. log_2((26+26+10)^12) =~ 71 bits
 
     >>> secret = _get_random_string()
     >>> len(secret)
     50
 
     """
-    punctuation = string.punctuation.replace(
-        '"', '',
-    ).replace(
-        "'", '',
-    ).replace(
-        '\\', '',
-    ).replace(
-        '$', '',  # see issue-271
+    punctuation = (
+        string.punctuation.replace(
+            '"',
+            '',
+        )
+        .replace(
+            "'",
+            '',
+        )
+        .replace(
+            '\\',
+            '',
+        )
+        .replace(
+            '$',
+            '',  # see issue-271
+        )
     )
 
     chars = string.digits + string.ascii_letters + punctuation
     return ''.join(secrets.choice(chars) for _ in range(length))
 
 
-def _create_secret_key(config_path):
+def _create_secret_key(config_path: Path) -> None:
     # Generate a SECRET_KEY that matches the Django standard
     secret_key = _get_random_string()
 
-    with open(config_path, 'r+') as config_file:
+    with config_path.open(mode='r+', encoding='utf8') as config_file:
         # Replace CHANGEME with SECRET_KEY
         file_contents = config_file.read().replace(CHANGEME, secret_key, 1)
 
@@ -75,40 +82,32 @@ def _create_secret_key(config_path):
         config_file.truncate()
 
 
-def print_futher_instuctions():
+def print_futher_instuctions() -> None:
     """Shows user what to do next after project creation."""
     print(PROJECT_SUCCESS.format(PROJECT_NAME))  # noqa: WPS421
 
 
-def copy_local_configuration():
+def copy_local_configuration() -> None:
     """
     Handler to copy local configuration.
 
     It is copied from ``.template`` files to the actual files.
     """
-    secret_template = os.path.join(
-        PROJECT_DIRECTORY, 'config', '.env.template',
-    )
-    secret_config = os.path.join(
-        PROJECT_DIRECTORY, 'config', '.env',
-    )
+    secret_template = PROJECT_DIRECTORY / 'config' / '.env.template'
+    secret_config = PROJECT_DIRECTORY / 'config' / '.env'
     shutil.copyfile(secret_template, secret_config)
     _create_secret_key(secret_config)
 
     # Local config:
-    local_template = os.path.join(
-        PROJECT_DIRECTORY,
-        'server',
-        'settings',
-        'environments',
-        'local.py.template',
+    local_template = (
+        PROJECT_DIRECTORY
+        / 'server'
+        / 'settings'
+        / 'environments'
+        / 'local.py.template'
     )
-    local_config = os.path.join(
-        PROJECT_DIRECTORY,
-        'server',
-        'settings',
-        'environments',
-        'local.py',
+    local_config = (
+        PROJECT_DIRECTORY / 'server' / 'settings' / 'environments' / 'local.py'
     )
     shutil.copyfile(local_template, local_config)
 
