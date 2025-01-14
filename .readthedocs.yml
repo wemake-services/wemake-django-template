@@ -23,10 +23,8 @@ build:
       - asdf global poetry latest
 
       # Go to the project's folder and export requirements:
-      - cd '{{cookiecutter.project_name}}'
-      - poetry config virtualenvs.create false
       - poetry self add poetry-plugin-export
-      - poetry export --only main --only docs --format=requirements.txt --output=requirements.txt
+      - cd '{{cookiecutter.project_name}}' && poetry export --only main --only docs --format=requirements.txt --output=requirements.txt
 
 python:
   install:
