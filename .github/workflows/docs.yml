@@ -35,8 +35,11 @@ jobs:
         # Adding `poetry` to `$PATH`:
         echo "$HOME/.local/bin" >> "$GITHUB_PATH"
 
+    - name: Install dependencies
+      run: poetry install
+
     - name: Build docs
-      run: bash tests/build_docs.sh
+      run: poetry run bash tests/build_docs.sh
 
     - name: Deploy to Pages
       uses: JamesIves/github-pages-deploy-action@v4.7.2
