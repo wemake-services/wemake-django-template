@@ -790,13 +790,13 @@ tests = ["jinja2 (>=2.9.6)", "pytest", "pytest-cov", "pytest-django", "pytest-ru
 
 [[package]]
 name = "django-debug-toolbar"
-version = "4.4.6"
+version = "5.0.0"
 description = "A configurable set of panels that display various debug information about the current request/response."
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.9"
 files = [
-    {file = "django_debug_toolbar-4.4.6-py3-none-any.whl", hash = "sha256:3beb671c9ec44ffb817fad2780667f172bd1c067dbcabad6268ce39a81335f45"},
-    {file = "django_debug_toolbar-4.4.6.tar.gz", hash = "sha256:36e421cb908c2f0675e07f9f41e3d1d8618dc386392ec82d23bcfcd5d29c7044"},
+    {file = "django_debug_toolbar-5.0.0-py3-none-any.whl", hash = "sha256:679108872459486a77fa4818bdb2f02c43ba3d49dd5a9c70dcefb8b376e90475"},
+    {file = "django_debug_toolbar-5.0.0.tar.gz", hash = "sha256:fec95ca1a0a0836e620d22ab58827a7c4b260585653b1b934ccbaaa25c79f88c"},
 ]
 
 [package.dependencies]
@@ -3572,4 +3572,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "sphinx"]
 [metadata]
 lock-version = "2.0"
 python-versions = "3.11.9"
-content-hash = "67b11a5f2d26354f110e2df42bf9d15935de1a67b9a59b38eccf8c00e932f223"
+content-hash = "37d3850fd3ab5ebbfeed3204ad2e065a36aac672802bd7810c4f7c34fbcb69f5"
