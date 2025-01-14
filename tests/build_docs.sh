@@ -20,7 +20,5 @@ poetry sync --only=main --only=docs
 make -C docs html
 
 # Move the result docs to the dest:
-ls .
-ls ../..
-pwd
+ls docs/_build
 mv docs/_build ../..
