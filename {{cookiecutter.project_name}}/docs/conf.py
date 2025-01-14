@@ -27,6 +27,7 @@ _ROOT = Path('..').resolve(strict=True)
 sys.path.insert(0, str(_ROOT))
 
 # Django setup, all deps must be present to succeed:
+os.environ.setdefault('DJANGO_ENV', 'production')
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'server.settings')
 django.setup()
 
