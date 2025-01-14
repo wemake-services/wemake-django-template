@@ -38,6 +38,6 @@ docker compose -f docker-compose.yml \
   --rm caddy sh /etc/ci.sh
 
 # Checking the size of final images:
-disl --max-layers=13 "${PROJECT_NAME}:dev" 950MiB
-disl --max-layers=14 \
+disl --current-size --max-layers=13 "${PROJECT_NAME}:dev" 950MiB
+disl --current-size --max-layers=14 \
   "registry.gitlab.com/${PROJECT_ORGANIZATION}/${PROJECT_NAME}:latest" 700MiB
