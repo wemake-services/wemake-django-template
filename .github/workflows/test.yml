@@ -25,6 +25,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+      with:
+        persist-credentials: false
     - name: Set up Python ${{ env.PYTHON_VERSION }}
       uses: actions/setup-python@v5
       with:
@@ -32,15 +34,13 @@ jobs:
 
     - name: Install poetry
       run: |
-        curl -sSL "https://install.python-poetry.org" | python -
+        curl -sSL 'https://install.python-poetry.org' | python -
 
         # Adding `poetry` to `$PATH`:
-        echo "$HOME/.local/bin" >> $GITHUB_PATH
+        echo "$HOME/.local/bin" >> "$GITHUB_PATH"
 
     - name: Install dependencies
-      run: |
-        poetry install
-        poetry run pip install -U pip
+      run: poetry install
 
     - name: Run template's tests
       run: poetry run bash tests/test_github.sh
@@ -51,6 +51,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+      with:
+        persist-credentials: false
     - name: Set up Python ${{ env.PYTHON_VERSION }}
       uses: actions/setup-python@v5
       with:
@@ -58,20 +60,22 @@ jobs:
 
     - name: Install poetry
       run: |
-        curl -sSL "https://install.python-poetry.org" | python -
+        curl -sSL 'https://install.python-poetry.org' | python -
 
         # Adding `poetry` to `$PATH`:
-        echo "$HOME/.local/bin" >> $GITHUB_PATH
+        echo "$HOME/.local/bin" >> "$GITHUB_PATH"
 
     - name: Install dependencies
       run: |
         poetry config virtualenvs.in-project true
-        poetry run pip install -U pip
         poetry install
 
     - name: Run internal project checks
       run: |
+        poetry run ruff check --exit-non-zero-on-fix --diff
+        poetry run ruff format --check --diff
         poetry run flake8 .
+        poetry run mypy .
         poetry run pytest
         poetry run poetry check
         poetry run pip check

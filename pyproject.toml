@@ -140,7 +140,7 @@ filterwarnings = ["error"]
 
 addopts = [
   "--strict-config",
-  "--strict-modules",
+  "--strict-markers",
   "--doctest-modules",
   # Custom ignored dirs with bad code:
   "--ignore={{cookiecutter.project_name}}",
