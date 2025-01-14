@@ -14,7 +14,7 @@ run_ci () {
   old_caddyfile="$(md5sum "$CADDYFILE_PATH")"
 
   caddy fmt --overwrite "$CADDYFILE_PATH"
- 
+
   if [ "$old_caddyfile" != "$(md5sum "$CADDYFILE_PATH")" ]; then
     echo 'Invalid format'
     exit 1
