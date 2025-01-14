@@ -1,0 +1,81 @@
+name: test
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:  # Keep in sync with `POETRY_VERSION` in `Dockerfile`
+  POETRY_VERSION: "2.0.1"
+  PYTHON_VERSION: "3.12"
+
+jobs:
+  test-generated-project:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        persist-credentials: false
+    - name: Set up Python ${{ env.PYTHON_VERSION }}
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+
+    - name: Install poetry
+      run: |
+        curl -sSL 'https://install.python-poetry.org' | python -
+
+        # Adding `poetry` to `$PATH`:
+        echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+    - name: Install dependencies
+      run: poetry install
+
+    - name: Run template's tests
+      run: poetry run bash tests/test_github.sh
+
+  test-internal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        persist-credentials: false
+    - name: Set up Python ${{ env.PYTHON_VERSION }}
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+
+    - name: Install poetry
+      run: |
+        curl -sSL 'https://install.python-poetry.org' | python -
+
+        # Adding `poetry` to `$PATH`:
+        echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+    - name: Install dependencies
+      run: |
+        poetry config virtualenvs.in-project true
+        poetry install
+
+    - name: Run internal project checks
+      run: |
+        poetry run ruff check --exit-non-zero-on-fix --diff
+        poetry run ruff format --check --diff
+        poetry run flake8 .
+        poetry run mypy .
+        poetry run pytest
+        poetry run poetry check
+        poetry run pip check

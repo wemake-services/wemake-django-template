@@ -1,0 +1,35 @@
+# Docs:
+# https://docs.readthedocs.io/en/stable/config-file/v2.html
+# https://docs.readthedocs.io/en/stable/build-customization.html
+#
+# NOTE: Please, don't copy this file to build django docs on readthedocs.com
+# This is very specific to our needs (because this project is a template).
+# Also, we have a lot of configuration on rtd's admin side.
+#
+# End projects most of the time do not need any `.readthedocs.yml` file at all.
+version: 2
+
+# Set the version of Python and other tools you might need
+build:
+  os: ubuntu-22.04
+  tools:
+    python: '3.12'
+  jobs:
+    # See https://github.com/readthedocs/readthedocs.org/issues/4912
+    pre_create_environment:
+      # Install poetry:
+      - asdf plugin add poetry
+      - asdf install poetry latest
+      - asdf global poetry latest
+
+      # Go to the project's folder and export requirements:
+      - poetry self add poetry-plugin-export
+      - cd '{{cookiecutter.project_name}}' && sed -i '' 's/\{\{[[:space:]]cookiecutter.project_name[[:space:]]\}\}/example/' pyproject.toml && poetry export --only main --only docs --format=requirements.txt --output=../requirements.txt
+
+python:
+  install:
+    - requirements: requirements.txt
+
+sphinx:
+  configuration: '{{cookiecutter.project_name}}/docs/conf.py'
+  fail_on_warning: true

@@ -1,0 +1,49 @@
+version: 2
+updates:
+- package-ecosystem: pip
+  directory: "/{{cookiecutter.project_name}}"
+  schedule:
+    interval: daily
+    time: "02:00"
+  open-pull-requests-limit: 10
+  ignore:
+    - dependency-name: "django"
+      # Ignore non-LTS Django releases
+      # https://www.djangoproject.com/download/#supported-versions
+      versions:
+        - ">=4.3,<5.2"
+
+- package-ecosystem: pip
+  directory: "/{{cookiecutter.project_name}}/docker/django"
+  schedule:
+    interval: daily
+    time: "02:00"
+  open-pull-requests-limit: 10
+
+- package-ecosystem: pip
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "02:00"
+  open-pull-requests-limit: 10
+
+- package-ecosystem: docker
+  directory: "/{{cookiecutter.project_name}}/docker/django"
+  schedule:
+    interval: daily
+    time: "02:00"
+  open-pull-requests-limit: 10
+
+- package-ecosystem: docker
+  directory: "/{{cookiecutter.project_name}}/docker/caddy"
+  schedule:
+    interval: daily
+    time: "02:00"
+  open-pull-requests-limit: 10
+
+- package-ecosystem: github-actions
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "02:00"
+  open-pull-requests-limit: 10
