@@ -24,31 +24,33 @@ admin.autodiscover()
 urlpatterns = [
     # Apps:
     path('main/', include(main_urls, namespace='main')),
-
     # Health checks:
     path('health/', include(health_urls)),
-
     # django-admin:
     path('admin/doc/', include(admindocs_urls)),
     path('admin/', admin.site.urls),
-
     # Text and xml static files:
-    path('robots.txt', TemplateView.as_view(
-        template_name='common/txt/robots.txt',
-        content_type='text/plain',
-    )),
-    path('humans.txt', TemplateView.as_view(
-        template_name='common/txt/humans.txt',
-        content_type='text/plain',
-    )),
-
+    path(
+        'robots.txt',
+        TemplateView.as_view(
+            template_name='common/txt/robots.txt',
+            content_type='text/plain',
+        ),
+    ),
+    path(
+        'humans.txt',
+        TemplateView.as_view(
+            template_name='common/txt/humans.txt',
+            content_type='text/plain',
+        ),
+    ),
     # It is a good practice to have explicit index view:
     path('', index, name='index'),
 ]
 
 if settings.DEBUG:  # pragma: no cover
-    import debug_toolbar  # noqa: WPS433
-    from django.conf.urls.static import static  # noqa: WPS433
+    import debug_toolbar
+    from django.conf.urls.static import static
 
     urlpatterns = [
         # URLs specific only to django-debug-toolbar:

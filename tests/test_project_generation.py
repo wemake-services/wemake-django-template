@@ -78,10 +78,12 @@ def test_pyproject_toml(
     path = baked_project.project_path / 'pyproject.toml'
 
     pyproject = tomli.loads(path.read_text())
-    project = pyproject['tool']['poetry']
+    project = pyproject['project']
+    poetry = pyproject['tool']['poetry']
 
     assert project['name'] == context['project_name']
     assert project['description'] == context['project_verbose_name']
+    assert poetry
 
 
 @pytest.mark.parametrize(

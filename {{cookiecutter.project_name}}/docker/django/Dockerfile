@@ -2,7 +2,7 @@
 # This Dockerfile uses multi-stage build to customize DEV and PROD images:
 # https://docs.docker.com/develop/develop-images/multistage-build/
 
-FROM python:3.11.9-slim-bookworm AS development_build
+FROM python:3.12.7-slim-bookworm AS development_build
 
 LABEL maintainer="{{ cookiecutter.project_domain }}"
 LABEL vendor="{{ cookiecutter.project_domain }}"
@@ -24,19 +24,15 @@ ENV DJANGO_ENV=${DJANGO_ENV} \
   PIP_DISABLE_PIP_VERSION_CHECK=1 \
   PIP_DEFAULT_TIMEOUT=100 \
   PIP_ROOT_USER_ACTION=ignore \
-  PIP_CONSTRAINT='/var/cache/pip_constraint.txt' \
   # tini:
   TINI_VERSION=v0.19.0 \
   # poetry:
-  POETRY_VERSION=1.8.3 \
+  POETRY_VERSION=2.0.1 \
   POETRY_VIRTUALENVS_CREATE=false \
   POETRY_CACHE_DIR='/var/cache/pypoetry' \
   POETRY_HOME='/usr/local'
 
 SHELL ["/bin/bash", "-eo", "pipefail", "-c"]
-
-# Copy constrains for pip:
-COPY docker/django/pip_constraint.txt /var/cache/pip_constraint.txt
 
 # System deps (we don't use exact versions because it is hard to update them,
 # pin when needed):
@@ -82,11 +78,10 @@ COPY --chown=web:web ./poetry.lock ./pyproject.toml /code/
 # hadolint ignore=SC2046
 RUN --mount=type=cache,target="$POETRY_CACHE_DIR" \
   echo "$DJANGO_ENV" \
-  && poetry run pip install --constraint="$PIP_CONSTRAINT" pip \
   && poetry --version && poetry run pip --version \
-  && poetry install \
+  && poetry sync \
     $(if [ "$DJANGO_ENV" = 'production' ]; then echo '--only main'; fi) \
-    --no-interaction --no-ansi --sync
+    --no-interaction --no-ansi --compile
 
 # This is a special case. We need to run this script as an entry point:
 COPY ./docker/django/entrypoint.sh /docker-entrypoint.sh

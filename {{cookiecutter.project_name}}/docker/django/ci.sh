@@ -34,6 +34,8 @@ run_ci () {
   dotenv-linter config/.env config/.env.template
 
   # Running linting for all python files in the project:
+  ruff check --exit-non-zero-on-fix --diff
+  ruff format --check --diff
   flake8 .
 
   # Linl HTML formatting:
@@ -41,7 +43,7 @@ run_ci () {
   djlint --lint server
 
   # Running type checking, see https://github.com/typeddjango/django-stubs
-  mypy manage.py server tests
+  mypy .
 
   # Running tests:
   pytest

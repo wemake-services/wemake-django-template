@@ -16,13 +16,15 @@
 
 import os
 import sys
+from pathlib import Path
 from typing import cast
 
 import django
 import tomli
 
 # We need `server` to be importable from here:
-sys.path.insert(0, os.path.abspath('..'))
+_ROOT = Path('..').resolve(strict=True)
+sys.path.insert(0, str(_ROOT))
 
 # Django setup, all deps must be present to succeed:
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'server.settings')
@@ -31,12 +33,13 @@ django.setup()
 
 # -- Project information -----------------------------------------------------
 
+
 def _get_project_meta() -> dict[str, str]:  # lying about return type
-    with open('../pyproject.toml', mode='rb') as pyproject:
-        return cast(
-            dict[str, str],
-            tomli.load(pyproject)['tool']['poetry'],
-        )
+    pyproject = _ROOT / 'pyproject.toml'
+    return cast(
+        dict[str, str],
+        tomli.loads(pyproject.read_text())['project'],
+    )
 
 
 pkg_meta = _get_project_meta()
@@ -50,9 +53,6 @@ release = version
 
 # -- General configuration ------------------------------------------------
 
-# If your documentation needs a minimal Sphinx version, state it here.
-needs_sphinx = '7.2'
-
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
@@ -64,10 +64,8 @@ extensions = [
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
     'sphinx.ext.napoleon',
-
     # https://github.com/executablebooks/MyST-Parser
     'myst_parser',
-
     # 3rd party, order matters:
     # https://github.com/wemake-services/wemake-django-template/issues/159
     'sphinx_autodoc_typehints',
@@ -111,23 +109,9 @@ todo_include_todos = True
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'alabaster'
+html_theme = 'furo'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
-
-# Custom sidebar templates, must be a dictionary that maps document names
-# to template names.
-#
-# This is required for the alabaster theme
-# refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars
-html_sidebars = {
-    '**': [
-        'about.html',
-        'navigation.html',
-        'moreinfo.html',
-        'searchbox.html',
-    ],
-}
