@@ -142,8 +142,9 @@ addopts = [
   "--strict-config",
   "--strict-markers",
   "--doctest-modules",
-  # Custom ignored dirs with bad code:
+  # Custom template parts:
   "--ignore={{cookiecutter.project_name}}",
+  "--ignore=hooks",
 ]
 
 

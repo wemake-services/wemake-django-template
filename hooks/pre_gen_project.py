@@ -1,15 +1,14 @@
 import re
 import sys
-from typing import Final
 from urllib.parse import urlparse
 
-MODULE_REGEX: Final = re.compile(r'^[a-z][a-z0-9\-]+[a-z0-9]$')
-MODULE_NAME: Final = '{{ cookiecutter.project_name }}'
+MODULE_REGEX = r'^[a-z][a-z0-9\-]+[a-z0-9]$'
+MODULE_NAME = '{{ cookiecutter.project_name }}'
 
-DOMAIN_NAME: Final = '{{ cookiecutter.project_domain }}'
+DOMAIN_NAME = '{{ cookiecutter.project_domain }}'
 
 
-def validate_project_name() -> None:
+def validate_project_name():
     """
     This validator is used to ensure that `project_name` is valid.
 
@@ -18,7 +17,7 @@ def validate_project_name() -> None:
 
     Valid example: `school_project3`.
     """
-    if not MODULE_REGEX.match(MODULE_NAME):
+    if not re.match(MODULE_REGEX, MODULE_NAME):
         # Validates project's module name:
         message = [
             'ERROR: The project slug {0} is not a valid name.',
@@ -28,7 +27,7 @@ def validate_project_name() -> None:
         raise ValueError(' '.join(message).format(MODULE_NAME))
 
 
-def validate_domain() -> None:
+def validate_domain():
     """
     This validator is used to enforce correct `project_domain` inputs.
 

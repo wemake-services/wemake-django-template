@@ -14,7 +14,7 @@ import pytest
 import tomli
 from binaryornot.check import is_binary
 from cookiecutter.exceptions import FailedHookException
-from pytest_cookies import Cookies
+from pytest_cookies.plugin import Cookies
 
 _RE_OBJ: Final = re.compile(r'{{(\s?cookiecutter)[.](.*?)}}')
 
@@ -33,7 +33,7 @@ def assert_variables_replaced(paths: list[Path]) -> None:
     assert paths, 'No files are generated'
 
     for path in paths:
-        if is_binary(path):
+        if is_binary(str(path)):
             continue
 
         file_contents = path.read_text()
@@ -77,12 +77,11 @@ def test_pyproject_toml(
     baked_project = cookies.bake(extra_context=context)
     path = baked_project.project_path / 'pyproject.toml'
 
-    pyproject = tomli.load(path.read_bytes())
-    project = pyproject['project']
+    pyproject = tomli.loads(path.read_text())
+    project = pyproject['tool']['poetry']
 
     assert project['name'] == context['project_name']
     assert project['description'] == context['project_verbose_name']
-    assert pyproject['tool']['poetry']  # we need this for dependabot
 
 
 @pytest.mark.parametrize(
