@@ -19,7 +19,6 @@ repos:
       - id: check-dependabot
       - id: check-github-workflows
       - id: check-github-actions
-      - id: check-readthedocs
       - id: check-gitlab-ci
         args: ["--format-regex", "python"]
       - id: check-renovate
