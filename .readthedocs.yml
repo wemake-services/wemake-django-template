@@ -24,7 +24,7 @@ build:
 
       # Go to the project's folder and export requirements:
       - poetry self add poetry-plugin-export
-      - cd '{{cookiecutter.project_name}}' && sed -i '' -e 's/{{ cookiecutter.project_name }}/example/' pyproject.toml && poetry export --only main --only docs --format=requirements.txt --output=requirements.txt
+      - cd '{{cookiecutter.project_name}}' && sed -i '' 's/{{ cookiecutter.project_name }}/example/' pyproject.toml && poetry export --only main --only docs --format=requirements.txt --output=requirements.txt
 
 python:
   install:
