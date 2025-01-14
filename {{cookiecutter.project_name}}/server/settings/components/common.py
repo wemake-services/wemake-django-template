@@ -22,21 +22,17 @@ SECRET_KEY = config('DJANGO_SECRET_KEY')
 INSTALLED_APPS: tuple[str, ...] = (
     # Your apps go here:
     'server.apps.main',
-
     # Default django apps:
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     # django-admin:
     'django.contrib.admin',
     'django.contrib.admindocs',
-
     # Security:
     'axes',
-
     # Health checks:
     # You may want to enable other checks as well,
     # see: https://github.com/KristianOellegaard/django-health-check
@@ -49,10 +45,8 @@ INSTALLED_APPS: tuple[str, ...] = (
 MIDDLEWARE: tuple[str, ...] = (
     # Logging:
     'server.settings.components.logging.LoggingContextVarsMiddleware',
-
     # Content Security Policy:
     'csp.middleware.CSPMiddleware',
-
     # Django:
     'django.middleware.security.SecurityMiddleware',
     # django-permissions-policy
@@ -64,7 +58,6 @@ MIDDLEWARE: tuple[str, ...] = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
     # Axes:
     'axes.middleware.AxesMiddleware',
 )
@@ -111,9 +104,7 @@ LANGUAGES = (
     ('ru', _('Russian')),
 )
 
-LOCALE_PATHS = (
-    'locale/',
-)
+LOCALE_PATHS = ('locale/',)
 
 USE_TZ = True
 TIME_ZONE = 'UTC'
@@ -133,25 +124,27 @@ STATICFILES_FINDERS = (
 # Templates
 # https://docs.djangoproject.com/en/4.2/ref/templates/api
 
-TEMPLATES = [{
-    'APP_DIRS': True,
-    'BACKEND': 'django.template.backends.django.DjangoTemplates',
-    'DIRS': [
-        # Contains plain text templates, like `robots.txt`:
-        BASE_DIR.joinpath('server', 'common', 'django', 'templates'),
-    ],
-    'OPTIONS': {
-        'context_processors': [
-            # Default template context processors:
-            'django.contrib.auth.context_processors.auth',
-            'django.template.context_processors.debug',
-            'django.template.context_processors.i18n',
-            'django.template.context_processors.media',
-            'django.contrib.messages.context_processors.messages',
-            'django.template.context_processors.request',
+TEMPLATES = [
+    {
+        'APP_DIRS': True,
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [
+            # Contains plain text templates, like `robots.txt`:
+            BASE_DIR.joinpath('server', 'common', 'django', 'templates'),
         ],
-    },
-}]
+        'OPTIONS': {
+            'context_processors': [
+                # Default template context processors:
+                'django.contrib.auth.context_processors.auth',
+                'django.template.context_processors.debug',
+                'django.template.context_processors.i18n',
+                'django.template.context_processors.media',
+                'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.request',
+            ],
+        },
+    }
+]
 
 
 # Media files
@@ -194,7 +187,7 @@ X_FRAME_OPTIONS = 'DENY'
 SECURE_REFERRER_POLICY = 'same-origin'
 
 # https://github.com/adamchainz/django-permissions-policy#setting
-PERMISSIONS_POLICY: dict[str, str | list[str]] = {}  # noqa: WPS234
+PERMISSIONS_POLICY: dict[str, str | list[str]] = {}
 
 
 # Timeouts

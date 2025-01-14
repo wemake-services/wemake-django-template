@@ -12,9 +12,9 @@ services:
     image: "postgres:17-alpine"
     restart: unless-stopped
     volumes:
-      - pgdata:/var/lib/postgresql/data
+      - postgres-data:/var/lib/postgresql/data
     networks:
-      - postgresnet
+      - postgres-net
     env_file: ./config/.env
 
   web:
@@ -37,8 +37,8 @@ services:
       depends_on:
         - db
       networks:
-        - webnet
-        - postgresnet
+        - web-net
+        - postgres-net
       env_file: ./config/.env
       environment:
         DJANGO_DATABASE_HOST: db
@@ -58,10 +58,10 @@ services:
 
 networks:
   # Network for postgres, use it for services that need access to the db:
-  postgresnet:
+  postgres-net:
   # Network for your internals, use it by default:
-  webnet:
+  web-net:
 
 volumes:
-  pgdata:
+  postgres-data:
   django-static:

@@ -5,7 +5,7 @@ from typing import Final
 import pytest
 
 _LOGGING_FORMAT_RE: Final = re.compile(
-    "timestamp='.+' level='error' event='Test message' logger='django'",
+    r"timestamp='.+' level='error' event='Test message' logger='django'",
 )
 
 

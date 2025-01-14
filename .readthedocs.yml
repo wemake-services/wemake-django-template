@@ -13,23 +13,24 @@ version: 2
 build:
   os: ubuntu-22.04
   tools:
-    python: '3.11'
+    python: '3.12'
   jobs:
     # See https://github.com/readthedocs/readthedocs.org/issues/4912
     pre_create_environment:
-      # Select Python version (keep in sync with other versions):
-      - asdf install python 3.11.9
-      - asdf global python 3.11.9
-      - python -m pip install --upgrade --no-cache-dir virtualenv
-
       # Install poetry:
       - asdf plugin add poetry
       - asdf install poetry latest
       - asdf global poetry latest
+
+      # Go to the project's folder and export requirements:
+      - cd '{{cookiecutter.project_name}}'
       - poetry config virtualenvs.create false
-    post_install:
-      # We build django with `DJANGO_ENV=production`, so no dev deps:
-      - . "$READTHEDOCS_VIRTUALENV_PATH/bin/activate" && cd '{{cookiecutter.project_name}}' && poetry install --only main --only docs
+      - poetry self add poetry-plugin-export
+      - poetry export --only main --only docs --format=requirements.txt --output=requirements.txt
+
+python:
+  install:
+    - requirements: requirements.txt
 
 sphinx:
   configuration: '{{cookiecutter.project_name}}/docs/conf.py'

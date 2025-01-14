@@ -18,7 +18,6 @@ if TYPE_CHECKING:
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
-
     # We use these formatters in our `'handlers'` configuration.
     # Probably, you won't need to modify these lines.
     # Unless, you know what you are doing.
@@ -39,7 +38,6 @@ LOGGING = {
             ],
         },
     },
-
     # You can easily swap `key/value` (default) output and `json` ones.
     # Use `'json_console'` if you need `json` logs.
     'handlers': {
@@ -52,7 +50,6 @@ LOGGING = {
             'formatter': 'json_formatter',
         },
     },
-
     # These loggers are required by our app:
     # - django is required when using `logger.getLogger('django')`
     # - security is required by `axes`

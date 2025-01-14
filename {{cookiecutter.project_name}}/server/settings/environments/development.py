@@ -44,10 +44,8 @@ INSTALLED_APPS += (
     # Better debug:
     'debug_toolbar',
     'nplusone.ext.django',
-
     # Linting migrations:
     'django_migration_linter',
-
     # django-test-migrations:
     'django_test_migrations.contrib.django_checks.AutoNames',
     # This check might be useful in production as well,
@@ -56,7 +54,6 @@ INSTALLED_APPS += (
     # This will check that your database is configured properly,
     # when you run `python manage.py check` before deploy.
     'django_test_migrations.contrib.django_checks.DatabaseConfiguration',
-
     # django-extra-checks:
     'extra_checks',
     # django-query-counter:
@@ -69,7 +66,6 @@ INSTALLED_APPS += (
 
 MIDDLEWARE += (
     'debug_toolbar.middleware.DebugToolbarMiddleware',
-
     # https://github.com/conformist-mw/django-query-counter
     # Prints how many queries were executed, useful for the APIs.
     'query_counter.middleware.DjangoQueryCounterMiddleware',
@@ -78,10 +74,10 @@ MIDDLEWARE += (
 # https://django-debug-toolbar.readthedocs.io/en/stable/installation.html#configure-internal-ips
 try:  # This might fail on some OS
     INTERNAL_IPS = [
-        '{0}.1'.format(ip[:ip.rfind('.')])
+        '{}.1'.format(ip[: ip.rfind('.')])
         for ip in socket.gethostbyname_ex(socket.gethostname())[2]
     ]
-except socket.error:  # pragma: no cover
+except OSError:  # pragma: no cover
     INTERNAL_IPS = []
 INTERNAL_IPS += ['127.0.0.1', '10.0.2.2']
 
@@ -92,8 +88,9 @@ def _custom_show_toolbar(request: HttpRequest) -> bool:
 
 
 DEBUG_TOOLBAR_CONFIG = {
-    'SHOW_TOOLBAR_CALLBACK':
-        'server.settings.environments.development._custom_show_toolbar',
+    'SHOW_TOOLBAR_CALLBACK': (
+        'server.settings.environments.development._custom_show_toolbar'
+    ),
 }
 
 # This will make debug toolbar to work with django-csp,
@@ -107,14 +104,12 @@ CSP_CONNECT_SRC += ("'self'",)
 # https://github.com/jmcarp/nplusone
 
 # Should be the first in line:
-MIDDLEWARE = (  # noqa: WPS440
-    'nplusone.ext.django.NPlusOneMiddleware',
-) + MIDDLEWARE
+MIDDLEWARE = ('nplusone.ext.django.NPlusOneMiddleware', *MIDDLEWARE)
 
 # Logging N+1 requests:
 NPLUSONE_RAISE = True  # comment out if you want to allow N+1 requests
 NPLUSONE_LOGGER = logging.getLogger('django')
-NPLUSONE_LOG_LEVEL = logging.WARN
+NPLUSONE_LOG_LEVEL = logging.WARNING
 NPLUSONE_WHITELIST = [
     {'model': 'admin.*'},
 ]
@@ -124,9 +119,7 @@ NPLUSONE_WHITELIST = [
 # https://github.com/wemake-services/django-test-migrations
 
 # Set of badly named migrations to ignore:
-DTM_IGNORED_MIGRATIONS = frozenset((
-    ('axes', '*'),
-))
+DTM_IGNORED_MIGRATIONS = frozenset((('axes', '*'),))
 
 
 # django-migration-linter

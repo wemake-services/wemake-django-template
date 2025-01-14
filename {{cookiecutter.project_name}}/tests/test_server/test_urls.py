@@ -41,10 +41,13 @@ def test_admin_docs_authorized(admin_client: Client) -> None:
     assert b'docutils' not in response.content
 
 
-@pytest.mark.parametrize('page', [
-    '/robots.txt',
-    '/humans.txt',
-])
+@pytest.mark.parametrize(
+    'page',
+    [
+        '/robots.txt',
+        '/humans.txt',
+    ],
+)
 def test_specials_txt(client: Client, page: str) -> None:
     """This test ensures that special `txt` files are accessible."""
     response = client.get(page)

@@ -9,7 +9,7 @@
 
 
 
-Bleeding edge `django4.2` template focused on code quality and security.
+Bleeding edge `django5.1` template focused on code quality and security.
 
 ---
 
@@ -22,11 +22,11 @@ Just like `django-admin.py startproject` but better.
 ## Features
 
 - Always [`up-to-date`](https://github.com/wemake-services/wemake-django-template/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Aapp%2Fdependabot) with the help of [`@dependabot`](https://dependabot.com/)
-- Supports latest `python3.11+`
-- [`poetry`](https://github.com/python-poetry/poetry) for managing dependencies
+- Supports latest `python3.12`
+- [`poetry@2`](https://github.com/python-poetry/poetry) for managing dependencies
 - [`mypy`](https://mypy.readthedocs.io) and [`django-stubs`](https://github.com/typeddjango/django-stubs) for static typing
 - [`pytest`](https://pytest.org/) and [`hypothesis`](https://github.com/HypothesisWorks/hypothesis) for unit tests
-- [`flake8`](http://flake8.pycqa.org/en/latest/) and [`wemake-python-styleguide`](https://wemake-python-styleguide.readthedocs.io/en/latest/) for linting
+- [`ruff`](https://docs.astral.sh/ruff) and [`wemake-python-styleguide`](https://wemake-python-styleguide.readthedocs.io/en/latest/) for linting
 - [`docker`](https://www.docker.com/) for development, testing, and production
 - [`sphinx`](http://www.sphinx-doc.org/en/master/) for documentation
 - [`Gitlab CI`](https://about.gitlab.com/gitlab-ci/) with full `build`, `test`, and `deploy` [pipeline configured by default](https://gitlab.com/sobolevn/wemake-django-template/-/pipelines)
