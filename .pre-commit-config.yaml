@@ -38,12 +38,6 @@ repos:
     hooks:
       - id: shellcheck
         args: ["--severity=style"]
-  - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.9.1
-    hooks:
-      - id: ruff
-        args: ["--exit-non-zero-on-fix"]
-      - id: ruff-format
 
   # Should be the last:
   - repo: meta
