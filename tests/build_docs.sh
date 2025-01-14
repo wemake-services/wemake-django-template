@@ -13,9 +13,14 @@ set -o pipefail
 run_cookiecutter_build "$GITHUB_WORKSPACE"
 cd "$PROJECT_PATH"
 
+# Install deps
+poetry install --only=main --only=docs
+
 # Build docs
-pwd
 make -C docs html
 
 # Move the result docs to the dest:
+ls .
+ls ../..
+pwd
 mv docs/_build ../..
