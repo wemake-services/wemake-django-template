@@ -29,7 +29,7 @@ wheel = "^0.45"
 
 
 [tool.poetry.group.dev.dependencies]
-django-debug-toolbar = "^4.4"
+django-debug-toolbar = "^5.0"
 django-migration-linter = "^5.1"
 django-extra-checks = "^0.16"
 django-query-counter = "^0.4"
