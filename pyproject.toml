@@ -30,7 +30,7 @@ pytest = "^8.3"
 pytest-randomly = "^3.16"
 pytest-cookies = "^0.7"
 
-docker-image-size-limit = "^2.0"
+docker-image-size-limit = "^2.1"
 tomli = "^2.2"
 
 
