@@ -8,6 +8,7 @@ on:
       - '.github/workflows/docs.yml'
       - 'tests/build_docs.sh'
       - '{{cookiecutter.project_name}}/docs/**/*'
+      - '{{cookiecutter.project_name}}/pyproject.toml'
   pull_request:
   workflow_dispatch:
 
@@ -44,6 +45,7 @@ jobs:
 
     - name: Deploy to Pages
       uses: JamesIves/github-pages-deploy-action@v4.7.2
+      if: github.event_name == 'push'
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         branch: gh-pages  # The branch the action should deploy to.
