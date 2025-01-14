@@ -1,4 +1,4 @@
-name: test
+name: docs
 
 on:
   push:
@@ -36,7 +36,7 @@ jobs:
         echo "$HOME/.local/bin" >> "$GITHUB_PATH"
 
     - name: Install dependencies
-      run: poetry install
+      run: poetry install --only=main --only=docs
 
     - name: Build docs
       run: poetry run bash tests/build_docs.sh
@@ -45,6 +45,6 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@v4.7.2
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        branch: gh-pages # The branch the action should deploy to.
-        folder: docs # The folder the action should deploy.
-        clean: true # Automatically remove deleted files from the deploy branch
+        branch: gh-pages  # The branch the action should deploy to.
+        folder: _build  # The folder the action should deploy.
+        clean: true  # Automatically remove deleted files from the deploy branch

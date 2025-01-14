@@ -15,4 +15,7 @@ cd "$PROJECT_PATH"
 
 # Build docs
 pwd
-poetry run make -C docs html
+make -C docs html
+
+# Move the result docs to the dest:
+mv docs/_build ../..
