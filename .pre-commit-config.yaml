@@ -20,6 +20,8 @@ repos:
       - id: check-github-workflows
       - id: check-github-actions
       - id: check-readthedocs
+      - id: check-gitlab-ci
+        args: ["--format-regex", "python"]
       - id: check-renovate
   - repo: https://github.com/rhysd/actionlint
     rev: v1.7.6
