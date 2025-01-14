@@ -6,10 +6,12 @@ on:
       - master
     paths:
       - '{{cookiecutter.project_name}}/docker/django/Dockerfile'
+      - '{{cookiecutter.project_name}}/docker/caddy/Dockerfile'
       - '.github/workflows/hadolint.yml'
   pull_request:
     paths:
       - '{{cookiecutter.project_name}}/docker/django/Dockerfile'
+      - '{{cookiecutter.project_name}}/docker/caddy/Dockerfile'
       - '.github/workflows/hadolint.yml'
   workflow_dispatch:
 
@@ -25,7 +27,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
       - uses: hadolint/hadolint-action@v3.1.0
         with:
           dockerfile: '{{cookiecutter.project_name}}/docker/django/Dockerfile'
+          failure-threshold: style
+      - uses: hadolint/hadolint-action@v3.1.0
+        with:
+          dockerfile: '{{cookiecutter.project_name}}/docker/caddy/Dockerfile'
           failure-threshold: style

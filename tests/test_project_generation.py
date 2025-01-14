@@ -7,43 +7,48 @@ https://github.com/pydanny/cookiecutter-django/blob/master/tests
 
 import os
 import re
+from pathlib import Path
+from typing import Final
 
 import pytest
 import tomli
 from binaryornot.check import is_binary
 from cookiecutter.exceptions import FailedHookException
+from pytest_cookies.plugin import Cookies
 
-RE_OBJ = re.compile(r'{{(\s?cookiecutter)[.](.*?)}}')
+_RE_OBJ: Final = re.compile(r'{{(\s?cookiecutter)[.](.*?)}}')
 
 
-def build_files_list(root_dir):
+def _build_files_list(root_dir: Path) -> list[Path]:
     """Build a list containing absolute paths to the generated files."""
     return [
-        os.path.join(dirpath, file_path)
-        for dirpath, _subdirs, files in os.walk(root_dir)
+        Path(dirpath) / file_path
+        for dirpath, _subdirs, files in os.walk(str(root_dir))
         for file_path in files
     ]
 
 
-def assert_variables_replaced(paths):
+def assert_variables_replaced(paths: list[Path]) -> None:
     """Method to check that all paths have correct substitutions."""
     assert paths, 'No files are generated'
 
     for path in paths:
-        if is_binary(path):
+        if is_binary(str(path)):
             continue
 
-        with open(path, 'r') as template_file:
-            file_contents = template_file.read()
+        file_contents = path.read_text()
 
-        match = RE_OBJ.search(file_contents)
+        match = _RE_OBJ.search(file_contents)
         msg = 'cookiecutter variable not replaced in {0} at {1}'
 
         # Assert that no match is found:
         assert match is None, msg.format(path, match.start())
 
 
-def test_with_default_configuration(cookies, context):
+def test_with_default_configuration(
+    cookies: Cookies,
+    context: dict[str, str],
+) -> None:
     """Tests project structure with default prompt values."""
     baked_project = cookies.bake(extra_context=context)
 
@@ -53,40 +58,54 @@ def test_with_default_configuration(cookies, context):
     assert baked_project.project_path.is_dir()
 
 
-def test_variables_replaced(cookies, context):
+def test_variables_replaced(
+    cookies: Cookies,
+    context: dict[str, str],
+) -> None:
     """Ensures that all variables are replaced inside project files."""
     baked_project = cookies.bake(extra_context=context)
-    paths = build_files_list(str(baked_project.project_path))
+    paths = _build_files_list(baked_project.project_path)
 
     assert_variables_replaced(paths)
 
 
-def test_pyproject_toml(cookies, context):
+def test_pyproject_toml(
+    cookies: Cookies,
+    context: dict[str, str],
+) -> None:
     """Ensures that all variables are replaced inside project files."""
     baked_project = cookies.bake(extra_context=context)
-    path = os.path.join(str(baked_project.project_path), 'pyproject.toml')
+    path = baked_project.project_path / 'pyproject.toml'
 
-    with open(path, mode='rb') as pyproject:
-        poetry = tomli.load(pyproject)['tool']['poetry']
+    pyproject = tomli.loads(path.read_text())
+    project = pyproject['tool']['poetry']
 
-    assert poetry['name'] == context['project_name']
-    assert poetry['description'] == context['project_verbose_name']
+    assert project['name'] == context['project_name']
+    assert project['description'] == context['project_verbose_name']
 
 
-@pytest.mark.parametrize(('prompt', 'entered_value'), [
-    ('project_name', 'myProject'),
-    ('project_name', 'my_project'),
-    ('project_name', '43project'),
-    ('project_name', '_test'),
-    ('project_name', 'test_'),
-    ('project_name', '1_test'),
-    ('project_name', 'test@'),
-    ('project_name', '0123456'),
-    ('project_domain', 'https://wemake.services'),
-    ('project_domain', 'wemake.services?search=python'),
-    ('project_domain', ''),
-])
-def test_validators_work(prompt, entered_value, cookies, context):
+@pytest.mark.parametrize(
+    ('prompt', 'entered_value'),
+    [
+        ('project_name', 'myProject'),
+        ('project_name', 'my_project'),
+        ('project_name', '43project'),
+        ('project_name', '_test'),
+        ('project_name', 'test_'),
+        ('project_name', '1_test'),
+        ('project_name', 'test@'),
+        ('project_name', '0123456'),
+        ('project_domain', 'https://wemake.services'),
+        ('project_domain', 'wemake.services?search=python'),
+        ('project_domain', ''),
+    ],
+)
+def test_validators_work(
+    prompt: str,
+    entered_value: str,
+    cookies: Cookies,
+    context: dict[str, str],
+) -> None:
     """Ensures that project can not be created with invalid name."""
     context.update({prompt: entered_value})
     baked_project = cookies.bake(extra_context=context)

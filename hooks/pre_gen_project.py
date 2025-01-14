@@ -1,14 +1,14 @@
 import re
 import sys
+from typing import Final
 from urllib.parse import urlparse
 
-MODULE_REGEX = r'^[a-z][a-z0-9\-]+[a-z0-9]$'
-MODULE_NAME = '{{ cookiecutter.project_name }}'
+MODULE_REGEX: Final = re.compile(r'^[a-z][a-z0-9\-]+[a-z0-9]$')
+MODULE_NAME: Final = '{{ cookiecutter.project_name }}'
+DOMAIN_NAME: Final = '{{ cookiecutter.project_domain }}'
 
-DOMAIN_NAME = '{{ cookiecutter.project_domain }}'
 
-
-def validate_project_name():
+def validate_project_name() -> None:
     """
     This validator is used to ensure that `project_name` is valid.
 
@@ -27,7 +27,7 @@ def validate_project_name():
         raise ValueError(' '.join(message).format(MODULE_NAME))
 
 
-def validate_domain():
+def validate_domain() -> None:
     """
     This validator is used to enforce correct `project_domain` inputs.
 
@@ -60,7 +60,7 @@ def validate_domain():
 
     if any(bool(part) for part in parts):
         raise ValueError(
-            'ERROR: `project_domain` should be a domain name only. ',
+            'ERROR: `project_domain` should be a domain name only.',
         )
 
 
