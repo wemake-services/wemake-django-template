@@ -119,7 +119,6 @@ ignore = [
 external = [ "WPS" ]
 
 # Plugin configs:
-flake8-import-conventions.banned-from = [ "ast" ]
 flake8-quotes.inline-quotes = "single"
 mccabe.max-complexity = 6
 pydocstyle.convention = "google"
