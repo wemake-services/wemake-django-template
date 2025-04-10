@@ -41,7 +41,7 @@ django-debug-toolbar = "^5.0"
 django-migration-linter = "^5.1"
 django-extra-checks = "^0.16"
 django-query-counter = "^0.4"
-nplusone = "^1.0"
+django-zeal = "^2.0.4"
 
 wemake-python-styleguide = "^1.0"
 ruff = "^0.9"

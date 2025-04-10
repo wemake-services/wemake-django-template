@@ -43,7 +43,7 @@ ALLOWED_HOSTS = [
 INSTALLED_APPS += (
     # Better debug:
     'debug_toolbar',
-    'nplusone.ext.django',
+    'zeal',
     # Linting migrations:
     'django_migration_linter',
     # django-test-migrations:
@@ -100,17 +100,16 @@ CSP_IMG_SRC += ('data:',)
 CSP_CONNECT_SRC += ("'self'",)
 
 
-# nplusone
-# https://github.com/jmcarp/nplusone
+# django-zeal
+# https://github.com/taobojlen/django-zeal
 
 # Should be the first in line:
-MIDDLEWARE = ('nplusone.ext.django.NPlusOneMiddleware', *MIDDLEWARE)
+MIDDLEWARE = ('zeal.middleware.zeal_middleware', *MIDDLEWARE)
 
 # Logging N+1 requests:
-NPLUSONE_RAISE = True  # comment out if you want to allow N+1 requests
-NPLUSONE_LOGGER = logging.getLogger('django')
-NPLUSONE_LOG_LEVEL = logging.WARNING
-NPLUSONE_WHITELIST = [
+ZEAL_RAISE = True  # comment out if you want to allow N+1 requests
+ZEAL_LOGGER = logging.getLogger('zeal')
+ZEAL_ALLOWLIST = [
     {'model': 'admin.*'},
 ]
 
