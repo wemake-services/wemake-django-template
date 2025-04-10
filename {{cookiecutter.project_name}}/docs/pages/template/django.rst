@@ -135,7 +135,7 @@ Development only extensions:
   display various debug information about the current request/response
 - `django-querycount`_ - middleware that prints the number
   of DB queries to the runserver console
-- `nplusone`_ - auto-detecting the `n+1 queries problem`_ in ``django``
+- `django-zeal`_ - auto-detecting the `n+1 queries problem`_ in ``django``
 
 .. _django-split-settings: https://github.com/sobolevn/django-split-settings
 .. _django-axes: https://github.com/jazzband/django-axes
@@ -150,7 +150,7 @@ Development only extensions:
 .. _zero-downtime-migrations: https://github.com/yandex/zero-downtime-migrations
 .. _django-debug-toolbar: https://github.com/jazzband/django-debug-toolbar
 .. _django-querycount: https://github.com/bradmontgomery/django-querycount
-.. _nplusone: https://github.com/jmcarp/nplusone
+.. _django-zeal: https://github.com/taobojlen/django-zeal
 .. _`n+1 queries problem`: https://stackoverflow.com/questions/97197/what-is-the-n1-select-query-issue
 
 
