@@ -7,7 +7,7 @@ from django.db.models import Model
 from django.test import Client
 from django.urls import reverse
 
-_MODEL_ADMIN_PARAMS = [
+_model_admin_params = [
     (site, model, model_admin)
     for site in all_sites
     for model, model_admin in site._registry.items()  # noqa: SLF001
@@ -16,15 +16,15 @@ _MODEL_ADMIN_PARAMS = [
 
 def _make_url(site, model: type[Model], page: str) -> str:
     """Generates a URL for the given admin site, model, and page."""
-    return reverse(
-        f'{site.name}:{model._meta.app_label}_{model._meta.model_name}_{page}'  # noqa: SLF001
-    )
+    app_label = model._meta.app_label  # noqa: SLF001
+    model_name = model._meta.model_name  # noqa: SLF001
+    return reverse(f'{site.name}:{app_label}_{model_name}_{page}')  # noqa: WPS221
 
 
 @pytest.mark.django_db
 @pytest.mark.parametrize(
     ('site', 'model', 'model_admin'),
-    _MODEL_ADMIN_PARAMS,
+    _model_admin_params,
 )
 def test_admin_changelist(
     admin_client: Client,
@@ -42,7 +42,7 @@ def test_admin_changelist(
 @pytest.mark.django_db
 @pytest.mark.parametrize(
     ('site', 'model', 'model_admin'),
-    _MODEL_ADMIN_PARAMS,
+    _model_admin_params,
 )
 def test_admin_add(
     admin_client: Client,
