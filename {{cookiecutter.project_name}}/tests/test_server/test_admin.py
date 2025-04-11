@@ -14,7 +14,7 @@ _model_admin_params = [
 ]
 
 
-def _make_url(site, model: type[Model], page: str) -> str:
+def _make_url(site: AdminSite, model: type[Model], page: str) -> str:
     """Generates a URL for the given admin site, model, and page."""
     app_label = model._meta.app_label  # noqa: SLF001
     model_name = model._meta.model_name  # noqa: SLF001
@@ -30,7 +30,7 @@ def test_admin_changelist(
     admin_client: Client,
     site: AdminSite,
     model: type[Model],
-    model_admin: type[ModelAdmin],
+    model_admin: type[ModelAdmin[Model]],
 ) -> None:
     """This test ensures that admin changelist pages are accessible."""
     url = _make_url(site, model, 'changelist')
@@ -48,7 +48,7 @@ def test_admin_add(
     admin_client: Client,
     site: AdminSite,
     model: type[Model],
-    model_admin: type[ModelAdmin],
+    model_admin: type[ModelAdmin[Model]],
 ) -> None:
     """This test ensures that admin add pages are accessible or restricted."""
     url = _make_url(site, model, 'add')
