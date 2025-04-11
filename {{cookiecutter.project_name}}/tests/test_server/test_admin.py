@@ -1,12 +1,23 @@
 from http import HTTPStatus
 
 import pytest
+from axes.models import AccessAttempt, AccessFailureLog, AccessLog
 from django.contrib.admin import AdminSite, ModelAdmin
 from django.contrib.admin.sites import all_sites
 from django.db.models import Model
 from django.test import Client
 from django.urls import reverse
 
+# Models that should have restricted (FORBIDDEN) admin add pages
+restricted_admin_add_models = {
+    AccessAttempt,
+    AccessLog,
+    AccessFailureLog,
+}
+
+# Creates a list of tuples containing all registered admin sites,
+# their associated models, and corresponding model admin classes
+# from the admin site's registry.
 _model_admin_params = [
     (site, model, model_admin)
     for site in all_sites
@@ -32,7 +43,7 @@ def test_admin_changelist(
     model: type[Model],
     model_admin: type[ModelAdmin[Model]],
 ) -> None:
-    """This test ensures that admin changelist pages are accessible."""
+    """Ensures that admin changelist pages are accessible."""
     url = _make_url(site, model, 'changelist')
     response = admin_client.get(url, {'q': 'something'})
 
@@ -50,8 +61,13 @@ def test_admin_add(
     model: type[Model],
     model_admin: type[ModelAdmin[Model]],
 ) -> None:
-    """This test ensures that admin add pages are accessible or restricted."""
+    """Ensures that admin add pages are accessible or restricted."""
     url = _make_url(site, model, 'add')
     response = admin_client.get(url)
+    expected_status = (
+        HTTPStatus.FORBIDDEN
+        if model in restricted_admin_add_models
+        else HTTPStatus.OK
+    )
 
-    assert response.status_code in {HTTPStatus.OK, HTTPStatus.FORBIDDEN}
+    assert response.status_code == expected_status

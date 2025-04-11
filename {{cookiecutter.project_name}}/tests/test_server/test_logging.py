@@ -28,7 +28,7 @@ def test_logging_format(
     caplog: pytest.LogCaptureFixture,
     logger: logging.Logger,
 ) -> None:
-    """This test ensures logging is done correctly."""
+    """Ensures logging is done correctly."""
     message = 'Test message'
 
     logger.error(message)
