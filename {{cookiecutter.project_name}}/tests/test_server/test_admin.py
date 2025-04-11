@@ -9,20 +9,20 @@ from django.test import Client
 from django.urls import reverse
 
 # Models that should have restricted (FORBIDDEN) admin add pages
-restricted_admin_add_models = {
+_RESTRICTED_ADMIN_ADD_MODELS = frozenset((
     AccessAttempt,
     AccessLog,
     AccessFailureLog,
-}
+))
 
 # Creates a list of tuples containing all registered admin sites,
 # their associated models, and corresponding model admin classes
 # from the admin site's registry.
-_model_admin_params = [
+_MODEL_ADMIN_PARAMS = tuple(
     (site, model, model_admin)
     for site in all_sites
     for model, model_admin in site._registry.items()  # noqa: SLF001
-]
+)
 
 
 def _make_url(site: AdminSite, model: type[Model], page: str) -> str:
@@ -35,7 +35,7 @@ def _make_url(site: AdminSite, model: type[Model], page: str) -> str:
 @pytest.mark.django_db
 @pytest.mark.parametrize(
     ('site', 'model', 'model_admin'),
-    _model_admin_params,
+    _MODEL_ADMIN_PARAMS,
 )
 def test_admin_changelist(
     admin_client: Client,
@@ -53,7 +53,7 @@ def test_admin_changelist(
 @pytest.mark.django_db
 @pytest.mark.parametrize(
     ('site', 'model', 'model_admin'),
-    _model_admin_params,
+    _MODEL_ADMIN_PARAMS,
 )
 def test_admin_add(
     admin_client: Client,
@@ -66,7 +66,7 @@ def test_admin_add(
     response = admin_client.get(url)
     expected_status = (
         HTTPStatus.FORBIDDEN
-        if model in restricted_admin_add_models
+        if model in _RESTRICTED_ADMIN_ADD_MODELS
         else HTTPStatus.OK
     )
 
