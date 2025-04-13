@@ -98,7 +98,7 @@ line-length = 80
 
 [tool.ruff.format]
 quote-style = "single"
-docstring-code-format = false
+docstring-code-format = true
 
 [tool.ruff.lint]
 select = [
