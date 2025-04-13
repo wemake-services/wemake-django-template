@@ -21,7 +21,7 @@ classifiers = [
 
 
 [tool.poetry.dependencies]
-django = { version = "^5.1", extras = ["argon2"] }
+django = { version = ">=5.1,<5.2", extras = ["argon2"] }
 django-split-settings = "^1.3"
 django-axes = "^7.0"
 django-csp = "^3.8"
