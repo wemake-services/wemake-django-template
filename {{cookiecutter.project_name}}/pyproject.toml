@@ -29,7 +29,7 @@ django-health-check = "^3.18"
 django-permissions-policy = "^4.24"
 django-stubs-ext = "^5.1"
 
-psycopg2-binary = "^2.9"
+psycopg = { extras = ["binary", "pool"], version = "^3.2" }
 gunicorn = "^23.0"
 python-decouple = "^3.8"
 structlog = "^24.4"
