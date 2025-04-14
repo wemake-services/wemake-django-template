@@ -726,6 +726,26 @@ django = ">=4.2.9"
 sqlparse = ">=0.2"
 
 [[package]]
+name = "django-drifter"
+version = "0.1.2"
+description = "More migration commands to make development life simpler"
+optional = false
+python-versions = ">=3.10"
+groups = ["dev"]
+files = [
+    {file = "django_drifter-0.1.2-py3-none-any.whl", hash = "sha256:292f9a97de6a26cecf7e336814227a6bc5d1579e2cf6428ca23839ae83627dd7"},
+    {file = "django_drifter-0.1.2.tar.gz", hash = "sha256:e7401c147cc274dc23f7a3bca7a3fd2ae3199833833eec1b2f1f152f2d7d8da1"},
+]
+
+[package.dependencies]
+django = "*"
+flit = ">=3.2,<4"
+
+[package.extras]
+development = ["django-stubs", "interrogate", "pyright", "ruff"]
+testing = ["coverage", "pytest", "pytest-cov", "pytest-django", "pytest-randomly", "pytest-xdist", "tox"]
+
+[[package]]
 name = "django-extra-checks"
 version = "0.16.1"
 description = "Collection of useful checks for Django Checks Framework"
@@ -1087,6 +1107,41 @@ files = [
 mccabe = ">=0.7.0,<0.8.0"
 pycodestyle = ">=2.13.0,<2.14.0"
 pyflakes = ">=3.3.0,<3.4.0"
+
+[[package]]
+name = "flit"
+version = "3.12.0"
+description = "A simple packaging tool for simple packages."
+optional = false
+python-versions = ">=3.8"
+groups = ["dev"]
+files = [
+    {file = "flit-3.12.0-py3-none-any.whl", hash = "sha256:2b4e7171dc22881fa6adc2dbf083e5ecc72520be3cd7587d2a803da94d6ef431"},
+    {file = "flit-3.12.0.tar.gz", hash = "sha256:1c80f34dd96992e7758b40423d2809f48f640ca285d0b7821825e50745ec3740"},
+]
+
+[package.dependencies]
+docutils = "*"
+flit_core = ">=3.12.0"
+pip = "*"
+requests = "*"
+tomli-w = "*"
+
+[package.extras]
+doc = ["pygments-github-lexers", "sphinx", "sphinxcontrib_github_alt"]
+test = ["pytest (>=2.7.3)", "pytest-cov", "responses", "testpath", "tomli"]
+
+[[package]]
+name = "flit-core"
+version = "3.12.0"
+description = "Distribution-building parts of Flit. See flit package for more information"
+optional = false
+python-versions = ">=3.6"
+groups = ["dev"]
+files = [
+    {file = "flit_core-3.12.0-py3-none-any.whl", hash = "sha256:e7a0304069ea895172e3c7bb703292e992c5d1555dd1233ab7b5621b5b69e62c"},
+    {file = "flit_core-3.12.0.tar.gz", hash = "sha256:18f63100d6f94385c6ed57a72073443e1a71a4acb4339491615d0f16d6ff01b2"},
+]
 
 [[package]]
 name = "furo"
@@ -1682,6 +1737,18 @@ files = [
 
 [package.dependencies]
 ptyprocess = ">=0.5"
+
+[[package]]
+name = "pip"
+version = "25.0.1"
+description = "The PyPA recommended tool for installing Python packages."
+optional = false
+python-versions = ">=3.8"
+groups = ["dev"]
+files = [
+    {file = "pip-25.0.1-py3-none-any.whl", hash = "sha256:c46efd13b6aa8279f33f2864459c8ce587ea6a1a59ee20de055868d8f7688f7f"},
+    {file = "pip-25.0.1.tar.gz", hash = "sha256:88f96547ea48b940a3a385494e181e29fb8637898f88d88737c5049780f196ea"},
+]
 
 [[package]]
 name = "pluggy"
@@ -2998,6 +3065,18 @@ files = [
 ]
 
 [[package]]
+name = "tomli-w"
+version = "1.2.0"
+description = "A lil' TOML writer"
+optional = false
+python-versions = ">=3.9"
+groups = ["dev"]
+files = [
+    {file = "tomli_w-1.2.0-py3-none-any.whl", hash = "sha256:188306098d013b691fcadc011abd66727d3c414c571bb01b1a174ba8c983cf90"},
+    {file = "tomli_w-1.2.0.tar.gz", hash = "sha256:2dd14fac5a47c27be9cd4c976af5a12d87fb1f0b4512f81d69cce3b35ae25021"},
+]
+
+[[package]]
 name = "tqdm"
 version = "4.67.1"
 description = "Fast, Extensible Progress Meter"
@@ -3174,4 +3253,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "sphinx"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">3.12,<3.13"
-content-hash = "6acd99a4e103ecb2dc443b7d5401cb626f6c564805e41f64378f6f0a81a9464d"
+content-hash = "10134a1c29120fd14f6dadfd709f0b7abe5d643c840002927ea1ea22a77ce67b"

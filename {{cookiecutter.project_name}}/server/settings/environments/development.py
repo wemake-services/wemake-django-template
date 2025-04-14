@@ -58,6 +58,8 @@ INSTALLED_APPS += (
     'extra_checks',
     # django-query-counter:
     'query_counter',
+    # django-drifter:
+    'drifter',
 )
 
 
