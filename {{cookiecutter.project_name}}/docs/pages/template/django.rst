@@ -136,6 +136,8 @@ Development only extensions:
 - `django-querycount`_ - middleware that prints the number
   of DB queries to the runserver console
 - `django-zeal`_ - auto-detecting the `n+1 queries problem`_ in ``django``
+- `django-drifter`_ - this package allows to easily manage
+  database migrations using management commands
 
 .. _django-split-settings: https://github.com/sobolevn/django-split-settings
 .. _django-axes: https://github.com/jazzband/django-axes
@@ -152,6 +154,7 @@ Development only extensions:
 .. _django-querycount: https://github.com/bradmontgomery/django-querycount
 .. _django-zeal: https://github.com/taobojlen/django-zeal
 .. _`n+1 queries problem`: https://stackoverflow.com/questions/97197/what-is-the-n1-select-query-issue
+.. _`django-drifter`: https://github.com/kennethlove/django-drifter
 
 
 Further reading
