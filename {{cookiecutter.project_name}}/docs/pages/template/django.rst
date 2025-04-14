@@ -136,8 +136,8 @@ Development only extensions:
 - `django-querycount`_ - middleware that prints the number
   of DB queries to the runserver console
 - `django-zeal`_ - auto-detecting the `n+1 queries problem`_ in ``django``
-- `django-drifter`_ - this package allows to easily manage
-  database migrations using management commands
+- `django-drifter`_ - provide custom ``django`` management commands
+  to manage database migrations
 
 .. _django-split-settings: https://github.com/sobolevn/django-split-settings
 .. _django-axes: https://github.com/jazzband/django-axes
