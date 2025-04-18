@@ -16,6 +16,12 @@ services:
     networks:
       - postgres-net
     env_file: ./config/.env
+    healthcheck:
+      test: pg_isready
+      interval: 5s
+      timeout: 30s
+      retries: 5
+      start_period: 5s
 
   web:
     <<: &web
@@ -35,7 +41,8 @@ services:
       volumes:
         - django-static:/var/www/django/static
       depends_on:
-        - db
+        db:
+          condition: service_healthy
       networks:
         - web-net
         - postgres-net

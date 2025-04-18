@@ -46,7 +46,6 @@ RUN apt-get update && apt-get upgrade -y \
     gettext \
     git \
     libpq-dev \
-    wait-for-it \
   # Installing `tini` utility:
   # https://github.com/krallin/tini
   # Get architecture to download appropriate tini release:
