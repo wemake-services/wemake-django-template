@@ -110,7 +110,8 @@ MIDDLEWARE = ('zeal.middleware.zeal_middleware', *MIDDLEWARE)
 
 # Logging N+1 requests:
 ZEAL_RAISE = True  # comment out if you want to allow N+1 requests
-ZEAL_LOGGER = logging.getLogger('zeal')
+ZEAL_SHOW_ALL_CALLERS = True
+ZEAL_LOGGER = logging.getLogger('django')
 ZEAL_ALLOWLIST = [
     {'model': 'admin.*'},
 ]
