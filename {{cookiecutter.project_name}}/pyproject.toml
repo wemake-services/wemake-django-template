@@ -44,8 +44,8 @@ django-query-counter = "^0.4"
 django-zeal = "^2.0"
 django-drifter = "^0.1"
 
-wemake-python-styleguide = "^1.0"
-ruff = "^0.9"
+wemake-python-styleguide = "^1.1"
+ruff = "^0.11"
 doc8 = "^1.1"
 
 pytest = "^8.3"
@@ -55,10 +55,10 @@ covdefaults = "^2.3"
 django-coverage-plugin = "^3.1"
 pytest-randomly = "^3.16"
 pytest-timeout = "^2.3"
-django-test-migrations = "^1.3"
+django-test-migrations = "^1.5"
 hypothesis = "^6.123"
 
-django-stubs = { version = "^5.1", extras = ["compatible-mypy"] }
+django-stubs = { version = ">=5.1,<5.2", extras = ["compatible-mypy"] }
 
 djlint = "^1.36"
 yamllint = "^1.35"
@@ -164,7 +164,6 @@ ignore = [
 external = [ "WPS" ]
 
 # Plugin configs:
-flake8-import-conventions.banned-from = [ "ast" ]
 flake8-quotes.inline-quotes = "single"
 mccabe.max-complexity = 6
 pydocstyle.convention = "google"
