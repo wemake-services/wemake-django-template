@@ -151,6 +151,7 @@ addopts = [
 # The mypy configurations: http://bit.ly/2zEl9WI
 ignore_missing_imports = true
 strict = true
+strict_bytes = true
 local_partial_types = true
 warn_unreachable = true
 
