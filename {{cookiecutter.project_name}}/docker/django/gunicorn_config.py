@@ -52,15 +52,15 @@ class GunicornConfigError(Exception):
         )
 
 
-try:
-    GUNICORN_WSGI_SETTINGS = literal_eval(
-        os.getenv('GUNICORN_WSGI_SETTINGS', '')
-    )
-except (ValueError, SyntaxError):
-    raise GunicornConfigError(
-        'Error loading WSGI gunicorn config from environment variables',
-        'GUNICORN_WSGI_SETTINGS',
-    ) from None
+GUNICORN_WSGI_SETTINGS = {}
+if env_value := os.getenv('GUNICORN_WSGI_SETTINGS', ''):
+    try:
+        GUNICORN_WSGI_SETTINGS = literal_eval(env_value)
+    except (ValueError, SyntaxError) as e:
+        raise GunicornConfigError(
+            'Error loading WSGI gunicorn config from environment variables',
+            'GUNICORN_WSGI_SETTINGS',
+        ) from None
 
 
 GUNICORN_WSGI_DEFAULTS: MappingProxyType[str, Any] = MappingProxyType({
