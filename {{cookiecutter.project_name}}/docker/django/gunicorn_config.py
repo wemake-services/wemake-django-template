@@ -86,7 +86,7 @@ GUNICORN_WSGI_DEFAULTS: MappingProxyType[str, Any] = MappingProxyType({
     'errorlog': '-',
     'loglevel': 'info',
     'preload_app': False,
-    'wsgi_app': 'config.wsgi:application',
+    'wsgi_app': 'server.wsgi.application',
     'workers': 1,
     'worker_class': 'sync',
     'threads': 1,
