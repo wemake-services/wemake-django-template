@@ -110,7 +110,9 @@ wsgi_app = GUNICORN_WSGI_SETTINGS.get(
 bind = GUNICORN_WSGI_SETTINGS.get('bind', GUNICORN_WSGI_DEFAULTS['bind'])
 
 # https://docs.gunicorn.org/en/22.0.0/settings.html#worker-processes
-workers = GUNICORN_WSGI_SETTINGS['workers']
+workers = GUNICORN_WSGI_SETTINGS.get(
+    'workers', GUNICORN_WSGI_DEFAULTS['workers']
+)
 worker_class = GUNICORN_WSGI_SETTINGS.get(
     'worker_class', GUNICORN_WSGI_DEFAULTS['worker_class']
 )
