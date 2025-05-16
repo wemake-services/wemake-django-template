@@ -26,7 +26,7 @@ For more details on available Gunicorn configuration parameters, see: https://do
 import os
 from ast import literal_eval
 from types import MappingProxyType
-from typing import Any, override
+from typing import Any, cast, override
 
 
 class GunicornConfigError(Exception):
@@ -59,7 +59,13 @@ def _load_gunicorn_settings() -> dict[str, Any]:
         return {}
 
     try:
-        return literal_eval(env_value)
+        result = literal_eval(env_value)
+        if not isinstance(result, dict):
+            raise GunicornConfigError(
+                'GUNICORN_WSGI_SETTINGS must evaluate to a dictionary',
+                'GUNICORN_WSGI_SETTINGS',
+            )
+        return cast(dict[str, Any], result)
     except (ValueError, SyntaxError):
         raise GunicornConfigError(
             'Error loading WSGI gunicorn config from environment variables',
