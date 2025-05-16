@@ -56,7 +56,7 @@ GUNICORN_WSGI_SETTINGS = {}
 if env_value := os.getenv('GUNICORN_WSGI_SETTINGS', ''):
     try:
         GUNICORN_WSGI_SETTINGS = literal_eval(env_value)
-    except (ValueError, SyntaxError) as e:
+    except (ValueError, SyntaxError):
         raise GunicornConfigError(
             'Error loading WSGI gunicorn config from environment variables',
             'GUNICORN_WSGI_SETTINGS',
