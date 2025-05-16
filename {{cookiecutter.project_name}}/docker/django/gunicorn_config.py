@@ -52,7 +52,7 @@ class GunicornConfigError(Exception):
 
 try:
     GUNICORN_WSGI_SETTINGS = literal_eval(os.getenv('GUNICORN_WSGI_SETTINGS'))
-except (ValueError, SyntaxError) as e:
+except (ValueError, SyntaxError):
     raise GunicornConfigError(
         'Error loading WSGI gunicorn config from environment variables', 'GUNICORN_WSGI_SETTINGS'
     ) from None
