@@ -59,18 +59,20 @@ def _load_gunicorn_settings() -> dict[str, Any]:
         return {}
 
     try:
-        result = literal_eval(env_value)
-        if not isinstance(result, dict):
-            raise GunicornConfigError(
-                'GUNICORN_WSGI_SETTINGS must evaluate to a dictionary',
-                'GUNICORN_WSGI_SETTINGS',
-            )
-        return cast(dict[str, Any], result)
-    except (ValueError, SyntaxError):
+        settings_dict = literal_eval(env_value)
+    except (ValueError, SyntaxError) as exc:
         raise GunicornConfigError(
             'Error loading WSGI gunicorn config from environment variables',
             'GUNICORN_WSGI_SETTINGS',
-        ) from None
+        ) from exc
+
+    if not isinstance(settings_dict, dict):
+        raise GunicornConfigError(
+            'GUNICORN_WSGI_SETTINGS must evaluate to a dictionary',
+            'GUNICORN_WSGI_SETTINGS',
+        )
+
+    return cast(dict[str, Any], settings_dict)
 
 
 GUNICORN_WSGI_SETTINGS: MappingProxyType[str, Any] = MappingProxyType(
