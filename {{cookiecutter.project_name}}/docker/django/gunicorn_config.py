@@ -55,7 +55,7 @@ try:
 except (ValueError, SyntaxError):
     raise GunicornConfigError(
         'Error loading WSGI gunicorn config from environment variables',
-        'GUNICORN_WSGI_SETTINGS'
+        'GUNICORN_WSGI_SETTINGS',
     ) from None
 
 
