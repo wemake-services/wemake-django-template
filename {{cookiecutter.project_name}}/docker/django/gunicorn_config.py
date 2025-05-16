@@ -114,4 +114,3 @@ loglevel = GUNICORN_WSGI_SETTINGS.get('loglevel', GUNICORN_WSGI_DEFAULTS['loglev
 preload_app = GUNICORN_WSGI_SETTINGS.get('preload_app', GUNICORN_WSGI_DEFAULTS['preload_app'])
 chdir = GUNICORN_WSGI_SETTINGS.get('chdir', GUNICORN_WSGI_DEFAULTS['chdir'])
 worker_tmp_dir = GUNICORN_WSGI_SETTINGS.get('worker_tmp_dir', GUNICORN_WSGI_DEFAULTS['worker_tmp_dir'])
-
