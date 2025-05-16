@@ -26,7 +26,7 @@ For more details on available Gunicorn configuration parameters, see: https://do
 import os
 from ast import literal_eval
 from types import MappingProxyType
-from typing import Any
+from typing import Any, override
 
 
 class GunicornConfigError(Exception):
@@ -42,6 +42,7 @@ class GunicornConfigError(Exception):
         self.env_name = env_name
         super().__init__(self.message)
 
+    @override
     def __str__(self) -> str:
         current_env_value = os.getenv(self.env_name, 'Not set')
         return (
@@ -52,7 +53,7 @@ class GunicornConfigError(Exception):
 
 
 try:
-    GUNICORN_WSGI_SETTINGS = literal_eval(os.getenv('GUNICORN_WSGI_SETTINGS'))
+    GUNICORN_WSGI_SETTINGS = literal_eval(os.getenv('GUNICORN_WSGI_SETTINGS', ''))
 except (ValueError, SyntaxError):
     raise GunicornConfigError(
         'Error loading WSGI gunicorn config from environment variables',
