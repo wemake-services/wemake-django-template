@@ -26,6 +26,7 @@ For more details on available Gunicorn configuration parameters, see: https://do
 import os
 from ast import literal_eval
 from typing import Any
+from types import MappingProxyType
 
 
 class GunicornConfigError(Exception):
@@ -44,7 +45,7 @@ class GunicornConfigError(Exception):
     def __str__(self) -> str:
         current_env_value = os.getenv(self.env_name, 'Not set')
         return (
-            f'{self.__class__.__name__}: {self.message}\n'
+            f'GunicornConfigError: {self.message}\n'
             f'Environment variable: {self.env_name}\n'
             f'Current value: {current_env_value}\n'
         )
@@ -59,7 +60,7 @@ except (ValueError, SyntaxError):
     ) from None
 
 
-GUNICORN_WSGI_DEFAULTS: dict[str, Any] = {
+GUNICORN_WSGI_DEFAULTS: MappingProxyType[str, Any] = MappingProxyType({
     'accesslog': '-',
     'access_log_format': '%({X-Real-IP}i)s %(h)s %(l)s %(u)s %(t)s %(r)s %(s)s %(b)s %(f)s %(a)s %(L)s %(p)s',
     'errorlog': '-',
@@ -78,7 +79,7 @@ GUNICORN_WSGI_DEFAULTS: dict[str, Any] = {
     'bind': '0.0.0.0:8000',
     'chdir': '/code',
     'worker_tmp_dir': '/dev/shm',
-}
+})
 
 # https://docs.gunicorn.org/en/22.0.0/settings.html#wsgi-app
 wsgi_app = GUNICORN_WSGI_SETTINGS.get(
