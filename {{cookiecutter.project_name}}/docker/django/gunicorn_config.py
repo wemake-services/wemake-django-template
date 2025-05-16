@@ -13,7 +13,7 @@ specifying the Gunicorn launch parameters.
 Example of the environment variable:
 
 ```
-GUNICORN_WSGI_SETTINGS='{"wsgi_app": "config.wsgi:application", "workers": 4, "bind": "0.0.0.0:8000", "accesslog": "-"}'
+GUNICORN_WSGI_SETTINGS = '{"wsgi_app": "config.wsgi:application", "workers": 4, "bind": "0.0.0.0:8000", "accesslog": "-"}'
 ```
 
 The available configuration parameters are listed https://docs.gunicorn.org/en/22.0.0/settings.html.
@@ -54,7 +54,8 @@ try:
     GUNICORN_WSGI_SETTINGS = literal_eval(os.getenv('GUNICORN_WSGI_SETTINGS'))
 except (ValueError, SyntaxError):
     raise GunicornConfigError(
-        'Error loading WSGI gunicorn config from environment variables', 'GUNICORN_WSGI_SETTINGS'
+        'Error loading WSGI gunicorn config from environment variables',
+        'GUNICORN_WSGI_SETTINGS'
     ) from None
 
 
@@ -80,37 +81,59 @@ GUNICORN_WSGI_DEFAULTS: dict[str, Any] = {
 }
 
 # https://docs.gunicorn.org/en/22.0.0/settings.html#wsgi-app
-wsgi_app = GUNICORN_WSGI_SETTINGS.get('wsgi_app', GUNICORN_WSGI_DEFAULTS['wsgi_app'])
+wsgi_app = GUNICORN_WSGI_SETTINGS.get(
+    'wsgi_app', GUNICORN_WSGI_DEFAULTS['wsgi_app']
+)
 
 # https://docs.gunicorn.org/en/22.0.0/settings.html#bind
 bind = GUNICORN_WSGI_SETTINGS.get('bind', GUNICORN_WSGI_DEFAULTS['bind'])
 
 # https://docs.gunicorn.org/en/22.0.0/settings.html#worker-processes
 workers = GUNICORN_WSGI_SETTINGS['workers']
-worker_class = GUNICORN_WSGI_SETTINGS.get('worker_class', GUNICORN_WSGI_DEFAULTS['worker_class'])
-threads = GUNICORN_WSGI_SETTINGS.get('threads', GUNICORN_WSGI_DEFAULTS['threads'])
+worker_class = GUNICORN_WSGI_SETTINGS.get(
+    'worker_class', GUNICORN_WSGI_DEFAULTS['worker_class']
+)
+threads = GUNICORN_WSGI_SETTINGS.get(
+    'threads', GUNICORN_WSGI_DEFAULTS['threads']
+)
 worker_connections = GUNICORN_WSGI_SETTINGS.get(
     'worker_connections', GUNICORN_WSGI_DEFAULTS['worker_connections']
 )
-max_requests = GUNICORN_WSGI_SETTINGS.get('max_requests', GUNICORN_WSGI_DEFAULTS['max_requests'])
+max_requests = GUNICORN_WSGI_SETTINGS.get(
+    'max_requests', GUNICORN_WSGI_DEFAULTS['max_requests']
+)
 max_requests_jitter = GUNICORN_WSGI_SETTINGS.get(
     'max_requests_jitter', GUNICORN_WSGI_DEFAULTS['max_requests_jitter']
 )
-timeout = GUNICORN_WSGI_SETTINGS.get('timeout', GUNICORN_WSGI_DEFAULTS['timeout'])
+timeout = GUNICORN_WSGI_SETTINGS.get(
+    'timeout', GUNICORN_WSGI_DEFAULTS['timeout']
+)
 graceful_timeout = GUNICORN_WSGI_SETTINGS.get(
     'graceful_timeout', GUNICORN_WSGI_DEFAULTS['graceful_timeout']
 )
-keepalive = GUNICORN_WSGI_SETTINGS.get('keepalive', GUNICORN_WSGI_DEFAULTS['keepalive'])
+keepalive = GUNICORN_WSGI_SETTINGS.get(
+    'keepalive', GUNICORN_WSGI_DEFAULTS['keepalive']
+)
 
 # https://docs.gunicorn.org/en/22.0.0/settings.html#logging
-accesslog = GUNICORN_WSGI_SETTINGS.get('accesslog', GUNICORN_WSGI_DEFAULTS['accesslog'])
+accesslog = GUNICORN_WSGI_SETTINGS.get(
+    'accesslog', GUNICORN_WSGI_DEFAULTS['accesslog']
+)
 access_log_format = GUNICORN_WSGI_SETTINGS.get(
     'access_log_format', GUNICORN_WSGI_DEFAULTS['access_log_format']
 )
-errorlog = GUNICORN_WSGI_SETTINGS.get('errorlog', GUNICORN_WSGI_DEFAULTS['errorlog'])
-loglevel = GUNICORN_WSGI_SETTINGS.get('loglevel', GUNICORN_WSGI_DEFAULTS['loglevel'])
+errorlog = GUNICORN_WSGI_SETTINGS.get(
+    'errorlog', GUNICORN_WSGI_DEFAULTS['errorlog']
+)
+loglevel = GUNICORN_WSGI_SETTINGS.get(
+    'loglevel', GUNICORN_WSGI_DEFAULTS['loglevel']
+)
 
 # https://docs.gunicorn.org/en/22.0.0/settings.html#server-mechanics
-preload_app = GUNICORN_WSGI_SETTINGS.get('preload_app', GUNICORN_WSGI_DEFAULTS['preload_app'])
+preload_app = GUNICORN_WSGI_SETTINGS.get(
+    'preload_app', GUNICORN_WSGI_DEFAULTS['preload_app']
+)
 chdir = GUNICORN_WSGI_SETTINGS.get('chdir', GUNICORN_WSGI_DEFAULTS['chdir'])
-worker_tmp_dir = GUNICORN_WSGI_SETTINGS.get('worker_tmp_dir', GUNICORN_WSGI_DEFAULTS['worker_tmp_dir'])
+worker_tmp_dir = GUNICORN_WSGI_SETTINGS.get(
+    'worker_tmp_dir', GUNICORN_WSGI_DEFAULTS['worker_tmp_dir']
+)
