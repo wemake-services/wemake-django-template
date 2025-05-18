@@ -29,6 +29,7 @@ from types import MappingProxyType
 from typing import Any, cast, override
 
 
+@final
 class GunicornConfigError(Exception):
     """
     Raised when the Gunicorn configuration environment variable is invalid.
