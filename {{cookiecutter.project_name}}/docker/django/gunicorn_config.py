@@ -23,8 +23,8 @@ and the value from the environment variable should be assigned in this file.
 For more details on available Gunicorn configuration parameters, see: https://docs.gunicorn.org/en/22.0.0/settings.html
 """
 
-import os
 import multiprocessing
+import os
 from ast import literal_eval
 from types import MappingProxyType
 from typing import Any, cast, final, override
