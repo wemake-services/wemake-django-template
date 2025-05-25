@@ -24,6 +24,7 @@ For more details on available Gunicorn configuration parameters, see: https://do
 """
 
 import os
+import multiprocessing
 from ast import literal_eval
 from types import MappingProxyType
 from typing import Any, cast, final, override
@@ -88,7 +89,7 @@ GUNICORN_WSGI_DEFAULTS: MappingProxyType[str, Any] = MappingProxyType({
     'loglevel': 'info',
     'preload_app': False,
     'wsgi_app': 'server.wsgi.application',
-    'workers': 1,
+    'workers': multiprocessing.cpu_count() * 2 + 1,
     'worker_class': 'sync',
     'threads': 1,
     'worker_connections': 1000,
