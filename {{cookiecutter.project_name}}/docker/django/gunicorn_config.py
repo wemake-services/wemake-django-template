@@ -26,7 +26,7 @@ For more details on available Gunicorn configuration parameters, see: https://do
 import os
 from ast import literal_eval
 from types import MappingProxyType
-from typing import Any, final, cast, override
+from typing import Any, cast, final, override
 
 
 @final
