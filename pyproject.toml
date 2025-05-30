@@ -34,7 +34,7 @@ wemake-python-styleguide = "^1.1"
 ruff = "^0.11"
 docker-image-size-limit = "^2.1"
 
-mypy = "^1.15"
+mypy = "^1.16"
 
 pytest = "^8.3"
 pytest-randomly = "^3.16"
