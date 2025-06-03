@@ -36,7 +36,7 @@ docker-image-size-limit = "^2.1"
 
 mypy = "^1.16"
 
-pytest = "^8.3"
+pytest = "^8.4"
 pytest-randomly = "^3.16"
 pytest-cookies = "^0.7"
 
