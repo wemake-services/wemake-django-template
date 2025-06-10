@@ -38,7 +38,15 @@ Just like `django-admin.py startproject` but better.
 
 Firstly, you will need to install [dependencies](https://cookiecutter.readthedocs.io/en/latest/).
 
-The recommended way is via [`pipx`](https://github.com/pypa/pipx):
+The recommended way is via [`uvx`](https://docs.astral.sh/uv/guides/tools):
+
+```bash
+uvx --with jinja2-git cookiecutter gh:wemake-services/wemake-django-template
+```
+
+---
+
+Or via [`pipx`](https://github.com/pypa/pipx):
 
 ```bash
 pipx install cookiecutter
