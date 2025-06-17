@@ -57,13 +57,9 @@ for our main template repository.
 Static analysis
 ---------------
 
-We use ``wemake-python-styleguide`` which
-includes `bandit <https://pypi.org/project/bandit/>`_ security checks inside.
-
-You can also install `pyt <https://pyt.readthedocs.io>`_
-which is not included by default.
-It will include even more static checks for
-``sql`` injections, ``xss`` and others.
+We use ``wemake-python-styleguide`` which has multiple security-based rules.
+And ``ruff`` which includes `bandit <https://pypi.org/project/bandit/>`_
+with security checks inside.
 
 
 Dynamic analysis
