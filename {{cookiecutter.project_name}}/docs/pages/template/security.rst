@@ -20,7 +20,6 @@ to enforce even more security rules:
 
 - `django-axes <https://github.com/jazzband/django-axes>`_ to track and ban repeating access requests
 - `django-csp <https://github.com/mozilla/django-csp>`_ to enforce `Content-Security Policy <https://www.w3.org/TR/CSP/>`_ for our webpages
-- `django-http-referrer-policy <https://django-referrer-policy.readthedocs.io>`_ to enforce `Referrer Policy <https://www.w3.org/TR/referrer-policy/>`_ for our webpages
 
 And there are also some awesome extensions that are not included:
 
@@ -68,7 +67,7 @@ Dynamic analysis
 You can monitor your running application to detect anomalous activities.
 Tools to consider:
 
-- `dagda <https://github.com/eliasgranderubio/dagda>`_ - a tool to perform static analysis of known vulnerabilities, trojans, viruses, malware & other malicious threats in docker images/containers and to monitor the docker daemon and running docker containers for detecting anomalous activities
+- `clair <https://github.com/quay/clair>`_ - a tool to perform static analysis of known vulnerabilities, trojans, viruses, malware & other malicious threats in docker images/containers and to monitor the docker daemon and running docker containers for detecting anomalous activities
 
 All the tools above are not included into this template.
 You have to install them by yourself.
