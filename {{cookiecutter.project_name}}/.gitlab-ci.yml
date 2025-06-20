@@ -53,9 +53,8 @@ test:
       -f docker/docker-compose.prod.yml config --quiet
 
     # Build and run tests:
-    - docker compose build
-      --build-arg BUILDKIT_INLINE_CACHE=1
-      --progress=plain web
+    - docker compose --progress=plain build
+      --build-arg BUILDKIT_INLINE_CACHE=1 web
     - docker compose run --user=root --rm web ./docker/django/ci.sh
 
     # Check the result image size:
