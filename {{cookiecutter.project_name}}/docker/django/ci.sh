@@ -34,7 +34,7 @@ run_ci () {
   dotenv-linter config/.env config/.env.template
 
   # Running linting for all python files in the project:
-  ruff check --exit-non-zero-on-fix --diff
+  ruff check --exit-non-zero-on-fix
   ruff format --check --diff
   flake8 .
 
