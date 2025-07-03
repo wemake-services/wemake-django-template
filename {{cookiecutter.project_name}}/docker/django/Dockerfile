@@ -98,6 +98,6 @@ ENTRYPOINT ["tini", "--", "/docker-entrypoint.sh"]
 
 
 # The following stage is only for production:
-# https://wemake-django-template.readthedocs.io/en/latest/pages/template/production.html
+# https://wemake-services.github.io/wemake-django-template/pages/template/production.html
 FROM development_build AS production_build
 COPY --chown=web:web . /code

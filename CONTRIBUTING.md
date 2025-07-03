@@ -38,14 +38,6 @@ pytest
 ```
 
 
-## Gitlab pipelines
-
-[![pipeline status](https://gitlab.com/sobolevn/wemake-django-template/badges/master/pipeline.svg)](https://gitlab.com/sobolevn/wemake-django-template/-/commits/master)
-
-We also use Gitlab to run our full build / test pipelines on every `.gitlab-ci.yml` changes.
-It is required to make sure we have a valid CI definition.
-
-
 ## Other help
 
 You can contribute by spreading a word about this library.
