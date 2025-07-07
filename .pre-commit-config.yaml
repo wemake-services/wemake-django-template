@@ -14,7 +14,7 @@ repos:
         args: ["--fix=lf"]
       - id: check-case-conflict
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.33.1
+    rev: 0.33.2
     hooks:
       - id: check-dependabot
       - id: check-github-workflows
@@ -29,7 +29,7 @@ repos:
         additional_dependencies:
           - "github.com/wasilibs/go-shellcheck/cmd/shellcheck@latest"
   - repo: https://github.com/woodruffw/zizmor-pre-commit
-    rev: v1.10.0
+    rev: v1.11.0
     hooks:
       - id: zizmor
   - repo: https://github.com/shellcheck-py/shellcheck-py
