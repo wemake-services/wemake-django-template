@@ -1000,14 +1000,14 @@ zstd = ["zstandard (>=0.18.0)"]
 
 [[package]]
 name = "wemake-python-styleguide"
-version = "1.2.0"
+version = "1.3.0"
 description = "The strictest and most opinionated python linter ever"
 optional = false
 python-versions = "<4.0,>=3.10"
 groups = ["dev"]
 files = [
-    {file = "wemake_python_styleguide-1.2.0-py3-none-any.whl", hash = "sha256:38880161cd5d4101ba120aa34e26f4028a536b37729cffe2e3103f7ffe10207b"},
-    {file = "wemake_python_styleguide-1.2.0.tar.gz", hash = "sha256:85a662a9ca8f85ca731924fcac6029ee7ab169bc52160235c6ddd46d9e59797a"},
+    {file = "wemake_python_styleguide-1.3.0-py3-none-any.whl", hash = "sha256:3fd39228b80442f22bc4068c57930c9d468f6f5e91f52ca3b13ba5e286d63fad"},
+    {file = "wemake_python_styleguide-1.3.0.tar.gz", hash = "sha256:b8fcbeb1271a0a324c30daca2940c4cf769b14215a57ba55412af543cc153c77"},
 ]
 
 [package.dependencies]
@@ -1018,4 +1018,4 @@ pygments = ">=2.19,<3.0"
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.12,<3.13"
-content-hash = "ceeb35dc5632cffa6c811adfec2c89fb47607d386ac7e7dd645721354c48e3e6"
+content-hash = "e7be1387bf0b96e60fdba526a250e2433d8c4196510be75df1b54a8c77f232b0"
