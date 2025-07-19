@@ -90,6 +90,8 @@ test-caddy:
       - merge_requests
     changes:
       - docker/caddy/*
+      - docker/docker-compose.prod.yml
+      - .gitlab-ci.yml
 
 
 # Release scripts
