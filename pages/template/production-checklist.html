@@ -384,7 +384,7 @@ because it is quite long to start all the machinery for this single check.</p>
 <p>You would need to <a class="reference external" href="https://caddyserver.com/docs/caddyfile/directives/tls#tls">disable</a>
 <code class="docutils literal notranslate"><span class="pre">https</span></code> inside <code class="docutils literal notranslate"><span class="pre">Caddy</span></code> and in production settings for Django.
 Because Django itself also redirects to <code class="docutils literal notranslate"><span class="pre">https</span></code>.
-See <a class="reference external" href="https://docs.djangoproject.com/en/4.2/ref/settings/#secure-ssl-redirect">docs</a>.</p>
+See <a class="reference external" href="https://docs.djangoproject.com/en/5.2/ref/settings/#secure-ssl-redirect">docs</a>.</p>
 <p>You would also need to disable <code class="docutils literal notranslate"><span class="pre">manage.py</span> <span class="pre">check</span></code>
 in <code class="docutils literal notranslate"><span class="pre">docker/ci.sh</span></code>.
 Otherwise, your application won’t start,
