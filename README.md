@@ -8,7 +8,7 @@
 
 
 
-Bleeding edge `django5.1` template focused on code quality and security.
+Bleeding edge `django5.2` template focused on code quality and security.
 [Documentation](https://wemake-services.github.io/wemake-django-template).
 
 ---
