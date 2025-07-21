@@ -67,7 +67,7 @@ server
 ~~~~~~
 
 - ``server/__init__.py`` - package definition, empty file
-- ``server/urls.py`` - ``django`` `urls definition <https://docs.djangoproject.com/en/4.2/topics/http/urls/>`_
+- ``server/urls.py`` - ``django`` `urls definition <https://docs.djangoproject.com/en/5.2/topics/http/urls/>`_
 - ``server/wsgi.py`` - ``django`` `wsgi definition <https://en.wikipedia.org/wiki/Web_Server_Gateway_Interface>`_
 - ``server/asgi.py`` - ``django`` `asgi definition <https://en.wikipedia.org/wiki/Asynchronous_Server_Gateway_Interface>`_
 - ``server/apps/`` - place to put all your apps into

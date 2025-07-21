@@ -1,5 +1,5 @@
 # Caching
-# https://docs.djangoproject.com/en/4.2/topics/cache/
+# https://docs.djangoproject.com/en/5.2/topics/cache/
 
 CACHES = {
     'default': {
