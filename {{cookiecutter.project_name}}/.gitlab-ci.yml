@@ -22,6 +22,7 @@ variables:
     DOCKER_DRIVER: overlay2
     DOCKER_BUILDKIT: 1
     COMPOSE_DOCKER_CLI_BUILD: 1
+    COMPOSE_BAKE: 1
   before_script: &docker-before-script
     # Making sure we are in the right directory, does nothing by default:
     - pwd && echo "$CI_PROJECT_DIR" && cd "$CI_PROJECT_DIR"
