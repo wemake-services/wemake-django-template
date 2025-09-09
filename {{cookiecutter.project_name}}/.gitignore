@@ -247,6 +247,9 @@ artifacts/
 .ipython/
 .python_history
 
+# bash history:
+.bash_history
+
 # ruff:
 .ruff_cache/
 
