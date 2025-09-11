@@ -31,7 +31,7 @@ binaryornot = "^0.4"
 tomli = "^2.2"
 
 wemake-python-styleguide = "^1.4"
-ruff = "^0.12"
+ruff = "^0.13"
 docker-image-size-limit = "^2.1"
 
 mypy = "^1.17"
