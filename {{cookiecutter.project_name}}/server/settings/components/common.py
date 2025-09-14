@@ -80,7 +80,6 @@ DATABASES = {
         'PORT': config('DJANGO_DATABASE_PORT', cast=int),
         'CONN_MAX_AGE': config('CONN_MAX_AGE', cast=int, default=60),
         'OPTIONS': {
-            'pool': True,
             'connect_timeout': 10,
             'options': '-c statement_timeout=15000ms',
             # consider using 'isolation_level' set to 'serializable'
