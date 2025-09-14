@@ -25,8 +25,9 @@ class BlogPost(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
-        verbose_name = 'BlogPost'  # You can probably use `gettext` for this
-        verbose_name_plural = 'BlogPosts'
+        # You can probably use `gettext` for this:
+        verbose_name = 'BlogPost'  # type: ignore[mutable-override]
+        verbose_name_plural = 'BlogPosts'  # type: ignore[mutable-override]
 
     @override
     def __str__(self) -> str:
