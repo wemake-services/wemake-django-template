@@ -81,6 +81,7 @@ DATABASES = {
         'CONN_MAX_AGE': config('CONN_MAX_AGE', cast=int, default=60),
         'OPTIONS': {
             'connect_timeout': 10,
+            'options': '-c statement_timeout=15000ms',
             # consider using 'isolation_level' set to 'serializable'
         },
     },
