@@ -29,11 +29,11 @@ jobs:
       - uses: actions/checkout@v5
         with:
           persist-credentials: false
-      - uses: hadolint/hadolint-action@v3.2.0
+      - uses: hadolint/hadolint-action@v3.3.0
         with:
           dockerfile: '{{cookiecutter.project_name}}/docker/django/Dockerfile'
           failure-threshold: style
-      - uses: hadolint/hadolint-action@v3.2.0
+      - uses: hadolint/hadolint-action@v3.3.0
         with:
           dockerfile: '{{cookiecutter.project_name}}/docker/caddy/Dockerfile'
           failure-threshold: style
