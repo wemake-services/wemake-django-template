@@ -44,7 +44,7 @@ services:
     networks:
       - proxy-net
     expose:
-      - 8000
+      - "8000"
 
 # This task is an example of how to extend existing ones:
 #   some_worker:
