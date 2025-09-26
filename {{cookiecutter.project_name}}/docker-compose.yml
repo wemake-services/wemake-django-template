@@ -9,7 +9,7 @@
 
 services:
   db:
-    image: "postgres:17-alpine"
+    image: "postgres:18-alpine"
     restart: unless-stopped
     volumes:
       - postgres-data:/var/lib/postgresql/data
