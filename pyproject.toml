@@ -28,7 +28,7 @@ jinja2-git = "^1.4"
 
 [tool.poetry.group.dev.dependencies]
 binaryornot = "^0.4"
-tomli = "^2.2"
+tomli = "^2.3"
 
 wemake-python-styleguide = "^1.4"
 ruff = "^0.14"
