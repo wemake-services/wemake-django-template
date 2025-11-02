@@ -7,11 +7,11 @@ https://github.com/pydanny/cookiecutter-django/blob/master/tests
 
 import os
 import re
+import tomllib
 from pathlib import Path
 from typing import Final
 
 import pytest
-import tomli
 from binaryornot.check import is_binary
 from cookiecutter.exceptions import FailedHookException
 from pytest_cookies.plugin import Cookies
@@ -77,7 +77,7 @@ def test_pyproject_toml(
     baked_project = cookies.bake(extra_context=context)
     path = baked_project.project_path / 'pyproject.toml'
 
-    pyproject = tomli.loads(path.read_text())
+    pyproject = tomllib.loads(path.read_text())
     project = pyproject['project']
     poetry = pyproject['tool']['poetry']
 
