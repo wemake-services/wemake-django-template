@@ -16,11 +16,11 @@
 
 import os
 import sys
+import tomllib
 from pathlib import Path
 from typing import cast
 
 import django
-import tomli
 
 # We need `server` to be importable from here:
 _ROOT = Path('..').resolve(strict=True)
@@ -39,7 +39,7 @@ def _get_project_meta() -> dict[str, str]:  # lying about return type
     pyproject = _ROOT / 'pyproject.toml'
     return cast(
         dict[str, str],
-        tomli.loads(pyproject.read_text())['project'],
+        tomllib.loads(pyproject.read_text())['project'],
     )
 
 
