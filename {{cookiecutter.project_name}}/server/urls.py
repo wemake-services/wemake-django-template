@@ -36,6 +36,7 @@ urlpatterns = [
             template_name='common/txt/robots.txt',
             content_type='text/plain',
         ),
+        name='robots_txt',
     ),
     path(
         'humans.txt',
@@ -43,6 +44,7 @@ urlpatterns = [
             template_name='common/txt/humans.txt',
             content_type='text/plain',
         ),
+        name='humans_txt',
     ),
     # It is a good practice to have explicit index view:
     path('', index, name='index'),
