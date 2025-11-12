@@ -5,7 +5,6 @@ import pytest
 from django.test import Client
 from django.urls import reverse
 
-
 _HEALTH_URL: Final = reverse('health_check:health_check_home')
 _ADMIN_URL: Final = reverse('admin:index')
 _ADMIN_DOC_URL: Final = reverse('django-admindocs-docroot')
