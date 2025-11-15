@@ -12,6 +12,8 @@ updates:
       # https://www.djangoproject.com/download/#supported-versions
       versions:
         - ">=4.3,<5.2"
+  cooldown:
+    default-days: 7
 
 - package-ecosystem: pip
   directory: "/{{cookiecutter.project_name}}/docker/django"
@@ -19,6 +21,8 @@ updates:
     interval: daily
     time: "02:00"
   open-pull-requests-limit: 10
+  cooldown:
+    default-days: 7
 
 - package-ecosystem: pip
   directory: "/"
@@ -26,6 +30,8 @@ updates:
     interval: daily
     time: "02:00"
   open-pull-requests-limit: 10
+  cooldown:
+    default-days: 7
 
 - package-ecosystem: docker
   directory: "/{{cookiecutter.project_name}}/docker/django"
@@ -33,6 +39,8 @@ updates:
     interval: daily
     time: "02:00"
   open-pull-requests-limit: 10
+  cooldown:
+    default-days: 7
 
 - package-ecosystem: docker
   directory: "/{{cookiecutter.project_name}}/docker/caddy"
@@ -40,6 +48,8 @@ updates:
     interval: daily
     time: "02:00"
   open-pull-requests-limit: 10
+  cooldown:
+    default-days: 7
 
 - package-ecosystem: github-actions
   directory: "/"
@@ -47,3 +57,5 @@ updates:
     interval: daily
     time: "02:00"
   open-pull-requests-limit: 10
+  cooldown:
+    default-days: 7
