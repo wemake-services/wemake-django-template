@@ -48,7 +48,7 @@ jobs:
       run: poetry run bash tests/build_docs.sh
 
     - name: Deploy to Pages
-      uses: JamesIves/github-pages-deploy-action@v4.7.4
+      uses: JamesIves/github-pages-deploy-action@v4.7.6
       if: github.event_name == 'push'
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
