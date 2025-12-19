@@ -46,7 +46,8 @@ def _get_random_string(length: int = 50) -> str:
 
     """
     punctuation = (
-        string.punctuation.replace(
+        string.punctuation
+        .replace(
             '"',
             '',
         )
