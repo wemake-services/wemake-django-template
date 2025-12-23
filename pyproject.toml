@@ -29,7 +29,7 @@ jinja2-git = "^1.4"
 [tool.poetry.group.dev.dependencies]
 binaryornot = "^0.4"
 
-wemake-python-styleguide = "^1.4"
+wemake-python-styleguide = "^1.5"
 ruff = "^0.14"
 docker-image-size-limit = "^2.2"
 
