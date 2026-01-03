@@ -33,10 +33,6 @@ services:
         dockerfile: ./docker/django/Dockerfile
         args:
           DJANGO_ENV: development
-        cache_from:
-          - "{{ cookiecutter.project_name }}:dev"
-          - "{{ cookiecutter.project_name }}:latest"
-          - "*"
 
       volumes:
         - django-static:/var/www/django/static
