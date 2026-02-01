@@ -8,6 +8,7 @@ repos:
       - id: check-gitlab-ci
         args: ["--format-regex", "python"]
       - id: check-renovate
+      - id: check-compose-spec
   - repo: https://github.com/rhysd/actionlint
     rev: v1.7.10
     hooks:
