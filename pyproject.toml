@@ -30,7 +30,7 @@ jinja2-git = "^1.4"
 binaryornot = "^0.4"
 
 wemake-python-styleguide = "^1.5"
-ruff = "^0.14"
+ruff = "^0.15"
 docker-image-size-limit = "^2.2"
 
 mypy = "^1.19"
