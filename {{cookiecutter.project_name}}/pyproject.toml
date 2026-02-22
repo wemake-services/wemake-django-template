@@ -1,6 +1,6 @@
 [project]
-name = "a"
-description = "b"
+name = "{{ cookiecutter.project_name }}"
+description = "{{ cookiecutter.project_verbose_name }}"
 version = "0.1.0"
 requires-python = "==3.13.11"
 readme = "README.md"
