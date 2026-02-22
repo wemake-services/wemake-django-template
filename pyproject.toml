@@ -2,7 +2,7 @@
 name = "wemake-django-template"
 description = "Bleeding edge django template focused on code quality and security"
 version = "0.1.0"
-requires-python = ">=3.12,<3.13"
+requires-python = ">=3.13,<3.14"
 readme = "README.md"
 authors = [
   { name = "Nikita Sobolev", email = "mail@sobolevn.me" },
@@ -44,7 +44,7 @@ pytest-cookies = "^0.7"
 # Ruff config: https://docs.astral.sh/ruff/settings
 preview = true
 fix = true
-target-version = "py312"
+target-version = "py313"
 line-length = 80
 extend-exclude = [
   # Internal project:
