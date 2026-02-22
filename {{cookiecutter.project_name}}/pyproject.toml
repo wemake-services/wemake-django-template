@@ -59,7 +59,7 @@ hypothesis = "^6.123"
 
 django-stubs = { version = ">=5.2,<5.3", extras = ["compatible-mypy"] }
 
-djlint = "^1.36"
+djangofmt = "^0.2"
 yamllint = "^1.35"
 safety = "^3.6"
 dotenv-linter = "^0.7"
@@ -77,16 +77,6 @@ sphinx = "^9.1"
 sphinx-autodoc-typehints = "^3.0"
 myst-parser = "^5.0"
 furo = "^2025.12"
-
-
-[tool.djlint]
-ignore = "T003,H006,H030,H031"
-include = "H017,H035"
-indent = 2
-blank_line_after_tag = "load,extends"
-profile = "django"
-max_line_length = 80
-format_attribute_template_tags = true
 
 
 [tool.ruff]

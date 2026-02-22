@@ -42,8 +42,8 @@ run_ci () {
   lint-imports
 
   # Linl HTML formatting:
-  djlint --check server
-  djlint --lint server
+  find server -type f -name '*.html' | xargs djangofmt \
+    --line-length=80 --indent-width=2
 
   # Running type checking, see https://github.com/typeddjango/django-stubs
   mypy .
