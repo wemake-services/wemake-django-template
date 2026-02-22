@@ -90,6 +90,10 @@ def _custom_show_toolbar(request: HttpRequest) -> bool:
 
 
 DEBUG_TOOLBAR_CONFIG = {
+    'DISABLE_PANELS': [
+        'debug_toolbar.panels.profiling.ProfilingPanel',
+        'debug_toolbar.panels.redirects.RedirectsPanel',
+    ],
     'SHOW_TOOLBAR_CALLBACK': (
         'server.settings.environments.development._custom_show_toolbar'
     ),
