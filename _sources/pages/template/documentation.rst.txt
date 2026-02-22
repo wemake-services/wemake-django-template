@@ -66,16 +66,6 @@ How to contribute
 We enforce everyone to write clean and explaining documentation.
 However, there are several rules about writing styling.
 
-We are using `doc8 <https://pypi.python.org/pypi/doc8>`_ to validate our docs.
-So, here's the command to do it:
-
-.. code:: bash
-
-  doc8 ./docs
-
-This is also used in our CI process, so your build will fail
-if there are violations.
-
 
 Useful plugins
 --------------

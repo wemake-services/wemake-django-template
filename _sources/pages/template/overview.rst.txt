@@ -39,7 +39,7 @@ root project
   after pushing it to the repository. Currently it is used for testing
   and releasing a ``docker`` image
 - ``.python-version`` - file that specifies the Python version
-  to be used for the project, particularly when using `pyenv`.
+  to be used for the project, particularly when using ``pyenv``.
   This file helps in maintaining a consistent Python environment
   across different machines and environments
 - ``CHANGELOG.md`` - file that contains a chronological

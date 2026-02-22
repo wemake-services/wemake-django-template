@@ -79,6 +79,17 @@ See `djlint <https://djlint.com/>`_ docs.
   djlint --lint server
 
 
+import-linter
+-------------
+
+Is used to lint your architecture and imports all accross the project.
+See `import-linter <https://github.com/seddonym/import-linter>`_ docs.
+
+.. code:: bash
+
+  lint-imports
+
+
 dotenv-linter
 -------------
 
@@ -120,11 +131,6 @@ Linters that are not included
 Sometimes we use several other linters that are not included.
 That's because they require another technology stack to be installed
 or just out of scope.
-
-We also recommend to check the list of linters
-`recommended by wemake-python-styleguide <https://wemake-python-styleguide.rtfd.io/en/latest/pages/usage/integrations/extras.html>`_.
-
-Here's the list of these linters. You may still find them useful.
 
 shellcheck
 ~~~~~~~~~~
