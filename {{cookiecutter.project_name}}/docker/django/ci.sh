@@ -38,6 +38,9 @@ run_ci () {
   ruff format --check --diff
   flake8 .
 
+  # Lint imports:
+  lint-imports
+
   # Linl HTML formatting:
   djlint --check server
   djlint --lint server
