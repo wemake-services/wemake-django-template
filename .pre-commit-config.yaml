@@ -28,6 +28,13 @@ repos:
       - id: shellcheck
         args: ["--severity=style"]
 
+  - repo: https://github.com/sphinx-contrib/sphinx-lint
+    rev: v1.0.2
+    hooks:
+      - id: sphinx-lint
+        args: ["--enable=all", "--disable=line-too-long"]
+        files: ^\{\{cookiecutter.project_name\}\}/docs/
+
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0
     hooks:

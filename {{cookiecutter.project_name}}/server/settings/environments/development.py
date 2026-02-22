@@ -10,6 +10,8 @@ import logging
 import socket
 from typing import TYPE_CHECKING
 
+from debug_toolbar.settings import PANELS_DEFAULTS
+
 from server.settings.components import config
 from server.settings.components.common import (
     DATABASES,
@@ -88,6 +90,10 @@ def _custom_show_toolbar(request: HttpRequest) -> bool:
     """Only show the debug toolbar to users with the superuser flag."""
     return DEBUG and request.user.is_superuser
 
+
+# This can be removed after `RedirectsPanel` will be gone:
+DEBUG_TOOLBAR_PANELS = PANELS_DEFAULTS.copy()
+DEBUG_TOOLBAR_PANELS.remove('debug_toolbar.panels.redirects.RedirectsPanel')
 
 DEBUG_TOOLBAR_CONFIG = {
     'SHOW_TOOLBAR_CALLBACK': (

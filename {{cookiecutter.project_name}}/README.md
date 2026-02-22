@@ -13,7 +13,7 @@ This project was generated with [`wemake-django-template`](https://github.com/we
 
 You will need:
 
-- `python3.12` (see `pyproject.toml` for exact version), use `pyenv install`
+- `python3.13` (see `pyproject.toml` for exact version), use `pyenv install`
 - `postgresql` (see `docker-compose.yml` for exact version)
 - Latest `docker`
 

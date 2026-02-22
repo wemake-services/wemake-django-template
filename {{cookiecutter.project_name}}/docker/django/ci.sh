@@ -38,6 +38,9 @@ run_ci () {
   ruff format --check --diff
   flake8 .
 
+  # Lint imports:
+  lint-imports
+
   # Linl HTML formatting:
   djlint --check server
   djlint --lint server
@@ -76,9 +79,6 @@ run_ci () {
 
   # Checking dependencies status:
   pip check
-
-  # Checking docs:
-  doc8 -q docs
 
   # Checking `yaml` files:
   yamllint -d '{"extends": "default", "ignore": ".venv"}' -s .

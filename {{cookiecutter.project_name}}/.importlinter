@@ -1,0 +1,67 @@
+# See https://github.com/seddonym/import-linter
+
+[importlinter]
+root_package = server
+include_external_packages = True
+exclude_type_checking_imports = True
+
+
+[importlinter:contract:layers]
+name = Layered architecture of our project
+type = layers
+
+containers =
+  server.apps.*
+
+layers =
+  (urls) | (admin) | (api)
+  (views) | (htmx)
+  (tasks)
+  (infra)
+  (models)
+  (logic)
+
+
+[importlinter:contract:apps-independence]
+name = All apps must be independent
+type = independence
+
+modules =
+  server.apps.*
+
+ignore_imports =
+  # This is hack we have to use due to models relations
+  server.apps.*.admin -> server.apps.*.models
+
+
+[importlinter:contract:common-module-is-independent]
+name = Common utilities cannot import things from apps
+type = forbidden
+
+source_modules =
+  server.common
+
+forbidden_modules =
+  server.apps
+
+
+[importlinter:contract:tests-restrictions]
+name = Explicit import restrictions for tests
+type = forbidden
+
+source_modules =
+  server
+
+forbidden_modules =
+  tests
+
+
+[importlinter:contract:server-can-import-settings-directly]
+name = Settings can be directly imported only in settings, use `django.conf`
+type = protected
+
+protected_modules =
+  server.settings.**
+
+allowed_importers =
+  server.settings
