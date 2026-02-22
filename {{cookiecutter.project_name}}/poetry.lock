@@ -512,7 +512,7 @@ files = [
     {file = "colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6"},
     {file = "colorama-0.4.6.tar.gz", hash = "sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44"},
 ]
-markers = {docs = "sys_platform == \"win32\""}
+markers = {dev = "sys_platform == \"win32\" or platform_system == \"Windows\"", docs = "sys_platform == \"win32\""}
 
 [[package]]
 name = "covdefaults"
@@ -719,23 +719,6 @@ sdist = ["build (>=1.0.0)"]
 ssh = ["bcrypt (>=3.1.5)"]
 test = ["certifi (>=2024)", "cryptography-vectors (==46.0.5)", "pretend (>=0.7)", "pytest (>=7.4.0)", "pytest-benchmark (>=4.0)", "pytest-cov (>=2.10.1)", "pytest-xdist (>=3.5.0)"]
 test-randomorder = ["pytest-randomly"]
-
-[[package]]
-name = "cssbeautifier"
-version = "1.15.4"
-description = "CSS unobfuscator and beautifier."
-optional = false
-python-versions = "*"
-groups = ["dev"]
-files = [
-    {file = "cssbeautifier-1.15.4-py3-none-any.whl", hash = "sha256:78c84d5e5378df7d08622bbd0477a1abdbd209680e95480bf22f12d5701efc98"},
-    {file = "cssbeautifier-1.15.4.tar.gz", hash = "sha256:9bb08dc3f64c101a01677f128acf01905914cf406baf87434dcde05b74c0acf5"},
-]
-
-[package.dependencies]
-editorconfig = ">=0.12.2"
-jsbeautifier = "*"
-six = ">=1.13.0"
 
 [[package]]
 name = "decorator"
@@ -1052,47 +1035,32 @@ files = [
 ]
 
 [[package]]
-name = "djlint"
-version = "1.36.4"
-description = "HTML Template Linter and Formatter"
+name = "djangofmt"
+version = "0.2.6"
+description = "A fast, HTML aware, Django template formatter, written in Rust."
 optional = false
-python-versions = ">=3.9"
+python-versions = ">=3.8"
 groups = ["dev"]
 files = [
-    {file = "djlint-1.36.4-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:a2dfb60883ceb92465201bfd392291a7597c6752baede6fbb6f1980cac8d6c5c"},
-    {file = "djlint-1.36.4-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:4bc6a1320c0030244b530ac200642f883d3daa451a115920ef3d56d08b644292"},
-    {file = "djlint-1.36.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:3164a048c7bb0baf042387b1e33f9bbbf99d90d1337bb4c3d66eb0f96f5400a1"},
-    {file = "djlint-1.36.4-cp310-cp310-win_amd64.whl", hash = "sha256:3196d5277da5934962d67ad6c33a948ba77a7b6eadf064648bef6ee5f216b03c"},
-    {file = "djlint-1.36.4-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:3d68da0ed10ee9ca1e32e225cbb8e9b98bf7e6f8b48a8e4836117b6605b88cc7"},
-    {file = "djlint-1.36.4-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:c0478d5392247f1e6ee29220bbdbf7fb4e1bc0e7e83d291fda6fb926c1787ba7"},
-    {file = "djlint-1.36.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:962f7b83aee166e499eff916d631c6dde7f1447d7610785a60ed2a75a5763483"},
-    {file = "djlint-1.36.4-cp311-cp311-win_amd64.whl", hash = "sha256:53cbc450aa425c832f09bc453b8a94a039d147b096740df54a3547fada77ed08"},
-    {file = "djlint-1.36.4-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:ff9faffd7d43ac20467493fa71d5355b5b330a00ade1c4d1e859022f4195223b"},
-    {file = "djlint-1.36.4-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:79489e262b5ac23a8dfb7ca37f1eea979674cfc2d2644f7061d95bea12c38f7e"},
-    {file = "djlint-1.36.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:e58c5fa8c6477144a0be0a87273706a059e6dd0d6efae01146ae8c29cdfca675"},
-    {file = "djlint-1.36.4-cp312-cp312-win_amd64.whl", hash = "sha256:bb6903777bf3124f5efedcddf1f4716aef097a7ec4223fc0fa54b865829a6e08"},
-    {file = "djlint-1.36.4-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:ead475013bcac46095b1bbc8cf97ed2f06e83422335734363f8a76b4ba7e47c2"},
-    {file = "djlint-1.36.4-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:6c601dfa68ea253311deb4a29a7362b7a64933bdfcfb5a06618f3e70ad1fa835"},
-    {file = "djlint-1.36.4-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:bda5014f295002363381969864addeb2db13955f1b26e772657c3b273ed7809f"},
-    {file = "djlint-1.36.4-cp313-cp313-win_amd64.whl", hash = "sha256:16ce37e085afe5a30953b2bd87cbe34c37843d94c701fc68a2dda06c1e428ff4"},
-    {file = "djlint-1.36.4-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:89678661888c03d7bc6cadd75af69db29962b5ecbf93a81518262f5c48329f04"},
-    {file = "djlint-1.36.4-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:5b01a98df3e1ab89a552793590875bc6e954cad661a9304057db75363d519fa0"},
-    {file = "djlint-1.36.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:dabbb4f7b93223d471d09ae34ed515fef98b2233cbca2449ad117416c44b1351"},
-    {file = "djlint-1.36.4-cp39-cp39-win_amd64.whl", hash = "sha256:7a483390d17e44df5bc23dcea29bdf6b63f3ed8b4731d844773a4829af4f5e0b"},
-    {file = "djlint-1.36.4-py3-none-any.whl", hash = "sha256:e9699b8ac3057a6ed04fb90835b89bee954ed1959c01541ce4f8f729c938afdd"},
-    {file = "djlint-1.36.4.tar.gz", hash = "sha256:17254f218b46fe5a714b224c85074c099bcb74e3b2e1f15c2ddc2cf415a408a1"},
+    {file = "djangofmt-0.2.6-py3-none-linux_armv6l.whl", hash = "sha256:5d572799c6712987e2fa2ecc6c799d16f8c7a06a394b325146415ee0fa42f9bf"},
+    {file = "djangofmt-0.2.6-py3-none-macosx_10_12_x86_64.whl", hash = "sha256:4c7c6f111da53a317f37e7f99c19b59216bc91830d0ea2fbe916a5c5f491d1a7"},
+    {file = "djangofmt-0.2.6-py3-none-macosx_11_0_arm64.whl", hash = "sha256:73a49180d996182d7ccb4164c4aedd46937e73adf699806ffd572abbeb2855c9"},
+    {file = "djangofmt-0.2.6-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:1f943ddf2ae23653225886bd5d865fd44b35022db72627a154e2dbb3e7b48d58"},
+    {file = "djangofmt-0.2.6-py3-none-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:96dbdae419f948f9116723658cf8e9f2a744f1ea9a9767bd8b290cb973037015"},
+    {file = "djangofmt-0.2.6-py3-none-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:e1ac6c207457ddf5773650474b3d59edf23a9f1c9d6f01c70c955281109f19f4"},
+    {file = "djangofmt-0.2.6-py3-none-manylinux_2_17_ppc64.manylinux2014_ppc64.whl", hash = "sha256:c4a1bdfef3d1396d7b76cf0e8477024160552518e0e02aa0a3096a29c99a1075"},
+    {file = "djangofmt-0.2.6-py3-none-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:e63108c1fedff5223d2ff7fc72f537ae964c0e2b370094c9041d3b41850a0ec4"},
+    {file = "djangofmt-0.2.6-py3-none-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:e25a20c6c02003a4286f056b44c4cecece75767a13ca861e662a35e673aeb178"},
+    {file = "djangofmt-0.2.6-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:4eff15fec3f78057f49ba6eeddea523d1dbc62803abd2462483cc67f5da0069f"},
+    {file = "djangofmt-0.2.6-py3-none-musllinux_1_2_aarch64.whl", hash = "sha256:fc28126e96dd8faaaec1cb1cd1813cddb90b44202d9dfb49083319e2413473e1"},
+    {file = "djangofmt-0.2.6-py3-none-musllinux_1_2_armv7l.whl", hash = "sha256:355d6bb97378866d4944cf7dad59fead84fb2d0f4381075b833036d1c3a39624"},
+    {file = "djangofmt-0.2.6-py3-none-musllinux_1_2_i686.whl", hash = "sha256:063d8f0e02ce0d2aa2031a4ec5e28796c09abbd8d22de8d70bea729a8f7c0e22"},
+    {file = "djangofmt-0.2.6-py3-none-musllinux_1_2_x86_64.whl", hash = "sha256:3a8641f5a0d6d2122b1590e2c1c4e0982b6f4e31d75cab4ffa30eafe83d687a1"},
+    {file = "djangofmt-0.2.6-py3-none-win32.whl", hash = "sha256:d94ae82c11207f2fa229c9cf6732303a3f0253f5ec6b02b0d53fbcab5bd68048"},
+    {file = "djangofmt-0.2.6-py3-none-win_amd64.whl", hash = "sha256:cd03b3e9ef9df8b91e0ca66016662e76f8c2cf0364c1551d691b5d411ee7b7a3"},
+    {file = "djangofmt-0.2.6-py3-none-win_arm64.whl", hash = "sha256:4e691b60447e838ebc780f9962f3437958414ad942b82e31da50dcefd7820e54"},
+    {file = "djangofmt-0.2.6.tar.gz", hash = "sha256:dad79eea494c4e5c605c6c489bd4717a807397402abccf623031a2469e1a5797"},
 ]
-
-[package.dependencies]
-click = ">=8.0.1"
-colorama = ">=0.4.4"
-cssbeautifier = ">=1.14.4"
-jsbeautifier = ">=1.14.4"
-json5 = ">=0.9.11"
-pathspec = ">=0.12"
-pyyaml = ">=6"
-regex = ">=2023"
-tqdm = ">=4.62.2"
 
 [[package]]
 name = "dnspython"
@@ -1189,21 +1157,6 @@ files = [
     {file = "dump_env-1.6.0-py3-none-any.whl", hash = "sha256:5d3297bf263e298381e3a1b0d79eb7e4e15e8b617c830e62fd120a5ee9db8083"},
     {file = "dump_env-1.6.0.tar.gz", hash = "sha256:c67f357ce1cad8c42ff61ce9899459eb5dd23230bd791584dc5d1d94c1e1f262"},
 ]
-
-[[package]]
-name = "editorconfig"
-version = "0.17.1"
-description = "EditorConfig File Locator and Interpreter for Python"
-optional = false
-python-versions = ">=3.9"
-groups = ["dev"]
-files = [
-    {file = "editorconfig-0.17.1-py3-none-any.whl", hash = "sha256:1eda9c2c0db8c16dbd50111b710572a5e6de934e39772de1959d41f64fc17c82"},
-    {file = "editorconfig-0.17.1.tar.gz", hash = "sha256:23c08b00e8e08cc3adcddb825251c497478df1dada6aefeb01e626ad37303745"},
-]
-
-[package.extras]
-dev = ["mypy (>=1.15)"]
 
 [[package]]
 name = "executing"
@@ -1714,34 +1667,6 @@ groups = ["dev"]
 files = [
     {file = "joblib-1.5.3-py3-none-any.whl", hash = "sha256:5fc3c5039fc5ca8c0276333a188bbd59d6b7ab37fe6632daa76bc7f9ec18e713"},
     {file = "joblib-1.5.3.tar.gz", hash = "sha256:8561a3269e6801106863fd0d6d84bb737be9e7631e33aaed3fb9ce5953688da3"},
-]
-
-[[package]]
-name = "jsbeautifier"
-version = "1.15.4"
-description = "JavaScript unobfuscator and beautifier."
-optional = false
-python-versions = "*"
-groups = ["dev"]
-files = [
-    {file = "jsbeautifier-1.15.4-py3-none-any.whl", hash = "sha256:72f65de312a3f10900d7685557f84cb61a9733c50dcc27271a39f5b0051bf528"},
-    {file = "jsbeautifier-1.15.4.tar.gz", hash = "sha256:5bb18d9efb9331d825735fbc5360ee8f1aac5e52780042803943aa7f854f7592"},
-]
-
-[package.dependencies]
-editorconfig = ">=0.12.2"
-six = ">=1.13.0"
-
-[[package]]
-name = "json5"
-version = "0.13.0"
-description = "A Python implementation of the JSON5 data format."
-optional = false
-python-versions = ">=3.8.0"
-groups = ["dev"]
-files = [
-    {file = "json5-0.13.0-py3-none-any.whl", hash = "sha256:9a08e1dd65f6a4d4c6fa82d216cf2477349ec2346a38fd70cc11d2557499fbcc"},
-    {file = "json5-0.13.0.tar.gz", hash = "sha256:b1edf8d487721c0bf64d83c28e91280781f6e21f4a797d3261c7c828d4c165bf"},
 ]
 
 [[package]]
@@ -3114,18 +3039,6 @@ files = [
 ]
 
 [[package]]
-name = "six"
-version = "1.17.0"
-description = "Python 2 and 3 compatibility utilities"
-optional = false
-python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,>=2.7"
-groups = ["dev"]
-files = [
-    {file = "six-1.17.0-py2.py3-none-any.whl", hash = "sha256:4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274"},
-    {file = "six-1.17.0.tar.gz", hash = "sha256:ff70335d468e7eb6ec65b95b99d3a2836546063f63acc5171de367e834932a81"},
-]
-
-[[package]]
 name = "snowballstemmer"
 version = "3.0.1"
 description = "This package provides 32 stemmers for 30 languages generated from Snowball algorithms."
@@ -3676,4 +3589,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "ruff", "sph
 [metadata]
 lock-version = "2.1"
 python-versions = "==3.13.11"
-content-hash = "9d4edab38ba86c80776ec0499c90c65ce4d00b5efab42ccb18995c060228a5d9"
+content-hash = "173e0bf977c7d4524098f80dfd59236c2ce146832077f1d9a847b9b41c23ab6f"
