@@ -14,7 +14,7 @@ from django.contrib import admin
 from django.contrib.admindocs import urls as admindocs_urls
 from django.urls import include, path
 from django.views.generic import TemplateView
-from health_check import urls as health_urls
+from health_check.views import HealthCheckView
 
 from server.apps.main import urls as main_urls
 from server.apps.main.views import index
@@ -25,7 +25,16 @@ urlpatterns = [
     # Apps:
     path('main/', include(main_urls, namespace='main')),
     # Health checks:
-    path('health/', include(health_urls)),
+    path(
+        'health/',
+        HealthCheckView.as_view(
+            checks=[
+                'health_check.Cache',
+                'health_check.Database',
+                'health_check.Storage',
+            ]
+        ),
+    ),
     # django-admin:
     path('admin/doc/', include(admindocs_urls)),
     path('admin/', admin.site.urls),
