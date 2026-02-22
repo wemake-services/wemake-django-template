@@ -67,16 +67,16 @@ See `yamllint <https://github.com/adrienverge/yamllint>`_ docs.
   yamllint -d '{"extends": "default", "ignore": ".venv"}' -s .
 
 
-djlint
-------
+djangofmt
+---------
 
 Is used to lint and format your ``html`` files.
-See `djlint <https://djlint.com/>`_ docs.
+See `djangofmt <https://github.com/UnknownPlatypus/djangofmt>`_ docs.
 
 .. code:: bash
 
-  djlint --check server
-  djlint --lint server
+  find server -type f -name '*.html' | xargs djangofmt \
+    --line-length=80 --indent-width=2
 
 
 import-linter

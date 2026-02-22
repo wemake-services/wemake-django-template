@@ -298,12 +298,12 @@ See <a class="reference external" href="https://github.com/adrienverge/yamllint"
 </pre></div>
 </div>
 </section>
-<section id="djlint">
-<h2>djlint<a class="headerlink" href="#djlint" title="Link to this heading">¶</a></h2>
+<section id="djangofmt">
+<h2>djangofmt<a class="headerlink" href="#djangofmt" title="Link to this heading">¶</a></h2>
 <p>Is used to lint and format your <code class="docutils literal notranslate"><span class="pre">html</span></code> files.
-See <a class="reference external" href="https://djlint.com/">djlint</a> docs.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>djlint<span class="w"> </span>--check<span class="w"> </span>server
-djlint<span class="w"> </span>--lint<span class="w"> </span>server
+See <a class="reference external" href="https://github.com/UnknownPlatypus/djangofmt">djangofmt</a> docs.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find<span class="w"> </span>server<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-name<span class="w"> </span><span class="s1">&#39;*.html&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>djangofmt<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--line-length<span class="o">=</span><span class="m">80</span><span class="w"> </span>--indent-width<span class="o">=</span><span class="m">2</span>
 </pre></div>
 </div>
 </section>
@@ -419,7 +419,7 @@ See <a class="reference external" href="https://github.com/hadolint/hadolint">ha
 <li><a class="reference internal" href="#wemake-python-styleguide">wemake-python-styleguide</a></li>
 <li><a class="reference internal" href="#django-migration-linter">django-migration-linter</a></li>
 <li><a class="reference internal" href="#yamllint">yamllint</a></li>
-<li><a class="reference internal" href="#djlint">djlint</a></li>
+<li><a class="reference internal" href="#djangofmt">djangofmt</a></li>
 <li><a class="reference internal" href="#import-linter">import-linter</a></li>
 <li><a class="reference internal" href="#dotenv-linter">dotenv-linter</a></li>
 <li><a class="reference internal" href="#polint-and-dennis">polint and dennis</a></li>
