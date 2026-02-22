@@ -34,6 +34,7 @@ urlpatterns = [
                 'health_check.Storage',
             ]
         ),
+        name='health_check',
     ),
     # django-admin:
     path('admin/doc/', include(admindocs_urls)),
