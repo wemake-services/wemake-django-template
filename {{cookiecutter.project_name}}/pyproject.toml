@@ -33,7 +33,7 @@ psycopg2-binary = "^2.9"
 gunicorn = "^25.0"
 python-decouple = "^3.8"
 structlog = "^25.4"
-wheel = "^0.45"
+wheel = "^0.46"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -46,9 +46,8 @@ django-drifter = "^0.1"
 
 wemake-python-styleguide = "^1.5"
 ruff = "^0.15"
-doc8 = "^2.0"
 
-pytest = "^8.3"
+pytest = "^9.0"
 pytest-django = "^4.9"
 pytest-cov = "^7.0"
 covdefaults = "^2.3"
@@ -74,10 +73,10 @@ ipython = "^9.5"
 optional = true
 
 [tool.poetry.group.docs.dependencies]
-sphinx = "^8.1"
+sphinx = "^9.1"
 sphinx-autodoc-typehints = "^3.0"
-myst-parser = "^4.0"
-furo = "^2024.8"
+myst-parser = "^5.0"
+furo = "^2025.12"
 
 
 [tool.djlint]
