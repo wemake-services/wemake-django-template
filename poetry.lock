@@ -1134,14 +1134,14 @@ zstd = ["backports-zstd (>=1.0.0) ; python_version < \"3.14\""]
 
 [[package]]
 name = "wemake-python-styleguide"
-version = "1.6.0"
+version = "1.6.1"
 description = "The strictest and most opinionated python linter ever"
 optional = false
 python-versions = "<4.0,>=3.10"
 groups = ["dev"]
 files = [
-    {file = "wemake_python_styleguide-1.6.0-py3-none-any.whl", hash = "sha256:11f3d25e83e3edec01c33af85c4e62e4886890b8710fe7af86920575912d14f2"},
-    {file = "wemake_python_styleguide-1.6.0.tar.gz", hash = "sha256:9d834573a9ca089b48b8ce0e8bffd69d33f18be53d4a4667bbbe4438750328e8"},
+    {file = "wemake_python_styleguide-1.6.1-py3-none-any.whl", hash = "sha256:799690b3654e9eb6db4bf021053c64f907eff9845646a634e22f89a34c3b6ef0"},
+    {file = "wemake_python_styleguide-1.6.1.tar.gz", hash = "sha256:72eb81dc421dde9f32ce1f67b25d1a13060c264bac12857897b582f83e6bbdbf"},
 ]
 
 [package.dependencies]
