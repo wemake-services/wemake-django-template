@@ -23,7 +23,7 @@ classifiers = [
 ]
 
 [tool.poetry.dependencies]
-cookiecutter = "^2.6"
+cookiecutter = "^2.7"
 jinja2-git = "^1.4"
 
 [tool.poetry.group.dev.dependencies]
