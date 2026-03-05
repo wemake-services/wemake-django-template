@@ -224,14 +224,14 @@ markers = {main = "platform_system == \"Windows\"", dev = "platform_system == \"
 
 [[package]]
 name = "cookiecutter"
-version = "2.7.0"
+version = "2.7.1"
 description = "A command-line utility that creates projects from project templates, e.g. creating a Python package project from a Python package project template."
 optional = false
 python-versions = ">=3.10"
 groups = ["main", "dev"]
 files = [
-    {file = "cookiecutter-2.7.0-py3-none-any.whl", hash = "sha256:08dc4398e2d8a57771c20703fa10f8d03952e870eddd46bbb832161dc784fa3d"},
-    {file = "cookiecutter-2.7.0.tar.gz", hash = "sha256:b0bf50141201ebf022c95e3fa02a760b64e600b3675d6dabf97563425a62a707"},
+    {file = "cookiecutter-2.7.1-py3-none-any.whl", hash = "sha256:cee50defc1eaa7ad0071ee9b9893b746c1b3201b66bf4d3686d0f127c8ed6cf9"},
+    {file = "cookiecutter-2.7.1.tar.gz", hash = "sha256:ca7bb7bc8c6ff441fbf53921b5537668000e38d56e28d763a1b73975c66c6138"},
 ]
 
 [package.dependencies]
