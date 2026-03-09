@@ -34,18 +34,15 @@ files = [
 
 [[package]]
 name = "binaryornot"
-version = "0.4.4"
+version = "0.6.0"
 description = "Ultra-lightweight pure Python package to check if a file is binary or text."
 optional = false
-python-versions = "*"
+python-versions = ">=3.10"
 groups = ["main", "dev"]
 files = [
-    {file = "binaryornot-0.4.4-py2.py3-none-any.whl", hash = "sha256:b8b71173c917bddcd2c16070412e369c3ed7f0528926f70cac18a6c97fd563e4"},
-    {file = "binaryornot-0.4.4.tar.gz", hash = "sha256:359501dfc9d40632edc9fac890e19542db1a287bbcfa58175b66658392018061"},
+    {file = "binaryornot-0.6.0-py3-none-any.whl", hash = "sha256:900adfd5e1b821255ba7e63139b0396b14c88b9286e74e03b6f51e0200331337"},
+    {file = "binaryornot-0.6.0.tar.gz", hash = "sha256:cc8d57cfa71d74ff8c28a7726734d53a851d02fad9e3a5581fb807f989f702f0"},
 ]
-
-[package.dependencies]
-chardet = ">=3.0.2"
 
 [[package]]
 name = "certifi"
@@ -57,18 +54,6 @@ groups = ["main", "dev"]
 files = [
     {file = "certifi-2026.1.4-py3-none-any.whl", hash = "sha256:9943707519e4add1115f44c2bc244f782c0249876bf51b6599fee1ffbedd685c"},
     {file = "certifi-2026.1.4.tar.gz", hash = "sha256:ac726dd470482006e014ad384921ed6438c457018f4b3d204aea4281258b2120"},
-]
-
-[[package]]
-name = "chardet"
-version = "6.0.0"
-description = "Universal encoding detector for Python 3"
-optional = false
-python-versions = ">=3.10"
-groups = ["main", "dev"]
-files = [
-    {file = "chardet-6.0.0-py3-none-any.whl", hash = "sha256:502eee44c943b21e178cb537980b1331b42abf99505085e8ae881e27245083bb"},
-    {file = "chardet-6.0.0.tar.gz", hash = "sha256:aaa00ede13dd39a582de2b1254221a1f3e1c77e7738036431b6cb7e6a05b4f19"},
 ]
 
 [[package]]
@@ -1152,4 +1137,4 @@ pygments = ">=2.19,<3.0"
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.13,<3.14"
-content-hash = "c2d12ae0d8cb1faf9990c0a3b0d6e2c3c370b72cd7c817f3d0ac647c40aa8655"
+content-hash = "68523a8da14a07fb1b77105a6a796414eb56f573ae0ce0bb15ffaee0b73a0ea0"
