@@ -27,7 +27,7 @@ cookiecutter = "^2.7"
 jinja2-git = "^1.4"
 
 [tool.poetry.group.dev.dependencies]
-binaryornot = "^0.4"
+binaryornot = "^0.6"
 
 wemake-python-styleguide = "^1.6"
 ruff = "^0.15"
