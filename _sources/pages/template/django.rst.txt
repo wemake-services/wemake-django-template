@@ -71,7 +71,6 @@ When adding any new secret ``django`` settings you will need to:
 4. Use ``python-decouple`` to load this ``env`` variable like so:
    ``MY_SECRET = config('MY_SECRET')``
 
-
 Secret settings in production
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -110,6 +109,7 @@ Extensions
 We use different ``django`` extensions that make your life easier.
 Here's a full list of the extensions for both development and production:
 
+- `django-modern-rest`_ - build modern type-safe APIs
 - `django-split-settings`_ - organize
   ``django`` settings into multiple files and directories.
   Easily override and modify settings.
@@ -139,6 +139,7 @@ Development only extensions:
 - `django-drifter`_ - provide custom ``django`` management commands
   to manage database migrations
 
+.. _django-modern-rest: https://github.com/wemake-services/django-modern-rest
 .. _django-split-settings: https://github.com/sobolevn/django-split-settings
 .. _django-axes: https://github.com/jazzband/django-axes
 .. _django-csp: https://github.com/mozilla/django-csp

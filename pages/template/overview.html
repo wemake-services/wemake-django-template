@@ -392,9 +392,6 @@ We also utilize different <code class="docutils literal notranslate"><span class
 <li><p><code class="docutils literal notranslate"><span class="pre">rabbitmq</span></code></p></li>
 <li><p>frontend, like <code class="docutils literal notranslate"><span class="pre">node.js</span></code></p></li>
 </ul>
-<p>To be sure that container is started at the right time,
-we utilize <code class="docutils literal notranslate"><span class="pre">wait-for-it</span></code> <a class="reference external" href="https://github.com/vishnubob/wait-for-it">script</a>.
-It is executed inside <code class="docutils literal notranslate"><span class="pre">docker/django/entrypoint.sh</span></code> file.</p>
 <p>We start containers with <code class="docutils literal notranslate"><span class="pre">tini</span></code>.
 Because this way we have a proper signal handling
 and eliminate zombie processes.
