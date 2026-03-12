@@ -31,6 +31,8 @@ INSTALLED_APPS: tuple[str, ...] = (
     # django-admin:
     'django.contrib.admin',
     'django.contrib.admindocs',
+    # django-modern-rest:
+    'dmr',
     # Security:
     'axes',
     # Health checks:

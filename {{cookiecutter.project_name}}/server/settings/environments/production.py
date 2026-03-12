@@ -5,7 +5,10 @@ This file is required and if development.py is present these
 values are overridden.
 """
 
+from dmr.settings import Settings
+
 from server.settings.components import config
+from server.settings.components.api import DMR_SETTINGS
 
 # Production flags:
 # https://docs.djangoproject.com/en/5.2/howto/deployment/
@@ -75,3 +78,9 @@ SECURE_REDIRECT_EXEMPT = [
 
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
+
+
+# django-modern-rest
+# https://django-modern-rest.rtfd.io
+
+DMR_SETTINGS[Settings.validate_responses] = False

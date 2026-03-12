@@ -12,8 +12,17 @@ files serving technique in development.
 from django.conf import settings
 from django.contrib import admin
 from django.contrib.admindocs import urls as admindocs_urls
-from django.urls import include, path
+from django.urls import include
 from django.views.generic import TemplateView
+from dmr.openapi import build_schema
+from dmr.openapi.views import (
+    OpenAPIJsonView,
+    RedocView,
+    ScalarView,
+    SwaggerView,
+)
+from dmr.plugins.msgspec import MsgspecSerializer
+from dmr.routing import Router, build_404_handler, path
 from health_check.views import HealthCheckView
 
 from server.apps.main import urls as main_urls
@@ -21,9 +30,31 @@ from server.apps.main.views import index
 
 admin.autodiscover()
 
+router = Router(
+    [
+        path(
+            'user/', include((main_urls.api_routes, 'main'), namespace='main')
+        ),
+    ],
+    prefix='api/',
+)
+schema = build_schema(router)
+
+handler404 = build_404_handler(
+    router.prefix,
+    serializer=MsgspecSerializer,
+)
+
 urlpatterns = [
     # Apps:
     path('main/', include(main_urls, namespace='main')),
+    # Apis:
+    path(router.prefix, include((router.urls, 'server'), namespace='api')),
+    # OpenAPI:
+    path('docs/openapi.json/', OpenAPIJsonView.as_view(schema), name='openapi'),
+    path('docs/swagger/', SwaggerView.as_view(schema), name='swagger'),
+    path('docs/scalar/', ScalarView.as_view(schema), name='scalar'),
+    path('docs/redoc/', RedocView.as_view(schema), name='redoc'),
     # Health checks:
     path(
         'health/',

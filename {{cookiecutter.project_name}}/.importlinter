@@ -14,8 +14,8 @@ containers =
   server.apps.*
 
 layers =
-  (urls) | (admin) | (api)
-  (views) | (htmx)
+  (urls) | (admin)
+  (views) | (htmx) | (api)
   (tasks)
   (infra)
   (models)
