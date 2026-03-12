@@ -27,13 +27,16 @@ django-axes = "^8.0"
 django-csp = "^4.0"
 django-health-check = "^4.0"
 django-permissions-policy = "^4.27"
-django-stubs-ext = "^5.1"
+django-stubs-ext = "^5.2"
+django-modern-rest = { version = "^0.0.1", extras = ["msgspec", "pydantic", "jwt", "openapi"] }
 
 psycopg2-binary = "^2.9"
 gunicorn = "^25.0"
 python-decouple = "^3.8"
 structlog = "^25.4"
 wheel = "^0.46"
+punq = "^0.7"
+attrs = "^25.4"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -44,7 +47,7 @@ django-query-counter = "^0.4"
 django-zeal = "^2.0"
 django-drifter = "^0.1"
 
-wemake-python-styleguide = "^1.5"
+wemake-python-styleguide = "^1.6"
 ruff = "^0.15"
 
 pytest = "^9.0"
@@ -56,6 +59,7 @@ pytest-randomly = "^4.0"
 pytest-timeout = "^2.3"
 django-test-migrations = "^1.5"
 hypothesis = "^6.123"
+schemathesis = "^4.12"
 
 django-stubs = { version = ">=5.2,<5.3", extras = ["compatible-mypy"] }
 
@@ -163,4 +167,5 @@ pydocstyle.convention = "google"
 [tool.ruff.lint.per-file-ignores]
 "server/apps/*/migrations/*.py" = ["D101", "E501", "RUF012"]
 "server/common/typing/*.py" = ["F401"]
+"server/implemented.py" = ["PLC0415", "D103"]
 "tests/*.py" = ["S101"]

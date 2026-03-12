@@ -137,10 +137,6 @@ Some containers might have long starting times, for example:
 - ``rabbitmq``
 - frontend, like ``node.js``
 
-To be sure that container is started at the right time,
-we utilize ``wait-for-it`` `script <https://github.com/vishnubob/wait-for-it>`_.
-It is executed inside ``docker/django/entrypoint.sh`` file.
-
 We start containers with ``tini``.
 Because this way we have a proper signal handling
 and eliminate zombie processes.
