@@ -31,13 +31,13 @@ from server.apps.main.views import index
 admin.autodiscover()
 
 router = Router(
+    'api/',
     [
         path(
             main_urls.router.prefix,
             include((main_urls.router.urls, 'main'), namespace='main'),
         ),
     ],
-    prefix='api/',
 )
 schema = build_schema(router)
 
