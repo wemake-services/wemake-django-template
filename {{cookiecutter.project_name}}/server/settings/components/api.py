@@ -1,8 +1,8 @@
 import tomllib
-from typing import Any, cast
+from typing import cast
 
 from dmr.openapi import OpenAPIConfig
-from dmr.settings import Settings
+from dmr.settings import Settings, SettingsDict
 
 from server.settings.components import BASE_DIR
 
@@ -15,7 +15,7 @@ def _get_project_meta() -> dict[str, str]:  # lying about return type
     )
 
 
-DMR_SETTINGS: Any = {
+DMR_SETTINGS: SettingsDict = {
     Settings.openapi_config: OpenAPIConfig(
         title='wemake-django-template',
         version=_get_project_meta()['version'],
