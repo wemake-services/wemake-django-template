@@ -33,7 +33,8 @@ admin.autodiscover()
 router = Router(
     [
         path(
-            'user/', include((main_urls.api_routes, 'main'), namespace='main')
+            main_urls.router.prefix,
+            include((main_urls.router.urls, 'main'), namespace='main'),
         ),
     ],
     prefix='api/',

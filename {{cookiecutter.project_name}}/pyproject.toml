@@ -28,7 +28,7 @@ django-csp = "^4.0"
 django-health-check = "^4.0"
 django-permissions-policy = "^4.27"
 django-stubs-ext = "^5.2"
-django-modern-rest = { version = "^0.0.1", extras = ["msgspec", "pydantic", "jwt", "openapi"] }
+django-modern-rest = { version = "^0.1", extras = ["msgspec", "pydantic", "jwt", "openapi"] }
 
 psycopg2-binary = "^2.9"
 gunicorn = "^25.0"
