@@ -14,9 +14,6 @@ from server.apps.main.logic.usecases import blogpost_create, blogpost_get
 from server.common.di import HasContainer
 from server.common.dtos import IntIdPath
 
-# NOTE: there are no tests for the API. But, coverage is 100%
-# Thanks to the `schemathesis`!
-
 
 @final
 class BlogPostCreate(
