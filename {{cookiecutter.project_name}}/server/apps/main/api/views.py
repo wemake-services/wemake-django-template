@@ -64,7 +64,7 @@ class BlogPostGet(
 
     def get(self) -> BlogPostFullPayload:
         """Return existing ``BlogPost`` model by id."""
-        blog_post = self._resolve(blogpost_get.GetBlogPost)(self.parsed_path.id)
+        blog_post = self._resolve(blogpost_get.GetBlogPost)(self.kwargs['id'])
         if blog_post is None:
             raise APIError(
                 self.format_error(
