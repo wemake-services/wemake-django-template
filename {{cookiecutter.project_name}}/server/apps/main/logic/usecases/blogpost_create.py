@@ -4,8 +4,13 @@ from typing import TYPE_CHECKING, final
 
 import attrs
 
+from server.apps.main.logic.value_objects import (
+    BlogPostCreatePayload,
+    BlogPostFullPayload,
+)
+
 if TYPE_CHECKING:
-    from server.apps.main.infra import dtos, mappers, repository
+    from server.apps.main.infra import mappers, repository
 
 
 @final
@@ -16,7 +21,10 @@ class CreateBlogPost:
     _repository: repository.BlogPostRepo
     _mapper: mappers.BlogPostMapper
 
-    def __call__(self, parsed_body: dtos.BlogPostCreateDTO) -> dtos.BlogPostDTO:
+    def __call__(
+        self,
+        parsed_body: BlogPostCreatePayload,
+    ) -> BlogPostFullPayload:
         """
         There's no real story to tell about this example.
 

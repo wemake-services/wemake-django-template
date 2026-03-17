@@ -15,9 +15,15 @@ def _get_project_meta() -> dict[str, str]:  # lying about return type
     )
 
 
+# django-modern-rest
+# https://django-modern-rest.readthedocs.io
+
 DMR_SETTINGS: Any = {
+    # Default OpenAPI config:
     Settings.openapi_config: OpenAPIConfig(
         title='wemake-django-template',
         version=_get_project_meta()['version'],
     ),
+    # Generate fake examples in OpenAPI:
+    Settings.openapi_examples_seed: 1,
 }

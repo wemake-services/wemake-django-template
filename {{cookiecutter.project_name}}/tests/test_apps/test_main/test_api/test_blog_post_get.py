@@ -6,7 +6,7 @@ from django.urls import reverse
 from dmr.test import DMRClient
 from faker import Faker
 
-from server.apps.main.infra.dtos import BlogPostDTO
+from server.apps.main.logic.value_objects import BlogPostFullPayload
 from server.apps.main.models import BlogPost
 
 
@@ -29,7 +29,7 @@ def test_blog_post_get(dmr_client: DMRClient, blog_post: BlogPost) -> None:
     )
 
     assert response.status_code == HTTPStatus.OK
-    msgspec.convert(response.json(), type=BlogPostDTO)
+    msgspec.convert(response.json(), type=BlogPostFullPayload)
 
 
 @pytest.mark.django_db
@@ -40,4 +40,6 @@ def test_blog_post_get_missing(dmr_client: DMRClient) -> None:
     )
 
     assert response.status_code == HTTPStatus.NOT_FOUND
-    assert response.json() == {'detail': [{'msg': 'Blog post not found'}]}
+    assert response.json() == {
+        'detail': [{'msg': 'Blog post not found', 'type': 'not_found'}],
+    }

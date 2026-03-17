@@ -4,7 +4,7 @@ from typing import final
 
 import attrs
 
-from server.apps.main.infra.dtos import BlogPostCreateDTO
+from server.apps.main.logic.value_objects import BlogPostCreatePayload
 from server.apps.main.models import BlogPost
 
 
@@ -13,14 +13,13 @@ from server.apps.main.models import BlogPost
 class BlogPostRepo:
     """Repository for the ``BlogPost`` model."""
 
-    def create(self, parsed_body: BlogPostCreateDTO) -> BlogPost:
+    def create(self, parsed_body: BlogPostCreatePayload) -> BlogPost:
         """Creates new ``BlogPost`` model."""
-        # TODO: technically this is not correct, because creation can fail:
         return BlogPost.objects.create(
             title=parsed_body.title,
             body=parsed_body.body,
         )
 
-    def get_or_none(self, blog_post_id: int) -> BlogPost | None:
+    def get_by_id(self, blog_post_id: int) -> BlogPost:
         """Return ``BlogPost`` model by the primary key."""
-        return BlogPost.objects.filter(pk=blog_post_id).first()
+        return BlogPost.objects.get(pk=blog_post_id)

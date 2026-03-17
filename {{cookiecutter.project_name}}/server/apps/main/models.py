@@ -24,8 +24,8 @@ class BlogPost(models.Model):
 
     class Meta:
         # You can use `gettext` to translate model names:
-        verbose_name = 'BlogPost'  # type: ignore[mutable-override]
-        verbose_name_plural = 'BlogPosts'  # type: ignore[mutable-override]
+        verbose_name = 'BlogPost'
+        verbose_name_plural = 'BlogPosts'
 
     @override
     def __str__(self) -> str:

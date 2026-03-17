@@ -1,0 +1,6 @@
+[generation]
+# Run more tests for better coverage:
+max-examples = 500  # this is too high just for the demo
+
+# Postgres does not like it:
+allow-x00 = false

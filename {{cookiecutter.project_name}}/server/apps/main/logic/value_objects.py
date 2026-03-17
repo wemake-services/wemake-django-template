@@ -5,17 +5,18 @@ import msgspec
 from server.apps.main.logic.constants import POST_TITLE_MAX_LENGTH
 
 
-class BlogPostCreateDTO(msgspec.Struct):
+class BlogPostCreatePayload(msgspec.Struct):
     """Used to create ``BlogPost`` models."""
 
     title: Annotated[
-        str, msgspec.Meta(min_length=1, max_length=POST_TITLE_MAX_LENGTH)
+        str,
+        msgspec.Meta(min_length=1, max_length=POST_TITLE_MAX_LENGTH),
     ]
     body: str
 
 
 @final
-class BlogPostDTO(BlogPostCreateDTO):
+class BlogPostFullPayload(BlogPostCreatePayload):
     """Used to represent existing ``BlogPost`` models."""
 
     id: int

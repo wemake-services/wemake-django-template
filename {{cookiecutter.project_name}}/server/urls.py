@@ -22,10 +22,11 @@ from dmr.openapi.views import (
     SwaggerView,
 )
 from dmr.plugins.msgspec import MsgspecSerializer
-from dmr.routing import Router, build_404_handler, path
+from dmr.routing import Router, build_404_handler, build_500_handler, path
 from health_check.views import HealthCheckView
 
 from server.apps.main import urls as main_urls
+from server.apps.main.api import urls as main_api_urls
 from server.apps.main.views import index
 
 admin.autodiscover()
@@ -33,18 +34,13 @@ admin.autodiscover()
 router = Router(
     'api/',
     [
-        path(
-            main_urls.router.prefix,
-            include((main_urls.router.urls, 'main'), namespace='main'),
-        ),
+        path('user/', include(main_api_urls, namespace='main')),
     ],
 )
 schema = build_schema(router)
 
-handler404 = build_404_handler(
-    router.prefix,
-    serializer=MsgspecSerializer,
-)
+handler404 = build_404_handler(router.prefix, serializer=MsgspecSerializer)
+handler500 = build_500_handler(router.prefix, serializer=MsgspecSerializer)
 
 urlpatterns = [
     # Apps:
@@ -64,7 +60,7 @@ urlpatterns = [
                 'health_check.Cache',
                 'health_check.Database',
                 'health_check.Storage',
-            ]
+            ],
         ),
         name='health_check',
     ),

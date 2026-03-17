@@ -4,8 +4,10 @@ from typing import TYPE_CHECKING, final
 
 import attrs
 
+from server.apps.main.logic.value_objects import BlogPostFullPayload
+
 if TYPE_CHECKING:
-    from server.apps.main.infra import dtos, mappers, repository
+    from server.apps.main.infra import mappers, repository
 
 
 @final
@@ -16,14 +18,11 @@ class GetBlogPost:
     _repository: repository.BlogPostRepo
     _mapper: mappers.BlogPostMapper
 
-    def __call__(self, blog_post_id: int) -> dtos.BlogPostDTO | None:
+    def __call__(self, blog_post_id: int) -> BlogPostFullPayload:
         """
         There's no real story to tell about this example.
 
         But here you need to put a text description of what business
         needs to be done in this usecase.
         """
-        blog_post = self._repository.get_or_none(blog_post_id)
-        if blog_post is None:
-            return None
-        return self._mapper(blog_post)
+        return self._mapper(self._repository.get_by_id(blog_post_id))

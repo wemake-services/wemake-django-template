@@ -11,7 +11,7 @@ from server.settings.components import config
 from server.settings.components.api import DMR_SETTINGS
 
 # Production flags:
-# https://docs.djangoproject.com/en/5.2/howto/deployment/
+# https://docs.djangoproject.com/en/6.0/howto/deployment/
 
 DEBUG = False
 
@@ -24,7 +24,7 @@ ALLOWED_HOSTS = [
 
 
 # Staticfiles
-# https://docs.djangoproject.com/en/5.2/ref/contrib/staticfiles/
+# https://docs.djangoproject.com/en/6.0/ref/contrib/staticfiles/
 
 # This is a hack to allow a special flag to be used with `--dry-run`
 # to test things locally.
@@ -45,13 +45,13 @@ STATICFILES_STORAGE = (
 
 
 # Media files
-# https://docs.djangoproject.com/en/5.2/topics/files/
+# https://docs.djangoproject.com/en/6.0/topics/files/
 
 MEDIA_ROOT = '/var/www/django/media'
 
 
 # Password validation
-# https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
+# https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
 
 _PASS = 'django.contrib.auth.password_validation'  # noqa: S105
 AUTH_PASSWORD_VALIDATORS = [
@@ -63,7 +63,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 # Security
-# https://docs.djangoproject.com/en/5.2/topics/security/
+# https://docs.djangoproject.com/en/6.0/topics/security/
 
 SECURE_HSTS_SECONDS = 31536000  # the same as Caddy has
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True

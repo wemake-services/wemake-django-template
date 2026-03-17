@@ -21,14 +21,14 @@ classifiers = [
 
 
 [tool.poetry.dependencies]
-django = { version = ">=5.2,<5.3", extras = ["argon2"] }
+django = { version = ">=6.0,<6.1", extras = ["argon2"] }
 django-split-settings = "^1.3"
 django-axes = "^8.0"
 django-csp = "^4.0"
 django-health-check = "^4.0"
 django-permissions-policy = "^4.27"
-django-stubs-ext = "^5.2"
-django-modern-rest = { version = "^0.1", extras = ["msgspec", "pydantic", "jwt", "openapi"] }
+django-stubs-ext = "^6.0"
+django-modern-rest = { version = "^0.3", extras = ["msgspec", "pydantic", "jwt", "openapi"] }
 
 psycopg2-binary = "^2.9"
 gunicorn = "^25.0"
@@ -59,8 +59,9 @@ pytest-randomly = "^4.0"
 pytest-timeout = "^2.3"
 django-test-migrations = "^1.5"
 hypothesis = "^6.123"
+schemathesis = "^4.12"
 
-django-stubs = { version = ">=5.2,<5.3", extras = ["compatible-mypy"] }
+django-stubs = { version = ">=6.0,<6.1", extras = ["compatible-mypy"] }
 
 djangofmt = "^0.2"
 yamllint = "^1.35"
@@ -138,7 +139,6 @@ select = [
 ]
 ignore = [
   "A005",   # allow to shadow stdlib and builtin module names
-  "COM812", # trailing comma, conflicts with `ruff format`
   # Different doc rules that we don't really care about:
   "D100",
   "D104",
