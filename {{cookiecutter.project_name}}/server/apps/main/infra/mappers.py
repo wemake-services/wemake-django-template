@@ -4,7 +4,7 @@ from typing import final
 
 import attrs
 
-from server.apps.main.infra.dtos import BlogPostDTO
+from server.apps.main.logic.value_objects import BlogPostFullPayload
 from server.apps.main.models import BlogPost
 
 
@@ -13,9 +13,9 @@ from server.apps.main.models import BlogPost
 class BlogPostMapper:
     """Preserves all properties of a ``BlogPost``."""
 
-    def __call__(self, blog_post: BlogPost) -> BlogPostDTO:
+    def __call__(self, blog_post: BlogPost) -> BlogPostFullPayload:
         """Map model to a DTO instance."""
-        return BlogPostDTO(
+        return BlogPostFullPayload(
             id=blog_post.id,
             title=blog_post.title,
             body=blog_post.body,

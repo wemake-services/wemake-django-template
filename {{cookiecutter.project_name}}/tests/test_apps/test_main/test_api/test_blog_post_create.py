@@ -7,12 +7,15 @@ from django.urls import reverse
 from dmr.test import DMRClient
 from polyfactory.factories.msgspec_factory import MsgspecFactory
 
-from server.apps.main.infra.dtos import BlogPostCreateDTO, BlogPostDTO
+from server.apps.main.logic.value_objects import (
+    BlogPostCreatePayload,
+    BlogPostFullPayload,
+)
 from server.apps.main.models import BlogPost
 
 
 @final
-class _BlogPostCreateFactory(MsgspecFactory[BlogPostCreateDTO]):
+class _BlogPostCreateFactory(MsgspecFactory[BlogPostCreatePayload]):
     __check_model__ = True
 
 
@@ -25,5 +28,5 @@ def test_blog_post_create(dmr_client: DMRClient) -> None:
     )
 
     assert response.status_code == HTTPStatus.CREATED
-    blog_post = msgspec.convert(response.json(), type=BlogPostDTO)
+    blog_post = msgspec.convert(response.json(), type=BlogPostFullPayload)
     BlogPost.objects.get(pk=blog_post.id)
