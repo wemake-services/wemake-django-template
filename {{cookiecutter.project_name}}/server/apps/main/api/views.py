@@ -64,7 +64,9 @@ class BlogPostGet(
         exc: Exception,
     ) -> HttpResponse:
         """Handle specific errors for this controller."""
-        if isinstance(exc, BlogPost.DoesNotExist):
+        # Since it is the only error that can happen here,
+        # we don't reach full coverage:
+        if isinstance(exc, BlogPost.DoesNotExist):  # pragma: no branch
             return self.to_error(
                 self.format_error(
                     'Blog post not found',
@@ -72,4 +74,8 @@ class BlogPostGet(
                 ),
                 status_code=HTTPStatus.NOT_FOUND,
             )
-        return super().handle_error(endpoint, controller, exc)
+        return super().handle_error(  # pragma: no cover
+            endpoint,
+            controller,
+            exc,
+        )

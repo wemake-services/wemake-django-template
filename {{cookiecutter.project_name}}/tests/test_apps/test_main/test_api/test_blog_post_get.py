@@ -40,4 +40,6 @@ def test_blog_post_get_missing(dmr_client: DMRClient) -> None:
     )
 
     assert response.status_code == HTTPStatus.NOT_FOUND
-    assert response.json() == {'detail': [{'msg': 'Blog post not found'}]}
+    assert response.json() == {
+        'detail': [{'msg': 'Blog post not found', 'type': 'not_found'}],
+    }
