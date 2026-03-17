@@ -1,12 +1,9 @@
 from http import HTTPStatus
-from typing import final
+from typing import final, override
 
-from dmr import (
-    APIError,
-    Body,
-    Controller,
-    modify,
-)
+from django.http import HttpResponse
+from dmr import Body, Controller, modify
+from dmr.endpoint import Endpoint
 from dmr.errors import ErrorType
 from dmr.metadata import ResponseSpec
 from dmr.openapi.objects import Link
@@ -17,6 +14,7 @@ from server.apps.main.logic.value_objects import (
     BlogPostCreatePayload,
     BlogPostFullPayload,
 )
+from server.apps.main.models import BlogPost
 from server.common.di import HasContainer
 
 
@@ -40,15 +38,7 @@ class BlogPostCreate(
     )
     def post(self) -> BlogPostFullPayload:
         """Create new ``BlogPost`` model."""
-        blog_post = self._resolve(blogpost_create.CreateBlogPost)(
-            self.parsed_body,
-        )
-        if blog_post is None:
-            raise APIError(
-                self.format_error('Wrong blog post'),
-                status_code=HTTPStatus.BAD_REQUEST,
-            )
-        return blog_post
+        return self._resolve(blogpost_create.CreateBlogPost)(self.parsed_body)
 
 
 @final
@@ -64,13 +54,22 @@ class BlogPostGet(
 
     def get(self) -> BlogPostFullPayload:
         """Return existing ``BlogPost`` model by id."""
-        blog_post = self._resolve(blogpost_get.GetBlogPost)(self.kwargs['id'])
-        if blog_post is None:
-            raise APIError(
+        return self._resolve(blogpost_get.GetBlogPost)(self.kwargs['id'])
+
+    @override
+    def handle_error(
+        self,
+        endpoint: Endpoint,
+        controller: Controller[MsgspecSerializer],
+        exc: Exception,
+    ) -> HttpResponse:
+        """Handle specific errors for this controller."""
+        if isinstance(exc, BlogPost.DoesNotExist):
+            return self.to_error(
                 self.format_error(
                     'Blog post not found',
                     error_type=ErrorType.not_found,
                 ),
                 status_code=HTTPStatus.NOT_FOUND,
             )
-        return blog_post
+        return super().handle_error(endpoint, controller, exc)

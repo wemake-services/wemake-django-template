@@ -24,14 +24,11 @@ class CreateBlogPost:
     def __call__(
         self,
         parsed_body: BlogPostCreatePayload,
-    ) -> BlogPostFullPayload | None:
+    ) -> BlogPostFullPayload:
         """
         There's no real story to tell about this example.
 
         But here you need to put a text description of what business
         needs to be done in this usecase.
         """
-        blog_post = self._repository.create(parsed_body)
-        if blog_post is None:
-            return blog_post
-        return self._mapper(blog_post)
+        return self._mapper(self._repository.create(parsed_body))
