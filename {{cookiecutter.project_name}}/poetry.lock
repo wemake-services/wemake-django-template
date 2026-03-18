@@ -985,14 +985,14 @@ django = ">=4.2"
 
 [[package]]
 name = "django-query-counter"
-version = "0.4.2"
+version = "0.5.0"
 description = "Debug tool to print SQL queries count to the console"
 optional = false
 python-versions = ">=3.9"
 groups = ["dev"]
 files = [
-    {file = "django_query_counter-0.4.2-py3-none-any.whl", hash = "sha256:6cc843e274b2ad8ad5e90e293e6408cf036af31ee94348d273209538a1c6794c"},
-    {file = "django_query_counter-0.4.2.tar.gz", hash = "sha256:4405bcaef0df00059011f1c9c163584f25d5c36f1bf0b15e09c3a140454f05ce"},
+    {file = "django_query_counter-0.5.0-py3-none-any.whl", hash = "sha256:9869cb24522342241a2742f5faf36a3f5677fb81be466e23dd29c885c0abe2cc"},
+    {file = "django_query_counter-0.5.0.tar.gz", hash = "sha256:25d0615d5dca4973173bdfd6325f84d787bb0ffa3959993fc69860540325d890"},
 ]
 
 [package.dependencies]
@@ -4333,4 +4333,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "ruff", "sph
 [metadata]
 lock-version = "2.1"
 python-versions = "==3.13.11"
-content-hash = "7971ce7c62c1e2ee0f2770383c40633a4fa7d31a91b6681e111ed15153472743"
+content-hash = "fd2097c576804c160688cdd679d66ef0ed35ee4638b046c771eb22d92365415d"

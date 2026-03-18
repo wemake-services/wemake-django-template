@@ -43,7 +43,7 @@ attrs = "^25.4"
 django-debug-toolbar = "^6.0"
 django-migration-linter = "^6.0"
 django-extra-checks = "^0.16"
-django-query-counter = "^0.4"
+django-query-counter = "^0.5"
 django-zeal = "^2.0"
 django-drifter = "^0.1"
 
