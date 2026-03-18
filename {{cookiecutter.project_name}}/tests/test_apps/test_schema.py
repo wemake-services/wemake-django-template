@@ -12,6 +12,8 @@ from server.wsgi import application
 
 @pytest.fixture(autouse=True)
 def _disable_logging(settings: LazySettings) -> Iterator[None]:
+    # django-query-counter produces tons of output for no reason:
+    settings.DQC_ENABLED = False
     # Logging has too much output with schemathesis:
     logging.disable(logging.CRITICAL)
     yield
