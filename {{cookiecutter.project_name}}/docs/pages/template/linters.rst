@@ -50,10 +50,32 @@ That's how this check is executed:
 
 .. code:: bash
 
-  python manage.py lintmigrations --exclude-apps=axes
+  python manage.py lintmigrations
 
 Important note: you might want to exclude some packages with broken migrations.
 Sometimes, there's nothing we can do about it.
+
+
+django-safe-migrations
+---------------------
+
+We use ``django-safe-migrations`` to ensure our database migrations are safe
+to run in production environments without downtime. It provides checks and
+utilities to prevent unsafe operations such as locking tables or breaking
+existing queries.
+
+See `django-safe-migrations <https://github.com/YasserShkeir/django-safe-migrations>`_
+docs, it contains useful information and best practices for writing safe migrations.
+
+That's how this check is executed:
+
+.. code:: bash
+
+  python manage.py check_migrations --exclude-apps=axes
+
+Important note: some third-party apps may include migrations that are not fully safe.
+In such cases, consider reviewing them manually or excluding them from checks
+if no fix is possible.
 
 
 yamllint

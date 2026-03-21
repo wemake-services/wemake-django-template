@@ -48,6 +48,8 @@ INSTALLED_APPS += (
     'zeal',
     # Linting migrations:
     'django_migration_linter',
+    # Detect unsafe migrations:
+    'django_safe_migrations',
     # django-test-migrations:
     'django_test_migrations.contrib.django_checks.AutoNames',
     # This check might be useful in production as well,
@@ -56,8 +58,6 @@ INSTALLED_APPS += (
     # This will check that your database is configured properly,
     # when you run `python manage.py check` before deploy.
     'django_test_migrations.contrib.django_checks.DatabaseConfiguration',
-    # Detect unsafe migrations:
-    'django_safe_migrations',
     # django-extra-checks:
     'extra_checks',
     # django-query-counter:
@@ -145,7 +145,9 @@ MIGRATION_LINTER_OPTIONS = {
 # https://github.com/YasserShkeir/django-safe-migrations
 
 SAFE_MIGRATIONS = {
-    'EXCLUDED_APPS': ['axes'],
+    'DISABLED_RULES': [
+        'SM028',  # Prefer bigint over int
+    ],
     'FAIL_ON_WARNING': True,
 }
 
