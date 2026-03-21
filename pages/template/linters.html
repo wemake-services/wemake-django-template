@@ -284,11 +284,27 @@ It allows us to write 0-downtime friendly code.</p>
 <p>See <a class="reference external" href="https://github.com/3YOURMIND/django-migration-linter">django-migration-linter</a>
 docs, it contains a lot of useful information about ways and tools to do it.</p>
 <p>That’s how this check is executed:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>manage.py<span class="w"> </span>lintmigrations<span class="w"> </span>--exclude-apps<span class="o">=</span>axes
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>manage.py<span class="w"> </span>lintmigrations
 </pre></div>
 </div>
 <p>Important note: you might want to exclude some packages with broken migrations.
 Sometimes, there’s nothing we can do about it.</p>
+</section>
+<section id="django-safe-migrations">
+<h2>django-safe-migrations<a class="headerlink" href="#django-safe-migrations" title="Link to this heading">¶</a></h2>
+<p>We use <code class="docutils literal notranslate"><span class="pre">django-safe-migrations</span></code> to ensure our database migrations are safe
+to run in production environments without downtime. It provides checks and
+utilities to prevent unsafe operations such as locking tables or breaking
+existing queries.</p>
+<p>See <a class="reference external" href="https://github.com/YasserShkeir/django-safe-migrations">django-safe-migrations</a>
+docs, it contains useful information and best practices for writing safe migrations.</p>
+<p>That’s how this check is executed:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>manage.py<span class="w"> </span>check_migrations<span class="w"> </span>--exclude-apps<span class="o">=</span>axes
+</pre></div>
+</div>
+<p>Important note: some third-party apps may include migrations that are not fully safe.
+In such cases, consider reviewing them manually or excluding them from checks
+if no fix is possible.</p>
 </section>
 <section id="yamllint">
 <h2>yamllint<a class="headerlink" href="#yamllint" title="Link to this heading">¶</a></h2>
@@ -418,6 +434,7 @@ See <a class="reference external" href="https://github.com/hadolint/hadolint">ha
 <li><a class="reference internal" href="#ruff">ruff</a></li>
 <li><a class="reference internal" href="#wemake-python-styleguide">wemake-python-styleguide</a></li>
 <li><a class="reference internal" href="#django-migration-linter">django-migration-linter</a></li>
+<li><a class="reference internal" href="#django-safe-migrations">django-safe-migrations</a></li>
 <li><a class="reference internal" href="#yamllint">yamllint</a></li>
 <li><a class="reference internal" href="#djangofmt">djangofmt</a></li>
 <li><a class="reference internal" href="#import-linter">import-linter</a></li>
