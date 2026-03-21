@@ -126,6 +126,9 @@ Here's a full list of the extensions for both development and production:
   allows removing them in a backwards compatible manner
 - `django-migration-linter`_ - detect backward incompatible migrations for
   your django project
+- `django-safe-migrations`_ - detect unsafe Django migrations and warns about
+  operations that could cause downtime, lock tables, or cause data loss
+  in production environments.
 - `zero-downtime-migrations`_ - apply ``django`` migrations on PostgreSql
   without long locks on tables
 
@@ -150,6 +153,7 @@ Development only extensions:
 .. _django-add-default-value: https://github.com/3YOURMIND/django-add-default-value
 .. _django-deprecate-fields: https://github.com/3YOURMIND/django-deprecate-fields
 .. _django-migration-linter: https://github.com/3YOURMIND/django-migration-linter
+.. _django-safe-migrations: https://github.com/YasserShkeir/django-safe-migrations
 .. _zero-downtime-migrations: https://github.com/yandex/zero-downtime-migrations
 .. _django-debug-toolbar: https://github.com/jazzband/django-debug-toolbar
 .. _django-querycount: https://github.com/bradmontgomery/django-querycount

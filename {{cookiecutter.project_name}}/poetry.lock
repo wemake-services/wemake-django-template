@@ -999,6 +999,28 @@ files = [
 tabulate = "*"
 
 [[package]]
+name = "django-safe-migrations"
+version = "0.5.2"
+description = "Detect unsafe Django migrations before they break production"
+optional = false
+python-versions = ">=3.9"
+groups = ["dev"]
+files = [
+    {file = "django_safe_migrations-0.5.2-py3-none-any.whl", hash = "sha256:5c663110ae6977ecbf9aef8a2d07495f19b36a6dc3a04670db8ea53dca607b1f"},
+    {file = "django_safe_migrations-0.5.2.tar.gz", hash = "sha256:05885e3cdf1be67c72f084aebd472e270f8a7474515fca177321546f27a664a0"},
+]
+
+[package.dependencies]
+django = ">=3.2"
+
+[package.extras]
+dev = ["bandit (>=1.7)", "black (>=22.0)", "build (>=0.8)", "django-stubs (>=4.0)", "flake8 (>=5.0)", "flake8-docstrings (>=1.7)", "isort (>=5.0)", "mypy (>=1.0)", "pre-commit (>=2.20)", "pytest (>=7.0)", "pytest-cov (>=4.0)", "pytest-django (>=4.5)", "pytest-xdist (>=3.0)", "twine (>=4.0)"]
+docs = ["mkdocs (>=1.4)", "mkdocs-material (>=9.0)", "mkdocstrings[python] (>=0.20)"]
+mysql = ["mysqlclient (>=2.1)"]
+postgres = ["psycopg2-binary (>=2.9)"]
+watch = ["watchdog (>=3.0)"]
+
+[[package]]
 name = "django-split-settings"
 version = "1.3.2"
 description = "Organize Django settings into multiple files and directories. Easily override and modify settings. Use wildcards and optional settings files."
@@ -4333,4 +4355,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "ruff", "sph
 [metadata]
 lock-version = "2.1"
 python-versions = "==3.13.11"
-content-hash = "fd2097c576804c160688cdd679d66ef0ed35ee4638b046c771eb22d92365415d"
+content-hash = "a42a31c47da8f59eef5b95759842f72e2746ef6d2a43ec05dcc71d7dc7debe56"

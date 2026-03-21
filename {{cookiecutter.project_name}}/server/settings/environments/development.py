@@ -48,6 +48,8 @@ INSTALLED_APPS += (
     'zeal',
     # Linting migrations:
     'django_migration_linter',
+    # Detect unsafe migrations:
+    'django_safe_migrations',
     # django-test-migrations:
     'django_test_migrations.contrib.django_checks.AutoNames',
     # This check might be useful in production as well,
@@ -137,6 +139,16 @@ MIGRATION_LINTER_OPTIONS = {
     'exclude_apps': ['axes'],
     'exclude_migration_tests': ['CREATE_INDEX', 'CREATE_INDEX_EXCLUSIVE'],
     'warnings_as_errors': True,
+}
+
+# django-safe-migrations
+# https://github.com/YasserShkeir/django-safe-migrations
+
+SAFE_MIGRATIONS = {
+    'DISABLED_RULES': [
+        'SM028',  # Prefer bigint over int
+    ],
+    'FAIL_ON_WARNING': True,
 }
 
 
