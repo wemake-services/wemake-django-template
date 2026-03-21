@@ -56,6 +56,8 @@ INSTALLED_APPS += (
     # This will check that your database is configured properly,
     # when you run `python manage.py check` before deploy.
     'django_test_migrations.contrib.django_checks.DatabaseConfiguration',
+    # Detect unsafe migrations:
+    'django_safe_migrations',
     # django-extra-checks:
     'extra_checks',
     # django-query-counter:
@@ -137,6 +139,14 @@ MIGRATION_LINTER_OPTIONS = {
     'exclude_apps': ['axes'],
     'exclude_migration_tests': ['CREATE_INDEX', 'CREATE_INDEX_EXCLUSIVE'],
     'warnings_as_errors': True,
+}
+
+# django-safe-migrations
+# https://github.com/YasserShkeir/django-safe-migrations
+
+SAFE_MIGRATIONS = {
+    'EXCLUDED_APPS': ['axes'],
+    'FAIL_ON_WARNING': True,
 }
 
 
