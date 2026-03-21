@@ -57,7 +57,7 @@ Sometimes, there's nothing we can do about it.
 
 
 django-safe-migrations
----------------------
+----------------------
 
 We use ``django-safe-migrations`` to ensure our database migrations are safe
 to run in production environments without downtime. It provides checks and
