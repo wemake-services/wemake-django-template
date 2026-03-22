@@ -2,7 +2,7 @@
 
 We are using [Sphinx](http://www.sphinx-doc.org) to manage our documentation.
 If you have never worked with `Sphinx` this guide
-will cover the most common uses cases.
+will cover the most common use cases.
 
 
 ## Quickstart

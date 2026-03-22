@@ -57,7 +57,10 @@ There are multiple processes that you need to get familiar with:
 
 - First time setup phase: what system requirements you must fulfill,
   how to install dependencies, how to start your project
-- Active development phase: how to make changes, run tests,
+- Active development phase: how to make changes, run tests and linters,
+  write documentation, and use GitLab CI
+- Production phase: deployment checklist, production configuration,
+  and operations.
 
 
 .. toctree::

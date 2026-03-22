@@ -40,11 +40,11 @@ Go right to `Development with docker`_.
 Installing dependencies
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-You do not need to run any of these command for ``docker`` based development,
+You do not need to run any of these commands for ``docker`` based development,
 since it is already executed inside ``Dockerfile``.
 
 Please, note that ``poetry`` will automatically create a ``virtualenv`` for
-this project. It will use you current ``python`` version.
+this project. It will use your current ``python`` version.
 To install all existing dependencies run:
 
 .. code:: bash
