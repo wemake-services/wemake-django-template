@@ -97,7 +97,7 @@ There are different tools to help you:
 - `lynis <https://cisofy.com/lynis/>`_ - a battle-tested security tool for systems running Linux, macOS, or Unix-based operating system
 - `trivy <https://github.com/knqyf263/trivy>`_ - a simple and comprehensive vulnerability scanner for containers
 
-But, even after all you attempts to secure your application,
+But, even after all your attempts to secure your application,
 it **won't be 100% safe**. Do not fall into this false feeling of security.
 
 

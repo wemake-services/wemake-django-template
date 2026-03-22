@@ -79,7 +79,7 @@ All sensible settings are stored in ``config/.env`` file,
 which is not tracked by the version control.
 
 So, how do we store secrets? We store them as secret environment variables
-in `GitLab CI <https://docs.gitlab.com/ee/ci/variables/#cicd-variable-security>`_.
+in `Gitlab CI <https://docs.gitlab.com/ee/ci/variables/#cicd-variable-security>`_.
 Then we use `dump-env <https://github.com/sobolevn/dump-env>`_
 to dump variables from both environment and ``.env`` file template.
 Then, this file is copied inside ``docker`` image and when
@@ -121,7 +121,7 @@ Here's a full list of the extensions for both development and production:
 - `django-health-check`_ - checks for various conditions and provides reports
   when anomalous behavior is detected
 - `django-add-default-value`_ - this django Migration Operation can be used to
-  transfer a Fields default value to the database scheme
+  transfer a Fields default value to the database schema
 - `django-deprecate-fields`_ - this package allows deprecating model fields and
   allows removing them in a backwards compatible manner
 - `django-migration-linter`_ - detect backward incompatible migrations for

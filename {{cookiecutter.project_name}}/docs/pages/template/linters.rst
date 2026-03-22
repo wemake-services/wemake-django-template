@@ -104,7 +104,7 @@ See `djangofmt <https://github.com/UnknownPlatypus/djangofmt>`_ docs.
 import-linter
 -------------
 
-Is used to lint your architecture and imports all accross the project.
+Is used to lint your architecture and imports all across the project.
 See `import-linter <https://github.com/seddonym/import-linter>`_ docs.
 
 .. code:: bash

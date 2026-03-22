@@ -34,7 +34,7 @@ root project
   You need to install the required plugin for your IDE in order to enable it
 - ``.gitignore`` - file that specifies
   what should we commit into the repository and we should not
-- ``.gitlab-ci.yml`` - GitLab CI configuration file.
+- ``.gitlab-ci.yml`` - Gitlab CI configuration file.
   It basically defines what to do with your project
   after pushing it to the repository. Currently it is used for testing
   and releasing a ``docker`` image
@@ -46,7 +46,7 @@ root project
   log of all notable changes made to the project. It provides
   a comprehensive overview of the project's evolution and
   helps users and contributors understand the development history
-- ``docker-compose.yml`` - this the file specifies ``docker`` services
+- ``docker-compose.yml`` - this file specifies ``docker`` services
   that are needed for development and testing
 - ``docker-compose.override.yml`` - local override for ``docker-compose``.
   Is applied automatically and implicitly when
@@ -102,7 +102,7 @@ tests
 ~~~~~
 
 - ``tests/plugins`` - ``pytest`` plugins that are used in this project
-- ``tests/test_server`` - tests that ensures that basic ``django``
+- ``tests/test_server`` - tests that ensure that basic ``django``
   stuff is working, should not be removed
 - ``tests/test_apps/test_main`` - example tests for the ``django`` app,
   could be removed

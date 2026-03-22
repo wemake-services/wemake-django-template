@@ -22,7 +22,7 @@ Production configuration
 You will need to specify extra configuration
 to run ``docker-compose`` in production.
 Since production build also uses ``caddy``,
-which is not required into the development build.
+which is not required in the development build.
 
 .. code:: bash
 
@@ -54,12 +54,22 @@ See `official Gitlab docs <https://docs.gitlab.com/ee/user/packages/container_re
 Updating already running service
 --------------------------------
 
-If you need to update an already running service,
-them you will have to use ``docker service update``
-or ``docker stack deploy``.
+If you deploy with ``docker compose`` on a single host, update by pulling
+new images and recreating containers:
 
-Updating existing `service <https://docs.docker.com/engine/reference/commandline/service_update/>`_.
-Updating existing `stack <https://docs.docker.com/engine/reference/commandline/stack_deploy/>`_.
+.. code:: bash
+
+   docker compose -f docker-compose.yml -f docker/docker-compose.prod.yml pull
+   docker compose -f docker-compose.yml -f docker/docker-compose.prod.yml up -d
+
+If you build images on the server instead of pulling pre-built ones,
+rebuild and recreate:
+
+.. code:: bash
+
+   docker compose -f docker-compose.yml -f docker/docker-compose.prod.yml up -d --build
+
+See `docker compose up <https://docs.docker.com/reference/cli/docker/compose/up/>`_.
 
 Zero-Time Updates
 ~~~~~~~~~~~~~~~~~

@@ -15,7 +15,7 @@ Versions
 --------
 
 Sometimes, when we break something heavily, we create a version.
-That's is required for our users, so they can use old releases to create
+That is required for our users, so they can use old releases to create
 projects as they used to be a long time ago.
 
 However, we do not officially support older versions.
