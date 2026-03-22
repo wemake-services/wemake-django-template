@@ -289,7 +289,7 @@ your static files to any kind of CDNs.</p>
 </div>
 <p>These warnings are raised by <code class="docutils literal notranslate"><span class="pre">django</span></code>
 when it detects any configuration issues.</p>
-<p>This command should give not warnings or errors.
+<p>This command should give no warnings or errors.
 It is bundled into <code class="docutils literal notranslate"><span class="pre">docker</span></code>, so the container will not work with any warnings.</p>
 </section>
 <section id="static-and-media-files">
@@ -299,7 +299,7 @@ and static files in production as <code class="docutils literal notranslate"><sp
 and <code class="docutils literal notranslate"><span class="pre">/var/www/django/media</span></code>.
 Docker uses these two folders as named volumes.
 And later these volumes are also mounted to <code class="docutils literal notranslate"><span class="pre">caddy</span></code>
-with <code class="docutils literal notranslate"><span class="pre">ro</span></code> mode so it possible to read their contents.</p>
+with <code class="docutils literal notranslate"><span class="pre">ro</span></code> mode so it is possible to read their contents.</p>
 <p>To find the exact location of these files on your host
 you will need to do the following:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>volume<span class="w"> </span>ls<span class="w">  </span><span class="c1"># to find volumes&#39; names</span>
@@ -315,7 +315,7 @@ to bind <code class="docutils literal notranslate"><span class="pre">django</spa
 </section>
 <section id="migrations">
 <h3>Migrations<a class="headerlink" href="#migrations" title="Link to this heading">¶</a></h3>
-<p>We do run migration in the <code class="docutils literal notranslate"><span class="pre">gunicorn.sh</span></code> by default.
+<p>We do run migrations in the <code class="docutils literal notranslate"><span class="pre">gunicorn.sh</span></code> by default.
 Why do we do this? Because that’s probably the easiest way to do it.
 But it clearly has some disadvantages:</p>
 <ul class="simple">
@@ -393,7 +393,7 @@ your app works on third-level domains like:</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">kira.wemake.services</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">support.myapp.com</span></code></p></li>
 </ul>
-<p>Otherwise, <code class="docutils literal notranslate"><span class="pre">Caddy</span></code> will server redirects to <code class="docutils literal notranslate"><span class="pre">www.example.yourdomain.com</span></code>.</p>
+<p>Otherwise, <code class="docutils literal notranslate"><span class="pre">Caddy</span></code> will serve redirects to <code class="docutils literal notranslate"><span class="pre">www.example.yourdomain.com</span></code>.</p>
 </section>
 </section>
 <section id="further-reading">

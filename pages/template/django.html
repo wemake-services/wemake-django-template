@@ -316,7 +316,7 @@ add a comment on how to get this value for other users</p></li>
 All sensible settings are stored in <code class="docutils literal notranslate"><span class="pre">config/.env</span></code> file,
 which is not tracked by the version control.</p>
 <p>So, how do we store secrets? We store them as secret environment variables
-in <a class="reference external" href="https://docs.gitlab.com/ee/ci/variables/#cicd-variable-security">GitLab CI</a>.
+in <a class="reference external" href="https://docs.gitlab.com/ee/ci/variables/#cicd-variable-security">Gitlab CI</a>.
 Then we use <a class="reference external" href="https://github.com/sobolevn/dump-env">dump-env</a>
 to dump variables from both environment and <code class="docutils literal notranslate"><span class="pre">.env</span></code> file template.
 Then, this file is copied inside <code class="docutils literal notranslate"><span class="pre">docker</span></code> image and when
@@ -356,7 +356,7 @@ of failed login attempts in <code class="docutils literal notranslate"><span cla
 <li><p><a class="reference external" href="https://github.com/KristianOellegaard/django-health-check">django-health-check</a> - checks for various conditions and provides reports
 when anomalous behavior is detected</p></li>
 <li><p><a class="reference external" href="https://github.com/3YOURMIND/django-add-default-value">django-add-default-value</a> - this django Migration Operation can be used to
-transfer a Fields default value to the database scheme</p></li>
+transfer a Fields default value to the database schema</p></li>
 <li><p><a class="reference external" href="https://github.com/3YOURMIND/django-deprecate-fields">django-deprecate-fields</a> - this package allows deprecating model fields and
 allows removing them in a backwards compatible manner</p></li>
 <li><p><a class="reference external" href="https://github.com/3YOURMIND/django-migration-linter">django-migration-linter</a> - detect backward incompatible migrations for

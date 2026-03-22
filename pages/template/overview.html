@@ -286,7 +286,7 @@ copied to the <code class="docutils literal notranslate"><span class="pre">docke
 You need to install the required plugin for your IDE in order to enable it</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> - file that specifies
 what should we commit into the repository and we should not</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">.gitlab-ci.yml</span></code> - GitLab CI configuration file.
+<li><p><code class="docutils literal notranslate"><span class="pre">.gitlab-ci.yml</span></code> - Gitlab CI configuration file.
 It basically defines what to do with your project
 after pushing it to the repository. Currently it is used for testing
 and releasing a <code class="docutils literal notranslate"><span class="pre">docker</span></code> image</p></li>
@@ -298,7 +298,7 @@ across different machines and environments</p></li>
 log of all notable changes made to the project. It provides
 a comprehensive overview of the project’s evolution and
 helps users and contributors understand the development history</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code> - this the file specifies <code class="docutils literal notranslate"><span class="pre">docker</span></code> services
+<li><p><code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code> - this file specifies <code class="docutils literal notranslate"><span class="pre">docker</span></code> services
 that are needed for development and testing</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">docker-compose.override.yml</span></code> - local override for <code class="docutils literal notranslate"><span class="pre">docker-compose</span></code>.
 Is applied automatically and implicitly when
@@ -357,7 +357,7 @@ we execute during our CI process for caddy</p></li>
 <h3>tests<a class="headerlink" href="#tests" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">tests/plugins</span></code> - <code class="docutils literal notranslate"><span class="pre">pytest</span></code> plugins that are used in this project</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tests/test_server</span></code> - tests that ensures that basic <code class="docutils literal notranslate"><span class="pre">django</span></code>
+<li><p><code class="docutils literal notranslate"><span class="pre">tests/test_server</span></code> - tests that ensure that basic <code class="docutils literal notranslate"><span class="pre">django</span></code>
 stuff is working, should not be removed</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tests/test_apps/test_main</span></code> - example tests for the <code class="docutils literal notranslate"><span class="pre">django</span></code> app,
 could be removed</p></li>

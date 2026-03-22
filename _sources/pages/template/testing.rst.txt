@@ -33,7 +33,7 @@ Plugins
 We use different ``pytest`` plugins to make our testing process better.
 Here's the full list of things we use:
 
-- `pytest-django`_ - plugin that introduce a lot of ``django`` specific
+- `pytest-django`_ - plugin that introduces a lot of ``django`` specific
   helpers, fixtures, and configuration
 - `django-test-migrations`_ - plugin to test Django migrations and their order
 - `pytest-cov`_ - plugin to measure test coverage
@@ -60,7 +60,7 @@ There are several options you can provide or remove to make your tests faster:
 - You can use ``pytest-xdist`` together with
   ``-n auto``  to schedule several numbers of workers,
   sometimes when there are a lot of tests it may increase the testing speed.
-  But on a small project with a small amount of test it just
+  But on a small project with a small amount of tests it just
   gives you an overhead, so removing it (together with ``--boxed``)
   will boost your testing performance
 - If there are a lot of tests with database access

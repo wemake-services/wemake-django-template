@@ -52,7 +52,7 @@ That's how we check ``django`` warnings:
 These warnings are raised by ``django``
 when it detects any configuration issues.
 
-This command should give not warnings or errors.
+This command should give no warnings or errors.
 It is bundled into ``docker``, so the container will not work with any warnings.
 
 Static and media files
@@ -63,7 +63,7 @@ and static files in production as ``/var/www/django/static``
 and ``/var/www/django/media``.
 Docker uses these two folders as named volumes.
 And later these volumes are also mounted to ``caddy``
-with ``ro`` mode so it possible to read their contents.
+with ``ro`` mode so it is possible to read their contents.
 
 To find the exact location of these files on your host
 you will need to do the following:
@@ -84,7 +84,7 @@ If you don't need ``media`` files support, just remove the volumes.
 Migrations
 ~~~~~~~~~~
 
-We do run migration in the ``gunicorn.sh`` by default.
+We do run migrations in the ``gunicorn.sh`` by default.
 Why do we do this? Because that's probably the easiest way to do it.
 But it clearly has some disadvantages:
 
@@ -177,7 +177,7 @@ your app works on third-level domains like:
 - ``kira.wemake.services``
 - ``support.myapp.com``
 
-Otherwise, ``Caddy`` will server redirects to ``www.example.yourdomain.com``.
+Otherwise, ``Caddy`` will serve redirects to ``www.example.yourdomain.com``.
 
 
 Further reading

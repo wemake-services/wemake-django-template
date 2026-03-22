@@ -276,7 +276,7 @@ inside the <code class="docutils literal notranslate"><span class="pre">setup.cf
 <p>We use different <code class="docutils literal notranslate"><span class="pre">pytest</span></code> plugins to make our testing process better.
 Here’s the full list of things we use:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/pytest-dev/pytest-django">pytest-django</a> - plugin that introduce a lot of <code class="docutils literal notranslate"><span class="pre">django</span></code> specific
+<li><p><a class="reference external" href="https://github.com/pytest-dev/pytest-django">pytest-django</a> - plugin that introduces a lot of <code class="docutils literal notranslate"><span class="pre">django</span></code> specific
 helpers, fixtures, and configuration</p></li>
 <li><p><a class="reference external" href="https://github.com/wemake-services/django-test-migrations">django-test-migrations</a> - plugin to test Django migrations and their order</p></li>
 <li><p><a class="reference external" href="https://github.com/pytest-dev/pytest-cov">pytest-cov</a> - plugin to measure test coverage</p></li>
@@ -296,7 +296,7 @@ that take too long to finish, this way you can control test execution speed</p><
 <li><p>You can use <code class="docutils literal notranslate"><span class="pre">pytest-xdist</span></code> together with
 <code class="docutils literal notranslate"><span class="pre">-n</span> <span class="pre">auto</span></code>  to schedule several numbers of workers,
 sometimes when there are a lot of tests it may increase the testing speed.
-But on a small project with a small amount of test it just
+But on a small project with a small amount of tests it just
 gives you an overhead, so removing it (together with <code class="docutils literal notranslate"><span class="pre">--boxed</span></code>)
 will boost your testing performance</p></li>
 <li><p>If there are a lot of tests with database access

@@ -271,7 +271,7 @@ from deployment strategy.</p>
 <p>You will need to specify extra configuration
 to run <code class="docutils literal notranslate"><span class="pre">docker-compose</span></code> in production.
 Since production build also uses <code class="docutils literal notranslate"><span class="pre">caddy</span></code>,
-which is not required into the development build.</p>
+which is not required in the development build.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.yml<span class="w"> </span>-f<span class="w"> </span>docker/docker-compose.prod.yml<span class="w"> </span>up
 </pre></div>
 </div>
@@ -293,11 +293,18 @@ Then, login into your registry with:</p>
 </section>
 <section id="updating-already-running-service">
 <h2>Updating already running service<a class="headerlink" href="#updating-already-running-service" title="Link to this heading">¶</a></h2>
-<p>If you need to update an already running service,
-them you will have to use <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">service</span> <span class="pre">update</span></code>
-or <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">stack</span> <span class="pre">deploy</span></code>.</p>
-<p>Updating existing <a class="reference external" href="https://docs.docker.com/engine/reference/commandline/service_update/">service</a>.
-Updating existing <a class="reference external" href="https://docs.docker.com/engine/reference/commandline/stack_deploy/">stack</a>.</p>
+<p>If you deploy with <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">compose</span></code> on a single host, update by pulling
+new images and recreating containers:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.yml<span class="w"> </span>-f<span class="w"> </span>docker/docker-compose.prod.yml<span class="w"> </span>pull
+docker<span class="w"> </span>compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.yml<span class="w"> </span>-f<span class="w"> </span>docker/docker-compose.prod.yml<span class="w"> </span>up<span class="w"> </span>-d
+</pre></div>
+</div>
+<p>If you build images on the server instead of pulling pre-built ones,
+rebuild and recreate:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.yml<span class="w"> </span>-f<span class="w"> </span>docker/docker-compose.prod.yml<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>--build
+</pre></div>
+</div>
+<p>See <a class="reference external" href="https://docs.docker.com/reference/cli/docker/compose/up/">docker compose up</a>.</p>
 <section id="zero-time-updates">
 <h3>Zero-Time Updates<a class="headerlink" href="#zero-time-updates" title="Link to this heading">¶</a></h3>
 <p>Zero-Time Updates can be tricky.

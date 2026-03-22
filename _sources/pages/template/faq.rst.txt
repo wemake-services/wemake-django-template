@@ -22,7 +22,7 @@ This code quality is unbearable! Can I turn it off?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Of course, no one can stop you from that.
-But what the point in using this template then?
+But what's the point in using this template then?
 
 Our code quality defined by this template is minimally acceptable.
 We know tools to make it even better. But they are not included.
