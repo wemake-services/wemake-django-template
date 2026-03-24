@@ -68,7 +68,7 @@ run_ci () {
   python manage.py lintmigrations
 
   # Check that all migrations are safe for production:
-  python manage.py check_migrations --exclude-apps axes
+  python manage.py check_migrations
 
   # Check production settings for gunicorn:
   gunicorn --check-config --config python:docker.django.gunicorn_config server.wsgi

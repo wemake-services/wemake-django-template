@@ -42,7 +42,7 @@ attrs = "^25.4"
 [tool.poetry.group.dev.dependencies]
 django-debug-toolbar = "^6.0"
 django-migration-linter = "^6.0"
-django-safe-migrations = "^0.5"
+django-safe-migrations = "^0.6"
 django-extra-checks = "^0.16"
 django-query-counter = "^0.5"
 django-zeal = "^2.0"

@@ -145,6 +145,7 @@ MIGRATION_LINTER_OPTIONS = {
 # https://github.com/YasserShkeir/django-safe-migrations
 
 SAFE_MIGRATIONS = {
+    'EXCLUDED_APPS': ['axes'],
     'DISABLED_RULES': [
         'SM028',  # Prefer bigint over int
     ],
