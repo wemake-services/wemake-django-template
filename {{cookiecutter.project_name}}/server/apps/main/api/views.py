@@ -20,7 +20,6 @@ from server.common.di import HasContainer
 
 @final
 class BlogPostCreate(
-    Body[BlogPostCreatePayload],
     Controller[MsgspecSerializer],
     HasContainer,
 ):
@@ -36,9 +35,12 @@ class BlogPostCreate(
             ),
         },
     )
-    def post(self) -> BlogPostFullPayload:
+    def post(
+        self,
+        parsed_body: Body[BlogPostCreatePayload],
+    ) -> BlogPostFullPayload:
         """Create new ``BlogPost`` model."""
-        return self._resolve(blogpost_create.CreateBlogPost)(self.parsed_body)
+        return self._resolve(blogpost_create.CreateBlogPost)(parsed_body)
 
 
 @final
@@ -48,10 +50,14 @@ class BlogPostGet(
 ):
     """Endpoints that only require a path for ``BlogPost`` models."""
 
-    responses = (
-        ResponseSpec(Controller.error_model, status_code=HTTPStatus.NOT_FOUND),
+    @modify(
+        extra_responses=[
+            ResponseSpec(
+                Controller.error_model,
+                status_code=HTTPStatus.NOT_FOUND,
+            ),
+        ],
     )
-
     def get(self) -> BlogPostFullPayload:
         """Return existing ``BlogPost`` model by id."""
         return self._resolve(blogpost_get.GetBlogPost)(self.kwargs['id'])
