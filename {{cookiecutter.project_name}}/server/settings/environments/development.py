@@ -102,8 +102,8 @@ DEBUG_TOOLBAR_CONFIG = {
 
 # This will make debug toolbar to work with csp,
 # since `ddt` loads some scripts from `ajax.googleapis.com`:
-SECURE_CSP['script-src'] += ['https://ajax.googleapis.com']  # type: ignore[list-item]
-SECURE_CSP['img-src'] += ['data:']  # type: ignore[list-item]
+SECURE_CSP['script-src'] += ['https://ajax.googleapis.com']
+SECURE_CSP['img-src'] += ['data:']
 SECURE_CSP['connect-src'] += [CSP.SELF]
 
 
