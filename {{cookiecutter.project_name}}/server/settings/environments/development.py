@@ -11,6 +11,7 @@ import socket
 from typing import TYPE_CHECKING
 
 from debug_toolbar.settings import PANELS_DEFAULTS
+from django.utils.csp import CSP
 
 from server.settings.components import config
 from server.settings.components.common import (
@@ -18,11 +19,7 @@ from server.settings.components.common import (
     INSTALLED_APPS,
     MIDDLEWARE,
 )
-from server.settings.components.csp import (
-    CSP_CONNECT_SRC,
-    CSP_IMG_SRC,
-    CSP_SCRIPT_SRC,
-)
+from server.settings.components.csp import SECURE_CSP
 
 if TYPE_CHECKING:
     from django.http import HttpRequest
@@ -103,11 +100,11 @@ DEBUG_TOOLBAR_CONFIG = {
     ),
 }
 
-# This will make debug toolbar to work with django-csp,
+# This will make debug toolbar to work with csp,
 # since `ddt` loads some scripts from `ajax.googleapis.com`:
-CSP_SCRIPT_SRC += ('ajax.googleapis.com',)
-CSP_IMG_SRC += ('data:',)
-CSP_CONNECT_SRC += ("'self'",)
+SECURE_CSP['script-src'] += ['https://ajax.googleapis.com']
+SECURE_CSP['img-src'] += ['data:']
+SECURE_CSP['connect-src'] += [CSP.SELF]
 
 
 # django-zeal
