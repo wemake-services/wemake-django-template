@@ -24,7 +24,6 @@ classifiers = [
 django = { version = ">=6.0,<6.1", extras = ["argon2"] }
 django-split-settings = "^1.3"
 django-axes = "^8.0"
-django-csp = "^4.0"
 django-health-check = "^4.0"
 django-permissions-policy = "^4.27"
 django-stubs-ext = "^6.0"

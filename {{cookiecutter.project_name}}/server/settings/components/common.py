@@ -44,9 +44,8 @@ INSTALLED_APPS: tuple[str, ...] = (
 MIDDLEWARE: tuple[str, ...] = (
     # Logging:
     'server.settings.components.logging.LoggingContextVarsMiddleware',
-    # Content Security Policy:
-    'csp.middleware.CSPMiddleware',
     # Django:
+    'django.middleware.csp.ContentSecurityPolicyMiddleware',
     'django.middleware.security.SecurityMiddleware',
     # django-permissions-policy
     'django_permissions_policy.PermissionsPolicyMiddleware',
