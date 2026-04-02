@@ -2,7 +2,7 @@ from http import HTTPStatus
 from typing import final, override
 
 from django.http import HttpResponse
-from dmr import Body, Controller
+from dmr import Body, Controller, modify
 from dmr.endpoint import Endpoint
 from dmr.errors import ErrorType
 from dmr.metadata import ResponseSpec
