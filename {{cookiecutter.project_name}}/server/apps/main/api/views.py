@@ -6,7 +6,6 @@ from dmr import Body, Controller, modify
 from dmr.endpoint import Endpoint
 from dmr.errors import ErrorType
 from dmr.metadata import ResponseSpec
-from dmr.openapi.objects import Link
 from dmr.plugins.msgspec import MsgspecSerializer
 
 from server.apps.main.logic.usecases import blogpost_create, blogpost_get
@@ -25,16 +24,6 @@ class BlogPostCreate(
 ):
     """Top level endpoints for the ``BlogPost`` model."""
 
-    @modify(
-        # This is only needed as a schemathesis demo:
-        # https://schemathesis.readthedocs.io/en/stable/guides/stateful-testing
-        links={
-            'GetBlogPostById': Link(
-                operation_id='getBlogPostGetApiUserUsers',
-                parameters={'id': '$response.body#/id'},
-            ),
-        },
-    )
     def post(
         self,
         parsed_body: Body[BlogPostCreatePayload],
