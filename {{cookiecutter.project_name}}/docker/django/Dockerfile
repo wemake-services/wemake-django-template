@@ -26,11 +26,11 @@ ENV DJANGO_ENV=${DJANGO_ENV} \
   PIP_ROOT_USER_ACTION=ignore \
   # tini:
   TINI_VERSION=v0.19.0 \
-  # poetry:
-  POETRY_VERSION=2.3.2 \
-  POETRY_VIRTUALENVS_CREATE=false \
-  POETRY_CACHE_DIR='/var/cache/pypoetry' \
-  POETRY_HOME='/usr/local'
+  # uv:
+  UV_COMPILE_BYTECODE=1 \
+  UV_LINK_MODE=copy \
+  UV_PROJECT_ENVIRONMENT=/usr/local \
+  UV_CACHE_DIR='/var/cache/uv'
 
 SHELL ["/bin/bash", "-eo", "pipefail", "-c"]
 
@@ -53,13 +53,13 @@ RUN apt-get update && apt-get upgrade -y \
   && dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')" \
   && curl -o /usr/local/bin/tini -sSLO "https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini-${dpkgArch}" \
   && chmod +x /usr/local/bin/tini && tini --version \
-  # Installing `poetry` package manager:
-  # https://github.com/python-poetry/poetry
-  && curl -sSL 'https://install.python-poetry.org' | python - \
-  && poetry --version \
   # Cleaning cache:
   && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
   && apt-get clean -y && rm -rf /var/lib/apt/lists/*
+
+# Installing `uv` package manager:
+# https://github.com/astral-sh/uv
+COPY --from=ghcr.io/astral-sh/uv:0.10 /uv /usr/local/bin/uv
 
 WORKDIR /code
 
@@ -71,16 +71,15 @@ RUN groupadd -g "${GID}" -r web \
   && chown web:web '/var/www/django/static' '/var/www/django/media'
 
 # Copy only requirements, to cache them in docker layer:
-COPY --chown=web:web ./poetry.lock ./pyproject.toml /code/
+COPY --chown=web:web ./uv.lock ./pyproject.toml /code/
 
 # Project initialization:
 # hadolint ignore=SC2046
-RUN --mount=type=cache,target="$POETRY_CACHE_DIR" \
+RUN --mount=type=cache,target="$UV_CACHE_DIR" \
   echo "$DJANGO_ENV" \
-  && poetry --version && poetry run pip --version \
-  && poetry sync \
-    $(if [ "$DJANGO_ENV" = 'production' ]; then echo '--only main'; fi) \
-    --no-interaction --no-ansi
+  && uv --version \
+  && uv sync \
+    $(if [ "$DJANGO_ENV" = 'production' ]; then echo '--no-dev'; fi)
 
 # This is a special case. We need to run this script as an entry point:
 COPY ./docker/django/entrypoint.sh /docker-entrypoint.sh

@@ -15,7 +15,7 @@ If you want to install ``Pillow`` that you should
 add this to dockerfile and rebuild image:
 
 - ``RUN apk add jpeg-dev zlib-dev``
-- ``LIBRARY_PATH=/lib:/usr/lib /bin/sh -c "poetry install ..."``
+- ``LIBRARY_PATH=/lib:/usr/lib /bin/sh -c "uv sync ..."``
 
 See `<https://github.com/python-pillow/Pillow/issues/1763>`_
 
