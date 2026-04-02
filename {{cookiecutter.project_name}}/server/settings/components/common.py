@@ -97,9 +97,7 @@ LANGUAGE_CODE = 'en-us'
 
 USE_I18N = True
 
-LANGUAGES = (
-    ('en', _('English')),
-)
+LANGUAGES = (('en', _('English')),)
 
 LOCALE_PATHS = ('locale/',)
 
