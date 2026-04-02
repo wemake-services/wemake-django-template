@@ -99,7 +99,6 @@ USE_I18N = True
 
 LANGUAGES = (
     ('en', _('English')),
-    ('ru', _('Russian')),
 )
 
 LOCALE_PATHS = ('locale/',)
