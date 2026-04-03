@@ -139,12 +139,12 @@ Also see `dennis <https://dennis.readthedocs.io/en/latest/linting.html>`_ docs.
 Packaging
 ---------
 
-We also use ``pip`` and ``poetry`` self checks to be sure
+We also use ``uv`` and ``pip`` self checks to be sure
 that packaging works correctly.
 
 .. code:: bash
 
-  poetry check && pip check
+  uv lock --check && pip check
 
 
 Linters that are not included

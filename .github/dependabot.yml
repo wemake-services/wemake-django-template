@@ -1,6 +1,6 @@
 version: 2
 updates:
-- package-ecosystem: pip
+- package-ecosystem: uv
   directory: "/{{cookiecutter.project_name}}"
   schedule:
     interval: daily
@@ -9,16 +9,7 @@ updates:
   cooldown:
     default-days: 7
 
-- package-ecosystem: pip
-  directory: "/{{cookiecutter.project_name}}/docker/django"
-  schedule:
-    interval: daily
-    time: "02:00"
-  open-pull-requests-limit: 10
-  cooldown:
-    default-days: 7
-
-- package-ecosystem: pip
+- package-ecosystem: uv
   directory: "/"
   schedule:
     interval: daily
