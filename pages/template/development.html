@@ -271,11 +271,11 @@ setup of different technologies, containers, networks, etc.
 This is a default option for older and more complicated projects.</p>
 <section id="dependencies">
 <h2>Dependencies<a class="headerlink" href="#dependencies" title="Link to this heading">¶</a></h2>
-<p>We use <code class="docutils literal notranslate"><span class="pre">poetry</span></code> to manage dependencies.
+<p>We use <code class="docutils literal notranslate"><span class="pre">uv</span></code> to manage dependencies.
 So, please do not use <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code> or <code class="docutils literal notranslate"><span class="pre">pip</span></code> directly.
 Before going any further, please,
-take a moment to read the <a class="reference external" href="https://poetry.eustace.io/">official documentation</a>
-about <code class="docutils literal notranslate"><span class="pre">poetry</span></code> to know some basics.</p>
+take a moment to read the <a class="reference external" href="https://docs.astral.sh/uv/">official documentation</a>
+about <code class="docutils literal notranslate"><span class="pre">uv</span></code> to know some basics.</p>
 <p>If you are using <code class="docutils literal notranslate"><span class="pre">docker</span></code> then prepend <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">compose</span> <span class="pre">run</span> <span class="pre">--rm</span> <span class="pre">web</span></code>
 before any of those commands to execute them.</p>
 <p>Please, note that you don’t need almost all of them with <code class="docutils literal notranslate"><span class="pre">docker</span></code>.
@@ -285,22 +285,22 @@ Go right to <a class="reference internal" href="#development-with-docker">Develo
 <h3>Installing dependencies<a class="headerlink" href="#installing-dependencies" title="Link to this heading">¶</a></h3>
 <p>You do not need to run any of these commands for <code class="docutils literal notranslate"><span class="pre">docker</span></code> based development,
 since it is already executed inside <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code>.</p>
-<p>Please, note that <code class="docutils literal notranslate"><span class="pre">poetry</span></code> will automatically create a <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code> for
+<p>Please, note that <code class="docutils literal notranslate"><span class="pre">uv</span></code> will automatically create a <code class="docutils literal notranslate"><span class="pre">.venv</span></code> for
 this project. It will use your current <code class="docutils literal notranslate"><span class="pre">python</span></code> version.
 To install all existing dependencies run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poetry<span class="w"> </span>install
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>uv<span class="w"> </span>sync
 </pre></div>
 </div>
 <p>To install dependencies for production use, you will need to run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poetry<span class="w"> </span>install<span class="w"> </span>--only<span class="o">=</span>main
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>uv<span class="w"> </span>sync<span class="w"> </span>--no-dev
 </pre></div>
 </div>
 <p>To install all dependencies, including docs:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poetry<span class="w"> </span>install<span class="w"> </span>--with<span class="o">=</span>docs
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>uv<span class="w"> </span>sync<span class="w"> </span>--group<span class="w"> </span>docs
 </pre></div>
 </div>
-<p>And to activate <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code> created by <code class="docutils literal notranslate"><span class="pre">poetry</span></code> run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poetry<span class="w"> </span>shell
+<p>And to activate <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code> created by <code class="docutils literal notranslate"><span class="pre">uv</span></code> run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>.<span class="w"> </span>.venv/bin/activate
 </pre></div>
 </div>
 </section>
@@ -308,31 +308,19 @@ To install all existing dependencies run:</p>
 <h3>Adding new dependencies<a class="headerlink" href="#adding-new-dependencies" title="Link to this heading">¶</a></h3>
 <p>To add a new dependency you can run:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">add</span> <span class="pre">django</span></code> to install <code class="docutils literal notranslate"><span class="pre">django</span></code> as a production dependency</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">add</span> <span class="pre">-G</span> <span class="pre">dev</span> <span class="pre">pytest</span></code> to install <code class="docutils literal notranslate"><span class="pre">pytest</span></code>
+<li><p><code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">add</span> <span class="pre">django</span></code> to install <code class="docutils literal notranslate"><span class="pre">django</span></code> as a production dependency</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">add</span> <span class="pre">--group</span> <span class="pre">dev</span> <span class="pre">pytest</span></code> to install <code class="docutils literal notranslate"><span class="pre">pytest</span></code>
 as a development dependency</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">add</span> <span class="pre">-G</span> <span class="pre">docs</span> <span class="pre">some-sphinx-plugin</span></code> to install <code class="docutils literal notranslate"><span class="pre">some-sphinx-plugin</span></code>
+<li><p><code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">add</span> <span class="pre">--group</span> <span class="pre">docs</span> <span class="pre">some-sphinx-plugin</span></code> to install <code class="docutils literal notranslate"><span class="pre">some-sphinx-plugin</span></code>
 as a documentation dependency</p></li>
 </ul>
 <p>This command might be used with <code class="docutils literal notranslate"><span class="pre">docker</span></code>.</p>
 </section>
-<section id="updating-poetry-version">
-<h3>Updating poetry version<a class="headerlink" href="#updating-poetry-version" title="Link to this heading">¶</a></h3>
-<p>Package managers should also be pinned very strictly.
-We had a lot of problems in production
-because we were not pinning package manager versions.</p>
-<p>This can result in broken <code class="docutils literal notranslate"><span class="pre">lock</span></code> files, inconsistent installation process,
-bizarre bugs, and missing packages. You do not want to experience that!</p>
-<p>How can we have the same <code class="docutils literal notranslate"><span class="pre">poetry</span></code> version for all users in a project?
-That’s where <code class="docutils literal notranslate"><span class="pre">[build-system]</span></code> tag shines. It specifies the exact version of
-your <code class="docutils literal notranslate"><span class="pre">poetry</span></code> installation that must be used for the project.
-Version mismatch will fail your build.</p>
-<p>When you want to update <code class="docutils literal notranslate"><span class="pre">poetry</span></code>, you have to bump it in several places:</p>
-<ol class="arabic simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">docker/django/Dockerfile</span></code></p></li>
-</ol>
-<p>Then you are fine!</p>
+<section id="updating-uv-version">
+<h3>Updating uv version<a class="headerlink" href="#updating-uv-version" title="Link to this heading">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">uv</span></code> version is pinned in <code class="docutils literal notranslate"><span class="pre">docker/django/Dockerfile</span></code>
+via the <code class="docutils literal notranslate"><span class="pre">COPY</span> <span class="pre">--from=ghcr.io/astral-sh/uv:&lt;version&gt;</span></code> directive.
+When you want to update <code class="docutils literal notranslate"><span class="pre">uv</span></code>, bump the version tag there.</p>
 </section>
 </section>
 <section id="development-with-docker">
@@ -350,7 +338,7 @@ docker<span class="w"> </span>compose<span class="w"> </span>up
 we use <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">compose</span> <span class="pre">run</span></code> to run scripts inside docker.</p>
 <p>What do you need to know about it?</p>
 <ol class="arabic simple">
-<li><p>You can run anything you want: <code class="docutils literal notranslate"><span class="pre">poetry</span></code>, <code class="docutils literal notranslate"><span class="pre">python</span></code>, <code class="docutils literal notranslate"><span class="pre">sh</span></code>, etc</p></li>
+<li><p>You can run anything you want: <code class="docutils literal notranslate"><span class="pre">uv</span></code>, <code class="docutils literal notranslate"><span class="pre">python</span></code>, <code class="docutils literal notranslate"><span class="pre">sh</span></code>, etc</p></li>
 <li><p>Most likely it will have a permanent effect, due to <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">volumes</span></code></p></li>
 <li><p>You need to use <code class="docutils literal notranslate"><span class="pre">--rm</span></code> to automatically remove this container afterward</p></li>
 </ol>
@@ -363,7 +351,7 @@ we use <code class="docutils literal notranslate"><span class="pre">docker</span
 need to configure it properly,
 see <a class="reference internal" href="django.html#django"><span class="std std-ref">Django</span></a> section for more information.</p>
 <p><strong>Note</strong>, that you will need to activate <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code> created
-by <code class="docutils literal notranslate"><span class="pre">poetry</span></code> before running any of these commands.
+by <code class="docutils literal notranslate"><span class="pre">uv</span></code> before running any of these commands.
 <strong>Note</strong>, that you only need to run these commands once per project.</p>
 <section id="local-database">
 <h3>Local database<a class="headerlink" href="#local-database" title="Link to this heading">¶</a></h3>
@@ -448,7 +436,7 @@ To create new development database run
 <li><a class="reference internal" href="#dependencies">Dependencies</a><ul>
 <li><a class="reference internal" href="#installing-dependencies">Installing dependencies</a></li>
 <li><a class="reference internal" href="#adding-new-dependencies">Adding new dependencies</a></li>
-<li><a class="reference internal" href="#updating-poetry-version">Updating poetry version</a></li>
+<li><a class="reference internal" href="#updating-uv-version">Updating uv version</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#development-with-docker">Development with docker</a><ul>

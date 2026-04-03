@@ -55,7 +55,7 @@ root project
   Used as an entry point for the ``django`` project
 - ``pyproject.toml`` - main file of the project.
   It defines the project's dependencies.
-- ``poetry.lock`` - lock file for dependencies.
+- ``uv.lock`` - lock file for dependencies.
   It is used to install exactly the same versions of dependencies on each build
 - ``setup.cfg`` - configuration file, that is used by all tools in this project
 - ``locale/`` - helper folder, that is used to store locale data,

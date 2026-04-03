@@ -275,22 +275,37 @@ And we do not recommend to use them.</p>
 What is a migration guide?
 It is something you have to do to your project
 other than just copy-pasting diffs from new versions.</p>
-<section id="goodbye-pipenv">
-<h3>Goodbye, pipenv!<a class="headerlink" href="#goodbye-pipenv" title="Link to this heading">¶</a></h3>
+<section id="goodbye-poetry">
+<h3>Goodbye, poetry!<a class="headerlink" href="#goodbye-poetry" title="Link to this heading">¶</a></h3>
 <p>This version requires a manual migration step.</p>
 <ol class="arabic simple">
-<li><p>You need to install <code class="docutils literal notranslate"><span class="pre">poetry</span></code></p></li>
-<li><p>You need to create a new <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> file with <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">init</span></code></p></li>
+<li><p>You need to install <code class="docutils literal notranslate"><span class="pre">uv</span></code>, see <a class="reference external" href="https://docs.astral.sh/uv/getting-started/installation/">uv installation</a></p></li>
+<li><p>You need to convert your <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> dependencies from
+<code class="docutils literal notranslate"><span class="pre">[tool.poetry.dependencies]</span></code> to <code class="docutils literal notranslate"><span class="pre">[project]</span> <span class="pre">dependencies</span></code> (PEP 621 format)</p></li>
+<li><p>You need to convert dev dependencies from
+<code class="docutils literal notranslate"><span class="pre">[tool.poetry.group.dev.dependencies]</span></code> to <code class="docutils literal notranslate"><span class="pre">[dependency-groups]</span> <span class="pre">dev</span></code> (PEP 735 format)</p></li>
+<li><p>You need to remove the <code class="docutils literal notranslate"><span class="pre">[build-system]</span></code> section referencing <code class="docutils literal notranslate"><span class="pre">poetry-core</span></code></p></li>
+<li><p>You need to remove all <code class="docutils literal notranslate"><span class="pre">[tool.poetry]</span></code> sections</p></li>
+<li><p>Delete <code class="docutils literal notranslate"><span class="pre">poetry.lock</span></code> and run <code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">lock</span></code> to generate <code class="docutils literal notranslate"><span class="pre">uv.lock</span></code></p></li>
+<li><p>Update <code class="docutils literal notranslate"><span class="pre">docker/django/Dockerfile</span></code> to use <code class="docutils literal notranslate"><span class="pre">uv</span></code> instead of <code class="docutils literal notranslate"><span class="pre">poetry</span></code></p></li>
+</ol>
+<p>You can use the <a class="reference external" href="https://github.com/mkniewallner/migrate-to-uv">migrate-to-uv</a>
+tool to automate most of these steps.</p>
+</section>
+<section id="goodbye-pipenv">
+<h3>Goodbye, pipenv!<a class="headerlink" href="#goodbye-pipenv" title="Link to this heading">¶</a></h3>
+<p>This is an older migration step from <code class="docutils literal notranslate"><span class="pre">pipenv</span></code> to <code class="docutils literal notranslate"><span class="pre">poetry</span></code>.</p>
+<ol class="arabic simple">
+<li><p>You need to install <code class="docutils literal notranslate"><span class="pre">uv</span></code></p></li>
+<li><p>You need to create a new <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> file with <code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">init</span></code></p></li>
 <li><p>You need to adjust name, version, description, and authors meta fields</p></li>
 <li><p>You need to copy-paste dependencies from <code class="docutils literal notranslate"><span class="pre">Pipfile</span></code> to <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code></p></li>
 <li><p>You need to set correct version for each dependency in the list,
-use <code class="docutils literal notranslate"><span class="pre">&quot;^x.y&quot;</span></code> <a class="reference external" href="https://python-poetry.org/docs/dependency-specification/#caret-requirements">notation</a></p></li>
-<li><p>You need to adjust <code class="docutils literal notranslate"><span class="pre">[build-system]</span></code> tag and <code class="docutils literal notranslate"><span class="pre">POETRY_VERSION</span></code> variable
-to fit your <code class="docutils literal notranslate"><span class="pre">poetry</span></code> version</p></li>
-<li><p>Create <code class="docutils literal notranslate"><span class="pre">poetry.lock</span></code> file with <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">lock</span></code></p></li>
+use <code class="docutils literal notranslate"><span class="pre">&quot;&gt;=x.y,&lt;z.0&quot;</span></code> notation</p></li>
+<li><p>Create <code class="docutils literal notranslate"><span class="pre">uv.lock</span></code> file with <code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">lock</span></code></p></li>
 </ol>
 <p>It should be fine! You may, however, experience some bugs related to different
-dependency version resolution mechanisms. But, <code class="docutils literal notranslate"><span class="pre">poetry</span></code> does it better.</p>
+dependency version resolution mechanisms. But, <code class="docutils literal notranslate"><span class="pre">uv</span></code> does it better.</p>
 </section>
 </section>
 </section>
@@ -353,6 +368,7 @@ dependency version resolution mechanisms. But, <code class="docutils literal not
 <li><a class="reference internal" href="#">Upgrading template</a><ul>
 <li><a class="reference internal" href="#versions">Versions</a></li>
 <li><a class="reference internal" href="#migration-guides">Migration guides</a><ul>
+<li><a class="reference internal" href="#goodbye-poetry">Goodbye, poetry!</a></li>
 <li><a class="reference internal" href="#goodbye-pipenv">Goodbye, pipenv!</a></li>
 </ul>
 </li>

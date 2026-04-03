@@ -264,7 +264,7 @@ how to solve these problems.</p>
 add this to dockerfile and rebuild image:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">RUN</span> <span class="pre">apk</span> <span class="pre">add</span> <span class="pre">jpeg-dev</span> <span class="pre">zlib-dev</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">LIBRARY_PATH=/lib:/usr/lib</span> <span class="pre">/bin/sh</span> <span class="pre">-c</span> <span class="pre">&quot;poetry</span> <span class="pre">install</span> <span class="pre">...&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LIBRARY_PATH=/lib:/usr/lib</span> <span class="pre">/bin/sh</span> <span class="pre">-c</span> <span class="pre">&quot;uv</span> <span class="pre">sync</span> <span class="pre">...&quot;</span></code></p></li>
 </ul>
 <p>See <a class="reference external" href="https://github.com/python-pillow/Pillow/issues/1763">https://github.com/python-pillow/Pillow/issues/1763</a></p>
 </section>

@@ -280,9 +280,9 @@ to enforce even more security rules:</p>
 </section>
 <section id="dependencies">
 <h2>Dependencies<a class="headerlink" href="#dependencies" title="Link to this heading">¶</a></h2>
-<p>We use <a class="reference external" href="https://poetry.eustace.io/">poetry</a> which ensures
-that all the dependencies hashes match during the installation process.
-Otherwise, the build will fail.
+<p>We use <a class="reference external" href="https://docs.astral.sh/uv/">uv</a> which ensures
+that all the dependencies hashes match during the installation process
+via the <code class="docutils literal notranslate"><span class="pre">uv.lock</span></code> file.
 So, it is almost impossible to replace an already existing package
 with a malicious one.</p>
 <p>We also use <a class="reference external" href="https://github.com/pyupio/safety">safety</a>

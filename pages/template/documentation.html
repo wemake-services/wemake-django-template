@@ -267,7 +267,7 @@ We also use <code class="docutils literal notranslate"><span class="pre">sphinx_
 <p>We use <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> as the source of truth for our deps.
 All docs-related packages are stored under <code class="docutils literal notranslate"><span class="pre">docs</span></code> extra.</p>
 <p>To install them use:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poetry<span class="w"> </span>install<span class="w"> </span>--with<span class="o">=</span>docs
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>uv<span class="w"> </span>sync<span class="w"> </span>--group<span class="w"> </span>docs
 </pre></div>
 </div>
 </section>

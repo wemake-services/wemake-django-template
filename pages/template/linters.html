@@ -351,9 +351,9 @@ dennis-cmd<span class="w"> </span>lint<span class="w"> </span>--errorsonly<span 
 </section>
 <section id="packaging">
 <h2>Packaging<a class="headerlink" href="#packaging" title="Link to this heading">¶</a></h2>
-<p>We also use <code class="docutils literal notranslate"><span class="pre">pip</span></code> and <code class="docutils literal notranslate"><span class="pre">poetry</span></code> self checks to be sure
+<p>We also use <code class="docutils literal notranslate"><span class="pre">uv</span></code> and <code class="docutils literal notranslate"><span class="pre">pip</span></code> self checks to be sure
 that packaging works correctly.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poetry<span class="w"> </span>check<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>pip<span class="w"> </span>check
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>uv<span class="w"> </span>lock<span class="w"> </span>--check<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>pip<span class="w"> </span>check
 </pre></div>
 </div>
 </section>
