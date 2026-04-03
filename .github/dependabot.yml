@@ -2,7 +2,7 @@ version: 2
 updates:
 - package-ecosystem: uv
   directories:
-    - "/[{][{]cookiecutter.project_name[}][}]"
+    - "/\\{\\{cookiecutter.project_name\\}\\}"
   schedule:
     interval: daily
     time: "02:00"
@@ -21,8 +21,8 @@ updates:
 
 - package-ecosystem: docker
   directories:
-    - "/[{][{]cookiecutter.project_name[}][}]/docker/django"
-    - "/[{][{]cookiecutter.project_name[}][}]/docker/caddy"
+    - "/\\{\\{cookiecutter.project_name\\}\\}/docker/django"
+    - "/\\{\\{cookiecutter.project_name\\}\\}/docker/caddy"
   schedule:
     interval: daily
     time: "02:00"
