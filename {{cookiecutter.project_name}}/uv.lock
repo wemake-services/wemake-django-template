@@ -391,6 +391,19 @@ wheels = [
 ]
 
 [[package]]
+name = "django-cors-headers"
+version = "4.9.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "asgiref" },
+    { name = "django" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/21/39/55822b15b7ec87410f34cd16ce04065ff390e50f9e29f31d6d116fc80456/django_cors_headers-4.9.0.tar.gz", hash = "sha256:fe5d7cb59fdc2c8c646ce84b727ac2bca8912a247e6e68e1fb507372178e59e8", size = 21458, upload-time = "2025-09-18T10:40:52.326Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/30/d8/19ed1e47badf477d17fb177c1c19b5a21da0fd2d9f093f23be3fb86c5fab/django_cors_headers-4.9.0-py3-none-any.whl", hash = "sha256:15c7f20727f90044dcee2216a9fd7303741a864865f0c3657e28b7056f61b449", size = 12809, upload-time = "2025-09-18T10:40:50.843Z" },
+]
+
+[[package]]
 name = "django-coverage-plugin"
 version = "3.2.0"
 source = { registry = "https://pypi.org/simple" }
@@ -2212,6 +2225,123 @@ wheels = [
 ]
 
 [[package]]
+name = "test-project"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "django", extra = ["argon2"] },
+    { name = "django-axes" },
+    { name = "django-cors-headers" },
+    { name = "django-health-check" },
+    { name = "django-modern-rest", extra = ["attrs", "jwt", "msgspec", "openapi", "pydantic"] },
+    { name = "django-permissions-policy" },
+    { name = "django-split-settings" },
+    { name = "django-stubs-ext" },
+    { name = "gunicorn" },
+    { name = "psycopg2-binary" },
+    { name = "punq" },
+    { name = "python-decouple" },
+    { name = "structlog" },
+    { name = "wheel" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "covdefaults" },
+    { name = "dennis" },
+    { name = "django-coverage-plugin" },
+    { name = "django-debug-toolbar" },
+    { name = "django-drifter" },
+    { name = "django-extra-checks" },
+    { name = "django-migration-linter" },
+    { name = "django-query-counter" },
+    { name = "django-safe-migrations" },
+    { name = "django-stubs", extra = ["compatible-mypy"] },
+    { name = "django-test-migrations" },
+    { name = "django-zeal" },
+    { name = "djangofmt" },
+    { name = "dotenv-linter" },
+    { name = "dump-env" },
+    { name = "hypothesis" },
+    { name = "import-linter" },
+    { name = "ipython" },
+    { name = "polint" },
+    { name = "pytest" },
+    { name = "pytest-cov" },
+    { name = "pytest-django" },
+    { name = "pytest-randomly" },
+    { name = "pytest-timeout" },
+    { name = "ruff" },
+    { name = "safety" },
+    { name = "schemathesis" },
+    { name = "wemake-python-styleguide" },
+    { name = "yamllint" },
+]
+docs = [
+    { name = "furo" },
+    { name = "myst-parser" },
+    { name = "sphinx" },
+    { name = "sphinx-autodoc-typehints" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "django", extras = ["argon2"], specifier = ">=6.0,<6.1" },
+    { name = "django-axes", specifier = ">=8.0,<9.0" },
+    { name = "django-cors-headers", specifier = ">=4.0,<5.0" },
+    { name = "django-health-check", specifier = ">=4.0,<5.0" },
+    { name = "django-modern-rest", extras = ["msgspec", "pydantic", "attrs", "jwt", "openapi"], specifier = ">=0.4,<1.0" },
+    { name = "django-permissions-policy", specifier = ">=4.27,<5.0" },
+    { name = "django-split-settings", specifier = ">=1.3,<2.0" },
+    { name = "django-stubs-ext", specifier = ">=6.0,<7.0" },
+    { name = "gunicorn", specifier = ">=25.0,<26.0" },
+    { name = "psycopg2-binary", specifier = ">=2.9,<3.0" },
+    { name = "punq", specifier = ">=0.7,<1.0" },
+    { name = "python-decouple", specifier = ">=3.8,<4.0" },
+    { name = "structlog", specifier = ">=25.4,<26.0" },
+    { name = "wheel", specifier = ">=0.46,<1.0" },
+]
+
+[package.metadata.requires-dev]
+dev = [
+    { name = "covdefaults", specifier = ">=2.3,<3.0" },
+    { name = "dennis", specifier = ">=1.1,<2.0" },
+    { name = "django-coverage-plugin", specifier = ">=3.1,<4.0" },
+    { name = "django-debug-toolbar", specifier = ">=6.0,<7.0" },
+    { name = "django-drifter", specifier = ">=0.1,<1.0" },
+    { name = "django-extra-checks", specifier = ">=0.16,<1.0" },
+    { name = "django-migration-linter", specifier = ">=6.0,<7.0" },
+    { name = "django-query-counter", specifier = ">=0.5,<1.0" },
+    { name = "django-safe-migrations", specifier = ">=0.6,<1.0" },
+    { name = "django-stubs", extras = ["compatible-mypy"], specifier = ">=6.0,<6.1" },
+    { name = "django-test-migrations", specifier = ">=1.5,<2.0" },
+    { name = "django-zeal", specifier = ">=2.0,<3.0" },
+    { name = "djangofmt", specifier = ">=0.2,<1.0" },
+    { name = "dotenv-linter", specifier = ">=0.7,<1.0" },
+    { name = "dump-env", specifier = ">=1.5,<2.0" },
+    { name = "hypothesis", specifier = ">=6.123,<7.0" },
+    { name = "import-linter", specifier = ">=2.10,<3.0" },
+    { name = "ipython", specifier = ">=9.5,<10.0" },
+    { name = "polint", specifier = ">=0.5,<1.0" },
+    { name = "pytest", specifier = ">=9.0,<10.0" },
+    { name = "pytest-cov", specifier = ">=7.1,<8.0" },
+    { name = "pytest-django", specifier = ">=4.9,<5.0" },
+    { name = "pytest-randomly", specifier = ">=4.0,<5.0" },
+    { name = "pytest-timeout", specifier = ">=2.3,<3.0" },
+    { name = "ruff", specifier = ">=0.15,<1.0" },
+    { name = "safety", specifier = ">=3.6,<4.0" },
+    { name = "schemathesis", specifier = ">=4.12,<5.0" },
+    { name = "wemake-python-styleguide", specifier = ">=1.6,<2.0" },
+    { name = "yamllint", specifier = ">=1.35,<2.0" },
+]
+docs = [
+    { name = "furo", specifier = ">=2025.12" },
+    { name = "myst-parser", specifier = ">=5.0,<6.0" },
+    { name = "sphinx", specifier = ">=9.1,<10.0" },
+    { name = "sphinx-autodoc-typehints", specifier = ">=3.0,<4.0" },
+]
+
+[[package]]
 name = "toml"
 version = "0.10.2"
 source = { registry = "https://pypi.org/simple" }
@@ -2329,121 +2459,6 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/35/a2/8e3becb46433538a38726c948d3399905a4c7cabd0df578ede5dc51f0ec2/wcwidth-0.6.0.tar.gz", hash = "sha256:cdc4e4262d6ef9a1a57e018384cbeb1208d8abbc64176027e2c2455c81313159", size = 159684, upload-time = "2026-02-06T19:19:40.919Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/68/5a/199c59e0a824a3db2b89c5d2dade7ab5f9624dbf6448dc291b46d5ec94d3/wcwidth-0.6.0-py3-none-any.whl", hash = "sha256:1a3a1e510b553315f8e146c54764f4fb6264ffad731b3d78088cdb1478ffbdad", size = 94189, upload-time = "2026-02-06T19:19:39.646Z" },
-]
-
-[[package]]
-name = "wemake-django-template"
-version = "0.1.0"
-source = { virtual = "." }
-dependencies = [
-    { name = "django", extra = ["argon2"] },
-    { name = "django-axes" },
-    { name = "django-health-check" },
-    { name = "django-modern-rest", extra = ["attrs", "jwt", "msgspec", "openapi", "pydantic"] },
-    { name = "django-permissions-policy" },
-    { name = "django-split-settings" },
-    { name = "django-stubs-ext" },
-    { name = "gunicorn" },
-    { name = "psycopg2-binary" },
-    { name = "punq" },
-    { name = "python-decouple" },
-    { name = "structlog" },
-    { name = "wheel" },
-]
-
-[package.dev-dependencies]
-dev = [
-    { name = "covdefaults" },
-    { name = "dennis" },
-    { name = "django-coverage-plugin" },
-    { name = "django-debug-toolbar" },
-    { name = "django-drifter" },
-    { name = "django-extra-checks" },
-    { name = "django-migration-linter" },
-    { name = "django-query-counter" },
-    { name = "django-safe-migrations" },
-    { name = "django-stubs", extra = ["compatible-mypy"] },
-    { name = "django-test-migrations" },
-    { name = "django-zeal" },
-    { name = "djangofmt" },
-    { name = "dotenv-linter" },
-    { name = "dump-env" },
-    { name = "hypothesis" },
-    { name = "import-linter" },
-    { name = "ipython" },
-    { name = "polint" },
-    { name = "pytest" },
-    { name = "pytest-cov" },
-    { name = "pytest-django" },
-    { name = "pytest-randomly" },
-    { name = "pytest-timeout" },
-    { name = "ruff" },
-    { name = "safety" },
-    { name = "schemathesis" },
-    { name = "wemake-python-styleguide" },
-    { name = "yamllint" },
-]
-docs = [
-    { name = "furo" },
-    { name = "myst-parser" },
-    { name = "sphinx" },
-    { name = "sphinx-autodoc-typehints" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "django", extras = ["argon2"], specifier = ">=6.0,<6.1" },
-    { name = "django-axes", specifier = ">=8.0,<9.0" },
-    { name = "django-health-check", specifier = ">=4.0,<5.0" },
-    { name = "django-modern-rest", extras = ["msgspec", "pydantic", "attrs", "jwt", "openapi"], specifier = ">=0.4,<1.0" },
-    { name = "django-permissions-policy", specifier = ">=4.27,<5.0" },
-    { name = "django-split-settings", specifier = ">=1.3,<2.0" },
-    { name = "django-stubs-ext", specifier = ">=6.0,<7.0" },
-    { name = "gunicorn", specifier = ">=25.0,<26.0" },
-    { name = "psycopg2-binary", specifier = ">=2.9,<3.0" },
-    { name = "punq", specifier = ">=0.7,<1.0" },
-    { name = "python-decouple", specifier = ">=3.8,<4.0" },
-    { name = "structlog", specifier = ">=25.4,<26.0" },
-    { name = "wheel", specifier = ">=0.46,<1.0" },
-]
-
-[package.metadata.requires-dev]
-dev = [
-    { name = "covdefaults", specifier = ">=2.3,<3.0" },
-    { name = "dennis", specifier = ">=1.1,<2.0" },
-    { name = "django-coverage-plugin", specifier = ">=3.1,<4.0" },
-    { name = "django-debug-toolbar", specifier = ">=6.0,<7.0" },
-    { name = "django-drifter", specifier = ">=0.1,<1.0" },
-    { name = "django-extra-checks", specifier = ">=0.16,<1.0" },
-    { name = "django-migration-linter", specifier = ">=6.0,<7.0" },
-    { name = "django-query-counter", specifier = ">=0.5,<1.0" },
-    { name = "django-safe-migrations", specifier = ">=0.6,<1.0" },
-    { name = "django-stubs", extras = ["compatible-mypy"], specifier = ">=6.0,<6.1" },
-    { name = "django-test-migrations", specifier = ">=1.5,<2.0" },
-    { name = "django-zeal", specifier = ">=2.0,<3.0" },
-    { name = "djangofmt", specifier = ">=0.2,<1.0" },
-    { name = "dotenv-linter", specifier = ">=0.7,<1.0" },
-    { name = "dump-env", specifier = ">=1.5,<2.0" },
-    { name = "hypothesis", specifier = ">=6.123,<7.0" },
-    { name = "import-linter", specifier = ">=2.10,<3.0" },
-    { name = "ipython", specifier = ">=9.5,<10.0" },
-    { name = "polint", specifier = ">=0.5,<1.0" },
-    { name = "pytest", specifier = ">=9.0,<10.0" },
-    { name = "pytest-cov", specifier = ">=7.1,<8.0" },
-    { name = "pytest-django", specifier = ">=4.9,<5.0" },
-    { name = "pytest-randomly", specifier = ">=4.0,<5.0" },
-    { name = "pytest-timeout", specifier = ">=2.3,<3.0" },
-    { name = "ruff", specifier = ">=0.15,<1.0" },
-    { name = "safety", specifier = ">=3.6,<4.0" },
-    { name = "schemathesis", specifier = ">=4.12,<5.0" },
-    { name = "wemake-python-styleguide", specifier = ">=1.6,<2.0" },
-    { name = "yamllint", specifier = ">=1.35,<2.0" },
-]
-docs = [
-    { name = "furo", specifier = ">=2025.12" },
-    { name = "myst-parser", specifier = ">=5.0,<6.0" },
-    { name = "sphinx", specifier = ">=9.1,<10.0" },
-    { name = "sphinx-autodoc-typehints", specifier = ">=3.0,<4.0" },
 ]
 
 [[package]]
