@@ -22,6 +22,7 @@ SECRET_KEY = config('DJANGO_SECRET_KEY')
 INSTALLED_APPS: tuple[str, ...] = (
     # Your apps go here:
     'server.apps.main',
+    
     # Default django apps:
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -33,15 +34,19 @@ INSTALLED_APPS: tuple[str, ...] = (
     'django.contrib.admindocs',
     # django-modern-rest:
     'dmr',
+    "corsheaders",
     # Security:
     'axes',
     # Health checks:
     # You may want to enable other checks as well,
     # see: https://github.com/KristianOellegaard/django-health-check
     'health_check',
+
 )
 
 MIDDLEWARE: tuple[str, ...] = (
+    # CORS:
+    "corsheaders.middleware.CorsMiddleware",
     # Logging:
     'server.settings.components.logging.LoggingContextVarsMiddleware',
     # Django:
@@ -89,6 +94,12 @@ DATABASES = {
 # https://docs.djangoproject.com/en/6.0/ref/settings/#default-auto-field
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
+# Cors headers Settings
+CORS_ALLOWED_ORIGINS = [
+    config('FRONTEND_URL',default='http://localhost:3000'),
+]
+
+CORS_ALLOWED_CREDENTIALS = True
 
 # Internationalization
 # https://docs.djangoproject.com/en/6.0/topics/i18n/
@@ -188,3 +199,5 @@ PERMISSIONS_POLICY: dict[str, str | list[str]] = {}
 # https://docs.djangoproject.com/en/6.0/ref/settings/#std:setting-EMAIL_TIMEOUT
 
 EMAIL_TIMEOUT = 5
+
+
