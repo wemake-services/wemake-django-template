@@ -80,7 +80,7 @@ def test_pyproject_toml(
     pyproject = tomllib.loads(path.read_text())
     project = pyproject['project']
 
-    assert project['name'] == context['project_name']
+    assert project['name'] == 'server'
     assert project['description'] == context['project_verbose_name']
     assert project['dependencies']
     assert pyproject['dependency-groups']
