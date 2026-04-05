@@ -1,5 +1,5 @@
 [project]
-name = "{{ cookiecutter.project_name }}"
+name = "server"
 description = "{{ cookiecutter.project_verbose_name }}"
 version = "0.1.0"
 requires-python = "==3.13.11"
@@ -68,6 +68,11 @@ docs = [
   "myst-parser>=5.0,<6.0",
   "furo>=2025.12",
 ]
+
+
+[tool.uv]
+# Docs: https://docs.astral.sh/uv/reference/settings
+package = false
 
 
 [tool.ruff]
