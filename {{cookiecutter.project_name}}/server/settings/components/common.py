@@ -22,7 +22,6 @@ SECRET_KEY = config('DJANGO_SECRET_KEY')
 INSTALLED_APPS: tuple[str, ...] = (
     # Your apps go here:
     'server.apps.main',
-
     # Default django apps:
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -34,19 +33,18 @@ INSTALLED_APPS: tuple[str, ...] = (
     'django.contrib.admindocs',
     # django-modern-rest:
     'dmr',
-    "corsheaders",
+    'corsheaders',
     # Security:
     'axes',
     # Health checks:
     # You may want to enable other checks as well,
     # see: https://github.com/KristianOellegaard/django-health-check
     'health_check',
-
 )
 
 MIDDLEWARE: tuple[str, ...] = (
     # CORS:
-    "corsheaders.middleware.CorsMiddleware",
+    'corsheaders.middleware.CorsMiddleware',
     # Logging:
     'server.settings.components.logging.LoggingContextVarsMiddleware',
     # Django:
@@ -96,7 +94,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 # Cors headers Settings
 CORS_ALLOWED_ORIGINS = [
-    config('FRONTEND_URL',default='http://localhost:3000'),
+    config('FRONTEND_URL', default='http://localhost:3000'),
 ]
 
 CORS_ALLOWED_CREDENTIALS = True

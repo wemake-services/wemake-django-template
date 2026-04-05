@@ -4,7 +4,7 @@ from typing import Any, cast
 from dmr.openapi import OpenAPIConfig
 from dmr.settings import Settings
 
-from server.settings.components import BASE_DIR
+from server.settings.components import BASE_DIR, config
 
 
 def _get_project_meta() -> dict[str, str]:  # lying about return type
@@ -27,3 +27,12 @@ DMR_SETTINGS: Any = {
     # Generate fake examples in OpenAPI:
     Settings.openapi_examples_seed: 1,
 }
+
+
+# django-cors-headers
+# https://github.com/adamchainz/django-cors-headers
+
+CORS_ALLOWED_ORIGINS = [
+    config('DOMAIN_NAME'),
+]
+CORS_ALLOW_ALL_ORIGINS = False
