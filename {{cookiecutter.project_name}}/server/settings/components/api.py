@@ -33,6 +33,6 @@ DMR_SETTINGS: Any = {
 # https://github.com/adamchainz/django-cors-headers
 
 CORS_ALLOWED_ORIGINS = [
-    config('DOMAIN_NAME'),
+    f'https://{config("DOMAIN_NAME")}',
 ]
 CORS_ALLOW_ALL_ORIGINS = False

@@ -110,7 +110,10 @@ SECURE_CSP['connect-src'] += [CSP.SELF]
 
 # django-cors-headers
 
-CORS_ALLOWED_ORIGINS.extend(ALLOWED_HOSTS)
+CORS_ALLOWED_ORIGINS.extend([
+    'http://localhost',
+    'http://127.0.0.1',
+])
 
 
 # django-zeal
