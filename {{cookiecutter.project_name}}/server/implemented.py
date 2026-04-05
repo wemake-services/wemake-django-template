@@ -13,7 +13,7 @@ def _global_namespace() -> dict[str, Any]:
     return locals()  # noqa: WPS421
 
 
-def create_injector[Thing](
+def _create_injector[Thing](
     container: punq.Container,
     localns: dict[str, Any],
 ) -> Callable[[Thing], Thing]:
@@ -24,7 +24,7 @@ def create_injector[Thing](
     return lambda service: service
 
 
-def inject_django(container: punq.Container) -> None:
+def _inject_django(container: punq.Container) -> None:
     from django.conf import LazySettings, settings
 
     # Django:
@@ -35,12 +35,12 @@ def inject_django(container: punq.Container) -> None:
     )
 
 
-def inject_main(container: punq.Container) -> None:
+def _inject_main(container: punq.Container) -> None:
     from server.apps.main.infra import mappers, repository
     from server.apps.main.logic.usecases import blogpost_create, blogpost_get
 
     # Hacks to resolve annotations:
-    inject = create_injector(container, locals())  # noqa: WPS421
+    inject = _create_injector(container, locals())  # noqa: WPS421
 
     # Things to register:
     container.register(repository.BlogPostRepo)
@@ -50,19 +50,10 @@ def inject_main(container: punq.Container) -> None:
     container.register(inject(blogpost_get.GetBlogPost))
 
 
-def create_container() -> punq.Container:
-    """Creates `punq` container, which can be re-created in tests."""
-    container = punq.Container()
+def populate_dependencies(container: punq.Container) -> punq.Container:
+    """Populates dependencies for the container."""
     # Deps:
-    inject_django(container)
+    _inject_django(container)
     # Apps:
-    inject_main(container)
+    _inject_main(container)
     return container
-
-
-_container = create_container()
-
-
-def resolve[Thing](thing: type[Thing]) -> Thing:
-    """Type-safe resolution for `punq`."""
-    return _container.resolve(thing)  # type: ignore[no-any-return]
