@@ -165,11 +165,7 @@ enable_error_code = [
 # codespell configuration: https://github.com/codespell-project/codespell
 skip = [
   "__pycache__",
-  "_build",
   ".mypy_cache",
-  "*.js",
-  "*.css",
-  "*.min.*",
   "*.lock",
 ]
 
@@ -178,10 +174,6 @@ skip = [
 # typos configuration: https://github.com/crate-ci/typos/
 files.extend-exclude = [
   "__pycache__",
-  "_build",
   ".mypy_cache",
-  "*.js",
-  "*.css",
-  "*.min.*",
   "*.lock",
 ]
