@@ -159,3 +159,29 @@ enable_error_code = [
   "unimported-reveal",
   "deprecated",
 ]
+
+
+[tool.codespell]
+# codespell configuration: https://github.com/codespell-project/codespell
+skip = [
+  "__pycache__",
+  "_build",
+  ".mypy_cache",
+  "*.js",
+  "*.css",
+  "*.min.*",
+  "*.lock",
+]
+
+
+[tool.typos]
+# typos configuration: https://github.com/crate-ci/typos/
+files.extend-exclude = [
+  "__pycache__",
+  "_build",
+  ".mypy_cache",
+  "*.js",
+  "*.css",
+  "*.min.*",
+  "*.lock",
+]
