@@ -12,7 +12,9 @@ services:
     image: "postgres:18-alpine"
     restart: unless-stopped
     volumes:
-      - postgres-data:/var/lib/postgresql/data
+      # Postgres 18 default PGDATA is `/var/lib/postgresql/18/docker`,
+      # so we mount the parent directory to persist the actual data path.
+      - postgres-data:/var/lib/postgresql
     networks:
       - postgres-net
     env_file: ./config/.env
