@@ -103,10 +103,10 @@ DEBUG_TOOLBAR_CONFIG = {
 
 # This will make debug toolbar to work with django-csp,
 # since `ddt` loads some scripts from `ajax.googleapis.com`:
-_СSP_DIRECTIVES = CONTENT_SECURITY_POLICY['DIRECTIVES']
-_СSP_DIRECTIVES['script-src'] += ['https://ajax.googleapis.com']
-_СSP_DIRECTIVES['img-src'] += ['data:']
-_СSP_DIRECTIVES['connect-src'] += [SELF]
+_CSP_DIRECTIVES = CONTENT_SECURITY_POLICY['DIRECTIVES']
+_CSP_DIRECTIVES['script-src'] += ['https://ajax.googleapis.com']
+_CSP_DIRECTIVES['img-src'] += ['data:']
+_CSP_DIRECTIVES['connect-src'] += [SELF]
 
 
 # django-cors-headers
