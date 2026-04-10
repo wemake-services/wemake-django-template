@@ -8,10 +8,19 @@ We are using `django-csp` to provide these headers.
 Docs: https://github.com/mozilla/django-csp
 """
 
+from typing import TypedDict, final
+
 from csp.constants import NONE, SELF
 
+
+@final
+class _ContentSecurityPolicy(TypedDict):
+    EXCLUDE_URL_PREFIXES: list[str]  # noqa: WPS115
+    DIRECTIVES: dict[str, list[str]]  # noqa: WPS115
+
+
 # These values might and will be redefined in `development.py` env:
-CONTENT_SECURITY_POLICY = {
+CONTENT_SECURITY_POLICY: _ContentSecurityPolicy = {
     'EXCLUDE_URL_PREFIXES': [
         '/docs/stoplight/',
         '/docs/swagger/',
