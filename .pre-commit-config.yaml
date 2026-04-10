@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.37.0
+    rev: 0.37.1
     hooks:
       - id: check-dependabot
       - id: check-github-workflows
@@ -9,12 +9,14 @@ repos:
         args: ["--format-regex", "python"]
       - id: check-renovate
       - id: check-compose-spec
+
   - repo: https://github.com/rhysd/actionlint
-    rev: v1.7.11
+    rev: v1.7.12
     hooks:
       - id: actionlint
         additional_dependencies:
           - "github.com/wasilibs/go-shellcheck/cmd/shellcheck@latest"
+
   - repo: https://github.com/woodruffw/zizmor-pre-commit
     rev: v1.23.1
     hooks:
@@ -22,6 +24,7 @@ repos:
         args:
           - "--no-progress"
           - "--fix"
+
   - repo: https://github.com/shellcheck-py/shellcheck-py
     rev: v0.11.0.1
     hooks:
@@ -34,6 +37,18 @@ repos:
       - id: sphinx-lint
         args: ["--enable=all", "--disable=line-too-long"]
         files: ^\{\{cookiecutter.project_name\}\}/docs/
+
+  - repo: https://github.com/crate-ci/typos
+    rev: v1
+    hooks:
+      - id: typos
+
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.4.2
+    hooks:
+    - id: codespell
+      additional_dependencies:
+        - tomli
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0

@@ -14,6 +14,7 @@ from debug_toolbar.settings import PANELS_DEFAULTS
 from django.utils.csp import CSP
 
 from server.settings.components import config
+from server.settings.components.api import CORS_ALLOWED_ORIGINS
 from server.settings.components.common import (
     DATABASES,
     INSTALLED_APPS,
@@ -106,6 +107,14 @@ SECURE_CSP['script-src'] += [CSP.UNSAFE_INLINE, 'https://ajax.googleapis.com']
 SECURE_CSP['style-src'] += [CSP.UNSAFE_INLINE]
 SECURE_CSP['img-src'] += ['data:']
 SECURE_CSP['connect-src'] += [CSP.SELF]
+
+
+# django-cors-headers
+
+CORS_ALLOWED_ORIGINS.extend([
+    'http://localhost',
+    'http://127.0.0.1',
+])
 
 
 # django-zeal

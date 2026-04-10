@@ -33,6 +33,7 @@ INSTALLED_APPS: tuple[str, ...] = (
     'django.contrib.admindocs',
     # django-modern-rest:
     'dmr',
+    'corsheaders',
     # Security:
     'axes',
     # Health checks:
@@ -42,6 +43,8 @@ INSTALLED_APPS: tuple[str, ...] = (
 )
 
 MIDDLEWARE: tuple[str, ...] = (
+    # CORS:
+    'corsheaders.middleware.CorsMiddleware',
     # Logging:
     'server.settings.components.logging.LoggingContextVarsMiddleware',
     # Django:
@@ -89,6 +92,12 @@ DATABASES = {
 # https://docs.djangoproject.com/en/6.0/ref/settings/#default-auto-field
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
+# Cors headers Settings
+CORS_ALLOWED_ORIGINS = [
+    config('FRONTEND_URL', default='http://localhost:3000'),
+]
+
+CORS_ALLOWED_CREDENTIALS = True
 
 # Internationalization
 # https://docs.djangoproject.com/en/6.0/topics/i18n/
@@ -97,10 +106,7 @@ LANGUAGE_CODE = 'en-us'
 
 USE_I18N = True
 
-LANGUAGES = (
-    ('en', _('English')),
-    ('ru', _('Russian')),
-)
+LANGUAGES = (('en', _('English')),)
 
 LOCALE_PATHS = ('locale/',)
 

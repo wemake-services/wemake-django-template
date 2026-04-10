@@ -83,7 +83,7 @@ def _create_secret_key(config_path: Path) -> None:
         config_file.truncate()
 
 
-def print_futher_instuctions() -> None:
+def print_further_instructions() -> None:
     """Shows user what to do next after project creation."""
     print(PROJECT_SUCCESS.format(PROJECT_NAME))  # noqa: WPS421
 
@@ -114,4 +114,4 @@ def copy_local_configuration() -> None:
 
 
 copy_local_configuration()
-print_futher_instuctions()
+print_further_instructions()

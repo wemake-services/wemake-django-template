@@ -6,7 +6,6 @@ from dmr import Body, Controller, modify
 from dmr.endpoint import Endpoint
 from dmr.errors import ErrorType
 from dmr.metadata import ResponseSpec
-from dmr.openapi.objects import Link
 from dmr.plugins.msgspec import MsgspecSerializer
 
 from server.apps.main.logic.usecases import blogpost_create, blogpost_get
@@ -20,33 +19,23 @@ from server.common.di import HasContainer
 
 @final
 class BlogPostCreate(
-    Controller[MsgspecSerializer],
     HasContainer,
+    Controller[MsgspecSerializer],
 ):
     """Top level endpoints for the ``BlogPost`` model."""
 
-    @modify(
-        # This is only needed as a schemathesis demo:
-        # https://schemathesis.readthedocs.io/en/stable/guides/stateful-testing
-        links={
-            'GetBlogPostById': Link(
-                operation_id='getBlogPostGetApiUserUsers',
-                parameters={'id': '$response.body#/id'},
-            ),
-        },
-    )
     def post(
         self,
         parsed_body: Body[BlogPostCreatePayload],
     ) -> BlogPostFullPayload:
         """Create new ``BlogPost`` model."""
-        return self._resolve(blogpost_create.CreateBlogPost)(parsed_body)
+        return self.resolve(blogpost_create.CreateBlogPost)(parsed_body)
 
 
 @final
 class BlogPostGet(
-    Controller[MsgspecSerializer],
     HasContainer,
+    Controller[MsgspecSerializer],
 ):
     """Endpoints that only require a path for ``BlogPost`` models."""
 
@@ -60,7 +49,7 @@ class BlogPostGet(
     )
     def get(self) -> BlogPostFullPayload:
         """Return existing ``BlogPost`` model by id."""
-        return self._resolve(blogpost_get.GetBlogPost)(self.kwargs['id'])
+        return self.resolve(blogpost_get.GetBlogPost)(self.kwargs['id'])
 
     @override
     def handle_error(

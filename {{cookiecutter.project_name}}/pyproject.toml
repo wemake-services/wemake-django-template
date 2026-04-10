@@ -1,85 +1,78 @@
 [project]
-name = "{{ cookiecutter.project_name }}"
+name = "server"
 description = "{{ cookiecutter.project_verbose_name }}"
 version = "0.1.0"
 requires-python = "==3.13.11"
 readme = "README.md"
 authors = []
-dynamic = ["dependencies", "classifiers"]
-
-
-[build-system]
-requires = ["poetry-core>=2.0"]
-build-backend = "poetry.core.masonry.api"
-
-
-[tool.poetry]
-package-mode = false
 classifiers = [
   "Private :: Do not Upload",
 ]
+dependencies = [
+  "django[argon2]>=6.0,<6.1",
+  "django-cors-headers>=4.0,<5.0",
+  "django-split-settings>=1.3,<2.0",
+  "django-axes>=8.0,<9.0",
+  "django-health-check>=4.0,<5.0",
+  "django-permissions-policy>=4.27,<5.0",
+  "django-stubs-ext>=6.0,<7.0",
+  "django-modern-rest[msgspec,pydantic,attrs,jwt,openapi]>=0.4,<1.0",
+  "psycopg2-binary>=2.9,<3.0",
+  "gunicorn>=25.0,<26.0",
+  "python-decouple>=3.8,<4.0",
+  "structlog>=25.4,<26.0",
+  "wheel>=0.46,<1.0",
+  "punq>=0.7,<1.0",
+]
+
+[dependency-groups]
+dev = [
+  "django-debug-toolbar>=6.0,<7.0",
+  "django-migration-linter>=6.0,<7.0",
+  "django-safe-migrations>=0.6,<1.0",
+  "django-extra-checks>=0.16,<1.0",
+  "django-query-counter>=0.5,<1.0",
+  "django-zeal>=2.0,<3.0",
+  "django-drifter>=0.1,<1.0",
+
+  "wemake-python-styleguide>=1.6,<2.0",
+  "ruff>=0.15,<1.0",
+
+  "pytest>=9.0,<10.0",
+  "pytest-django>=4.9,<5.0",
+  "pytest-cov>=7.1,<8.0",
+  "covdefaults>=2.3,<3.0",
+  "django-coverage-plugin>=3.1,<4.0",
+  "pytest-randomly>=4.0,<5.0",
+  "pytest-timeout>=2.3,<3.0",
+  "django-test-migrations>=1.5,<2.0",
+  "hypothesis>=6.123,<7.0",
+  "schemathesis>=4.12,<5.0",
+
+  "django-stubs[compatible-mypy]>=6.0,<6.1",
+
+  "djangofmt>=0.2,<1.0",
+  "yamllint>=1.35,<2.0",
+  "safety>=3.6,<4.0",
+  "dotenv-linter>=0.7,<1.0",
+  "import-linter>=2.10,<3.0",
+  "polint>=0.5,<1.0",
+  "dennis>=1.1,<2.0",
+  "dump-env>=1.5,<2.0",
+  "ipython>=9.5,<10.0",
+]
+
+docs = [
+  "sphinx>=9.1,<10.0",
+  "sphinx-autodoc-typehints>=3.0,<4.0",
+  "myst-parser>=5.0,<6.0",
+  "furo>=2025.12",
+]
 
 
-[tool.poetry.dependencies]
-django = { version = ">=6.0,<6.1", extras = ["argon2"] }
-django-split-settings = "^1.3"
-django-axes = "^8.0"
-django-health-check = "^4.0"
-django-permissions-policy = "^4.27"
-django-stubs-ext = "^6.0"
-django-modern-rest = { version = "^0.4", extras = ["msgspec", "pydantic", "attrs", "jwt", "openapi"] }
-
-psycopg2-binary = "^2.9"
-gunicorn = "^25.0"
-python-decouple = "^3.8"
-structlog = "^25.4"
-wheel = "^0.46"
-punq = "^0.7"
-
-
-[tool.poetry.group.dev.dependencies]
-django-debug-toolbar = "^6.0"
-django-migration-linter = "^6.0"
-django-safe-migrations = "^0.6"
-django-extra-checks = "^0.16"
-django-query-counter = "^0.5"
-django-zeal = "^2.0"
-django-drifter = "^0.1"
-
-wemake-python-styleguide = "^1.6"
-ruff = "^0.15"
-
-pytest = "^9.0"
-pytest-django = "^4.9"
-pytest-cov = "^7.1"
-covdefaults = "^2.3"
-django-coverage-plugin = "^3.1"
-pytest-randomly = "^4.0"
-pytest-timeout = "^2.3"
-django-test-migrations = "^1.5"
-hypothesis = "^6.123"
-schemathesis = "^4.12"
-
-django-stubs = { version = ">=6.0,<6.1", extras = ["compatible-mypy"] }
-
-djangofmt = "^0.2"
-yamllint = "^1.35"
-safety = "^3.6"
-dotenv-linter = "^0.7"
-import-linter = "^2.10"
-polint = "^0.5"
-dennis = "^1.1"
-dump-env = "^1.5"
-ipython = "^9.5"
-
-[tool.poetry.group.docs]
-optional = true
-
-[tool.poetry.group.docs.dependencies]
-sphinx = "^9.1"
-sphinx-autodoc-typehints = "^3.0"
-myst-parser = "^5.0"
-furo = "^2025.12"
+[tool.uv]
+# Docs: https://docs.astral.sh/uv/reference/settings
+package = false
 
 
 [tool.ruff]
@@ -167,3 +160,111 @@ pydocstyle.convention = "google"
 "server/common/typing/*.py" = ["F401"]
 "server/implemented.py" = ["PLC0415", "D103"]
 "tests/*.py" = ["S101"]
+
+
+[tool.pytest.ini_options]
+# pytest configuration:
+# https://docs.pytest.org/en/stable/customize.html
+
+# pytest-django configuration:
+# https://pytest-django.readthedocs.io/en/latest/
+DJANGO_SETTINGS_MODULE = "server.settings"
+
+# Timeout for tests, so they can not take longer
+# than this amount of seconds.
+# You should adjust this value to be as low as possible.
+# Configuration:
+# https://pypi.org/project/pytest-timeout/
+timeout = 5
+
+# Strict `@xfail` by default:
+xfail_strict = true
+
+# Directories that are not visited by pytest collector:
+norecursedirs = [
+  "*.egg",
+  ".eggs",
+  "dist",
+  "build",
+  "docs",
+  ".tox",
+  ".git",
+  "__pycache__",
+  ".hypothesis",
+]
+
+# You will need to measure your tests speed with `-n auto` and without it,
+# so you can see whether it gives you any performance gain, or just gives
+# you an overhead. See `docs/template/development-process.rst`.
+addopts = [
+  "--strict-markers",
+  "--strict-config",
+  "--doctest-modules",
+  "--fail-on-template-vars",
+  # Output:
+  "--tb=short",
+  # Coverage:
+  "--cov=server",
+  "--cov=tests",
+  "--cov-branch",
+  "--cov-report=term-missing:skip-covered",
+  "--cov-report=html",
+  "--cov-report=xml",
+  "--cov-fail-under=100",
+]
+
+# Fail on warnings:
+filterwarnings = ["error"]
+
+
+[tool.coverage.run]
+# Coverage configuration:
+# https://coverage.readthedocs.io/en/latest/config.html
+plugins = [
+  # Docs: https://github.com/nedbat/django_coverage_plugin
+  "django_coverage_plugin",
+  # Docs: https://pypi.org/project/covdefaults
+  "covdefaults",
+]
+
+omit = [
+  # Is not reported, because is imported during setup:
+  "server/settings/components/logging.py",
+]
+
+
+[tool.mypy]
+# Mypy configuration:
+# https://mypy.readthedocs.io/en/latest/config_file.html
+enable_error_code = [
+  "truthy-bool",
+  "truthy-iterable",
+  "redundant-expr",
+  "unused-awaitable",
+  "ignore-without-code",
+  "possibly-undefined",
+  "redundant-self",
+  "explicit-override",
+  "unimported-reveal",
+  "deprecated",
+  "exhaustive-match",
+]
+
+explicit_package_bases = true
+ignore_missing_imports = true
+local_partial_types = true
+strict = true
+strict_bytes = true
+warn_unreachable = true
+
+plugins = ["mypy_django_plugin.main"]
+
+[[tool.mypy.overrides]]
+module = "server.apps.*.migrations.*"
+# Django migrations should not produce any errors (they are tested anyway):
+ignore_errors = true
+
+[tool.django-stubs]
+# Docs: https://github.com/typeddjango/django-stubs
+django_settings_module = "server.settings"
+strict_settings = false

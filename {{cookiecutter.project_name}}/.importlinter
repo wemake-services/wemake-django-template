@@ -44,6 +44,10 @@ source_modules =
 forbidden_modules =
   server.apps
 
+ignore_imports =
+  # Our DI is inside common:
+  server.common.di -> server.implemented
+
 
 [importlinter:contract:tests-restrictions]
 name = Explicit import restrictions for tests

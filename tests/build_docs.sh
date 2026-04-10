@@ -14,10 +14,10 @@ run_cookiecutter_build "$GITHUB_WORKSPACE"
 cd "$PROJECT_PATH"
 
 # Install deps from the project:
-poetry sync --only=main --only=docs
+uv sync --group docs --no-dev
 
 # Build docs:
-make -C docs html
+uv run make -C docs html
 
 # Move the result docs to the dest:
 ls docs/_build/html

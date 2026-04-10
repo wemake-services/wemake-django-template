@@ -8,36 +8,25 @@ authors = [
   { name = "Nikita Sobolev", email = "mail@sobolevn.me" },
 ]
 license = "MIT"
-dynamic = ["dependencies", "classifiers"]
-
-
-[build-system]
-requires = ["poetry-core>=2.0"]
-build-backend = "poetry.core.masonry.api"
-
-
-[tool.poetry]
-package-mode = false
 classifiers = [
   "Private :: Do not Upload",
 ]
+dependencies = [
+  "cookiecutter>=2.7,<3.0",
+  "jinja2-git>=1.4,<2.0",
+]
 
-[tool.poetry.dependencies]
-cookiecutter = "^2.7"
-jinja2-git = "^1.4"
-
-[tool.poetry.group.dev.dependencies]
-binaryornot = "^0.6"
-
-wemake-python-styleguide = "^1.6"
-ruff = "^0.15"
-docker-image-size-limit = "^2.2"
-
-mypy = "^1.19"
-
-pytest = "^9.0"
-pytest-randomly = "^4.0"
-pytest-cookies = "^0.7"
+[dependency-groups]
+dev = [
+  "binaryornot>=0.6,<1.0",
+  "wemake-python-styleguide>=1.6,<2.0",
+  "ruff>=0.15,<1.0",
+  "docker-image-size-limit>=2.2,<3.0",
+  "mypy>=1.20,<2.0",
+  "pytest>=9.0,<10.0",
+  "pytest-randomly>=4.0,<5.0",
+  "pytest-cookies>=0.7,<1.0",
+]
 
 
 [tool.ruff]
@@ -169,4 +158,22 @@ enable_error_code = [
   "mutable-override",
   "unimported-reveal",
   "deprecated",
+]
+
+
+[tool.codespell]
+# codespell configuration: https://github.com/codespell-project/codespell
+skip = [
+  "__pycache__",
+  ".mypy_cache",
+  "*.lock",
+]
+
+
+[tool.typos]
+# typos configuration: https://github.com/crate-ci/typos/
+files.extend-exclude = [
+  "__pycache__",
+  ".mypy_cache",
+  "*.lock",
 ]

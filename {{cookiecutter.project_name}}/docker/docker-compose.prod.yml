@@ -17,7 +17,7 @@ services:
       - ./docker/caddy/ci.sh:/etc/ci.sh  # test script
       - caddy-config:/config  # configuration autosaves
       - caddy-data:/data  # saving certificates
-      - django-static:/var/www/django/static  # serving django's statics
+      - django-static:/var/www/django/static  # serving django's static
       - django-media:/var/www/django/media  # serving django's media
     ports:
       - "80:80"
