@@ -28,7 +28,7 @@ def api_schema(
     transactional_db: None,
 ) -> 'OpenApiSchema':
     """Load OpenAPI schema as a pytest fixture."""
-    return st.openapi.from_wsgi(reverse('openapi'), application)
+    return st.openapi.from_wsgi(reverse('openapi_json'), application)
 
 
 schema = st.pytest.from_fixture('api_schema')

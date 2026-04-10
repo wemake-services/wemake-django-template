@@ -116,6 +116,7 @@ Here's a full list of the extensions for both development and production:
   Use wildcards in settings file paths and mark settings files as optional
 - `django-axes`_ - keep track
   of failed login attempts in ``django`` powered sites
+- `django-csp`_ - `Content Security Policy`_ for ``django``
 - `django-referrer-policy`_ - middleware implementing the `Referrer-Policy`_
 - `django-health-check`_ - checks for various conditions and provides reports
   when anomalous behavior is detected
@@ -144,6 +145,7 @@ Development only extensions:
 .. _django-modern-rest: https://github.com/wemake-services/django-modern-rest
 .. _django-split-settings: https://github.com/sobolevn/django-split-settings
 .. _django-axes: https://github.com/jazzband/django-axes
+.. _django-csp: https://github.com/mozilla/django-csp
 .. _`Content Security Policy`: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
 .. _django-referrer-policy: https://github.com/ubernostrum/django-referrer-policy
 .. _`Referrer-Policy`: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
