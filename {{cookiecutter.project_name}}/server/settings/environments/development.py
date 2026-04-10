@@ -10,8 +10,8 @@ import logging
 import socket
 from typing import TYPE_CHECKING
 
+from csp.constants import SELF
 from debug_toolbar.settings import PANELS_DEFAULTS
-from django.utils.csp import CSP
 
 from server.settings.components import config
 from server.settings.components.api import CORS_ALLOWED_ORIGINS
@@ -20,7 +20,7 @@ from server.settings.components.common import (
     INSTALLED_APPS,
     MIDDLEWARE,
 )
-from server.settings.components.csp import SECURE_CSP
+from server.settings.components.csp import CONTENT_SECURITY_POLICY
 
 if TYPE_CHECKING:
     from django.http import HttpRequest
@@ -101,12 +101,12 @@ DEBUG_TOOLBAR_CONFIG = {
     ),
 }
 
-# This will make debug toolbar to work with csp,
+# This will make debug toolbar to work with django-csp,
 # since `ddt` loads some scripts from `ajax.googleapis.com`:
-SECURE_CSP['script-src'] += [CSP.UNSAFE_INLINE, 'https://ajax.googleapis.com']
-SECURE_CSP['style-src'] += [CSP.UNSAFE_INLINE]
-SECURE_CSP['img-src'] += ['data:']
-SECURE_CSP['connect-src'] += [CSP.SELF]
+_СSP_DIRECTIVES = CONTENT_SECURITY_POLICY['DIRECTIVES']
+_СSP_DIRECTIVES['script-src'] += ['https://ajax.googleapis.com']
+_СSP_DIRECTIVES['img-src'] += ['data:']
+_СSP_DIRECTIVES['connect-src'] += [SELF]
 
 
 # django-cors-headers

@@ -19,8 +19,10 @@ from dmr.openapi.views import (
     OpenAPIJsonView,
     RedocView,
     ScalarView,
+    StoplightView,
     SwaggerView,
 )
+from dmr.openapi.views.yaml import OpenAPIYamlView
 from dmr.plugins.msgspec import MsgspecSerializer
 from dmr.routing import Router, build_404_handler, build_500_handler, path
 from health_check.views import HealthCheckView
@@ -48,7 +50,17 @@ urlpatterns = [
     # Apis:
     path(router.prefix, include((router.urls, 'server'), namespace='api')),
     # OpenAPI:
-    path('docs/openapi.json/', OpenAPIJsonView.as_view(schema), name='openapi'),
+    path(
+        'docs/openapi.json/',
+        OpenAPIJsonView.as_view(schema),
+        name='openapi_json',
+    ),
+    path(
+        'docs/openapi.yaml/',
+        OpenAPIYamlView.as_view(schema),
+        name='openapi_yaml',
+    ),
+    path('docs/stoplight/', StoplightView.as_view(schema), name='stoplight'),
     path('docs/swagger/', SwaggerView.as_view(schema), name='swagger'),
     path('docs/scalar/', ScalarView.as_view(schema), name='scalar'),
     path('docs/redoc/', RedocView.as_view(schema), name='redoc'),
