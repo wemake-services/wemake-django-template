@@ -50,7 +50,7 @@ dev = [
   "hypothesis>=6.123,<7.0",
   "schemathesis>=4.12,<5.0",
 
-  "django-stubs[compatible-mypy]>=6.0,<6.1",
+  "django-stubs[compatible-mypy]>=6.0.2,<6.1",
 
   "djangofmt>=0.2,<1.0",
   "yamllint>=1.35,<2.0",
