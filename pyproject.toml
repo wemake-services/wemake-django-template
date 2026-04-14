@@ -23,7 +23,7 @@ dev = [
   "ruff>=0.15,<1.0",
   "docker-image-size-limit>=2.2,<3.0",
   "mypy>=1.20,<2.0",
-  "pytest>=9.0,<10.0",
+  "pytest>=9.0.3,<10.0",
   "pytest-randomly>=4.0,<5.0",
   "pytest-cookies>=0.7,<1.0",
 ]
