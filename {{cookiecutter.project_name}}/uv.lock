@@ -2099,7 +2099,7 @@ docs = [
 
 [package.metadata]
 requires-dist = [
-    { name = "django", extras = ["argon2"], specifier = ">=6.0.3,<6.1" },
+    { name = "django", extras = ["argon2"], specifier = ">=6.0.4,<6.1" },
     { name = "django-axes", specifier = ">=8.0,<9.0" },
     { name = "django-cors-headers", specifier = ">=4.0,<5.0" },
     { name = "django-csp", specifier = ">=4.0,<5.0" },
