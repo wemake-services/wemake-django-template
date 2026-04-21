@@ -918,14 +918,14 @@ wheels = [
 
 [[package]]
 name = "hypothesis"
-version = "6.151.12"
+version = "6.151.14"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "sortedcontainers" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/ce/ab/67ca321d1ab96fd3828b12142f1c258e2d4a668a025d06cd50ab3409787f/hypothesis-6.151.12.tar.gz", hash = "sha256:be485f503979af4c3dfa19e3fc2b967d0458e7f8c4e28128d7e215e0a55102e0", size = 463900, upload-time = "2026-04-08T19:40:06.205Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/83/77/3227982784ff12a74fc5b28823f3487f457640e6cc653afe16d090891334/hypothesis-6.151.14.tar.gz", hash = "sha256:14fffdfdb50e816cf114f9946aebbf533d7e0920c07ddc1531889f0a22ffaa20", size = 464375, upload-time = "2026-04-13T21:50:11.188Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/0e/5a/6cecf134b631050a1f8605096adbe812483b60790d951470989d39b56860/hypothesis-6.151.12-py3-none-any.whl", hash = "sha256:37d4f3a768365c30571b11dfd7a6857a12173d933010b2c4ab65619f1b5952c5", size = 529656, upload-time = "2026-04-08T19:40:03.126Z" },
+    { url = "https://files.pythonhosted.org/packages/b7/60/1d19db13777148efb57c27a8ceea48afb80cba9ce6da85b57ccbe0e8f44f/hypothesis-6.151.14-py3-none-any.whl", hash = "sha256:0c27a1e1092752d8c424b7f1caeb6ecfbed9af87914f510b59c1be69945e85a5", size = 530046, upload-time = "2026-04-13T21:50:08.282Z" },
 ]
 
 [[package]]
@@ -2133,7 +2133,7 @@ dev = [
     { name = "djangofmt", specifier = ">=0.2,<1.0" },
     { name = "dotenv-linter", specifier = ">=0.7,<1.0" },
     { name = "dump-env", specifier = ">=1.5,<2.0" },
-    { name = "hypothesis", specifier = ">=6.123,<7.0" },
+    { name = "hypothesis", specifier = ">=6.151.14,<7.0" },
     { name = "import-linter", specifier = ">=2.10,<3.0" },
     { name = "ipython", specifier = ">=9.5,<10.0" },
     { name = "polint", specifier = ">=0.5,<1.0" },
