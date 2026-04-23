@@ -466,15 +466,15 @@ wheels = [
 
 [[package]]
 name = "django-health-check"
-version = "4.2.2"
+version = "4.3.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "django" },
     { name = "dnspython" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/f2/0a/9f9083ea06a55ef963060c0a1a6833e8a2ba755f9cfd9e7d10038d06b0e7/django_health_check-4.2.2.tar.gz", hash = "sha256:66f9861be1c53607fd26037eb8c9dae58db8c23e34af0792bc6f9d78f28fa64c", size = 21286, upload-time = "2026-04-09T16:04:34.652Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/67/83/c84fda118c436d0f4a702fff05014f1807adcec441456153d743031aa467/django_health_check-4.3.0.tar.gz", hash = "sha256:6c33abe4fd401b951f51adbd494eb0cdc34ebc379d99db93b440c765483b2a99", size = 21537, upload-time = "2026-04-15T17:11:57.141Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/09/d4/ab733626a041fd45eaa4e3c590f4ca77691887874298e682a0e2be6789a1/django_health_check-4.2.2-py3-none-any.whl", hash = "sha256:86689c6d5f1cdfe7d9ca6830df17b26fdd920fb1b1d221314cb1e6d60eaeecd8", size = 26355, upload-time = "2026-04-09T16:04:33.218Z" },
+    { url = "https://files.pythonhosted.org/packages/21/39/efbb9da9a4b0f593e73eaa8b848477cc88fb04ede16356a4ec013535ba4f/django_health_check-4.3.0-py3-none-any.whl", hash = "sha256:6717f772afdab809df19c5e58bcde5e5dc6834dc6a99237dad519187ddd3e3df", size = 26612, upload-time = "2026-04-15T17:11:55.793Z" },
 ]
 
 [[package]]
@@ -2103,7 +2103,7 @@ requires-dist = [
     { name = "django-axes", specifier = ">=8.0,<9.0" },
     { name = "django-cors-headers", specifier = ">=4.0,<5.0" },
     { name = "django-csp", specifier = ">=4.0,<5.0" },
-    { name = "django-health-check", specifier = ">=4.0,<5.0" },
+    { name = "django-health-check", specifier = ">=4.3.0,<5.0" },
     { name = "django-modern-rest", extras = ["msgspec", "pydantic", "attrs", "jwt", "openapi"], specifier = ">=0.7.0,<1.0" },
     { name = "django-permissions-policy", specifier = ">=4.27,<5.0" },
     { name = "django-split-settings", specifier = ">=1.3,<2.0" },
