@@ -22,7 +22,7 @@ include:
 # Building template project:
 mirror-github-build:
   stage: build
-  image: python:3.13.11
+  image: python:3.13.13
   before_script:
     # Installing uv:
     - curl -LsSf https://astral.sh/uv/install.sh | sh
