@@ -604,19 +604,19 @@ dev = [
     { name = "pytest-cookies", specifier = ">=0.7,<1.0" },
     { name = "pytest-randomly", specifier = ">=4.1.0,<5.0" },
     { name = "ruff", specifier = ">=0.15.12,<1.0" },
-    { name = "wemake-python-styleguide", specifier = ">=1.6,<2.0" },
+    { name = "wemake-python-styleguide", specifier = ">=1.6.2,<2.0" },
 ]
 
 [[package]]
 name = "wemake-python-styleguide"
-version = "1.6.1"
+version = "1.6.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "attrs" },
     { name = "flake8" },
     { name = "pygments" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/b3/b3/3ade9b1595052bf15b94bedd458768b596de02d701075ba87e95b5d6b392/wemake_python_styleguide-1.6.1.tar.gz", hash = "sha256:72eb81dc421dde9f32ce1f67b25d1a13060c264bac12857897b582f83e6bbdbf", size = 158266, upload-time = "2026-02-28T18:55:54.801Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/78/eb/c0ed67f144c6b5426cd444ccd22a22da4971e50a345c84bae187d1bfce27/wemake_python_styleguide-1.6.2.tar.gz", hash = "sha256:59c7d52b0677519aeb49714fca558eb93f278d8a7e18eadead455db8620ceb2f", size = 158636, upload-time = "2026-04-27T05:51:41.03Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/e1/75/fb15010739383946c532f157836bb3ca826f0252333a07f60743999a7799/wemake_python_styleguide-1.6.1-py3-none-any.whl", hash = "sha256:799690b3654e9eb6db4bf021053c64f907eff9845646a634e22f89a34c3b6ef0", size = 221563, upload-time = "2026-02-28T18:55:56.336Z" },
+    { url = "https://files.pythonhosted.org/packages/7c/0c/c77f5bbb2e018d80916442022609cfbbfaa88a9579724f5332cf4a66e57c/wemake_python_styleguide-1.6.2-py3-none-any.whl", hash = "sha256:857690cb0e36132e7b3b5d339a11714014d539634ed27cf04cf08107f1c347cb", size = 221687, upload-time = "2026-04-27T05:51:42.481Z" },
 ]
