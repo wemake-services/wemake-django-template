@@ -19,7 +19,7 @@ services:
       - postgres-net
     env_file: ./config/.env
     healthcheck:
-      test: pg_isready
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
       interval: 5s
       timeout: 30s
       retries: 5
