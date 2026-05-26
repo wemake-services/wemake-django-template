@@ -22,7 +22,6 @@ dependencies = [
   "gunicorn>=25.0,<26.0",
   "python-decouple>=3.8,<4.0",
   "structlog>=25.4,<26.0",
-  "wheel>=0.46,<1.0",
   "punq>=0.7,<1.0",
 ]
 
@@ -61,6 +60,7 @@ dev = [
   "dennis>=1.1,<2.0",
   "dump-env>=1.5,<2.0",
   "ipython>=9.5,<10.0",
+  "deptry>=0.25,<1.0",
 ]
 
 docs = [
@@ -269,3 +269,31 @@ ignore_errors = true
 # Docs: https://github.com/typeddjango/django-stubs
 django_settings_module = "server.settings"
 strict_settings = false
+
+
+# Deptry: https://deptry.com/usage/
+[tool.deptry]
+# Local application package; imports like `from server...` are first-party.
+known_first_party = ["server"]
+
+[tool.deptry.per_rule_ignores]
+# Used via Django settings / deploy
+DEP002 = [
+  "django-axes",               # INSTALLED_APPS, middleware, auth backend
+  "django-cors-headers",       # INSTALLED_APPS + middleware via dotted path
+  "django-permissions-policy", # Permissions-Policy middleware (dotted path)
+  "psycopg2-binary",           # PostgreSQL driver for `ENGINE = postgresql`
+  "gunicorn",                  # production WSGI/ASGI process (docker/, CI)
+  "uvicorn",                   # ASGI worker backend
+  "uvicorn-worker",            # Gunicorn worker class for uvicorn
+]
+# Imported directly but pulled in only as transitive deps
+DEP003 = [
+  "attrs",      # imported directly, provided transitively via django-modern-rest extra
+  "msgspec",    # DTOs (also via django-modern-rest extra)
+  "pydantic",   # payloads/schemas (also via django-modern-rest extra)
+]
+# Dev dependencies referenced from application code
+DEP004 = [
+  "debug_toolbar",     # DEBUG urls/settings
+]
