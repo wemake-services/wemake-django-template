@@ -117,9 +117,10 @@ release-image:
   script:
     # Building the image itself:
     - docker compose
+      --progress=plain
       -f docker-compose.yml
       -f docker/docker-compose.prod.yml
-      build --progress=plain web
+      build --build-arg BUILDKIT_INLINE_CACHE=1 web
     - docker push "${IMAGE_FULL_NAME}:latest"
   only:
     - master
