@@ -24,11 +24,11 @@ This is a default option for older and more complicated projects.
 Dependencies
 ------------
 
-We use ``uv`` to manage dependencies.
+We use ``poetry`` to manage dependencies.
 So, please do not use ``virtualenv`` or ``pip`` directly.
 Before going any further, please,
-take a moment to read the `official documentation <https://docs.astral.sh/uv/>`_
-about ``uv`` to know some basics.
+take a moment to read the `official documentation <https://python-poetry.org/docs/>`_
+about ``poetry`` to know some basics.
 
 If you are using ``docker`` then prepend ``docker compose run --rm web``
 before any of those commands to execute them.
@@ -43,51 +43,66 @@ Installing dependencies
 You do not need to run any of these commands for ``docker`` based development,
 since it is already executed inside ``Dockerfile``.
 
-Please, note that ``uv`` will automatically create a ``.venv`` for
+Please, note that ``poetry`` will automatically create a ``virtualenv`` for
 this project. It will use your current ``python`` version.
 To install all existing dependencies run:
 
 .. code:: bash
 
-  uv sync
+  poetry install
 
 To install dependencies for production use, you will need to run:
 
 .. code:: bash
 
-  uv sync --no-dev
+  poetry install --only=main
 
 To install all dependencies, including docs:
 
 .. code:: bash
 
-  uv sync --group docs
+  poetry install --with=docs
 
-And to activate ``virtualenv`` created by ``uv`` run:
+And to activate ``virtualenv`` created by ``poetry`` run:
 
 .. code:: bash
 
-  . .venv/bin/activate
+  poetry shell
 
 Adding new dependencies
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 To add a new dependency you can run:
 
-- ``uv add django`` to install ``django`` as a production dependency
-- ``uv add --group dev pytest`` to install ``pytest``
+- ``poetry add django`` to install ``django`` as a production dependency
+- ``poetry add -G dev pytest`` to install ``pytest``
   as a development dependency
-- ``uv add --group docs some-sphinx-plugin`` to install ``some-sphinx-plugin``
+- ``poetry add -G docs some-sphinx-plugin`` to install ``some-sphinx-plugin``
   as a documentation dependency
 
 This command might be used with ``docker``.
 
-Updating uv version
-~~~~~~~~~~~~~~~~~~~~
+Updating poetry version
+~~~~~~~~~~~~~~~~~~~~~~~
 
-The ``uv`` version is pinned in ``docker/django/Dockerfile``
-via the ``COPY --from=ghcr.io/astral-sh/uv:<version>`` directive.
-When you want to update ``uv``, bump the version tag there.
+Package managers should also be pinned very strictly.
+We had a lot of problems in production
+because we were not pinning package manager versions.
+
+This can result in broken ``lock`` files, inconsistent installation process,
+bizarre bugs, and missing packages. You do not want to experience that!
+
+How can we have the same ``poetry`` version for all users in a project?
+That's where ``[build-system]`` tag shines. It specifies the exact version of
+your ``poetry`` installation that must be used for the project.
+Version mismatch will fail your build.
+
+When you want to update ``poetry``, you have to bump it in several places:
+
+1. ``pyproject.toml``
+2. ``docker/django/Dockerfile``
+
+Then you are fine!
 
 
 Development with docker
@@ -110,7 +125,7 @@ we use ``docker compose run`` to run scripts inside docker.
 
 What do you need to know about it?
 
-1. You can run anything you want: ``uv``, ``python``, ``sh``, etc
+1. You can run anything you want: ``poetry``, ``python``, ``sh``, etc
 2. Most likely it will have a permanent effect, due to ``docker volumes``
 3. You need to use ``--rm`` to automatically remove this container afterward
 
@@ -124,7 +139,7 @@ need to configure it properly,
 see :ref:`django` section for more information.
 
 **Note**, that you will need to activate ``virtualenv`` created
-by ``uv`` before running any of these commands.
+by ``poetry`` before running any of these commands.
 **Note**, that you only need to run these commands once per project.
 
 Local database

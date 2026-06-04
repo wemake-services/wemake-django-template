@@ -35,9 +35,9 @@ We use strong algorithms for password hashing:
 Dependencies
 ------------
 
-We use `uv <https://docs.astral.sh/uv/>`_ which ensures
-that all the dependencies hashes match during the installation process
-via the ``uv.lock`` file.
+We use `poetry <https://python-poetry.org/>`_ which ensures
+that all the dependencies hashes match during the installation process.
+Otherwise, the build will fail.
 So, it is almost impossible to replace an already existing package
 with a malicious one.
 

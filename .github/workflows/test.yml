@@ -14,7 +14,8 @@ concurrency:
 permissions:
   contents: read
 
-env:
+env:  # Keep in sync with `POETRY_VERSION` in `Dockerfile`
+  POETRY_VERSION: "2.3.2"
   PYTHON_VERSION: "3.13"
 
 jobs:
@@ -31,14 +32,18 @@ jobs:
       with:
         python-version: ${{ env.PYTHON_VERSION }}
 
-    - name: Install uv
-      uses: astral-sh/setup-uv@v8.1.0
+    - name: Install poetry
+      run: |
+        curl -sSL 'https://install.python-poetry.org' | python -
+
+        # Adding `poetry` to `$PATH`:
+        echo "$HOME/.local/bin" >> "$GITHUB_PATH"
 
     - name: Install dependencies
-      run: uv sync
+      run: poetry install
 
     - name: Run template's tests
-      run: uv run bash tests/test_github.sh
+      run: poetry run bash tests/test_github.sh
 
   test-internal:
     runs-on: ubuntu-latest
@@ -53,18 +58,24 @@ jobs:
       with:
         python-version: ${{ env.PYTHON_VERSION }}
 
-    - name: Install uv
-      uses: astral-sh/setup-uv@v8.1.0
+    - name: Install poetry
+      run: |
+        curl -sSL 'https://install.python-poetry.org' | python -
+
+        # Adding `poetry` to `$PATH`:
+        echo "$HOME/.local/bin" >> "$GITHUB_PATH"
 
     - name: Install dependencies
-      run: uv sync
+      run: |
+        poetry config virtualenvs.in-project true
+        poetry install
 
     - name: Run internal project checks
       run: |
-        uv run ruff check --exit-non-zero-on-fix --diff
-        uv run ruff format --check --diff
-        uv run flake8 .
-        uv run mypy .
-        uv run pytest
-        uv lock --check
-        uv run pip check
+        poetry run ruff check --exit-non-zero-on-fix --diff
+        poetry run ruff format --check --diff
+        poetry run flake8 .
+        poetry run mypy .
+        poetry run pytest
+        poetry check
+        poetry run pip check

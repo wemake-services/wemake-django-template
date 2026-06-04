@@ -1,40 +1,28 @@
 version: 2
 updates:
-- package-ecosystem: uv
-  directories:
-    - "/\\{\\{cookiecutter.project_name\\}\\}"
-  schedule:
-    interval: daily
-    time: "02:00"
-  open-pull-requests-limit: 10
-  cooldown:
-    default-days: 7
+  - package-ecosystem: pip
+    directory: "/{{cookiecutter.project_name}}"
+    schedule:
+      interval: daily
+      time: "02:00"
+    open-pull-requests-limit: 10
+    cooldown:
+      default-days: 7
 
-- package-ecosystem: uv
-  directory: "/"
-  schedule:
-    interval: daily
-    time: "02:00"
-  open-pull-requests-limit: 10
-  cooldown:
-    default-days: 7
+  - package-ecosystem: pip
+    directory: "/{{cookiecutter.project_name}}/docker/django"
+    schedule:
+      interval: daily
+      time: "02:00"
+    open-pull-requests-limit: 10
+    cooldown:
+      default-days: 7
 
-- package-ecosystem: docker
-  directories:
-    - "/\\{\\{cookiecutter.project_name\\}\\}/docker/django"
-    - "/\\{\\{cookiecutter.project_name\\}\\}/docker/caddy"
-  schedule:
-    interval: daily
-    time: "02:00"
-  open-pull-requests-limit: 10
-  cooldown:
-    default-days: 7
-
-- package-ecosystem: github-actions
-  directory: "/"
-  schedule:
-    interval: daily
-    time: "02:00"
-  open-pull-requests-limit: 10
-  cooldown:
-    default-days: 7
+  - package-ecosystem: pip
+    directory: "/"
+    schedule:
+      interval: daily
+      time: "02:00"
+    open-pull-requests-limit: 10
+    cooldown:
+      default-days: 7

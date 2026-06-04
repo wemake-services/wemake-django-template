@@ -23,7 +23,7 @@ You will need:
 
 When developing locally, we use:
 
-- [`uv`](https://github.com/astral-sh/uv) (**required**)
+- [`poetry`](https://github.com/python-poetry/poetry) (**required**)
 - [`pyenv`](https://github.com/pyenv/pyenv)
 
 

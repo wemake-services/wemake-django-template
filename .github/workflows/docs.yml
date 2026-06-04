@@ -34,14 +34,18 @@ jobs:
       with:
         python-version: '3.13.13'
 
-    - name: Install uv
-      uses: astral-sh/setup-uv@v8.1.0
+    - name: Install poetry
+      run: |
+        curl -sSL 'https://install.python-poetry.org' | python -
+
+        # Adding `poetry` to `$PATH`:
+        echo "$HOME/.local/bin" >> "$GITHUB_PATH"
 
     - name: Install dependencies
-      run: uv sync
+      run: poetry install
 
     - name: Build docs
-      run: uv run bash tests/build_docs.sh
+      run: poetry run bash tests/build_docs.sh
 
     - name: Deploy to Pages
       uses: JamesIves/github-pages-deploy-action@v4.8.0

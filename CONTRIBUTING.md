@@ -7,15 +7,15 @@ using this template.
 
 ## Dependencies
 
-We use `uv` to manage the [dependencies](https://github.com/astral-sh/uv).
+We use `poetry` to manage the [dependencies](https://github.com/python-poetry/poetry).
 
-To install them you would need to run `sync` command:
+To install them you would need to run `install` command:
 
 ```bash
-uv sync
+poetry install
 ```
 
-To activate your `virtualenv` run `. .venv/bin/activate`.
+To activate your `virtualenv` run `poetry shell`.
 
 
 ## Linting
