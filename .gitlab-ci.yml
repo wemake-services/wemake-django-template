@@ -24,7 +24,7 @@ mirror-github-build:
   stage: build
   image: python:3.13.13
   variables:
-    POETRY_VERSION: '2.3.2'
+    POETRY_VERSION: '2.4.1'
   before_script:
     # Installing poetry:
     - curl -sSL 'https://install.python-poetry.org' | python -
