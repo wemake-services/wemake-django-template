@@ -23,14 +23,16 @@ include:
 mirror-github-build:
   stage: build
   image: python:3.13.13
+  variables:
+    POETRY_VERSION: '2.4.1'
   before_script:
-    # Installing uv:
-    - curl -LsSf https://astral.sh/uv/install.sh | sh
+    # Installing poetry:
+    - curl -sSL 'https://install.python-poetry.org' | python -
     - export PATH="$HOME/.local/bin:$PATH"
     # Installing dependencies:
-    - uv sync --no-dev
+    - poetry install --no-dev
   script:
-    - uv run bash tests/test_gitlab.sh
+    - poetry run bash tests/test_gitlab.sh
   only:
     - master
     - external_pull_requests

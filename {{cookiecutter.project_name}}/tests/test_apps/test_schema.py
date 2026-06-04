@@ -1,5 +1,6 @@
 import logging
 from collections.abc import Iterator
+from typing import Any
 
 import pytest
 import schemathesis as st
@@ -36,6 +37,6 @@ schema = st.pytest.from_fixture('api_schema')
 
 @pytest.mark.timeout(60)  # increase the default timeout for this test
 @schema.parametrize()
-def test_schemathesis(settings: LazySettings, *, case: st.Case) -> None:
+def test_schemathesis(settings: LazySettings, *, case: st.Case[Any]) -> None:
     """Ensure that API implementation matches the OpenAPI schema."""
     case.call_and_validate()

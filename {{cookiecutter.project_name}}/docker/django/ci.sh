@@ -80,8 +80,8 @@ run_ci () {
   # Checking unused or missing dependencies:
   deptry .
 
-  # Checking that `uv.lock` is up-to-date with `pyproject.toml`:
-  uv lock --check
+  # Checking `pyproject.toml` file contents:
+  poetry check
 
   # Checking dependencies status:
   pip check

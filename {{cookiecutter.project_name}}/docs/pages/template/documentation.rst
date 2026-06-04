@@ -23,7 +23,7 @@ To install them use:
 
 .. code:: bash
 
-  uv sync --group docs
+  poetry install --with=docs
 
 
 Structure

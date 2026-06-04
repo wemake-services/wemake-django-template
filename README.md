@@ -25,7 +25,7 @@ Just like `django-admin.py startproject` but better.
 - Always [`up-to-date`](https://github.com/wemake-services/wemake-django-template/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Aapp%2Fdependabot) with the help of [`@dependabot`](https://dependabot.com/)
 - Supports latest `python3.13`
 - [`django-modern-rest`](https://github.com/wemake-services/django-modern-rest) for building APIs
-- [`uv`](https://github.com/astral-sh/uv) for managing dependencies
+- [`poetry@2`](https://github.com/python-poetry/poetry) for managing dependencies
 - [`mypy`](https://mypy.readthedocs.io) and [`django-stubs`](https://github.com/typeddjango/django-stubs) for static typing
 - [`pytest`](https://pytest.org/) and [`hypothesis`](https://github.com/HypothesisWorks/hypothesis) for unit tests
 - [`ruff`](https://docs.astral.sh/ruff) and [`wemake-python-styleguide`](https://wemake-python-styleguide.readthedocs.io/en/latest/) for linting
@@ -39,15 +39,7 @@ Just like `django-admin.py startproject` but better.
 
 Firstly, you will need to install [dependencies](https://cookiecutter.readthedocs.io/en/latest/).
 
-The recommended way is via [`uvx`](https://docs.astral.sh/uv/guides/tools):
-
-```bash
-uvx --with jinja2-git cookiecutter gh:wemake-services/wemake-django-template
-```
-
----
-
-Or via [`pipx`](https://github.com/pypa/pipx):
+The recommended way is via [`pipx`](https://github.com/pypa/pipx):
 
 ```bash
 pipx install cookiecutter
