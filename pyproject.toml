@@ -6,6 +6,7 @@ requires-python = ">=3.13,<3.14"
 readme = "README.md"
 authors = [
   { name = "Nikita Sobolev", email = "mail@sobolevn.me" },
+  { name = "Alexander Kondratev", email = "mail@kondratev.dev" },
 ]
 license = "MIT"
 dynamic = ["dependencies", "classifiers"]
