@@ -77,7 +77,7 @@ optional = true
 
 [tool.poetry.group.docs.dependencies]
 sphinx = "^9.1"
-sphinx-autodoc-typehints = "^4.0"
+sphinx-autodoc-typehints = "^3.10"
 myst-parser = "^5.0"
 furo = "^2025.12"
 
