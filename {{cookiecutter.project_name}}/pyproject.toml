@@ -31,7 +31,7 @@ django-stubs-ext = "^6.0"
 django-modern-rest = { version = "^0.10.0", extras = ["msgspec", "pydantic", "attrs", "jwt", "openapi"] }
 
 psycopg2-binary = "^2.9"
-gunicorn = "^25.0"
+gunicorn = "^26.0"
 python-decouple = "^3.8"
 structlog = "^25.4"
 punq = "^0.7"
