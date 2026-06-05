@@ -967,19 +967,15 @@ testing = ["coverage", "pytest", "pytest-cov", "pytest-django", "pytest-randomly
 
 [[package]]
 name = "django-extra-checks"
-version = "0.16.1"
+version = "0.17.0"
 description = "Collection of useful checks for Django Checks Framework"
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.10"
 groups = ["dev"]
 files = [
-    {file = "django_extra_checks-0.16.1-py3-none-any.whl", hash = "sha256:bd23455585e96ad5bb07120bd09a40ecf1ff7e2f9827a7fd66b2c1314e22c946"},
-    {file = "django_extra_checks-0.16.1.tar.gz", hash = "sha256:10a4e5a6d2cb8de6e3f4bbc708a5e1f7c7ed5bb2b5f74e531d9014db2282889b"},
+    {file = "django_extra_checks-0.17.0-py3-none-any.whl", hash = "sha256:f41e2e4455e5467aa9b3e28500d4d140b9fb9eedf5e42e0fb71498846813608a"},
+    {file = "django_extra_checks-0.17.0.tar.gz", hash = "sha256:619f79f37de23931d08539ed97b2b945c2887c73f753eccc98544ffd3f7d3e60"},
 ]
-
-[package.extras]
-dev = ["django", "django-stubs", "djangorestframework", "djangorestframework-stubs", "mypy", "pdbpp", "pre-commit", "ruff"]
-test = ["pytest", "pytest-cov", "pytest-django"]
 
 [[package]]
 name = "django-health-check"
@@ -4629,4 +4625,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "ruff", "sph
 [metadata]
 lock-version = "2.1"
 python-versions = "==3.13.13"
-content-hash = "942f574522fc94fdb5842929ff29373f02c3dfc244a033f324d6b08d9c8c3ce5"
+content-hash = "46d882bc9943a0e49c266ecfac7744392dfe2fc324762c7eb1637bbab6296123"
