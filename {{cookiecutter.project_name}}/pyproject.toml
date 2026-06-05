@@ -41,7 +41,7 @@ django-debug-toolbar = "^6.0"
 django-migration-linter = "^6.0"
 django-safe-migrations = "^0.6"
 django-extra-checks = "^0.16"
-django-query-counter = "^0.5"
+django-query-counter = "^0.6"
 django-zeal = "^2.0"
 django-drifter = "^0.1"
 
