@@ -1,7 +1,8 @@
 version: 2
 updates:
   - package-ecosystem: pip
-    directory: "/{{cookiecutter.project_name}}"
+    directories:
+      - "/\\{\\{cookiecutter.project_name\\}\\}"
     schedule:
       interval: daily
       time: "02:00"
@@ -10,7 +11,7 @@ updates:
       default-days: 7
 
   - package-ecosystem: pip
-    directory: "/{{cookiecutter.project_name}}/docker/django"
+    directory: "/"
     schedule:
       interval: daily
       time: "02:00"
@@ -18,7 +19,18 @@ updates:
     cooldown:
       default-days: 7
 
-  - package-ecosystem: pip
+  - package-ecosystem: docker
+    directories:
+      - "/\\{\\{cookiecutter.project_name\\}\\}/docker/django"
+      - "/\\{\\{cookiecutter.project_name\\}\\}/docker/caddy"
+    schedule:
+      interval: daily
+      time: "02:00"
+    open-pull-requests-limit: 10
+    cooldown:
+      default-days: 7
+
+  - package-ecosystem: github-actions
     directory: "/"
     schedule:
       interval: daily
