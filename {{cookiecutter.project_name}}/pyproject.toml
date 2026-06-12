@@ -39,7 +39,7 @@ punq = "^0.7"
 [tool.poetry.group.dev.dependencies]
 django-debug-toolbar = "^6.0"
 django-migration-linter = "^6.0"
-django-safe-migrations = "^0.6"
+django-safe-migrations = "^0.7"
 django-extra-checks = "^0.17"
 django-query-counter = "^0.6"
 django-zeal = "^2.0"
