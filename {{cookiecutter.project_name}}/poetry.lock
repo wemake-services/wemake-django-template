@@ -1114,14 +1114,14 @@ tabulate = "*"
 
 [[package]]
 name = "django-safe-migrations"
-version = "0.6.3"
+version = "0.7.1"
 description = "Detect unsafe Django migrations before they break production"
 optional = false
 python-versions = ">=3.9"
 groups = ["dev"]
 files = [
-    {file = "django_safe_migrations-0.6.3-py3-none-any.whl", hash = "sha256:f103cd92b7e1973d423e9b53faba7cb68b4fa32dd9f7cceb9300824539565131"},
-    {file = "django_safe_migrations-0.6.3.tar.gz", hash = "sha256:648553ba8eea189373d14e8cd74bf20afce5671285b6e174cde8b83718a52287"},
+    {file = "django_safe_migrations-0.7.1-py3-none-any.whl", hash = "sha256:9be1cc93b2cd3c50defd7b21ae6fcda259e9e35a13d81d2a75d9da9c3d8f3555"},
+    {file = "django_safe_migrations-0.7.1.tar.gz", hash = "sha256:45548dfad05fccafb4c3b36ce076598bf11eb8f6c984f406bc020651b7688995"},
 ]
 
 [package.dependencies]
@@ -4624,4 +4624,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "ruff", "sph
 [metadata]
 lock-version = "2.1"
 python-versions = "==3.13.13"
-content-hash = "08d8eab5f9b8f73041f4f4abc45d726e0f32d04ee6970188e4c910e0a25fdca3"
+content-hash = "4857c7b21335dc2de8f22802894dcf452fa8f26aa11e81523a28976619092e48"
