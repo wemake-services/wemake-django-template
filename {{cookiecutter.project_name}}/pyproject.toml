@@ -69,7 +69,7 @@ import-linter = "^2.10"
 polint = "^0.5"
 dennis = "^1.1"
 dump-env = "^1.5"
-ipython = "^9.5"
+ipython = "^9.14"
 deptry = "^0.25"
 
 [tool.poetry.group.docs]
