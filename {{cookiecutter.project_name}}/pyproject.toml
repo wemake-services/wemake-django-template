@@ -33,7 +33,7 @@ django-modern-rest = { version = "^0.10.0", extras = ["msgspec", "pydantic", "at
 psycopg2-binary = "^2.9"
 gunicorn = "^26.0"
 python-decouple = "^3.8"
-structlog = "^25.4"
+structlog = "^26.1"
 punq = "^0.7"
 
 [tool.poetry.group.dev.dependencies]
