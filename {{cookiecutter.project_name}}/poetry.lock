@@ -3948,14 +3948,14 @@ typing-extensions = ">=4.7.1"
 
 [[package]]
 name = "schemathesis"
-version = "4.21.0"
+version = "4.21.1"
 description = "Adaptive API testing for OpenAPI and GraphQL"
 optional = false
 python-versions = ">=3.10"
 groups = ["dev"]
 files = [
-    {file = "schemathesis-4.21.0-py3-none-any.whl", hash = "sha256:b9ff765ff5c1c5a47a6503a23e5b5882ddea3019eda463c05ca11c4390423de8"},
-    {file = "schemathesis-4.21.0.tar.gz", hash = "sha256:38228318f94024cd1186b632761a2eaef21a4b22db73b6dbddd59cccb92643bb"},
+    {file = "schemathesis-4.21.1-py3-none-any.whl", hash = "sha256:ea28527fb56f0afeb04e24a92cd75ec4bb812c3d36e94b082a6df4ec26d4c2f6"},
+    {file = "schemathesis-4.21.1.tar.gz", hash = "sha256:58e1530d0fa8b9c96b65bc0952ffbc7dff61e2ca86b46156716fe471aefd28b0"},
 ]
 
 [package.dependencies]
@@ -4624,4 +4624,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "ruff", "sph
 [metadata]
 lock-version = "2.1"
 python-versions = "==3.13.13"
-content-hash = "0f5fe2ba02d2f950fa1e0efc14651d467c0e2ce11273cf1134ea5bc7a2eb38ec"
+content-hash = "00d725927e4e5465b4ea4b60b42a4960799ebe152171831019e4da24b9e18bf3"

@@ -57,7 +57,7 @@ pytest-randomly = "^4.0"
 pytest-timeout = "^2.3"
 django-test-migrations = "^1.5"
 hypothesis = "^6.155"
-schemathesis = "^4.15"
+schemathesis = "^4.21"
 
 django-stubs = { version = "^6.0,<6.1", extras = ["compatible-mypy"] }
 
