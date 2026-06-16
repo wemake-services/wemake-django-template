@@ -3948,14 +3948,14 @@ typing-extensions = ">=4.7.1"
 
 [[package]]
 name = "schemathesis"
-version = "4.21.1"
+version = "4.21.2"
 description = "Adaptive API testing for OpenAPI and GraphQL"
 optional = false
 python-versions = ">=3.10"
 groups = ["dev"]
 files = [
-    {file = "schemathesis-4.21.1-py3-none-any.whl", hash = "sha256:ea28527fb56f0afeb04e24a92cd75ec4bb812c3d36e94b082a6df4ec26d4c2f6"},
-    {file = "schemathesis-4.21.1.tar.gz", hash = "sha256:58e1530d0fa8b9c96b65bc0952ffbc7dff61e2ca86b46156716fe471aefd28b0"},
+    {file = "schemathesis-4.21.2-py3-none-any.whl", hash = "sha256:3b7652c1924d2e97df8fcba42f990296dddb736173d4e1d1eec5dd3cb25d624e"},
+    {file = "schemathesis-4.21.2.tar.gz", hash = "sha256:ebbb34db29a07f932888857bd84ecd8c71962c063ccf8bc22f5369d3a7fba5b1"},
 ]
 
 [package.dependencies]
