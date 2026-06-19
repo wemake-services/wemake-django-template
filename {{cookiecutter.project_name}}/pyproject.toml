@@ -154,6 +154,7 @@ ignore = [
   "PLR6301", # do not require classmethod / staticmethod when self not used
   "RUF067",  # wps handles `__init__.py` logic better
   "TRY003",  # long exception messages from `tryceratops`
+  "RUF076",  # `autouse=True` is a valid pattern
 ]
 external = ["WPS"]
 
