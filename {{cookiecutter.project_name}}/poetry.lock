@@ -1083,14 +1083,14 @@ pydantic = ["pydantic-extra-types", "pydantic[email,timezone] (>=2.12)"]
 
 [[package]]
 name = "django-permissions-policy"
-version = "4.30.0"
+version = "4.31.0"
 description = "Set the Permissions-Policy HTTP header on your Django app."
 optional = false
 python-versions = ">=3.10"
 groups = ["main"]
 files = [
-    {file = "django_permissions_policy-4.30.0-py3-none-any.whl", hash = "sha256:c391423db4ab8ba513b7f963718d651cce3733617765e53441d71d6e43a9bc82"},
-    {file = "django_permissions_policy-4.30.0.tar.gz", hash = "sha256:fa43b89fbe6b09b61b1e0bd833a114dfc453dce1751ed8a63fcb3918ff1d3a30"},
+    {file = "django_permissions_policy-4.31.0-py3-none-any.whl", hash = "sha256:b8d874394dcc91b10d501378604bf4492e56c6fe8116d41a31f4a8918041b2e2"},
+    {file = "django_permissions_policy-4.31.0.tar.gz", hash = "sha256:58dbe0d3eeed58894ca90ae59eb0e4453271f3197555bd73f80399fbd80edf02"},
 ]
 
 [package.dependencies]
@@ -4624,4 +4624,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "ruff", "sph
 [metadata]
 lock-version = "2.1"
 python-versions = "==3.13.13"
-content-hash = "524a569aa9567c89427bfd8a6b6c60e8efc64daaec693f435ff34b309fd12595"
+content-hash = "7a07995a120c9f12e4dfc2e0f4c6d3f0a5e943166e37c2189efd31984a7c6d24"
