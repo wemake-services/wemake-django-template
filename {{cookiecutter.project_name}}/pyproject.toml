@@ -48,7 +48,7 @@ django-drifter = "^0.1"
 wemake-python-styleguide = "^1.6"
 ruff = "^0.15"
 
-pytest = "^9.0"
+pytest = "^9.1"
 pytest-django = "^4.9"
 pytest-cov = "^7.1"
 covdefaults = "^2.3"
