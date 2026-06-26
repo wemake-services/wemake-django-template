@@ -37,7 +37,7 @@ structlog = "^26.1"
 punq = "^0.7"
 
 [tool.poetry.group.dev.dependencies]
-django-debug-toolbar = "^6.0"
+django-debug-toolbar = "^7.0"
 django-migration-linter = "^6.0"
 django-safe-migrations = "^0.7"
 django-extra-checks = "^0.17"
