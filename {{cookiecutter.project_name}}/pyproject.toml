@@ -1,5 +1,5 @@
 [project]
-name = "server"
+name = "{{ cookiecutter.project_name }}"
 description = "{{ cookiecutter.project_verbose_name }}"
 version = "0.1.0"
 requires-python = "==3.13.13"
@@ -34,7 +34,7 @@ psycopg2-binary = "^2.9"
 gunicorn = "^26.0"
 python-decouple = "^3.8"
 structlog = "^26.1"
-punq = "^0.7"
+punq = "^0.8"
 
 [tool.poetry.group.dev.dependencies]
 django-debug-toolbar = "^7.0"
