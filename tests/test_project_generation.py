@@ -81,7 +81,7 @@ def test_pyproject_toml(
     project = pyproject['project']
     poetry = pyproject['tool']['poetry']
 
-    assert project['name'] == 'server'
+    assert project['name'] == context['project_name']
     assert project['description'] == context['project_verbose_name']
     assert poetry
 

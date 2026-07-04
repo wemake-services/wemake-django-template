@@ -22,4 +22,4 @@ class HasContainer:
     @final
     def resolve[Thing](self, thing: type[Thing]) -> Thing:
         """Resolve a dependency."""
-        return self._container.resolve(thing)  # type: ignore[no-any-return]
+        return self._container.resolve(thing)

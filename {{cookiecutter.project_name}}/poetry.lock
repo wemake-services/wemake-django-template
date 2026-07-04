@@ -572,7 +572,7 @@ files = [
     {file = "colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6"},
     {file = "colorama-0.4.6.tar.gz", hash = "sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44"},
 ]
-markers = {dev = "platform_system == \"Windows\" or sys_platform == \"win32\"", docs = "sys_platform == \"win32\""}
+markers = {dev = "sys_platform == \"win32\" or platform_system == \"Windows\"", docs = "sys_platform == \"win32\""}
 
 [[package]]
 name = "covdefaults"
@@ -2970,15 +2970,18 @@ files = [
 
 [[package]]
 name = "punq"
-version = "0.7.0"
-description = "An IOC Container for Python 3.8+"
+version = "0.8.0"
+description = "An IOC Container for Python 3.10+"
 optional = false
-python-versions = ">=3.8.1,<4.0"
+python-versions = "<4.0,>=3.10"
 groups = ["main"]
 files = [
-    {file = "punq-0.7.0-py3-none-any.whl", hash = "sha256:7e0aca446c36a73674ec3fc078ec5e90e7a172ee349537d075ff20d73c3b1810"},
-    {file = "punq-0.7.0.tar.gz", hash = "sha256:bb7a6cc75a2e7d51b861b0e11f4830a12617b3ee33dbced9ce2be6a98ba39d63"},
+    {file = "punq-0.8.0-py3-none-any.whl", hash = "sha256:1f34dee67f26bd5ea7f4dfeee11b22aa1a19c634421262a07f2b51a9dc8e2c41"},
+    {file = "punq-0.8.0.tar.gz", hash = "sha256:efc5308e5b027a466449389ea5b1e9fcfd5eb65495bcb766e3f725a9d6db9998"},
 ]
+
+[package.dependencies]
+typing-extensions = ">=4.16.0"
 
 [[package]]
 name = "pure-eval"
@@ -4499,14 +4502,14 @@ files = [
 
 [[package]]
 name = "typing-extensions"
-version = "4.15.0"
+version = "4.16.0"
 description = "Backported and Experimental Type Hints for Python 3.9+"
 optional = false
 python-versions = ">=3.9"
 groups = ["main", "dev", "docs"]
 files = [
-    {file = "typing_extensions-4.15.0-py3-none-any.whl", hash = "sha256:f0fa19c6845758ab08074a0cfa8b7aecb71c999ca73d62883bc25cc018c4e548"},
-    {file = "typing_extensions-4.15.0.tar.gz", hash = "sha256:0cea48d173cc12fa28ecabc3b837ea3cf6f38c6d1136f85cbaaf598984861466"},
+    {file = "typing_extensions-4.16.0-py3-none-any.whl", hash = "sha256:481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8"},
+    {file = "typing_extensions-4.16.0.tar.gz", hash = "sha256:dc983d19a509c94dba722ee6abd33940f7c05a89e243c47e907eb4db6f1a43e5"},
 ]
 
 [[package]]
@@ -4624,4 +4627,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "ruff", "sph
 [metadata]
 lock-version = "2.1"
 python-versions = "==3.13.13"
-content-hash = "8f30adfec05f4742732caf56914b6423491764c2fb097bafb8ad14a251901c25"
+content-hash = "faeb211d62f5d94979b1a3691a557743a0b98d27a5811ac63e41e8b7dffefddc"
