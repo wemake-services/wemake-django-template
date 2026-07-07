@@ -1,8 +1,7 @@
+import importlib
 from typing import Any, final
 
 import punq
-
-from server import implemented
 
 
 class HasContainer:
@@ -17,6 +16,7 @@ class HasContainer:
     def __init__(self, *args: Any, **kwargs: Any) -> None:
         """Create container with dependencies for this class."""
         super().__init__(*args, **kwargs)
+        implemented = importlib.import_module('server.implemented')
         self._container = implemented.populate_dependencies(punq.Container())
 
     @final
