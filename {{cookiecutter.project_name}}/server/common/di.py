@@ -16,6 +16,9 @@ class HasContainer:
     def __init__(self, *args: Any, **kwargs: Any) -> None:
         """Create container with dependencies for this class."""
         super().__init__(*args, **kwargs)
+        # Imported lazily so `server.common` does not statically depend on
+        # the project-wide DI bootstrap. This also preserves Import Linter
+        # app-independence checks.
         implemented = importlib.import_module('server.implemented')
         self._container = implemented.populate_dependencies(punq.Container())
 
