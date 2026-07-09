@@ -93,13 +93,6 @@ DATABASES = {
 # https://docs.djangoproject.com/en/6.0/ref/settings/#default-auto-field
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
-# Cors headers Settings
-CORS_ALLOWED_ORIGINS = [
-    config('FRONTEND_URL', default='http://localhost:3000'),
-]
-
-CORS_ALLOWED_CREDENTIALS = True
-
 # Internationalization
 # https://docs.djangoproject.com/en/6.0/topics/i18n/
 
