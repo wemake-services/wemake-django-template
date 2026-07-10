@@ -32,9 +32,9 @@ def test_blog_post_get(dmr_client: DMRClient, blog_post: BlogPost) -> None:
         )
 
     assert response.status_code == HTTPStatus.OK
-    assert snap == snapshot(
-        ['SELECT ... FROM main_blogpost WHERE ... LIMIT ...']
-    )
+    assert snap == snapshot([
+        'SELECT ... FROM main_blogpost WHERE ... LIMIT ...',
+    ])
     msgspec.convert(response.json(), type=BlogPostFullPayload)
 
 

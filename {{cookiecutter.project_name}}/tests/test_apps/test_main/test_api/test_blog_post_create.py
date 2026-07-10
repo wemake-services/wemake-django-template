@@ -31,8 +31,8 @@ def test_blog_post_create(dmr_client: DMRClient) -> None:
         )
 
     assert response.status_code == HTTPStatus.CREATED
-    assert snap == snapshot(
-        ['INSERT INTO main_blogpost (...) VALUES (...) RETURNING ...']
-    )
+    assert snap == snapshot([
+        'INSERT INTO main_blogpost (...) VALUES (...) RETURNING ...',
+    ])
     blog_post = msgspec.convert(response.json(), type=BlogPostFullPayload)
     BlogPost.objects.get(pk=blog_post.id)

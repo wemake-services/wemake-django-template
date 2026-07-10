@@ -89,9 +89,9 @@ After the first pytest run the snapshot will be updated in-place:
 
 .. code:: python
 
-      assert snap == snapshot(
-          ['SELECT ... FROM main_blogpost WHERE ... LIMIT ...']
-      )
+      assert snap == snapshot([
+          'SELECT ... FROM main_blogpost WHERE ... LIMIT ...',
+      ])
 
 When the expected output changes, update all snapshots with:
 
