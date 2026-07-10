@@ -5,6 +5,8 @@ import pytest
 from django.urls import reverse
 from dmr.test import DMRClient
 from faker import Faker
+from inline_snapshot import snapshot
+from inline_snapshot_django import snapshot_queries
 
 from server.apps.main.logic.value_objects import BlogPostFullPayload
 from server.apps.main.models import BlogPost
@@ -24,11 +26,15 @@ def blog_post(faker: Faker) -> BlogPost:
 @pytest.mark.django_db
 def test_blog_post_get(dmr_client: DMRClient, blog_post: BlogPost) -> None:
     """Ensures that blog posts can be fetched."""
-    response = dmr_client.get(
-        reverse('api:main:blog_post_get', kwargs={'id': blog_post.pk}),
-    )
+    with snapshot_queries() as snap:
+        response = dmr_client.get(
+            reverse('api:main:blog_post_get', kwargs={'id': blog_post.pk}),
+        )
 
     assert response.status_code == HTTPStatus.OK
+    assert snap == snapshot(
+        ['SELECT ... FROM main_blogpost WHERE ... LIMIT ...']
+    )
     msgspec.convert(response.json(), type=BlogPostFullPayload)
 
 
