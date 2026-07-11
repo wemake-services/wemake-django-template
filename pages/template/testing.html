@@ -289,6 +289,46 @@ what went wrong for tests that rely on random behavior</p></li>
 that take too long to finish, this way you can control test execution speed</p></li>
 </ul>
 </section>
+<section id="snapshot-testing">
+<h3>Snapshot testing<a class="headerlink" href="#snapshot-testing" title="Link to this heading">¶</a></h3>
+<p>We use <a class="reference external" href="https://github.com/15r10nk/inline-snapshot">inline-snapshot</a> to snapshot test values and
+<a class="reference external" href="https://github.com/15r10nk/inline-snapshot-django">inline-snapshot-django</a> to snapshot SQL queries directly in our test code.</p>
+<p>This works as an advanced form of Django’s <code class="docutils literal notranslate"><span class="pre">assertNumQueries</span></code>:
+it lets you see the actual query structure in your test and catch
+regressions like N+1 queries or unintended changes in SQL.</p>
+<p>To add snapshots to a test:</p>
+<ol class="arabic simple">
+<li><p>Wrap the code under test with <code class="docutils literal notranslate"><span class="pre">snapshot_queries()</span></code></p></li>
+<li><p>Assert the result against an empty <code class="docutils literal notranslate"><span class="pre">snapshot()</span></code></p></li>
+<li><p>Run the test — inline-snapshot fills in the captured queries automatically</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">inline_snapshot</span><span class="w"> </span><span class="kn">import</span> <span class="n">snapshot</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">inline_snapshot_django</span><span class="w"> </span><span class="kn">import</span> <span class="n">snapshot_queries</span>
+
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">django_db</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_blog_post_get</span><span class="p">(</span><span class="n">dmr_client</span><span class="p">:</span> <span class="n">DMRClient</span><span class="p">,</span> <span class="n">blog_post</span><span class="p">:</span> <span class="n">BlogPost</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Ensures that blog posts can be fetched.&quot;&quot;&quot;</span>
+    <span class="k">with</span> <span class="n">snapshot_queries</span><span class="p">()</span> <span class="k">as</span> <span class="n">snap</span><span class="p">:</span>  <span class="c1"># &lt;---- Capture queries.</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">dmr_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+            <span class="n">reverse</span><span class="p">(</span><span class="s1">&#39;api:main:blog_post_get&#39;</span><span class="p">,</span> <span class="n">kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="n">blog_post</span><span class="o">.</span><span class="n">pk</span><span class="p">}),</span>
+        <span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="n">HTTPStatus</span><span class="o">.</span><span class="n">OK</span>
+    <span class="k">assert</span> <span class="n">snap</span> <span class="o">==</span> <span class="n">snapshot</span><span class="p">()</span>  <span class="c1"># &lt;---- Write empty, first run fills it.</span>
+    <span class="n">msgspec</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">(),</span> <span class="nb">type</span><span class="o">=</span><span class="n">BlogPostFullPayload</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>After the first pytest run the snapshot will be updated in-place:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">snap</span> <span class="o">==</span> <span class="n">snapshot</span><span class="p">([</span>
+    <span class="s1">&#39;SELECT ... FROM main_blogpost WHERE ... LIMIT ...&#39;</span><span class="p">,</span>
+<span class="p">])</span>
+</pre></div>
+</div>
+<p>When the expected output changes, update all snapshots with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pytest<span class="w"> </span>--inline-snapshot<span class="o">=</span>fix
+</pre></div>
+</div>
+</section>
 <section id="tweaking-tests-performance">
 <h3>Tweaking tests performance<a class="headerlink" href="#tweaking-tests-performance" title="Link to this heading">¶</a></h3>
 <p>There are several options you can provide or remove to make your tests faster:</p>
@@ -398,6 +438,7 @@ if you don’t want to type your <code class="docutils literal notranslate"><spa
 <li><a class="reference internal" href="#">Testing</a><ul>
 <li><a class="reference internal" href="#id1">pytest</a><ul>
 <li><a class="reference internal" href="#plugins">Plugins</a></li>
+<li><a class="reference internal" href="#snapshot-testing">Snapshot testing</a></li>
 <li><a class="reference internal" href="#tweaking-tests-performance">Tweaking tests performance</a></li>
 </ul>
 </li>

@@ -52,6 +52,56 @@ Here's the full list of things we use:
 .. _pytest-randomly: https://github.com/pytest-dev/pytest-randomly
 .. _pytest-timeout: https://pypi.org/project/pytest-timeout
 
+Snapshot testing
+~~~~~~~~~~~~~~~~
+
+We use `inline-snapshot`_ to snapshot test values and
+`inline-snapshot-django`_ to snapshot SQL queries directly in our test code.
+
+This works as an advanced form of Django's ``assertNumQueries``:
+it lets you see the actual query structure in your test and catch
+regressions like N+1 queries or unintended changes in SQL.
+
+To add snapshots to a test:
+
+1. Wrap the code under test with ``snapshot_queries()``
+2. Assert the result against an empty ``snapshot()``
+3. Run the test — inline-snapshot fills in the captured queries automatically
+
+.. code:: python
+
+  from inline_snapshot import snapshot
+  from inline_snapshot_django import snapshot_queries
+
+  @pytest.mark.django_db
+  def test_blog_post_get(dmr_client: DMRClient, blog_post: BlogPost) -> None:
+      """Ensures that blog posts can be fetched."""
+      with snapshot_queries() as snap:  # <---- Capture queries.
+          response = dmr_client.get(
+              reverse('api:main:blog_post_get', kwargs={'id': blog_post.pk}),
+          )
+
+      assert response.status_code == HTTPStatus.OK
+      assert snap == snapshot()  # <---- Write empty, first run fills it.
+      msgspec.convert(response.json(), type=BlogPostFullPayload)
+
+After the first pytest run the snapshot will be updated in-place:
+
+.. code:: python
+
+      assert snap == snapshot([
+          'SELECT ... FROM main_blogpost WHERE ... LIMIT ...',
+      ])
+
+When the expected output changes, update all snapshots with:
+
+.. code:: bash
+
+  pytest --inline-snapshot=fix
+
+.. _inline-snapshot: https://github.com/15r10nk/inline-snapshot
+.. _inline-snapshot-django: https://github.com/15r10nk/inline-snapshot-django
+
 Tweaking tests performance
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
