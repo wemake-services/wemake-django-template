@@ -286,10 +286,10 @@ that all the dependencies hashes match during the installation process.
 Otherwise, the build will fail.
 So, it is almost impossible to replace an already existing package
 with a malicious one.</p>
-<p>We also use <a class="reference external" href="https://github.com/pyupio/safety">safety</a>
+<p>We also use <a class="reference external" href="https://github.com/pypa/pip-audit">pip-audit</a>
 to analyze vulnerable dependencies to prevent the build
 to go to the production with known unsafe dependencies.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>safety<span class="w"> </span>check
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip-audit<span class="w"> </span>--desc
 </pre></div>
 </div>
 <p>We also use <a class="reference external" href="https://help.github.com/articles/about-security-alerts-for-vulnerable-dependencies/">Github security alerts</a>
