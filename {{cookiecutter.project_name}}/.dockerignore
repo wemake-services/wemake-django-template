@@ -85,8 +85,8 @@ docker/docker-compose.prod.yml
 # import-linter:
 .import_linter_cache/
 
-# safety:
-.safety/
+# pip-audit:
+pip-audit-cache/
 
 # kira-release script
 release.config.js

@@ -75,7 +75,7 @@ run_ci () {
 
   # Generate a report about the state of dependencies' safety,
   # it is not blocking, because there are too many false positives:
-  safety check --full-report || true
+  pip-audit --desc || true
 
   # Checking unused or missing dependencies:
   deptry .

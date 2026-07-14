@@ -65,7 +65,7 @@ django-stubs = { version = "^6.0", extras = ["compatible-mypy"] }
 
 djangofmt = "^0.2"
 yamllint = "^1.35"
-safety = "^3.6"
+pip-audit = "^2.10"
 dotenv-linter = "^0.7"
 import-linter = "^2.12"
 polint = "^0.5"

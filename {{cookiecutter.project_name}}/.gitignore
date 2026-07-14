@@ -256,5 +256,5 @@ artifacts/
 # import-linter:
 .import_linter_cache/
 
-# safety:
-.safety/
+# pip-audit:
+pip-audit-cache/
