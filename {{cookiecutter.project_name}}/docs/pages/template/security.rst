@@ -41,13 +41,13 @@ Otherwise, the build will fail.
 So, it is almost impossible to replace an already existing package
 with a malicious one.
 
-We also use `safety <https://github.com/pyupio/safety>`_
+We also use `pip-audit <https://github.com/pypa/pip-audit>`_
 to analyze vulnerable dependencies to prevent the build
 to go to the production with known unsafe dependencies.
 
 .. code:: bash
 
-  safety check
+  pip-audit --desc
 
 We also use `Github security alerts <https://help.github.com/articles/about-security-alerts-for-vulnerable-dependencies/>`_
 for our main template repository.
