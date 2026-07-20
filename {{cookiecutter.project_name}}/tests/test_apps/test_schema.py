@@ -7,6 +7,8 @@ import schemathesis as st
 from django.conf import LazySettings
 from django.urls import reverse
 from schemathesis.specs.openapi.schemas import OpenApiSchema
+from tracecov import CoverageMap
+from tracecov.schemathesis import helpers
 
 from server.wsgi import application
 
@@ -37,6 +39,17 @@ schema = st.pytest.from_fixture('api_schema')
 
 @pytest.mark.timeout(60)  # increase the default timeout for this test
 @schema.parametrize()
-def test_schemathesis(settings: LazySettings, *, case: st.Case[Any]) -> None:
+def test_schemathesis(
+    settings: LazySettings,
+    tracecov_map: CoverageMap,
+    *,
+    case: st.Case[Any],
+) -> None:
     """Ensure that API implementation matches the OpenAPI schema."""
-    case.call_and_validate()
+    response = case.call_and_validate()
+    # Record interaction for `tracecov` report:
+    tracecov_map.record_schemathesis_interactions(
+        case.method,
+        case.operation.full_path,
+        [helpers.from_response(case.method, response)],
+    )

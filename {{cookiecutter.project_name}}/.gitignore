@@ -88,6 +88,8 @@ htmlcov/
 .cache
 nosetests.xml
 coverage.xml
+tracecov-report.md
+tracecov-report.html
 
 # Translations
 *.mo
