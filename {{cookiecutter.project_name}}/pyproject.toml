@@ -58,6 +58,7 @@ pytest-timeout = "^2.3"
 django-test-migrations = "^1.5"
 hypothesis = "^6.155"
 schemathesis = "^4.21"
+tracecov = "^0.23"
 inline-snapshot = "^0.34"
 inline-snapshot-django = "^1.4"
 
@@ -156,7 +157,6 @@ ignore = [
   "PLR6301", # do not require classmethod / staticmethod when self not used
   "RUF067",  # wps handles `__init__.py` logic better
   "TRY003",  # long exception messages from `tryceratops`
-  "RUF076",  # `autouse=True` is a valid pattern
 ]
 external = ["WPS"]
 
@@ -221,6 +221,15 @@ addopts = [
   "--cov-report=html",
   "--cov-report=xml",
   "--cov-fail-under=100",
+  # Tracecov:
+  "--tracecov-format=text,html,markdown",
+  "--tracecov-fail-under-operations=100",
+  "--tracecov-fail-under-examples=100",
+  "--tracecov-fail-under-parameters=100",
+  "--tracecov-fail-under-keywords=100",
+  # Framework-level responses like 406 and 422 are documented in OpenAPI,
+  # but they are not always reachable through regular Schemathesis input generation.
+  "--tracecov-fail-under-responses=50",
 ]
 
 # Fail on warnings:
