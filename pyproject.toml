@@ -114,6 +114,9 @@ ignore = [
   "PLR2004", # do not report magic numbers
   "PLR6301", # do not require classmethod / staticmethod when self not used
   "TRY003",  # long exception messages from `tryceratops`
+  "RUF105",  # we prefer `# noqa`, over `# ruff` comments
+  "RUF106",  #
+  "RUF201",  #
 ]
 external = [ "WPS" ]
 
