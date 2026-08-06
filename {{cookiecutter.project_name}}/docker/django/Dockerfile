@@ -91,6 +91,7 @@ RUN chmod +x '/docker-entrypoint.sh' \
   && sed -i 's/\r$//g' '/docker-entrypoint.sh'
 
 # Running as non-root user:
+# hadolint ignore=DL3066
 USER web
 
 # We customize how our app is loaded with the custom entrypoint:
