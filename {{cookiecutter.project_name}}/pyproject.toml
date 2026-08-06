@@ -334,7 +334,6 @@ skip = '''__pycache__,
 .coverage,
 htmlcov,
 coverage.xml'''
-ignore-words-list = "FormT"
 
 [tool.typos]
 # typos configuration: https://github.com/crate-ci/typos/
