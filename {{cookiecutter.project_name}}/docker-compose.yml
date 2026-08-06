@@ -27,7 +27,9 @@ services:
 
   web:
     <<: &web
-      # Image name is changed in production:
+      # CI builds the development image under a local tag first, then retags
+      # it to the registry tag after tests pass. Production overrides this
+      # with a full registry image in docker/docker-compose.prod.yml.
       image: "{{ cookiecutter.project_name }}:dev"
       build:
         target: development_build
