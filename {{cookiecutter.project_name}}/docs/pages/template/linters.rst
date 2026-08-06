@@ -123,6 +123,21 @@ See `dotenv-linter <https://github.com/wemake-services/dotenv-linter>`_ docs.
   dotenv-linter config/.env config/.env.template
 
 
+Spelling
+--------
+
+We use ``codespell`` and ``typos`` to detect spelling mistakes
+in source code, documentation, and configuration files.
+
+.. code:: bash
+
+  codespell .
+  typos .
+
+Configuration and project-specific exceptions are stored
+in ``pyproject.toml``.
+
+
 polint and dennis
 -----------------
 
