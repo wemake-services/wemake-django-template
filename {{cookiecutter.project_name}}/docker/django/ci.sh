@@ -41,6 +41,10 @@ run_ci () {
   # Lint imports:
   lint-imports
 
+  # Validating misspelling:
+  codespell .
+  typos .
+
   # Linl HTML formatting:
   find server -type f -name '*.html' | xargs djangofmt \
     --line-length=80 --indent-width=2
