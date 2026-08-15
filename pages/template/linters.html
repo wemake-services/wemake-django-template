@@ -339,6 +339,17 @@ See <a class="reference external" href="https://github.com/wemake-services/doten
 </pre></div>
 </div>
 </section>
+<section id="spelling">
+<h2>Spelling<a class="headerlink" href="#spelling" title="Link to this heading">¶</a></h2>
+<p>We use <code class="docutils literal notranslate"><span class="pre">codespell</span></code> and <code class="docutils literal notranslate"><span class="pre">typos</span></code> to detect spelling mistakes
+in source code, documentation, and configuration files.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>codespell<span class="w"> </span>.
+typos<span class="w"> </span>.
+</pre></div>
+</div>
+<p>Configuration and project-specific exceptions are stored
+in <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code>.</p>
+</section>
 <section id="polint-and-dennis">
 <h2>polint and dennis<a class="headerlink" href="#polint-and-dennis" title="Link to this heading">¶</a></h2>
 <p>Are used to lint your <code class="docutils literal notranslate"><span class="pre">.po</span></code> files.
@@ -439,6 +450,7 @@ See <a class="reference external" href="https://github.com/hadolint/hadolint">ha
 <li><a class="reference internal" href="#djangofmt">djangofmt</a></li>
 <li><a class="reference internal" href="#import-linter">import-linter</a></li>
 <li><a class="reference internal" href="#dotenv-linter">dotenv-linter</a></li>
+<li><a class="reference internal" href="#spelling">Spelling</a></li>
 <li><a class="reference internal" href="#polint-and-dennis">polint and dennis</a></li>
 <li><a class="reference internal" href="#packaging">Packaging</a></li>
 <li><a class="reference internal" href="#linters-that-are-not-included">Linters that are not included</a><ul>
