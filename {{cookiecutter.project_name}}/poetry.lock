@@ -1086,47 +1086,43 @@ test = ["django_add_default_value (>=0.4.0)", "mysqlclient (>=2.1.1)", "psycopg2
 
 [[package]]
 name = "django-modern-rest"
-version = "0.10.0"
+version = "0.14.0"
 description = "Modern REST framework for Django with types and async support"
 optional = false
 python-versions = ">=3.11"
 groups = ["main"]
 files = [
-    {file = "django_modern_rest-0.10.0-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:260c580ca383d69c497bb13bef1a6161baecd8ec0f180b194e29ced6f37fd7eb"},
-    {file = "django_modern_rest-0.10.0-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:922e6d4c0ccbbb75465cc863920ec70af215cfcb96cf08287c6cdbe25f9fb273"},
-    {file = "django_modern_rest-0.10.0-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:97be46c193977f66ab05210e2030ef859e469679356a8d5f1e95f4c0cd933ffa"},
-    {file = "django_modern_rest-0.10.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:66fc7ed30eb405c7809b8262aeb9e8ac2a44384a78f03b2c95d106a6291ecd7b"},
-    {file = "django_modern_rest-0.10.0-cp311-cp311-musllinux_1_2_aarch64.whl", hash = "sha256:9b3dc9940546a3fd40a88d0d2f9a0ecfb366a63a4b5ce5b8972ad8051ace68eb"},
-    {file = "django_modern_rest-0.10.0-cp311-cp311-musllinux_1_2_x86_64.whl", hash = "sha256:17b9120a3351df8d96850ddc88648c11411d233947149c148306c55796dfb4e4"},
-    {file = "django_modern_rest-0.10.0-cp311-cp311-win_amd64.whl", hash = "sha256:a8a984f7282ce255ca5992f32650a7bea02935e1db372770d2baec56cd833ca1"},
-    {file = "django_modern_rest-0.10.0-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:83f6b9326dddffd3d6ca3918d1e73cc52c6e9418158ca28dc214f13ffd1bebca"},
-    {file = "django_modern_rest-0.10.0-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:c9cd699f6a3be503bcc41fb482e5c95ab1eb8e29e20d98aff78202286d61a195"},
-    {file = "django_modern_rest-0.10.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:3da2d36300a5c215ac4754db16a14d4e68fd0885476203f9efc998ae366f6111"},
-    {file = "django_modern_rest-0.10.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:40ca120748bc32ae4a3a00e4ef8df07cee0df39ab94c5ba9b943ed073033fa02"},
-    {file = "django_modern_rest-0.10.0-cp312-cp312-musllinux_1_2_aarch64.whl", hash = "sha256:eb7e61acacdf48cb4c32771f38e08524df104451e03c57b7625c6a1d69e1ddad"},
-    {file = "django_modern_rest-0.10.0-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:309c2801b415bfe69657c2e4b68a4393f2c25f01be14ecfd2eed93106d3059fd"},
-    {file = "django_modern_rest-0.10.0-cp312-cp312-win_amd64.whl", hash = "sha256:627b65c2175c32c89f8dc4661cd59444335a7e73f6e729123deb0e9bae50af2a"},
-    {file = "django_modern_rest-0.10.0-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:24cb5be698dfd37e3be3ce0c7e1d3543b9c6e3105e99b749c68f8c7bbf8f0f37"},
-    {file = "django_modern_rest-0.10.0-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:0129fb5e8bd319a2296a0d4e5ae2edce6a3e8d875da9a0fe0eeb140a05cd4f09"},
-    {file = "django_modern_rest-0.10.0-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:c8e0abaff9c240ead76e2915b6d2e3a0b076f903e6e4e0f94daa81f588c38c2a"},
-    {file = "django_modern_rest-0.10.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:5a259fac345a629d8e13e757b7d902fea148adaa5498e35328a72ac4cf7a938b"},
-    {file = "django_modern_rest-0.10.0-cp313-cp313-musllinux_1_2_aarch64.whl", hash = "sha256:50909ef4b5ec17975089a24cc801eea29500b3eec5c1dc802f7a8492a405e6b2"},
-    {file = "django_modern_rest-0.10.0-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:ee2a08e688739f64f280621fedf258f6944b981b90f668071e829c03f7e84527"},
-    {file = "django_modern_rest-0.10.0-cp313-cp313-win_amd64.whl", hash = "sha256:3c24f97685e17f2343083970ef15ada550d7d3374669db581c9c513e7432692c"},
-    {file = "django_modern_rest-0.10.0-cp314-cp314-macosx_10_15_x86_64.whl", hash = "sha256:5a25f7e74655bfafd2f1b6f633ffbbea18a2a628014c0fb239b63c26277953f0"},
-    {file = "django_modern_rest-0.10.0-cp314-cp314-macosx_11_0_arm64.whl", hash = "sha256:7fd68ff7acc88e4ae29b28131cd0e6403cc0b3fcaa1cb7f329d7469b477ce576"},
-    {file = "django_modern_rest-0.10.0-cp314-cp314-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:5c20899f736e9a1da8edb447e5c670c83b6661d9c4e38714259ee1fca5fe2deb"},
-    {file = "django_modern_rest-0.10.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:b16d6446021d4d23abf8cf39bbd93b8be77f86dc4cda9793fc479255cdd50917"},
-    {file = "django_modern_rest-0.10.0-cp314-cp314-musllinux_1_2_aarch64.whl", hash = "sha256:36bfc8bab7952afd8dc0c086106b89340e2a31274860b87bffed13680dc90c16"},
-    {file = "django_modern_rest-0.10.0-cp314-cp314-musllinux_1_2_x86_64.whl", hash = "sha256:449742f765cb7f5cf955a526617ee7c592a202a604729928e119631cfd0c3af0"},
-    {file = "django_modern_rest-0.10.0-cp314-cp314-win_amd64.whl", hash = "sha256:416f71ec7d42e485e0ada3cbccab2fa9ae10c604e43eb98702944048a522e2ae"},
-    {file = "django_modern_rest-0.10.0-py3-none-any.whl", hash = "sha256:8e7be0a26744d8230edb6c5aa02df8fd088df8c1ac1a9061f6c4bfecf1d8b5b0"},
-    {file = "django_modern_rest-0.10.0.tar.gz", hash = "sha256:2d7bd887547f6779d3f185051f2cd81b8157e49249c9bc730db3eb65bd262d6b"},
+    {file = "django_modern_rest-0.14.0-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:f9302ee2b0051934d5227aa8646d7c692326186cf4e0288a40bb32b7b9bd16cb"},
+    {file = "django_modern_rest-0.14.0-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:6866319a81f8198aceaa414fdd314e845729ac87537071d9184d0df5146623a1"},
+    {file = "django_modern_rest-0.14.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:bf238d7fb7bccdc378b4944d2b622df50c3388b394c1d8352cc8e5f396fdac09"},
+    {file = "django_modern_rest-0.14.0-cp311-cp311-musllinux_1_2_aarch64.whl", hash = "sha256:612156c2897cc00c941827b5ada80966bfc2749a12198d8e82b1c1291f186374"},
+    {file = "django_modern_rest-0.14.0-cp311-cp311-musllinux_1_2_x86_64.whl", hash = "sha256:5b5416e8972859a088bcd359824a53867da2d57e115678c1249de6435eaa9270"},
+    {file = "django_modern_rest-0.14.0-cp311-cp311-win_amd64.whl", hash = "sha256:324fccb3cf21f3fa7599f1b5fbc77380bb9db8a649a6962f04ee4fbeb6e910e0"},
+    {file = "django_modern_rest-0.14.0-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:dc3728ca035d844a13791adae6709bae9b4ad9e0777709629be032ec689b41f1"},
+    {file = "django_modern_rest-0.14.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:ce06196c18e9011f7f0549b2e45daeabca76f42f85367aafb07f96c6c71cb068"},
+    {file = "django_modern_rest-0.14.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:c51d4a4508e76a8d915d92a87573a3b0cd35ec6321d7eac18c36a730776c2a57"},
+    {file = "django_modern_rest-0.14.0-cp312-cp312-musllinux_1_2_aarch64.whl", hash = "sha256:53ad83ffe9847b1b237c6612e1ba553bf63f29c98f100884d7cde433d818da92"},
+    {file = "django_modern_rest-0.14.0-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:3ee8172068fd55205a48cf2d745e261b09877b5e0f3a399434528f15e9d2c59b"},
+    {file = "django_modern_rest-0.14.0-cp312-cp312-win_amd64.whl", hash = "sha256:687322bc921ef9b309a26a2db479353828212b3462d9ba9210a63700536a166f"},
+    {file = "django_modern_rest-0.14.0-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:f63486c4c35fde7cdd7181cd9befa85f1954d3312e3f61a7a21755f79ff6ff78"},
+    {file = "django_modern_rest-0.14.0-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:58ab197d5d8417d874865a79619150db1a0fb2b461be9888369da55ab40f31f7"},
+    {file = "django_modern_rest-0.14.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:baf4c664cf2214912f20c5126591569646f52960ada52f13d43c64f85fe0cc61"},
+    {file = "django_modern_rest-0.14.0-cp313-cp313-musllinux_1_2_aarch64.whl", hash = "sha256:2ab415eb6a2b5466a879c321599dd0788b6b86de059d4c4c551f0ce6a5a9f1c0"},
+    {file = "django_modern_rest-0.14.0-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:d74ed144ee095c275f6e8c2091d9e56bdc4261d027c527880089b8ad409921f8"},
+    {file = "django_modern_rest-0.14.0-cp313-cp313-win_amd64.whl", hash = "sha256:af6512941417e47d6cc99be943e7f7f3755d3b70bb498bdf448d1353cb642e6d"},
+    {file = "django_modern_rest-0.14.0-cp314-cp314-macosx_11_0_arm64.whl", hash = "sha256:f68087349a3d04a3db79bd08eed7b09f0142e6060d27e6c78dbebdf0d09834a5"},
+    {file = "django_modern_rest-0.14.0-cp314-cp314-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:67945bfc82127254f22f4d70a1a5108766849fe6d560ea1897249d90c2bb02ed"},
+    {file = "django_modern_rest-0.14.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:3a3713d74bf3ef5efe1ff05527237c47b67dd3146cb28ad0df2a4626eaf28fe9"},
+    {file = "django_modern_rest-0.14.0-cp314-cp314-musllinux_1_2_aarch64.whl", hash = "sha256:5ca2c3cbe0f75c71fb14d6ae3b12fe8aacfab996a3063454f07f5d0f26324872"},
+    {file = "django_modern_rest-0.14.0-cp314-cp314-musllinux_1_2_x86_64.whl", hash = "sha256:925a973ed48d633239b2eb803f6c88c9586bea9fb0785fb94c19177ede5d31f9"},
+    {file = "django_modern_rest-0.14.0-cp314-cp314-win_amd64.whl", hash = "sha256:fa1133338da43385f28483f9160d61356f7c50deff14d69e1005c25fe666795f"},
+    {file = "django_modern_rest-0.14.0-py3-none-any.whl", hash = "sha256:c3c293d493c140c814440c23016d0ad23cfd3ec19303fc40dcadd59d25f036a8"},
+    {file = "django_modern_rest-0.14.0.tar.gz", hash = "sha256:2c514108b647ea796b1db9e8eadf2bd66b6e37324221df51c4728da6d79fa05a"},
 ]
 
 [package.dependencies]
-attrs = {version = ">=26.0", optional = true, markers = "extra == \"attrs\""}
-django = ">=4.2,<6.1"
+attrs = {version = ">=26", optional = true, markers = "extra == \"attrs\""}
+django = ">=5,<6.2"
 msgspec = {version = ">=0.21.1", optional = true, markers = "extra == \"attrs\" or extra == \"msgspec\""}
 openapi-spec-validator = {version = ">=0.8", optional = true, markers = "extra == \"openapi\""}
 polyfactory = {version = ">=3.2", optional = true, markers = "extra == \"openapi\""}
@@ -1137,7 +1133,7 @@ pyyaml = {version = "*", optional = true, markers = "extra == \"openapi\""}
 typing-extensions = ">=4.12"
 
 [package.extras]
-attrs = ["attrs (>=26.0)", "msgspec (>=0.21.1)"]
+attrs = ["attrs (>=26)", "msgspec (>=0.21.1)"]
 jwt = ["pyjwt[crypto] (>=2.11)"]
 msgspec = ["msgspec (>=0.21.1)"]
 openapi = ["openapi-spec-validator (>=0.8)", "polyfactory (>=3.2)", "pyyaml"]
@@ -4713,4 +4709,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "ruff", "sph
 [metadata]
 lock-version = "2.1"
 python-versions = "==3.13.13"
-content-hash = "1d59c365fff97cab82e6f9fd03c935e3f6a7411cbd9cbff4caf4de5e0173be3a"
+content-hash = "a6bf09f1ff6190cedae9b33d5106a51cf2e4a2365ca9b63be7c9ed8462485cc3"

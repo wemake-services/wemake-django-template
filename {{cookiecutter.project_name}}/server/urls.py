@@ -48,7 +48,7 @@ urlpatterns = [
     # Apps:
     path('main/', include(main_urls, namespace='main')),
     # Apis:
-    path(router.prefix, include((router.urls, 'server'), namespace='api')),
+    router.to_urlpatterns(namespace='api', app_name='server'),
     # OpenAPI:
     path(
         'docs/openapi.json/',
