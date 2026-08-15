@@ -33,12 +33,8 @@ from server.apps.main.views import index
 
 admin.autodiscover()
 
-router = Router(
-    'api/',
-    [
-        path('user/', include(main_api_urls, namespace='main')),
-    ],
-)
+router = Router('api/')
+router.include(main_api_urls.router, namespace='main')
 schema = build_schema(router)
 
 handler404 = build_404_handler(router.prefix, serializer=MsgspecSerializer)
@@ -48,7 +44,7 @@ urlpatterns = [
     # Apps:
     path('main/', include(main_urls, namespace='main')),
     # Apis:
-    path(router.prefix, include((router.urls, 'server'), namespace='api')),
+    router.to_urlpatterns(namespace='api'),
     # OpenAPI:
     path(
         'docs/openapi.json/',
