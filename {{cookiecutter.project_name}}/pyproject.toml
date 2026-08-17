@@ -46,7 +46,7 @@ django-zeal = "^2.0"
 django-drifter = "^0.1"
 
 wemake-python-styleguide = "^1.6"
-ruff = "^0.15"
+ruff = "^0.16"
 
 pytest = "^9.1"
 pytest-django = "^4.9"
@@ -91,6 +91,7 @@ furo = "^2025.12"
 # Ruff config: https://docs.astral.sh/ruff/settings
 preview = true
 fix = true
+output-prefer-rule-codes = true
 target-version = "py313"
 line-length = 80
 
