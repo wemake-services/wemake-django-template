@@ -45,6 +45,7 @@ pytest-cookies = "^0.7"
 # Ruff config: https://docs.astral.sh/ruff/settings
 preview = true
 fix = true
+output-prefer-rule-codes = true
 target-version = "py313"
 line-length = 80
 extend-exclude = [
