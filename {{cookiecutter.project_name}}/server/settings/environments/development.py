@@ -188,5 +188,5 @@ EXTRA_CHECKS = {
 }
 
 # Disable persistent DB connections
-# https://docs.djangoproject.com/en/6.0/ref/databases/#caveats
+# https://docs.djangoproject.com/en/6.1/ref/databases/#caveats
 DATABASES['default']['CONN_MAX_AGE'] = 0
