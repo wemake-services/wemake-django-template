@@ -1041,14 +1041,14 @@ files = [
 
 [[package]]
 name = "django-health-check"
-version = "4.4.3"
+version = "4.5.0"
 description = "Monitor the health of your Django app and its connected services."
 optional = false
 python-versions = ">=3.10"
 groups = ["main"]
 files = [
-    {file = "django_health_check-4.4.3-py3-none-any.whl", hash = "sha256:dfbb27e4c63e8e419a4852f0d9c1c49d6de342e1b00438144905761c2a1386a7"},
-    {file = "django_health_check-4.4.3.tar.gz", hash = "sha256:a99fe9f13da26cf055d81e90f237ef3ad40a31f365b280812a590707854b8d2b"},
+    {file = "django_health_check-4.5.0-py3-none-any.whl", hash = "sha256:f220f032c0547b363a4a41ec269224ecf0b4846d59fbda2445b98ef55193b05c"},
+    {file = "django_health_check-4.5.0.tar.gz", hash = "sha256:7917436a29acf1500d7623928ed3d3c659fa660b00fadb2fc38b357c9c8c4e61"},
 ]
 
 [package.dependencies]
@@ -4709,4 +4709,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "ruff", "sph
 [metadata]
 lock-version = "2.1"
 python-versions = "==3.13.13"
-content-hash = "91f991b5cc61a3c60a9fb7481aeb6ce1dd9f5e7a48fd9133ca1af8615a1889d8"
+content-hash = "e4df209dec20d81eade25ae66b7d0f9f7f9a4910f01685f4aa64bda62ea3cc9b"
