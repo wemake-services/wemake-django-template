@@ -898,14 +898,14 @@ tomli = {version = ">=2.0.1", markers = "python_full_version < \"3.15.0\""}
 
 [[package]]
 name = "django"
-version = "6.0.6"
+version = "6.1"
 description = "A high-level Python web framework that encourages rapid development and clean, pragmatic design."
 optional = false
 python-versions = ">=3.12"
 groups = ["main", "dev"]
 files = [
-    {file = "django-6.0.6-py3-none-any.whl", hash = "sha256:25148b1194c47c2e685e5f5e9c5d59c78b075dfd282cb9618861ba6c1708f4d2"},
-    {file = "django-6.0.6.tar.gz", hash = "sha256:ad03916ba59523d781ae5c3f631960c23d69a9d9c43cecda52fc23b47e953713"},
+    {file = "django-6.1-py3-none-any.whl", hash = "sha256:6c132cd980c9392b06807d4ca52d72530d631dc65a85d9dacede00a780cefbbe"},
+    {file = "django-6.1.tar.gz", hash = "sha256:86a2aacd59b817e4d6ac2ebfe22356c58f66f7b24e503f71b7c2fead677ee48b"},
 ]
 
 [package.dependencies]
@@ -1041,14 +1041,14 @@ files = [
 
 [[package]]
 name = "django-health-check"
-version = "4.4.3"
+version = "4.5.0"
 description = "Monitor the health of your Django app and its connected services."
 optional = false
 python-versions = ">=3.10"
 groups = ["main"]
 files = [
-    {file = "django_health_check-4.4.3-py3-none-any.whl", hash = "sha256:dfbb27e4c63e8e419a4852f0d9c1c49d6de342e1b00438144905761c2a1386a7"},
-    {file = "django_health_check-4.4.3.tar.gz", hash = "sha256:a99fe9f13da26cf055d81e90f237ef3ad40a31f365b280812a590707854b8d2b"},
+    {file = "django_health_check-4.5.0-py3-none-any.whl", hash = "sha256:f220f032c0547b363a4a41ec269224ecf0b4846d59fbda2445b98ef55193b05c"},
+    {file = "django_health_check-4.5.0.tar.gz", hash = "sha256:7917436a29acf1500d7623928ed3d3c659fa660b00fadb2fc38b357c9c8c4e61"},
 ]
 
 [package.dependencies]
@@ -1206,25 +1206,25 @@ files = [
 
 [[package]]
 name = "django-stubs"
-version = "6.0.6"
+version = "6.1.0"
 description = "Mypy stubs for Django"
 optional = false
-python-versions = ">=3.10"
+python-versions = ">=3.11"
 groups = ["dev"]
 files = [
-    {file = "django_stubs-6.0.6-py3-none-any.whl", hash = "sha256:c488fea05a9eac40ddbdc69887f63a5c0922cb13df285291ee99c9bbc89bc4f1"},
-    {file = "django_stubs-6.0.6.tar.gz", hash = "sha256:dfc01e052e33c7f8f0c30c3ff8eda0903ee29ac710d1e46d9effd773744a69b0"},
+    {file = "django_stubs-6.1.0-py3-none-any.whl", hash = "sha256:63b23ccca2616d464ed7e37d1ce44960315cb3cecab75b23c928467ef125e560"},
+    {file = "django_stubs-6.1.0.tar.gz", hash = "sha256:b6aecc5c738a103135f76ba160a6f75e3b27dcf0200c64d7226018cdbc2340dd"},
 ]
 
 [package.dependencies]
 django = "*"
 django-stubs-ext = ">=6.0.2"
-mypy = {version = ">=1.13,<2.2", optional = true, markers = "extra == \"compatible-mypy\""}
+mypy = {version = ">=1.13,<2.4", optional = true, markers = "extra == \"compatible-mypy\""}
 types-pyyaml = "*"
 typing-extensions = ">=4.11.0"
 
 [package.extras]
-compatible-mypy = ["mypy (>=1.13,<2.2)"]
+compatible-mypy = ["mypy (>=1.13,<2.4)"]
 oracle = ["oracledb"]
 redis = ["redis", "types-redis"]
 
@@ -1261,14 +1261,14 @@ typing_extensions = ">=4.0"
 
 [[package]]
 name = "django-zeal"
-version = "2.2.1"
+version = "2.2.3"
 description = "Detect N+1s in your Django app"
 optional = false
 python-versions = ">=3.9"
 groups = ["dev"]
 files = [
-    {file = "django_zeal-2.2.1-py3-none-any.whl", hash = "sha256:bc1a365e4edf167c8aaeb61fbf14d241d5d4ade0dde80b7e517cc91716ccdedf"},
-    {file = "django_zeal-2.2.1.tar.gz", hash = "sha256:082afc3d0930a85c9ae5544447cd9a9839a71ea265df75cd1a7ace8a97b946df"},
+    {file = "django_zeal-2.2.3-py3-none-any.whl", hash = "sha256:23d81e0cce9fea71f6e307e10b0b96a861301d41d92a8a1c4ebd790363f01361"},
+    {file = "django_zeal-2.2.3.tar.gz", hash = "sha256:cee84b080a56ba95fa42d092986a0d85ccdd8df9812631f3cf3e9aac84cb2225"},
 ]
 
 [[package]]
@@ -4709,4 +4709,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "ruff", "sph
 [metadata]
 lock-version = "2.1"
 python-versions = "==3.13.13"
-content-hash = "81268445a2a6de4175d2d6cd9bd1137089fb10d02a9fad8881d6a3185b06536d"
+content-hash = "8a6fdca6c34ac8c42bffc21ac1523fc350dc6fcd5538fa04f585e5aa71cd7272"

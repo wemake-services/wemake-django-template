@@ -1,5 +1,5 @@
 # Logging
-# https://docs.djangoproject.com/en/6.0/topics/logging/
+# https://docs.djangoproject.com/en/6.1/topics/logging/
 
 # See also:
 # 'Do not log' by Nikita Sobolev (@sobolevn)
