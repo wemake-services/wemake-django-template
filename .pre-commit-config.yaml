@@ -39,7 +39,7 @@ repos:
         files: ^\{\{cookiecutter.project_name\}\}/docs/
 
   - repo: https://github.com/crate-ci/typos
-    rev: v1
+    rev: v1.50.2
     hooks:
       - id: typos
 
