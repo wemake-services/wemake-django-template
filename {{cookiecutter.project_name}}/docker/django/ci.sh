@@ -15,10 +15,20 @@ fi
 
 pyclean () {
   # Cleaning cache:
-  find . \
-    | grep -E '(__pycache__|\.(mypy_|pytest_)?cache|\.(hypothesis|perm|static)|\.py[cod]$)' \
-    | xargs rm -rf \
-  || true
+  find . -depth \
+    \( \
+      -type d \
+      \( \
+        -name '__pycache__' -o \
+        -name '.mypy_cache' -o \
+        -name '.pytest_cache' -o \
+        -name '.hypothesis' -o \
+        -name '.perm' -o \
+        -name '.static' \
+      \) -o \
+      -type f -name '*.py[cod]' \
+    \) \
+    -exec rm -rf -- {} +
 }
 
 run_ci () {
