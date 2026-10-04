@@ -5,20 +5,22 @@
 # This setup is supposed to be used with `docker-swarm`.
 # See `./docs/pages/template/production.rst` docs.
 
+# The json-file driver has no size limit by default,
+# so rotate logs to avoid filling the host disk:
+# https://docs.docker.com/engine/logging/drivers/json-file/
+x-logging: &production-logging
+  driver: json-file
+  options:
+    max-size: "100m"
+    max-file: "5"
+
 services:
   caddy:
     build:
       context: .
       dockerfile: ./docker/caddy/Dockerfile
     restart: unless-stopped
-    # The json-file driver has no size limit by default,
-    # so rotate logs to avoid filling the host disk:
-    # https://docs.docker.com/engine/logging/drivers/json-file/
-    logging:
-      driver: json-file
-      options:
-        max-size: "50m"
-        max-file: "5"
+    logging: *production-logging
     env_file: ./config/.env
     volumes:
       - ./docker/caddy/Caddyfile:/etc/caddy/Caddyfile  # configuration
@@ -44,6 +46,7 @@ services:
           DJANGO_ENV: production
 
       restart: unless-stopped
+      logging: *production-logging
       volumes:
         - django-media:/var/www/django/media  # since in dev it is app's folder
         - django-locale:/code/locale  # since in dev it is app's folder
