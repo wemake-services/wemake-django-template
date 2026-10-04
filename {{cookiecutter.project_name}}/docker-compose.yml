@@ -7,10 +7,20 @@
 # Should be used together with `docker/docker-compose.prod.yml`
 # in production.
 
+# The json-file driver has no size limit by default,
+# so rotate logs to avoid filling the host disk:
+# https://docs.docker.com/engine/logging/drivers/json-file/
+x-logging: &default-logging
+  driver: json-file
+  options:
+    max-size: "50m"
+    max-file: "5"
+
 services:
   db:
     image: "postgres:18-alpine"
     restart: unless-stopped
+    logging: *default-logging
     volumes:
       # Postgres 18 default PGDATA is `/var/lib/postgresql/18/docker`,
       # so we mount the parent directory to persist the actual data path.
@@ -31,6 +41,7 @@ services:
       # it to the registry tag after tests pass. Production overrides this
       # with a full registry image in docker/docker-compose.prod.yml.
       image: "{{ cookiecutter.project_name }}:dev"
+      logging: *default-logging
       build:
         target: development_build
         context: .
