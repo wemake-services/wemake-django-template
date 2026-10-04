@@ -11,6 +11,14 @@ services:
       context: .
       dockerfile: ./docker/caddy/Dockerfile
     restart: unless-stopped
+    # The json-file driver has no size limit by default,
+    # so rotate logs to avoid filling the host disk:
+    # https://docs.docker.com/engine/logging/drivers/json-file/
+    logging:
+      driver: json-file
+      options:
+        max-size: "50m"
+        max-file: "5"
     env_file: ./config/.env
     volumes:
       - ./docker/caddy/Caddyfile:/etc/caddy/Caddyfile  # configuration
