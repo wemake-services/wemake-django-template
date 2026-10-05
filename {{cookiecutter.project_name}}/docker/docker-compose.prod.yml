@@ -8,7 +8,7 @@
 # The json-file driver has no size limit by default,
 # so rotate logs to avoid filling the host disk:
 # https://docs.docker.com/engine/logging/drivers/json-file/
-x-logging: &production-logging
+x-logging: &logging-production
   driver: json-file
   options:
     max-size: "100m"
@@ -20,7 +20,7 @@ services:
       context: .
       dockerfile: ./docker/caddy/Dockerfile
     restart: unless-stopped
-    logging: *production-logging
+    logging: *logging-production
     env_file: ./config/.env
     volumes:
       - ./docker/caddy/Caddyfile:/etc/caddy/Caddyfile  # configuration
@@ -46,7 +46,7 @@ services:
           DJANGO_ENV: production
 
       restart: unless-stopped
-      logging: *production-logging
+      logging: *logging-production
       volumes:
         - django-media:/var/www/django/media  # since in dev it is app's folder
         - django-locale:/code/locale  # since in dev it is app's folder
