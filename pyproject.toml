@@ -33,6 +33,7 @@ binaryornot = "^0.6"
 wemake-python-styleguide = "^1.8"
 ruff = "^0.16"
 docker-image-size-limit = "^2.2"
+django-upgrade = "^1.33"
 
 mypy = "^2.4"
 

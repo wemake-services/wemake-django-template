@@ -13,6 +13,20 @@ set -o pipefail
 run_cookiecutter_build "$GITHUB_WORKSPACE"
 cd "$PROJECT_PATH"
 
+# Checking that the generated code does not use any Django API
+# that is already deprecated in the Django version it pins.
+# `--target-version=auto` is not used: it reads `[project] dependencies`,
+# which is `dynamic` in a `poetry` project, and silently falls back to 2.2.
+DJANGO_TARGET="$(
+  sed -nE 's/^django = \{ version = ">=([0-9]+\.[0-9]+).*/\1/p' pyproject.toml
+)"
+if [[ -z "$DJANGO_TARGET" ]]; then
+  echo 'Cannot find the pinned Django version in pyproject.toml' >&2
+  exit 1
+fi
+find . -name '*.py' -print0 |
+  xargs -0 django-upgrade --check "--target-version=$DJANGO_TARGET"
+
 # enable docker buildkit
 export DOCKER_BUILDKIT=1 COMPOSE_DOCKER_CLI_BUILD=1
 
