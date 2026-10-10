@@ -2,7 +2,7 @@
 name = "{{ cookiecutter.project_name }}"
 description = "{{ cookiecutter.project_verbose_name }}"
 version = "0.1.0"
-requires-python = "==3.13.13"
+requires-python = "==3.13.16"
 readme = "README.md"
 authors = []
 dynamic = ["dependencies", "classifiers"]
@@ -28,46 +28,46 @@ django-csp = "^4.0"
 django-health-check = "^4.5"
 django-permissions-policy = "^4.31"
 django-stubs-ext = "^6.0"
-django-modern-rest = { version = "^0.14.0", extras = ["msgspec", "pydantic", "attrs", "jwt", "openapi"] }
+django-modern-rest = { version = "^0.16", extras = ["msgspec", "pydantic", "attrs", "jwt", "openapi"] }
 
 psycopg2-binary = "^2.9"
 gunicorn = "^26.0"
 python-decouple = "^3.8"
 structlog = "^26.1"
-punq = "^0.8"
+punq = "^0.9"
 
 [tool.poetry.group.dev.dependencies]
-django-debug-toolbar = "^7.0"
+django-debug-toolbar = "^8.0"
 django-migration-linter = "^6.0"
 django-safe-migrations = "^0.7"
 django-extra-checks = "^0.17"
-django-query-counter = "^0.6"
+django-query-counter = "^0.7"
 django-zeal = "^2.2"
 django-drifter = "^0.1"
 
-wemake-python-styleguide = "^1.6"
-ruff = "^0.16"
+wemake-python-styleguide = { version = "^1.6", extras = ["mcp"] }
+ruff = "^0.17"
 
 pytest = "^9.1"
 pytest-django = "^4.9"
 pytest-cov = "^7.1"
 covdefaults = "^2.3"
 django-coverage-plugin = "^3.1"
-pytest-randomly = "^4.0"
+pytest-randomly = "^5.0"
 pytest-timeout = "^2.3"
 django-test-migrations = "^1.5"
 hypothesis = "^6.155"
 schemathesis = "^4.21"
-tracecov = "^0.23"
+tracecov = "^0.25"
 inline-snapshot = "^0.34"
 inline-snapshot-django = "^1.4"
 
 django-stubs = { version = ">=6.1,<6.2", extras = ["compatible-mypy"] }
 
-djangofmt = "^0.2"
+djangofmt = "^1.0"
 yamllint = "^1.35"
 pip-audit = "^2.10"
-dotenv-linter = "^0.7"
+dotenv-linter = "^0.9"
 import-linter = "^2.12"
 polint = "^0.5"
 dennis = "^1.1"
