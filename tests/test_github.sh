@@ -13,6 +13,9 @@ set -o pipefail
 run_cookiecutter_build "$GITHUB_WORKSPACE"
 cd "$PROJECT_PATH"
 
+# Check if django-upgrade would change anything:
+find . -type f -name "*.py" -print0 | xargs -0 django-upgrade --target-version 6.1 --check
+
 # enable docker buildkit
 export DOCKER_BUILDKIT=1 COMPOSE_DOCKER_CLI_BUILD=1
 
