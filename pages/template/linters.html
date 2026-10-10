@@ -310,7 +310,7 @@ if no fix is possible.</p>
 <h2>yamllint<a class="headerlink" href="#yamllint" title="Link to this heading">¶</a></h2>
 <p>Is used to lint your <code class="docutils literal notranslate"><span class="pre">yaml</span></code> files.
 See <a class="reference external" href="https://github.com/adrienverge/yamllint">yamllint</a> docs.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>yamllint<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;extends&quot;: &quot;default&quot;, &quot;ignore&quot;: &quot;.venv&quot;}&#39;</span><span class="w"> </span>-s<span class="w"> </span>.
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>yamllint<span class="w"> </span>-d<span class="w"> </span><span class="s1">'{"extends": "default", "ignore": ".venv"}'</span><span class="w"> </span>-s<span class="w"> </span>.
 </pre></div>
 </div>
 </section>
@@ -318,7 +318,7 @@ See <a class="reference external" href="https://github.com/adrienverge/yamllint"
 <h2>djangofmt<a class="headerlink" href="#djangofmt" title="Link to this heading">¶</a></h2>
 <p>Is used to lint and format your <code class="docutils literal notranslate"><span class="pre">html</span></code> files.
 See <a class="reference external" href="https://github.com/UnknownPlatypus/djangofmt">djangofmt</a> docs.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find<span class="w"> </span>server<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-name<span class="w"> </span><span class="s1">&#39;*.html&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>djangofmt<span class="w"> </span><span class="se">\</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find<span class="w"> </span>server<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-name<span class="w"> </span><span class="s1">'*.html'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>djangofmt<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--line-length<span class="o">=</span><span class="m">80</span><span class="w"> </span>--indent-width<span class="o">=</span><span class="m">2</span>
 </pre></div>
 </div>

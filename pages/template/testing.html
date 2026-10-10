@@ -307,10 +307,10 @@ regressions like N+1 queries or unintended changes in SQL.</p>
 
 <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">django_db</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">test_blog_post_get</span><span class="p">(</span><span class="n">dmr_client</span><span class="p">:</span> <span class="n">DMRClient</span><span class="p">,</span> <span class="n">blog_post</span><span class="p">:</span> <span class="n">BlogPost</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Ensures that blog posts can be fetched.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Ensures that blog posts can be fetched."""</span>
     <span class="k">with</span> <span class="n">snapshot_queries</span><span class="p">()</span> <span class="k">as</span> <span class="n">snap</span><span class="p">:</span>  <span class="c1"># &lt;---- Capture queries.</span>
         <span class="n">response</span> <span class="o">=</span> <span class="n">dmr_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="n">reverse</span><span class="p">(</span><span class="s1">&#39;api:main:blog_post_get&#39;</span><span class="p">,</span> <span class="n">kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="n">blog_post</span><span class="o">.</span><span class="n">pk</span><span class="p">}),</span>
+            <span class="n">reverse</span><span class="p">(</span><span class="s1">'api:main:blog_post_get'</span><span class="p">,</span> <span class="n">kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">'id'</span><span class="p">:</span> <span class="n">blog_post</span><span class="o">.</span><span class="n">pk</span><span class="p">}),</span>
         <span class="p">)</span>
 
     <span class="k">assert</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="n">HTTPStatus</span><span class="o">.</span><span class="n">OK</span>
@@ -320,7 +320,7 @@ regressions like N+1 queries or unintended changes in SQL.</p>
 </div>
 <p>After the first pytest run the snapshot will be updated in-place:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">snap</span> <span class="o">==</span> <span class="n">snapshot</span><span class="p">([</span>
-    <span class="s1">&#39;SELECT ... FROM main_blogpost WHERE ... LIMIT ...&#39;</span><span class="p">,</span>
+    <span class="s1">'SELECT ... FROM main_blogpost WHERE ... LIMIT ...'</span><span class="p">,</span>
 <span class="p">])</span>
 </pre></div>
 </div>
