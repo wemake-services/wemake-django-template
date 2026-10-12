@@ -45,6 +45,8 @@ def _get_project_meta() -> dict[str, str]:  # lying about return type
 
 pkg_meta = _get_project_meta()
 project = pkg_meta['name']
+copyright = '2017 - %Y, wemake-services'  # noqa: A001
+author = 'wemake-services'
 
 # The short X.Y version
 version = pkg_meta['version']
@@ -70,6 +72,7 @@ extensions = [
     # 3rd party, order matters:
     # https://github.com/wemake-services/wemake-django-template/issues/159
     'sphinx_autodoc_typehints',
+    'sphinx_llm_friendly',
 ]
 
 # If true, Sphinx will warn about all references
@@ -110,7 +113,14 @@ todo_include_todos = True
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'furo'
+html_theme = 'shibuya'
+html_favicon = '_static/images/favicon-32x32.png'
+
+html_theme_options = {
+    'github_url': 'https://github.com/wemake-services/wemake-django-template',
+    'globaltoc_expand_depth': 1,
+    'accent_color': 'green',
+}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
