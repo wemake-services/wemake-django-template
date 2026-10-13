@@ -5,6 +5,7 @@ from typing import Any
 import pytest
 import schemathesis as st
 from django.conf import LazySettings
+from django.test import Client
 from django.urls import reverse
 from schemathesis.specs.openapi.schemas import OpenApiSchema
 from tracecov import CoverageMap
@@ -29,9 +30,13 @@ def _disable_logging(settings: LazySettings) -> Iterator[None]:
 @pytest.fixture
 def api_schema(
     transactional_db: None,
+    admin_client: Client,
 ) -> 'OpenApiSchema':
     """Load OpenAPI schema as a pytest fixture."""
-    return st.openapi.from_wsgi(reverse('openapi_json'), application)
+    response = admin_client.get(reverse('v1_openapi_json'))
+    schema = st.openapi.from_dict(response.json())
+    schema.app = application
+    return schema
 
 
 schema = st.pytest.from_fixture('api_schema')
