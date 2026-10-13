@@ -360,14 +360,15 @@ in Caddy docs.</p>
 </section>
 <section id="caddyfile-validation">
 <h3>Caddyfile validation<a class="headerlink" href="#caddyfile-validation" title="Link to this heading">¶</a></h3>
-<p>You can also run <code class="docutils literal notranslate"><span class="pre">-validate</span></code> command to validate <code class="docutils literal notranslate"><span class="pre">Caddyfile</span></code> contents.</p>
-<p>Here’s it would look like:</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">test-caddy</span></code> job in the CI pipeline validates the <code class="docutils literal notranslate"><span class="pre">Caddyfile</span></code>
+and checks its formatting with the project’s Caddy CI script.
+You can run the same checks locally with:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.yml<span class="w"> </span>-f<span class="w"> </span>docker/docker-compose.prod.yml<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>run<span class="w"> </span>--rm<span class="w"> </span>caddy<span class="w"> </span>-validate
+<span class="w">  </span>run<span class="w"> </span>--no-deps<span class="w"> </span>--rm<span class="w"> </span>caddy<span class="w"> </span>sh<span class="w"> </span>/etc/ci.sh
 </pre></div>
 </div>
-<p>This check is not included in the pipeline by default,
-because it is quite long to start all the machinery for this single check.</p>
+<p>The pipeline runs this job when the Caddy configuration,
+the production Compose file, or the CI definition changes.</p>
 </section>
 <section id="disabling-https">
 <h3>Disabling HTTPS<a class="headerlink" href="#disabling-https" title="Link to this heading">¶</a></h3>
