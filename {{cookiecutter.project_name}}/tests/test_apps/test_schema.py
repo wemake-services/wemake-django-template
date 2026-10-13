@@ -33,7 +33,7 @@ def api_schema(
     admin_client: Client,
 ) -> 'OpenApiSchema':
     """Load OpenAPI schema as a pytest fixture."""
-    response = admin_client.get(reverse('v1_openapi_json'))
+    response = admin_client.get(reverse('openapi_json'))
     schema = st.openapi.from_dict(response.json())
     schema.app = application
     return schema
