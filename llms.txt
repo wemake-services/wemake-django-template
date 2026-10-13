@@ -1,0 +1,23 @@
+# wemake-django-template
+
+> What this project is all about?
+> The main idea of this project is to provide a fully configured
+> template for django projects, where code quality, testing,
+> documentation, security, and scalability are number one priorities.
+
+## Docs
+
+- [Welcome to wemake-django-template’s documentation!](index.md)
+- [Overview](pages/template/overview.md)
+- [Development](pages/template/development.md)
+- [Django](pages/template/django.md)
+- [Documentation](pages/template/documentation.md)
+- [Frequently asked questions](pages/template/faq.md)
+- [Gitlab CI](pages/template/gitlab-ci.md)
+- [Linters](pages/template/linters.md)
+- [Production](pages/template/production.md)
+- [Going to production](pages/template/production-checklist.md)
+- [Security](pages/template/security.md)
+- [Testing](pages/template/testing.md)
+- [Troubleshooting](pages/template/troubleshooting.md)
+- [Upgrading template](pages/template/upgrading-template.md)
