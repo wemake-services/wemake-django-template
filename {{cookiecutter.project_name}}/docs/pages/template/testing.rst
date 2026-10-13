@@ -13,7 +13,7 @@ pytest
 ------
 
 ``pytest`` is the main tool for test discovery, collection, and execution.
-It is configured inside ``setup.cfg`` file.
+It is configured inside ``pyproject.toml`` file.
 
 We use a lot of ``pytest`` plugins that enhance our development experience.
 List of these plugins is available inside ``pyproject.toml`` file.
@@ -25,7 +25,7 @@ Running:
   pytest
 
 We also have some options that are set on each run via ``--addopts``
-inside the ``setup.cfg`` file.
+inside the ``pyproject.toml`` file.
 
 Plugins
 ~~~~~~~
@@ -138,17 +138,15 @@ Running ``mypy`` is required before any commit:
 
 .. code:: bash
 
-  mypy server tests/**/*.py
+  mypy .
 
 This will eliminate a lot of possible ``TypeError`` and other issues
-in both ``server/`` and ``tests/`` directories.
-We use ``tests/**/*.py`` because ``tests/`` is not a python package,
-so it is not importable.
+across the project, matching the command used by continuous integration.
 
 However, this will not make code 100% safe from errors.
 So, both the testing and review process are still required.
 
-``mypy`` is configured via ``setup.cfg``.
+``mypy`` is configured via ``pyproject.toml``.
 Read the `docs <https://mypy.readthedocs.io/en/latest/>`_
 for more information.
 
