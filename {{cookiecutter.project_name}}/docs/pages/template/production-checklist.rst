@@ -137,17 +137,17 @@ in Caddy docs.
 Caddyfile validation
 ~~~~~~~~~~~~~~~~~~~~
 
-You can also run ``-validate`` command to validate ``Caddyfile`` contents.
-
-Here's it would look like:
+The ``test-caddy`` job in the CI pipeline validates the ``Caddyfile``
+and checks its formatting with the project's Caddy CI script.
+You can run the same checks locally with:
 
 .. code:: bash
 
   docker compose -f docker-compose.yml -f docker/docker-compose.prod.yml \
-    run --rm caddy -validate
+    run --no-deps --rm caddy sh /etc/ci.sh
 
-This check is not included in the pipeline by default,
-because it is quite long to start all the machinery for this single check.
+The pipeline runs this job when the Caddy configuration,
+the production Compose file, or the CI definition changes.
 
 Disabling HTTPS
 ~~~~~~~~~~~~~~~
