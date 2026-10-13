@@ -71,7 +71,7 @@ That's how this check is executed:
 
 .. code:: bash
 
-  python manage.py check_migrations --exclude-apps=axes
+  python manage.py check_migrations
 
 Important note: some third-party apps may include migrations that are not fully safe.
 In such cases, consider reviewing them manually or excluding them from checks

@@ -299,7 +299,7 @@ existing queries.</p>
 <p>See <a class="reference external" href="https://github.com/YasserShkeir/django-safe-migrations">django-safe-migrations</a>
 docs, it contains useful information and best practices for writing safe migrations.</p>
 <p>That’s how this check is executed:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>manage.py<span class="w"> </span>check_migrations<span class="w"> </span>--exclude-apps<span class="o">=</span>axes
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>manage.py<span class="w"> </span>check_migrations
 </pre></div>
 </div>
 <p>Important note: some third-party apps may include migrations that are not fully safe.

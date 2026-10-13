@@ -262,7 +262,7 @@ We run tests with <a class="reference external" href="https://pytest.org/">pytes
 <section id="id1">
 <h2>pytest<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">pytest</span></code> is the main tool for test discovery, collection, and execution.
-It is configured inside <code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code> file.</p>
+It is configured inside <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> file.</p>
 <p>We use a lot of <code class="docutils literal notranslate"><span class="pre">pytest</span></code> plugins that enhance our development experience.
 List of these plugins is available inside <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> file.</p>
 <p>Running:</p>
@@ -270,7 +270,7 @@ List of these plugins is available inside <code class="docutils literal notransl
 </pre></div>
 </div>
 <p>We also have some options that are set on each run via <code class="docutils literal notranslate"><span class="pre">--addopts</span></code>
-inside the <code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code> file.</p>
+inside the <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> file.</p>
 <section id="plugins">
 <h3>Plugins<a class="headerlink" href="#plugins" title="Link to this heading">¶</a></h3>
 <p>We use different <code class="docutils literal notranslate"><span class="pre">pytest</span></code> plugins to make our testing process better.
@@ -361,16 +361,14 @@ whitespace violation</p></li>
 <section id="id2">
 <h2>mypy<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
 <p>Running <code class="docutils literal notranslate"><span class="pre">mypy</span></code> is required before any commit:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mypy<span class="w"> </span>server<span class="w"> </span>tests/**/*.py
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mypy<span class="w"> </span>.
 </pre></div>
 </div>
 <p>This will eliminate a lot of possible <code class="docutils literal notranslate"><span class="pre">TypeError</span></code> and other issues
-in both <code class="docutils literal notranslate"><span class="pre">server/</span></code> and <code class="docutils literal notranslate"><span class="pre">tests/</span></code> directories.
-We use <code class="docutils literal notranslate"><span class="pre">tests/**/*.py</span></code> because <code class="docutils literal notranslate"><span class="pre">tests/</span></code> is not a python package,
-so it is not importable.</p>
+across the project, matching the command used by continuous integration.</p>
 <p>However, this will not make code 100% safe from errors.
 So, both the testing and review process are still required.</p>
-<p><code class="docutils literal notranslate"><span class="pre">mypy</span></code> is configured via <code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code>.
+<p><code class="docutils literal notranslate"><span class="pre">mypy</span></code> is configured via <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code>.
 Read the <a class="reference external" href="https://mypy.readthedocs.io/en/latest/">docs</a>
 for more information.</p>
 <p>We also use <a class="reference external" href="https://github.com/typeddjango/django-stubs">django-stubs</a>
