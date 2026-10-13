@@ -287,8 +287,10 @@ Otherwise, the build will fail.
 So, it is almost impossible to replace an already existing package
 with a malicious one.</p>
 <p>We also use <a class="reference external" href="https://github.com/pypa/pip-audit">pip-audit</a>
-to analyze vulnerable dependencies to prevent the build
-to go to the production with known unsafe dependencies.</p>
+to analyze dependencies for known vulnerabilities.
+This check is advisory: it reports findings without blocking the build
+because it can produce false positives.
+Review its output before deploying to production.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip-audit<span class="w"> </span>--desc
 </pre></div>
 </div>
