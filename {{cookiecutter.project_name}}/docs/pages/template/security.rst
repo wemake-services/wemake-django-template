@@ -42,8 +42,10 @@ So, it is almost impossible to replace an already existing package
 with a malicious one.
 
 We also use `pip-audit <https://github.com/pypa/pip-audit>`_
-to analyze vulnerable dependencies to prevent the build
-to go to the production with known unsafe dependencies.
+to analyze dependencies for known vulnerabilities.
+This check is advisory: it reports findings without blocking the build
+because it can produce false positives.
+Review its output before deploying to production.
 
 .. code:: bash
 
