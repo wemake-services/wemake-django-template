@@ -45,6 +45,13 @@ www.{$DOMAIN_NAME} {
 
 		log_key
 	}
+
+	# Health checks are only used inside the web container.
+	@health path /health /health/*
+	handle @health {
+		respond 404
+	}
+
 	# Serve static files
 	handle_path /static/* {
 		# STATIC_ROOT
