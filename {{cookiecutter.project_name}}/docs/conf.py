@@ -45,8 +45,6 @@ def _get_project_meta() -> dict[str, str]:  # lying about return type
 
 pkg_meta = _get_project_meta()
 project = pkg_meta['name']
-copyright = '2017 - %Y, wemake-services'  # noqa: A001
-author = 'wemake-services'
 
 # The short X.Y version
 version = pkg_meta['version']
