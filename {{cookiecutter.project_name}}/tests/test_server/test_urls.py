@@ -10,6 +10,14 @@ _ADMIN_URL: Final = reverse('admin:index')
 _ADMIN_DOC_URL: Final = reverse('django-admindocs-docroot')
 _ROBOTS_URL: Final = reverse('robots_txt')
 _HUMANS_URL: Final = reverse('humans_txt')
+_OPENAPI_URLS: Final = frozenset((
+    reverse('openapi_json'),
+    reverse('openapi_yaml'),
+    reverse('stoplight'),
+    reverse('swagger'),
+    reverse('scalar'),
+    reverse('redoc'),
+))
 
 
 @pytest.mark.django_db
@@ -47,6 +55,22 @@ def test_admin_docs_authorized(admin_client: Client) -> None:
 
     assert response.status_code == HTTPStatus.OK
     assert b'docutils' not in response.content
+
+
+@pytest.mark.parametrize('page', _OPENAPI_URLS)
+def test_openapi_unauthorized(client: Client, *, page: str) -> None:
+    """Ensures that OpenAPI resources require staff authentication."""
+    response = client.get(page)
+
+    assert response.status_code == HTTPStatus.FOUND
+
+
+@pytest.mark.parametrize('page', _OPENAPI_URLS)
+def test_openapi_authorized(admin_client: Client, *, page: str) -> None:
+    """Ensures that OpenAPI resources are accessible to staff."""
+    response = admin_client.get(page)
+
+    assert response.status_code == HTTPStatus.OK
 
 
 @pytest.mark.parametrize(
