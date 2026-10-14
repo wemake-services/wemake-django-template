@@ -26,7 +26,7 @@ def test_blog_post_create(dmr_client: DMRClient) -> None:
     """Ensures that blog posts can be created."""
     with snapshot_queries() as snap:
         response = dmr_client.post(
-            reverse('api:main:blog_post_create'),
+            reverse('api:v1:main:blog_post_create'),
             data=msgspec.to_builtins(_BlogPostCreateFactory.build()),
         )
 

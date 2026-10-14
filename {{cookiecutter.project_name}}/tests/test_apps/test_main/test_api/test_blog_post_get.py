@@ -28,7 +28,7 @@ def test_blog_post_get(dmr_client: DMRClient, blog_post: BlogPost) -> None:
     """Ensures that blog posts can be fetched."""
     with snapshot_queries() as snap:
         response = dmr_client.get(
-            reverse('api:main:blog_post_get', kwargs={'id': blog_post.pk}),
+            reverse('api:v1:main:blog_post_get', kwargs={'id': blog_post.pk}),
         )
 
     assert response.status_code == HTTPStatus.OK
@@ -42,7 +42,7 @@ def test_blog_post_get(dmr_client: DMRClient, blog_post: BlogPost) -> None:
 def test_blog_post_get_missing(dmr_client: DMRClient) -> None:
     """Ensures that blog posts can be fetched."""
     response = dmr_client.get(
-        reverse('api:main:blog_post_get', kwargs={'id': 0}),
+        reverse('api:v1:main:blog_post_get', kwargs={'id': 0}),
     )
 
     assert response.status_code == HTTPStatus.NOT_FOUND

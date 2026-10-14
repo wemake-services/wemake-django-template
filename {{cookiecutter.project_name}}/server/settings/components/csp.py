@@ -2,7 +2,7 @@
 This file contains a definition for Content-Security-Policy headers.
 
 Read more about it:
-https://developer.mozilla.org/ru/docs/Web/HTTP/Headers/Content-Security-Policy
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy
 
 We are using `django-csp` to provide these headers.
 Docs: https://github.com/mozilla/django-csp
@@ -22,10 +22,10 @@ class _ContentSecurityPolicy(TypedDict):
 # These values might and will be redefined in `development.py` env:
 CONTENT_SECURITY_POLICY: _ContentSecurityPolicy = {
     'EXCLUDE_URL_PREFIXES': [
-        '/docs/stoplight/',
-        '/docs/swagger/',
-        '/docs/scalar/',
-        '/docs/redoc/',
+        '/docs/v1/stoplight/',
+        '/docs/v1/swagger/',
+        '/docs/v1/scalar/',
+        '/docs/v1/redoc/',
     ],
     'DIRECTIVES': {
         'default-src': [NONE],

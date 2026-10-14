@@ -6,12 +6,12 @@ from django.test import Client
 from django.urls import reverse
 
 _OPENAPI_URLS: Final = (
-    reverse('openapi_json'),
-    reverse('openapi_yaml'),
-    reverse('stoplight'),
-    reverse('swagger'),
-    reverse('scalar'),
-    reverse('redoc'),
+    reverse('v1_openapi_json'),
+    reverse('v1_openapi_yaml'),
+    reverse('v1_stoplight'),
+    reverse('v1_swagger'),
+    reverse('v1_scalar'),
+    reverse('v1_redoc'),
 )
 
 
