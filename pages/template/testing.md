@@ -65,7 +65,7 @@ def test_blog_post_get(dmr_client: DMRClient, blog_post: BlogPost) -> None:
     """Ensures that blog posts can be fetched."""
     with snapshot_queries() as snap:  # <---- Capture queries.
         response = dmr_client.get(
-            reverse('api:main:blog_post_get', kwargs={'id': blog_post.pk}),
+            reverse('api:v1:main:blog_post_get', kwargs={'id': blog_post.pk}),
         )
 
     assert response.status_code == HTTPStatus.OK
