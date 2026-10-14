@@ -31,7 +31,7 @@ def _disable_logging(settings: LazySettings) -> Iterator[None]:
 def api_schema(
     transactional_db: None,
     admin_client: Client,
-) -> 'OpenApiSchema':
+) -> OpenApiSchema:
     """Load OpenAPI schema as a pytest fixture."""
     response = admin_client.get(reverse('openapi_json'))
     schema = st.openapi.from_dict(response.json())
