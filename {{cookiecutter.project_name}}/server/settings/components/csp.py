@@ -2,7 +2,7 @@
 This file contains a definition for Content-Security-Policy headers.
 
 Read more about it:
-https://developer.mozilla.org/ru/docs/v1/Web/HTTP/Headers/Content-Security-Policy
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy
 
 We are using `django-csp` to provide these headers.
 Docs: https://github.com/mozilla/django-csp
