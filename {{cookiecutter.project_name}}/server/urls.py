@@ -34,9 +34,13 @@ from server.apps.main.views import index
 
 admin.autodiscover()
 
+router_v1 = Router('v1/')
+router_v1.include(main_api_urls.router, namespace='main')
+
 router = Router('api/')
-router.include(main_api_urls.router, namespace='main')
-schema = build_schema(router)
+router.include(router_v1, namespace='v1')
+
+schema_v1 = build_schema(router)
 
 handler404 = build_404_handler(router.prefix, serializer=MsgspecSerializer)
 handler500 = build_500_handler(router.prefix, serializer=MsgspecSerializer)
@@ -48,34 +52,34 @@ urlpatterns = [
     router.to_urlpatterns(namespace='api'),
     # OpenAPI:
     path(
-        'docs/openapi.json/',
-        staff_member_required(OpenAPIJsonView.as_view(schema)),
-        name='openapi_json',
+        'docs/v1/openapi.json/',
+        staff_member_required(OpenAPIJsonView.as_view(schema_v1)),
+        name='v1_openapi_json',
     ),
     path(
-        'docs/openapi.yaml/',
-        staff_member_required(OpenAPIYamlView.as_view(schema)),
-        name='openapi_yaml',
+        'docs/v1/openapi.yaml/',
+        staff_member_required(OpenAPIYamlView.as_view(schema_v1)),
+        name='v1_openapi_yaml',
     ),
     path(
-        'docs/stoplight/',
-        staff_member_required(StoplightView.as_view(schema)),
-        name='stoplight',
+        'docs/v1/stoplight/',
+        staff_member_required(StoplightView.as_view(schema_v1)),
+        name='v1_stoplight',
     ),
     path(
-        'docs/swagger/',
-        staff_member_required(SwaggerView.as_view(schema)),
-        name='swagger',
+        'docs/v1/swagger/',
+        staff_member_required(SwaggerView.as_view(schema_v1)),
+        name='v1_swagger',
     ),
     path(
-        'docs/scalar/',
-        staff_member_required(ScalarView.as_view(schema)),
-        name='scalar',
+        'docs/v1/scalar/',
+        staff_member_required(ScalarView.as_view(schema_v1)),
+        name='v1_scalar',
     ),
     path(
-        'docs/redoc/',
-        staff_member_required(RedocView.as_view(schema)),
-        name='redoc',
+        'docs/v1/redoc/',
+        staff_member_required(RedocView.as_view(schema_v1)),
+        name='v1_redoc',
     ),
     # Health checks:
     path(
