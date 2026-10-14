@@ -246,6 +246,8 @@ filterwarnings = ["error"]
 [tool.coverage.run]
 # Coverage configuration:
 # https://coverage.readthedocs.io/en/latest/config.html
+# TODO: Remove this when django_coverage_plugin supports the sysmon core.
+core = "ctrace"
 plugins = [
   # Docs: https://github.com/nedbat/django_coverage_plugin
   "django_coverage_plugin",
