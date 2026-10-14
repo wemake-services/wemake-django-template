@@ -11,6 +11,7 @@ files serving technique in development.
 
 from django.conf import settings
 from django.contrib import admin
+from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.admindocs import urls as admindocs_urls
 from django.urls import include
 from django.views.generic import TemplateView
@@ -48,18 +49,34 @@ urlpatterns = [
     # OpenAPI:
     path(
         'docs/openapi.json/',
-        OpenAPIJsonView.as_view(schema),
+        staff_member_required(OpenAPIJsonView.as_view(schema)),
         name='openapi_json',
     ),
     path(
         'docs/openapi.yaml/',
-        OpenAPIYamlView.as_view(schema),
+        staff_member_required(OpenAPIYamlView.as_view(schema)),
         name='openapi_yaml',
     ),
-    path('docs/stoplight/', StoplightView.as_view(schema), name='stoplight'),
-    path('docs/swagger/', SwaggerView.as_view(schema), name='swagger'),
-    path('docs/scalar/', ScalarView.as_view(schema), name='scalar'),
-    path('docs/redoc/', RedocView.as_view(schema), name='redoc'),
+    path(
+        'docs/stoplight/',
+        staff_member_required(StoplightView.as_view(schema)),
+        name='stoplight',
+    ),
+    path(
+        'docs/swagger/',
+        staff_member_required(SwaggerView.as_view(schema)),
+        name='swagger',
+    ),
+    path(
+        'docs/scalar/',
+        staff_member_required(ScalarView.as_view(schema)),
+        name='scalar',
+    ),
+    path(
+        'docs/redoc/',
+        staff_member_required(RedocView.as_view(schema)),
+        name='redoc',
+    ),
     # Health checks:
     path(
         'health/',
