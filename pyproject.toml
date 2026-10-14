@@ -2,7 +2,7 @@
 name = "wemake-django-template"
 description = "Bleeding edge django template focused on code quality and security"
 version = "0.1.0"
-requires-python = ">=3.13,<3.14"
+requires-python = ">=3.14,<3.15"
 readme = "README.md"
 authors = [
   { name = "Nikita Sobolev", email = "mail@sobolevn.me" },
@@ -47,7 +47,7 @@ pytest-cookies = "^0.7"
 preview = true
 fix = true
 output-prefer-rule-codes = true
-target-version = "py313"
+target-version = "py314"
 line-length = 80
 extend-exclude = [
   # Internal project:

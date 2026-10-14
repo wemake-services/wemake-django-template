@@ -2,7 +2,7 @@
 name = "{{ cookiecutter.project_name }}"
 description = "{{ cookiecutter.project_verbose_name }}"
 version = "0.1.0"
-requires-python = "==3.13.16"
+requires-python = "==3.14.8"
 readme = "README.md"
 authors = []
 dynamic = ["dependencies", "classifiers"]
@@ -93,7 +93,7 @@ sphinx-llm-friendly = "^0.7"
 preview = true
 fix = true
 output-prefer-rule-codes = true
-target-version = "py313"
+target-version = "py314"
 line-length = 80
 
 [tool.ruff.format]
@@ -246,6 +246,8 @@ filterwarnings = ["error"]
 [tool.coverage.run]
 # Coverage configuration:
 # https://coverage.readthedocs.io/en/latest/config.html
+# TODO: Remove this when django_coverage_plugin supports the sysmon core.
+core = "ctrace"
 plugins = [
   # Docs: https://github.com/nedbat/django_coverage_plugin
   "django_coverage_plugin",
