@@ -1414,5 +1414,5 @@ mcp = ["mcp[cli] (>=2.0,<3.0)"]
 
 [metadata]
 lock-version = "2.1"
-python-versions = ">=3.13,<3.14"
-content-hash = "ca4c3efa842850f81fef0999ab059a498910449687d3ab5c28a274e3ea3c2cd3"
+python-versions = ">=3.14,<3.15"
+content-hash = "d95a7544dcc7dbc273018feb234686065789bd80222528ea3c278e7b12a4e11f"
