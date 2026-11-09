@@ -18,7 +18,7 @@ repos:
           - "github.com/wasilibs/go-shellcheck/cmd/shellcheck@latest"
 
   - repo: https://github.com/woodruffw/zizmor-pre-commit
-    rev: v1.31.1
+    rev: v1.32.0
     hooks:
       - id: zizmor
         args:
@@ -39,7 +39,7 @@ repos:
         files: ^\{\{cookiecutter.project_name\}\}/docs/
 
   - repo: https://github.com/crate-ci/typos
-    rev: v1.51.1
+    rev: v1.52.0
     hooks:
       - id: typos
 
