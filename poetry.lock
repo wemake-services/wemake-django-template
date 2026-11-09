@@ -485,18 +485,19 @@ i18n = ["Babel (>=2.7)"]
 
 [[package]]
 name = "jinja2-git"
-version = "1.4.0"
+version = "1.5.0"
 description = "Jinja2 extension to handle git-specific things"
 optional = false
-python-versions = "<4.0,>=3.9"
+python-versions = "<4.0,>=3.11"
 groups = ["main"]
 files = [
-    {file = "jinja2_git-1.4.0-py3-none-any.whl", hash = "sha256:149163fabe1dbf98cdb0adb0fea0f33d98bc4323432ab346082966479422e8b5"},
-    {file = "jinja2_git-1.4.0.tar.gz", hash = "sha256:7f0fbe896fc5116276b8a47dfc8bc52fd5e9f5ee54deee71dcb7986b03cf7973"},
+    {file = "jinja2_git-1.5.0-py3-none-any.whl", hash = "sha256:6ead02fe7ec2fb4bd73cb51a44e0e5f521d816540ed8c9e3c52fa667c43a795c"},
+    {file = "jinja2_git-1.5.0.tar.gz", hash = "sha256:81481c534f96b1754cc6f8548d0e2b6509c44a6c0915a1521ff7e43f27a7acf2"},
 ]
 
 [package.dependencies]
 jinja2 = ">=2.10,<4.0"
+typing_extensions = ">=4"
 
 [[package]]
 name = "librt"
@@ -1356,7 +1357,7 @@ version = "4.16.0"
 description = "Backported and Experimental Type Hints for Python 3.9+"
 optional = false
 python-versions = ">=3.9"
-groups = ["dev"]
+groups = ["main", "dev"]
 files = [
     {file = "typing_extensions-4.16.0-py3-none-any.whl", hash = "sha256:481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8"},
     {file = "typing_extensions-4.16.0.tar.gz", hash = "sha256:dc983d19a509c94dba722ee6abd33940f7c05a89e243c47e907eb4db6f1a43e5"},
@@ -1415,4 +1416,4 @@ mcp = ["mcp[cli] (>=2.0,<3.0)"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.14,<3.15"
-content-hash = "28de4f12dfc93bb1bdec9eed3eb4f7c7af520286a134247cc00710a04ed9e1ad"
+content-hash = "2488122da0cdbda95ce2b4a85a8e101539b73cc9f48d1e3711ab380d8a9f2c7a"
