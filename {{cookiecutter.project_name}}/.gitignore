@@ -213,6 +213,7 @@ fabric.properties
 
 #####=== Custom ===#####
 # Directories:
+emails/
 media/
 .static/
 /static/
