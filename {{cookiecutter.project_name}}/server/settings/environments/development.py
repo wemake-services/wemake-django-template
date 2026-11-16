@@ -13,7 +13,7 @@ from typing import TYPE_CHECKING
 from csp.constants import SELF
 from debug_toolbar.settings import PANELS_DEFAULTS
 
-from server.settings.components import config
+from server.settings.components import BASE_DIR, config
 from server.settings.components.api import CORS_ALLOWED_ORIGINS
 from server.settings.components.common import (
     DATABASES,
@@ -190,3 +190,14 @@ EXTRA_CHECKS = {
 # Disable persistent DB connections
 # https://docs.djangoproject.com/en/6.1/ref/databases/#caveats
 DATABASES['default']['CONN_MAX_AGE'] = 0
+
+
+# Save development emails to files instead of sending them via SMTP:
+MAILERS = {
+    'default': {
+        'BACKEND': 'django.core.mail.backends.filebased.EmailBackend',
+        'OPTIONS': {
+            'file_path': BASE_DIR.joinpath('emails'),
+        },
+    },
+}
