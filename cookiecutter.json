@@ -2,6 +2,7 @@
   "project_name": "test-project",
   "project_verbose_name": "Test Project",
   "project_domain": "myapp.com",
+  "security_contact": "mailto:security@{{ cookiecutter.project_domain }}",
   "organization": "wemake.services",
 
   "_extensions": ["jinja2_git.GitExtension"],

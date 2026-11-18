@@ -3,7 +3,8 @@ This module is called after project is created.
 
 It does the following:
 1. Generates and saves random secret key
-2. Prints further instructions
+2. Sets the security.txt expiry date
+3. Prints further instructions
 
 A portion of this code was adopted from Django's standard crypto functions and
 utilities, specifically:
@@ -14,6 +15,7 @@ https://github.com/pydanny/cookiecutter-django
 
 """
 
+import datetime as dt
 import secrets
 import shutil
 import string
@@ -26,6 +28,7 @@ CHANGEME: Final = '__CHANGEME__'
 # Get the root project directory
 PROJECT_DIRECTORY: Final = Path.cwd().resolve(strict=True)
 PROJECT_NAME: Final = '{{ cookiecutter.project_name }}'
+SECURITY_TXT_LIFETIME_DAYS: Final = 180
 
 # Messages
 PROJECT_SUCCESS: Final = """
@@ -113,5 +116,29 @@ def copy_local_configuration() -> None:
     shutil.copyfile(local_template, local_config)
 
 
+def set_security_txt_expiry() -> None:
+    """Sets a fixed expiry date for the generated security.txt file."""
+    security_txt = (
+        PROJECT_DIRECTORY
+        / 'server'
+        / 'common'
+        / 'django'
+        / 'templates'
+        / 'common'
+        / 'txt'
+        / 'security.txt'
+    )
+    expires = dt.datetime.now(dt.UTC) + dt.timedelta(
+        days=SECURITY_TXT_LIFETIME_DAYS,
+    )
+    template = security_txt.read_text(encoding='utf-8')
+    document = template.replace(
+        '__EXPIRES__',
+        expires.isoformat(timespec='seconds'),
+    )
+    security_txt.write_text(document, encoding='utf-8')
+
+
 copy_local_configuration()
+set_security_txt_expiry()
 print_further_instructions()

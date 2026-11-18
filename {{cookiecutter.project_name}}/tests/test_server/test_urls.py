@@ -10,6 +10,7 @@ _ADMIN_URL: Final = reverse('admin:index')
 _ADMIN_DOC_URL: Final = reverse('django-admindocs-docroot')
 _ROBOTS_URL: Final = reverse('robots_txt')
 _HUMANS_URL: Final = reverse('humans_txt')
+_SECURITY_URL: Final = reverse('security_txt')
 
 
 @pytest.mark.django_db
@@ -54,6 +55,7 @@ def test_admin_docs_authorized(admin_client: Client) -> None:
     [
         _ROBOTS_URL,
         _HUMANS_URL,
+        _SECURITY_URL,
     ],
 )
 def test_specials_txt(client: Client, page: str) -> None:

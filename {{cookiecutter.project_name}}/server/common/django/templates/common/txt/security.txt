@@ -1,0 +1,3 @@
+Contact: {{ cookiecutter.security_contact }}
+Expires: __EXPIRES__
+Canonical: https://{{ cookiecutter.project_domain }}/.well-known/security.txt

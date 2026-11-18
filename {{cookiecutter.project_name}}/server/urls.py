@@ -98,6 +98,14 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # Text and xml static files:
     path(
+        '.well-known/security.txt',
+        TemplateView.as_view(
+            template_name='common/txt/security.txt',
+            content_type='text/plain',
+        ),
+        name='security_txt',
+    ),
+    path(
         'robots.txt',
         TemplateView.as_view(
             template_name='common/txt/robots.txt',
