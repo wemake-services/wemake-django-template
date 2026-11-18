@@ -6,6 +6,21 @@ We try to make projects as secure as possible.
 We use a lot of 3rd party tools to achieve that.
 
 
+Reporting vulnerabilities
+-------------------------
+
+We serve ``/.well-known/security.txt`` with security contact information.
+The contact defaults to ``mailto:security@<project_domain>``.
+Confirm that the contact works before deploying.
+
+Update ``server/common/django/templates/common/txt/security.txt``
+to use another monitored ``mailto:`` or HTTPS URI,
+or when your contact information changes.
+Its ``Expires`` date is initially set to 180 days after project generation.
+Review the contact and renew this date before it expires:
+the expiry test fails once the date has passed.
+
+
 Django
 ------
 

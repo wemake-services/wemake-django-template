@@ -93,6 +93,7 @@ data-aria-dark="Switch to auto color mode">
       <i class="i-lucide close"></i>
     </button>
     <div class="sy-scrollbar sy-rside-inner px-6 xl:top-16 xl:sticky xl:pl-0 pt-6 pb-4"><div class="localtoc"><h3>On this page</h3><ul>
+<li><a class="reference internal" href="#reporting-vulnerabilities">Reporting vulnerabilities</a></li>
 <li><a class="reference internal" href="#django">Django</a><ul>
 <li><a class="reference internal" href="#passwords">Passwords</a></li>
 </ul>
@@ -138,6 +139,18 @@ data-aria-dark="Switch to auto color mode">
 <p>Security is our first priority.
 We try to make projects as secure as possible.
 We use a lot of 3rd party tools to achieve that.</p>
+<section id="reporting-vulnerabilities">
+<h2>Reporting vulnerabilities<a class="headerlink" href="#reporting-vulnerabilities" title="Link to this heading">#</a></h2>
+<p>We serve <code class="docutils literal notranslate"><span class="pre">/.well-known/security.txt</span></code> with security contact information.
+The contact defaults to <code class="docutils literal notranslate"><span class="pre">mailto:security&#64;&lt;project_domain&gt;</span></code>.
+Confirm that the contact works before deploying.</p>
+<p>Update <code class="docutils literal notranslate"><span class="pre">server/common/django/templates/common/txt/security.txt</span></code>
+to use another monitored <code class="docutils literal notranslate"><span class="pre">mailto:</span></code> or HTTPS URI,
+or when your contact information changes.
+Its <code class="docutils literal notranslate"><span class="pre">Expires</span></code> date is initially set to 180 days after project generation.
+Review the contact and renew this date before it expires:
+the expiry test fails once the date has passed.</p>
+</section>
 <section id="django">
 <h2>Django<a class="headerlink" href="#django" title="Link to this heading">#</a></h2>
 <p>Django has a lot of <a class="reference external" href="https://docs.djangoproject.com/en/6.1/topics/security/">security-specific settings</a>
