@@ -10,12 +10,12 @@ Reporting vulnerabilities
 -------------------------
 
 We serve ``/.well-known/security.txt`` with security contact information.
-Set ``security_contact`` when generating the project to a monitored
-``mailto:`` or HTTPS URI. The default is ``mailto:security@<project_domain>``.
+The contact defaults to ``mailto:security@<project_domain>``.
 Confirm that the contact works before deploying.
 
 Update ``server/common/django/templates/common/txt/security.txt``
-when your contact information changes.
+to use another monitored ``mailto:`` or HTTPS URI,
+or when your contact information changes.
 Its ``Expires`` date is initially set to 180 days after project generation.
 Review the contact and renew this date before it expires:
 the expiry test fails once the date has passed.

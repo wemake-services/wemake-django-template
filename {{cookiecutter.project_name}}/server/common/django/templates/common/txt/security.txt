@@ -1,3 +1,3 @@
-Contact: {{ cookiecutter.security_contact }}
+Contact: mailto:security@{{ cookiecutter.project_domain }}
 Expires: __EXPIRES__
 Canonical: https://{{ cookiecutter.project_domain }}/.well-known/security.txt
